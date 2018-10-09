@@ -52,10 +52,10 @@ header {
     }
     .uzh-eth {
       height: 100%;
-      padding: 24px;
+      padding: 20px 24px;
 
       img {
-        height: 32px;
+        height: 40px;
       }
     }
   }

@@ -1,0 +1,18 @@
+@import 'reset.css';
+
+/* Globals */
+
+html {
+  font-size: 20px;
+
+  body {
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.5;
+  }
+}
+
+/* Typography */
+
+header .navigation a {
+  font-size: 0.8rem;
+}

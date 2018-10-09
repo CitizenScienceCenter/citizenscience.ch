@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <cmp-header></cmp-header>
+    <app-header></app-header>
     <router-view></router-view>
   </div>
 </template>
@@ -12,11 +12,10 @@ import Header from './components/Header.vue'
 export default {
   name: 'app',
   components: {
-    'cmp-header': Header
+    'app-header': Header
   }
 }
+
 </script>
 
-<style>
-
-</style>
+<style lang="scss" src="@/main.scss"></style>

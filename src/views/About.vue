@@ -8,8 +8,6 @@
 
 </script>
 
-<style scoped>
-  div {
-    height: 2000px;
-  }
+<style lang="scss">
+
 </style>

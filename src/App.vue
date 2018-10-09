@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    test
     <cmp-header></cmp-header>
     <router-view></router-view>
   </div>

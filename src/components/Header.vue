@@ -13,10 +13,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 .cmp-header {
-
+  .logo {
+    height: 48px;
+  }
 }
 
 </style>

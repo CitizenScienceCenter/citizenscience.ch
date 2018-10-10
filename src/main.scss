@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import 'variables.scss';
 
 /* Globals */
 
@@ -8,11 +9,65 @@ html {
   body {
     font-family: 'PT Sans', sans-serif;
     line-height: 1.5;
+    color: $color-text;
   }
 }
 
 /* Typography */
 
-header .navigation a {
-  font-size: 0.8rem;
+header {
+  .navigation a {
+    span {
+      font-size: 0.8rem;
+    }
+  }
+  .language-select select {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: $viewport-mobile-large) {
+
+}
+
+
+/* Elements */
+
+.custom-select {
+
+  position: relative;
+  height: 40px;
+  border: 1px solid white;
+
+  select {
+    height: 100%;
+    appearance: none;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    padding-left: 12px;
+    padding-right: 32px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  svg {
+    position: absolute;
+    top: 11px;
+    right: 8px;
+    height: 16px;
+    fill: $color-text;
+  }
+
+  &:hover {
+    border: 1px solid #cccccc;
+
+    select {
+      color: $color-primary;
+    }
+    svg {
+      fill: $color-primary;
+    }
+  }
 }

@@ -22,3 +22,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* custom */
+
+button {
+  border: none;
+  padding: 0;
+}

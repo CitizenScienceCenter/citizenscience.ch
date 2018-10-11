@@ -20,14 +20,14 @@
             <button class="menu-button" @click="hideMenu">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Artboard 1</title><rect x="32" y="68" width="448" height="56" rx="28" ry="28"/><rect x="32" y="228" width="448" height="56" rx="28" ry="28"/><rect x="32" y="388" width="448" height="56" rx="28" ry="28"/></svg>
             </button>
-            <router-link to="/" class="home-link" active-class="active" exact @click="hideMenu">
+            <router-link to="/" class="home-link" active-class="active" exact @click.native="hideMenu">
               <img alt="Citizen Science Center Zurich" class="logo" src="@/assets/logo-white.svg"/>
             </router-link>
           </div>
           <ul class="navigation">
-            <li><router-link to="/about" active-class="active"><span>Citizen Science</span></router-link></li>
-            <li><router-link to="/about" active-class="active"><span>SDG</span></router-link></li>
-            <li><router-link to="/about" active-class="active"><span>Contact</span></router-link></li>
+            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>Citizen Science</span></router-link></li>
+            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>SDG</span></router-link></li>
+            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>Contact</span></router-link></li>
           </ul>
           <div class="custom-select language-select">
             <select>
@@ -62,6 +62,7 @@ export default {
       this.menuOn = true;
     },
     hideMenu() {
+      console.log("hide");
       this.menuOn = false;
     }
   }
@@ -162,34 +163,45 @@ header {
 
       height: 100%;
       background: $color-black-tint-10;
-      transition: width 300ms $transition-timing-function;
+      transition: width 250ms $transition-timing-function;
+      backface-visibility: hidden;
 
 
       .drawer-content {
-        width: 100vh;
+        height: 100%;
+        width: 240px;
+        position: relative;
 
         .menu-header {
           height: 48px;
+          margin-bottom: 48px;
+
+          .menu-button {
+            svg {
+              fill: white;
+            }
+          }
         }
 
         .navigation {
 
           li {
             display: block;
+            padding: 0 24px;
+            border-bottom: 1px solid $color-black-tint-20;
 
             a {
               display: block;
-              padding: 0 24px;
-              height: 80px;
+              height: 48px;
+              padding-top: 12px;
               text-decoration: none;
               text-transform: uppercase;
               color: white;
 
               span {
                 display: block;
-                line-height: 40px;
-                padding-top: 21px;
-                padding-bottom: 19px;
+                line-height: 24px;
+                padding-top: 1px;
               }
 
               &:hover {
@@ -200,8 +212,18 @@ header {
         }
 
         .language-select {
-          margin: 20px 0;
           margin-left: 24px;
+          margin-bottom: 24px;
+          position: absolute;
+          bottom: 48px;
+          left: 0;
+          border: 1px solid $color-black-tint-50;
+          select {
+            color: white;
+          }
+          svg {
+            fill: white;
+          }
         }
       }
     }
@@ -250,10 +272,30 @@ header {
     }
 
     .navigation-wrapper {
+      &.active {
+        .drawer {
+          width: 280px;
+        }
+      }
       .drawer {
         .drawer-content {
+          width: 280px;
           .menu-header {
             height: 56px;
+            margin-bottom: 56px;
+          }
+          .navigation {
+            li {
+              padding: 0 32px;
+              a {
+                height: 56px;
+                padding-top: 16px;
+              }
+            }
+          }
+          .language-select {
+            margin-left: 32px;
+            margin-bottom: 32px;
           }
         }
       }

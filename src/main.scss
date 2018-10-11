@@ -9,7 +9,7 @@ html {
   body {
     font-family: 'PT Sans', sans-serif;
     line-height: 1.5;
-    color: $color-text;
+    color: $color-black;
   }
 }
 
@@ -35,6 +35,7 @@ header {
 
 .custom-select {
 
+  display: inline-block;
   position: relative;
   height: 40px;
   border: 1px solid white;
@@ -57,11 +58,11 @@ header {
     top: 11px;
     right: 8px;
     height: 16px;
-    fill: $color-text;
+    fill: $color-black;
   }
 
   &:hover {
-    border: 1px solid #cccccc;
+    border: 1px solid $color-black-tint-90;
 
     select {
       color: $color-primary;

@@ -8,12 +8,29 @@ $viewport-xlarge: 1260px;
 $viewport-xxlarge: 1420px;
 
 
+/* Easing */
+
+$transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+
 /* Colors */
 
 $color-primary: #c5202e;
-$color-primary-dark: #9E1A25;
 $color-secondary: #16496b;
-$color-text: #231f20;
+$color-black: #231f20;
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+$color-primary-shade-20: shade( $color-primary, 20% );
+
+$color-black-tint-90: tint($color-black, 90%);
+$color-black-tint-50: tint( $color-black, 50% );
+$color-black-tint-10: tint($color-black, 10%);
 
 /* Border Radius */
 

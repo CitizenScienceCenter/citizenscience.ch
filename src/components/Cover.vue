@@ -2,8 +2,7 @@
   <div>
     <div class="cover">
       <p>THE PEOPLE'S WAY OF RESEARCH</p>
-      <div class="cover-overlay">
-      </div>
+      <div class="cover-overlay"></div>
     </div>
     asdfasdf<br>
     asdfasdf<br>
@@ -50,19 +49,14 @@ export default {
   }
 
   .cover-overlay {
-    content: '';
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom right, #15496B, #832F45);
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary-shade-20 );
     opacity: 0.8;
-
-    @media (color-gamut: srgb) {
-      //background-image: linear-gradient(to bottom right, $color-secondary, $color-secondary);
-    }
   }
 }
 

@@ -13,30 +13,42 @@
       <img alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_pos.svg"/>
     </div>
 
-    <div class="navigation-wrapper" v-click-outside="hideMenu" :class="{ 'active': menuOn }">
-      <ul class="navigation">
-        <li><router-link to="/about" active-class="active"><span>Citizen Science</span></router-link></li>
-        <li><router-link to="/about" active-class="active"><span>SDG</span></router-link></li>
-        <li><router-link to="/about" active-class="active"><span>Contact</span></router-link></li>
-      </ul>
-      <div class="custom-select language-select">
-        <select>
-          <option>De</option>
-          <option>En</option>
-        </select>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-           <path d="M127.3,192h257.3c17.8,0,26.7,21.5,14.1,34.1L270.1,354.8c-7.8,7.8-20.5,7.8-28.3,0L113.2,226.1
-        	C100.6,213.5,109.5,192,127.3,192z"/>
-        </svg>
+    <div class="navigation-wrapper" :class="{ 'active': menuOn }">
+      <div class="drawer">
+        <div class="drawer-content">
+          <div class="menu-header">
+            <button class="menu-button" @click="hideMenu">
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Artboard 1</title><rect x="32" y="68" width="448" height="56" rx="28" ry="28"/><rect x="32" y="228" width="448" height="56" rx="28" ry="28"/><rect x="32" y="388" width="448" height="56" rx="28" ry="28"/></svg>
+            </button>
+            <router-link to="/" class="home-link" active-class="active" exact @click="hideMenu">
+              <img alt="Citizen Science Center Zurich" class="logo" src="@/assets/logo-white.svg"/>
+            </router-link>
+          </div>
+          <ul class="navigation">
+            <li><router-link to="/about" active-class="active"><span>Citizen Science</span></router-link></li>
+            <li><router-link to="/about" active-class="active"><span>SDG</span></router-link></li>
+            <li><router-link to="/about" active-class="active"><span>Contact</span></router-link></li>
+          </ul>
+          <div class="custom-select language-select">
+            <select>
+              <option>De</option>
+              <option>En</option>
+            </select>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+               <path d="M127.3,192h257.3c17.8,0,26.7,21.5,14.1,34.1L270.1,354.8c-7.8,7.8-20.5,7.8-28.3,0L113.2,226.1
+            	C100.6,213.5,109.5,192,127.3,192z"/>
+            </svg>
+          </div>
+        </div>
       </div>
+      <div class="overlay" @click="hideMenu"></div>
     </div>
   </header>
 </template>
 
 <script>
 
-import ClickOutside from 'vue-click-outside'
 
 export default {
   name: 'Header',
@@ -50,17 +62,8 @@ export default {
       this.menuOn = true;
     },
     hideMenu() {
-      if( !event.target.classList.contains('menu-button') ) {
-        console.log("outside pressed, not button");
-        if( this.menuOn ) {
-          console.log("outside 2");
-          this.menuOn = false;
-        }
-      }
+      this.menuOn = false;
     }
-  },
-  directives: {
-    ClickOutside
   }
 }
 </script>
@@ -79,7 +82,7 @@ header {
     display: block;
     float: left;
     width: 48px;
-    height: 100%;
+    height: 48px;
     background: transparent;
     outline: none;
     position: relative;
@@ -91,22 +94,25 @@ header {
       left: 16px;
       width: 16px;
       height: 16px;
-      fill: #918F8F;
+      fill: $color-black-tint-50;
+    }
+
+    &:hover {
+      svg {
+        fill: $color-primary;
+      }
     }
   }
 
   .home-link {
     display: block;
     float: left;
-    height: 100%;
+    height: 48px;
     padding: 12px 0;
 
-    h1 {
-      height: 100%;
-      .logo {
-        display: block;
-        height: 24px;
-      }
+    .logo {
+      display: block;
+      height: 24px;
     }
   }
 
@@ -115,7 +121,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
+    height: 48px;
     padding: 12px 0;
     margin-right: 16px;
 
@@ -132,52 +138,82 @@ header {
     left: 0;
     top: 0;
 
-    z-index: 999;
-    background: grey;
     height: 100vh;
-    width: 320px;
+    width: 0;
 
-    display: none;
+    z-index: 999;
+
     &.active {
-      display: block;
+      width: 100%;
+      .drawer {
+        width: 240px;
+      }
     }
 
-    .navigation {
+    .drawer {
 
-      li {
-        display: block;
+      width: 0;
+      overflow: hidden;
 
-        a {
-          display: block;
-          padding: 0 24px;
-          height: 80px;
-          text-decoration: none;
-          text-transform: uppercase;
-          color: $color-text;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
 
-          span {
+      height: 100%;
+      background: $color-black-tint-10;
+      transition: width 300ms $transition-timing-function;
+
+
+      .drawer-content {
+        width: 100vh;
+
+        .menu-header {
+          height: 48px;
+        }
+
+        .navigation {
+
+          li {
             display: block;
-            line-height: 40px;
-            padding-top: 21px;
-            padding-bottom: 19px;
-          }
 
-          &:hover {
-            color: $color-primary;
+            a {
+              display: block;
+              padding: 0 24px;
+              height: 80px;
+              text-decoration: none;
+              text-transform: uppercase;
+              color: white;
+
+              span {
+                display: block;
+                line-height: 40px;
+                padding-top: 21px;
+                padding-bottom: 19px;
+              }
+
+              &:hover {
+                color: $color-primary;
+              }
+            }
           }
+        }
+
+        .language-select {
+          margin: 20px 0;
+          margin-left: 24px;
         }
       }
     }
 
-    .language-select {
-      display: inline-block;
-      margin: 20px 0;
-      margin-left: 24px;
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: transparent;
     }
-  }
-
-  .header-right {
-    display: none;
   }
 }
 
@@ -190,6 +226,7 @@ header {
 
     .menu-button {
       width: 56px;
+      height: 56px;
       svg {
         top: 20px;
         left: 20px;
@@ -198,17 +235,27 @@ header {
     }
 
     .home-link {
-      h1 {
-        .logo {
-          height: 32px;
-        }
+      height: 56px;
+      .logo {
+        height: 32px;
       }
     }
 
     .uzh-eth {
       padding: 14px 0;
+      height: 56px;
       img {
         height: 28px;
+      }
+    }
+
+    .navigation-wrapper {
+      .drawer {
+        .drawer-content {
+          .menu-header {
+            height: 56px;
+          }
+        }
       }
     }
 
@@ -224,6 +271,7 @@ header {
 
     .menu-button {
       width: 64px;
+      height: 64px;
       svg {
         top: 24px;
         left: 24px;
@@ -231,17 +279,27 @@ header {
     }
 
     .home-link {
-      h1 {
-        .logo {
-          height: 40px;
-        }
+      height: 64px;
+      .logo {
+        height: 40px;
       }
     }
 
     .uzh-eth {
+      height: 64px;
       padding: 16px 0;
       img {
         height: 32px;
+      }
+    }
+
+    .navigation-wrapper {
+      .drawer {
+        .drawer-content {
+          .menu-header {
+            height: 64px;
+          }
+        }
       }
     }
 
@@ -262,22 +320,57 @@ header {
 
     .home-link {
       padding: 16px;
-      border-right: 1px solid #ddd;
-      h1 {
-        .logo {
-          height: 48px;
-        }
+      border-right: 1px solid $color-black-tint-90;
+      height: 80px;
+      .logo {
+        height: 48px;
       }
     }
 
     .uzh-eth {
       position: relative;
       float: left;
+      height: 80px;
 
-      padding: 24px 0;
+      padding: 20px 0;
       padding-left: 16px;
       img {
-        height: 32px;
+        height: 40px;
+      }
+    }
+
+    .navigation-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+
+      background: none;
+      width: 100%;
+      height: auto;
+
+      pointer-events: none;
+
+      .drawer {
+        .drawer-content {
+          .menu-button, .home-link {
+            display: none;
+          }
+
+          .navigation {
+            pointer-events: all;
+            display: inline-block;
+            li {
+              display: inline-block;
+            }
+          }
+
+          .language-select {
+            pointer-events: all;
+            display: inline-block;
+          }
+        }
       }
     }
 

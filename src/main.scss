@@ -16,6 +16,25 @@ html {
   }
 }
 
+.content-area {
+  margin-top: 48px;
+}
+@media only screen and (min-width: $viewport-mobile-large) {
+  .content-area {
+    margin-top: 56px;
+  }
+}
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .content-area {
+    margin-top: 64px;
+  }
+}
+@media only screen and (min-width: $viewport-large) {
+  .content-area {
+    margin-top: 80px;
+  }
+}
+
 /* Typography */
 
 header {

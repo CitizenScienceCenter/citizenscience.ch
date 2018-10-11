@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{ 'fixed': fixed,'animated': animated, 'pulled': pulled }">
 
     <button class="menu-button" @click="showMenu">
       <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Artboard 1</title><rect x="32" y="68" width="448" height="56" rx="28" ry="28"/><rect x="32" y="228" width="448" height="56" rx="28" ry="28"/><rect x="32" y="388" width="448" height="56" rx="28" ry="28"/></svg>
@@ -54,17 +54,66 @@ export default {
   name: 'Header',
   data: function() {
     return {
-      menuOn: false
+      menuOn: false,
+      scrollY: 0,
+      scrollYpreviously: 0,
+      fixed: false,
+      animated: false,
+      pulled: false
     }
   },
   methods: {
+    scroll() {
+
+      if( window.scrollY <= this.scrollY ) {
+        // scroll up
+        if( this.scrollYpreviously <= this.scrollY ) {
+          // first time
+          if( window.scrollY > 80 ) {
+            this.pulled = false;
+            this.fixed = true;
+          }
+        }
+        else {
+          // second time
+          if( window.scrollY > 80 ) {
+            this.pulled = true;
+            this.animated = true;
+          }
+          else {
+            if( window.scrollY === 0 ) {
+              this.animated = false;
+              this.pulled = false;
+              this.fixed = false;
+            }
+          }
+        }
+      }
+      else {
+        // scroll down
+        if( window.scrollY > 80 ) {
+          this.fixed = true;
+          this.pulled = false;
+        }
+        else {
+          this.fixed = false;
+          this.animated = false;
+        }
+      }
+
+      this.scrollYpreviously = this.scrollY
+      this.scrollY = window.scrollY;
+
+    },
     showMenu() {
       this.menuOn = true;
     },
     hideMenu() {
-      console.log("hide");
       this.menuOn = false;
     }
+  },
+  created() {
+    window.addEventListener('scroll', this.scroll);
   }
 }
 </script>
@@ -76,8 +125,26 @@ export default {
 
 header {
   height: 48px;
+  width: 100%;
   background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  backface-visibility: hidden;
 
+  margin-top: 0px;
+
+  &.fixed {
+    position: fixed;
+    margin-top: -80px;
+  }
+  &.animated {
+    transition: margin-top 1000ms $transition-timing-function;
+  }
+  &.pulled {
+    margin-top: 0px;
+  }
 
   .menu-button {
     display: block;
@@ -100,7 +167,7 @@ header {
 
     &:hover {
       svg {
-        fill: $color-primary;
+        fill: $color-black;
       }
     }
   }
@@ -166,6 +233,7 @@ header {
       transition: width 250ms $transition-timing-function;
       backface-visibility: hidden;
 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
       .drawer-content {
         height: 100%;
@@ -205,7 +273,7 @@ header {
               }
 
               &:hover {
-                color: $color-primary;
+                color: $color-black-tint-90;
               }
             }
           }

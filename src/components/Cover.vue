@@ -1,16 +1,15 @@
 <template>
-  <div>
-    <div class="cover">
-      <div class="content-wrapper">
-        <div class="row">
-          <div class="col">
-            <slot></slot>
-          </div>
+  <section class="cover">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col">
+          <slot></slot>
         </div>
       </div>
-      <div class="cover-overlay"></div>
     </div>
-  </div>
+    <img class="sdg-logo" src="@/assets/sdg-logo.svg"/>
+    <div class="cover-overlay"></div>
+  </section>
 </template>
 
 <script>
@@ -32,12 +31,21 @@ export default {
   display: flex;
   align-items: center;
 
+  .sdg-logo {
+    height: 40px;
+    position: absolute;
+    bottom: $spacing-3;
+    right: $spacing-3;
+    z-index: 1;
+  }
+
+
   .content-wrapper {
     position: relative;
     z-index: 1;
 
     .cover-heading {
-      font-size: $font-size-xlarge;
+      font-size: $font-size-large;
       line-height: 1.25;
       font-weight: 700;
       color: white;
@@ -51,20 +59,14 @@ export default {
       color: white;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: $spacing-2
+      margin-bottom: $spacing-2;
     }
     .buttons {
       text-align: center;
       .button {
-        color: white;
         margin: $spacing-1;
-        &.button-secondary {
-          border-color: rgba( 255,255,255,0.5 );
-        }
       }
     }
-
-
 
   }
 
@@ -84,6 +86,12 @@ export default {
   .cover {
     height: 480px;
 
+    .sdg-logo {
+      height: 48px;
+      bottom: $spacing-4;
+      right: $spacing-4;
+    }
+
     .content-wrapper {
       .cover-heading {
         font-size: $font-size-xlarge;
@@ -98,6 +106,12 @@ export default {
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .cover {
     height: 560px;
+
+    .sdg-logo {
+      height: 64px;
+      bottom: $spacing-4;
+      right: $spacing-4;
+    }
 
     .content-wrapper {
       .cover-heading {

@@ -3,6 +3,11 @@
 
 /* Globals */
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
   font-size: 18px;
 
@@ -19,16 +24,19 @@ select {
   font-size: $font-size-small;
 }
 
+
+/* Grid */
+
 .content-area {
   margin-top: 48px;
 }
-
-/* Grid */
 
 .content-wrapper {
   box-sizing: border-box;
   margin: auto;
   padding: 0 $grid-margin-mobile;
+
+  max-width: 1440px;
 }
 .row {
   box-sizing: border-box;
@@ -48,7 +56,12 @@ select {
   }
 }
 
+
 /* Elements */
+
+.centered {
+  text-align: center;
+}
 
 .button {
   height: 40px;
@@ -61,19 +74,55 @@ select {
   outline: none;
   cursor: pointer;
 
+  transition: all $transition-duration-short $transition-timing-function;
+
   &.button-primary {
     font-weight: 700;
     background-color: $color-primary;
+    color: white;
     &:hover {
       background-color: $color-primary-shade-20;
     }
   }
   &.button-secondary {
     border: 1px solid $color-primary;
+    color: $color-primary;
     &:hover {
       border-color: $color-primary-shade-20;
+      color: $color-primary-shade-20;
+    }
+
+    &.button-secondary-inverted {
+      border-color: rgba( 255,255,255, 0.75 );
+      color: white;
+      &:hover {
+        border-color: rgba( 255,255,255, 1);
+      }
     }
   }
+
+  &.button-icon {
+    position: relative;
+
+    padding-left: 48px;
+
+    text-transform: none;
+    svg {
+      position: absolute;
+      left: 16px;
+      top: 11px;
+      width: 16px;
+      height: 16px;
+      fill: $color-primary;
+    }
+    &:hover {
+      svg {
+        fill: $color-primary-shade-20;
+      }
+    }
+
+  }
+
 }
 
 .custom-select {
@@ -123,6 +172,8 @@ select {
     font-size: 19px;
   }
 
+  /* Grid */
+
   .content-area {
     margin-top: 64px;
   }
@@ -139,10 +190,6 @@ select {
     }
   }
 
-
-  .button {
-    height: 48px;
-  }
 }
 @media only screen and (min-width: $viewport-tablet-portrait) {
 
@@ -150,11 +197,30 @@ select {
     font-size: 20px;
   }
 
+  /* Grid */
+
   .content-area {
     margin-top: 64px;
   }
+
+
+  .button {
+    height: 48px;
+
+    &.button-icon {
+      padding-left: 48px;
+      svg {
+        left: 16px;
+        top: 15px;
+      }
+    }
+  }
+
 }
 @media only screen and (min-width: $viewport-large) {
+
+  /* Grid */
+
   .content-area {
     margin-top: 80px;
   }

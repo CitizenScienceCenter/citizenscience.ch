@@ -11,6 +11,8 @@ $viewport-xxlarge: 1420px;
 /* Easing */
 
 $transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+$transition-duration-long: 300ms;
+$transition-duration-short: 150ms;
 
 
 /* Colors */
@@ -28,6 +30,7 @@ $color-black: #231f20;
 
 $color-primary-shade-20: shade( $color-primary, 20% );
 
+$color-black-tint-97: tint($color-black, 97%);
 $color-black-tint-90: tint($color-black, 90%);
 $color-black-tint-50: tint( $color-black, 50% );
 $color-black-tint-20: tint($color-black, 20%);
@@ -78,7 +81,8 @@ $grid-gutter-xlarge: 56px;
 
 $spacing-1: 8px;
 $spacing-2: 16px;
-$spacing-3: 32px;
-$spacing-4: 48px;
-$spacing-5: 64px;
-$spacing-6: 80px;
+$spacing-3: 24px;
+$spacing-4: 32px;
+$spacing-5: 48px;
+$spacing-6: 64px;
+$spacing-7: 80px;

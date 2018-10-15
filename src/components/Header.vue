@@ -25,9 +25,9 @@
             </router-link>
           </div>
           <ul class="navigation">
-            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>Citizen Science</span></router-link></li>
+            <!-- <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>Projects</span></router-link></li> -->
+            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>About</span></router-link></li>
             <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>SDG</span></router-link></li>
-            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>Contact</span></router-link></li>
           </ul>
           <div class="custom-select language-select">
             <select>
@@ -140,7 +140,7 @@ header {
     margin-top: -48px;
   }
   &.animated {
-    transition: all 300ms $transition-timing-function;
+    transition: all $transition-duration-long $transition-timing-function;
   }
   &.pulled {
     margin-top: 0px;
@@ -232,7 +232,7 @@ header {
       height: 100%;
       background: $color-black-tint-10;
       //background: linear-gradient(to bottom right, $color-secondary, $color-primary-shade-20 );
-      transition: width 300ms $transition-timing-function;
+      transition: width $transition-duration-long $transition-timing-function;
       backface-visibility: hidden;
 
       .drawer-content {

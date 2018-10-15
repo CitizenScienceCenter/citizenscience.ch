@@ -5,55 +5,76 @@
 
 html {
   font-size: 18px;
-  @media only screen and (min-width: $viewport-mobile-large) {
-    font-size: 20px;
-  }
 
   body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: $font-family;
     line-height: 1.5;
     color: $color-black;
   }
 }
 
+select {
+  font-family: $font-family;
+  line-height: 1;
+  font-size: $font-size-small;
+}
+
 .content-area {
   margin-top: 48px;
 }
-@media only screen and (min-width: $viewport-mobile-large) {
-  .content-area {
-    margin-top: 56px;
+
+/* Grid */
+
+.content-wrapper {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0 $grid-margin-mobile;
+}
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+.col {
+  padding: 0 $grid-gutter-mobile/2;
+  box-sizing: border-box;
+  width: 100%;
+
+  .row {
+    margin-left: -$grid-gutter-mobile/2;
+    margin-right: -$grid-gutter-mobile/2;
   }
 }
-@media only screen and (min-width: $viewport-tablet-portrait) {
-  .content-area {
-    margin-top: 64px;
-  }
-}
-@media only screen and (min-width: $viewport-large) {
-  .content-area {
-    margin-top: 80px;
-  }
-}
-
-/* Typography */
-
-header {
-  .navigation a {
-    span {
-      font-size: 0.8rem;
-    }
-  }
-  .language-select select {
-    font-size: 0.8rem;
-  }
-}
-
-@media only screen and (min-width: $viewport-mobile-large) {
-
-}
-
 
 /* Elements */
+
+.button {
+  height: 40px;
+  font-family: $font-family;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+  background: none;
+  padding: 0 24px;
+  border-radius: $border-radius;
+  outline: none;
+  cursor: pointer;
+
+  &.button-primary {
+    font-weight: 700;
+    background-color: $color-primary;
+    &:hover {
+      background-color: $color-primary-shade-20;
+    }
+  }
+  &.button-secondary {
+    border: 1px solid $color-primary;
+    &:hover {
+      border-color: $color-primary-shade-20;
+    }
+  }
+}
 
 .custom-select {
 
@@ -93,5 +114,48 @@ header {
     svg {
       fill: $color-primary;
     }
+  }
+}
+
+
+@media only screen and (min-width: $viewport-mobile-large) {
+  html {
+    font-size: 19px;
+  }
+
+  .content-area {
+    margin-top: 64px;
+  }
+
+  .content-wrapper {
+    padding: 0 $grid-margin-mobile-large;
+  }
+  .col {
+    padding: 0 $grid-gutter-mobile-large/2;
+
+    .row {
+      margin-left: -$grid-gutter-mobile-large/2;
+      margin-right: -$grid-gutter-mobile-large/2;
+    }
+  }
+
+
+  .button {
+    height: 48px;
+  }
+}
+@media only screen and (min-width: $viewport-tablet-portrait) {
+
+  html {
+    font-size: 20px;
+  }
+
+  .content-area {
+    margin-top: 64px;
+  }
+}
+@media only screen and (min-width: $viewport-large) {
+  .content-area {
+    margin-top: 80px;
   }
 }

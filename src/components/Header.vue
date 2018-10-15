@@ -137,13 +137,14 @@ header {
 
   &.fixed {
     position: fixed;
-    margin-top: -80px;
+    margin-top: -48px;
   }
   &.animated {
-    transition: margin-top 1000ms $transition-timing-function;
+    transition: all 300ms $transition-timing-function;
   }
   &.pulled {
     margin-top: 0px;
+    box-shadow: 0px 4px 16px -4px rgba($color-black,0.2);
   }
 
   .menu-button {
@@ -162,12 +163,12 @@ header {
       left: 16px;
       width: 16px;
       height: 16px;
-      fill: $color-black-tint-50;
+      fill: $color-black;
     }
 
     &:hover {
       svg {
-        fill: $color-black;
+        fill: $color-black-tint-50;
       }
     }
   }
@@ -176,11 +177,11 @@ header {
     display: block;
     float: left;
     height: 48px;
-    padding: 12px 0;
+    padding: 8px 0;
 
     .logo {
       display: block;
-      height: 24px;
+      height: 32px;
     }
   }
 
@@ -191,7 +192,7 @@ header {
     right: 0;
     height: 48px;
     padding: 12px 0;
-    margin-right: 16px;
+    margin-right: 12px;
 
     img {
       display: block;
@@ -207,7 +208,6 @@ header {
     top: 0;
 
     height: 100vh;
-    width: 0;
 
     z-index: 999;
 
@@ -215,6 +215,7 @@ header {
       width: 100%;
       .drawer {
         width: 240px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
       }
     }
 
@@ -230,15 +231,16 @@ header {
 
       height: 100%;
       background: $color-black-tint-10;
-      transition: width 250ms $transition-timing-function;
+      //background: linear-gradient(to bottom right, $color-secondary, $color-primary-shade-20 );
+      transition: width 300ms $transition-timing-function;
       backface-visibility: hidden;
-
-      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
       .drawer-content {
         height: 100%;
         width: 240px;
         position: relative;
+
+        overflow: hidden;
 
         .menu-header {
           height: 48px;
@@ -256,7 +258,7 @@ header {
           li {
             display: block;
             padding: 0 24px;
-            border-bottom: 1px solid $color-black-tint-20;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
 
             a {
               display: block;
@@ -268,6 +270,7 @@ header {
 
               span {
                 display: block;
+                font-size: $font-size-small;
                 line-height: 24px;
                 padding-top: 1px;
               }
@@ -280,11 +283,8 @@ header {
         }
 
         .language-select {
-          margin-left: 24px;
-          margin-bottom: 24px;
-          position: absolute;
-          bottom: 48px;
-          left: 0;
+          margin: 24px;
+          font-size: $font-size-small;
           border: 1px solid $color-black-tint-50;
           select {
             color: white;
@@ -312,28 +312,37 @@ header {
 
   header {
 
-    height: 56px;
+    height: 64px;
+
+    &.fixed {
+      margin-top: -64px;
+    }
+    &.pulled {
+      margin-top: 0px;
+    }
 
     .menu-button {
-      width: 56px;
-      height: 56px;
+      width: 64px;
+      height: 64px;
       svg {
-        top: 20px;
-        left: 20px;
+        top: 24px;
+        left: 24px;
         pointer-events: none;
       }
     }
 
     .home-link {
-      height: 56px;
+      height: 64px;
+      padding: 14px 0;
       .logo {
-        height: 32px;
+        height: 36px;
       }
     }
 
     .uzh-eth {
-      padding: 14px 0;
-      height: 56px;
+      padding: 18px 0;
+      margin-right: 16px;
+      height: 64px;
       img {
         height: 28px;
       }
@@ -349,21 +358,20 @@ header {
         .drawer-content {
           width: 280px;
           .menu-header {
-            height: 56px;
-            margin-bottom: 56px;
+            height: 64px;
+            margin-bottom: 64px;
           }
           .navigation {
             li {
               padding: 0 32px;
               a {
-                height: 56px;
-                padding-top: 16px;
+                height: 64px;
+                padding-top: 20px;
               }
             }
           }
           .language-select {
-            margin-left: 32px;
-            margin-bottom: 32px;
+            margin: 32px;
           }
         }
       }
@@ -379,6 +387,13 @@ header {
 
     height: 64px;
 
+    &.fixed {
+      margin-top: -64px;
+    }
+    &.pulled {
+      margin-top: 0px;
+    }
+
     .menu-button {
       width: 64px;
       height: 64px;
@@ -390,8 +405,9 @@ header {
 
     .home-link {
       height: 64px;
+      padding: 14px 0;
       .logo {
-        height: 40px;
+        height: 36px;
       }
     }
 
@@ -424,6 +440,13 @@ header {
 
     height: 80px;
 
+    &.fixed {
+      margin-top: -80px;
+    }
+    &.pulled {
+      margin-top: 0px;
+    }
+
     .menu-button {
       display: none;
     }
@@ -450,35 +473,59 @@ header {
     }
 
     .navigation-wrapper {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      justify-content: flex-end;
 
-      background: none;
-      width: 100%;
+      position: relative;
+      float: right;
       height: auto;
 
-      pointer-events: none;
-
       .drawer {
+        width: auto;
+        height: auto;
+        position: relative;
+        background: transparent;
+
         .drawer-content {
-          .menu-button, .home-link {
+          width: auto;
+          padding-right: 16px;
+
+          .menu-header {
             display: none;
           }
 
           .navigation {
-            pointer-events: all;
             display: inline-block;
+            padding-right: 24px;
+
             li {
               display: inline-block;
+              border: none;
+              padding: 0 24px;
+              a {
+                color: $color-black;
+                height: 80px;
+                padding-top: 28px;
+                &:hover {
+                  color: $color-primary;
+                }
+                &.active {
+                  color: $color-primary;
+                }
+              }
             }
           }
 
           .language-select {
-            pointer-events: all;
-            display: inline-block;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            margin: 0;
+
+            select {
+              color: $color-black;
+            }
+            svg {
+              fill: $color-black;
+            }
           }
         }
       }

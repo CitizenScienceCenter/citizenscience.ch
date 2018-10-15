@@ -1,33 +1,15 @@
 <template>
   <div>
     <div class="cover">
-      <p>THE PEOPLE'S WAY OF RESEARCH</p>
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
       <div class="cover-overlay"></div>
     </div>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
-    asdfasdf<br>
   </div>
 </template>
 
@@ -42,21 +24,48 @@ export default {
 @import '@/variables.scss';
 
 .cover {
-  height: 640px;
+  height: 400px;
   background-image: url('../assets/sylwia-bartyzel-3149-unsplash.jpg');
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
+  display: flex;
+  align-items: center;
 
-  p {
+  .content-wrapper {
     position: relative;
-    color: white;
     z-index: 1;
-    text-align: center;
-    margin: auto;
-    padding-top: 200px;
-    line-height: 1;
-    font-weight: 700;
+
+    .cover-heading {
+      font-size: $font-size-xlarge;
+      line-height: 1.25;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: $spacing-1;
+    }
+    .cover-subheading {
+      font-size: $font-size-normal;
+      font-weight: 400;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: $spacing-2
+    }
+    .buttons {
+      text-align: center;
+      .button {
+        color: white;
+        margin: $spacing-1;
+        &.button-secondary {
+          border-color: rgba( 255,255,255,0.5 );
+        }
+      }
+    }
+
+
+
   }
 
   .cover-overlay {
@@ -68,6 +77,66 @@ export default {
     height: 100%;
     background: linear-gradient(to bottom right, $color-secondary, $color-primary-shade-20 );
     opacity: 0.8;
+  }
+}
+
+@media only screen and (min-width: $viewport-mobile-large) {
+  .cover {
+    height: 480px;
+
+    .content-wrapper {
+      .cover-heading {
+        font-size: $font-size-xlarge;
+      }
+      .cover-subheading {
+        font-size: $font-size-normal;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .cover {
+    height: 560px;
+
+    .content-wrapper {
+      .cover-heading {
+        font-size: $font-size-xlarge;
+      }
+      .cover-subheading {
+        font-size: $font-size-medium;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $viewport-large) {
+  .cover {
+    height: 560px;
+
+    .content-wrapper {
+      .cover-heading {
+        font-size: $font-size-xxlarge;
+      }
+      .cover-subheading {
+        font-size: $font-size-large;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $viewport-xlarge) {
+  .cover {
+    height: 560px;
+
+    .content-wrapper {
+      .cover-heading {
+        font-size: $font-size-xxxlarge;
+      }
+      .cover-subheading {
+        font-size: $font-size-xlarge;
+      }
+    }
   }
 }
 

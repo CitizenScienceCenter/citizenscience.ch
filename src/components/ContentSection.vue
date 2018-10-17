@@ -8,14 +8,16 @@
 export default {
   name: 'ContentSection',
   props: {
-    'type': String
+    'type': String,
   },
   computed: {
     styleClass: function() {
-      console.log( this.type )
       switch( this.type ) {
         case 'grey':
           return 'grey';
+          break;
+        case 'image-bg':
+          return 'image-bg';
           break;
         case 'image':
           return 'image';
@@ -40,7 +42,8 @@ export default {
   &.grey {
     background-color: $color-black-tint-97;
   }
-  &.image {
+
+  &.image-bg {
     background-image: url('/img/flags.jpg');
     background-size: cover;
     background-position: 50% 50%;
@@ -62,7 +65,18 @@ export default {
     }
   }
 
-  h2 {
+  &.image {
+    background-image: url('/img/uzh-eth.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 320px;
+  }
+
+  .sdg-logo {
+    height: 80px;
+  }
+
+  .heading {
     font-size: $font-size-large;
     line-height: 1.25;
     text-align: center;
@@ -82,6 +96,15 @@ export default {
       bottom: 0;
       left: calc( 50% - 14px );
     }
+  }
+
+  .subheading {
+    font-size: $font-size-medium;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: $spacing-4;
   }
 
   p {
@@ -112,6 +135,10 @@ export default {
 
     padding: $spacing-6 0;
 
+    &.image {
+      min-height: 480px;
+    }
+
     .col-wide {
       width: 100%;
     }
@@ -119,8 +146,18 @@ export default {
       width: 66.667%;
     }
 
-    h2 {
+    .heading {
       font-size: $font-size-xlarge;
+      padding-bottom: $spacing-5;
+      margin-bottom: $spacing-5;
+    }
+
+    .subheading {
+      margin-bottom: $spacing-5;
+    }
+
+    p {
+      margin-bottom: $spacing-5;
     }
 
   }
@@ -133,6 +170,10 @@ export default {
 
     padding: $spacing-7 0;
 
+    &.image {
+      min-height: 560px;
+    }
+
     .col-wide {
       width: 83.333%;
     }
@@ -140,7 +181,7 @@ export default {
       width: 66.667%;
     }
 
-    h2 {
+    .heading {
       font-size: $font-size-xlarge;
     }
 
@@ -151,6 +192,10 @@ export default {
 @media only screen and (min-width: $viewport-xlarge) {
 
   .content-section {
+
+    &.image {
+      min-height: 640px;
+    }
 
     .col-wide {
       width: 66.667%;

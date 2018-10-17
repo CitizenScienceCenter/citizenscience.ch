@@ -18,12 +18,6 @@ html {
   }
 }
 
-select {
-  font-family: $font-family;
-  line-height: 1;
-  font-size: $font-size-small;
-}
-
 
 /* Grid */
 
@@ -62,6 +56,9 @@ select {
 .centered {
   text-align: center;
 }
+.right-aligned {
+  text-align: right;
+}
 
 .button {
   height: 40px;
@@ -69,7 +66,7 @@ select {
   font-size: $font-size-small;
   text-transform: uppercase;
   background: none;
-  padding: 0 24px;
+  padding: 0 20px;
   border-radius: $border-radius;
   outline: none;
   cursor: pointer;
@@ -104,20 +101,45 @@ select {
   &.button-icon {
     position: relative;
 
-    padding-left: 48px;
+    padding-left: 40px;
 
     text-transform: none;
     svg {
       position: absolute;
-      left: 16px;
+      left: 12px;
       top: 11px;
       width: 16px;
       height: 16px;
-      fill: $color-primary;
+      fill: white;
     }
-    &:hover {
+
+    &.button-secondary {
       svg {
-        fill: $color-primary-shade-20;
+        fill: $color-primary;
+      }
+      &:hover {
+        svg {
+          fill: $color-primary-shade-20;
+        }
+      }
+    }
+
+    &.button-secondary-inverted {
+      svg {
+        fill: white;
+      }
+      &:hover {
+        svg {
+          fill: white;
+        }
+      }
+    }
+
+    &.button-secondary-naked {
+      border: none;
+
+      &:hover {
+        opacity: 0.75;
       }
     }
 
@@ -125,26 +147,40 @@ select {
 
 }
 
+label {
+  font-size: $font-size-small;
+  line-height: 1.25;
+}
+input, select {
+  font-family: $font-family;
+  font-size: $font-size-normal;
+  line-height: 1;
+  appearance: none;
+}
+
+input,select {
+  height: 40px;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $color-secondary;
+  border-radius: 0;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .custom-select {
 
   display: inline-block;
   position: relative;
-  height: 40px;
-  border: 1px solid white;
 
   select {
-    height: 100%;
-    appearance: none;
-    background: transparent;
-    border: none;
-    text-transform: uppercase;
-    padding-left: 12px;
     padding-right: 32px;
     color: $color-black;
-
-    &:focus {
-      outline: none;
-    }
   }
   svg {
     position: absolute;
@@ -155,8 +191,6 @@ select {
   }
 
   &:hover {
-    border: 1px solid $color-black-tint-90;
-
     select {
       color: $color-primary;
     }
@@ -166,13 +200,20 @@ select {
   }
 }
 
+.form-field {
+  display: inline-block;
+  margin-bottom: $spacing-4;
+
+  label, .custom-select {
+    display: block;
+  }
+}
+
 
 @media only screen and (min-width: $viewport-mobile-large) {
   html {
     font-size: 19px;
   }
-
-  /* Grid */
 
   .content-area {
     margin-top: 64px;
@@ -191,13 +232,20 @@ select {
   }
 
 }
+
 @media only screen and (min-width: $viewport-tablet-portrait) {
 
   html {
     font-size: 20px;
   }
 
-  /* Grid */
+
+  input,select {
+    height: 48px;
+  }
+  .form-field {
+    margin-bottom: $spacing-5;
+  }
 
   .content-area {
     margin-top: 64px;
@@ -206,6 +254,8 @@ select {
 
   .button {
     height: 48px;
+    white-space:nowrap;
+    padding: 0 24px;
 
     &.button-icon {
       padding-left: 48px;
@@ -217,11 +267,11 @@ select {
   }
 
 }
-@media only screen and (min-width: $viewport-large) {
 
-  /* Grid */
+@media only screen and (min-width: $viewport-large) {
 
   .content-area {
     margin-top: 80px;
   }
+
 }

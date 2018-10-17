@@ -1,5 +1,5 @@
 <template>
-  <section class="cover">
+  <section class="cover" :class="styleClass" :style="{ 'background-image': 'url(' + bgImageUrl + ')' }">
     <div class="content-wrapper">
       <div class="row">
         <div class="col">
@@ -7,14 +7,37 @@
         </div>
       </div>
     </div>
-    <img class="sdg-logo" src="@/assets/sdg-logo.svg"/>
+    <img class="sdg-logo" src="@/assets/sdg-logo-white.svg" v-scroll-to="'#sdg'"/>
     <div class="cover-overlay"></div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'Cover'
+  name: 'Cover',
+  props: {
+    'subpage': String
+  },
+  computed: {
+    styleClass: function() {
+      switch( this.subpage ) {
+        case 'about':
+          return 'subpage';
+          break;
+        default:
+          return '';
+      }
+    },
+    bgImageUrl: function() {
+      switch( this.subpage ) {
+        case 'about':
+          return 'img/covers/carrots.jpg';
+          break;
+        default:
+          return 'img/covers/sylwia-bartyzel-3149-unsplash.jpg';
+      }
+    }
+  }
 }
 </script>
 
@@ -24,7 +47,6 @@ export default {
 
 .cover {
   height: 400px;
-  background-image: url('../assets/sylwia-bartyzel-3149-unsplash.jpg');
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
@@ -32,11 +54,12 @@ export default {
   align-items: center;
 
   .sdg-logo {
-    height: 40px;
+    height: 32px;
     position: absolute;
     bottom: $spacing-3;
     right: $spacing-3;
     z-index: 1;
+    cursor: pointer;
   }
 
 
@@ -80,11 +103,44 @@ export default {
     background: linear-gradient(to bottom right, $color-secondary, $color-primary-shade-20 );
     opacity: 0.8;
   }
+
+
+  &.subpage {
+    height: 64px;
+    .sdg-logo {
+      display: none;
+    }
+    .cover-heading, .cover-subheading {
+      margin: 0;
+    }
+    .cover-overlay {
+      opacity: 1;
+    }
+  }
 }
 
 @media only screen and (min-width: $viewport-mobile-large) {
   .cover {
     height: 480px;
+
+    .content-wrapper {
+      .cover-heading {
+        font-size: $font-size-xlarge;
+      }
+      .cover-subheading {
+        font-size: $font-size-normal;
+      }
+    }
+
+    &.subpage {
+      height: 80px;
+    }
+  }
+}
+
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .cover {
+    height: 560px;
 
     .sdg-logo {
       height: 48px;
@@ -97,36 +153,18 @@ export default {
         font-size: $font-size-xlarge;
       }
       .cover-subheading {
-        font-size: $font-size-normal;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $viewport-tablet-portrait) {
-  .cover {
-    height: 560px;
-
-    .sdg-logo {
-      height: 64px;
-      bottom: $spacing-4;
-      right: $spacing-4;
-    }
-
-    .content-wrapper {
-      .cover-heading {
-        font-size: $font-size-xlarge;
-      }
-      .cover-subheading {
         font-size: $font-size-medium;
       }
+    }
+
+    &.subpage {
+      height: 96px;
     }
   }
 }
 
 @media only screen and (min-width: $viewport-large) {
   .cover {
-    height: 560px;
 
     .content-wrapper {
       .cover-heading {
@@ -136,12 +174,15 @@ export default {
         font-size: $font-size-large;
       }
     }
+
+    &.subpage {
+      height: 128px;
+    }
   }
 }
 
 @media only screen and (min-width: $viewport-xlarge) {
   .cover {
-    height: 560px;
 
     .content-wrapper {
       .cover-heading {

@@ -10,6 +10,7 @@
     </router-link>
 
     <div class="uzh-eth">
+      <span>A joined initiative by</span>
       <img alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_pos.svg"/>
     </div>
 
@@ -25,14 +26,13 @@
             </router-link>
           </div>
           <ul class="navigation">
-            <!-- <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>Projects</span></router-link></li> -->
             <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>About</span></router-link></li>
-            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>SDG</span></router-link></li>
+            <li><router-link to="/events" active-class="active" @click.native="hideMenu"><span>Events</span></router-link></li>
           </ul>
           <div class="custom-select language-select">
-            <select>
-              <option>De</option>
-              <option>En</option>
+            <select v-model="language" @change="languageChange">
+              <option value="de">De</option>
+              <option value="en">En</option>
             </select>
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -59,7 +59,9 @@ export default {
       scrollYpreviously: 0,
       fixed: false,
       animated: false,
-      pulled: false
+      pulled: false,
+
+      language: 'en'
     }
   },
   methods: {
@@ -110,6 +112,11 @@ export default {
     },
     hideMenu() {
       this.menuOn = false;
+    },
+
+    languageChange() {
+      //Vue.i18n.set('en');
+      this.$i18n.set(this.language);
     }
   },
   created() {
@@ -134,10 +141,12 @@ header {
   backface-visibility: hidden;
 
   margin-top: 0px;
+  box-shadow: 0px 4px 16px -4px rgba($color-black,0.2);
 
   &.fixed {
     position: fixed;
     margin-top: -48px;
+    box-shadow: none;
   }
   &.animated {
     transition: all $transition-duration-long $transition-timing-function;
@@ -191,12 +200,19 @@ header {
     top: 0;
     right: 0;
     height: 48px;
-    padding: 12px 0;
+    padding: 8px 0;
     margin-right: 12px;
 
+    span {
+      display: block;
+      text-align: right;
+      font-size: $font-size-small / $font-scale / $font-scale;
+      line-height: 12px;
+      margin-bottom: 2px;
+    }
     img {
       display: block;
-      height: 24px;
+      height: 18px;
     }
   }
 
@@ -340,11 +356,11 @@ header {
     }
 
     .uzh-eth {
-      padding: 18px 0;
+      padding: 14px 0;
       margin-right: 16px;
       height: 64px;
       img {
-        height: 28px;
+        height: 22px;
       }
     }
 
@@ -411,13 +427,6 @@ header {
       }
     }
 
-    .uzh-eth {
-      height: 64px;
-      padding: 16px 0;
-      img {
-        height: 32px;
-      }
-    }
 
     .navigation-wrapper {
       .drawer {
@@ -465,10 +474,14 @@ header {
       float: left;
       height: 80px;
 
-      padding: 20px 0;
+      padding: 16px 0;
       padding-left: 16px;
+      span {
+        text-align: left;
+        margin-bottom: 4px;
+      }
       img {
-        height: 40px;
+        height: 32px;
       }
     }
 

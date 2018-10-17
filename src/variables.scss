@@ -30,9 +30,11 @@ $color-black: #231f20;
 
 $color-primary-shade-20: shade( $color-primary, 20% );
 
+$color-secondary-shade-20: shade( $color-secondary, 20% );
+
 $color-black-tint-97: tint($color-black, 97%);
 $color-black-tint-90: tint($color-black, 90%);
-$color-black-tint-50: tint( $color-black, 50% );
+$color-black-tint-50: tint($color-black, 50% );
 $color-black-tint-20: tint($color-black, 20%);
 $color-black-tint-10: tint($color-black, 10%);
 

@@ -23,7 +23,7 @@ const translationsEn = {
 	"cover-subheading": "Citizen Science Center Zurich"
 };
 const translationsDe = {
-  "cover-heading": "Forschung für dich und mich",
+  "cover-heading": "Forschung Bla bla bla",
 	"cover-subheading": "Citizen Science Center Zürich"
 };
 
@@ -35,11 +35,12 @@ const router = new VueRouter({
   routes: routes,
   mode: 'history',
   scrollBehavior (to, from, savedPosition) {
+    vm.$children[0].scrollTop();
     return { x: 0, y: 0 }
   }
 })
 
-new Vue({
+var vm = new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')

@@ -151,8 +151,8 @@
             <p class="centered">
               Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
             </p>
-            <p>
-              <img src="@/assets/uzh_eth_logo_d_pos.svg" style="height:48px"/>
+            <p class="centered">
+              <img src="@/assets/uzh_eth_logo_d_pos.svg" style="width:75%"/>
             </p>
           </div>
         </div>

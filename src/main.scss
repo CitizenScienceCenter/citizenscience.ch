@@ -151,14 +151,13 @@ label {
   font-size: $font-size-small;
   line-height: 1.25;
 }
+
 input, select {
   font-family: $font-family;
   font-size: $font-size-normal;
+  color: $color-black;
   line-height: 1;
   appearance: none;
-}
-
-input,select {
   height: 40px;
   width: 100%;
   padding: 0;
@@ -180,7 +179,6 @@ input,select {
 
   select {
     padding-right: 32px;
-    color: $color-black;
   }
   svg {
     position: absolute;
@@ -188,6 +186,7 @@ input,select {
     right: 10px;
     height: 12px;
     fill: $color-black;
+    pointer-events: none;
   }
 
   &:hover {
@@ -243,6 +242,14 @@ input,select {
   input,select {
     height: 48px;
   }
+
+  .custom-select {
+    svg {
+      top: 17px;
+      fill: $color-black;
+    }
+  }
+
   .form-field {
     margin-bottom: $spacing-5;
   }

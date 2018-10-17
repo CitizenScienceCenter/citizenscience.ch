@@ -73,7 +73,7 @@ export default {
   }
 
   .sdg-logo {
-    height: 80px;
+    height: 48px;
   }
 
   .heading {
@@ -101,7 +101,6 @@ export default {
   .subheading {
     font-size: $font-size-medium;
     line-height: 1.5;
-    text-align: center;
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: $spacing-4;
@@ -126,6 +125,11 @@ export default {
 
 @media only screen and (min-width: $viewport-mobile-large) {
 
+  .content-section {
+    .sdg-logo {
+      height: 56px;
+    }
+  }
 
 }
 
@@ -144,6 +148,10 @@ export default {
     }
     .col-narrow {
       width: 66.667%;
+    }
+
+    .sdg-logo {
+      height: 64px;
     }
 
     .heading {
@@ -179,6 +187,10 @@ export default {
     }
     .col-narrow {
       width: 66.667%;
+    }
+
+    .sdg-logo {
+      height: 80px;
     }
 
     .heading {

@@ -19,7 +19,7 @@
         <div class="drawer-content">
           <div class="menu-header">
             <button class="menu-button" @click="hideMenu">
-              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Artboard 1</title><rect x="32" y="68" width="448" height="56" rx="28" ry="28"/><rect x="32" y="228" width="448" height="56" rx="28" ry="28"/><rect x="32" y="388" width="448" height="56" rx="28" ry="28"/></svg>
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect x="32" y="68" width="448" height="56" rx="28" ry="28"/><rect x="32" y="228" width="448" height="56" rx="28" ry="28"/><rect x="32" y="388" width="448" height="56" rx="28" ry="28"/></svg>
             </button>
             <router-link to="/" class="home-link" active-class="active" exact @click.native="hideMenu">
               <img alt="Citizen Science Center Zurich" class="logo" src="@/assets/logo-white.svg"/>
@@ -64,11 +64,27 @@ export default {
       language: 'en'
     }
   },
+  props: {
+    resetNow: Boolean
+  },
   methods: {
+    reset() {
+      this.menuOn = false;
+      this.scrollY = 0;
+      this.scrollYpreviously = 0;
+      this.fixed = false;
+      this.animated = false;
+      this.pulled = false;
+    },
     scroll() {
+      if( this.resetNow ) {
+        this.reset();
+        this.$emit('undoResetNow', false)
+      }
 
       if( window.scrollY <= this.scrollY ) {
         // scroll up
+
         if( this.scrollYpreviously <= this.scrollY ) {
           // first time
           if( window.scrollY > 80 ) {
@@ -117,6 +133,7 @@ export default {
     languageChange() {
       //Vue.i18n.set('en');
       this.$i18n.set(this.language);
+      this.hideMenu();
     }
   },
   created() {
@@ -141,7 +158,8 @@ header {
   backface-visibility: hidden;
 
   margin-top: 0px;
-  box-shadow: 0px 4px 16px -4px rgba($color-black,0.2);
+  box-shadow: 0px 4px 8px -4px rgba($color-black,0.2);
+  //border-bottom: 1px solid $color-black-tint-90;
 
   &.fixed {
     position: fixed;
@@ -153,7 +171,7 @@ header {
   }
   &.pulled {
     margin-top: 0px;
-    box-shadow: 0px 4px 16px -4px rgba($color-black,0.2);
+    box-shadow: 0px 4px 8px -4px rgba($color-black,0.2);
   }
 
   .menu-button {
@@ -270,6 +288,7 @@ header {
         }
 
         .navigation {
+          border-top: 1px solid rgba(255,255,255,0.2);
 
           li {
             display: block;
@@ -299,11 +318,15 @@ header {
         }
 
         .language-select {
-          margin: 24px;
-          font-size: $font-size-small;
-          border: 1px solid $color-black-tint-50;
+          margin-left: $spacing-2;
+          margin-top: $spacing-3;
+
           select {
+            font-size: $font-size-small;
+            text-transform: uppercase;
+            padding-left: $spacing-1;
             color: white;
+            border: 1px solid rgba( $color-black-tint-90, 0.5 );
           }
           svg {
             fill: white;
@@ -387,7 +410,8 @@ header {
             }
           }
           .language-select {
-            margin: 32px;
+            margin-left: $spacing-3;
+            margin-top: $spacing-4;
           }
         }
       }
@@ -487,6 +511,14 @@ header {
 
     .navigation-wrapper {
 
+      &.active {
+        width: auto;
+        .drawer {
+          width: auto;
+          box-shadow: none;
+        }
+      }
+
       position: relative;
       float: right;
       height: auto;
@@ -506,6 +538,7 @@ header {
           }
 
           .navigation {
+            border-top: 0;
             display: inline-block;
             padding-right: 24px;
 
@@ -528,20 +561,29 @@ header {
           }
 
           .language-select {
-            position: relative;
-            top: 0;
-            bottom: 0;
-            margin: 0;
+            margin: 16px 0;
 
             select {
               color: $color-black;
+              border-color: transparent;
             }
             svg {
               fill: $color-black;
             }
+
+            &:hover {
+              select {
+                border-color: $color-black-tint-90;
+              }
+            }
           }
         }
       }
+
+      .overlay {
+        display: none;
+      }
+
     }
 
   }

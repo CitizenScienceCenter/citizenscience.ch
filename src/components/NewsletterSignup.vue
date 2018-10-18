@@ -21,13 +21,14 @@
           <input type="text" />
         </div>
       </div>
+
       <div class="col">
         <div class="form-field">
           <label>Last Name</label>
           <div class="custom-select">
             <select>
-              <option>sadfsadf</option>
-              <option>osadfasdf</option>
+              <option>just for styling</option>
+              <option>blabla</option>
             </select>
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -37,9 +38,10 @@
           </div>
         </div>
       </div>
+
     </div>
     <div class="row">
-      <div class="col centered">
+      <div class="col right-aligned">
         <button class="button button-primary">Submit</button>
       </div>
     </div>

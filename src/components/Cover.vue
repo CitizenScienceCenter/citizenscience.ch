@@ -66,6 +66,7 @@ export default {
   .content-wrapper {
     position: relative;
     z-index: 1;
+    width: 100%;
 
     .cover-heading {
       font-size: $font-size-large;

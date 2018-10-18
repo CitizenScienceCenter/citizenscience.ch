@@ -292,13 +292,12 @@ header {
 
           li {
             display: block;
-            padding: 0 24px;
             border-bottom: 1px solid rgba(255,255,255,0.2);
 
             a {
               display: block;
               height: 48px;
-              padding-top: 12px;
+              padding: 12px 24px;
               text-decoration: none;
               text-transform: uppercase;
               color: white;
@@ -307,7 +306,7 @@ header {
                 display: block;
                 font-size: $font-size-small;
                 line-height: 24px;
-                padding-top: 1px;
+                transform: translateY(-1px);
               }
 
               &:hover {
@@ -402,10 +401,9 @@ header {
           }
           .navigation {
             li {
-              padding: 0 32px;
               a {
                 height: 64px;
-                padding-top: 20px;
+                padding: 20px 32px;
               }
             }
           }
@@ -452,15 +450,6 @@ header {
     }
 
 
-    .navigation-wrapper {
-      .drawer {
-        .drawer-content {
-          .menu-header {
-            height: 64px;
-          }
-        }
-      }
-    }
 
   }
 
@@ -540,16 +529,15 @@ header {
           .navigation {
             border-top: 0;
             display: inline-block;
-            padding-right: 24px;
+            padding-right: 12px;
 
             li {
               display: inline-block;
               border: none;
-              padding: 0 24px;
               a {
                 color: $color-black;
                 height: 80px;
-                padding-top: 28px;
+                padding: 28px 24px;
                 &:hover {
                   color: $color-primary;
                 }
@@ -573,7 +561,11 @@ header {
 
             &:hover {
               select {
+                color: $color-primary;
                 border-color: $color-black-tint-90;
+              }
+              svg {
+                fill: $color-primary;
               }
             }
           }

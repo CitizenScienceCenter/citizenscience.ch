@@ -190,6 +190,9 @@ export default {
       min-height: 560px;
     }
 
+    .col-wide {
+      width: 83.333%;
+    }
     .col-medium {
       width: 83.333%;
     }

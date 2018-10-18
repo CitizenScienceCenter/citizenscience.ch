@@ -318,15 +318,15 @@ header {
         }
 
         .language-select {
-          margin-left: $spacing-2;
+          margin-left: 12px;
           margin-top: $spacing-3;
 
           select {
             font-size: $font-size-small;
             text-transform: uppercase;
-            padding-left: $spacing-1;
+            padding-left: 12px;
             color: white;
-            border: 1px solid rgba( $color-black-tint-90, 0.5 );
+            border: 1px solid rgba( $color-black-tint-90, 0.25 );
           }
           svg {
             fill: white;
@@ -410,7 +410,7 @@ header {
             }
           }
           .language-select {
-            margin-left: $spacing-3;
+            margin-left: 20px;
             margin-top: $spacing-4;
           }
         }

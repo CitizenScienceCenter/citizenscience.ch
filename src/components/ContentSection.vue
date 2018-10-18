@@ -16,6 +16,9 @@ export default {
         case 'grey':
           return 'grey';
           break;
+        case 'dark-grey':
+          return 'dark-grey';
+          break;
         case 'image-bg':
           return 'image-bg';
           break;
@@ -120,6 +123,10 @@ export default {
     }
   }
 
+  .uzh-eth-logo {
+    height: 40px;
+  }
+
 }
 
 
@@ -143,9 +150,6 @@ export default {
       min-height: 480px;
     }
 
-    .col-wide {
-      width: 100%;
-    }
     .col-narrow {
       width: 66.667%;
     }
@@ -168,6 +172,10 @@ export default {
       margin-bottom: $spacing-5;
     }
 
+    .uzh-eth-logo {
+      height: 48px;
+    }
+
   }
 
 }
@@ -182,7 +190,7 @@ export default {
       min-height: 560px;
     }
 
-    .col-wide {
+    .col-medium {
       width: 83.333%;
     }
     .col-narrow {
@@ -195,6 +203,10 @@ export default {
 
     .heading {
       font-size: $font-size-xlarge;
+    }
+
+    .uzh-eth-logo {
+      height: 56px;
     }
 
   }
@@ -210,6 +222,9 @@ export default {
     }
 
     .col-wide {
+      width: 83.333%;
+    }
+    .col-medium {
       width: 66.667%;
     }
     .col-narrow {

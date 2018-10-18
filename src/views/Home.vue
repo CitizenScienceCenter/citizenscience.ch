@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col col-wide">
+          <div class="col col-medium">
             <p>
               <img src="img/illustration.png" />
             </p>
@@ -152,7 +152,7 @@
               Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
             </p>
             <p class="centered">
-              <img src="@/assets/uzh_eth_logo_d_pos.svg" style="width:75%"/>
+              <img src="@/assets/uzh_eth_logo_d_pos.svg" class="uzh-eth-logo"/>
             </p>
           </div>
         </div>

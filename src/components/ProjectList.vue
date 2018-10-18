@@ -44,13 +44,19 @@ export default {
     border-radius: $border-radius;
     overflow: hidden;
 
-    .col-left {
-      padding-right: 0;
-      width: 66.667%;
-    }
-    .col-right {
-      padding-left: 0;
-      width: 33.333%;
+    .row {
+      min-height: 240px;
+      height: 100%;
+      .col-left {
+        padding-right: 0;
+        width: 66.667%;
+        min-height: 100%;
+      }
+      .col-right {
+        padding-left: 0;
+        width: 33.333%;
+        min-height: 100%;
+      }
     }
 
     &:after {
@@ -112,7 +118,6 @@ export default {
       background-image: url('/img/projects/wenker.png');
       background-size: cover;
       background-position: 0 0;
-      min-height: 320px;
     }
 
   }
@@ -135,11 +140,15 @@ export default {
 
     .project {
 
-      .col-left {
-        width: 50%;
-      }
-      .col-right {
-        width: 50%;
+
+      .row {
+        min-height: 320px;
+        .col-left {
+          width: 50%;
+        }
+        .col-right {
+          width: 50%;
+        }
       }
 
       .project-info {
@@ -158,6 +167,10 @@ export default {
 
     .project {
 
+      .row {
+        min-height: 360px;
+      }
+
       .project-info {
         h3 {
           font-size: $font-size-large;
@@ -172,7 +185,17 @@ export default {
 
 @media only screen and (min-width: $viewport-xlarge) {
 
+  .project-list {
 
+    .project {
+
+      .row {
+        min-height: 400px;
+      }
+
+    }
+
+  }
 
 }
 

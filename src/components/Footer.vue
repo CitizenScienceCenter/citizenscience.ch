@@ -67,6 +67,11 @@ export default {
     width: 100%;
     background-color: rgba( $color-secondary-shade-20, 0.5 );
     padding: $spacing-1 0;
+
+    .button {
+      display: block;
+      margin: auto;
+    }
   }
 
 }
@@ -90,6 +95,11 @@ export default {
 
       img {
         height: 64px;
+      }
+    }
+    .sharing {
+      .button {
+        display: inline-block;
       }
     }
   }

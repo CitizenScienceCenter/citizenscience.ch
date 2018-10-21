@@ -13,30 +13,36 @@
     <app-content-section>
       <div class="content-wrapper">
         <div class="row">
+
           <div class="col col-narrow">
-            <h2 class="heading">What is Citizen Science?</h2>
+            <div>
+              <h2 class="heading heading-centered">What is Citizen Science?</h2>
+            </div>
           </div>
+
         </div>
         <div class="row">
+
+          <div class="col col-narrow ">
+            <p class="centered">
+              <img src="img/graphic-citizen-science.png" />
+            </p>
+          </div>
+
+        </div>
+        <div class="row">
+
           <div class="col col-narrow">
             <p class="centered">
               Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process, and provides new knowledge by supporting collaborative intelligence and co-creation.
             </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-medium">
             <p>
-              <img src="img/illustration.png" />
+              <div class="buttons centered">
+                <router-link tag="button" to="/about" class="button button-secondary">Learn more</router-link>
+              </div>
             </p>
           </div>
-        </div>
-        <div class="row">
-          <div class="col col-narrow">
-            <div class="buttons centered">
-              <router-link tag="button" to="/about" class="button button-secondary">Learn more</router-link>
-            </div>
-          </div>
+
         </div>
       </div>
     </app-content-section>
@@ -45,7 +51,7 @@
       <div class="content-wrapper">
         <div class="row">
           <div class="col col-narrow">
-            <h2 class="heading" id="projects">Start Researching.</h2>
+            <h2 class="heading heading-centered" id="projects">Start Researching.</h2>
           </div>
         </div>
         <div class="row">
@@ -74,9 +80,19 @@
       <div class="content-wrapper">
         <div class="row">
           <div class="col col-narrow">
-            <h2 class="heading" id="start-project">We help you Build your Project</h2>
+            <h2 class="heading heading-centered" id="start-project">We help you Build your Project</h2>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col col-narrow ">
+            <p class="centered">
+              <img src="img/graphic-create-project.png" />
+            </p>
+          </div>
+        </div>
+
+
         <div class="row">
           <div class="col col-narrow">
             <p class="centered">
@@ -105,6 +121,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </app-content-section>
 
@@ -115,14 +132,14 @@
             <p class="centered" id="sdg">
               <img class="sdg-logo" src="@/assets/sdg-logo.svg" />
             </p>
-            <h2 class="heading">Empowered by the Sustainable Development Goals</h2>
+            <h2 class="heading heading-centered">Empowered by the Sustainable Development Goals</h2>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col col-narrow">
             <p><img src="/img/sdg-icons.png" /></p>
           </div>
-        </div>
+        </div> -->
         <div class="row">
           <div class="col col-narrow">
             <p class="centered">
@@ -143,7 +160,7 @@
       <div class="content-wrapper">
         <div class="row">
           <div class="col">
-            <h2 class="heading">A Joined Initiative</h2>
+            <h2 class="heading heading-centered">A Joined Initiative</h2>
           </div>
         </div>
         <div class="row">
@@ -163,7 +180,7 @@
       <div class="content-wrapper">
         <div class="row">
           <div class="col">
-            <h2 class="heading">Sign up for our Newsletter</h2>
+            <h2 class="heading heading-centered">Sign up for our Newsletter</h2>
           </div>
         </div>
         <div class="row">
@@ -178,11 +195,11 @@
       <div class="content-wrapper">
         <div class="row">
           <div class="col">
-            <h2 class="heading">Let's get in touch</h2>
+            <h2 class="heading heading-centered">Let's get in touch</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col col-narrow">
+          <div class="col col-wide">
             <div class="buttons centered">
               <button class="button button-secondary button-icon">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="col">
+      <!-- <div class="col">
         <div class="form-field">
           <label>Last Name</label>
           <div class="custom-select">
@@ -37,7 +37,7 @@
             </svg>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
     <div class="row">

@@ -84,6 +84,7 @@ export default {
       z-index: 1;
       color: white;
       padding: $spacing-3 0 $spacing-3 $spacing-3;
+      height: 100%;
 
       .project-type {
         display: block;
@@ -102,9 +103,13 @@ export default {
 
       p {
         font-size: $font-size-small;
+        margin-bottom: $spacing-6;
       }
 
       .buttons {
+        position: absolute;
+        bottom: $spacing-3;
+        left: $spacing-3;
         .button {
           margin: 0;
         }
@@ -152,7 +157,12 @@ export default {
       }
 
       .project-info {
-        padding: $spacing-4 0 $spacing-4 $spacing-4;
+        padding: $spacing-4;
+
+        .buttons {
+          bottom: $spacing-4;
+          left: $spacing-4;
+        }
       }
 
     }

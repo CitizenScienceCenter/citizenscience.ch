@@ -82,7 +82,6 @@ export default {
   .heading {
     font-size: $font-size-large;
     line-height: 1.25;
-    text-align: center;
     font-weight: 700;
     color: $color-secondary;
     padding-bottom: $spacing-4;
@@ -92,12 +91,19 @@ export default {
 
     &:after {
       content: '';
-      width: 28px;
-      height: 8px;
+      width: 24px;
+      height: 4px;
       background: url('../assets/title-separator.svg');
       position: absolute;
       bottom: 0;
-      left: calc( 50% - 14px );
+      left: 0;
+    }
+
+    &.heading-centered {
+      text-align: center;
+      &:after {
+        left: calc( 50% - 12px );
+      }
     }
   }
 

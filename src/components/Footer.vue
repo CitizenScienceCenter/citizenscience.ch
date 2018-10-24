@@ -49,7 +49,7 @@ export default {
 @import '@/variables.scss';
 
 .footer {
-  background: linear-gradient(to bottom right, $color-secondary, $color-primary-shade-20 );
+  background: linear-gradient(to bottom right, $color-secondary, $color-primary-secondary-mix );
   position: relative;
 
   .logo-wrapper {
@@ -113,6 +113,14 @@ export default {
       img {
         height: 80px;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: $viewport-xlarge) {
+  .footer {
+    .logo-wrapper {
+      height: 480px;
     }
   }
 }

@@ -9,11 +9,6 @@
       <h1><img alt="Citizen Science Center Zurich" class="logo" src="@/assets/logo.svg"/></h1>
     </router-link>
 
-    <div class="uzh-eth">
-      <span>A joined initiative by</span>
-      <img alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_pos.svg"/>
-    </div>
-
     <div class="navigation-wrapper" :class="{ 'active': menuOn }">
       <div class="drawer">
         <div class="drawer-content">
@@ -212,28 +207,6 @@ header {
     }
   }
 
-  .uzh-eth {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 48px;
-    padding: 8px 0;
-    margin-right: 12px;
-
-    span {
-      display: block;
-      text-align: right;
-      font-size: $font-size-small / $font-scale / $font-scale;
-      line-height: 12px;
-      margin-bottom: 2px;
-    }
-    img {
-      display: block;
-      height: 18px;
-    }
-  }
-
 
   .navigation-wrapper {
 
@@ -377,15 +350,6 @@ header {
       }
     }
 
-    .uzh-eth {
-      padding: 14px 0;
-      margin-right: 16px;
-      height: 64px;
-      img {
-        height: 22px;
-      }
-    }
-
     .navigation-wrapper {
       &.active {
         .drawer {
@@ -475,26 +439,9 @@ header {
 
     .home-link {
       padding: 16px;
-      border-right: 1px solid $color-black-tint-90;
       height: 80px;
       .logo {
         height: 48px;
-      }
-    }
-
-    .uzh-eth {
-      position: relative;
-      float: left;
-      height: 80px;
-
-      padding: 16px 0;
-      padding-left: 16px;
-      span {
-        text-align: left;
-        margin-bottom: 4px;
-      }
-      img {
-        height: 32px;
       }
     }
 

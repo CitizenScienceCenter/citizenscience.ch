@@ -4,8 +4,10 @@ import VueScrollTo from 'vue-scrollto'
 import App from './App.vue'
 import { routes } from './routes.js'
 import Vuex from 'vuex';
-import vuexI18n from 'vuex-i18n';
+import VuexPersist from 'vuex-persist'
+//import VueI18n from 'vue-i18n'
 
+//Vue.use(VueI18n);
 
 Vue.config.productionTip = false
 
@@ -15,21 +17,13 @@ Vue.use(VueScrollTo, {
  })
 Vue.use(Vuex)
 
-const store = new Vuex.Store();
-Vue.use(vuexI18n.plugin, store);
-
-const translationsEn = {
-  "cover-heading": "The People's Way of Research",
-	"cover-subheading": "Citizen Science Center Zurich"
-};
-const translationsDe = {
-  "cover-heading": "Forschung Bla bla bla",
-	"cover-subheading": "Citizen Science Center Zürich"
-};
-
-Vue.i18n.add('en', translationsEn);
-Vue.i18n.add('de', translationsDe);
-Vue.i18n.set('en');
+const vuexPersist = new VuexPersist({
+  key: 'my-app',
+  storage: localStorage
+})
+const store = new Vuex.Store({
+  plugins: [vuexPersist.plugin]
+});
 
 const router = new VueRouter({
   routes: routes,
@@ -38,7 +32,11 @@ const router = new VueRouter({
     vm.$children[0].scrollTop();
     return { x: 0, y: 0 }
   }
-})
+});
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
+});
 
 var vm = new Vue({
   router,

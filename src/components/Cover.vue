@@ -7,6 +7,12 @@
         </div>
       </div>
     </div>
+
+    <div class="uzh-eth">
+      <span>A joined initiative by</span>
+      <img alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_neg.svg"/>
+    </div>
+
     <img class="sdg-logo" src="@/assets/sdg-logo-white.svg" v-scroll-to="'#sdg'"/>
     <div class="cover-overlay"></div>
   </section>
@@ -53,20 +59,42 @@ export default {
   display: flex;
   align-items: center;
 
+
+  .uzh-eth {
+    display: block;
+    position: absolute;
+    bottom: $spacing-2;
+    left: $spacing-2;
+    z-index: 1;
+
+    span {
+      display: block;
+      font-size: $font-size-small / $font-scale;
+      line-height: 1;
+      margin-bottom: $spacing-1;
+      color: white;
+    }
+    img {
+      display: block;
+      height: 28px;
+    }
+  }
+
   .sdg-logo {
     height: 32px;
     position: absolute;
-    bottom: $spacing-3;
-    right: $spacing-3;
+    bottom: $spacing-2;
+    right: $spacing-2;
     z-index: 1;
     cursor: pointer;
   }
-
 
   .content-wrapper {
     position: relative;
     z-index: 1;
     width: 100%;
+
+    padding-bottom: $spacing-4;
 
     .cover-heading {
       font-size: $font-size-large;
@@ -101,7 +129,7 @@ export default {
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary-shade-20 );
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary-secondary-mix );
     opacity: 0.8;
   }
 
@@ -143,10 +171,17 @@ export default {
   .cover {
     height: 560px;
 
+    .uzh-eth {
+      bottom: $spacing-3;
+      left: $spacing-3;
+      img {
+        height: 36px;
+      }
+    }
     .sdg-logo {
-      height: 48px;
-      bottom: $spacing-4;
-      right: $spacing-4;
+      height: 40px;
+      bottom: $spacing-3;
+      right: $spacing-3;
     }
 
     .content-wrapper {
@@ -184,6 +219,8 @@ export default {
 
 @media only screen and (min-width: $viewport-xlarge) {
   .cover {
+
+    height: 640px;
 
     .content-wrapper {
       .cover-heading {

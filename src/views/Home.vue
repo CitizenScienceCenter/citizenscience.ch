@@ -2,8 +2,8 @@
   <div>
 
     <app-cover>
-      <h2 class="cover-heading">{{ $t('cover-heading') }}</h2>
-      <p class="cover-subheading">{{ $t('cover-subheading') }}</p>
+      <h2 class="cover-heading">sadfasdf</h2>
+      <p class="cover-subheading">sadfasdf</p>
       <div class="buttons">
         <button class="button button-primary" v-scroll-to="'#projects'">Discover Projects</button>
         <button class="button button-secondary button-secondary-inverted" v-scroll-to="'#start-project'">Start a Project</button>

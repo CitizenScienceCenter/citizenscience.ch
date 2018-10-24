@@ -38,6 +38,8 @@ $color-black-tint-50: tint($color-black, 50% );
 $color-black-tint-20: tint($color-black, 20%);
 $color-black-tint-10: tint($color-black, 10%);
 
+$color-primary-secondary-mix: mix( $color-primary, $color-secondary, 50%);
+
 /* Border Radius */
 
 $border-radius: 4px;

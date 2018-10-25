@@ -96,6 +96,7 @@ export default {
       this.pulled = false;
     },
     scroll() {
+      console.log("scroll: "+window.scrollY)
       if( this.resetNow ) {
         this.reset();
         this.$emit('undoResetNow', false)

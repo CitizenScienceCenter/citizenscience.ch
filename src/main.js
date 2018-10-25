@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import { routes } from './router/routes.js';
 import VueScrollTo from 'vue-scrollto';
 import App from './App.vue';
-import { router } from './router/router.js';
 import VueI18n from 'vue-i18n';
 import { store } from './store/store.js';
 import Vuex from 'vuex';
@@ -16,10 +16,33 @@ Vue.use(VueScrollTo, {
 Vue.use(Vuex)
 Vue.use(VueI18n)
 
+var language;
+if( !store.state.language ) {
+  // no language in store, check browser
+  language = window.navigator.userLanguage || window.navigator.language;
+  if (language.indexOf('-') !== -1) {
+    language = language.split('-')[0];
+  }
+  if (language.indexOf('_') !== -1) {
+    language = language.split('_')[0];
+  }
+}
+else {
+  language = store.state.language;
+}
 
 const i18n = new VueI18n({
-  locale: store.state.language
+  locale: language
 })
+
+const router = new VueRouter({
+  routes: routes,
+  mode: 'history',
+  scrollBehavior (to, from, savedPosition) {
+    vm.$children[0].scrollTop();
+    return { x: 0, y: 0 }
+  }
+});
 
 var vm = new Vue({
   store,
@@ -28,14 +51,11 @@ var vm = new Vue({
   render: h => h(App)
 }).$mount('#app')
 
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
+});
+
 if( !store.state.language ) {
-  // no language in store, check browser
-  var language = window.navigator.userLanguage || window.navigator.language;
-  if (language.indexOf('-') !== -1) {
-    language = language.split('-')[0];
-  }
-  if (language.indexOf('_') !== -1) {
-    language = language.split('_')[0];
-  }
   store.dispatch("setLanguage", {vm, language} );
 }

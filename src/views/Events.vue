@@ -1,3 +1,18 @@
+<i18n>
+{
+  "en": {
+    "heading": "Next Events",
+    "paragraph-1": "Event 1",
+    "paragraph-2": "Event 2"
+  },
+  "de": {
+    "heading": "Nächste Events",
+    "paragraph-1": "Event 1",
+    "paragraph-2": "Event 2"
+  }
+}
+</i18n>
+
 <template>
   <div>
 
@@ -5,15 +20,9 @@
       <div class="content-wrapper">
         <div class="row">
           <div class="col col-narrow">
-            <h2 class="heading">Next Events</h2>
-            <p>
-              Bevorstehende Brown Bag Lunches (in English):
-            </p>
-            <p>
-              Sep 24, 2018, 12:00 Support by the CS Center Zurich: what it is and how to access it<br/>
-              Oct 29, 2018, 12:00 Membership & Partnerships - Criteria and procedures<br/>
-              Nov 15, 2018, 12:00 Ethics, data security and data privacy - a one-stop-shop CS projects<br/>
-            </p>
+            <h2 class="heading">{{ $t('heading') }}</h2>
+            <p>{{ $t('paragraph-1') }}</p>
+            <p>{{ $t('paragraph-2') }}</p>
           </div>
         </div>
       </div>

@@ -2,10 +2,12 @@
 {
   "en": {
     "nav-about": "About",
+    "nav-sdg": "SDG",
     "nav-events": "Events"
   },
   "de": {
     "nav-about": "Über uns",
+    "nav-sdg": "SDG",
     "nav-events": "Veranstaltungen"
   }
 }
@@ -36,6 +38,7 @@
           </div>
           <ul class="navigation">
             <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-about') }}</span></router-link></li>
+            <li><router-link to="/sdg" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-sdg') }}</span></router-link></li>
             <li><router-link to="/events" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-events') }}</span></router-link></li>
           </ul>
           <div class="custom-select language-select">

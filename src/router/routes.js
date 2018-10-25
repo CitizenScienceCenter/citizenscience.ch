@@ -13,6 +13,11 @@ const About = resolve => {
     resolve( require('../views/About.vue') );
   });
 };
+const SDG = resolve => {
+  require.ensure(['../views/SDG.vue'], () => {
+    resolve( require('../views/SDG.vue') );
+  });
+};
 const Events = resolve => {
   require.ensure(['../views/Events.vue'], () => {
     resolve( require('../views/Events.vue') );
@@ -22,5 +27,6 @@ const Events = resolve => {
 export const routes = [
     { path: '/', component: Home, meta: {title: 'Homepage'} },
     { path: '/about', component: About, meta: {title: 'About'} },
+    { path: '/sdg', component: SDG, meta: {title: 'SDG'} },
     { path: '/events', component: Events, meta: {title: 'Events'} }
 ]

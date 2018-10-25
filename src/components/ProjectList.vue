@@ -42,6 +42,7 @@ export default {
     background-position: 50% 50%;
     position: relative;
     border-radius: $border-radius;
+    box-shadow: 0px 4px 8px -4px rgba($color-black,0.2);
     overflow: hidden;
 
     .row {

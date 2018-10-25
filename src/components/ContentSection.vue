@@ -85,7 +85,7 @@ export default {
     font-weight: 700;
     color: $color-secondary;
     padding-bottom: $spacing-4;
-    margin-bottom: $spacing-4;
+    margin-bottom: $spacing-5;
 
     position: relative;
 
@@ -167,7 +167,7 @@ export default {
     .heading {
       font-size: $font-size-xlarge;
       padding-bottom: $spacing-5;
-      margin-bottom: $spacing-5;
+      margin-bottom: $spacing-6;
     }
 
     .subheading {

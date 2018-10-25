@@ -15,6 +15,7 @@
             <h3 class="subheading">Sustainable Development Goals</h3>
             <p>
               Staats- und Regierungschefs verpflichteten sich im September 2015 zu 17 Zielen für nachhaltige Entwicklung (Sustainable Development Goals - SDGs). Unter anderem sollen sie dazu beitragen, Armut zu beenden, Ungleichheit, Ungerechtigkeit und den Klimawandel zu bekämpfen. Um die SDGs erreichen zu können, ist es wichtig, dass relevante und aktuelle Daten zur Verfügung stehen, auf deren Basis Probleme bearbeitet werden können.
+              <img src="img/huge.jpg" />
             </p>
           </div>
         </div>

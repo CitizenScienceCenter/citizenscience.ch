@@ -1,3 +1,17 @@
+<i18n>
+{
+  "en": {
+    "nav-about": "About",
+    "nav-events": "Events"
+  },
+  "de": {
+    "nav-about": "Über uns",
+    "nav-events": "Veranstaltungen"
+  }
+}
+</i18n>
+
+
 <template>
   <header :class="{ 'fixed': fixed,'animated': animated, 'pulled': pulled }">
 
@@ -21,11 +35,11 @@
             </router-link>
           </div>
           <ul class="navigation">
-            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>About</span></router-link></li>
-            <li><router-link to="/events" active-class="active" @click.native="hideMenu"><span>Events</span></router-link></li>
+            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-about') }}</span></router-link></li>
+            <li><router-link to="/events" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-events') }}</span></router-link></li>
           </ul>
           <div class="custom-select language-select">
-            <select v-model="language" @change="languageChange">
+            <select v-model="language">
               <option value="de">De</option>
               <option value="en">En</option>
             </select>
@@ -55,8 +69,18 @@ export default {
       fixed: false,
       animated: false,
       pulled: false,
-
-      language: 'en'
+    }
+  },
+  computed: {
+    language: {
+      get() {
+        return this.$store.state.language;
+      },
+      set(language) {
+        var vm = this.$root;
+        this.$store.dispatch('setLanguage', {vm, language} );
+        this.hideMenu();
+      }
     }
   },
   props: {
@@ -123,12 +147,6 @@ export default {
     },
     hideMenu() {
       this.menuOn = false;
-    },
-
-    languageChange() {
-      //Vue.i18n.set('en');
-      this.$i18n.set(this.language);
-      this.hideMenu();
     }
   },
   created() {

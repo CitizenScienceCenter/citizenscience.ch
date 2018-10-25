@@ -12,13 +12,13 @@
     "sass-loader": "^7.1.0",
     "vue": "^2.5.17",
     "vue-i18n": "^8.2.1",
-    "vue-i18n-loader": "^1.0.0",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.13.0",
     "vuex": "^3.0.1",
     "vuex-persist": "^1.8.0"
   },
   "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.0.4",

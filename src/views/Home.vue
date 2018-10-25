@@ -1,12 +1,37 @@
+<i18n>
+{
+  "en": {
+    "cover-heading": "The People's Way of Research",
+    "cover-subheading": "Citizen Science Center Zurich",
+    "cover-button-projects": "Discover Projects",
+    "cover-button-your-project": "Start a Project",
+
+    "section-explanation-heading": "What is it about?",
+    "section-explanation-text": "Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process, and provides new knowledge by supporting collaborative intelligence and co-creation.",
+    "section-explanation-button": "Learn more"
+  },
+  "de": {
+    "cover-heading": "Erforsche die Welt",
+    "cover-subheading": "Citizen Science Center Zürich",
+    "cover-button-projects": "Entdecke Projekte",
+    "cover-button-your-project": "Starte dein Projekt",
+
+    "section-explanation-heading": "Was ist Citizen Science?",
+    "section-explanation-text": "Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und diese durcheinander warf um ein Musterbuch zu erstellen.",
+    "section-explanation-button": "Mehr erfahren"
+  }
+}
+</i18n>
+
 <template>
   <div>
 
     <app-cover>
-      <h2 class="cover-heading">sadfasdf</h2>
-      <p class="cover-subheading">sadfasdf</p>
+      <h2 class="cover-heading">{{ $t('cover-heading') }}</h2>
+      <p class="cover-subheading">{{ $t('cover-subheading') }}</p>
       <div class="buttons">
-        <button class="button button-primary" v-scroll-to="'#projects'">Discover Projects</button>
-        <button class="button button-secondary button-secondary-inverted" v-scroll-to="'#start-project'">Start a Project</button>
+        <button class="button button-primary" v-scroll-to="'#projects'">{{ $t('cover-button-projects') }}</button>
+        <button class="button button-secondary button-secondary-inverted" v-scroll-to="'#start-project'">{{ $t('cover-button-your-project') }}</button>
       </div>
     </app-cover>
 
@@ -16,7 +41,7 @@
 
           <div class="col col-narrow">
             <div>
-              <h2 class="heading heading-centered">What is Citizen Science?</h2>
+              <h2 class="heading heading-centered">{{ $t('section-explanation-heading') }}</h2>
             </div>
           </div>
 
@@ -34,11 +59,11 @@
 
           <div class="col col-narrow">
             <p class="centered">
-              Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process, and provides new knowledge by supporting collaborative intelligence and co-creation.
+              {{ $t('section-explanation-text') }}
             </p>
             <p>
               <div class="buttons centered">
-                <router-link tag="button" to="/about" class="button button-secondary">Learn more</router-link>
+                <router-link tag="button" to="/about" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
               </div>
             </p>
           </div>

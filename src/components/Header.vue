@@ -83,9 +83,6 @@ export default {
       }
     }
   },
-  props: {
-    resetNow: Boolean
-  },
   methods: {
     reset() {
       this.menuOn = false;
@@ -96,10 +93,8 @@ export default {
       this.pulled = false;
     },
     scroll() {
-      console.log("scroll: "+window.scrollY)
-      if( this.resetNow ) {
+      if( window.scrollY === 0 ) {
         this.reset();
-        this.$emit('undoResetNow', false)
       }
 
       if( window.scrollY <= this.scrollY ) {
@@ -207,9 +202,16 @@ header {
       fill: $color-black;
     }
 
-    &:hover {
+    &:active {
       svg {
         fill: $color-black-tint-50;
+      }
+    }
+    @media (hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-black-tint-50;
+        }
       }
     }
   }
@@ -301,8 +303,13 @@ header {
                 transform: translateY(-1px);
               }
 
-              &:hover {
+              &:active {
                 color: $color-black-tint-90;
+              }
+              @media (hover: hover) {
+                &:hover {
+                  color: $color-black-tint-90;
+                }
               }
             }
           }
@@ -504,8 +511,13 @@ header {
                 color: $color-black;
                 height: 80px;
                 padding: 28px 24px;
-                &:hover {
+                &:active {
                   color: $color-primary;
+                }
+                @media (hover: hover) {
+                  &:hover {
+                    color: $color-primary;
+                  }
                 }
                 &.active {
                   color: $color-primary;
@@ -520,20 +532,23 @@ header {
             select {
               color: $color-black;
               border-color: transparent;
+
+              &:active {
+                color: $color-primary;
+                border-color: $color-black-tint-90;
+              }
+              @media (hover: hover) {
+                &:hover {
+                  color: $color-primary;
+                  border-color: $color-black-tint-90;
+                }
+              }
+
             }
             svg {
               fill: $color-black;
             }
 
-            &:hover {
-              select {
-                color: $color-primary;
-                border-color: $color-black-tint-90;
-              }
-              svg {
-                fill: $color-primary;
-              }
-            }
           }
         }
       }

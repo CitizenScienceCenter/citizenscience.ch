@@ -77,25 +77,42 @@ html {
     font-weight: 700;
     background-color: $color-primary;
     color: white;
-    &:hover, &:active {
+    &:active {
       background-color: $color-primary-shade-20;
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-primary-shade-20
+      }
     }
   }
   &.button-secondary {
     border: 1px solid $color-primary;
     border: 1px solid $color-black-tint-90;
     color: $color-primary;
-    &:hover {
+    &:active {
       border-color: $color-primary-shade-20;
       border-color: $color-primary;
       color: $color-primary-shade-20;
+    }
+    @media (hover: hover) {
+      &:hover {
+        border-color: $color-primary-shade-20;
+        border-color: $color-primary;
+        color: $color-primary-shade-20;
+      }
     }
 
     &.button-secondary-inverted {
       border-color: rgba( 255,255,255, 0.75 );
       color: white;
-      &:hover {
+      &:active {
         border-color: rgba( 255,255,255, 1);
+      }
+      @media (hover: hover) {
+        &:hover {
+          border-color: rgba( 255,255,255, 1);
+        }
       }
     }
   }
@@ -119,7 +136,7 @@ html {
       svg {
         fill: $color-primary;
       }
-      &:hover {
+      &:active {
         svg {
           fill: $color-primary-shade-20;
         }
@@ -130,9 +147,16 @@ html {
       svg {
         fill: white;
       }
-      &:hover {
+      &:active {
         svg {
           fill: white;
+        }
+      }
+      @media (hover: hover) {
+        &:hover {
+          svg {
+            fill: white;
+          }
         }
       }
     }
@@ -140,8 +164,13 @@ html {
     &.button-secondary-naked {
       border: none;
 
-      &:hover {
+      &:active {
         opacity: 0.75;
+      }
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.75;
+        }
       }
     }
 
@@ -182,6 +211,7 @@ input, select {
 
   select {
     padding-right: 32px;
+    color: $color-black;
   }
   svg {
     position: absolute;
@@ -190,24 +220,6 @@ input, select {
     height: 12px;
     fill: $color-black;
     pointer-events: none;
-  }
-
-  &:hover {
-    select {
-      color: $color-primary;
-    }
-    svg {
-      fill: $color-primary;
-    }
-
-    &:active {
-      select {
-        color: $color-black;
-      }
-      svg {
-        fill: $color-black;
-      }
-    }
   }
 }
 

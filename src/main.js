@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { routes } from './router/routes.js';
+import { router } from './router/router.js';
 import VueScrollTo from 'vue-scrollto';
 import App from './App.vue';
 import VueI18n from 'vue-i18n';
@@ -35,26 +35,12 @@ const i18n = new VueI18n({
   locale: language
 })
 
-const router = new VueRouter({
-  routes: routes,
-  mode: 'history',
-  scrollBehavior (to, from, savedPosition) {
-    vm.$children[0].scrollTop();
-    return { x: 0, y: 0 }
-  }
-});
-
 var vm = new Vue({
   store,
   router,
   i18n,
   render: h => h(App)
 }).$mount('#app')
-
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title;
-  next();
-});
 
 if( !store.state.language ) {
   store.dispatch("setLanguage", {vm, language} );

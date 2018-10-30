@@ -31,22 +31,22 @@ export default {
       return this.$i18n.locale;
     },
     styleClass: function() {
+      let cover = '';
       switch( this.subpage ) {
         case 'about':
-          return 'subpage';
+          cover ='subpage';
           break;
-        default:
-          return '';
       }
+      return cover;
     },
     bgImageUrl: function() {
+      let url = 'img/covers/sylwia-bartyzel-3149-unsplash.jpg';
       switch( this.subpage ) {
         case 'about':
-          return 'img/covers/carrots.jpg';
+          url = 'img/covers/carrots.jpg';
           break;
-        default:
-          return 'img/covers/sylwia-bartyzel-3149-unsplash.jpg';
       }
+      return url;
     }
   }
 }

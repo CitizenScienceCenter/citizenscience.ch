@@ -1,64 +1,84 @@
 <template>
-  <!--
-  <div class="newsletter-signup">
-    <div class="row">
-      <div class="col">
-        <div class="form-field">
-          <label>Email</label>
-          <input type="text" />
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-50">
-        <div class="form-field">
-          <label>First Name</label>
-          <input type="text" />
-        </div>
-      </div>
-      <div class="col col-50">
-        <div class="form-field">
-          <label>Last Name</label>
-          <input type="text" />
-        </div>
-      </div>
+  <div>
+    <form action="https://citizenscience.us17.list-manage.com/subscribe/post" method="POST">
+    <input name="u" value="32303d2adcf28a2820c5f9165" type="hidden">
+    <input name="id" value="6dc5028399" type="hidden">
+    
 
-      <div class="col">
-        <div class="form-field">
-          <label>Last Name</label>
-          <div class="custom-select">
-            <select>
-              <option>just for styling</option>
-              <option>blabla</option>
-            </select>
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-               <path d="M127.3,192h257.3c17.8,0,26.7,21.5,14.1,34.1L270.1,354.8c-7.8,7.8-20.5,7.8-28.3,0L113.2,226.1
-            	C100.6,213.5,109.5,192,127.3,192z"/>
-            </svg>
-          </div>
-        </div>
-      </div>
+    <!-- people should not fill these in and expect good things -->
+    <!-- <div class="field-shift" aria-label="Please leave the following three fields empty">
+        <label for="b_name">Name: </label>
+        <input name="b_name" tabindex="-1" value="" placeholder="Freddie" id="b_name" type="text">
 
+        <label for="b_email">Email: </label>
+        <input name="b_email" tabindex="-1" value="" placeholder="youremail@gmail.com" id="b_email" type="email">
+
+        <label for="b_comment">Comment: </label>
+        <textarea name="b_comment" tabindex="-1" placeholder="Please comment" id="b_comment"></textarea>
+    </div> -->
+
+    <div id="mergeTable" class="mergeTable">
+        
+        
+        <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+            <label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
+            <div class="field-group">
+                <input autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="test@test.com" type="email">
+                
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
+            <label for="MERGE1">First Name</label>
+            <div class="field-group">
+                <input name="MERGE1" id="MERGE1" size="25" value="test" type="text">
+                
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-2">
+            <label for="MERGE2">Last Name</label>
+            <div class="field-group error">
+                <input name="MERGE2" id="MERGE2" size="25" value="testv-model=&quot;fields.u&quot;" type="text">
+                
+                
+                <div class="feedback error"><br><div class="errorText">Please be sure that name fields use alphanumeric characters, commas, dashes, single quotes and periods only</div></div>
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        
+
+
+        
+
+        
+
+        
     </div>
-    <div class="row">
-      <div class="col centered">
-        <button class="button button-primary">Submit</button>
-      </div>
+
+    <div class="submit_container clear">
+        <input class="formEmailButton" name="submit" value="Subscribe to list" type="submit">
     </div>
+    <input name="ht" value="1cbde8b0ed829f03ffbb06c5f425fda64740c128:MTU0MDkwOTYxMC4xMDcx" type="hidden">
+    <input name="mc_signupsource" value="hosted" type="hidden">
+</form>
+    <p v-if="errorMessage && !successMessage" transition="fade">{{ errorMessage }}</p>
+    <p v-if="successMessage" transition="fade">{{ successMessage }}</p>
   </div>
--->
-
-<div>
-  <form v-if="!successMessage" @submit.prevent="subscribe($event)">
-    <input v-model="email" name="EMAIL" type="text" placeholder="Email" id="email" />
-    <input type="submit" class="button button-primary"/>
-  </form>
-  <p v-if="errorMessage && !successMessage" transition="fade">{{ errorMessage }}</p>
-  <p v-if="successMessage" transition="fade">{{ successMessage }}</p>
-</div>
-
-
 </template>
 
 <script>
@@ -72,36 +92,60 @@ export default {
   },
   data: function() {
     return {
-      email: '',
+      fields: {
+        'ht': 'bb1de22dd0c9aea524e98f14d414429db1dbd6ed:MTU0MDkwOTEyMy4xMzA0',
+        'u': '32303d2adcf28a2820c5f9165',
+        'id': '6dc5028399',
+        'MERGE0':'',
+        'MERGE1':'',
+        'MERGE2':'',
+      },
       response: {},
       errorMessage: null,
       successMessage: null
     };
   },
-  ready: function() {
-    return this.action = this.action.replace('/post?', '/post-json?').concat('&c=?');
+  mounted: function() {
+    // this.action = this.action.replace('/post?', '/post-json?').concat('&c=?');
   },
   methods: {
-    subscribe: function(e) {
-      var params;
-      params = $(e.currentTarget).serialize();
-      return $.ajax({
-        type: 'POST',
-        crossDomain: true,
-        url: this.action,
-        data: params,
-        dataType: 'jsonp',
-        success: (function(_this) {
-          return function(res) {
-            if (res.result === 'success') {
-              return _this.successMessage = res.msg;
-            } else {
-              _this.errorMessage = res.msg;
-              return _this.errorMessage = _this.errorMessage.substring(_this.errorMessage.indexOf('-') + 1, _this.errorMessage.length);
-            }
-          };
-        })(this)
-      });
+    subscribe: function() {
+      let params = '';
+      for (let f in this.fields) {
+        params += '&' + f + '=' + this.fields[f]
+      }
+      params = encodeURI(params)
+      console.log(params);
+      var http = new XMLHttpRequest(); 
+      http.open('POST', this.action, true);
+
+      //Send the proper header information along with the request
+      http.setRequestHeader('Access-Control-Allow-Origin', '*');
+      http.setRequestHeader('Content-type', 'application/json');
+
+      http.onreadystatechange = function() {//Call a function when the state changes.
+          if(http.readyState == 4 && http.status == 200) {
+              console.log(http.responseText);
+          }
+      }
+      http.send(this.fields);
+      // return $.ajax({
+      //   type: 'POST',
+      //   crossDomain: true,
+      //   url: this.action,
+      //   data: params,
+      //   dataType: 'jsonp',
+      //   success: (function(_this) {
+      //     return function(res) {
+      //       if (res.result === 'success') {
+      //         return _this.successMessage = res.msg;
+      //       } else {
+      //         _this.errorMessage = res.msg;
+      //         return _this.errorMessage = _this.errorMessage.substring(_this.errorMessage.indexOf('-') + 1, _this.errorMessage.length);
+      //       }
+      //     };
+      //   })(this)
+      // });
     }
   }
 }

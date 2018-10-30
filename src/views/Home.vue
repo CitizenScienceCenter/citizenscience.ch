@@ -210,7 +210,7 @@
         </div>
         <div class="row">
           <div class="col col-narrow">
-            <app-newsletter-signup action="https://citizenscience.us17.list-manage.com/subscribe/post?u=32303d2adcf28a2820c5f9165&amp;id=6dc5028399"></app-newsletter-signup>
+            <app-newsletter-signup action="https://citizenscience.us17.list-manage.com/subscribe/post-json"></app-newsletter-signup>
           </div>
         </div>
       </div>

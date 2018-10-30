@@ -85,8 +85,8 @@ export default {
     font-weight: 700;
     color: $color-secondary;
     padding-bottom: $spacing-4;
-    margin-bottom: $spacing-5;
-
+    margin-bottom: $spacing-4;
+    text-align: center;
     position: relative;
 
     &:after {
@@ -96,15 +96,9 @@ export default {
       background: url('../assets/title-separator.svg');
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: calc( 50% - 12px );
     }
 
-    &.heading-centered {
-      text-align: center;
-      &:after {
-        left: calc( 50% - 12px );
-      }
-    }
   }
 
   .subheading {
@@ -118,8 +112,8 @@ export default {
   p {
     margin-bottom: $spacing-4;
 
-    img {
-      width: 100%;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -131,6 +125,11 @@ export default {
 
   .uzh-eth-logo {
     height: 40px;
+  }
+
+  .col-half {
+    margin-bottom: $spacing-5;
+    text-align: center;
   }
 
 }
@@ -156,9 +155,6 @@ export default {
       min-height: 480px;
     }
 
-    .col-narrow {
-      width: 66.667%;
-    }
 
     .sdg-logo {
       height: 64px;
@@ -167,7 +163,7 @@ export default {
     .heading {
       font-size: $font-size-xlarge;
       padding-bottom: $spacing-5;
-      margin-bottom: $spacing-6;
+      margin-bottom: $spacing-5;
     }
 
     .subheading {
@@ -180,6 +176,13 @@ export default {
 
     .uzh-eth-logo {
       height: 48px;
+    }
+
+    .col-half {
+      width: 66.667%;
+    }
+    .col-narrow {
+      width: 66.667%;
     }
 
   }
@@ -196,16 +199,6 @@ export default {
       min-height: 560px;
     }
 
-    .col-wide {
-      width: 83.333%;
-    }
-    .col-medium {
-      width: 83.333%;
-    }
-    .col-narrow {
-      width: 66.667%;
-    }
-
     .sdg-logo {
       height: 80px;
     }
@@ -216,6 +209,38 @@ export default {
 
     .uzh-eth-logo {
       height: 56px;
+    }
+
+    .row-reverse {
+      flex-direction: row-reverse;
+    }
+
+    .col-half {
+      margin-bottom: 0;
+
+      width: 41.667%;
+      display: flex;
+      align-items: center;
+
+      .heading {
+        text-align: left;
+        &:after {
+          left: 0;
+        }
+      }
+
+      .centered {
+        text-align: left;
+      }
+    }
+    .col-wide {
+      width: 83.333%;
+    }
+    .col-medium {
+      width: 83.333%;
+    }
+    .col-narrow {
+      width: 66.667%;
     }
 
   }

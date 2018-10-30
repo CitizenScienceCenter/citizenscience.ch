@@ -27,6 +27,7 @@
       </div>
     </app-content-section>
 
+
     <app-footer></app-footer>
 
   </div>
@@ -39,7 +40,7 @@ import ContentSection from '@/components/ContentSection.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-  name: 'SDG',
+  name: 'Who',
   components: {
     'app-cover': Cover,
     'app-content-section': ContentSection,

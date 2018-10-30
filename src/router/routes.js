@@ -9,24 +9,18 @@ const Home = resolve => {
   });
 };
 const About = resolve => {
-  require.ensure(['../views/About.vue'], () => {
-    resolve( require('../views/About.vue') );
+  require.ensure(['../views/What.vue'], () => {
+    resolve( require('../views/What.vue') );
   });
 };
 const SDG = resolve => {
-  require.ensure(['../views/SDG.vue'], () => {
-    resolve( require('../views/SDG.vue') );
-  });
-};
-const Events = resolve => {
-  require.ensure(['../views/Events.vue'], () => {
-    resolve( require('../views/Events.vue') );
+  require.ensure(['../views/Who.vue'], () => {
+    resolve( require('../views/Who.vue') );
   });
 };
 
 export const routes = [
     { path: '/', component: Home, meta: {title: 'Homepage'} },
-    { path: '/about', component: About, meta: {title: 'About'} },
-    { path: '/sdg', component: SDG, meta: {title: 'SDG'} },
-    { path: '/events', component: Events, meta: {title: 'Events'} }
+    { path: '/what', component: About, meta: {title: 'What'} },
+    { path: '/who', component: SDG, meta: {title: 'Who'} }
 ]

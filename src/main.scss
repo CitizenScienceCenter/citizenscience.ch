@@ -51,7 +51,7 @@ html {
 }
 
 
-/* Elements */
+/* Helpers */
 
 .centered {
   text-align: center;
@@ -59,6 +59,10 @@ html {
 .right-aligned {
   text-align: right;
 }
+
+
+/* Elements */
+
 
 .button {
   height: 40px;
@@ -246,6 +250,7 @@ input, select {
   .content-wrapper {
     padding: 0 $grid-margin-mobile-large;
   }
+
   .col {
     padding: 0 $grid-gutter-mobile-large/2;
 
@@ -283,6 +288,14 @@ input, select {
     margin-top: 64px;
   }
 
+  .col {
+    padding: 0 $grid-gutter-tablet-portrait/2;
+
+    .row {
+      margin-left: -$grid-gutter-tablet-portrait/2;
+      margin-right: -$grid-gutter-tablet-portrait/2;
+    }
+  }
 
   .button {
     height: 48px;
@@ -304,6 +317,28 @@ input, select {
 
   .content-area {
     margin-top: 80px;
+  }
+
+  .col {
+    padding: 0 $grid-gutter-large/2;
+
+    .row {
+      margin-left: -$grid-gutter-large/2;
+      margin-right: -$grid-gutter-large/2;
+    }
+  }
+
+}
+
+@media only screen and (min-width: $viewport-xlarge) {
+
+  .col {
+    padding: 0 $grid-gutter-xlarge/2;
+
+    .row {
+      margin-left: -$grid-gutter-xlarge/2;
+      margin-right: -$grid-gutter-xlarge/2;
+    }
   }
 
 }

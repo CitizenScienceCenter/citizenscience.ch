@@ -1,14 +1,12 @@
 <i18n>
 {
   "en": {
-    "nav-about": "About",
-    "nav-sdg": "SDG",
-    "nav-events": "Events"
+    "nav-what": "What we do",
+    "nav-who": "Who we are"
   },
   "de": {
-    "nav-about": "Über uns",
-    "nav-sdg": "SDG",
-    "nav-events": "Veranstaltungen"
+    "nav-what": "What we do",
+    "nav-who": "Who we are"
   }
 }
 </i18n>
@@ -37,9 +35,8 @@
             </router-link>
           </div>
           <ul class="navigation">
-            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-about') }}</span></router-link></li>
-            <li><router-link to="/sdg" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-sdg') }}</span></router-link></li>
-            <li><router-link to="/events" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-events') }}</span></router-link></li>
+            <li><router-link to="/what" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-what') }}</span></router-link></li>
+            <li><router-link to="/who" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-who') }}</span></router-link></li>
           </ul>
           <div class="custom-select language-select">
             <select v-model="language">

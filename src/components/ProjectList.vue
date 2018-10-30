@@ -34,7 +34,7 @@ export default {
 
 .project-list {
 
-  margin-bottom: $spacing-4;
+  margin-bottom: $spacing-5;
 
   .project {
 

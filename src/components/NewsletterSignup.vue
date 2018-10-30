@@ -1,4 +1,5 @@
 <template>
+  <!--
   <div class="newsletter-signup">
     <div class="row">
       <div class="col">
@@ -22,7 +23,7 @@
         </div>
       </div>
 
-      <!-- <div class="col">
+      <div class="col">
         <div class="form-field">
           <label>Last Name</label>
           <div class="custom-select">
@@ -37,20 +38,72 @@
             </svg>
           </div>
         </div>
-      </div> -->
+      </div>
 
     </div>
     <div class="row">
-      <div class="col right-aligned">
+      <div class="col centered">
         <button class="button button-primary">Submit</button>
       </div>
     </div>
   </div>
+-->
+
+<div>
+  <form v-if="!successMessage" @submit.prevent="subscribe($event)">
+    <input v-model="email" name="EMAIL" type="text" placeholder="Email" id="email" />
+    <input type="submit" class="button button-primary"/>
+  </form>
+  <p v-if="errorMessage && !successMessage" transition="fade">{{ errorMessage }}</p>
+  <p v-if="successMessage" transition="fade">{{ successMessage }}</p>
+</div>
+
+
 </template>
 
 <script>
 export default {
-  name: 'NewsletterSignup'
+  name: 'NewsletterSignup',
+  props: {
+    action: {
+      required: true,
+      type: String
+    }
+  },
+  data: function() {
+    return {
+      email: '',
+      response: {},
+      errorMessage: null,
+      successMessage: null
+    };
+  },
+  ready: function() {
+    return this.action = this.action.replace('/post?', '/post-json?').concat('&c=?');
+  },
+  methods: {
+    subscribe: function(e) {
+      var params;
+      params = $(e.currentTarget).serialize();
+      return $.ajax({
+        type: 'POST',
+        crossDomain: true,
+        url: this.action,
+        data: params,
+        dataType: 'jsonp',
+        success: (function(_this) {
+          return function(res) {
+            if (res.result === 'success') {
+              return _this.successMessage = res.msg;
+            } else {
+              _this.errorMessage = res.msg;
+              return _this.errorMessage = _this.errorMessage.substring(_this.errorMessage.indexOf('-') + 1, _this.errorMessage.length);
+            }
+          };
+        })(this)
+      });
+    }
+  }
 }
 </script>
 

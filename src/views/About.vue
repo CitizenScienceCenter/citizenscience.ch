@@ -27,6 +27,56 @@
       </div>
     </app-content-section>
 
+    <app-content-section type="grey">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col col-narrow">
+            <h2 class="heading">Sign up for our Newsletter</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-third">
+            <p>{{ $t('paragraph-1') }}</p>
+          </div>
+          <div class="col col-third">
+            <p>{{ $t('paragraph-1') }}</p>
+          </div>
+          <div class="col col-third">
+            <p>{{ $t('paragraph-1') }}</p>
+          </div>
+        </div>
+      </div>
+    </app-content-section>
+
+    <app-content-section>
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col col-narrow">
+            <h2 class="heading">The People Behind</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <app-people-list></app-people-list>
+          </div>
+        </div>
+      </div>
+    </app-content-section>
+
+    <app-content-section type="grey">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col col-super-narrow">
+            <h2 class="heading">Sign up for our Newsletter</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-super-narrow">
+            <app-newsletter-signup></app-newsletter-signup>
+          </div>
+        </div>
+      </div>
+    </app-content-section>
 
     <app-footer></app-footer>
 
@@ -37,6 +87,8 @@
 
 import Cover from '@/components/Cover.vue'
 import ContentSection from '@/components/ContentSection.vue'
+import PeopleList from '@/components/PeopleList.vue'
+import NewsletterSignup from '@/components/NewsletterSignup.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
@@ -44,6 +96,8 @@ export default {
   components: {
     'app-cover': Cover,
     'app-content-section': ContentSection,
+    'app-people-list': PeopleList,
+    'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   }
 }

@@ -29,8 +29,13 @@ $color-black: #231f20;
 }
 
 $color-primary-shade-20: shade( $color-primary, 20% );
+$color-primary-shade-20: shade( $color-primary, 20% );
+$color-primary-tint-50: tint( $color-primary, 50% );
 
 $color-secondary-shade-20: shade( $color-secondary, 20% );
+$color-secondary-tint-95: tint( $color-secondary, 95% );
+$color-secondary-tint-90: tint( $color-secondary, 90% );
+$color-secondary-tint-80: tint( $color-secondary, 80% );
 
 $color-black-tint-97: tint($color-black, 97%);
 $color-black-tint-90: tint($color-black, 90%);
@@ -39,6 +44,9 @@ $color-black-tint-20: tint($color-black, 20%);
 $color-black-tint-10: tint($color-black, 10%);
 
 $color-primary-secondary-mix: mix( $color-primary, $color-secondary, 50%);
+$color-primary-secondary-mix-tint-95: tint( $color-primary-secondary-mix, 95% );
+$color-primary-secondary-mix-tint-90: tint( $color-primary-secondary-mix, 90% );
+$color-primary-secondary-mix-tint-80: tint( $color-primary-secondary-mix, 80% );
 
 /* Border Radius */
 

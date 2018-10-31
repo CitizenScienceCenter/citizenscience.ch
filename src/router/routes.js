@@ -8,19 +8,25 @@ const Home = resolve => {
     resolve( require('../views/Home.vue') );
   });
 };
-const About = resolve => {
-  require.ensure(['../views/What.vue'], () => {
-    resolve( require('../views/What.vue') );
+const Activities = resolve => {
+  require.ensure(['../views/Activities.vue'], () => {
+    resolve( require('../views/Activities.vue') );
   });
 };
-const SDG = resolve => {
-  require.ensure(['../views/Who.vue'], () => {
-    resolve( require('../views/Who.vue') );
+const Offer = resolve => {
+  require.ensure(['../views/Offer.vue'], () => {
+    resolve( require('../views/Offer.vue') );
+  });
+};
+const About = resolve => {
+  require.ensure(['../views/About.vue'], () => {
+    resolve( require('../views/About.vue') );
   });
 };
 
 export const routes = [
     { path: '/', component: Home, meta: {title: 'Homepage'} },
-    { path: '/what', component: About, meta: {title: 'What'} },
-    { path: '/who', component: SDG, meta: {title: 'Who'} }
+    { path: '/activities', component: Activities, meta: {title: 'Activities'} },
+    { path: '/offer', component: Offer, meta: {title: 'Offer'} },
+    { path: '/about', component: About, meta: {title: 'About'} }
 ]

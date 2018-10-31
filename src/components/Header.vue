@@ -1,12 +1,14 @@
 <i18n>
 {
   "en": {
-    "nav-what": "What we do",
-    "nav-who": "Who we are"
+    "nav-activities": "What we do",
+    "nav-offer": "What we offer",
+    "nav-about": "About us"
   },
   "de": {
-    "nav-what": "What we do",
-    "nav-who": "Who we are"
+    "nav-activities": "Aktivitäten",
+    "nav-offer": "Angebot",
+    "nav-about": "Über uns"
   }
 }
 </i18n>
@@ -35,8 +37,9 @@
             </router-link>
           </div>
           <ul class="navigation">
-            <li><router-link to="/what" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-what') }}</span></router-link></li>
-            <li><router-link to="/who" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-who') }}</span></router-link></li>
+            <li><router-link to="/activities" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-activities') }}</span></router-link></li>
+            <li><router-link to="/offer" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-offer') }}</span></router-link></li>
+            <li><router-link to="/about" active-class="active" @click.native="hideMenu"><span>{{ $t('nav-about') }}</span></router-link></li>
           </ul>
           <div class="custom-select language-select">
             <select v-model="language">
@@ -258,7 +261,7 @@ header {
       z-index: 999;
 
       height: 100%;
-      background: $color-black-tint-10;
+      background: $color-primary;
       //background: linear-gradient(to bottom right, $color-secondary, $color-primary-shade-20 );
       transition: width $transition-duration-long $transition-timing-function;
       backface-visibility: hidden;

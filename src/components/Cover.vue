@@ -64,6 +64,9 @@ export default {
   display: flex;
   align-items: center;
 
+  .button {
+    margin: $spacing-1;
+  }
 
   .uzh-eth {
     display: block;
@@ -117,12 +120,6 @@ export default {
       text-transform: uppercase;
       text-align: center;
       margin-bottom: $spacing-2;
-    }
-    .buttons {
-      text-align: center;
-      .button {
-        margin: $spacing-1;
-      }
     }
 
   }

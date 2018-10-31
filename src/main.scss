@@ -18,7 +18,6 @@ html {
   }
 }
 
-
 /* Grid */
 
 .content-area {
@@ -59,9 +58,31 @@ html {
 .right-aligned {
   text-align: right;
 }
+.extra-padding-h {
+  padding: 0 $spacing-4;
+}
+.extra-margin-top {
+  margin-top: $spacing-4;
+}
 
 
 /* Elements */
+
+a {
+  color: $color-black-tint-50;
+  text-decoration: none;
+  &:visited {
+    color: $color-black-tint-50;
+  }
+  &:active {
+    color: $color-primary;
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
 
 
 .button {
@@ -92,8 +113,7 @@ html {
     }
   }
   &.button-secondary {
-    border: 1px solid $color-primary;
-    border: 1px solid $color-black-tint-90;
+    border: 1px solid $color-primary-tint-50;
     color: $color-primary;
     &:active {
       border-color: $color-primary-shade-20;
@@ -186,6 +206,8 @@ html {
 label {
   font-size: $font-size-small;
   line-height: 1.25;
+  font-weight: 700;
+  color: $color-secondary;
 }
 
 input, select {
@@ -208,6 +230,15 @@ input, select {
   }
 }
 
+.form-field {
+  display: inline-block;
+
+  label, .custom-select {
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+}
 
 .custom-select {
 
@@ -225,15 +256,6 @@ input, select {
     height: 12px;
     fill: $color-black;
     pointer-events: none;
-  }
-}
-
-.form-field {
-  display: inline-block;
-  margin-bottom: $spacing-4;
-
-  label, .custom-select {
-    display: block;
   }
 }
 
@@ -268,9 +290,12 @@ input, select {
     font-size: 20px;
   }
 
-
   input,select {
     height: 48px;
+  }
+
+  .extra-margin-top {
+    margin-top: $spacing-5;
   }
 
   .custom-select {
@@ -314,6 +339,10 @@ input, select {
 }
 
 @media only screen and (min-width: $viewport-large) {
+
+  .extra-padding-h {
+    padding: 0 $spacing-7;
+  }
 
   .content-area {
     margin-top: 80px;

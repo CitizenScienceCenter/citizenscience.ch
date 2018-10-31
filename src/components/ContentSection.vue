@@ -13,17 +13,14 @@ export default {
   computed: {
     styleClass: function() {
       switch( this.type ) {
-        case 'grey':
-          return 'grey';
+        case 'greyish':
+          return 'greyish';
           break;
-        case 'dark-grey':
-          return 'dark-grey';
+        case 'light-greyish':
+          return 'light-greyish';
           break;
-        case 'image-bg':
-          return 'image-bg';
-          break;
-        case 'image':
-          return 'image';
+        case 'parallax':
+          return 'parallax';
           break;
         default:
           return '';
@@ -41,42 +38,14 @@ export default {
 
   position: relative;
   padding: $spacing-5 0;
+  background: white;
 
-  &.grey {
-    background-color: $color-black-tint-97;
+  &.light-greyish {
+    background: linear-gradient(to bottom right, $color-secondary-tint-95, $color-primary-secondary-mix-tint-95 );
   }
 
-  &.image-bg {
-    background-image: url('/img/flags.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-
-    &:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: white;
-      opacity: 0.95;
-    }
-    .content-wrapper {
-      position: relative;
-      z-index: 1;
-    }
-  }
-
-  &.image {
-    background-image: url('/img/uzh-eth.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-    min-height: 320px;
-  }
-
-  .sdg-logo {
-    height: 48px;
+  &.greyish {
+    background: linear-gradient(to bottom right, $color-secondary-tint-80, $color-primary-secondary-mix-tint-80 );
   }
 
   .heading {
@@ -104,9 +73,9 @@ export default {
   .subheading {
     font-size: $font-size-medium;
     line-height: 1.5;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-bottom: $spacing-4;
+    text-align: center;
   }
 
   p {
@@ -117,19 +86,20 @@ export default {
     }
   }
 
-  .buttons {
-    .button {
-      margin: $spacing-1;
-    }
+  .button {
+    margin: $spacing-1;
   }
 
   .uzh-eth-logo {
     height: 40px;
   }
 
-  .col-half {
+  .col-half, .col-third {
     margin-bottom: $spacing-5;
-    text-align: center;
+  }
+
+  .col-super-narrow {
+    width: 83.333%;
   }
 
 }
@@ -181,8 +151,14 @@ export default {
     .col-half {
       width: 66.667%;
     }
+    .col-third {
+      width: 66.667%;
+    }
     .col-narrow {
       width: 66.667%;
+    }
+    .col-super-narrow {
+      width: 50%;
     }
 
   }
@@ -215,6 +191,7 @@ export default {
       flex-direction: row-reverse;
     }
 
+
     .col-half {
       margin-bottom: 0;
 
@@ -233,6 +210,12 @@ export default {
         text-align: left;
       }
     }
+
+    .col-third {
+      margin-bottom: 0;
+      width: 33.333%;
+    }
+
     .col-wide {
       width: 83.333%;
     }
@@ -241,6 +224,9 @@ export default {
     }
     .col-narrow {
       width: 66.667%;
+    }
+    .col-super-narrow {
+      width: 33.333%;
     }
 
   }

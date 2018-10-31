@@ -1,109 +1,40 @@
 <template>
-  <!--
   <div class="newsletter-signup">
+
     <div class="row">
       <div class="col">
-        <div class="form-field">
-          <label>Email</label>
-          <input type="text" />
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-50">
-        <div class="form-field">
-          <label>First Name</label>
-          <input type="text" />
-        </div>
-      </div>
-      <div class="col col-50">
-        <div class="form-field">
-          <label>Last Name</label>
-          <input type="text" />
-        </div>
-      </div>
 
-      <div class="col">
-        <div class="form-field">
-          <label>Last Name</label>
-          <div class="custom-select">
-            <select>
-              <option>just for styling</option>
-              <option>blabla</option>
-            </select>
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-               <path d="M127.3,192h257.3c17.8,0,26.7,21.5,14.1,34.1L270.1,354.8c-7.8,7.8-20.5,7.8-28.3,0L113.2,226.1
-            	C100.6,213.5,109.5,192,127.3,192z"/>
-            </svg>
-          </div>
-        </div>
-      </div>
+        <form action="https://citizenscience.us17.list-manage.com/subscribe/post?u=32303d2adcf28a2820c5f9165&amp;id=6dc5028399" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-    </div>
-    <div class="row">
-      <div class="col centered">
-        <button class="button button-primary">Submit</button>
+        <div class="form-field">
+          <label for="mce-EMAIL">Email Address</label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+        </div>
+
+        <div class="form-field">
+          <label for="mce-FNAME">First Name </label>
+          <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+        </div>
+
+        <div class="form-field">
+          <label for="mce-LNAME">Last Name </label>
+          <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+        </div>
+
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_32303d2adcf28a2820c5f9165_6dc5028399" tabindex="-1" value=""></div>
+        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button-primary">Submit</button>
+
+        </form>
+
       </div>
     </div>
+
   </div>
--->
-
-<div>
-  <form v-if="!successMessage" @submit.prevent="subscribe($event)">
-    <input v-model="email" name="EMAIL" type="text" placeholder="Email" id="email" />
-    <input type="submit" class="button button-primary"/>
-  </form>
-  <p v-if="errorMessage && !successMessage" transition="fade">{{ errorMessage }}</p>
-  <p v-if="successMessage" transition="fade">{{ successMessage }}</p>
-</div>
-
-
 </template>
 
 <script>
 export default {
-  name: 'NewsletterSignup',
-  props: {
-    action: {
-      required: true,
-      type: String
-    }
-  },
-  data: function() {
-    return {
-      email: '',
-      response: {},
-      errorMessage: null,
-      successMessage: null
-    };
-  },
-  ready: function() {
-    return this.action = this.action.replace('/post?', '/post-json?').concat('&c=?');
-  },
-  methods: {
-    subscribe: function(e) {
-      var params;
-      params = $(e.currentTarget).serialize();
-      return $.ajax({
-        type: 'POST',
-        crossDomain: true,
-        url: this.action,
-        data: params,
-        dataType: 'jsonp',
-        success: (function(_this) {
-          return function(res) {
-            if (res.result === 'success') {
-              return _this.successMessage = res.msg;
-            } else {
-              _this.errorMessage = res.msg;
-              return _this.errorMessage = _this.errorMessage.substring(_this.errorMessage.indexOf('-') + 1, _this.errorMessage.length);
-            }
-          };
-        })(this)
-      });
-    }
-  }
+  name: 'NewsletterSignup'
 }
 </script>
 
@@ -113,22 +44,49 @@ export default {
 
 
 .newsletter-signup {
-
   margin-bottom: $spacing-4;
+  text-align: center;
 
-  .col-50 {
-    width: 50%;
-  }
-
-  .form-field {
+  .col {
     width: 100%;
   }
 
+  .form-field {
+    display: block;
+    margin-bottom: $spacing-4;
+  }
+
+}
+
+@media only screen and (min-width: $viewport-mobile-large) {
+  .newsletter-signup {
+    .col {
+      width: 83.333%;
+    }
+  }
 }
 
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .newsletter-signup {
     margin-bottom: $spacing-5;
+
+    .col {
+      width: 66.667%;
+    }
+  }
+}
+
+@media only screen and (min-width: $viewport-large) {
+  .newsletter-signup {
+    .col {
+      width: 100%;
+    }
+
+    .form-field {
+      margin: $spacing-1;
+      display: inline-block;
+      width: 20%;
+    }
   }
 }
 

@@ -1,7 +1,6 @@
 <template>
-  <section class="content-section" :class="[colorClass]" :style="{'overflow':overflowYStyle}">
+  <section class="content-section" :class="[colorClass]">
     <slot></slot>
-    <div class="background-image-container" :style="{ 'background-image': 'url('+backgroundImage+')'}" v-if="backgroundImage"></div>
   </section>
 </template>
 
@@ -9,8 +8,7 @@
 export default {
   name: 'ContentSection',
   props: {
-    'color': String,
-    'overflowY': String
+    'color': String
   },
   computed: {
     colorClass: function() {
@@ -23,15 +21,6 @@ export default {
           break;
         default:
           return '';
-      }
-    },
-    overflowYStyle: function() {
-      switch( this.overflowY ) {
-        case 'hidden':
-          return 'hidden';
-          break;
-        default:
-          return 'visible';
       }
     }
   }
@@ -46,6 +35,7 @@ export default {
   position: relative;
   padding: $spacing-5 0;
   background: white;
+  overflow-x: hidden;
 
   // Section Style
 
@@ -55,6 +45,14 @@ export default {
 
   &.greyish {
     background: linear-gradient(to bottom right, $color-secondary-tint-80, $color-primary-secondary-mix-tint-80 );
+  }
+
+  &.overflow-y-hidden {
+    //overflow-y: hidden;
+  }
+
+  .content-wrapper {
+    position: relative;
   }
 
   .heading {
@@ -160,18 +158,20 @@ export default {
   .content-section {
 
     padding: $spacing-7 0;
+    overflow: hidden;
 
     .background-wrapper {
       position: absolute;
       width: 100%;
-      top: 0;
+      top: 5%;
       left: auto;
+      pointer-events: none;
 
       &.background-wrapper-move-right {
-        transform: translate(33.333%,-5%);
+        left: 33.333%;
       }
       &.background-wrapper-move-left {
-        transform: translate(-33.333%,-5%);
+        left: -33.333%;
       }
     }
 

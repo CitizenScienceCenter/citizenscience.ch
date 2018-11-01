@@ -37,9 +37,9 @@
 
     <app-content-section>
       <div class="content-wrapper">
-        <div class="row row-centered row-middle">
+        <div class="row row-middle">
 
-          <div class="col col-large-5 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-large-5 col-large-before-1 ol-wrapping col-large-no-bottom-margin">
             <div>
               <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
               <p class="centered left-aligned-large">
@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <div class="col col-tablet-portrait-10 col-large-5 col-wrapping col-no-bottom-margin">
+          <div class="col col-10 col-large-5 col-large-before-1 col-wrapping col-no-bottom-margin">
             <div>
               <img src="img/graphic-citizen-science.png"/>
             </div>
@@ -151,9 +151,9 @@
 
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
-        <div class="row row-centered row-reverse-large row-middle">
+        <div class="row row-reverse-large row-middle">
 
-          <div class="col col-large-5 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-large-5 col-large-before-1 col-large-after-1 col-wrapping col-large-no-bottom-margin">
             <div>
               <h2 class="heading centered left-aligned-large" id="start-project">We help you Build your Project</h2>
               <p class="centered left-aligned-large">
@@ -184,7 +184,9 @@
           </div>
 
           <div class="col col-large-5 col-wrapping col-no-bottom-margin">
-            <img src="img/graphic-create-project.png" />
+            <div class="extra-padding">
+              <img src="img/graphic-create-project.png" />
+            </div>
           </div>
 
         </div>
@@ -192,10 +194,10 @@
       </div>
     </app-content-section>
 
-    <app-content-section overflow-y="hidden">
+    <app-content-section>
       <div class="content-wrapper">
         <div class="row">
-          <div class="col col-tablet-portrait-7 col-large-5 col-large-push-1 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">A Joined Initiative</h2>
             <p class="centered left-aligned-large">
               Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
@@ -213,7 +215,7 @@
       <div class="background-wrapper background-wrapper-move-right">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
-            <div class="col col-6">
+            <div class="col col-tablet-portrait-10 col-large-6">
               <img src="img/uzh-eth.jpg" style="border-radius:50%"/>
             </div>
           </div>

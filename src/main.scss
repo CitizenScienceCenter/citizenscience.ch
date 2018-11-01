@@ -35,6 +35,7 @@ html {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   position: relative;
   &.row-centered {
     justify-content: center;
@@ -92,6 +93,9 @@ html {
 }
 .extra-margin-bottom {
   margin-bottom: $spacing-4;
+}
+.extra-padding {
+  padding: $spacing-4;
 }
 
 
@@ -235,8 +239,9 @@ a {
 label {
   font-size: $font-size-small;
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: 400;
   color: $color-secondary;
+  text-transform: uppercase;
 }
 
 input, select {
@@ -464,10 +469,13 @@ input, select {
   .col-large-3 {
     width: 25%;
   }
-  .col-large-push-1 {
+  .col-large-before-1 {
     margin-left: 8.333%;
   }
-  .col-large-push-5 {
+  .col-large-after-1 {
+    margin-right: 8.333%;
+  }
+  .col-large-before-5 {
     margin-left: 41.667%;
   }
 

@@ -39,10 +39,10 @@
       <div class="content-wrapper">
         <div class="row row-middle">
 
-          <div class="col col-large-5 col-large-before-1 ol-wrapping col-large-no-bottom-margin">
+          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <div>
               <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
-              <p class="centered left-aligned-large">
+              <p class="">
                 {{ $t('section-explanation-text') }}
               </p>
               <p class="centered left-aligned-large">
@@ -89,7 +89,7 @@
         </div>
         <div class="row row-centered">
           <div class="col col-tablet-portrait-10 col-large-6">
-            <p class="centered">
+            <p class="">
               Participate in our first Citizen Science Project from the field of linguistics. Transcribe old Swiss German phrases. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.
             </p>
           </div>
@@ -112,7 +112,7 @@
               </div>
             </div>
             <h3 class="subheading centered">Platform</h3>
-            <p class="centered">
+            <p class="">
               Our online project platform makes your Citizen Science project visible and usable. We support you with the planning, the design, the implementation and the evaluation of your project.
             </p>
           </div>
@@ -123,7 +123,7 @@
               </div>
             </div>
             <h3 class="subheading centered">Community</h3>
-            <p class="centered">
+            <p class="">
               We want to build and foster a community of citizens and scientists. Strengthening cooperation and cultivating dialogue between the public, academia, industry, and politics is our goal.
             </p>
           </div>
@@ -134,7 +134,7 @@
               </div>
             </div>
             <h3 class="subheading centered">Knowledge</h3>
-            <p class="centered">
+            <p class="">
               We provide you with theoretical, practical, legal and ethical guidelines and standards for the implementation of Citizen Science projects.
             </p>
           </div>
@@ -156,7 +156,7 @@
           <div class="col col-large-5 col-large-before-1 col-large-after-1 col-wrapping col-large-no-bottom-margin">
             <div>
               <h2 class="heading centered left-aligned-large" id="start-project">We help you Build your Project</h2>
-              <p class="centered left-aligned-large">
+              <p class="">
                 We provide you with the resources, expertise and technical know-how to develop, set up, and run a citizen science project, while maintaining the highest standards of data security and scientific excellence.
               </p>
               <p class="centered left-aligned-large">
@@ -199,10 +199,10 @@
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">A Joined Initiative</h2>
-            <p class="centered left-aligned-large">
+            <p class="">
               Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
             </p>
-            <p class="centered left-aligned-large">
+            <p class="">
               <img src="@/assets/uzh_eth_logo_d_pos.svg" class="uzh-eth-logo"/>
             </p>
             <p class="centered left-aligned-large extra-margin-top">

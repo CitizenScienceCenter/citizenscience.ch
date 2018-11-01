@@ -47,10 +47,6 @@ export default {
     background: linear-gradient(to bottom right, $color-secondary-tint-80, $color-primary-secondary-mix-tint-80 );
   }
 
-  &.overflow-y-hidden {
-    //overflow-y: hidden;
-  }
-
   .content-wrapper {
     position: relative;
   }
@@ -159,6 +155,10 @@ export default {
 
     padding: $spacing-7 0;
     overflow: hidden;
+
+    .content-wrapper-large-min-height {
+      min-height: 500px;
+    }
 
     .background-wrapper {
       position: absolute;

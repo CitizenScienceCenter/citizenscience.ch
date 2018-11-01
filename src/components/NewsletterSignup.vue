@@ -47,10 +47,6 @@ export default {
   margin-bottom: $spacing-4;
   text-align: center;
 
-  .col {
-    width: 100%;
-  }
-
   .form-field {
     display: block;
     margin-bottom: $spacing-4;
@@ -60,9 +56,7 @@ export default {
 
 @media only screen and (min-width: $viewport-mobile-large) {
   .newsletter-signup {
-    .col {
-      width: 83.333%;
-    }
+
   }
 }
 
@@ -70,17 +64,11 @@ export default {
   .newsletter-signup {
     margin-bottom: $spacing-5;
 
-    .col {
-      width: 66.667%;
-    }
   }
 }
 
 @media only screen and (min-width: $viewport-large) {
   .newsletter-signup {
-    .col {
-      width: 100%;
-    }
 
     .form-field {
       margin: $spacing-1;

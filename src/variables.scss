@@ -76,18 +76,6 @@ $font-size-xlarge: 1rem * pow($font-scale,3);
 $font-size-xxlarge: 1rem * pow($font-scale,4);
 $font-size-xxxlarge: 1rem * pow($font-scale,5);
 
-/* Grid */
-
-$grid-margin-mobile: 16px;
-$grid-gutter-mobile: 16px;
-$grid-margin-mobile-large: 16px;
-$grid-gutter-mobile-large: 32px;
-$grid-margin-tablet-portrait: 32px;
-$grid-gutter-tablet-portrait: 40px;
-$grid-margin-large: 48px;
-$grid-gutter-large: 48px;
-$grid-margin-xlarge: 48px;
-$grid-gutter-xlarge: 56px;
 
 /* Spacings */
 
@@ -98,3 +86,16 @@ $spacing-4: 32px;
 $spacing-5: 48px;
 $spacing-6: 72px;
 $spacing-7: 96px;
+
+/* Grid */
+
+$grid-margin-mobile: $spacing-2;
+$grid-gutter-mobile: $spacing-2;
+$grid-margin-mobile-large: $spacing-2;
+$grid-gutter-mobile-large: $spacing-4;
+$grid-margin-tablet-portrait: $spacing-7;
+$grid-gutter-tablet-portrait: $spacing-5;
+$grid-margin-large: $spacing-5;
+$grid-gutter-large: $spacing-5;
+$grid-margin-xlarge: $spacing-5;
+$grid-gutter-xlarge: $spacing-5;

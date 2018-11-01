@@ -18,7 +18,7 @@ html {
   }
 }
 
-/* Grid */
+/* Grid Basics */
 
 .content-area {
   margin-top: 48px;
@@ -35,18 +35,47 @@ html {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   position: relative;
+  &.row-centered {
+    justify-content: center;
+  }
+  &.row-middle {
+    align-items: center;
+  }
 }
 .col {
   padding: 0 $grid-gutter-mobile/2;
   box-sizing: border-box;
   width: 100%;
 
+  &.col-wrapping {
+    margin-bottom: $spacing-4;
+    &.col-no-bottom-margin {
+      margin-bottom: 0;
+    }
+  }
+
   .row {
+    padding-bottom: -$spacing-4;
     margin-left: -$grid-gutter-mobile/2;
     margin-right: -$grid-gutter-mobile/2;
   }
+}
+
+
+// Grid
+
+.col-12 {
+  width: 100%;
+}
+.col-10 {
+  width: 83.333%;
+}
+.col-8 {
+  width: 66.667%;
+}
+.col-6 {
+  width: 50%;
 }
 
 
@@ -58,11 +87,11 @@ html {
 .right-aligned {
   text-align: right;
 }
-.extra-padding-h {
-  padding: 0 $spacing-4;
-}
 .extra-margin-top {
   margin-top: $spacing-4;
+}
+.extra-margin-bottom {
+  margin-bottom: $spacing-4;
 }
 
 
@@ -265,10 +294,6 @@ input, select {
     font-size: 19px;
   }
 
-  .content-area {
-    margin-top: 64px;
-  }
-
   .content-wrapper {
     padding: 0 $grid-margin-mobile-large;
   }
@@ -281,6 +306,34 @@ input, select {
       margin-right: -$grid-gutter-mobile-large/2;
     }
   }
+  .row {
+    &.row-reverse-large {
+      flex-direction: row-reverse;
+    }
+  }
+  .col-mobile-large-12 {
+    width: 100%;
+  }
+  .col-mobile-large-10 {
+    width: 83.333%;
+  }
+  .col-mobile-large-8 {
+    width: 66.667%;
+  }
+  .col-mobile-large-6 {
+    width: 50%;
+  }
+  .col-mobile-large-4 {
+    width: 33.333%;
+  }
+
+  .content-area {
+    margin-top: 64px;
+  }
+
+  .content-wrapper {
+    padding: 0 $grid-margin-mobile-large;
+  }
 
 }
 
@@ -290,12 +343,49 @@ input, select {
     font-size: 20px;
   }
 
-  input,select {
-    height: 48px;
+  .content-wrapper {
+    padding: 0 $grid-margin-tablet-portrait;
+  }
+
+  .col {
+    padding: 0 $grid-gutter-tablet-portrait/2;
+    &.col-wrapping {
+      margin-bottom: $spacing-5;
+      &.col-tablet-portrait-no-bottom-margin {
+        margin-bottom: 0;
+      }
+    }
+
+    .row {
+      margin-left: -$grid-gutter-tablet-portrait/2;
+      margin-right: -$grid-gutter-tablet-portrait/2;
+    }
+  }
+
+  background: red;
+
+  .col-tablet-portrait-12 {
+    width: 100%;
+  }
+  .col-tablet-portrait-10 {
+    width: 83.333%;
+  }
+  .col-tablet-portrait-8 {
+    width: 66.667%;
+  }
+  .col-tablet-portrait-6 {
+    width: 50%;
+  }
+  .col-tablet-portrait-4 {
+    width: 33.333%;
   }
 
   .extra-margin-top {
     margin-top: $spacing-5;
+  }
+
+  input,select {
+    height: 48px;
   }
 
   .custom-select {
@@ -311,15 +401,6 @@ input, select {
 
   .content-area {
     margin-top: 64px;
-  }
-
-  .col {
-    padding: 0 $grid-gutter-tablet-portrait/2;
-
-    .row {
-      margin-left: -$grid-gutter-tablet-portrait/2;
-      margin-right: -$grid-gutter-tablet-portrait/2;
-    }
   }
 
   .button {
@@ -340,6 +421,60 @@ input, select {
 
 @media only screen and (min-width: $viewport-large) {
 
+
+  .content-wrapper {
+    padding: 0 $grid-margin-large;
+  }
+  .col {
+    padding: 0 $grid-gutter-large/2;
+
+    &.col-wrapping {
+      &.col-large-no-bottom-margin {
+        margin-bottom: 0;
+      }
+    }
+
+    .row {
+      margin-left: -$grid-gutter-large/2;
+      margin-right: -$grid-gutter-large/2;
+    }
+  }
+
+  .col-large-12 {
+    width: 100%;
+  }
+  .col-large-10 {
+    width: 83.333%;
+  }
+  .col-large-9 {
+    width: 75%;
+  }
+  .col-large-8 {
+    width: 66.667%;
+  }
+  .col-large-6 {
+    width: 50%;
+  }
+  .col-large-5 {
+    width: 41.667%;
+  }
+  .col-large-4 {
+    width: 33.333%;
+  }
+  .col-large-3 {
+    width: 25%;
+  }
+  .col-large-push-1 {
+    margin-left: 8.333%;
+  }
+  .col-large-push-5 {
+    margin-left: 41.667%;
+  }
+
+  .left-aligned-large {
+    text-align: left;
+  }
+
   .extra-padding-h {
     padding: 0 $spacing-7;
   }
@@ -348,19 +483,13 @@ input, select {
     margin-top: 80px;
   }
 
-  .col {
-    padding: 0 $grid-gutter-large/2;
-
-    .row {
-      margin-left: -$grid-gutter-large/2;
-      margin-right: -$grid-gutter-large/2;
-    }
-  }
-
 }
 
 @media only screen and (min-width: $viewport-xlarge) {
 
+  .content-wrapper {
+    padding: 0 $grid-margin-xlarge;
+  }
   .col {
     padding: 0 $grid-gutter-xlarge/2;
 

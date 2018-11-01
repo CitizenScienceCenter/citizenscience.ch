@@ -17,67 +17,13 @@
 
     <app-content-section>
       <div class="content-wrapper">
-        <div class="row">
-          <div class="col col-narrow">
-            <h2 class="heading">{{ $t('heading') }}</h2>
-            <p>{{ $t('paragraph-1') }}</p>
-            <p>{{ $t('paragraph-2') }}</p>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
-
-    <app-content-section type="grey">
-      <div class="content-wrapper">
-        <div class="row">
-          <div class="col col-narrow">
-            <h2 class="heading">Sign up for our Newsletter</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-third">
-            <p>{{ $t('paragraph-1') }}</p>
-          </div>
-          <div class="col col-third">
-            <p>{{ $t('paragraph-1') }}</p>
-          </div>
-          <div class="col col-third">
-            <p>{{ $t('paragraph-1') }}</p>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
-
-    <app-content-section>
-      <div class="content-wrapper">
-        <div class="row">
-          <div class="col col-narrow">
-            <h2 class="heading">The People Behind</h2>
-          </div>
-        </div>
-        <div class="row">
+        <div class="row row-centered">
           <div class="col">
             <app-people-list></app-people-list>
           </div>
         </div>
       </div>
     </app-content-section>
-
-    <app-content-section type="grey">
-      <div class="content-wrapper">
-        <div class="row">
-          <div class="col col-super-narrow">
-            <h2 class="heading">Sign up for our Newsletter</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-super-narrow">
-            <app-newsletter-signup></app-newsletter-signup>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
-
     <app-footer></app-footer>
 
   </div>

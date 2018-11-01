@@ -3,22 +3,22 @@
   "en": {
     "cover-heading": "The People's Way of Research",
     "cover-subheading": "Citizen Science Center Zurich",
-    "cover-button-projects": "Discover our First Project",
-    "cover-button-your-project": "Suggest a Project Idea",
+    "cover-button-projects": "Start contributing",
+    "cover-button-your-project": "Suggest a project",
 
-    "section-explanation-heading": "What is it about?",
-    "section-explanation-text": "Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process, and provides new knowledge by supporting collaborative intelligence and co-creation.",
+    "section-explanation-heading": "Citizen Science",
+    "section-explanation-text": "Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process. It provides new knowledge by supporting collaborative intelligence and co-creation.",
     "section-explanation-button": "Learn more"
   },
   "de": {
     "cover-heading": "Erforsche die Welt",
     "cover-subheading": "Citizen Science Center Zürich",
-    "cover-button-projects": "Entdecke Projekte",
-    "cover-button-your-project": "Starte dein Projekt",
+    "cover-button-projects": "Start contributing",
+    "cover-button-your-project": "Suggest a project",
 
-    "section-explanation-heading": "Was ist Citizen Science?",
-    "section-explanation-text": "Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und diese durcheinander warf um ein Musterbuch zu erstellen.",
-    "section-explanation-button": "Mehr erfahren"
+    "section-explanation-heading": "Citizen Science",
+    "section-explanation-text": "Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process. It provides new knowledge by supporting collaborative intelligence and co-creation.",
+    "section-explanation-button": "Learn more about what we do"
   }
 }
 </i18n>
@@ -37,21 +37,21 @@
 
     <app-content-section>
       <div class="content-wrapper">
-        <div class="row">
+        <div class="row row-centered row-middle">
 
-          <div class="col col-half">
+          <div class="col col-large-5 col-wrapping col-large-no-bottom-margin">
             <div>
-              <h2 class="heading">{{ $t('section-explanation-heading') }}</h2>
-              <p class="centered">
+              <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
+              <p class="centered left-aligned-large">
                 {{ $t('section-explanation-text') }}
               </p>
-              <p class="centered">
-                <router-link tag="button" to="/what" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
+              <p class="centered left-aligned-large">
+                <router-link tag="button" to="/activities" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
               </p>
             </div>
           </div>
 
-          <div class="col col-half">
+          <div class="col col-tablet-portrait-10 col-large-5 col-wrapping col-no-bottom-margin">
             <div>
               <img src="img/graphic-citizen-science.png"/>
             </div>
@@ -61,23 +61,36 @@
 
       </div>
     </app-content-section>
-
-    <app-content-section type="light-greyish">
+    <!--
+    .col-mobile-large-12 {
+      width: 100%;
+    }
+    .col-mobile-large-10 {
+      width: 83.333%;
+    }
+    .col-mobile-large-8 {
+      width: 66.667%;
+    }
+    .col-mobile-large-4 {
+      width: 33.333%;
+    }
+  -->
+    <app-content-section color="light-greyish">
       <div class="content-wrapper">
-        <div class="row">
-          <div class="col col-narrow">
-            <h2 class="heading" id="projects">Start Researching.</h2>
+        <div class="row row-centered">
+          <div class="col col-large-10">
+            <h2 class="heading centered" id="projects">Get involved</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col col-wide">
+        <div class="row row-centered">
+          <div class="col col-large-10">
             <app-project-list></app-project-list>
           </div>
         </div>
-        <div class="row">
-          <div class="col col-narrow">
+        <div class="row row-centered">
+          <div class="col col-tablet-portrait-10 col-large-6">
             <p class="centered">
-              Participate in research of all kinds, from classifying galaxies to counting penguins to transcribing manuscripts. Whatever your interest, there's a project for you.
+              Participate in our first Citizen Science Project from the field of linguistics. Transcribe old Swiss German phrases. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.
             </p>
           </div>
         </div>
@@ -86,43 +99,49 @@
 
     <app-content-section>
       <div class="content-wrapper">
-        <div class="row">
+        <div class="row row-centered">
 
-          <div class="col">
-            <h2 class="heading heading-centered">What we (will) Offer</h2>
+          <div class="col col-large-10">
+            <h2 class="heading centered">What we offer</h2>
           </div>
 
-          <div class="col col-third">
-            <p class="extra-padding-h">
-              <img src="img/graphic-tools.png"/>
-            </p>
-            <h3 class="subheading centered">Interactive Tools</h3>
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin">
+            <div class="row row-centered">
+              <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
+                <img src="img/graphic-tools.png"/>
+              </div>
+            </div>
+            <h3 class="subheading centered">Platform</h3>
             <p class="centered">
-              Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
+              Our online project platform makes your Citizen Science project visible and usable. We support you with the planning, the design, the implementation and the evaluation of your project.
             </p>
           </div>
-          <div class="col col-third">
-            <p class="extra-padding-h">
-              <img src="img/graphic-community.png"/>
-            </p>
-            <h3 class="subheading centered">A Community</h3>
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin">
+            <div class="row row-centered">
+              <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
+                <img src="img/graphic-community.png"/>
+              </div>
+            </div>
+            <h3 class="subheading centered">Community</h3>
             <p class="centered">
-              Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
+              We want to build and foster a community of citizens and scientists. Strengthening cooperation and cultivating dialogue between the public, academia, industry, and politics is our goal.
             </p>
           </div>
-          <div class="col col-third">
-            <p class="extra-padding-h">
-              <img src="img/graphic-knowledge.png"/>
-            </p>
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-no-bottom-margin">
+            <div class="row row-centered">
+              <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
+                <img src="img/graphic-knowledge.png"/>
+              </div>
+            </div>
             <h3 class="subheading centered">Knowledge</h3>
             <p class="centered">
-              Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
+              We provide you with theoretical, practical, legal and ethical guidelines and standards for the implementation of Citizen Science projects.
             </p>
           </div>
 
           <div class="col">
             <p class="centered extra-margin-top">
-              <router-link tag="button" to="/what" class="button button-secondary">Learn more about our offers</router-link>
+              <router-link tag="button" to="/what" class="button button-secondary">Learn more</router-link>
             </p>
           </div>
 
@@ -130,17 +149,17 @@
       </div>
     </app-content-section>
 
-    <app-content-section type="light-greyish">
+    <app-content-section color="light-greyish">
       <div class="content-wrapper">
-        <div class="row">
+        <div class="row row-centered row-reverse-large row-middle">
 
-          <div class="col col-half">
+          <div class="col col-large-5 col-wrapping col-large-no-bottom-margin">
             <div>
-              <h2 class="heading" id="start-project">We help you Build your Project</h2>
-              <p class="centered">
-                Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process, and provides new knowledge by supporting collaborative intelligence and co-creation.
+              <h2 class="heading centered left-aligned-large" id="start-project">We help you Build your Project</h2>
+              <p class="centered left-aligned-large">
+                We provide you with the resources, expertise and technical know-how to develop, set up, and run a citizen science project, while maintaining the highest standards of data security and scientific excellence.
               </p>
-              <p class="centered">
+              <p class="centered left-aligned-large">
                 <button class="button button-secondary button-icon">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -164,7 +183,7 @@
             </div>
           </div>
 
-          <div class="col col-half">
+          <div class="col col-large-5 col-wrapping col-no-bottom-margin">
             <img src="img/graphic-create-project.png" />
           </div>
 
@@ -173,40 +192,51 @@
       </div>
     </app-content-section>
 
-    <app-content-section type="parallax">
+    <app-content-section overflow-y="hidden">
       <div class="content-wrapper">
         <div class="row">
-          <div class="col">
-            <div>
-              <h2 class="heading heading-centered">A Joined Initiative</h2>
-              <p class="centered">
-                Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
-              </p>
-              <p class="centered">
-                <img src="@/assets/uzh_eth_logo_d_pos.svg" class="uzh-eth-logo"/>
-              </p>
+          <div class="col col-tablet-portrait-7 col-large-5 col-large-push-1 col-wrapping col-large-no-bottom-margin">
+            <h2 class="heading centered left-aligned-large">A Joined Initiative</h2>
+            <p class="centered left-aligned-large">
+              Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
+            </p>
+            <p class="centered left-aligned-large">
+              <img src="@/assets/uzh_eth_logo_d_pos.svg" class="uzh-eth-logo"/>
+            </p>
+            <p class="centered left-aligned-large extra-margin-top">
+              <router-link tag="button" to="/what" class="button button-secondary">Learn more about us</router-link>
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <div class="background-wrapper background-wrapper-move-right">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-6">
+              <img src="img/uzh-eth.jpg" style="border-radius:50%"/>
             </div>
           </div>
         </div>
       </div>
     </app-content-section>
 
-    <app-content-section type="greyish">
+    <app-content-section color="greyish">
       <div class="content-wrapper">
-        <div class="row">
-          <div class="col-narrow">
-            <h2 class="heading">Sign up for our Newsletter</h2>
+        <div class="row row-centered">
+          <div class="col col-mobile-large-10">
+            <h2 class="heading centered">Sign up for our Newsletter</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
+        <div class="row row-centered">
+          <div class="col col-mobile-large-10 col-tablet-portrait-8 col-large-12">
             <app-newsletter-signup></app-newsletter-signup>
           </div>
         </div>
       </div>
     </app-content-section>
 
-    <app-footer type="greyish"></app-footer>
+    <app-footer color="greyish"></app-footer>
 
   </div>
 </template>

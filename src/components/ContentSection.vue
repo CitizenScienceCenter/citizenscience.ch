@@ -1,6 +1,7 @@
 <template>
-  <section class="content-section" :class="styleClass">
+  <section class="content-section" :class="[colorClass]" :style="{'overflow':overflowYStyle}">
     <slot></slot>
+    <div class="background-image-container" :style="{ 'background-image': 'url('+backgroundImage+')'}" v-if="backgroundImage"></div>
   </section>
 </template>
 
@@ -8,22 +9,29 @@
 export default {
   name: 'ContentSection',
   props: {
-    'type': String,
+    'color': String,
+    'overflowY': String
   },
   computed: {
-    styleClass: function() {
-      switch( this.type ) {
+    colorClass: function() {
+      switch( this.color ) {
         case 'greyish':
           return 'greyish';
           break;
         case 'light-greyish':
           return 'light-greyish';
           break;
-        case 'parallax':
-          return 'parallax';
-          break;
         default:
           return '';
+      }
+    },
+    overflowYStyle: function() {
+      switch( this.overflowY ) {
+        case 'hidden':
+          return 'hidden';
+          break;
+        default:
+          return 'visible';
       }
     }
   }
@@ -35,10 +43,11 @@ export default {
 @import '@/variables.scss';
 
 .content-section {
-
   position: relative;
   padding: $spacing-5 0;
   background: white;
+
+  // Section Style
 
   &.light-greyish {
     background: linear-gradient(to bottom right, $color-secondary-tint-95, $color-primary-secondary-mix-tint-95 );
@@ -55,7 +64,6 @@ export default {
     color: $color-secondary;
     padding-bottom: $spacing-4;
     margin-bottom: $spacing-4;
-    text-align: center;
     position: relative;
 
     &:after {
@@ -65,7 +73,13 @@ export default {
       background: url('../assets/title-separator.svg');
       position: absolute;
       bottom: 0;
-      left: calc( 50% - 12px );
+      left: 0;
+    }
+
+    &.centered {
+      &:after {
+        left: calc( 50% - 12px );
+      }
     }
 
   }
@@ -75,7 +89,9 @@ export default {
     line-height: 1.5;
     font-weight: 700;
     margin-bottom: $spacing-4;
-    text-align: center;
+    &:first-child {
+      padding-top: 0;
+    }
   }
 
   p {
@@ -92,14 +108,6 @@ export default {
 
   .uzh-eth-logo {
     height: 40px;
-  }
-
-  .col-half, .col-third {
-    margin-bottom: $spacing-5;
-  }
-
-  .col-super-narrow {
-    width: 83.333%;
   }
 
 }
@@ -120,11 +128,6 @@ export default {
   .content-section {
 
     padding: $spacing-6 0;
-
-    &.image {
-      min-height: 480px;
-    }
-
 
     .sdg-logo {
       height: 64px;
@@ -148,19 +151,6 @@ export default {
       height: 48px;
     }
 
-    .col-half {
-      width: 66.667%;
-    }
-    .col-third {
-      width: 66.667%;
-    }
-    .col-narrow {
-      width: 66.667%;
-    }
-    .col-super-narrow {
-      width: 50%;
-    }
-
   }
 
 }
@@ -171,8 +161,26 @@ export default {
 
     padding: $spacing-7 0;
 
-    &.image {
-      min-height: 560px;
+    .background-wrapper {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: auto;
+
+      &.background-wrapper-move-right {
+        transform: translate(33.333%,-5%);
+      }
+      &.background-wrapper-move-left {
+        transform: translate(-33.333%,-5%);
+      }
+    }
+
+    .heading {
+      &.left-aligned-large {
+        &:after {
+          left: 0;
+        }
+      }
     }
 
     .sdg-logo {
@@ -187,48 +195,6 @@ export default {
       height: 56px;
     }
 
-    .row-reverse {
-      flex-direction: row-reverse;
-    }
-
-
-    .col-half {
-      margin-bottom: 0;
-
-      width: 41.667%;
-      display: flex;
-      align-items: center;
-
-      .heading {
-        text-align: left;
-        &:after {
-          left: 0;
-        }
-      }
-
-      .centered {
-        text-align: left;
-      }
-    }
-
-    .col-third {
-      margin-bottom: 0;
-      width: 33.333%;
-    }
-
-    .col-wide {
-      width: 83.333%;
-    }
-    .col-medium {
-      width: 83.333%;
-    }
-    .col-narrow {
-      width: 66.667%;
-    }
-    .col-super-narrow {
-      width: 33.333%;
-    }
-
   }
 
 }
@@ -239,16 +205,6 @@ export default {
 
     &.image {
       min-height: 640px;
-    }
-
-    .col-wide {
-      width: 83.333%;
-    }
-    .col-medium {
-      width: 66.667%;
-    }
-    .col-narrow {
-      width: 50%;
     }
 
   }

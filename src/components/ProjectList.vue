@@ -2,7 +2,7 @@
   <div class="project-list">
     <div class="project project-wenker">
       <div class="row">
-        <div class="col col-left">
+        <div class="col col-left col-no-bottom-margin">
           <div class="project-info">
             <span class="project-type">Sprachwissenschaften</span>
             <h3>Project Wenker</h3>
@@ -14,7 +14,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-right">
+        <div class="col col-right col-no-bottom-margin">
           <div class="project-image"></div>
         </div>
       </div>

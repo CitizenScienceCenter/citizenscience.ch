@@ -94,8 +94,8 @@ html {
 .extra-margin-bottom {
   margin-bottom: $spacing-4;
 }
-.extra-padding {
-  padding: $spacing-4;
+.extra-padding-h {
+  padding: 0 10%;
 }
 
 
@@ -484,7 +484,7 @@ input, select {
   }
 
   .extra-padding-h {
-    padding: 0 $spacing-7;
+    padding: 0 10%;
   }
 
   .content-area {

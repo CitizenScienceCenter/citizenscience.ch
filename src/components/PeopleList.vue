@@ -125,12 +125,12 @@
         <div class="col col-large-9">
 
           <div class="row row-centered">
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
+            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping ">
               <div class="person centered">
-                <img src="img/people/marina.jpg" class="photo"/>
-                <span class="name">Marina Gagetti</span>
-                <span class="position">{{ $t('people-marina-position') }}</span>
-                <a href="mailto:marina.gagetti@zfg.uzh.ch">marina.gagetti@zfg.uzh.ch</a>
+                <img src="img/people/rosy.jpg" class="photo"/>
+                <span class="name">Rosy Mondardini</span>
+                <span class="position">{{ $t('people-rosy-position') }}</span>
+                <a href="mailto:maria.mondardini@uzh.ch">maria.mondardini@uzh.ch</a>
               </div>
             </div>
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
@@ -151,18 +151,18 @@
             </div>
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping col-large-no-bottom-margin">
               <div class="person centered">
-                <img src="img/people/rosy.jpg" class="photo"/>
-                <span class="name">Rosy Mondardini</span>
-                <span class="position">{{ $t('people-rosy-position') }}</span>
-                <a href="mailto:maria.mondardini@uzh.ch">maria.mondardini@uzh.ch</a>
-              </div>
-            </div>
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping col-no-bottom-margin">
-              <div class="person centered">
                 <img src="img/people/marcel.jpg" class="photo"/>
                 <span class="name">Marcel Tanner</span>
                 <span class="position">{{ $t('people-marcel-position') }}</span>
                 <a href="mailto:marcel.tanner@uzh.ch">marcel.tanner@uzh.ch</a>
+              </div>
+            </div>
+            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping col-no-bottom-margin">
+              <div class="person centered">
+                <img src="img/people/marina.jpg" class="photo"/>
+                <span class="name">Marina Gagetti</span>
+                <span class="position">{{ $t('people-marina-position') }}</span>
+                <a href="mailto:marina.gagetti@zfg.uzh.ch">marina.gagetti@zfg.uzh.ch</a>
               </div>
             </div>
           </div>

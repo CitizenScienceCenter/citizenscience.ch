@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <div class="col col-10 col-large-5 col-large-before-1 col-wrapping col-no-bottom-margin">
+          <div class="col col-10 col-large-6 col-wrapping col-no-bottom-margin">
             <div>
               <img src="img/graphic-citizen-science.png"/>
             </div>
@@ -105,10 +105,10 @@
             <h2 class="heading centered">What we offer</h2>
           </div>
 
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping  col-large-no-bottom-margin">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
-                <img src="img/graphic-tools.png"/>
+                <img src="img/graphic-platform.png"/>
               </div>
             </div>
             <h3 class="subheading centered">Platform</h3>
@@ -141,7 +141,7 @@
 
           <div class="col">
             <p class="centered extra-margin-top">
-              <router-link tag="button" to="/what" class="button button-secondary">Learn more</router-link>
+              <router-link tag="button" to="/offer" class="button button-secondary">Learn more</router-link>
             </p>
           </div>
 
@@ -153,7 +153,7 @@
       <div class="content-wrapper">
         <div class="row row-reverse-large row-middle">
 
-          <div class="col col-large-5 col-large-before-1 col-large-after-1 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin">
             <div>
               <h2 class="heading centered left-aligned-large" id="start-project">We help you Build your Project</h2>
               <p class="">
@@ -183,8 +183,8 @@
             </div>
           </div>
 
-          <div class="col col-large-5 col-wrapping col-no-bottom-margin">
-            <div class="extra-padding">
+          <div class="col col-large-6 col-wrapping col-no-bottom-margin">
+            <div class="extra-padding-h">
               <img src="img/graphic-create-project.png" />
             </div>
           </div>
@@ -202,11 +202,11 @@
             <p class="">
               Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
             </p>
-            <p class="">
+            <p class="centered left-aligned-large">
               <img src="@/assets/uzh_eth_logo_d_pos.svg" class="uzh-eth-logo"/>
             </p>
             <p class="centered left-aligned-large extra-margin-top">
-              <router-link tag="button" to="/what" class="button button-secondary">Learn more about us</router-link>
+              <router-link tag="button" to="/about" class="button button-secondary">Learn more about us</router-link>
             </p>
           </div>
 

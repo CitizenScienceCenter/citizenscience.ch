@@ -10,7 +10,7 @@
               Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.
             </p>
             <div class="buttons">
-              <button class="button button-secondary button-secondary-inverted">Visit Project</button>
+              <button class="button button-primary">Visit Project</button>
             </div>
           </div>
         </div>

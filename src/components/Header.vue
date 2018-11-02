@@ -306,6 +306,10 @@ header {
                 transform: translateY(-1px);
               }
 
+              &.active {
+                background-color: $color-primary-shade-20;
+              }
+
               &:active {
                 color: $color-black-tint-90;
               }
@@ -525,6 +529,7 @@ header {
                 }
                 &.active {
                   color: $color-primary;
+                  background-color: transparent;
                 }
               }
             }

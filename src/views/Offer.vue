@@ -16,7 +16,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-6">
-              <img src="img/graphic-tools.png"/>
+              <img src="img/graphic-platform.png"/>
             </div>
           </div>
         </div>

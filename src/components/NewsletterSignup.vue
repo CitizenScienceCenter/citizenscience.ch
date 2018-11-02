@@ -22,7 +22,7 @@
         </div>
 
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_32303d2adcf28a2820c5f9165_6dc5028399" tabindex="-1" value=""></div>
-        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button-primary">Submit</button>
+        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button-primary">Sign up</button>
 
         </form>
 

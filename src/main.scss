@@ -37,12 +37,12 @@ html {
   flex-wrap: wrap;
   justify-content: flex-start;
   position: relative;
-  &.row-centered {
-    justify-content: center;
-  }
-  &.row-middle {
-    align-items: center;
-  }
+}
+.row-centered {
+  justify-content: center;
+}
+.row-middle {
+  align-items: center;
 }
 .col {
   padding: 0 $grid-gutter-mobile/2;
@@ -469,11 +469,20 @@ input, select {
   .col-large-3 {
     width: 25%;
   }
+  .col-large-2 {
+    width: 16.667%;
+  }
   .col-large-before-1 {
     margin-left: 8.333%;
   }
+  .col-large-before-2 {
+    margin-left: 16.667%;
+  }
   .col-large-after-1 {
     margin-right: 8.333%;
+  }
+  .col-large-after-2 {
+    margin-right: 16.667%;
   }
   .col-large-before-5 {
     margin-left: 41.667%;

@@ -45,7 +45,7 @@ export default {
           return 'img/covers/carrots.jpg';
           break;
         default:
-          return 'img/covers/sylwia-bartyzel-3149-unsplash.jpg';
+          return 'img/covers/ocean.jpg';
       }
     }
   }
@@ -132,7 +132,7 @@ export default {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom right, $color-secondary, $color-primary-secondary-mix );
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
 

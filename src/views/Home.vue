@@ -37,7 +37,7 @@
 
     <app-content-section>
       <div class="content-wrapper">
-        <div class="row row-middle">
+        <div class="row row-centered row-middle">
 
           <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <div>

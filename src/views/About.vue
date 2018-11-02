@@ -186,6 +186,34 @@
       </div>
     </app-content-section>
 
+    <app-content-section color="light-greyish">
+      <div class="content-wrapper">
+        <div class="row row-centered">
+          <div class="col col-large-10">
+            <h2 class="heading centered">Parnterships</h2>
+          </div>
+        </div>
+        <div class="row row-centered row-reverse-large row-middle">
+
+          <div class="col col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin">
+            <div>
+              <p class="">
+                The Citizen Cyberlab in Geneva develops methods and studies motivations for new forms of public participation in research.
+              </p>
+            </div>
+          </div>
+
+          <div class="col col-6 col-large-3 col-large-before-2 col-wrapping col-no-bottom-margin">
+            <div class="">
+              <img src="img/ccl-logo.png" />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </app-content-section>
+
     <app-content-section color="greyish">
       <div class="content-wrapper">
         <div class="row row-centered">

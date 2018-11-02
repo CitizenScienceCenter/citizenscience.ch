@@ -120,6 +120,31 @@
       </div>
     </app-content-section>
 
+
+    <app-content-section color="light-greyish">
+      <div class="content-wrapper">
+        <div class="row row-centered row-reverse-large row-middle">
+
+          <div class="col col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin">
+            <div>
+              <h2 class="subheading centered left-aligned-large" id="start-project">Upcoming Project: SnAPP</h2>
+              <p class="">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+              </p>
+            </div>
+          </div>
+
+          <div class="col col-6 col-large-3 col-large-before-2 col-wrapping col-no-bottom-margin">
+            <div class="extra-padding-h">
+              <img src="img/snapp.jpg" style="border-radius:50%" />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </app-content-section>
+
     <app-content-section color="greyish">
       <div class="content-wrapper">
         <div class="row row-centered">

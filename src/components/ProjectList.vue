@@ -1,23 +1,22 @@
 <template>
   <div class="project-list">
-    <div class="project project-wenker">
-      <div class="row">
-        <div class="col col-left col-no-bottom-margin">
-          <div class="project-info">
-            <span class="project-type">Sprachwissenschaften</span>
-            <h3>Project Wenker</h3>
-            <p>
-              Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.
-            </p>
-            <div class="buttons">
-              <button class="button button-primary">Visit Project</button>
-            </div>
-          </div>
+    <div class="project">
+
+      <div class="project-info">
+
+        <span class="project-type">Linguistics</span>
+        <h3>Project Wenker</h3>
+        <p>
+          Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.
+        </p>
+        <div class="buttons">
+          <button class="button button-primary">Visit Project</button>
         </div>
-        <div class="col col-right col-no-bottom-margin">
-          <div class="project-image"></div>
-        </div>
+
       </div>
+
+      <div class="project-image"></div>
+
     </div>
   </div>
 </template>
@@ -34,63 +33,42 @@ export default {
 
 .project-list {
 
-  margin-bottom: $spacing-5;
+  margin-bottom: $spacing-4;
 
   .project {
 
-    background-size: cover;
-    background-position: 50% 50%;
     position: relative;
     border-radius: $border-radius;
     box-shadow: 0px 4px 8px -4px rgba($color-black,0.2);
     overflow: hidden;
 
-    .row {
-      min-height: 240px;
-      height: 100%;
-      .col-left {
-        padding-right: 0;
-        width: 66.667%;
-        min-height: 100%;
-      }
-      .col-right {
-        padding-left: 0;
-        width: 33.333%;
-        min-height: 100%;
-      }
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      opacity: .75;
-    }
-
-    &.project-wenker {
-      background-image: url('/img/projects/wenker-bg.jpg');
-      background-position: 25% 25%;
-      &:after {
-        background-color: #5E5037;
-      }
-    }
-
     .project-info {
+
       position: relative;
       z-index: 1;
       color: white;
-      padding: $spacing-3 0 $spacing-3 $spacing-3;
       height: 100%;
+      padding: $spacing-2;
+      padding-top: 120px;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom right, $color-secondary 50%, $color-primary-secondary-mix );
+        mask-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+        z-index: -1;
+      }
 
       .project-type {
         display: block;
         font-size: $font-size-small;
         text-transform: uppercase;
+        margin-bottom: $spacing-1;
       }
 
       h3 {
@@ -104,13 +82,10 @@ export default {
 
       p {
         font-size: $font-size-small;
-        margin-bottom: $spacing-6;
+        margin-bottom: $spacing-2;
       }
 
       .buttons {
-        position: absolute;
-        bottom: $spacing-3;
-        left: $spacing-3;
         .button {
           margin: 0;
         }
@@ -118,12 +93,14 @@ export default {
     }
 
     .project-image {
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
-      z-index: 1;
-      background-image: url('/img/projects/wenker.png');
+      background-image: url('/img/projects/wenker.jpg');
       background-size: cover;
-      background-position: 0 0;
+      background-position: 50% 0;
     }
 
   }
@@ -131,43 +108,39 @@ export default {
 }
 
 
-@media only screen and (min-width: $viewport-tablet-portrait) {
-  .project-list {
-
-
-
-  }
-}
-
-
-@media only screen and (min-width: $viewport-tablet-portrait) {
-
+@media only screen and (min-width: $viewport-mobile-large) {
   .project-list {
 
     .project {
-
-
-      .row {
-        min-height: 320px;
-        .col-left {
-          width: 50%;
-        }
-        .col-right {
-          width: 50%;
-        }
-      }
-
       .project-info {
-        padding: $spacing-4;
+        padding: $spacing-3;
+        padding-top: 140px;
 
-        .buttons {
-          bottom: $spacing-4;
-          left: $spacing-4;
+        p {
+          margin-bottom: $spacing-3;
         }
       }
-
     }
 
+  }
+}
+
+
+@media only screen and (min-width: $viewport-tablet-portrait) {
+
+  .project-list {
+    margin-bottom: $spacing-5;
+    .project {
+      .project-info {
+        padding: $spacing-3;
+        padding-right: 50%;
+
+        &:after {
+          background: linear-gradient(to bottom right, $color-secondary, $color-primary-secondary-mix 75% );
+          mask-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0));
+        }
+      }
+    }
   }
 
 }
@@ -177,15 +150,22 @@ export default {
   .project-list {
 
     .project {
-
-      .row {
-        min-height: 360px;
-      }
+      min-height: 320px;
 
       .project-info {
-        h3 {
-          font-size: $font-size-large;
+        position: absolute;
+        padding: $spacing-4;
+        padding-right: 50%;
+
+        .buttons {
+          position: absolute;
+          left: $spacing-4;
+          bottom: $spacing-4;
         }
+      }
+
+      .project-image {
+        background-position: 50% 10%;
       }
 
     }
@@ -196,17 +176,6 @@ export default {
 
 @media only screen and (min-width: $viewport-xlarge) {
 
-  .project-list {
-
-    .project {
-
-      .row {
-        min-height: 400px;
-      }
-
-    }
-
-  }
 
 }
 

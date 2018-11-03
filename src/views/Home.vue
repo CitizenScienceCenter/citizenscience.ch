@@ -83,7 +83,7 @@
           </div>
         </div>
         <div class="row row-centered">
-          <div class="col col-large-10">
+          <div class="col col-large-10 col-xlarge-8">
             <app-project-list></app-project-list>
           </div>
         </div>

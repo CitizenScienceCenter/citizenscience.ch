@@ -1,3 +1,17 @@
+<i18n>
+{
+  "en": {
+    "section-citizenscience-heading": "What is Citizen Science?",
+    "section-citizenscience-text": "Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process, and provides new knowledge by supporting collaborative intelligence and co-creation.",
+    "section-citizenscience-text-2": "There are mainly three levels of participation of citizens in Citizen Science projects: Citizens who volunteer as data collectors and contributors; citizens who collaborate with scientific experts on the research design of a project. And Citizens who actively lead and carry out research, exerting a high degree of control and ownership over the whole cycle of scientific activities from problem definition over to formulating of research questions, data  collection and analysis to publishing.",
+
+    "section-sdg-heading": "Citizen Science for the SDGs",
+    "section-sdg-text": "In 2015, world leaders agreed to 17 goals to achieve a better and sustainable world by 2030. The role of science in supporting this global effort is evident, as success depends largely on the availability of data for monitoring and decision-making.",
+    "section-sdg-text-2": "However, often scientists alone cannot provide information at the necessary scale and resolution. By facilitating scientific and community-based solutions, Citizen Science plays a key role in supporting the 17 Sustainable Development Goals (SDGs) of the UN 2030 Agenda."
+  }
+}
+</i18n>
+
 <template>
   <div>
 
@@ -5,17 +19,12 @@
       <div class="content-wrapper content-wrapper-large-min-height scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large">What is Citizen Science?</h2>
+            <h2 class="heading centered left-aligned-large">{{ $t('section-citizenscience-heading') }}</h2>
             <p>
-              Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process, and provides new knowledge by supporting collaborative intelligence and co-creation.
+              {{ $t('section-citizenscience-text') }}
             </p>
             <p>
-              There are mainly three levels of participation of citizens in Citizen Science projects: Citizens
-              who volunteer as data collectors and contributors; citizens who collaborate with scientific
-              experts on the research design of a project. And Citizens who actively lead and carry out
-              research, exerting a high degree of control and ownership over the whole cycle of scientific
-              activities from problem definition over to formulating of research questions, data collection and
-              analysis to publishing.
+              {{ $t('section-citizenscience-text-2') }}
             </p>
           </div>
 
@@ -41,16 +50,12 @@
             <p class="centered left-aligned-large">
               <img src="img/sdg-logo.svg" style="width:25%"/>
             </p>
-            <h2 class="subheading centered left-aligned-large">Citizen Science for the SDGs</h2>
+            <h2 class="subheading centered left-aligned-large">{{ $t('section-sdg-heading') }}</h2>
             <p>
-              In 2015, world leaders agreed to 17 goals to achieve a better and sustainable world by 2030.
-              The role of science in supporting this global effort is evident, as success depends largely on the
-              availability of data for monitoring and decision-making.
+              {{ $t('section-sdg-text') }}
             </p>
             <p>
-              However, often scientists alone cannot provide information at the necessary scale and
-              resolution. By facilitating scientific and community-based solutions, Citizen Science plays a key
-              role in supporting the 17 Sustainable Development Goals (SDGs) of the UN 2030 Agenda.
+              {{ $t('section-sdg-text-2') }}
             </p>
           </div>
 

@@ -8,17 +8,28 @@
 
     "section-explanation-heading": "Citizen Science",
     "section-explanation-text": "Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process. It provides new knowledge by supporting collaborative intelligence and co-creation.",
-    "section-explanation-button": "Learn more"
-  },
-  "de": {
-    "cover-heading": "Erforsche die Welt",
-    "cover-subheading": "Citizen Science Center Zürich",
-    "cover-button-projects": "Start contributing",
-    "cover-button-your-project": "Suggest a project",
+    "section-explanation-button": "Learn more",
 
-    "section-explanation-heading": "Citizen Science",
-    "section-explanation-text": "Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process. It provides new knowledge by supporting collaborative intelligence and co-creation.",
-    "section-explanation-button": "Learn more about what we do"
+    "section-projects-heading": "Get involved",
+    "section-projects-text": "Participate in our first Citizen Science Project from the field of linguistics. Transcribe old Swiss German phrases. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
+
+    "section-offer-heading": "Get involved",
+    "section-offer-1-heading": "Platform",
+    "section-offer-1-text": "Our online project platform makes your Citizen Science project visible and usable. We support you with the planning, the design, the implementation and the evaluation of your project.",
+    "section-offer-2-heading": "Community",
+    "section-offer-2-text": "We want to build and foster a community of citizens and scientists. Strengthening cooperation and cultivating dialogue between the public, academia, industry, and politics is our goal.",
+    "section-offer-3-heading": "Knowledge",
+    "section-offer-3-text": "We provide you with theoretical, practical, legal and ethical guidelines and standards for the implementation of Citizen Science projects.",
+    "section-offer-button": "Learn more",
+
+    "section-build-project-heading": "We help you Build your Project",
+    "section-build-project-text": "We provide you with the resources, expertise and technical know-how to develop, set up, and run a citizen science project, while maintaining the highest standards of data security and scientific excellence.",
+
+    "section-about-heading": "A Joined Initiative",
+    "section-about-text": "Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.",
+    "section-about-button": "Learn more about us",
+
+    "section-newsletter-heading": "Sign up for our Newsletter"
   }
 }
 </i18n>
@@ -79,7 +90,7 @@
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
-            <h2 class="heading centered" id="projects">Get involved</h2>
+            <h2 class="heading centered" id="projects">{{ $t('section-projects-heading') }}</h2>
           </div>
         </div>
         <div class="scroll-effect">
@@ -91,7 +102,7 @@
           <div class="row row-centered">
             <div class="col col-tablet-portrait-10 col-large-6">
               <p class="">
-                Participate in our first Citizen Science Project from the field of linguistics. Transcribe old Swiss German phrases. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.
+                {{ $t('section-projects-text') }}
               </p>
             </div>
           </div>
@@ -104,7 +115,7 @@
         <div class="row row-centered">
 
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered">What we offer</h2>
+            <h2 class="heading centered">{{ $t('section-offer-heading') }}</h2>
           </div>
 
           <div class="col col-tablet-portrait-10 col-large-4 col-wrapping  col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
@@ -113,9 +124,9 @@
                 <img src="img/graphic-platform.png"/>
               </div>
             </div>
-            <h3 class="subheading centered">Platform</h3>
+            <h3 class="subheading centered">{{ $t('section-offer-1-heading') }}</h3>
             <p class="">
-              Our online project platform makes your Citizen Science project visible and usable. We support you with the planning, the design, the implementation and the evaluation of your project.
+              {{ $t('section-offer-1-text') }}
             </p>
           </div>
           <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
@@ -124,9 +135,9 @@
                 <img src="img/graphic-community.png"/>
               </div>
             </div>
-            <h3 class="subheading centered">Community</h3>
+            <h3 class="subheading centered">{{ $t('section-offer-2-heading') }}</h3>
             <p class="">
-              We want to build and foster a community of citizens and scientists. Strengthening cooperation and cultivating dialogue between the public, academia, industry, and politics is our goal.
+              {{ $t('section-offer-2-text') }}
             </p>
           </div>
           <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-3">
@@ -135,15 +146,15 @@
                 <img src="img/graphic-knowledge.png"/>
               </div>
             </div>
-            <h3 class="subheading centered">Knowledge</h3>
+            <h3 class="subheading centered">{{ $t('section-offer-3-heading') }}</h3>
             <p class="">
-              We provide you with theoretical, practical, legal and ethical guidelines and standards for the implementation of Citizen Science projects.
+              {{ $t('section-offer-3-text') }}
             </p>
           </div>
 
           <div class="col">
             <p class="centered extra-margin-top">
-              <router-link tag="button" to="/offer" class="button button-secondary">Learn more</router-link>
+              <router-link tag="button" to="/offer" class="button button-secondary">{{ $t('section-offer-button') }}</router-link>
             </p>
           </div>
 
@@ -157,9 +168,9 @@
 
           <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <div>
-              <h2 class="heading centered left-aligned-large" id="start-project">We help you Build your Project</h2>
+              <h2 class="heading centered left-aligned-large" id="start-project">{{ $t('section-build-project-heading') }}</h2>
               <p class="">
-                We provide you with the resources, expertise and technical know-how to develop, set up, and run a citizen science project, while maintaining the highest standards of data security and scientific excellence.
+                {{ $t('section-build-project-text') }}
               </p>
               <p class="centered left-aligned-large">
                 <button class="button button-secondary button-icon">
@@ -200,15 +211,16 @@
       <div class="content-wrapper">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-            <h2 class="heading centered left-aligned-large">A Joined Initiative</h2>
+            <h2 class="heading centered left-aligned-large">{{ $t('section-about-heading') }}</h2>
             <p class="">
-              Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
+              {{ $t('section-about-text') }}
             </p>
             <p class="centered left-aligned-large">
-              <img src="@/assets/uzh_eth_logo_d_pos.svg" class="uzh-eth-logo"/>
+              <img v-if="this.$i18n.locale === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_pos.svg" style="width:66.667%" />
+              <img v-else alt="Universität Zürich / ETH Zürich" src="@/assets/uzh_eth_logo_d_pos.svg" style="width:66.667%" />
             </p>
             <p class="centered left-aligned-large extra-margin-top">
-              <router-link tag="button" to="/about" class="button button-secondary">Learn more about us</router-link>
+              <router-link tag="button" to="/about" class="button button-secondary">{{ $t('section-about-button') }}</router-link>
             </p>
           </div>
 
@@ -229,7 +241,7 @@
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-mobile-large-10">
-            <h2 class="heading centered">Sign up for our Newsletter</h2>
+            <h2 class="heading centered">{{ $t('section-newsletter-heading') }}</h2>
           </div>
         </div>
         <div class="row row-centered">

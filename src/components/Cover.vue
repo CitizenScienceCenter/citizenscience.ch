@@ -9,9 +9,9 @@
     </div>
 
     <div class="uzh-eth">
-      <span v-if="language === 'en'">A joined initiative by</span>
+      <span v-if="this.$i18n.locale === 'en'">A joined initiative by</span>
       <span v-else>Ein gemeinsamer Effort von</span>
-      <img v-if="language === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_neg.svg"/>
+      <img v-if="this.$i18n.locale === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_neg.svg"/>
       <img v-else alt="Universität Zürich / ETH Zürich" src="@/assets/uzh_eth_logo_d_neg.svg"/>
     </div>
 
@@ -27,9 +27,6 @@ export default {
     'subpage': String
   },
   computed: {
-    language: function() {
-      return this.$i18n.locale;
-    },
     styleClass: function() {
       switch( this.subpage ) {
         case 'about':

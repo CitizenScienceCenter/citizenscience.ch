@@ -127,13 +127,20 @@ export default {
       }
       else {
         // scroll down
-        if( window.scrollY > 80 ) {
-          this.fixed = true;
-          this.pulled = false;
+
+        if( this.scrollYpreviously >= this.scrollY ) {
+          // first time
         }
         else {
-          this.fixed = false;
-          this.animated = false;
+          // second time
+          if( window.scrollY > 80 ) {
+            this.fixed = true;
+            this.pulled = false;
+          }
+          else {
+            this.fixed = false;
+            this.animated = false;
+          }
         }
       }
 
@@ -157,7 +164,6 @@ export default {
 <style lang="scss">
 
 @import '@/variables.scss';
-
 
 header {
   height: 48px;

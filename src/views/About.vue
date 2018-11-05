@@ -18,7 +18,7 @@
     <app-content-section>
       <div class="content-wrapper">
         <div class="row">
-          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin scroll-effect">
             <h2 class="heading centered left-aligned-large">Mission & Goals</h2>
             <p class="">
               At the Citizen Science Center Zurich we want to engage academic scientists and the public in next-generation citizen science projects, tackling problems from fundamental physics to human health. The Citizen Science Center Zurich aims at enabling researchers and citizens to create and conduct research collaborations that produce excellent science while supporting the 17 UN Sustainable Development Goals.
@@ -30,10 +30,10 @@
           </div>
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-left">
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
-            <div class="col col-6">
+            <div class="col col-6 col-large-7 col-large-after-1">
               <img src="img/graphic-roadmap.png"/>
             </div>
           </div>
@@ -45,11 +45,11 @@
       <div class="content-wrapper">
         <div class="row row-centered row-middle">
 
-          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <div>
               <h3 class="subheading centered left-aligned-large">Meet us at our Brown Bag Lunches</h3>
               <p class="">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
               </p>
               <p class="">
                 Upcoming Brownbag Lunches
@@ -73,7 +73,7 @@
             </div>
           </div>
 
-          <div class="col col-10 col-large-6 col-wrapping col-no-bottom-margin">
+          <div class="col col-10 col-large-4 col-large-before-1 col-large-after-1 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
             <div class="extra-padding-h">
               <img src="img/brownbag.jpg" style="border-radius:50%"/>
             </div>
@@ -89,11 +89,11 @@
       <div class="content-wrapper">
         <div class="row row-centered">
 
-          <div class="col col-large-10">
+          <div class="col col-large-10 scroll-effect">
             <h2 class="heading centered">Our Principles</h2>
           </div>
 
-          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping">
+          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping scroll-effect">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <div class="extra-padding-h">
@@ -106,7 +106,7 @@
               The Citizen Science Center wants to develop and implement projects that reflect the highest standards possible in term of scientific rigor, data security, and ethics.
             </p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping">
+          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping scroll-effect scroll-effect-delayed-1">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <div class="extra-padding-h">
@@ -119,7 +119,7 @@
               The Center aims at developing an active and productive participation at the different phases of the scientific research project, from funding allocation, topic selection, and research design, to execution, interpretation, and dissemination of results.
             </p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <div class="extra-padding-h">
@@ -132,7 +132,7 @@
               The Center adheres to the principles of open science (open access to data and publications) and operates in a fully transparent manner, ensuring that the public benefits from our work.
             </p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-bottom-margin">
+          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-bottom-margin scroll-effect scroll-effect-delayed-3">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <div class="extra-padding-h">
@@ -151,7 +151,7 @@
     </app-content-section>
 
     <app-content-section color="light-greyish">
-      <div class="content-wrapper">
+      <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">A Joined Initiative</h2>
@@ -165,10 +165,10 @@
 
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-right">
+      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
-            <div class="col col-tablet-portrait-10 col-large-6">
+            <div class="col col-tablet-portrait-10 col-large-7">
               <img src="img/uzh-eth.jpg" style="border-radius:50%"/>
             </div>
           </div>
@@ -179,7 +179,10 @@
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered">
-          <div class="col">
+          <div class="col col-large-10 scroll-effect">
+            <h2 class="heading centered">People</h2>
+          </div>
+          <div class="col scroll-effect">
             <app-people-list></app-people-list>
           </div>
         </div>
@@ -189,11 +192,11 @@
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered">
-          <div class="col col-large-10">
+          <div class="col col-large-10 scroll-effect">
             <h2 class="heading centered">Parnterships</h2>
           </div>
         </div>
-        <div class="row row-centered row-reverse-large row-middle">
+        <div class="row row-centered row-reverse-large row-middle scroll-effect">
 
           <div class="col col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin">
             <div>

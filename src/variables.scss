@@ -14,6 +14,12 @@ $transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
 $transition-duration-long: 300ms;
 $transition-duration-short: 150ms;
 
+$transition-duration-super-long: 900ms;
+$transition-delay-1: 100ms;
+$transition-delay-2: 200ms;
+$transition-delay-3: 300ms;
+$scroll-effect-offset: 80px;
+
 
 /* Colors */
 
@@ -86,6 +92,7 @@ $spacing-4: 32px;
 $spacing-5: 48px;
 $spacing-6: 72px;
 $spacing-7: 96px;
+$spacing-8: 112px;
 
 /* Grid */
 

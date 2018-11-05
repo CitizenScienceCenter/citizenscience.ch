@@ -18,6 +18,7 @@ html {
   }
 }
 
+
 /* Grid Basics */
 
 .content-area {
@@ -457,6 +458,9 @@ input, select {
   .col-large-8 {
     width: 66.667%;
   }
+  .col-large-7 {
+    width: 58.333%;
+  }
   .col-large-6 {
     width: 50%;
   }
@@ -477,6 +481,12 @@ input, select {
   }
   .col-large-before-2 {
     margin-left: 16.667%;
+  }
+  .col-large-before-3 {
+    margin-left: 25%;
+  }
+  .col-large-before-4 {
+    margin-left: 33.333%;
   }
   .col-large-after-1 {
     margin-right: 8.333%;

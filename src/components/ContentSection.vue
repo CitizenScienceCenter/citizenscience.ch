@@ -1,5 +1,5 @@
 <template>
-  <section class="content-section" :class="[colorClass]">
+  <section :id="id" class="content-section" :class="[colorClass]">
     <slot></slot>
   </section>
 </template>
@@ -7,10 +7,18 @@
 <script>
 export default {
   name: 'ContentSection',
+  data: function() {
+    return {
+      matches: []
+    }
+  },
   props: {
     'color': String
   },
   computed: {
+    id: function() {
+      return 'section-'+Math.floor((Math.random() * 9999) + 1);
+    },
     colorClass: function() {
       switch( this.color ) {
         case 'greyish':
@@ -20,9 +28,30 @@ export default {
           return 'light-greyish';
           break;
         default:
-          return '';
+          return 'white';
       }
     }
+  },
+  methods: {
+    scroll: function() {
+      this.matches.forEach(function(element) {
+        let {top,bottom} = element.getBoundingClientRect();
+        let height = document.documentElement.clientHeight;
+        let scrolled = top < height && bottom >0;
+        if( scrolled ) {
+          element.classList.add("scrolled");
+        }
+      });
+    }
+  },
+  mounted: function() {
+    window.addEventListener('scroll', this.scroll);
+    this.matches = this.$el.querySelectorAll(".scroll-effect");
+
+    this.scroll();
+  },
+  destroyed() {
+    //window.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>
@@ -33,9 +62,21 @@ export default {
 
 .content-section {
   position: relative;
-  padding: $spacing-5 0;
+  padding: $spacing-6 0;
   background: white;
-  overflow-x: hidden;
+  overflow: hidden;
+
+
+  .scroll-effect {
+    transition: all $transition-duration-super-long $transition-timing-function;
+    transform: translateY($scroll-effect-offset);
+    opacity: 0;
+
+    &.scrolled {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   // Section Style
 
@@ -121,7 +162,6 @@ export default {
 
   .content-section {
 
-    padding: $spacing-6 0;
 
     .sdg-logo {
       height: 64px;
@@ -155,6 +195,23 @@ export default {
 
     padding: $spacing-7 0;
     overflow: hidden;
+
+
+    .scroll-effect {
+      &.scroll-effect-delayed-1 {
+        transition-delay: $transition-delay-1;
+      }
+      &.scroll-effect-delayed-2 {
+        transition-delay: $transition-delay-2;
+      }
+      &.scroll-effect-delayed-3 {
+        transition-delay: $transition-delay-3;
+      }
+      &.scroll-effect-delayed-4 {
+        transition-delay: $transition-delay-3;
+      }
+    }
+
 
     .content-wrapper-large-min-height {
       min-height: 500px;
@@ -202,6 +259,8 @@ export default {
 @media only screen and (min-width: $viewport-xlarge) {
 
   .content-section {
+
+    padding: $spacing-8 0;
 
     &.image {
       min-height: 640px;

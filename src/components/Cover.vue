@@ -48,6 +48,14 @@ export default {
           return 'img/covers/ocean.jpg';
       }
     }
+  },
+  mounted: function() {
+    var matches = this.$el.querySelectorAll(".scroll-effect");
+    window.setTimeout(function() {
+      matches.forEach(function(element) {
+        element.classList.add("scrolled");
+      });
+    }, 1);
   }
 }
 </script>
@@ -63,6 +71,27 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
+
+  .scroll-effect {
+    transition: all $transition-duration-super-long $transition-timing-function;
+    transform: translateY($scroll-effect-offset);
+    opacity: 0;
+
+    &.scroll-effect-delayed-1 {
+      transition-delay: 0.25s;
+    }
+    &.scroll-effect-delayed-2 {
+      transition-delay: 0.5s;
+    }
+    &.scroll-effect-delayed-3 {
+      transition-delay: 0.75s;
+    }
+
+    &.scrolled {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   .button {
     margin: $spacing-1;

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="parallax">
     <app-header></app-header>
     <div class="content-area">
       <router-view></router-view>
@@ -15,9 +15,29 @@ export default {
   name: 'app',
   components: {
     'app-header': Header
+  },
+  mounted: function() {
+    var app = this.$el;
+    window.setTimeout(function() {
+      app.classList.add("show");
+    }, 1);
   }
 }
 
 </script>
 
 <style lang="scss" src="@/main.scss"></style>
+
+<style lang="scss">
+
+@import '@/variables.scss';
+
+#app {
+  opacity: 0;
+  transition: all $transition-duration-super-long $transition-timing-function;
+  &.show {
+    opacity: 1;
+  }
+}
+
+</style>

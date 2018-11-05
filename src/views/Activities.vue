@@ -2,7 +2,7 @@
   <div>
 
     <app-content-section>
-      <div class="content-wrapper content-wrapper-large-min-height">
+      <div class="content-wrapper content-wrapper-large-min-height scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">What is Citizen Science?</h2>
@@ -21,7 +21,7 @@
 
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-right">
+      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-tablet-portrait-10 col-large-6">
@@ -35,11 +35,11 @@
     </app-content-section>
 
     <app-content-section>
-      <div class="content-wrapper">
+      <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
             <p class="centered left-aligned-large">
-              <img src="img/sdg-logo.svg" style="width:20%"/>
+              <img src="img/sdg-logo.svg" style="width:25%"/>
             </p>
             <h2 class="subheading centered left-aligned-large">Citizen Science for the SDGs</h2>
             <p>
@@ -56,7 +56,7 @@
 
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-left">
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-8 col-large-6">
@@ -68,7 +68,7 @@
     </app-content-section>
 
     <app-content-section color="light-greyish">
-      <div class="content-wrapper">
+      <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">The Open Seventeen</h2>
@@ -81,7 +81,7 @@
 
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-right">
+      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-tablet-portrait-10 col-large-6">
@@ -93,7 +93,7 @@
     </app-content-section>
 
     <app-content-section>
-      <div class="content-wrapper">
+      <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">Developing the SDG Toolkit</h2>
@@ -107,7 +107,7 @@
 
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-left">
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-tablet-portrait-10 col-large-6">
@@ -125,7 +125,7 @@
       <div class="content-wrapper">
         <div class="row row-centered row-reverse-large row-middle">
 
-          <div class="col col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <div>
               <h2 class="subheading centered left-aligned-large" id="start-project">Upcoming Project: SnAPP</h2>
               <p class="">
@@ -134,7 +134,7 @@
             </div>
           </div>
 
-          <div class="col col-6 col-large-3 col-large-before-2 col-wrapping col-no-bottom-margin">
+          <div class="col col-6 col-large-3 col-large-before-2 col-wrapping col-no-bottom-margin scroll-effect">
             <div class="extra-padding-h">
               <img src="img/snapp.jpg" style="border-radius:50%" />
             </div>

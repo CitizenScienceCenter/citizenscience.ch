@@ -171,7 +171,6 @@ header {
 
   margin-top: 0px;
   box-shadow: 0px 4px 8px -4px rgba($color-black,0.2);
-  //border-bottom: 1px solid $color-black-tint-90;
 
   &.fixed {
     position: fixed;

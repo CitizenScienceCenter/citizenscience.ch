@@ -27,9 +27,9 @@
   <div>
 
     <app-cover>
-      <h2 class="cover-heading">{{ $t('cover-heading') }}</h2>
-      <p class="cover-subheading">{{ $t('cover-subheading') }}</p>
-      <p class="centered">
+      <h2 class="cover-heading scroll-effect">{{ $t('cover-heading') }}</h2>
+      <p class="cover-subheading scroll-effect scroll-effect-delayed-1">{{ $t('cover-subheading') }}</p>
+      <p class="centered scroll-effect scroll-effect-delayed-2">
         <button class="button button-primary" v-scroll-to="'#projects'">{{ $t('cover-button-projects') }}</button>
         <button class="button button-secondary button-secondary-inverted" v-scroll-to="'#start-project'">{{ $t('cover-button-your-project') }}</button>
       </p>
@@ -39,7 +39,7 @@
       <div class="content-wrapper">
         <div class="row row-centered row-middle">
 
-          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <div>
               <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
               <p class="">
@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <div class="col col-10 col-large-6 col-wrapping col-no-bottom-margin">
+          <div class="col col-10 col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
             <div>
               <img src="img/graphic-citizen-science.png"/>
             </div>
@@ -77,21 +77,23 @@
   -->
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
-        <div class="row row-centered">
+        <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
             <h2 class="heading centered" id="projects">Get involved</h2>
           </div>
         </div>
-        <div class="row row-centered">
-          <div class="col col-large-10 col-xlarge-8">
-            <app-project-list></app-project-list>
+        <div class="scroll-effect">
+          <div class="row row-centered">
+            <div class="col col-large-10 col-xlarge-8">
+              <app-project-list></app-project-list>
+            </div>
           </div>
-        </div>
-        <div class="row row-centered">
-          <div class="col col-tablet-portrait-10 col-large-6">
-            <p class="">
-              Participate in our first Citizen Science Project from the field of linguistics. Transcribe old Swiss German phrases. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.
-            </p>
+          <div class="row row-centered">
+            <div class="col col-tablet-portrait-10 col-large-6">
+              <p class="">
+                Participate in our first Citizen Science Project from the field of linguistics. Transcribe old Swiss German phrases. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -101,11 +103,11 @@
       <div class="content-wrapper">
         <div class="row row-centered">
 
-          <div class="col col-large-10">
+          <div class="col col-large-10 scroll-effect">
             <h2 class="heading centered">What we offer</h2>
           </div>
 
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping  col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping  col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <img src="img/graphic-platform.png"/>
@@ -116,7 +118,7 @@
               Our online project platform makes your Citizen Science project visible and usable. We support you with the planning, the design, the implementation and the evaluation of your project.
             </p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <img src="img/graphic-community.png"/>
@@ -127,7 +129,7 @@
               We want to build and foster a community of citizens and scientists. Strengthening cooperation and cultivating dialogue between the public, academia, industry, and politics is our goal.
             </p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-no-bottom-margin">
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-3">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <img src="img/graphic-knowledge.png"/>
@@ -153,7 +155,7 @@
       <div class="content-wrapper">
         <div class="row row-reverse-large row-middle">
 
-          <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <div>
               <h2 class="heading centered left-aligned-large" id="start-project">We help you Build your Project</h2>
               <p class="">
@@ -183,7 +185,7 @@
             </div>
           </div>
 
-          <div class="col col-large-6 col-wrapping col-no-bottom-margin">
+          <div class="col col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
             <div class="extra-padding-h">
               <img src="img/graphic-create-project.png" />
             </div>
@@ -197,7 +199,7 @@
     <app-content-section>
       <div class="content-wrapper">
         <div class="row">
-          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <h2 class="heading centered left-aligned-large">A Joined Initiative</h2>
             <p class="">
               Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.
@@ -212,10 +214,10 @@
 
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-right">
+      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
-            <div class="col col-tablet-portrait-10 col-large-6">
+            <div class="col col-tablet-portrait-10 col-large-7">
               <img src="img/uzh-eth.jpg" style="border-radius:50%"/>
             </div>
           </div>

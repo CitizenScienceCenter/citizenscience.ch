@@ -10,7 +10,7 @@
           Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.
         </p>
         <div class="buttons">
-          <button class="button button-primary">Visit Project</button>
+          <button class="button button-primary" @click="link('http://wenker.citizenscience.ch')">Visit Project</button>
         </div>
 
       </div>
@@ -23,7 +23,12 @@
 
 <script>
 export default {
-  name: 'ProjectList'
+  name: 'ProjectList',
+  methods: {
+    link: function(link) {
+      window.location.href = link;
+    }
+  }
 }
 </script>
 
@@ -61,6 +66,10 @@ export default {
         height: 100%;
         background: linear-gradient(to bottom right, $color-secondary 50%, $color-primary-secondary-mix );
         mask-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+        // ms edge fallback
+        @supports (-ms-ime-align:auto) {
+            opacity: 0.75;
+        }
         z-index: -1;
       }
 

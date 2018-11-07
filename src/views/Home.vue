@@ -40,7 +40,7 @@
 <template>
   <div>
 
-    <app-cover>
+    <app-cover imageUrl="img/cover.jpg">
       <h2 class="cover-heading scroll-effect">{{ $t('cover-heading') }}</h2>
       <p class="cover-subheading scroll-effect scroll-effect-delayed-1">{{ $t('cover-subheading') }}</p>
       <p class="centered scroll-effect scroll-effect-delayed-2">

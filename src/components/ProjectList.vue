@@ -1,16 +1,35 @@
+<i18n>
+{
+  "en": {
+    "project-wenker-title": "Project Wenker",
+    "project-wenker-topic": "Linguistics",
+    "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
+
+    "project-button": "Contribute"
+  },
+  "de": {
+    "project-wenker-title": "Project Wenker",
+    "project-wenker-topic": "Linguistics",
+    "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
+
+    "project-button": "Contribute"
+  }
+}
+</i18n>
+
 <template>
   <div class="project-list">
     <div class="project">
 
       <div class="project-info">
 
-        <span class="project-type">Linguistics</span>
-        <h3>Project Wenker</h3>
+        <span class="project-type">{{ $t('project-wenker-topic') }}</span>
+        <h3>{{ $t('project-wenker-title') }}</h3>
         <p>
-          Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.
+          {{ $t('project-wenker-description') }}
         </p>
         <div class="buttons">
-          <button class="button button-primary" @click="link('http://wenker.citizenscience.ch')">Visit Project</button>
+          <button class="button button-primary" @click="link('http://wenker.citizenscience.ch')">{{ $t('project-button') }}</button>
         </div>
 
       </div>

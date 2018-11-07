@@ -98,6 +98,9 @@ html {
 .extra-padding-h {
   padding: 0 10%;
 }
+.extra-padding-h-big {
+  padding: 0 25%;
+}
 
 
 /* Elements */
@@ -502,8 +505,11 @@ input, select {
     text-align: left;
   }
 
-  .extra-padding-h {
+  .extra-padding-large-h {
     padding: 0 10%;
+  }
+  .extra-padding-large-h-big {
+    padding: 0 25%;
   }
 
   .content-area {

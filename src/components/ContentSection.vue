@@ -1,5 +1,5 @@
 <template>
-  <section :id="id" class="content-section" :class="[colorClass]">
+  <section class="content-section" :class="[colorClass]">
     <slot></slot>
   </section>
 </template>
@@ -16,9 +16,6 @@ export default {
     'color': String
   },
   computed: {
-    id: function() {
-      return 'section-'+Math.floor((Math.random() * 9999) + 1);
-    },
     colorClass: function() {
       switch( this.color ) {
         case 'greyish':
@@ -65,6 +62,19 @@ export default {
   padding: $spacing-6 0;
   background: white;
   overflow: hidden;
+
+
+  .content-subsection {
+    position: relative;
+    padding: $spacing-4 0;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
 
 
   .scroll-effect {
@@ -132,6 +142,9 @@ export default {
   p {
     margin-bottom: $spacing-4;
 
+    .linebreak {
+      display: block;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -141,9 +154,6 @@ export default {
     margin: $spacing-1;
   }
 
-  .uzh-eth-logo {
-    height: 40px;
-  }
 
 }
 
@@ -151,9 +161,7 @@ export default {
 @media only screen and (min-width: $viewport-mobile-large) {
 
   .content-section {
-    .sdg-logo {
-      height: 56px;
-    }
+
   }
 
 }
@@ -162,9 +170,8 @@ export default {
 
   .content-section {
 
-
-    .sdg-logo {
-      height: 64px;
+    .content-subsection {
+      padding: $spacing-5 0;
     }
 
     .heading {
@@ -179,10 +186,6 @@ export default {
 
     p {
       margin-bottom: $spacing-5;
-    }
-
-    .uzh-eth-logo {
-      height: 48px;
     }
 
   }
@@ -238,10 +241,6 @@ export default {
           left: 0;
         }
       }
-    }
-
-    .sdg-logo {
-      height: 80px;
     }
 
     .heading {

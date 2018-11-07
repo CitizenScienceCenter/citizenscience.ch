@@ -6,27 +6,30 @@
     "cover-button-projects": "Start contributing",
     "cover-button-your-project": "Suggest a project",
 
-    "section-explanation-heading": "Citizen Science",
-    "section-explanation-text": "Citizen Science complements traditional scientific expertise by engaging the general public in the scientific process. It provides new knowledge by supporting collaborative intelligence and co-creation.",
+    "section-explanation-heading": "Our Purpose",
+    "section-explanation-text": "The Citizen Science Center Zurich supports the collaboration of scientists and the general public in co-creating and conducting scientific research projects.",
+    "section-explanation-text-2": "Citizen Science projects provide new and co-created knowledge to tackle problems from fundamental physics to human health, from climate change to gender equality.",
+    "section-explanation-text-3": "The Center aims at producing excellent science and quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
     "section-explanation-button": "Learn more",
 
     "section-projects-heading": "Get involved",
-    "section-projects-text": "Participate in our first Citizen Science Project from the field of linguistics. Transcribe old Swiss German phrases. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
+    "section-projects-text": "Our first Citizen Science Project (now in beta) is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
 
-    "section-offer-heading": "Get involved",
+    "section-offer-heading": "What we offer",
     "section-offer-1-heading": "Platform",
-    "section-offer-1-text": "Our online project platform makes your Citizen Science project visible and usable. We support you with the planning, the design, the implementation and the evaluation of your project.",
+    "section-offer-1-text": "Web and mobile open tools (now in beta) and a shared database to support scientists and citizens with the planning, implementation and evaluation of Citizen Science projects.",
     "section-offer-2-heading": "Community",
-    "section-offer-2-text": "We want to build and foster a community of citizens and scientists. Strengthening cooperation and cultivating dialogue between the public, academia, industry, and politics is our goal.",
+    "section-offer-2-text": "A community of citizen and scientists to strengthen cooperation and cultivate dialogue between the public, academia, industry, and politics.",
     "section-offer-3-heading": "Knowledge",
-    "section-offer-3-text": "We provide you with theoretical, practical, legal and ethical guidelines and standards for the implementation of Citizen Science projects.",
+    "section-offer-3-text": "Theoretical, practical, legal and ethical guidelines and standards for the implementation of Citizen Science projects.",
     "section-offer-button": "Learn more",
 
-    "section-build-project-heading": "We help you Build your Project",
-    "section-build-project-text": "We provide you with the resources, expertise and technical know-how to develop, set up, and run a citizen science project, while maintaining the highest standards of data security and scientific excellence.",
+    "section-build-project-heading": "Do you have a project in mind? We can help you.",
+    "section-build-project-text": "If you have an idea for a Citizen Science project, get in touch with us. We can help you evaluate your idea and potentially provide you with expertise and tools to develop, set up, and run your project.",
 
-    "section-about-heading": "A Joined Initiative",
+    "section-about-heading": "A Joint Initiative",
     "section-about-text": "Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.",
+    "section-about-text-2": "The Citizen Science Center Zurich adheres to the principles of Open Science and operates in a fully transparent manner.",
     "section-about-button": "Learn more about us",
 
     "section-newsletter-heading": "Sign up for our Newsletter"
@@ -50,67 +53,32 @@
       <div class="content-wrapper">
         <div class="row row-centered row-middle">
 
-          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
+          <div class="col col-10 col-large-6 col-wrapping scroll-effect">
+            <div>
+              <div class="extra-padding-large-h">
+                <img src="img/graphic-citizen-science.png"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
             <div>
               <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
-              <p class="">
-                {{ $t('section-explanation-text') }}
-              </p>
+              <p>{{ $t('section-explanation-text') }}<br/>
+              {{ $t('section-explanation-text-2') }}</p>
+              <p>{{ $t('section-explanation-text-3') }}</p>
               <p class="centered left-aligned-large">
                 <router-link tag="button" to="/activities" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
               </p>
             </div>
           </div>
 
-          <div class="col col-10 col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
-            <div>
-              <img src="img/graphic-citizen-science.png"/>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </app-content-section>
-    <!--
-    .col-mobile-large-12 {
-      width: 100%;
-    }
-    .col-mobile-large-10 {
-      width: 83.333%;
-    }
-    .col-mobile-large-8 {
-      width: 66.667%;
-    }
-    .col-mobile-large-4 {
-      width: 33.333%;
-    }
-  -->
+
     <app-content-section color="light-greyish">
-      <div class="content-wrapper">
-        <div class="row row-centered scroll-effect">
-          <div class="col col-large-10">
-            <h2 class="heading centered" id="projects">{{ $t('section-projects-heading') }}</h2>
-          </div>
-        </div>
-        <div class="scroll-effect">
-          <div class="row row-centered">
-            <div class="col col-large-10 col-xlarge-8">
-              <app-project-list></app-project-list>
-            </div>
-          </div>
-          <div class="row row-centered">
-            <div class="col col-tablet-portrait-10 col-large-6">
-              <p class="">
-                {{ $t('section-projects-text') }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
-
-    <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered">
 
@@ -158,6 +126,31 @@
             </p>
           </div>
 
+        </div>
+      </div>
+    </app-content-section>
+
+
+    <app-content-section>
+      <div class="content-wrapper">
+        <div class="row row-centered scroll-effect">
+          <div class="col col-large-10">
+            <h2 class="heading centered" id="projects">{{ $t('section-projects-heading') }}</h2>
+          </div>
+        </div>
+        <div class="scroll-effect">
+          <div class="row row-centered">
+            <div class="col col-large-10 col-xlarge-8">
+              <app-project-list></app-project-list>
+            </div>
+          </div>
+          <div class="row row-centered">
+            <div class="col col-tablet-portrait-10 col-large-6">
+              <p class="">
+                {{ $t('section-projects-text') }}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </app-content-section>
@@ -212,9 +205,8 @@
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <h2 class="heading centered left-aligned-large">{{ $t('section-about-heading') }}</h2>
-            <p class="">
-              {{ $t('section-about-text') }}
-            </p>
+            <p>{{ $t('section-about-text') }}<br/>
+            {{ $t('section-about-text-2') }}</p>
             <p class="centered left-aligned-large">
               <img v-if="this.$i18n.locale === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_pos.svg" style="width:66.667%" />
               <img v-else alt="Universität Zürich / ETH Zürich" src="@/assets/uzh_eth_logo_d_pos.svg" style="width:66.667%" />

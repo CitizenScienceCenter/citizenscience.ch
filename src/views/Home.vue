@@ -253,9 +253,9 @@
 
 import Cover from '@/components/shared/Cover.vue'
 import ContentSection from '@/components/shared/ContentSection.vue'
-import ProjectList from '@/components/ProjectList.vue'
+import ProjectList from '@/components/shared/ProjectList.vue'
 import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
-import Footer from '@/components/Footer.vue'
+import Footer from '@/components/shared/Footer.vue'
 
 export default {
   name: 'Home',

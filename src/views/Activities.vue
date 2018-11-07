@@ -249,10 +249,10 @@
 
 <script>
 
-import Cover from '@/components/Cover.vue'
-import ContentSection from '@/components/ContentSection.vue'
-import NewsletterSignup from '@/components/NewsletterSignup.vue'
-import Footer from '@/components/Footer.vue'
+import Cover from '@/components/shared/Cover.vue'
+import ContentSection from '@/components/shared/ContentSection.vue'
+import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
+import Footer from '@/components/shared/Footer.vue'
 
 export default {
   name: 'What',

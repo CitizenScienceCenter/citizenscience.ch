@@ -4,3 +4,6 @@
 [submodule "src/components/shared"]
 	path = src/components/shared
 	url = git@github.com:CitizenScienceCenter/shared-components.git
+[submodule "src/assets/shared"]
+	path = src/assets/shared
+	url = git@github.com:CitizenScienceCenter/shared-assets.git

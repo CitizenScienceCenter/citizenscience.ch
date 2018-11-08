@@ -208,8 +208,8 @@
             <p>{{ $t('section-about-text') }}<br/>
             {{ $t('section-about-text-2') }}</p>
             <p class="centered left-aligned-large">
-              <img v-if="this.$i18n.locale === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/uzh_eth_logo_e_pos.svg" style="width:66.667%" />
-              <img v-else alt="Universität Zürich / ETH Zürich" src="@/assets/uzh_eth_logo_d_pos.svg" style="width:66.667%" />
+              <img v-if="this.$i18n.locale === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/shared/uzh_eth_logo_e_pos.svg" style="width:66.667%" />
+              <img v-else alt="Universität Zürich / ETH Zürich" src="@/assets/shared/uzh_eth_logo_d_pos.svg" style="width:66.667%" />
             </p>
             <p class="centered left-aligned-large extra-margin-top">
               <router-link tag="button" to="/about" class="button button-secondary">{{ $t('section-about-button') }}</router-link>

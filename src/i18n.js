@@ -46,7 +46,7 @@ export const i18n = new VueI18n({
         'title': 'Citizen Science Center Zurich'
       },
       'page-activities': {
-        'link': 'What we do',
+        'link': 'What weSADFASDF do',
         'title': 'What we do – Citizen Science Center Zürich'
       },
       'page-offer': {

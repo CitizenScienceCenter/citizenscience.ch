@@ -3,8 +3,7 @@ import VueRouter from 'vue-router';
 import { router } from './router/router.js';
 import VueScrollTo from 'vue-scrollto';
 import App from './App.vue';
-import VueI18n from 'vue-i18n';
-import { store } from './store/store.js';
+import store from './store/store.js';
 import Vuex from 'vuex';
 import { i18n } from './i18n.js';
 
@@ -16,7 +15,7 @@ Vue.use(VueScrollTo, {
  })
 Vue.use(Vuex)
 
-
+// eslint-disable-next-line
 var vm = new Vue({
   store,
   router,
@@ -25,5 +24,5 @@ var vm = new Vue({
 }).$mount('#app')
 
 if( !store.state.language ) {
-  store.dispatch("setLanguage", {vm, language} );
+  store.dispatch("settings/setLanguage", 'en' );
 }

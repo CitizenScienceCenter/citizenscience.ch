@@ -1,8 +1,7 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
+import settings from './modules/settings'
 import VuexPersist from 'vuex-persist'
-
-Vue.use(Vuex);
 
 
 const vuexPersist = new VuexPersist({
@@ -10,20 +9,14 @@ const vuexPersist = new VuexPersist({
   storage: localStorage
 })
 
-export const store = new Vuex.Store({
-  plugins: [vuexPersist.plugin],
-  state: {
-    language: undefined
+Vue.use(Vuex)
+
+const debug = process.env.NODE_ENV !== 'production'
+
+export default new Vuex.Store({
+  modules: {
+    settings
   },
-  mutations: {
-    setLanguage(state, language) {
-      state.language = language;
-    }
-  },
-  actions: {
-    setLanguage( context, {vm, language} ) {
-      vm.$i18n.locale = language;
-      context.commit('setLanguage', language );
-    }
-  }
-});
+  strict: debug,
+  plugins: [vuexPersist.plugin]
+})

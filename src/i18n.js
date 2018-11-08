@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
-import { store } from './store/store.js';
+import store from './store/store.js';
 
 Vue.use(VueI18n);
 
 var language;
-if( !store.state.language ) {
+if( !store.state.settings.language ) {
   // no language in store, check browser
   language = window.navigator.userLanguage || window.navigator.language;
   if (language.indexOf('-') !== -1) {
@@ -16,7 +16,7 @@ if( !store.state.language ) {
   }
 }
 else {
-  language = store.state.language;
+  language = store.state.settings.language;
 }
 
 export const i18n = new VueI18n({

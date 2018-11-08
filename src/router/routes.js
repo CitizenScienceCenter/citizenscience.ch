@@ -25,8 +25,8 @@ const About = resolve => {
 };
 
 export const routes = [
-    { path: '/', component: Home, meta: {title: 'Homepage'} },
-    { path: '/activities', component: Activities, meta: {title: 'Activities'} },
-    { path: '/offer', component: Offer, meta: {title: 'Offer'} },
-    { path: '/about', component: About, meta: {title: 'About'} }
+    { path: '/', component: Home, meta: {page: 'page-homepage'} },
+    { path: '/activities', component: Activities, meta: {page: 'page-activities'} },
+    { path: '/offer', component: Offer, meta: {page: 'page-offer'} },
+    { path: '/about', component: About, meta: {page: 'page-about'} }
 ]

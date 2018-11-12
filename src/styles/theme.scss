@@ -1,3 +1,6 @@
 $color-primary: #c5202e;
 $color-secondary: #16496b;
 $color-black: #231f20;
+
+$color-gradient-start: $color-secondary;
+$color-gradient-end: mix( $color-primary, $color-secondary, 75%);

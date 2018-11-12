@@ -1,35 +1,35 @@
 <i18n>
 {
   "en": {
-    "cover-heading": "The People's Way of Research",
+    "cover-heading": "Next Generation Citizen Science",
     "cover-subheading": "Citizen Science Center Zurich",
     "cover-button-projects": "Start contributing",
     "cover-button-your-project": "Suggest a project",
 
-    "section-explanation-heading": "Our Purpose",
-    "section-explanation-text": "The Citizen Science Center Zurich supports the collaboration of scientists and the general public in co-creating and conducting scientific research projects.",
-    "section-explanation-text-2": "Citizen Science projects provide new and co-created knowledge to tackle problems from fundamental physics to human health, from climate change to gender equality.",
-    "section-explanation-text-3": "The Center aims at producing excellent science and quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
+    "section-explanation-lead": "The Citizen Science Center Zurich enables <b>researchers</b> and <b>citizens</b> to create and conduct research projects that produce <b>excellent</b> and <b>participatory science</b> while supporting the UN SDGs.",
+    "section-explanation-text": "In Citizen Science projects, the unique collaboration of professional scientists and the general public provides new and invaluable knowledge in areas from physics to linguistics to human health, at the local, regional or global leves. The Center aims at supporting next-generation Citizen Science, ie. projects that produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN Sustainable Development Goals (SDGs).",
     "section-explanation-button": "Learn more",
 
     "section-projects-heading": "Get involved",
-    "section-projects-text": "Our first Citizen Science Project (now in beta) is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
+    "section-projects-text": "Our web platform is under development, and our first Citizen Science Project (now in beta) is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
+    "section-projects-text-2": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
     "section-offer-heading": "What we offer",
-    "section-offer-1-heading": "Platform",
-    "section-offer-1-text": "Web and mobile open tools (now in beta) and a shared database to support scientists and citizens with the planning, implementation and evaluation of Citizen Science projects.",
+    "section-offer-1-heading": "Interactive Tools",
+    "section-offer-1-text": "A Web platform and a smartphone app  to support scientists and citizens with the implementation and evaluation of Citizen Science projects.",
     "section-offer-2-heading": "Community",
-    "section-offer-2-text": "A community of citizen and scientists to strengthen cooperation and cultivate dialogue between the public, academia, industry, and politics.",
+    "section-offer-2-text": "A community of citizens and scientists to cultivate collaboration and dialogue between the public, academia, industry, and politics.",
     "section-offer-3-heading": "Knowledge",
-    "section-offer-3-text": "Theoretical, practical, legal and ethical guidelines and standards for the implementation of Citizen Science projects.",
+    "section-offer-3-text": "Theoretical, practical, legal and ethical guidelines and standards for the design, planning and implementation of Citizen Science projects.",
     "section-offer-button": "Learn more",
 
     "section-build-project-heading": "Do you have a project in mind? We can help you.",
-    "section-build-project-text": "If you have an idea for a Citizen Science project, get in touch with us. We can help you evaluate your idea and potentially provide you with expertise and tools to develop, set up, and run your project.",
+    "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
 
     "section-about-heading": "A Joint Initiative",
-    "section-about-text": "Run jointly by the University of Zurich and ETH Zurich, the Center supports Citizen Science initiatives at both universities and aims at developing projects that support sustainable development in Switzerland and beyond.",
-    "section-about-text-2": "The Citizen Science Center Zurich adheres to the principles of Open Science and operates in a fully transparent manner.",
+    "section-about-text": "The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.",
+    "section-about-text-2": "Switzerland has a deep tradition of participatory democracy and decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.",
+    "section-about-text-3": "Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy.",
     "section-about-button": "Learn more about us",
 
     "section-newsletter-heading": "Sign up for our Newsletter"
@@ -63,10 +63,8 @@
 
           <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
             <div>
-              <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
-              <p>{{ $t('section-explanation-text') }}<br/>
-              {{ $t('section-explanation-text-2') }}</p>
-              <p>{{ $t('section-explanation-text-3') }}</p>
+              <p class="lead" v-html="$t('section-explanation-lead')"></p>
+              <p v-html="$t('section-explanation-text')"></p>
               <p class="centered left-aligned-large">
                 <router-link tag="button" to="/activities" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
               </p>
@@ -149,6 +147,9 @@
               <p class="">
                 {{ $t('section-projects-text') }}
               </p>
+              <p class="">
+                {{ $t('section-projects-text-2') }}
+              </p>
             </div>
           </div>
         </div>
@@ -205,8 +206,11 @@
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <h2 class="heading centered left-aligned-large">{{ $t('section-about-heading') }}</h2>
-            <p>{{ $t('section-about-text') }}<br/>
-            {{ $t('section-about-text-2') }}</p>
+            <p>
+              {{ $t('section-about-text') }}<br/>
+              {{ $t('section-about-text-2') }}<br/>
+              {{ $t('section-about-text-3') }}
+            </p>
             <p class="centered left-aligned-large">
               <img v-if="this.$i18n.locale === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/shared/uzh_eth_logo_e_pos.svg" style="width:66.667%" />
               <img v-else alt="Universität Zürich / ETH Zürich" src="@/assets/shared/uzh_eth_logo_d_pos.svg" style="width:66.667%" />

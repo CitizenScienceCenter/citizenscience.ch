@@ -36,7 +36,7 @@
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin scroll-effect">
             <h2 class="heading centered left-aligned-large">{{ $t('section-mission-heading') }}</h2>
-            <p v-html="$t('section-mission-text')"></p>
+            <p class="list-intro" v-html="$t('section-mission-text')"></p>
             <ul>
               <li v-html="$t('section-mission-listitem-1')"></li>
               <li v-html="$t('section-mission-listitem-2')"></li>
@@ -132,11 +132,11 @@
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered">
-          <div class="col col-large-10 scroll-effect">
+          <div class="col col-large-10">
             <h2 class="heading centered">{{ $t('section-partnership-heading') }}</h2>
           </div>
         </div>
-        <div class="row row-centered row-reverse-large row-middle scroll-effect">
+        <div class="row row-centered row-reverse-large row-middle">
 
           <div class="col col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin">
             <div>

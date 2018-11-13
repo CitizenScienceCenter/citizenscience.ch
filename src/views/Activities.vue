@@ -105,7 +105,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-6">
-              <img src="img/graphic-platform.png"/>
+              <img src="img/graphic-projects.png"/>
             </div>
           </div>
         </div>
@@ -167,10 +167,10 @@
     </app-content-section>
 
 
-    <app-content-section color="greyish">
+    <app-content-section color="dark">
       <div class="content-wrapper scroll-effect">
         <div class="row row-centered">
-          <div class="col-large-6">
+          <div class="col col-large-8">
             <p class="quote centered" v-html="$t('section-sdgquote-quote')"></p>
             <p class="centered small" v-html="$t('section-sdgquote-source')"></p>
           </div>
@@ -226,7 +226,7 @@
               </div>
               <div class="col col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
                 <div class="extra-padding-h">
-                  <img src="img/graphic-create-project.png" />
+                  <img src="img/graphic-toolkit.png" />
                 </div>
               </div>
             </div>

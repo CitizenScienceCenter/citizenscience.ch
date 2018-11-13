@@ -91,10 +91,10 @@
       </div>
     </app-content-section>
 
-    <app-content-section color="greyish">
+    <app-content-section color="dark">
       <div class="content-wrapper scroll-effect">
         <div class="row row-centered">
-          <div class="col-large-6">
+          <div class="col col-large-8">
             <p class="quote centered" v-html="$t('section-quote-quote')"></p>
             <p class="centered small" v-html="$t('section-quote-source')"></p>
           </div>
@@ -102,13 +102,14 @@
       </div>
     </app-content-section>
 
-    <app-content-section color="light-greyish">
+    <app-content-section>
+
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">{{ $t('section-community-heading') }}</h2>
             <p v-html="$t('section-community-text')"></p>
-            <p v-html="$t('section-community-text-2')"></p>
+            <p class="list-intro" v-html="$t('section-community-text-2')"></p>
             <ul>
               <li v-html="$t('section-community-listitem-1')"></li>
               <li v-html="$t('section-community-listitem-2')"></li>
@@ -121,7 +122,31 @@
               {{ $t('section-community-text-4') }}<br/>
               {{ $t('section-community-text-5') }}
             </p>
-            <p class="centered left-aligned-large">
+          </div>
+        </div>
+      </div>
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-6">
+              <img src="img/graphic-community.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </app-content-section>
+
+
+    <app-content-section color="light-greyish">
+      <div class="content-wrapper scroll-effect">
+
+        <div class="row row-centered">
+          <div class="col">
+
+            <p class="centered lead"><b>Join our community and be always up to date:</b></p>
+
+            <p class="centered">
               <button class="button button-secondary button-icon" @click="openInNewTab('https://twitter.com/CitSciZurich')">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -153,19 +178,13 @@
                 Signup for our Newsletter
               </button>
             </p>
+
           </div>
         </div>
-      </div>
-      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
-        <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-6">
-              <img src="img/graphic-community.png"/>
-            </div>
-          </div>
-        </div>
+
       </div>
     </app-content-section>
+
 
     <app-content-section>
       <div class="content-wrapper scroll-effect">

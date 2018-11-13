@@ -19,6 +19,11 @@
     "section-principles-sustainability-subheading": "Sustainability",
     "section-principles-sustainability-text": "We want to ensure continuity in project support and knowledge dissemination. Therefore the development and maintenance of a community including both scientists and citizen scientists associated with the Center is vital.",
 
+    "section-people-heading": "People",
+
+    "section-partnership-heading": "Partners",
+    "section-partnership-text": "The Citizen Cyberlab in Geneva develops methods and studies motivations for new forms of public participation in research.",
+
     "section-newsletter-heading": "Sign up for our Newsletter"
   }
 }
@@ -115,7 +120,7 @@
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered">People</h2>
+            <h2 class="heading centered">{{ $t('section-people-heading') }}</h2>
           </div>
           <div class="col scroll-effect">
             <app-people-list></app-people-list>
@@ -128,16 +133,14 @@
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered">Parnterships</h2>
+            <h2 class="heading centered">{{ $t('section-partnership-heading') }}</h2>
           </div>
         </div>
         <div class="row row-centered row-reverse-large row-middle scroll-effect">
 
           <div class="col col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin">
             <div>
-              <p class="">
-                The Citizen Cyberlab in Geneva develops methods and studies motivations for new forms of public participation in research.
-              </p>
+              <p v-html="$t('section-partnership-text')"></p>
             </div>
           </div>
 

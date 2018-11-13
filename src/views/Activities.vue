@@ -24,9 +24,10 @@
     "section-sdg-heading": "Citizen Science for the SDGs",
     "section-sdg-text": "The Sustainable Development Goals (SDGs) are a set of global goals developed in 2015 by the 193 UN member states and representatives of civil society. They are part of the UN Agenda 2030, a comprehensive call for action to achieve a better and more sustainable future for all.",
     "section-sdg-text-2": "High quality, timely and accessible data are required to monitor progress towards the goals, and there is a strong consensus that citizen engagement is critical.",
-    "section-sdg-text-3": "<b>«The monitoring and accountability framework, spanning from the local to the global levels, must be people ­centred, inclusive, transparent and participatory»</b> (TAP Network 2015, 1).",
-    "section-sdg-text-4": "Through citizen science, people can directly engage with and monitor issues that affect them, bring new perspectives and knowledge into science and decision-making, and ultimately demand or drive change.",
+    "section-sdg-text-3": "Through citizen science, people can directly engage with and monitor issues that affect them, bring new perspectives and knowledge into science and decision-making, and ultimately demand or drive change.",
 
+    "section-sdgquote-quote": "«The monitoring and accountability framework, spanning from the local to the global levels, must be people ­centred, inclusive, transparent and participatory»",
+    "section-sdgquote-source": "(TAP Network 2015, 1).",
 
     "section-partnerships-heading": "Partnerships and Collaborations",
     "section-partnerships-openseventeen-subheading": "The Open Seventeen",
@@ -150,7 +151,6 @@
             <p v-html="$t('section-sdg-text')"></p>
             <p v-html="$t('section-sdg-text-2')"></p>
             <p v-html="$t('section-sdg-text-3')"></p>
-            <p v-html="$t('section-sdg-text-4')"></p>
           </div>
 
         </div>
@@ -161,6 +161,18 @@
             <div class="col col-8 col-large-6">
               <img src="img/sdg-wheel.png"/>
             </div>
+          </div>
+        </div>
+      </div>
+    </app-content-section>
+
+
+    <app-content-section color="greyish">
+      <div class="content-wrapper scroll-effect">
+        <div class="row row-centered">
+          <div class="col-large-6">
+            <p class="quote centered" v-html="$t('section-sdgquote-quote')"></p>
+            <p class="centered small" v-html="$t('section-sdgquote-source')"></p>
           </div>
         </div>
       </div>

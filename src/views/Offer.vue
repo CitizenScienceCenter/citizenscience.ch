@@ -3,10 +3,15 @@
   "en": {
     "section-tools-heading": "Interactive Tools",
     "section-tools-text": "The Citizen Science Center Zürich is developing a platform that will make it easy for scientists and citizens to contribute to existing Citizens Science projects, or create new ones. The platform includes two components: a web interface and a mobile (smartphone) application.",
+    "section-tools-subheading-1": "Web",
     "section-tools-text-2": "The web component is used mainly for projects that involve the analysis data in the form of images, including image recognition and tagging, mapping, transcription of digitalized text, etc. These are tasks that can usually be best completed on a computer screen.",
+    "section-tools-subheading-2": "Mobile Apps",
     "section-tools-text-3": "The mobile component (smartphone App) is used mainly for data collection, and allows to capture and tag geo-located images, survey answers, and other type on media, such as video and sound.",
     "section-tools-text-4": "Both components contribute data to a shared database, so it will be easy to link web and mobile projects.",
     "section-tools-text-5": "The work is carried out as open source software (link to GitHub repository) which means that it takes advantage of existing and similar developments, and it’s code is also publicly available for similar implementations. The platform is developed in full cooperation with the department S3IT (Service and Support for Science IT) of the University of Zurich.",
+
+    "section-quote-quote": "«If you are not embarrassed by the first version of your product, you've launched too late.»",
+    "section-quote-source": "Reid Hoffman, Founder of LinkedIn",
 
     "section-community-heading": "Community",
     "section-community-text": "We see the ourselves as a platform and a meeting point for people interested in Citizen Science and participatory research to exchange ideas and knowledge between academia and the wider public.",
@@ -42,6 +47,7 @@
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">{{ $t('section-tools-heading') }}</h2>
             <p v-html="$t('section-tools-text')"></p>
+            <h3 class="subheading">{{ $t('section-tools-subheading-1') }}</h3>
             <p v-html="$t('section-tools-text-2')"></p>
             <p>
               <div class="row">
@@ -55,6 +61,7 @@
                 </div>
               </div>
             </p>
+            <h3 class="subheading">{{ $t('section-tools-subheading-2') }}</h3>
             <p v-html="$t('section-tools-text-3')"></p>
             <p>
               <div class="row">
@@ -84,6 +91,17 @@
       </div>
     </app-content-section>
 
+    <app-content-section color="greyish">
+      <div class="content-wrapper scroll-effect">
+        <div class="row row-centered">
+          <div class="col-large-6">
+            <p class="quote centered" v-html="$t('section-quote-quote')"></p>
+            <p class="centered small" v-html="$t('section-quote-source')"></p>
+          </div>
+        </div>
+      </div>
+    </app-content-section>
+
     <app-content-section color="light-greyish">
       <div class="content-wrapper scroll-effect">
         <div class="row">
@@ -99,8 +117,10 @@
               <li v-html="$t('section-community-listitem-5')"></li>
             </ul>
             <p v-html="$t('section-community-text-3')"></p>
-            <p v-html="$t('section-community-text-4')"></p>
-            <p v-html="$t('section-community-text-5')"></p>
+            <p>
+              {{ $t('section-community-text-4') }}<br/>
+              {{ $t('section-community-text-5') }}
+            </p>
             <p class="centered left-aligned-large">
               <button class="button button-secondary button-icon" @click="openInNewTab('https://twitter.com/CitSciZurich')">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -156,6 +176,12 @@
             <p v-html="$t('section-knowledge-text-2')"></p>
             <p v-html="$t('section-knowledge-text-3')"></p>
             <p v-html="$t('section-knowledge-text-4')"></p>
+            <p class="centered left-aligned-large">
+              <button class="button button-secondary button-icon" @click="openInNewTab('https://ecsa.citizen-science.net/sites/default/files/ecsa_ten_principles_of_citizen_science.pdf')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                10 principle of citizen scinece by ECSA
+              </button>
+            </p>
           </div>
         </div>
       </div>

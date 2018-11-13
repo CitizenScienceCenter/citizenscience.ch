@@ -112,7 +112,7 @@
     </app-content-section>
 
 
-    <app-content-section>
+    <app-content-section color="greyish">
       <div class="content-wrapper">
         <div class="row row-centered">
 
@@ -139,7 +139,7 @@
 
 
 
-    <app-content-section color="light-greyish">
+    <app-content-section>
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
@@ -167,7 +167,7 @@
     </app-content-section>
 
 
-    <app-content-section>
+    <app-content-section color="light-greyish">
 
         <div class="content-wrapper">
           <div class="row row-centered scroll-effect">
@@ -226,7 +226,7 @@
             <div class="row row-centered row-middle">
               <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
                 <h2 class="subheading centered left-aligned-large">{{ $t('section-partnerships-snapp-heading') }}
-                  <p class="lead" v-html="$t('section-partnerships-snapp-lead')"></p>
+                  <!-- <p class="lead" v-html="$t('section-partnerships-snapp-lead')"></p> -->
                 </h2>
                 <p v-html="$t('section-partnerships-snapp-text')"></p>
                 <p v-html="$t('section-partnerships-snapp-text-2')"></p>

@@ -42,7 +42,7 @@
     <app-cover imageUrl="img/cover.jpg">
       <h2 class="cover-heading scroll-effect">{{ $t('cover-heading') }}</h2>
       <p class="cover-subheading scroll-effect scroll-effect-delayed-1">{{ $t('cover-subheading') }}</p>
-      <p class="centered scroll-effect scroll-effect-delayed-2">
+      <p class="button-group centered scroll-effect scroll-effect-delayed-2">
         <button class="button button-primary" v-scroll-to="'#projects'">{{ $t('cover-button-projects') }}</button>
         <button class="button button-secondary button-secondary-inverted" v-scroll-to="'#start-project'">{{ $t('cover-button-your-project') }}</button>
       </p>
@@ -162,7 +162,7 @@
               <p class="">
                 {{ $t('section-build-project-text') }}
               </p>
-              <p class="centered left-aligned-large">
+              <p class="button-group centered left-aligned-large">
                 <button class="button button-secondary button-icon">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">

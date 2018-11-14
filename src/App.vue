@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header hide-language hide-login></app-header>
+    <app-header :languages="['en']"></app-header>
     <div class="content-area">
       <router-view></router-view>
     </div>

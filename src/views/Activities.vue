@@ -3,6 +3,7 @@
   "en": {
     "section-citizenscience-heading": "Citizen Science",
     "section-citizenscience-text": "The activities of the Citizen Science Center Zurich focus on exploring, supporting, and promoting Citizen Science. Citizen Science is a form of public participation in scientific research (where “citizen” denotes a member of the general public, independent from citizenship) that has been around for more than a century.",
+    "section-citizenscience-example": "<b>Example:</b> In the Galaxy Zoo project, hundreds of thousands of citizens have helped astronomers classify millions of images of galaxies coming from international telescopes (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
     "section-citizenscience-text-2": "Public participation in science is a practice that works across many disciplines and that comes in different flavours and with different names, including community based research, crowd-sourced data collection, community-based monitoring, civic science, and more. What characterizes Citizen Science is the <b>collaboration of professional scientists and citizens</b>, the active involvement of both, and the engagement of citizens in potentially all phases of the research process.",
 
     "section-next-gen-citizenscience-subheading": "Next Generation Citizen Science",
@@ -26,7 +27,7 @@
     "section-sdg-text-2": "High quality, timely and accessible data are required to monitor progress towards the goals, and there is a strong consensus that citizen engagement is critical.",
     "section-sdg-text-3": "Through citizen science, people can directly engage with and monitor issues that affect them, bring new perspectives and knowledge into science and decision-making, and ultimately demand or drive change.",
 
-    "section-sdgquote-quote": "«The monitoring and accountability framework, spanning from the local to the global levels, must be people ­centred, inclusive, transparent and participatory»",
+    "section-sdgquote-quote": "«The monitoring and accountability framework [...] must be people ­centred, inclusive, transparent and participatory»",
     "section-sdgquote-source": "(TAP Network 2015, 1).",
 
     "section-partnerships-heading": "Partnerships and Collaborations",
@@ -58,14 +59,12 @@
             <h2 class="heading centered left-aligned-large">{{ $t('section-citizenscience-heading') }}</h2>
             <p v-html="$t('section-citizenscience-text')"></p>
             <p>
-              <div class="row">
+              <div class="row row-middle">
                 <div class="col col-3">
-                  <img src="img/projects/galaxyzoo.jpg" style="width:100%; border-radius:50%"/>
+                  <img src="img/projects/galaxyzoo.jpg" style="display: block; width:100%; border-radius:50%"/>
                 </div>
                 <div class="col col-9" style="padding-left: 0">
-                  <p class="small">
-                    <b>Example:</b> In the Galaxy Zoo project, hundreds of thousands of citizens have helped astronomers classify millions of images of galaxies coming from international telescopes (2007 – 2017) <a href="https://zoo4.galaxyzoo.org/" target="_blank">zoo4.galaxyzoo.org</a>
-                  </p>
+                  <p v-html="$t('section-citizenscience-example')" class="small"></p>
                 </div>
               </div>
             </p>
@@ -144,9 +143,6 @@
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
-            <p class="centered left-aligned-large">
-              <img src="img/sdg-logo.svg" style="width:25%"/>
-            </p>
             <h2 class="heading centered left-aligned-large">{{ $t('section-sdg-heading') }}</h2>
             <p v-html="$t('section-sdg-text')"></p>
             <p v-html="$t('section-sdg-text-2')"></p>

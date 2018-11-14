@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="parallax">
-    <app-header></app-header>
+  <div id="app">
+    <app-header hide-language hide-login></app-header>
     <div class="content-area">
       <router-view></router-view>
     </div>

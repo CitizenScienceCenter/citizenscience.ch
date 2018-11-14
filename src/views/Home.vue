@@ -11,8 +11,7 @@
     "section-explanation-button": "Learn more",
 
     "section-projects-heading": "Get involved",
-    "section-projects-text": "Our web platform is under development, and our first Citizen Science Project (now in beta) is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
-    "section-projects-text-2": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
+    "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
     "section-offer-heading": "What we offer",
     "section-offer-1-heading": "Interactive Tools",
@@ -146,9 +145,6 @@
             <div class="col col-tablet-portrait-10 col-large-6">
               <p class="">
                 {{ $t('section-projects-text') }}
-              </p>
-              <p class="">
-                {{ $t('section-projects-text-2') }}
               </p>
             </div>
           </div>

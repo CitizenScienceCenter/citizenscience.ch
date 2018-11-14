@@ -5,8 +5,10 @@
     "section-tools-text": "The Citizen Science Center Zürich is developing a platform that will make it easy for scientists and citizens to contribute to existing Citizens Science projects, or create new ones. The platform includes two components: a web interface and a mobile (smartphone) application.",
     "section-tools-subheading-1": "Web",
     "section-tools-text-2": "The web component is used mainly for projects that involve the analysis data in the form of images, including image recognition and tagging, mapping, transcription of digitalized text, etc. These are tasks that can usually be best completed on a computer screen.",
+    "section-tools-example-1": "<b>Example:</b> Geo Tag X, in collaboration with the UN Institute for Training and Research, investigated together with volunteer citizens how to extract for images information on the effects of drought on animals. <a href='https://geotagx.org/' target='_blank'>geotagx.org</a>",
     "section-tools-subheading-2": "Mobile Apps",
     "section-tools-text-3": "The mobile component (smartphone App) is used mainly for data collection, and allows to capture and tag geo-located images, survey answers, and other type on media, such as video and sound.",
+    "section-tools-example-2": "<b>Example:</b> To escalate the global fight against mosquito-borne diseases, The Global Mosquito Alert will ask volunteers to use a smartphone app to snap pictures of mosquitos and their breeding sites. <a href='http://www.mosquitoalert.com' target='_blank'>mosquitoalert.com</a>",
     "section-tools-text-4": "Both components contribute data to a shared database, so it will be easy to link web and mobile projects.",
     "section-tools-text-5": "The work is carried out as open source software (link to GitHub repository) which means that it takes advantage of existing and similar developments, and it’s code is also publicly available for similar implementations. The platform is developed in full cooperation with the department S3IT (Service and Support for Science IT) of the University of Zurich.",
 
@@ -50,28 +52,24 @@
             <h3 class="subheading">{{ $t('section-tools-subheading-1') }}</h3>
             <p v-html="$t('section-tools-text-2')"></p>
             <p>
-              <div class="row">
+              <div class="row row-middle">
                 <div class="col col-3">
-                  <img src="img/projects/geotagx.jpg" style="width:100%; border-radius:50%"/>
+                  <img src="img/projects/geotagx.jpg" style="display: block; width:100%; border-radius:50%"/>
                 </div>
                 <div class="col col-9" style="padding-left: 0">
-                  <p class="small">
-                    <b>Example:</b> Geo Tag X, in collaboration with the UN Institute for Training and Research, investigated together with volunteer citizens how to extract for images information on the effects of drought on animals. <a href="https://geotagx.org/" target="_blank">geotagx.org</a>
-                  </p>
+                  <p v-html="$t('section-tools-example-1')" class="small"></p>
                 </div>
               </div>
             </p>
             <h3 class="subheading">{{ $t('section-tools-subheading-2') }}</h3>
             <p v-html="$t('section-tools-text-3')"></p>
             <p>
-              <div class="row">
+              <div class="row row-middle">
                 <div class="col col-3">
-                  <img src="img/projects/mosquito.jpg" style="width:100%; border-radius:50%"/>
+                  <img src="img/projects/mosquito.jpg" style="display: block; width:100%; border-radius:50%"/>
                 </div>
                 <div class="col col-9" style="padding-left: 0">
-                  <p class="small">
-                    <b>Example:</b> To escalate the global fight against mosquito-borne diseases, The Global Mosquito Alert will ask volunteers to use a smartphone app to snap pictures of mosquitos and their breeding sites.
-                  </p>
+                  <p v-html="$t('section-tools-example-2')" class="small"></p>
                 </div>
               </div>
             </p>

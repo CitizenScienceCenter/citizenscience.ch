@@ -2,7 +2,7 @@
 {
   "en": {
     "section-mission-heading": "Mission & Goals",
-    "section-mission-text": "The Center aims at:",
+    "section-mission-text": "<b>The Center aims at:</b>",
     "section-mission-listitem-1": "Engaging academic scientists and the public in next-generation citizen science projects, tackling problems in different fields of science and society, from fundamental physics to human health.",
     "section-mission-listitem-2": "Supporting they activities by providing the resources, expertise and technical know-how to develop, set up, and run citizen science projects.",
     "section-mission-listitem-3": "Maintaining the highest standards of excellence in research methodology, including scientific results, quality of data, and research ethics.",

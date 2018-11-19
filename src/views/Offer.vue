@@ -10,30 +10,77 @@
     "section-tools-text-3": "The mobile component (smartphone App) is used mainly for data collection, and allows to capture and tag geo-located images, survey answers, and other type on media, such as video and sound.",
     "section-tools-example-2": "<b>Example:</b> To escalate the global fight against mosquito-borne diseases, The Global Mosquito Alert will ask volunteers to use a smartphone app to snap pictures of mosquitos and their breeding sites. <a href='http://www.mosquitoalert.com' target='_blank'>mosquitoalert.com</a>",
     "section-tools-text-4": "Both components contribute data to a shared database, so it will be easy to link web and mobile projects.",
-    "section-tools-text-5": "The work is carried out as open source software (link to GitHub repository) which means that it takes advantage of existing and similar developments, and it’s code is also publicly available for similar implementations. The platform is developed in full cooperation with the department S3IT (Service and Support for Science IT) of the University of Zurich.",
+    "section-tools-text-5": "The work is carried out as open source software (see our <a href='https://github.com/CitizenScienceCenter' target='_blank'>GitHub repository</a>) which means that it takes advantage of existing and similar developments, and it’s code is also publicly available for similar implementations. The platform is developed in full cooperation with the department S3IT (Service and Support for Science IT) of the University of Zurich.",
 
     "section-quote-quote": "«If you are not embarrassed by the first version of your product, you've launched too late.»",
     "section-quote-source": "Reid Hoffman, Founder of LinkedIn",
 
     "section-community-heading": "Community",
-    "section-community-text": "We see the ourselves as a platform and a meeting point for people interested in Citizen Science and participatory research to exchange ideas and knowledge between academia and the wider public.",
-    "section-community-text-2": "<b>We want to:</b>",
-    "section-community-listitem-1": "Connect people",
-    "section-community-listitem-2": "Foster dialogue",
-    "section-community-listitem-3": "Generate new ideas coming from different perspectives",
-    "section-community-listitem-4": "Ask real world questions and",
-    "section-community-listitem-5": "Create new citizen science projects together",
+    "section-community-text": "We see ourselves as a platform and a meeting point for people interested in Citizen Science and participatory research to exchange ideas and knowledge between academia and the wider public.",
+    "section-community-text-2": "<b>We want to</b>",
+    "section-community-listitem-1": "offer compelling projects to participate in",
+    "section-community-listitem-2": "connect people",
+    "section-community-listitem-3": "foster dialogue",
+    "section-community-listitem-4": "generate new ideas coming from different perspectives,",
+    "section-community-listitem-5": "ask real world questions and",
+    "section-community-listitem-6": "create new citizen science projects together.",
     "section-community-text-3": "Meeting new people and being part of a community is one of the key benefits of Citizen Science, and a strong motivation for people to join citizen science projects. Dialogue and participation naturally leads to diversity and inclusion, and to more equality and democracy in science and society.",
     "section-community-text-4": "Our Citizen Science Community spans Zurich and beyond, and its activities will be shaped by its members. We will interact online and offline in an open, active and interdisciplinary way.",
     "section-community-text-5": "We invite you to visit our forum (coming soon) and discuss topics you are interested in. We also organize events, such as brown bag lunches, festivals and meet-ups.",
+    "section-community-promo-text": "Join our community and always be up to date:",
+    "section-community-promo-button-twitter": "Follow us on Twitter",
+    "section-community-promo-button-facebook": "Visit us on Facebook",
+    "section-community-promo-button-newsletter": "Signup for our Newsletter",
 
     "section-knowledge-heading": "Knowledge",
     "section-knowledge-text": "The Center helps scientists and citizens who wants to start a project to take full advantage of the available knowledge in the field of Citizen Science, while developing new one based on its activities.",
     "section-knowledge-text-2": "Public participation in scientific research is not a new concept; the National Audubon Society started its annual Christmas Bird Count in 1900 (more than 75000 citizens participated in 2017!), and in the last century amateur scientists have participated in projects to monitor water quality, search new stars, study biodiversity.",
     "section-knowledge-text-3": "By experimenting with  procedures, testing protocol, and sharing best practices, practitioners in all fields have developed what is now a solid methodology. Principles and protocols exist today, and the Center’s team is here to help scientists and citizens setup and run projects that guarantee excellent scientific results.",
     "section-knowledge-text-4": "However, Citizen Science is an evolving field with multiple dimensions, including quality, sustainability, transparency, inclusiveness, and more. As all fields of science, it requires continuous research and exploration, that the Center’s researcher will carry on to guarantee the development of appropriate tools and new knowledge.",
+    "section-knowledge-button-principles": "10 principle of citizen scinece by ECSA",
 
     "section-newsletter-heading": "Sign up for our Newsletter"
+  },
+  "de": {
+    "section-tools-heading": "Interaktive Tools",
+    "section-tools-text": "Das Citizen Science Center Zürich entwickelt eine Web-Plattform, die es Wissenschaftlerinnen und Bürgern ermöglicht, sich an bestehenden Citizen Science Projekten zu beteiligen oder neue zu entwickeln – über ein Web Interface und mobile Smartphone Apps.",
+    "section-tools-subheading-1": "Web",
+    "section-tools-text-2": "Die Website ist vor allem für solche Projekte gedacht, bei denen Daten in Form von Abbildungen analysiert werden müssen, wie zum Beispiel das Beschreiben oder Zuordnen von Bildern, das Kartieren, das Transkribieren von Text, etc. Diese Aufgaben lassen sich am besten an einem Computerbildschirm erledigen.",
+    "section-tools-example-1": "<b>Beispiel:</b> Geo Tag X, ein Projekt in Kollaboration mit dem Ausbildungs- und Forschungsinstitut der UN, untersuchte mit Citizen Scientists, wie man mithilfe von Bildern die Auswirkungen von Dürreperioden auf Tiere untersuchen kann. <a href='https://geotagx.org/' target='_blank'>geotagx.org</a>",
+    "section-tools-subheading-2": "Mobile Apps",
+    "section-tools-text-3": "Die mobile Anwendung für Smartphone Apps wird hauptsächlich für das Sammeln von Daten zur Verfügung stehen. Zum Beispiel für Bild-, Video- und Tonaufnahmen, Geo Tagging oder das Ausfüllen von Fragebogen.",
+    "section-tools-example-2": "<b>Beispiel:</b> Bei “Global Mosquito Alert” können Freiwillige über das Smartphone Fotos von Moskitos und ihren Brutstätten machen und damit den Kampf gegen Krankheiten, die durch Stechmücken übertragen werden, antreten. <a href='http://www.mosquitoalert.com' target='_blank'>mosquitoalert.com</a>",
+    "section-tools-text-4": "Die beiden Komponenten Website und mobile App werden verlinkt und übertragen Daten an eine gemeinsame Datenbank.",
+    "section-tools-text-5": "Die Plattform basiert auf einer Open-Source-Software (siehe <a href='https://github.com/CitizenScienceCenter' target='_blank'>GitHub-Repository</a>), die bereits bestehende Formate nutzt und weiterentwickelt. Der Code ist frei öffentlich verfügbar. Das Framework der Plattform wird in enger Zusammenarbeit mit der Abteilung S3IT (Service und Support für Science IT) der UZH entwickelt.",
+
+    "section-quote-quote": "«If you are not embarrassed by the first version of your product, you've launched too late.»",
+    "section-quote-source": "Reid Hoffman, Founder of LinkedIn",
+
+    "section-community-heading": "Community",
+    "section-community-text": "Wir verstehen uns selbst als einen Treffpunkt für Menschen, die sich für Citizen Science und partizipative Forschung interessieren und als eine Plattform für den Austausch von Ideen und Wissen zwischen Universität und breiter Öffentlichkeit.",
+    "section-community-text-2": "<b>Wir möchten</b>",
+    "section-community-listitem-1": "zum Mitmachen an interessanten Projekte anregen,",
+    "section-community-listitem-2": "Menschen verbinden,",
+    "section-community-listitem-3": "Dialog fördern und pflegen",
+    "section-community-listitem-4": "neue Ideen aus verschiedenen Blickwinkeln generieren,",
+    "section-community-listitem-5": "anwendungsbezogene Fragen stellen und",
+    "section-community-listitem-6": "anwendungsbezogene Fragen stellen und",
+    "section-community-text-3": "Einer der wichtigsten Gründe, warum Menschen an Citizen Science Projekten teilnehmen, ist die Möglichkeit, neue Leute kennenzulernen und Teil einer Community zu werden.<br>Zudem sind Dialog und Partizipation wichtig für gesellschaftliche Vielfalt und Inklusion und führen zu mehr Gleichberechtigung und Demokratie in Gesellschaft und Wissenschaft.",
+    "section-community-text-4": "Unsere Citizen Science Community reicht von Zürich hinaus in die Welt und lebt mit der Beteiligung und Aktivität ihrer Mitglieder. Sie agiert online und offline und ist offen und interdisziplinär.",
+    "section-community-text-5": "Besuchen Sie unser Forum (kommt bald) und tauschen Sie sich mit anderen über Themen aus, die Sie interessieren. Oder kommen Sie zu unseren Brown Bag Lunches, Festen und Treffen.",
+    "section-community-promo-text": "Werden Sie ein Teil unserer Community und seien Sie immer up to date:",
+    "section-community-promo-button-twitter": "Folge uns auf Twitter",
+    "section-community-promo-button-facebook": "Besuche uns auf Facebook",
+    "section-community-promo-button-newsletter": "Abonniere unsere Newsletter",
+
+    "section-knowledge-heading": "Wissen",
+    "section-knowledge-text": "Das Center unterstützt Wissenschaftlerinnen und Bürger dabei, sich umfassende Kenntnisse über Citizen Science anzueignen. Parallel dazu werden wir durch unsere Aktivitäten und Projekte neues Wissen über die Methodologie von Citizen Science generieren.",
+    "section-knowledge-text-2": "Die Beteiligung der breiten Öffentlichkeit an wissenschaftlicher Forschung ist kein neues Gebiet: Die National Audubon Society in den USA führte im Jahr 1900 den Christmas Bird Count zum ersten Mal durch (im Jahr 2017 nahmen übrigens über 75'000 Freiwillige daran teil!).<br>Während des letzten Jahrhunderts haben Amateur-Wissenschaftlerinnen und Amateur-Wissenschaftler sich an einer Vielzahl von Projekten beteiligt, um Wasserqualität zu messen, nach neuen Sternen zu suchen oder die Artenvielfalt zu studieren. ",
+    "section-knowledge-text-3": "Durch Experimentierfreudigkeit, das Testen von Verfahren und das Teilen von Best Practice Beispielen haben Citizen Scientists solide Methoden entwickelt. Dank der Arbeit dieser vielen tausenden Leute existieren heute Prinzipien und Konventionen, die das Team des Centers in Zürich Wissenschaftlern und Bürgern vermitteln möchte. Wir helfen dabei, Citizen Science Projekte entlang dieser Standards umzusetzen und exzellente wissenschaftliche Ergebnisse zu erlangen.",
+    "section-knowledge-text-4": "Citizen Science ist ein lebendiges Feld, dass sich ständig in vielen Dimensionen weiterentwickelt, zum Beispiel hinsichtlich Qualität, Nachhaltigkeit, Transparenz und Inklusivität. Wie alle Wissenschaftsformen erfordert auch Citizen Science ein kontinuierliches Erforschen und Erkunden des eigenen Gebiets. Genau dies betreiben wir am Citizen Science Center und setzen uns dafür ein, dass Wissen und Tools fortwährend weiterentwickelt werden.",
+    "section-knowledge-button-principles": "Die 10 Prinzipien von Citizen Scinece der ECSA",
+
+    "section-newsletter-heading": "Abonniere unseren Newsletter"
   }
 }
 </i18n>
@@ -114,6 +161,7 @@
               <li v-html="$t('section-community-listitem-3')"></li>
               <li v-html="$t('section-community-listitem-4')"></li>
               <li v-html="$t('section-community-listitem-5')"></li>
+              <li v-html="$t('section-community-listitem-6')"></li>
             </ul>
             <p v-html="$t('section-community-text-3')"></p>
             <p>
@@ -142,7 +190,7 @@
         <div class="row row-centered">
           <div class="col">
 
-            <p class="centered lead"><b>Join our community and be always up to date:</b></p>
+            <p class="centered lead"><b>{{ $t('section-community-promo-text') }}</b></p>
 
             <p class="button-group centered">
               <button class="button button-secondary button-icon" @click="openInNewTab('https://twitter.com/CitSciZurich')">
@@ -155,7 +203,7 @@
                   c23.7-4.5,46.5-13.3,66.6-25.3c-7.8,24.4-24.4,44.8-46.1,57.8c21.1-2.3,41.6-8.1,60.4-16.2C497.7,118.3,479.8,136.8,459.4,151.7
                   L459.4,151.7z"/>
                 </svg>
-                Follow us on Twitter
+                {{ $t('section-community-promo-button-twitter') }}
               </button>
               <button class="button button-secondary button-icon" @click="openInNewTab('https://www.facebook.com/CitSciZurich/')">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -163,7 +211,7 @@
                 <path d="M200.7,512V283H124v-91h76.7v-71.7C200.7,42.4,248.3,0,317.8,0c33.3,0,61.9,2.5,70.2,3.6V85h-48.2
                   c-37.8,0-45.1,18-45.1,44.3V192H380l-11.7,91h-73.6v229H200.7z"/>
                 </svg>
-                Visit us on Facebook
+                {{ $t('section-community-promo-button-facebook') }}
               </button>
               <button v-scroll-to="'#newsletter-signup'" class="button button-secondary button-icon">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -173,7 +221,7 @@
                    M256,320c23.2,0.4,56.6-29.2,73.4-41.4c132.7-96.3,142.8-104.7,173.4-128.7c5.8-4.5,9.2-11.5,9.2-18.9v-19c0-26.5-21.5-48-48-48H48
                   C21.5,64,0,85.5,0,112v19c0,7.4,3.4,14.3,9.2,18.9c30.6,23.9,40.7,32.4,173.4,128.7C199.4,290.8,232.8,320.4,256,320L256,320z"/>
                 </svg>
-                Signup for our Newsletter
+                {{ $t('section-community-promo-button-newsletter') }}
               </button>
             </p>
 
@@ -196,7 +244,7 @@
             <p class="centered left-aligned-large">
               <button class="button button-secondary button-icon" @click="openInNewTab('https://ecsa.citizen-science.net/sites/default/files/ecsa_ten_principles_of_citizen_science.pdf')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
-                10 principle of citizen scinece by ECSA
+                {{ $t('section-knowledge-button-principles') }}
               </button>
             </p>
           </div>

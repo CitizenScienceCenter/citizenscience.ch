@@ -23,10 +23,16 @@ const About = resolve => {
     resolve( require('../views/About.vue') );
   });
 };
+const Events = resolve => {
+    require.ensure(['../views/Events.vue'], () => {
+        resolve( require('../views/Events.vue') );
+    });
+};
 
 export const routes = [
     { path: '/', component: Home, meta: {page: 'page-homepage', nav: false} },
     { path: '/activities', component: Activities, meta: {page: 'page-activities', nav: true} },
     { path: '/offer', component: Offer, meta: {page: 'page-offer', nav: true} },
-    { path: '/about', component: About, meta: {page: 'page-about', nav: true} }
+    { path: '/about', component: About, meta: {page: 'page-about', nav: true} },
+    { path: '/events', component: Events, meta: {page: 'page-events', nav: true} }
 ]

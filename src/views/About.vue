@@ -4,7 +4,7 @@
     "section-mission-heading": "Mission & Goals",
     "section-mission-text": "<b>The Center aims at:</b>",
     "section-mission-listitem-1": "Engaging academic scientists and the public in next-generation citizen science projects, tackling problems in different fields of science and society, from fundamental physics to human health.",
-    "section-mission-listitem-2": "Supporting they activities by providing the resources, expertise and technical know-how to develop, set up, and run citizen science projects.",
+    "section-mission-listitem-2": "Providing the resources, expertise and technical know-how to develop, set up, and run citizen science projects.",
     "section-mission-listitem-3": "Maintaining the highest standards of excellence in research methodology, including scientific results, quality of data, and research ethics.",
     "section-mission-listitem-4": "Contributing to the global effort toward sustainable development, by creating actionable knowledge and data that can help tackle the UN SDGs at the local, regional and global level.",
     "section-mission-text-2": "The Citizen Science Center Zurich adheres to the principles of <b>Open Science</b> and operates in a fully <b>transparent</b> manner.",
@@ -25,6 +25,32 @@
     "section-partnership-text": "The Citizen Cyberlab in Geneva develops methods and studies motivations for new forms of public participation in research.",
 
     "section-newsletter-heading": "Sign up for our Newsletter"
+  },
+  "de": {
+    "section-mission-heading": "Mission & Ziele",
+    "section-mission-text": "<b>Die Ziele des Centers sind folgende:</b>",
+    "section-mission-listitem-1": "Forscherinnen und Forschern sowie Bürgerinnen und Bürgern die Möglichkeit zu geben, gemeinsame Forschungsprojekte in verschiedenen Bereichen von Wissenschaft und Gesellschaft durchzuführen, von Grundlagenphysik bis hin zu Gesundheitsthemen.",
+    "section-mission-listitem-2": "Die Ressourcen, das Fachwissen und das technische Know-how zur Verfügung zu stellen um Citizen Science Projekt zu planen, zu entwickeln und durchzuführen.",
+    "section-mission-listitem-3": "Exzellente Standards in der Forschungsmethodologie einzuhalten, einschliesslich der Ergebnisfindung, Datengewinnung und -qualität und der Forschungsethik.",
+    "section-mission-listitem-4": "Uns an den weltweiten Bestrebungen für eine nachhaltige Entwicklung zu beteiligen, indem wir anwendbares Wissen und Daten generieren, um die SDGs auf lokaler, regionaler und globaler Ebene zu erreichen.",
+    "section-mission-text-2": "Das Citizen Science Center Zürich sieht sich den Prinzipien von <b>Open Science</b> und <b>Transparenz</b> verpflichtet.",
+
+    "section-principles-heading": "Prinzipien",
+    "section-principles-excellence-subheading": "Exzellenz",
+    "section-principles-excellence-text": "Das Zentrum entwickelt Projekte unter Einhaltung der höchsten Standards in Bezug auf wissenschaftliche Exzellenz, Datensicherheit und Ethik.",
+    "section-principles-participation-subheading": "Teilhabe und Teilnahme",
+    "section-principles-participation-text": "Bürgerinnen und Bürger sollen aktiv an den verschiedenen Phasen des Forschungsprozesses teilhaben können: Von der Art der Förderung und der Wahl des Themas, über das Forschungsdesign bis hin zu Ausführung, Auswertung und Veröffentlichung der Ergebnisse.",
+    "section-principles-openness-subheading": "Offenheit",
+    "section-principles-openness-text": "Das Center richtet sich nach den Grundsätzen von Open Science (offener Zugang zu Daten und Veröffentlichungen) und agiert völlig transparent, um sicherzustellen, dass unsere Arbeit der Allgemeinheit zu Gute kommt.",
+    "section-principles-sustainability-subheading": "Nachhaltigkeit",
+    "section-principles-sustainability-text": "Wir möchten Kontinuität in der Projektunterstützung und der Weitergabe von Wissen gewährleisten. Die Entwicklung und Pflege einer Gemeinschaft von Wissenschaftlerinnen und Bürgern ist uns deshalb besonders wichtig.",
+
+    "section-people-heading": "Leute",
+
+    "section-partnership-heading": "Partner",
+    "section-partnership-text": "Das Citizen Cyberlab in Genf entwickelt Methoden und untersucht die Motivation für innovative Formen von öffentlicher Beteiligung in der Wissenschaft.",
+
+    "section-newsletter-heading": "Abonniere unseren Newsletter"
   }
 }
 </i18n>

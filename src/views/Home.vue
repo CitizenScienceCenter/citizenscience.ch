@@ -7,11 +7,9 @@
     "cover-button-your-project": "Suggest a project",
 
     "section-explanation-lead": "The Citizen Science Center Zurich enables <b>researchers</b> and <b>citizens</b> to create and conduct research projects that produce <b>excellent</b> and <b>participatory science</b> while supporting the UN SDGs.",
-    "section-explanation-text": "In Citizen Science projects, the unique collaboration of professional scientists and the general public provides new and invaluable knowledge in areas from physics to linguistics to human health, at the local, regional or global leves. The Center aims at supporting next-generation Citizen Science, ie. projects that produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN Sustainable Development Goals (SDGs).",
+    "section-explanation-text": "In Citizen Science projects, the unique collaboration of professional scientists and the general public provides new and invaluable knowledge in areas from physics to linguistics to human health, at the local, regional or global leves.",
+    "section-explanation-text-2": "The Center aims at supporting next-generation Citizen Science, ie. projects that produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
     "section-explanation-button": "Learn more",
-
-    "section-projects-heading": "Get involved",
-    "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
     "section-offer-heading": "What we offer",
     "section-offer-1-heading": "Interactive Tools",
@@ -22,16 +20,53 @@
     "section-offer-3-text": "Theoretical, practical, legal and ethical guidelines and standards for the design, planning and implementation of Citizen Science projects.",
     "section-offer-button": "Learn more",
 
+    "section-projects-heading": "Get involved",
+    "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
+
     "section-build-project-heading": "Do you have a project in mind? We can help you.",
     "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
 
     "section-about-heading": "A Joint Initiative",
     "section-about-text": "The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.",
-    "section-about-text-2": "Switzerland has a deep tradition of participatory democracy and decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.",
+    "section-about-text-2": "Switzerland has a deep tradition of direct democracy and participatory decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.",
     "section-about-text-3": "Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy.",
     "section-about-button": "Learn more about us",
 
     "section-newsletter-heading": "Sign up for our Newsletter"
+  },
+  "de": {
+    "cover-heading": "Next Generation Citizen Science",
+    "cover-subheading": "Citizen Science Center Zurich",
+    "cover-button-projects": "Jetzt mitforschen",
+    "cover-button-your-project": "Neue Projektidee?",
+
+    "section-explanation-lead": "Das Citizen Science Center Zürich bringt <b>Wissenschaftlerinnen</b> und <b>Bürger</b> zusammen, um gemeinsam exzellente Forschungsprojekte zu entwickeln, die die UN Sustainable Development Goals verfolgen.",
+    "section-explanation-text": "Durch die Zusammenarbeit von professionell Forschenden und der breiten Öffentlichkeit in Citizen Science Projekten entsteht neues und wertvolles Wissen; in ganz verschiedenen Bereichen wie Physik, Linguistik oder Gesundheit. Lokal, regional und global.",
+    "section-explanation-text-2": "An unserem Center möchten wir zukunftsweisende Citizen Science betreiben. Das bedeutet, dass wir Projekte mit hohen wissenschaftlichen Standards und Open Data fördern, um Bürgern, Communities und Regierungen zu helfen, ihre Schritte in Richtung der UN Ziele für nachhaltige Entwicklung zu überwachen und zu bewerten.",
+    "section-explanation-button": "Mehr erfahren",
+
+    "section-offer-heading": "Was wir bieten",
+    "section-offer-1-heading": "Interaktive Tools",
+    "section-offer-1-text": "Eine Web-Plattform und eine Smartphone App, die Forschende bei der Planung, Durchführung und Evaluierung von Citizen Science-Projekten unterstützen.",
+    "section-offer-2-heading": "Community",
+    "section-offer-2-text": "Eine Gemeinschaft von Bürgern und Wissenschaftlerinnen für mehr Zusammenarbeit und Dialog zwischen Öffentlichkeit, Wissenschaft, Industrie und Politik.",
+    "section-offer-3-heading": "Wissen",
+    "section-offer-3-text": "Theoretische, praktische, rechtliche und ethische Richtlinien und Standards für die Gestaltung von Citizen Science-Projekten.",
+    "section-offer-button": "Mehr erfahren",
+
+    "section-projects-heading": "Mach mit",
+    "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
+
+    "section-build-project-heading": "Haben Sie eine Projekt-Idee? Wir helfen Ihnen!",
+    "section-build-project-text": "Wir sind jederzeit offen für Austausch und Gespräch. Gerne überlegen wir mit Ihnen gemeinsam, wie man die Welt mit Citizen Science ein kleines Stück besser machen könnte. Treten Sie mit uns in Kontakt, wenn Sie eine Projektidee haben. Wir können Ihnen bei der Weiterentwicklung der Idee helfen und Ihnen bei positiver Evaluation unsere Tools und Expertise zur Verfügung stellen, um das Projekt realisieren.",
+
+    "section-about-heading": "Eine gemeinsame Initiative",
+    "section-about-text": "Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt.",
+    "section-about-text-2": "Die Schweiz ist bekannt für ihre lange Tradition in direkter Demokratie und politischer Mitbestimmung. Citizen Science könnte als Übertragung dieser Idee von der Politik in die Wissenschaft angesehen werden.",
+    "section-about-text-3": "Auch Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Diese Kombination an Wissen und Kompetenzen am Standort Zürich ermöglicht vielfältige Synergien.",
+    "section-about-button": "Mehr über uns",
+
+    "section-newsletter-heading": "Abonniere unseren Newsletter"
   }
 }
 </i18n>
@@ -63,7 +98,9 @@
           <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
             <div>
               <p class="lead" v-html="$t('section-explanation-lead')"></p>
-              <p v-html="$t('section-explanation-text')"></p>
+              <p>
+                <span v-html="$t('section-explanation-text')"></span>&nbsp;<span v-html="$t('section-explanation-text-2')"></span>
+              </p>
               <p class="centered left-aligned-large">
                 <router-link tag="button" to="/activities" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
               </p>

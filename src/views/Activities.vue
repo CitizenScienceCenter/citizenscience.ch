@@ -11,8 +11,7 @@
     "section-next-gen-citizenscience-text-2": "The Citizen Science Center Zurich Center aims at supporting next generation Citizen Science, ie. projects that use the latest collaborative technologies and the highest quality standards to produce <b>excellent science and quality open data</b> that can help citizens, communities and governments to move toward a more sustainable world.",
 
     "section-projects-heading": "Citizen Science Projects",
-    "section-projects-text": "Traditional Citizen Science projects involve members of the public in gathering data (often geo-located) via mobile or sensing technologies, or in analysing existing data via interactive and highly visual web interfaces. In an increasing number of cases the public is also involved in other phases of the research process, including the definition of the research questions, the interpretation of results, and the final dissemination of conclusions.",
-    "section-projects-text-2": "In the past two decades, citizen science has gained tremendous popularity both with scientists and the public, and citizen science projects span today a wide range of research topics.",
+    "section-projects-text": "Traditional Citizen Science projects involve members of the public in gathering data (often geo-located) via mobile or sensing technologies, or in analysing existing data via interactive and highly visual web interfaces. In an increasing number of cases the public is also involved in other phases of the research process, including the definition of the research questions, the interpretation of results, and the final dissemination of conclusions.<br>In the past two decades, citizen science has gained tremendous popularity both with scientists and the public, and citizen science projects span today a wide range of research topics.",
 
     "section-benefits-heading": "Benefits of Citizen Science",
     "section-benefits-subheading-1": "For Scientists",
@@ -25,26 +24,67 @@
     "section-sdg-heading": "Citizen Science for the SDGs",
     "section-sdg-text": "The Sustainable Development Goals (SDGs) are a set of global goals developed in 2015 by the 193 UN member states and representatives of civil society. They are part of the UN Agenda 2030, a comprehensive call for action to achieve a better and more sustainable future for all.",
     "section-sdg-text-2": "High quality, timely and accessible data are required to monitor progress towards the goals, and there is a strong consensus that citizen engagement is critical.",
-    "section-sdg-text-3": "Through citizen science, people can directly engage with and monitor issues that affect them, bring new perspectives and knowledge into science and decision-making, and ultimately demand or drive change.",
+    "section-sdg-text-3": "<b>Through citizen science, people can directly engage with and monitor issues that affect them, bring new perspectives and knowledge into science and decision-making, and ultimately demand or drive change.</b>",
 
     "section-sdgquote-quote": "«The monitoring and accountability framework [...] must be people ­centred, inclusive, transparent and participatory»",
     "section-sdgquote-source": "(TAP Network 2015, 1).",
 
     "section-partnerships-heading": "Partnerships and Collaborations",
-    "section-partnerships-openseventeen-subheading": "The Open Seventeen",
+    "section-partnerships-openseventeen-subheading": "The Open Seventeen Challenge",
     "section-partnerships-openseventeen-lead": "Coaching for Citizen Science Innovation",
-    "section-partnerships-openseventeen-text": "O17 is a challenged-based, online interactive coaching programme to help young global innovators connect and shape good ideas into viable social innovation projects for the 17 UN Sustainable Development Goals (SDGs). O17 supports projects that encourage grassroots public participation and citizen science through the use of open data and crowdsourcing.",
-    "section-partnerships-openseventeen-text-2": "The Challenge is a joint initiative with the Citizen Cyberlab at University of Geneva, and the Governance Lab at New York University.",
+    "section-partnerships-openseventeen-text": "O17 is a challenged-based, online interactive coaching programme to help young global innovators connect and shape good ideas into viable social innovation projects for the 17 UN Sustainable Development Goals (SDGs). O17 supports projects that encourage grassroots public participation and citizen science through the use of open data and crowdsourcing.<br>The Challenge is a joint initiative with the Citizen Cyberlab at University of Geneva, and the Governance Lab at New York University.",
     "section-partnerships-toolkit-heading": "The SDG Crowdsourcing Toolkit",
     "section-partnerships-toolkit-lead": "Crowdsourcing Sustainable Development",
     "section-partnerships-toolkit-text": "The SDG Crowdsourcing Toolkit is an ambitious initiative led by CC-CS, in collaboration with the Citizen Cyberlab in Geneva, and aims at positioning Swiss CS at the core of scientific data taking for the SDGs. It will provide a set of open and flexible tools that feature the functionalities required by the most common CS projects, and that can integrate existing platforms and communities. All tools contribute data to a structured and easily accessible database, that - by making data sharing seamless - will facilitate cross-pollination of projects and initiatives.",
     "section-partnerships-toolkit-text-2": "To know more, please contact the CS Center’s team.",
     "section-partnerships-snapp-heading": "SnApp",
-    "section-partnerships-snapp-lead": "Snake Bites",
     "section-partnerships-snapp-text": "The Citizen Science Center Zurich is collaborating with several Swiss and international partners on a support tool for snake identification based on crowdsourcing and Artificial Intelligence.",
     "section-partnerships-snapp-text-2": "Snakebite causes over 100,000 human deaths and 400,000 victims of disability and disfigurement globally every year, due to limited medical expertise in herpetology and limited access to antivenoms. To reduce potentially erroneous and/or delayed healthcare actions, the Snake App (SnApp) will combine computer vision with the expertise from a network of professional and non-professional herpetologists to identify photos of snakes. This app will serve as an educational and capacity-building platform for both citizens and healthcare professionals around the world, it will improve scientist’s understanding of snakebites and reinforce health systems in snakebite endemic countries.",
 
     "section-newsletter-heading": "Sign up for our Newsletter"
+  },
+  "de": {
+    "section-citizenscience-heading": "Citizen Science",
+    "section-citizenscience-text": "Am Citizen Science Center Zürich sehen wir unsere Aufgabe im Erkunden, Unterstützen und Verbreiten von Citizen Science, zu deutsch Bürgerwissenschaft. Citizen Science hat sich in den letzten 100 Jahren immer mehr etabliert; man versteht darunter die Beteiligung der breiten Öffentlichkeit an wissenschaftlicher Forschung. Ein Citizen Scientist kann jede und jeder werden, unabhängig von Herkunft und Staatsangehörigkeit.",
+    "section-citizenscience-example": "<b>Beispiel:</b> Im Projekt Galaxy Zoo haben hunderttausende Citizen Scientists anhand von Teleskopaufnahmen Millionen von Galaxien klassifiziert. (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
+  "section-citizenscience-text-2": "Die Beteiligung von nicht professionell wissenschaftlich tätigen Personen in der Forschung ist eine Praxis, die viele Formen annehmen kann: Community based research, Crowdsourcing, community-based monitoring, civic science und mehr. Was Citizen Science dabei besonders ausmacht, ist die <b>Zusammenarbeit von professionellen Wissenschaftlern mit Bürgerinnen</b>, die aktive Beteiligung von beiden Seiten und die Mitwirkung der forschenden Bürger in potenziell alle Phasen des Forschungsprozesses.",
+
+    "section-next-gen-citizenscience-subheading": "Next Generation Citizen Science",
+    "section-next-gen-citizenscience-text": "Das grösste Ziel wissenschaftlicher Forschung, einschliesslich Citizen Science, besteht darin, die Welt, in der wir leben, besser zu verstehen. Wir finden ausserdem, dass die Wissenschaft der Gesellschaft ein gewisses Mass an «anwendbarem Wissen und Verständnis» zur Verfügung stellen sollte, das Bürgerinnen und Bürger dazu befähigt, neue Daten und gewonnenes Wissen für konkrete Veränderungsprozesse zu nutzen.",
+  "section-next-gen-citizenscience-text-2": "Das Citizen Science Center Zürich unterstützt zukunftsweisende Citizen Science Projekte, die moderne Kollaborations-Technologien nutzen, die höchste wissenschaftliche Standards einhalten und <b>exzellente Forschung</b> betreiben und die <b>Open Data</b> produzieren, um Bürgern, Communities und Regierungen zu helfen, mehr Nachhaltigkeit zu erreichen.",
+
+    "section-projects-heading": "Citizen Science Projekte",
+    "section-projects-text": "In den meisten Citizen Science Projekten beteiligen sich Bürgerinnen und Bürger durch das Sammeln und Auswerten von Daten. Dies geschieht häufig mithilfe von Smartphones, Apps und anderen mobilen Geräten oder interaktiven Websites. Immer häufiger sind Citizen Scientists auch in anderen Phasen des Forschungsprozesses aktiv: Sie definieren Forschungsfragen, interpretieren Ergebnisse und veröffentlichen Schlussfolgerungen.<br>In den letzten 20 Jahren erfreut sich Citizen Science immer grösserer Beliebtheit bei Wissenschaftlern und in der Öffentlichkeit; und auch das Themenspektrum wird immer breiter.",
+
+    "section-benefits-heading": "Was bringt Citizen Science?",
+    "section-benefits-subheading-1": "Wissenschaftler",
+    "section-benefits-text-1": "... können Forschungsfragen mit extrem umfangreichen Datensätzen oder einer grossen geografischen Reichweite beantworten. Auch die Formulierung von Hypothesen, das Forschungsdesign und die Datenanalyse können dynamischer und interaktiver gestaltet werden.",
+    "section-benefits-subheading-2": "Bürger",
+    "section-benefits-text-2": "... erhöhen durch ihre freiwillige Teilnahme ihr Wissen und ihr Verständnis des Forschungsgegenstandes. Sie bekommen Einblicke in wissenschaftliche Abläufe und Methoden und eignen sich neue technologische Fähigkeiten an.",
+    "section-benefits-subheading-3": "Die Gesellschaft",
+    "section-benefits-text-3": "… profitiert von den sozialen Aspekten von Citizen Science, wie etwa der Bildung und Befähigung von Gemeinschaften und dem Knüpfen von sozialen Kontakten für die Beteiligten. Auch Bewusstseinswandel, positive Verhaltensänderungen oder mehr politisches Engagement sind mögliche Benefits.",
+
+    "section-sdg-heading": "Citizen Science für die SDGs",
+    "section-sdg-text": "Die UN Ziele für nachhaltige Entwicklung (engl. Sustainable Development Goals, kurz SDGs) sind eine Liste von globalen Zielen, die 2015 gemeinsam von den 193 UN-Mitgliedstaaten und Vertretern der Zivilgesellschaft erarbeitet wurden. Sie sind Teil der UN Agenda 2030, ein globaler Call for Action für eine bessere und nachhaltigere Zukunft auf unserem Planeten.",
+    "section-sdg-text-2": "Verlässliche, aktuelle und frei verfügbare Daten sind notwendig, um Fortschritte auf dem Weg zur Erreichung der UN-Ziele zu messen. Dafür ist eine aktive Beteiligung von Bürgerinnen und Bürgern absolut notwendig und erwünscht.",
+    "section-sdg-text-3": "<b>Durch Citizen Science hat jeder die Möglichkeit, sich mit den Themen auseinanderzusetzen, die einen unmittelbar selbst betreffen; eigene, neue Sichtweisen und Wissensgebiete in die Wissenschaft einzubringen und möglicherweise sogar politische Entscheidungen zu beeinflussen.</b>",
+
+    "section-sdgquote-quote": "«The monitoring and accountability framework [...] must be people ­centred, inclusive, transparent and participatory»",
+    "section-sdgquote-source": "(TAP Network 2015, 1).",
+
+    "section-partnerships-heading": "Partnerschaften und Kollaborationen",
+    "section-partnerships-openseventeen-subheading": "Die Open Seventeen Challenge",
+    "section-partnerships-openseventeen-lead": "Coaching für innovative Citizen Science",
+    "section-partnerships-openseventeen-text": "Der O17-Wettbewerb ist ein interaktives Online-Coaching-Programm, das jungen Innovatoren weltweit helfen soll, sich zu vernetzen und gute Ideen zu tragfähigen sozialen Innovationsprojekten weiterzuentwickeln. O17 unterstützt Projekte, die im engen Bezug zu den 17 UN-Nachhaltigkeitszielen (SDGs) stehen und die mit Hilfe von Open Data und Crowdsourcing Bürgerbeteiligung und Citizen Science fördern.<br>Der Wettbewerb ist eine gemeinsame Initiative des Citizen Cyberlab der Universität Genf und des Governance Lab der New York University.",
+    "section-partnerships-toolkit-heading": "The SDG Crowdsourcing Toolkit",
+    "section-partnerships-toolkit-lead": "Crowdsourcing für nachhaltige Entwicklung",
+    "section-partnerships-toolkit-text": "Das SDG Crowdsourcing Toolkit ist eine gemeinsame Initiative des Kompetenzzentrums Citizen Science Zürich und des Citizen Cyberlabs in Genf. Ziel ist es, Citizen Science in der Schweiz als zentrales Element der wissenschaftlichen Datensammlung für die Sustainable Development Goals (SDGs) zu positionieren. Die gängigsten von Citizen Science-Projekten benötigten Funktionen stehen durch die flexibel einsetzbaren Tools frei zur Verfügung. Darüber hinaus können bereits existierende Plattformen und Communities integriert werden. Die Tools teilen bestimmte Daten mit einer zentralen und leicht zugänglichen Datenbank, wo sie von allen genutzt werden können; so können sich Projekte und Initiativen gegenseitig befruchten.",
+    "section-partnerships-toolkit-text-2": "Wenn Sie mehr über das Toolkit erfahren möchten, wenden Sie sich bitte an das Team des Citizen Science-Centers.",
+    "section-partnerships-snapp-heading": "SnApp",
+    "section-partnerships-snapp-text": "Das Citizen Science Center Zürich entwickelt zusammen mit verschiedenen Schweizer und internationalen Partnern ein Online-Tool zur Bestimmung von Schlangen. Das Tool verbindet Crowdsourcing und künstliche Intelligenz zur Datengewinnung.",
+    "section-partnerships-snapp-text-2": "Schlangenbisse kosten weltweit jedes Jahr über 100’000 Menschenleben und verursachen 400'000 Fälle von Behinderung und Verstümmelung. Denn oft fehlt das Wissen darüber, um welche Schlangenart es sich handelt und somit auch die Antwort auf die Frage, welches das passende Gegengift ist.<br>Die Snake App (SnAPP) soll helfen, die Zahl von fälschlich oder zu spät durchgeführten medizinische Behandlungen zu reduzieren. Die App kombiniert computergestützte Bilderkennung mit der Expertise von professionellen Schlangenexperten und einem Netz aus Hobby-Herpetologen, um Schlangen zu identifizieren.<br>SnAPP soll eine Plattform für Weiterbildung und Capacity Building für Bürger und Gesundheitspersonal und auf der ganzen Welt werden. Es soll Wissenschaftlern helfen, das Phänomen Schlangenbiss besser zu verstehen und auch Gesundheitssysteme in betroffenen Regionen bei ihrer Arbeit unterstützen.",
+
+    "section-newsletter-heading": "Abonniere unseren Newsletter"
   }
 }
 </i18n>
@@ -96,7 +136,6 @@
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">{{ $t('section-projects-heading') }}</h2>
             <p v-html="$t('section-projects-text')"></p>
-            <p v-html="$t('section-projects-text-2')"></p>
           </div>
         </div>
       </div>
@@ -189,11 +228,10 @@
           <div class="content-wrapper">
             <div class="row row-centered row-middle">
               <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-                <h2 class="subheading centered left-aligned-large">{{ $t('section-partnerships-openseventeen-subheading') }}
+                <h3 class="subheading centered left-aligned-large">{{ $t('section-partnerships-openseventeen-subheading') }}
                   <p class="lead" v-html="$t('section-partnerships-openseventeen-lead')"></p>
-                </h2>
+                </h3>
                 <p v-html="$t('section-partnerships-openseventeen-text')"></p>
-                <p v-html="$t('section-partnerships-openseventeen-text-2')"></p>
                 <p class="centered left-aligned-large">
                   <button class="button button-secondary button-icon" @click="openInNewTab('http://openseventeen.org')">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
@@ -214,9 +252,9 @@
           <div class="content-wrapper">
             <div class="row row-centered row-reverse-large row-middle">
               <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-                <h2 class="subheading centered left-aligned-large">{{ $t('section-partnerships-toolkit-heading') }}
+                <h3 class="subheading centered left-aligned-large">{{ $t('section-partnerships-toolkit-heading') }}
                   <p class="lead" v-html="$t('section-partnerships-toolkit-lead')"></p>
-                </h2>
+                </h3>
                 <p v-html="$t('section-partnerships-toolkit-text')"></p>
                 <p v-html="$t('section-partnerships-toolkit-text-2')"></p>
               </div>
@@ -233,9 +271,9 @@
           <div class="content-wrapper">
             <div class="row row-centered row-middle">
               <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-                <h2 class="subheading centered left-aligned-large">{{ $t('section-partnerships-snapp-heading') }}
+                <h3 class="subheading centered left-aligned-large">{{ $t('section-partnerships-snapp-heading') }}
                   <!-- <p class="lead" v-html="$t('section-partnerships-snapp-lead')"></p> -->
-                </h2>
+                </h3>
                 <p v-html="$t('section-partnerships-snapp-text')"></p>
                 <p v-html="$t('section-partnerships-snapp-text-2')"></p>
               </div>

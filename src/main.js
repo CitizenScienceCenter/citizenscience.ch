@@ -6,9 +6,12 @@ import App from './App.vue';
 import store from './store/store.js';
 import Vuex from 'vuex';
 import { i18n } from './i18n.js';
+import c3s from 'vuex-c3s';
 
 Vue.config.productionTip = false;
 
+let swaggerURL = 'https://wenker.citizenscience.ch/api/v2/swagger.json';
+Vue.use(c3s.plugin, { store, swaggerURL})
 Vue.use(VueRouter)
 Vue.use(VueScrollTo, {
      offset: -32

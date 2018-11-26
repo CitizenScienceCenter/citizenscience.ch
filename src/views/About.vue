@@ -57,11 +57,38 @@
 <template>
   <div>
 
+    <div class="anchor-navigation">
+      <div class="content-wrapper scroll-effect">
+        <div class="row row-centered">
+          <div class="col col-tablet-portrait-8 col-large-12">
+
+            <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
+            <ul>
+              <li>
+                <a v-scroll-to="'#mission'">{{ $t('section-mission-heading') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#principles'">{{ $t('section-principles-heading') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#people'">{{ $t('section-people-heading') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#partners'">{{ $t('section-partnership-heading') }}</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <app-content-section>
       <div class="content-wrapper">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin scroll-effect">
-            <h2 class="heading centered left-aligned-large">{{ $t('section-mission-heading') }}</h2>
+            <h2 class="heading centered left-aligned-large" id="mission">{{ $t('section-mission-heading') }}</h2>
             <p class="list-intro" v-html="$t('section-mission-text')"></p>
             <ul>
               <li v-html="$t('section-mission-listitem-1')"></li>
@@ -90,7 +117,7 @@
         <div class="row row-centered">
 
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered">{{ $t('section-principles-heading') }}</h2>
+            <h2 class="heading centered" id="principles">{{ $t('section-principles-heading') }}</h2>
           </div>
 
           <div class="col col-tablet-portrait-10 col-large-6 col-wrapping scroll-effect">
@@ -146,7 +173,7 @@
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered">{{ $t('section-people-heading') }}</h2>
+            <h2 class="heading centered" id="people">{{ $t('section-people-heading') }}</h2>
           </div>
           <div class="col scroll-effect">
             <app-people-list></app-people-list>
@@ -159,7 +186,7 @@
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10">
-            <h2 class="heading centered">{{ $t('section-partnership-heading') }}</h2>
+            <h2 class="heading centered" id="partners">{{ $t('section-partnership-heading') }}</h2>
           </div>
         </div>
         <div class="row row-centered row-reverse-large row-middle">

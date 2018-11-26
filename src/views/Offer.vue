@@ -90,11 +90,34 @@
 <template>
   <div>
 
+    <div class="anchor-navigation">
+      <div class="content-wrapper scroll-effect">
+        <div class="row row-centered">
+          <div class="col col-tablet-portrait-8 col-large-12">
+
+            <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
+            <ul>
+              <li>
+                <a v-scroll-to="'#tools'">{{ $t('section-tools-heading') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#community'">{{ $t('section-community-heading') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#knowledge'">{{ $t('section-knowledge-heading') }}</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <app-content-section>
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large">{{ $t('section-tools-heading') }}</h2>
+            <h2 class="heading centered left-aligned-large" id="tools">{{ $t('section-tools-heading') }}</h2>
             <p v-html="$t('section-tools-text')"></p>
             <h3 class="subheading">{{ $t('section-tools-subheading-1') }}</h3>
             <p v-html="$t('section-tools-text-2')"></p>
@@ -152,7 +175,7 @@
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large">{{ $t('section-community-heading') }}</h2>
+            <h2 class="heading centered left-aligned-large" id="community">{{ $t('section-community-heading') }}</h2>
             <p v-html="$t('section-community-text')"></p>
             <p class="list-intro" v-html="$t('section-community-text-2')"></p>
             <ul>
@@ -236,7 +259,7 @@
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large">{{ $t('section-knowledge-heading') }}</h2>
+            <h2 class="heading centered left-aligned-large" id="knowledge">{{ $t('section-knowledge-heading') }}</h2>
             <p v-html="$t('section-knowledge-text')"></p>
             <p v-html="$t('section-knowledge-text-2')"></p>
             <p v-html="$t('section-knowledge-text-3')"></p>

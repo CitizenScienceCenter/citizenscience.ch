@@ -1,6 +1,12 @@
 <i18n>
 {
   "en": {
+    "anchor-navigation-link-1": "Citizen Science",
+    "anchor-navigation-link-2": "Projects",
+    "anchor-navigation-link-3": "Benefits",
+    "anchor-navigation-link-4": "SDGs",
+    "anchor-navigation-link-5": "Partnerships",
+
     "section-citizenscience-heading": "Citizen Science",
     "section-citizenscience-text": "The activities of the Citizen Science Center Zurich focus on exploring, supporting, and promoting Citizen Science. Citizen Science is a form of public participation in scientific research (where “citizen” denotes a member of the general public, independent from citizenship) that has been around for more than a century.",
     "section-citizenscience-example": "<b>Example:</b> In the Galaxy Zoo project, hundreds of thousands of citizens have helped astronomers classify millions of images of galaxies coming from international telescopes (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
@@ -44,6 +50,12 @@
     "section-newsletter-heading": "Sign up for our Newsletter"
   },
   "de": {
+    "anchor-navigation-link-1": "Citizen Science",
+    "anchor-navigation-link-2": "Projekte",
+    "anchor-navigation-link-3": "Vorteile",
+    "anchor-navigation-link-4": "SDGs",
+    "anchor-navigation-link-5": "Partnerschaften",
+
     "section-citizenscience-heading": "Citizen Science",
     "section-citizenscience-text": "Am Citizen Science Center Zürich sehen wir unsere Aufgabe im Erkunden, Unterstützen und Verbreiten von Citizen Science, zu deutsch Bürgerwissenschaft. Citizen Science hat sich in den letzten 100 Jahren immer mehr etabliert; man versteht darunter die Beteiligung der breiten Öffentlichkeit an wissenschaftlicher Forschung. Ein Citizen Scientist kann jede und jeder werden, unabhängig von Herkunft und Staatsangehörigkeit.",
     "section-citizenscience-example": "<b>Beispiel:</b> Im Projekt Galaxy Zoo haben hunderttausende Citizen Scientists anhand von Teleskopaufnahmen Millionen von Galaxien klassifiziert. (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
@@ -92,11 +104,40 @@
 <template>
   <div>
 
+    <div class="anchor-navigation">
+      <div class="content-wrapper scroll-effect">
+        <div class="row row-centered">
+          <div class="col col-tablet-portrait-8 col-large-12">
+
+            <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
+            <ul>
+              <li>
+                <a v-scroll-to="'#citizen-science'">{{ $t('anchor-navigation-link-1') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#projects'">{{ $t('anchor-navigation-link-2') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#benefits'">{{ $t('anchor-navigation-link-3') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#sdgs'">{{ $t('anchor-navigation-link-4') }}</a>
+              </li>
+              <li>
+                <a v-scroll-to="'#partnerships'">{{ $t('anchor-navigation-link-5') }}</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <app-content-section>
-      <div class="content-wrapper content-wrapper-large-min-height scroll-effect">
+      <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large">{{ $t('section-citizenscience-heading') }}</h2>
+            <h2 class="heading centered left-aligned-large" id="citizen-science">{{ $t('section-citizenscience-heading') }}</h2>
             <p v-html="$t('section-citizenscience-text')"></p>
             <p>
               <div class="row row-middle">
@@ -134,7 +175,7 @@
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large">{{ $t('section-projects-heading') }}</h2>
+            <h2 class="heading centered left-aligned-large" id="projects">{{ $t('section-projects-heading') }}</h2>
             <p v-html="$t('section-projects-text')"></p>
           </div>
         </div>
@@ -156,7 +197,7 @@
         <div class="row row-centered">
 
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered">{{ $t('section-benefits-heading') }}</h2>
+            <h2 class="heading centered" id="benefits">{{ $t('section-benefits-heading') }}</h2>
           </div>
 
           <div class="col col-tablet-portrait-10 col-large-4 col-wrapping  col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
@@ -182,7 +223,7 @@
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large">{{ $t('section-sdg-heading') }}</h2>
+            <h2 class="heading centered left-aligned-large" id="sdgs">{{ $t('section-sdg-heading') }}</h2>
             <p v-html="$t('section-sdg-text')"></p>
             <p v-html="$t('section-sdg-text-2')"></p>
             <p v-html="$t('section-sdg-text-3')"></p>
@@ -219,7 +260,7 @@
         <div class="content-wrapper">
           <div class="row row-centered scroll-effect">
             <div class="col col-large-10">
-              <h2 class="heading centered" id="projects">{{ $t('section-partnerships-heading') }}</h2>
+              <h2 class="heading centered" id="partnerships">{{ $t('section-partnerships-heading') }}</h2>
             </div>
           </div>
         </div>

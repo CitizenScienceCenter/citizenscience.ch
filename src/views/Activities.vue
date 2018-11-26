@@ -4,7 +4,7 @@
     "anchor-navigation-link-1": "Citizen Science",
     "anchor-navigation-link-2": "Projects",
     "anchor-navigation-link-3": "Benefits",
-    "anchor-navigation-link-4": "SDGs",
+    "anchor-navigation-link-4": "Sustainable Development Goals",
     "anchor-navigation-link-5": "Partnerships",
 
     "section-citizenscience-heading": "Citizen Science",
@@ -53,7 +53,7 @@
     "anchor-navigation-link-1": "Citizen Science",
     "anchor-navigation-link-2": "Projekte",
     "anchor-navigation-link-3": "Vorteile",
-    "anchor-navigation-link-4": "SDGs",
+    "anchor-navigation-link-4": "Sustainable Development Goals",
     "anchor-navigation-link-5": "Partnerschaften",
 
     "section-citizenscience-heading": "Citizen Science",

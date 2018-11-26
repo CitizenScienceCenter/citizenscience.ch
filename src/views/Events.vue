@@ -28,7 +28,7 @@
 <template>
   <div>
 
-      <app-content-section color="light-greyish">
+      <app-content-section>
 
           <div class="content-wrapper">
               <div class="row row-centered scroll-effect">
@@ -88,18 +88,14 @@
 
 <script>
 
-import Cover from '@/components/shared/Cover.vue'
 import ContentSection from '@/components/shared/ContentSection.vue'
-import PeopleList from '@/components/shared/PeopleList.vue'
 import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
 import Footer from '@/components/shared/Footer.vue'
 
 export default {
-  name: 'Who',
+  name: 'Events',
   components: {
-    'app-cover': Cover,
     'app-content-section': ContentSection,
-    'app-people-list': PeopleList,
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },

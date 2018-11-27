@@ -45,13 +45,9 @@ export const i18n = new VueI18n({
           'link': 'Events',
           'title': 'Events – Citizen Science Center Zurich'
       },
-      'page-privacy': {
-          'link': 'Privacy Policy',
-          'title': 'Privacy Policy – Citizen Science Center Zurich'
-      },
       'page-terms': {
-          'link': 'Terms of Use',
-          'title': 'Terms of Use – Citizen Science Center Zurich'
+          'link': 'Privacy Policy & Terms of Use',
+          'title': 'Privacy Policy & Terms of Use – Citizen Science Center Zurich'
       }
     },
     'de': {
@@ -74,6 +70,10 @@ export const i18n = new VueI18n({
       'page-events': {
           'link': 'Events',
           'title': 'Events – Citizen Science Center Zürich'
+      },
+      'page-terms': {
+          'link': 'Privacy Policy & Terms of Use',
+          'title': 'Privacy Policy & Terms of Use – Citizen Science Center Zürich'
       }
     }
   }

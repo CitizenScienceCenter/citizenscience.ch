@@ -28,11 +28,6 @@ const Events = resolve => {
         resolve( require('../views/Events.vue') );
     });
 };
-const Privacy = resolve => {
-    require.ensure(['../views/Privacy.vue'], () => {
-        resolve( require('../views/Privacy.vue') );
-    });
-};
 const Terms = resolve => {
     require.ensure(['../views/Terms.vue'], () => {
         resolve( require('../views/Terms.vue') );
@@ -45,6 +40,5 @@ export const routes = [
     { path: '/offer', component: Offer, meta: {page: 'page-offer', nav: true} },
     { path: '/about', component: About, meta: {page: 'page-about', nav: true} },
     { path: '/events', component: Events, meta: {page: 'page-events', nav: true} },
-    { path: '/privacy', component: Privacy, meta: {page: 'page-privacy', nav: false} },
     { path: '/terms', component: Terms, meta: {page: 'page-terms', nav: false} }
 ]

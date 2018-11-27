@@ -5,7 +5,7 @@ import store from '../store/store.js';
 
 export const router = new VueRouter({
   routes: routes,
-  mode: 'history',
+  //mode: 'history',
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
   }

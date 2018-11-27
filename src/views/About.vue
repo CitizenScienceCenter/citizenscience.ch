@@ -189,20 +189,15 @@
             <h2 class="heading centered" id="partners">{{ $t('section-partnership-heading') }}</h2>
           </div>
         </div>
-        <div class="row row-centered row-reverse-large row-middle">
-
-          <div class="col col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin">
+        <div class="row row-centered">
+          <div class="col col-large-6">
             <div>
               <p v-html="$t('section-partnership-text')"></p>
+              <p class="centered">
+                <img src="img/ccl-logo.png" style="width: 50%" />
+              </p>
             </div>
           </div>
-
-          <div class="col col-6 col-large-3 col-large-before-2 col-wrapping col-no-bottom-margin">
-            <div class="">
-              <img src="img/ccl-logo.png" />
-            </div>
-          </div>
-
         </div>
 
       </div>

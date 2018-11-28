@@ -17,16 +17,15 @@
 
     "section-community-heading": "Community",
     "section-community-text": "We see ourselves as a platform and a meeting point for people interested in Citizen Science and participatory research to exchange ideas and knowledge between academia and the wider public.",
-    "section-community-text-2": "<b>We want to</b>",
-    "section-community-listitem-1": "offer compelling projects to participate in",
-    "section-community-listitem-2": "connect people",
-    "section-community-listitem-3": "foster dialogue",
-    "section-community-listitem-4": "generate new ideas coming from different perspectives,",
-    "section-community-listitem-5": "ask real world questions and",
-    "section-community-listitem-6": "create new citizen science projects together.",
-    "section-community-text-3": "Meeting new people and being part of a community is one of the key benefits of Citizen Science, and a strong motivation for people to join citizen science projects. Dialogue and participation naturally leads to diversity and inclusion, and to more equality and democracy in science and society.",
-    "section-community-text-4": "Our Citizen Science Community spans Zurich and beyond, and its activities will be shaped by its members. We will interact online and offline in an open, active and interdisciplinary way.",
-    "section-community-text-5": "We invite you to visit our forum (coming soon) and discuss topics you are interested in. We also organize events, such as brown bag lunches, festivals and meet-ups.",
+    "section-community-listitem-1": "We offer compelling projects to participate in.",
+    "section-community-listitem-2": "We connect people.",
+    "section-community-listitem-3": "We foster dialogue.",
+    "section-community-listitem-4": "We generate new ideas coming from different perspectives.",
+    "section-community-listitem-5": "We ask real world questions.",
+    "section-community-listitem-6": "We create new citizen science projects together.",
+    "section-community-text-2": "Our Citizen Science Community is growing and spans Zurich and beyond. By reaching out to local communities we have already organized an initial network of potential citizen scientists including members of the Zurich senior university and persons listed in the universities research participant pools.",
+    "section-community-text-3": "Meeting new people and being part of a community is one of the key benefits of Citizen Science, and a strong motivation for people to join projects, and our activities are shaped around our members. They include online and offline interactions and local events, in an open, creative and interdisciplinary way. We invite you to visit our forum (coming soon) and discuss topics you are interested in.",
+
     "section-community-promo-text": "Join our community and always be up to date:",
     "section-community-promo-button-twitter": "Follow us on Twitter",
     "section-community-promo-button-facebook": "Visit us on Facebook",
@@ -38,6 +37,10 @@
     "section-knowledge-text-3": "By experimenting with  procedures, testing protocol, and sharing best practices, practitioners in all fields have developed what is now a solid methodology. Principles and protocols exist today, and the Center’s team is here to help scientists and citizens setup and run projects that guarantee excellent scientific results.",
     "section-knowledge-text-4": "However, Citizen Science is an evolving field with multiple dimensions, including quality, sustainability, transparency, inclusiveness, and more. As all fields of science, it requires continuous research and exploration, that the Center’s researcher will carry on to guarantee the development of appropriate tools and new knowledge.",
     "section-knowledge-button-principles": "10 principle of citizen scinece by ECSA",
+
+    "section-pwa-heading": "Participatory Science Academy",
+    "section-pwa-text": "The Participatory Science Academy (“Partizipative Wissenschaftsakademie”, PWA), established thanks to generous support of <a href='https://www.stiftung-mercator.ch/de/stiftung/' target='_blank'>Mercator Foundation Switzerland</a>, seeks to empower citizens and scientists to collaborate in all phases of the research process. To reach that goal, the Academy provides training and knowledge for citizen science for both citizen scientists as well as academic scientists. In order to enable the joint development of promising ideas, the PWA also awards seed grants to project teams.",
+    "section-pwa-button": "www.pwa.uzh.ch",
 
     "section-newsletter-heading": "Sign up for our Newsletter"
   },
@@ -58,16 +61,15 @@
 
     "section-community-heading": "Community",
     "section-community-text": "Wir verstehen uns selbst als einen Treffpunkt für Menschen, die sich für Citizen Science und partizipative Forschung interessieren und als eine Plattform für den Austausch von Ideen und Wissen zwischen Universität und breiter Öffentlichkeit.",
-    "section-community-text-2": "<b>Wir möchten</b>",
-    "section-community-listitem-1": "zum Mitmachen an interessanten Projekte anregen,",
-    "section-community-listitem-2": "Menschen verbinden,",
-    "section-community-listitem-3": "Dialog fördern und pflegen",
-    "section-community-listitem-4": "neue Ideen aus verschiedenen Blickwinkeln generieren,",
-    "section-community-listitem-5": "anwendungsbezogene Fragen stellen und",
-    "section-community-listitem-6": "anwendungsbezogene Fragen stellen und",
-    "section-community-text-3": "Einer der wichtigsten Gründe, warum Menschen an Citizen Science Projekten teilnehmen, ist die Möglichkeit, neue Leute kennenzulernen und Teil einer Community zu werden.<br>Zudem sind Dialog und Partizipation wichtig für gesellschaftliche Vielfalt und Inklusion und führen zu mehr Gleichberechtigung und Demokratie in Gesellschaft und Wissenschaft.",
-    "section-community-text-4": "Unsere Citizen Science Community reicht von Zürich hinaus in die Welt und lebt mit der Beteiligung und Aktivität ihrer Mitglieder. Sie agiert online und offline und ist offen und interdisziplinär.",
-    "section-community-text-5": "Besuchen Sie unser Forum (kommt bald) und tauschen Sie sich mit anderen über Themen aus, die Sie interessieren. Oder kommen Sie zu unseren Brown Bag Lunches, Festen und Treffen.",
+    "section-community-listitem-1": "Wir möchten zum Mitmachen bei interessanten Projekte anregen.",
+    "section-community-listitem-2": "Wir verbinden Menschen.",
+    "section-community-listitem-3": "Wir fördern und pflegen Dialog.",
+    "section-community-listitem-4": "Wir generieren neue Ideen aus verschiedenen Blickwinkeln.",
+    "section-community-listitem-5": "Wir stellen anwendungsbezogene Fragen.",
+    "section-community-listitem-6": "Wir entwickeln zusammen neue Citizen Science Projekte.",
+    "section-community-text-2": "Unsere Citizen Science Community in Zürich und darüber hinaus wächst stetig. Wir konnten bereits eine lokales Netzwerk aus aktiven und potenziellen Citizen Scientists aufbauen. Es besteht im Moment vor allem auf aus den Mitgliedern der Senioren-Universität Zürich und dem Pool an Forschungs-Teilnehmern von UZH und ETHZ.",
+    "section-community-text-3": "Einer der wichtigsten Gründe, warum Menschen an Citizen Science Projekten teilnehmen, ist die Möglichkeit, neue Leute kennenzulernen und Teil einer Community zu werden. Unsere Community lebt mit der Beteiligung und Aktivität ihrer Mitglieder. Sie interagiert online und offline und in lokalen Events, sie ist kreativ, offen und interdisziplinär.<br>Besuchen Sie unser Forum (kommt bald) und tauschen Sie sich mit anderen über Themen aus, die Sie interessieren. Oder kommen Sie zu unseren Brown Bag Lunches, Festen und Treffen.",
+
     "section-community-promo-text": "Werden Sie ein Teil unserer Community und seien Sie immer up to date:",
     "section-community-promo-button-twitter": "Folge uns auf Twitter",
     "section-community-promo-button-facebook": "Besuche uns auf Facebook",
@@ -79,6 +81,10 @@
     "section-knowledge-text-3": "Durch Experimentierfreudigkeit, das Testen von Verfahren und das Teilen von Best Practice Beispielen haben Citizen Scientists solide Methoden entwickelt. Dank der Arbeit dieser vielen tausenden Leute existieren heute Prinzipien und Konventionen, die das Team des Centers in Zürich Wissenschaftlern und Bürgern vermitteln möchte. Wir helfen dabei, Citizen Science Projekte entlang dieser Standards umzusetzen und exzellente wissenschaftliche Ergebnisse zu erlangen.",
     "section-knowledge-text-4": "Citizen Science ist ein lebendiges Feld, dass sich ständig in vielen Dimensionen weiterentwickelt, zum Beispiel hinsichtlich Qualität, Nachhaltigkeit, Transparenz und Inklusivität. Wie alle Wissenschaftsformen erfordert auch Citizen Science ein kontinuierliches Erforschen und Erkunden des eigenen Gebiets. Genau dies betreiben wir am Citizen Science Center und setzen uns dafür ein, dass Wissen und Tools fortwährend weiterentwickelt werden.",
     "section-knowledge-button-principles": "Die 10 Prinzipien von Citizen Scinece der ECSA",
+
+    "section-pwa-heading": "Partizipative Wissenschaftsakademie",
+    "section-pwa-text": "Die Partizipative Wissenschaftsakademie (PWA) wird durch die  <a href='https://www.stiftung-mercator.ch/de/stiftung/' target='_blank'>Stiftung Mercator Schweiz</a> gefördert. Die PWA hat zum Ziel, die Teilhabe von Bürgerinnen und Bürgern an allen Phasen des wissenschaftlichen Forschungsprozesses zu ermöglichen. Im Rahmen eines Weiterbildungsangebots vermittelt sie Forschenden wie auch interessierten Bürgerinnen und Bürgern Kenntnisse und Kompetenzen für partizipatives Arbeiten. Zudem vergibt sie Seed Grants.",
+    "section-pwa-button": "www.pwa.uzh.ch",
 
     "section-newsletter-heading": "Abonniere unseren Newsletter"
   }
@@ -177,20 +183,16 @@
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large" id="community">{{ $t('section-community-heading') }}</h2>
             <p v-html="$t('section-community-text')"></p>
-            <p class="list-intro" v-html="$t('section-community-text-2')"></p>
             <ul>
-              <li v-html="$t('section-community-listitem-1')"></li>
-              <li v-html="$t('section-community-listitem-2')"></li>
-              <li v-html="$t('section-community-listitem-3')"></li>
-              <li v-html="$t('section-community-listitem-4')"></li>
-              <li v-html="$t('section-community-listitem-5')"></li>
-              <li v-html="$t('section-community-listitem-6')"></li>
+              <li style="font-weight:700;" v-html="$t('section-community-listitem-1')"></li>
+              <li style="font-weight:700;" v-html="$t('section-community-listitem-2')"></li>
+              <li style="font-weight:700;" v-html="$t('section-community-listitem-3')"></li>
+              <li style="font-weight:700;" v-html="$t('section-community-listitem-4')"></li>
+              <li style="font-weight:700;" v-html="$t('section-community-listitem-5')"></li>
+              <li style="font-weight:700;" v-html="$t('section-community-listitem-6')"></li>
             </ul>
+            <p v-html="$t('section-community-text-2')"></p>
             <p v-html="$t('section-community-text-3')"></p>
-            <p>
-              {{ $t('section-community-text-4') }}<br/>
-              {{ $t('section-community-text-5') }}
-            </p>
           </div>
         </div>
       </div>
@@ -282,6 +284,34 @@
           </div>
         </div>
       </div>
+    </app-content-section>
+
+    <app-content-section color="light-greyish">
+
+      <div class="content-wrapper scroll-effect">
+        <div class="row">
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
+            <h2 class="heading centered left-aligned-large" id="community">{{ $t('section-pwa-heading') }}</h2>
+            <p v-html="$t('section-pwa-text')"></p>
+            <p class="centered left-aligned-large">
+              <button class="button button-secondary button-icon" @click="openInNewTab('https://www.pwa.uzh.ch')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                {{ $t('section-pwa-button') }}
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-6">
+              <img src="img/pwa.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </app-content-section>
 
     <app-content-section color="greyish">

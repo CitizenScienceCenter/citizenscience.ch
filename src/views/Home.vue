@@ -8,7 +8,7 @@
 
     "section-explanation-lead": "The Citizen Science Center Zurich enables <b>researchers</b> and <b>citizens</b> to create and conduct research projects that produce <b>excellent</b> and <b>participatory science</b> while supporting the UN SDGs.",
     "section-explanation-text": "In Citizen Science projects, the unique collaboration of professional scientists and the general public provides new and invaluable knowledge in areas from physics to linguistics to human health, at the local, regional or global leves.",
-    "section-explanation-text-2": "The Center aims at supporting next-generation Citizen Science, ie. projects that produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
+    "section-explanation-text-2": "The Center supports next-generation Citizen Science, ie. projects that produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
     "section-explanation-button": "Learn more",
 
     "section-offer-heading": "What we offer",
@@ -42,7 +42,7 @@
 
     "section-explanation-lead": "Das Citizen Science Center Zürich bringt <b>Wissenschaftlerinnen</b> und <b>Bürger</b> zusammen, um gemeinsam exzellente Forschungsprojekte zu entwickeln, die die UN Sustainable Development Goals verfolgen.",
     "section-explanation-text": "Durch die Zusammenarbeit von professionell Forschenden und der breiten Öffentlichkeit in Citizen Science Projekten entsteht neues und wertvolles Wissen; in ganz verschiedenen Bereichen wie Physik, Linguistik oder Gesundheit. Lokal, regional und global.",
-    "section-explanation-text-2": "An unserem Center möchten wir zukunftsweisende Citizen Science betreiben. Das bedeutet, dass wir Projekte mit hohen wissenschaftlichen Standards und Open Data fördern, um Bürgern, Communities und Regierungen zu helfen, ihre Schritte in Richtung der UN Ziele für nachhaltige Entwicklung zu überwachen und zu bewerten.",
+    "section-explanation-text-2": "An unserem Center möchten wir zukunftsweisende Citizen Science unterstützen. Das bedeutet, dass wir Projekte mit hohen wissenschaftlichen Standards und Open Data fördern, um Bürgern, Communities und Regierungen zu helfen, ihre Schritte in Richtung der UN Ziele für nachhaltige Entwicklung zu überwachen und zu bewerten.",
     "section-explanation-button": "Mehr erfahren",
 
     "section-offer-heading": "Was wir bieten",
@@ -239,8 +239,8 @@
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <h2 class="heading centered left-aligned-large">{{ $t('section-about-heading') }}</h2>
+            <p>{{ $t('section-about-text') }}</p>
             <p>
-              {{ $t('section-about-text') }}<br/>
               {{ $t('section-about-text-2') }}<br/>
               {{ $t('section-about-text-3') }}
             </p>

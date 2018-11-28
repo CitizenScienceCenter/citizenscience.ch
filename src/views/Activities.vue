@@ -7,10 +7,12 @@
     "anchor-navigation-link-4": "Sustainable Development Goals",
     "anchor-navigation-link-5": "Partnerships",
 
-    "section-citizenscience-heading": "Citizen Science",
+    "section-citizenscience-heading": "Citizen Science “Zurich Style”",
     "section-citizenscience-text": "The activities of the Citizen Science Center Zurich focus on exploring, supporting, and promoting Citizen Science. Citizen Science is a form of public participation in scientific research (where “citizen” denotes a member of the general public, independent from citizenship) that has been around for more than a century.",
     "section-citizenscience-example": "<b>Example:</b> In the Galaxy Zoo project, hundreds of thousands of citizens have helped astronomers classify millions of images of galaxies coming from international telescopes (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
     "section-citizenscience-text-2": "Public participation in science is a practice that works across many disciplines and that comes in different flavours and with different names, including community based research, crowd-sourced data collection, community-based monitoring, civic science, and more. What characterizes Citizen Science is the <b>collaboration of professional scientists and citizens</b>, the active involvement of both, and the engagement of citizens in potentially all phases of the research process.",
+    "section-citizenscience-text-3": "In Zurich, we promote this participatory approach, and support projects that bring citizen and academic scientists together. In these projects citizens are aware of all phases of the research process, are able to make an informed decision on the phases they want to take part in, and have an easy channel to share this decision with academics.",
+    "section-citizenscience-text-4": "Zurich has a long tradition in many forms of participatory research. You can see some of the projects from the past <a href='https://www.grc.uzh.ch/en/focus/exhibition/CitizenScience.html' target='_blank' >here</a>.",
 
     "section-next-gen-citizenscience-subheading": "Next Generation Citizen Science",
     "section-next-gen-citizenscience-text": "The main goal of scientific research, including Citizen Science projects, is to produce excellent science to advance our understanding of the world we leave in. We strongly believe that it should also empower society with a form of actionable understanding, ie. with the opportunity to produce data for change.",
@@ -33,7 +35,7 @@
     "section-sdg-text-3": "<b>Through citizen science, people can directly engage with and monitor issues that affect them, bring new perspectives and knowledge into science and decision-making, and ultimately demand or drive change.</b>",
 
     "section-sdgquote-quote": "«The monitoring and accountability framework [...] must be people ­centred, inclusive, transparent and participatory»",
-    "section-sdgquote-source": "(TAP Network 2015, 1).",
+    "section-sdgquote-source": "<a href='http://tapnetwork2030.org/' target='_blank'>Transparency, Accountability & Participation (TAP) Network 2030</a>",
 
     "section-partnerships-heading": "Partnerships and Collaborations",
     "section-partnerships-openseventeen-subheading": "The Open Seventeen Challenge",
@@ -59,7 +61,9 @@
     "section-citizenscience-heading": "Citizen Science",
     "section-citizenscience-text": "Am Citizen Science Center Zürich sehen wir unsere Aufgabe im Erkunden, Unterstützen und Verbreiten von Citizen Science, zu deutsch Bürgerwissenschaft. Citizen Science hat sich in den letzten 100 Jahren immer mehr etabliert; man versteht darunter die Beteiligung der breiten Öffentlichkeit an wissenschaftlicher Forschung. Ein Citizen Scientist kann jede und jeder werden, unabhängig von Herkunft und Staatsangehörigkeit.",
     "section-citizenscience-example": "<b>Beispiel:</b> Im Projekt Galaxy Zoo haben hunderttausende Citizen Scientists anhand von Teleskopaufnahmen Millionen von Galaxien klassifiziert. (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
-  "section-citizenscience-text-2": "Die Beteiligung von nicht professionell wissenschaftlich tätigen Personen in der Forschung ist eine Praxis, die viele Formen annehmen kann: Community based research, Crowdsourcing, community-based monitoring, civic science und mehr. Was Citizen Science dabei besonders ausmacht, ist die <b>Zusammenarbeit von professionellen Wissenschaftlern mit Bürgerinnen</b>, die aktive Beteiligung von beiden Seiten und die Mitwirkung der forschenden Bürger in potenziell alle Phasen des Forschungsprozesses.",
+    "section-citizenscience-text-2": "Die Beteiligung von nicht professionell wissenschaftlich tätigen Personen in der Forschung ist eine Praxis, die viele Formen annehmen kann: Community based research, Crowdsourcing, community-based monitoring, civic science und mehr. Was Citizen Science dabei besonders ausmacht, ist die <b>Zusammenarbeit von professionellen Wissenschaftlern mit Bürgerinnen</b>, die aktive Beteiligung von beiden Seiten und die Mitwirkung der forschenden Bürger potenziell in allen Phasen des Forschungsprozesses.",
+    "section-citizenscience-text-3": "In Zürich möchten wir diesen partizipativen Ansatz stärken und Projekte unterstützen, die Bürger und professionelle Wissenschaftler zusammen bringen. In solchen Projekten kennen die Citizen Scientists alle Phasen des Forschungsprozesses, sind in der Lage selbst zu entscheiden, an welchen Phasen Sie sich beteiligen möchten und können Ihre Entscheidung den Forschenden einfach und direkt übermitteln.",
+    "section-citizenscience-text-4": "Zürich hat eine lange Tradition in vielen Formen partizipativer Forschung. <a href='https://www.grc.uzh.ch/en/focus/exhibition/CitizenScience.html' target='_blank'>Hier</a> finden Sie eine Auswahl vergangener Projekte.",
 
     "section-next-gen-citizenscience-subheading": "Next Generation Citizen Science",
     "section-next-gen-citizenscience-text": "Das grösste Ziel wissenschaftlicher Forschung, einschliesslich Citizen Science, besteht darin, die Welt, in der wir leben, besser zu verstehen. Wir finden ausserdem, dass die Wissenschaft der Gesellschaft ein gewisses Mass an «anwendbarem Wissen und Verständnis» zur Verfügung stellen sollte, das Bürgerinnen und Bürger dazu befähigt, neue Daten und gewonnenes Wissen für konkrete Veränderungsprozesse zu nutzen.",
@@ -69,12 +73,12 @@
     "section-projects-text": "In den meisten Citizen Science Projekten beteiligen sich Bürgerinnen und Bürger durch das Sammeln und Auswerten von Daten. Dies geschieht häufig mithilfe von Smartphones, Apps und anderen mobilen Geräten oder interaktiven Websites. Immer häufiger sind Citizen Scientists auch in anderen Phasen des Forschungsprozesses aktiv: Sie definieren Forschungsfragen, interpretieren Ergebnisse und veröffentlichen Schlussfolgerungen.<br>In den letzten 20 Jahren erfreut sich Citizen Science immer grösserer Beliebtheit bei Wissenschaftlern und in der Öffentlichkeit; und auch das Themenspektrum wird immer breiter.",
 
     "section-benefits-heading": "Was bringt Citizen Science?",
-    "section-benefits-subheading-1": "Wissenschaftler",
-    "section-benefits-text-1": "... können Forschungsfragen mit extrem umfangreichen Datensätzen oder einer grossen geografischen Reichweite beantworten. Auch die Formulierung von Hypothesen, das Forschungsdesign und die Datenanalyse können dynamischer und interaktiver gestaltet werden.",
-    "section-benefits-subheading-2": "Bürger",
-    "section-benefits-text-2": "... erhöhen durch ihre freiwillige Teilnahme ihr Wissen und ihr Verständnis des Forschungsgegenstandes. Sie bekommen Einblicke in wissenschaftliche Abläufe und Methoden und eignen sich neue technologische Fähigkeiten an.",
-    "section-benefits-subheading-3": "Die Gesellschaft",
-    "section-benefits-text-3": "… profitiert von den sozialen Aspekten von Citizen Science, wie etwa der Bildung und Befähigung von Gemeinschaften und dem Knüpfen von sozialen Kontakten für die Beteiligten. Auch Bewusstseinswandel, positive Verhaltensänderungen oder mehr politisches Engagement sind mögliche Benefits.",
+    "section-benefits-subheading-1": "Für Wissenschaftler",
+    "section-benefits-text-1": "Sie können Forschungsfragen mit extrem umfangreichen Datensätzen oder einer grossen geografischen Reichweite beantworten. Auch die Formulierung von Hypothesen, das Forschungsdesign und die Datenanalyse können dynamischer und interaktiver gestaltet werden.",
+    "section-benefits-subheading-2": "Für Bürger",
+    "section-benefits-text-2": "Sie erhöhen durch ihre freiwillige Teilnahme ihr Wissen und ihr Verständnis des Forschungsgegenstandes. Sie bekommen Einblicke in wissenschaftliche Abläufe und Methoden und eignen sich neue technologische Fähigkeiten an.",
+    "section-benefits-subheading-3": "Für die Gesellschaft",
+    "section-benefits-text-3": "Sie profitiert von den sozialen Aspekten von Citizen Science, wie etwa der Bildung und Befähigung von Gemeinschaften und dem Knüpfen von sozialen Kontakten für die Beteiligten. Auch Bewusstseinswandel, positive Verhaltensänderungen oder mehr politisches Engagement sind mögliche Benefits.",
 
     "section-sdg-heading": "Citizen Science für die SDGs",
     "section-sdg-text": "Die UN Ziele für nachhaltige Entwicklung (engl. Sustainable Development Goals, kurz SDGs) sind eine Liste von globalen Zielen, die 2015 gemeinsam von den 193 UN-Mitgliedstaaten und Vertretern der Zivilgesellschaft erarbeitet wurden. Sie sind Teil der UN Agenda 2030, ein globaler Call for Action für eine bessere und nachhaltigere Zukunft auf unserem Planeten.",
@@ -82,7 +86,7 @@
     "section-sdg-text-3": "<b>Durch Citizen Science hat jeder die Möglichkeit, sich mit den Themen auseinanderzusetzen, die einen unmittelbar selbst betreffen; eigene, neue Sichtweisen und Wissensgebiete in die Wissenschaft einzubringen und möglicherweise sogar politische Entscheidungen zu beeinflussen.</b>",
 
     "section-sdgquote-quote": "«The monitoring and accountability framework [...] must be people ­centred, inclusive, transparent and participatory»",
-    "section-sdgquote-source": "(TAP Network 2015, 1).",
+    "section-sdgquote-source": "<a href='http://tapnetwork2030.org/' target='_blank'>Transparency, Accountability & Participation (TAP) Network 2030</a>",
 
     "section-partnerships-heading": "Partnerschaften und Kollaborationen",
     "section-partnerships-openseventeen-subheading": "Die Open Seventeen Challenge",
@@ -150,6 +154,8 @@
               </div>
             </p>
             <p v-html="$t('section-citizenscience-text-2')"></p>
+            <p v-html="$t('section-citizenscience-text-3')"></p>
+            <p v-html="$t('section-citizenscience-text-4')"></p>
             <h3 class="subheading">{{ $t('section-next-gen-citizenscience-subheading') }}</h3>
             <p v-html="$t('section-next-gen-citizenscience-text')"></p>
             <p v-html="$t('section-next-gen-citizenscience-text-2')"></p>
@@ -317,10 +323,18 @@
                 </h3>
                 <p v-html="$t('section-partnerships-snapp-text')"></p>
                 <p v-html="$t('section-partnerships-snapp-text-2')"></p>
+                <p>
+
+                </p>
               </div>
               <div class="col col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
-                <div class="extra-padding-h-big">
-                  <img src="img/snapp.jpg" style="border-radius:50%;" />
+                <div class="extra-padding-h">
+                  <p>
+                    <img src="img/snapp.jpg" style="border-radius:50%;" />
+                  </p>
+                  <p>
+                    <img src="img/snapp-logos.png" />
+                  </p>
                 </div>
               </div>
             </div>

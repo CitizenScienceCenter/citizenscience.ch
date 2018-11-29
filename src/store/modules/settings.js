@@ -5,7 +5,7 @@ const state = {
     error: null,
     errTimeout: 5000,
     theme: 'default',
-    language: 'en'
+    language: undefined
 }
 
 const getters = {

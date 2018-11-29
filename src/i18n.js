@@ -4,18 +4,19 @@ import store from './store/store.js';
 
 Vue.use(VueI18n);
 
-console.log("i18n")
 var language;
 if( !store.state.settings.language ) {
-  // no language in store, check browser
-
-  language = window.navigator.userLanguage || window.navigator.language;
-  if (language.indexOf('-') !== -1) {
-    language = language.split('-')[0];
-  }
-  if (language.indexOf('_') !== -1) {
-    language = language.split('_')[0];
-  }
+    // no language in store, check browser
+    language = window.navigator.userLanguage || window.navigator.language;
+    if (language.indexOf('-') !== -1) {
+        language = language.split('-')[0];
+    }
+    else if (language.indexOf('_') !== -1) {
+        language = language.split('_')[0];
+    }
+    if( language !== 'en' && language !== 'de') {
+        language = "en";
+    }
 
   store.dispatch("settings/setLanguage", language );
 }

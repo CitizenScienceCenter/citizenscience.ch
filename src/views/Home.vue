@@ -40,7 +40,7 @@
     "cover-button-projects": "Jetzt mitforschen",
     "cover-button-your-project": "Neue Projektidee?",
 
-    "section-explanation-lead": "Das Citizen Science Center Zürich bringt <b>Wissenschaftlerinnen</b> und <b>Bürger</b> zusammen, um gemeinsam exzellente Forschungsprojekte zu entwickeln, die die UN Sustainable Development Goals verfolgen.",
+    "section-explanation-lead": "Das Citizen Science Center Zürich bringt <b>Wissenschaftler</b> und <b>Bürger</b> zusammen, um gemeinsam exzellente Forschungsprojekte zu entwickeln, die die UN Sustainable Development Goals verfolgen.",
     "section-explanation-text": "Durch die Zusammenarbeit von professionell Forschenden und der breiten Öffentlichkeit in Citizen Science Projekten entsteht neues und wertvolles Wissen; in ganz verschiedenen Bereichen wie Physik, Linguistik oder Gesundheit. Lokal, regional und global.",
     "section-explanation-text-2": "An unserem Center möchten wir zukunftsweisende Citizen Science unterstützen. Das bedeutet, dass wir Projekte mit hohen wissenschaftlichen Standards und Open Data fördern, um Bürgern, Communities und Regierungen zu helfen, ihre Schritte in Richtung der UN Ziele für nachhaltige Entwicklung zu überwachen und zu bewerten.",
     "section-explanation-button": "Mehr erfahren",

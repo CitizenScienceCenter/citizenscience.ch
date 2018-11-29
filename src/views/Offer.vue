@@ -36,7 +36,7 @@
     "section-knowledge-text-2": "Public participation in scientific research is not a new concept; the National Audubon Society started its annual Christmas Bird Count in 1900 (more than 75000 citizens participated in 2017!), and in the last century amateur scientists have participated in projects to monitor water quality, search new stars, study biodiversity.",
     "section-knowledge-text-3": "By experimenting with  procedures, testing protocol, and sharing best practices, practitioners in all fields have developed what is now a solid methodology. Principles and protocols exist today, and the Center’s team is here to help scientists and citizens setup and run projects that guarantee excellent scientific results.",
     "section-knowledge-text-4": "However, Citizen Science is an evolving field with multiple dimensions, including quality, sustainability, transparency, inclusiveness, and more. As all fields of science, it requires continuous research and exploration, that the Center’s researcher will carry on to guarantee the development of appropriate tools and new knowledge.",
-    "section-knowledge-button-principles": "10 principle of citizen scinece by ECSA",
+    "section-knowledge-button-principles": "10 principle of Citizen Science",
 
     "section-pwa-heading": "Participatory Science Academy",
     "section-pwa-text": "The Participatory Science Academy (“Partizipative Wissenschaftsakademie”, PWA), established thanks to generous support of <a href='https://www.stiftung-mercator.ch/de/stiftung/' target='_blank'>Mercator Foundation Switzerland</a>, seeks to empower citizens and scientists to collaborate in all phases of the research process. To reach that goal, the Academy provides training and knowledge for citizen science for both citizen scientists as well as academic scientists. In order to enable the joint development of promising ideas, the PWA also awards seed grants to project teams.",
@@ -80,7 +80,7 @@
     "section-knowledge-text-2": "Die Beteiligung der breiten Öffentlichkeit an wissenschaftlicher Forschung ist kein neues Gebiet: Die National Audubon Society in den USA führte im Jahr 1900 den Christmas Bird Count zum ersten Mal durch (im Jahr 2017 nahmen übrigens über 75'000 Freiwillige daran teil!).<br>Während des letzten Jahrhunderts haben Amateur-Wissenschaftlerinnen und Amateur-Wissenschaftler sich an einer Vielzahl von Projekten beteiligt, um Wasserqualität zu messen, nach neuen Sternen zu suchen oder die Artenvielfalt zu studieren. ",
     "section-knowledge-text-3": "Durch Experimentierfreudigkeit, das Testen von Verfahren und das Teilen von Best Practice Beispielen haben Citizen Scientists solide Methoden entwickelt. Dank der Arbeit dieser vielen tausenden Leute existieren heute Prinzipien und Konventionen, die das Team des Centers in Zürich Wissenschaftlern und Bürgern vermitteln möchte. Wir helfen dabei, Citizen Science Projekte entlang dieser Standards umzusetzen und exzellente wissenschaftliche Ergebnisse zu erlangen.",
     "section-knowledge-text-4": "Citizen Science ist ein lebendiges Feld, dass sich ständig in vielen Dimensionen weiterentwickelt, zum Beispiel hinsichtlich Qualität, Nachhaltigkeit, Transparenz und Inklusivität. Wie alle Wissenschaftsformen erfordert auch Citizen Science ein kontinuierliches Erforschen und Erkunden des eigenen Gebiets. Genau dies betreiben wir am Citizen Science Center und setzen uns dafür ein, dass Wissen und Tools fortwährend weiterentwickelt werden.",
-    "section-knowledge-button-principles": "Die 10 Prinzipien von Citizen Scinece der ECSA",
+    "section-knowledge-button-principles": "10 Prinzipien von Citizen Science",
 
     "section-pwa-heading": "Partizipative Wissenschaftsakademie",
     "section-pwa-text": "Die Partizipative Wissenschaftsakademie (PWA) wird durch die  <a href='https://www.stiftung-mercator.ch/de/stiftung/' target='_blank'>Stiftung Mercator Schweiz</a> gefördert. Die PWA hat zum Ziel, die Teilhabe von Bürgerinnen und Bürgern an allen Phasen des wissenschaftlichen Forschungsprozesses zu ermöglichen. Im Rahmen eines Weiterbildungsangebots vermittelt sie Forschenden wie auch interessierten Bürgerinnen und Bürgern Kenntnisse und Kompetenzen für partizipatives Arbeiten. Zudem vergibt sie Seed Grants.",
@@ -120,6 +120,15 @@
     </div>
 
     <app-content-section>
+      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-6 col-large-7 col-large-before-1 col-wrapping col-large-no-bottom-margin">
+              <img src="img/graphic-platform.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
@@ -154,15 +163,6 @@
           </div>
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
-        <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-6">
-              <img src="img/graphic-platform.png"/>
-            </div>
-          </div>
-        </div>
-      </div>
     </app-content-section>
 
     <app-content-section color="dark">
@@ -178,6 +178,15 @@
 
     <app-content-section>
 
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-6 col-large-7 col-large-after-1 col-wrapping col-large-no-bottom-margin">
+              <img src="img/graphic-community.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
@@ -193,15 +202,6 @@
             </ul>
             <p v-html="$t('section-community-text-2')"></p>
             <p v-html="$t('section-community-text-3')"></p>
-          </div>
-        </div>
-      </div>
-      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
-        <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-6">
-              <img src="img/graphic-community.png"/>
-            </div>
           </div>
         </div>
       </div>
@@ -258,6 +258,15 @@
 
 
     <app-content-section>
+      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-6 col-large-7 col-large-before-1 col-wrapping col-large-no-bottom-margin">
+              <img src="img/graphic-knowledge.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
@@ -272,15 +281,6 @@
                 {{ $t('section-knowledge-button-principles') }}
               </button>
             </p>
-          </div>
-        </div>
-      </div>
-      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
-        <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-6">
-              <img src="img/graphic-knowledge.png"/>
-            </div>
           </div>
         </div>
       </div>

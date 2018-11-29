@@ -92,6 +92,9 @@
               <li>
                 <a v-scroll-to="'#partners'">{{ $t('section-partnership-heading') }}</a>
               </li>
+              <li>
+                <a v-scroll-to="'#contact'">{{ $t('section-contact-heading') }}</a>
+              </li>
             </ul>
 
           </div>
@@ -238,7 +241,7 @@
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-6 scroll-effect">
-            <h2 class="heading centered" id="people">{{ $t('section-contact-heading') }}</h2>
+            <h2 class="heading centered" id="contact">{{ $t('section-contact-heading') }}</h2>
             <p v-html="$t('section-contact-text')"></p>
             <ul>
               <li v-html="$t('section-contact-listitem-1')"></li>

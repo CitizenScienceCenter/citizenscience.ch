@@ -138,9 +138,20 @@
     </div>
 
     <app-content-section>
+      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin">
+              <div class="extra-padding">
+                <img src="img/graphic-citizen-science.png"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="content-wrapper scroll-effect">
         <div class="row">
-          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-no-bottom-margin">
             <h2 class="heading centered left-aligned-large" id="citizen-science">{{ $t('section-citizenscience-heading') }}</h2>
             <p v-html="$t('section-citizenscience-text')"></p>
             <p>
@@ -163,35 +174,24 @@
 
         </div>
       </div>
-      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
-        <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-tablet-portrait-10 col-large-6">
-              <div class="extra-padding">
-                <img src="img/graphic-citizen-science.png"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </app-content-section>
 
 
     <app-content-section color="light-greyish">
-      <div class="content-wrapper scroll-effect">
-        <div class="row">
-          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large" id="projects">{{ $t('section-projects-heading') }}</h2>
-            <p v-html="$t('section-projects-text')"></p>
-          </div>
-        </div>
-      </div>
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
-            <div class="col col-6">
+            <div class="col col-6 col-wrapping col-large-no-bottom-margin">
               <img src="img/graphic-projects.png"/>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-wrapper scroll-effect">
+        <div class="row">
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-no-bottom-margin">
+            <h2 class="heading centered left-aligned-large" id="projects">{{ $t('section-projects-heading') }}</h2>
+            <p v-html="$t('section-projects-text')"></p>
           </div>
         </div>
       </div>
@@ -226,24 +226,24 @@
 
 
     <app-content-section>
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-8 col-large-6 col-wrapping col-large-no-bottom-margin">
+              <img src="img/sdg-wheel.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="content-wrapper scroll-effect">
         <div class="row">
-          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-no-bottom-margin">
             <h2 class="heading centered left-aligned-large" id="sdgs">{{ $t('section-sdg-heading') }}</h2>
             <p v-html="$t('section-sdg-text')"></p>
             <p v-html="$t('section-sdg-text-2')"></p>
             <p v-html="$t('section-sdg-text-3')"></p>
           </div>
 
-        </div>
-      </div>
-      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
-        <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-8 col-large-6">
-              <img src="img/sdg-wheel.png"/>
-            </div>
-          </div>
         </div>
       </div>
     </app-content-section>
@@ -273,8 +273,13 @@
 
         <div class="content-subsection">
           <div class="content-wrapper">
-            <div class="row row-centered row-middle">
-              <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
+            <div class="row row-centered row-reverse-large row-middle">
+              <div class="col col-10 col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
+                <div class="extra-padding-h">
+                  <img src="img/o17.jpg" style="border-radius:50%" />
+                </div>
+              </div>
+              <div class="col col-large-5 col-large-before-1 col-wrapping col-no-bottom-margin scroll-effect">
                 <h3 class="subheading centered left-aligned-large">{{ $t('section-partnerships-openseventeen-subheading') }}
                   <p class="lead" v-html="$t('section-partnerships-openseventeen-lead')"></p>
                 </h3>
@@ -286,10 +291,24 @@
                   </button>
                 </p>
               </div>
-              <div class="col col-10 col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
+            </div>
+          </div>
+        </div>
+
+        <div class="content-subsection">
+          <div class="content-wrapper">
+            <div class="row row-centered row-middle">
+              <div class="col col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
                 <div class="extra-padding-h">
-                  <img src="img/o17.jpg" style="border-radius:50%" />
+                  <img src="img/graphic-toolkit.png" />
                 </div>
+              </div>
+              <div class="col col-large-5 col-large-after-1 col-wrapping col-no-bottom-margin scroll-effect">
+                <h3 class="subheading centered left-aligned-large">{{ $t('section-partnerships-toolkit-heading') }}
+                  <p class="lead" v-html="$t('section-partnerships-toolkit-lead')"></p>
+                </h3>
+                <p v-html="$t('section-partnerships-toolkit-text')"></p>
+                <p v-html="$t('section-partnerships-toolkit-text-2')"></p>
               </div>
             </div>
           </div>
@@ -298,36 +317,7 @@
         <div class="content-subsection">
           <div class="content-wrapper">
             <div class="row row-centered row-reverse-large row-middle">
-              <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-                <h3 class="subheading centered left-aligned-large">{{ $t('section-partnerships-toolkit-heading') }}
-                  <p class="lead" v-html="$t('section-partnerships-toolkit-lead')"></p>
-                </h3>
-                <p v-html="$t('section-partnerships-toolkit-text')"></p>
-                <p v-html="$t('section-partnerships-toolkit-text-2')"></p>
-              </div>
-              <div class="col col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
-                <div class="extra-padding-h">
-                  <img src="img/graphic-toolkit.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-subsection">
-          <div class="content-wrapper">
-            <div class="row row-centered row-middle">
-              <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-                <h3 class="subheading centered left-aligned-large">{{ $t('section-partnerships-snapp-heading') }}
-                  <!-- <p class="lead" v-html="$t('section-partnerships-snapp-lead')"></p> -->
-                </h3>
-                <p v-html="$t('section-partnerships-snapp-text')"></p>
-                <p v-html="$t('section-partnerships-snapp-text-2')"></p>
-                <p>
-
-                </p>
-              </div>
-              <div class="col col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
+              <div class="col col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
                 <div class="extra-padding-h">
                   <p>
                     <img src="img/snapp.jpg" style="border-radius:50%;" />
@@ -336,6 +326,16 @@
                     <img src="img/snapp-logos.png" />
                   </p>
                 </div>
+              </div>
+              <div class="col col-large-5 col-large-before-1 col-wrapping col-no-bottom-margin scroll-effect">
+                <h3 class="subheading centered left-aligned-large">{{ $t('section-partnerships-snapp-heading') }}
+                  <!-- <p class="lead" v-html="$t('section-partnerships-snapp-lead')"></p> -->
+                </h3>
+                <p v-html="$t('section-partnerships-snapp-text')"></p>
+                <p v-html="$t('section-partnerships-snapp-text-2')"></p>
+                <p>
+
+                </p>
               </div>
             </div>
           </div>

@@ -7,8 +7,7 @@
     "cover-button-your-project": "Suggest a project",
 
     "section-explanation-lead": "The Citizen Science Center Zurich enables <b>researchers</b> and <b>citizens</b> to create and conduct research projects that produce <b>excellent</b> and <b>participatory science</b> while supporting the UN SDGs.",
-    "section-explanation-text": "In Citizen Science projects, the unique collaboration of professional scientists and the general public provides new and invaluable knowledge in areas from physics to linguistics to human health, at the local, regional or global leves.",
-    "section-explanation-text-2": "The Center supports next-generation Citizen Science, ie. projects that produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
+    "section-explanation-text": "In next–generation Citizen Science projects the general public provides new and invaluable knowledge in areas from physics to linguistics to human health. Projects produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
     "section-explanation-button": "Learn more",
 
     "section-offer-heading": "What we offer",
@@ -41,8 +40,7 @@
     "cover-button-your-project": "Neue Projektidee?",
 
     "section-explanation-lead": "Das Citizen Science Center Zürich bringt <b>Wissenschaftler</b> und <b>Bürger</b> zusammen, um gemeinsam exzellente Forschungsprojekte zu entwickeln, die die UN Sustainable Development Goals verfolgen.",
-    "section-explanation-text": "Durch die Zusammenarbeit von professionell Forschenden und der breiten Öffentlichkeit in Citizen Science Projekten entsteht neues und wertvolles Wissen; in ganz verschiedenen Bereichen wie Physik, Linguistik oder Gesundheit. Lokal, regional und global.",
-    "section-explanation-text-2": "An unserem Center möchten wir zukunftsweisende Citizen Science unterstützen. Das bedeutet, dass wir Projekte mit hohen wissenschaftlichen Standards und Open Data fördern, um Bürgern, Communities und Regierungen zu helfen, ihre Schritte in Richtung der UN Ziele für nachhaltige Entwicklung zu überwachen und zu bewerten.",
+    "section-explanation-text": "Durch die Zusammenarbeit von professionell Forschenden und der breiten Öffentlichkeit in Citizen Science Projekten entsteht neues und wertvolles Wissen; in ganz verschiedenen Bereichen wie Physik, Linguistik oder Gesundheit. Lokal, regional und global. An unserem Center möchten wir zukunftsweisende Citizen Science unterstützen. Das bedeutet, dass wir Projekte mit hohen wissenschaftlichen Standards und Open Data fördern, um Bürgern, Communities und Regierungen zu helfen, ihre Schritte in Richtung der UN Ziele für nachhaltige Entwicklung zu überwachen und zu bewerten.",
     "section-explanation-button": "Mehr erfahren",
 
     "section-offer-heading": "Was wir bieten",
@@ -98,9 +96,7 @@
           <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
             <div>
               <p class="lead" v-html="$t('section-explanation-lead')"></p>
-              <p>
-                <span v-html="$t('section-explanation-text')"></span>&nbsp;<span v-html="$t('section-explanation-text-2')"></span>
-              </p>
+              <p v-html="$t('section-explanation-text')"></p>
               <p class="centered left-aligned-large">
                 <router-link tag="button" to="/activities" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
               </p>
@@ -191,7 +187,13 @@
 
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
-        <div class="row row-reverse-large row-middle">
+        <div class="row row-centered row-middle">
+
+            <div class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect scroll-effect-delayed-1">
+                <div class="extra-padding-h">
+                    <img src="img/graphic-create-project.png" />
+                </div>
+            </div>
 
           <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
             <div>
@@ -223,12 +225,6 @@
             </div>
           </div>
 
-          <div class="col col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
-            <div class="extra-padding-h">
-              <img src="img/graphic-create-project.png" />
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -245,8 +241,8 @@
               {{ $t('section-about-text-3') }}
             </p>
             <p class="centered left-aligned-large">
-              <img v-if="this.$i18n.locale === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/shared/uzh_eth_logo_e_pos.svg" style="width:50%" />
-              <img v-else alt="Universität Zürich / ETH Zürich" src="@/assets/shared/uzh_eth_logo_d_pos.svg" style="width:50%" />
+              <img v-if="this.$i18n.locale === 'en'" class="uzh-eth-logo" alt="University of Zurich / ETH Zurich" src="@/assets/shared/uzh_eth_logo_e_pos.svg" />
+              <img v-else alt="Universität Zürich / ETH Zürich" class="uzh-eth-logo" src="@/assets/shared/uzh_eth_logo_d_pos.svg" />
             </p>
             <p class="centered left-aligned-large extra-margin-top">
               <router-link tag="button" to="/about" class="button button-secondary">{{ $t('section-about-button') }}</router-link>
@@ -308,5 +304,25 @@ export default {
 </script>
 
 <style lang="scss">
+
+
+    @import '@/styles/theme.scss';
+    @import '@/styles/shared/variables.scss';
+
+    .content-section {
+        .uzh-eth-logo {
+            width: 75%;
+        }
+    }
+
+    @media only screen and (min-width: $viewport-large) {
+
+        .content-section {
+            .uzh-eth-logo {
+                width: 66.667%;
+            }
+        }
+
+    }
 
 </style>

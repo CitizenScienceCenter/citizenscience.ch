@@ -15,7 +15,7 @@ if( !store.state.settings.language ) {
         language = language.split('_')[0];
     }
     if( language !== 'en' && language !== 'de') {
-        language = "en";
+        language = "de";
     }
 
   store.dispatch("settings/setLanguage", language );

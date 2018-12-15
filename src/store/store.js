@@ -13,10 +13,18 @@ Vue.use(Vuex)
 
 const debug = process.env.NODE_ENV !== 'production'
 
+/*
 export default new Vuex.Store({
   modules: {
     settings
   },
   strict: debug,
   plugins: [vuexPersist.plugin]
+})
+*/
+export default new Vuex.Store({
+    modules: {
+        settings
+    },
+    strict: debug
 })

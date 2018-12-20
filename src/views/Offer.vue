@@ -1,6 +1,8 @@
 <i18n>
 {
   "en": {
+    "page-title": "What we offer",
+
     "section-tools-heading": "Interactive Tools",
     "section-tools-text": "The Citizen Science Center Zürich is developing a platform that will make it easy for scientists and citizens to contribute to existing Citizens Science projects, or create new ones. The platform includes two components: a web interface and a mobile (smartphone) application.",
     "section-tools-subheading-1": "Web",
@@ -45,6 +47,8 @@
     "section-newsletter-heading": "Sign up for our Newsletter"
   },
   "de": {
+    "page-title": "Was wir bieten",
+
     "section-tools-heading": "Interaktive Tools",
     "section-tools-text": "Das Citizen Science Center Zürich entwickelt eine Web-Plattform, die es Wissenschaftlerinnen und Bürgern ermöglicht, sich an bestehenden Citizen Science Projekten zu beteiligen oder neue zu entwickeln – über ein Web Interface und mobile Smartphone Apps.",
     "section-tools-subheading-1": "Web",
@@ -347,6 +351,11 @@ export default {
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
+    metaInfo: function() {
+        return {
+            title: this.$t('page-title')
+        }
+    },
   methods: {
     openInNewTab: function(url) {
       var win = window.open(url, '_blank');

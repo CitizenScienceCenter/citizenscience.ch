@@ -1,6 +1,8 @@
 <i18n>
 {
   "en": {
+    "page-title": "Events",
+
     "section-events-heading": "Events",
 
     "event-genealogy-date": "1. Dezember 2018",
@@ -13,6 +15,8 @@
 
     },
   "de": {
+    "page-title": "Veranstaltungen",
+
     "section-events-heading": "Events",
 
     "event-genealogy-date": "1. Dezember 2018",
@@ -99,6 +103,11 @@ export default {
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
+    metaInfo: function() {
+        return {
+            title: this.$t('page-title')
+        }
+    },
     methods: {
         openInNewTab: function(url) {
             var win = window.open(url, '_blank');

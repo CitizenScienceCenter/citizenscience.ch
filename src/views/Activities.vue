@@ -1,6 +1,8 @@
 <i18n>
 {
   "en": {
+    "page-title": "What we do",
+
     "anchor-navigation-link-1": "Citizen Science “Zurich Style”",
     "anchor-navigation-link-2": "Projects",
     "anchor-navigation-link-3": "Benefits",
@@ -52,6 +54,8 @@
     "section-newsletter-heading": "Sign up for our Newsletter"
   },
   "de": {
+    "page-title": "Was wir tun",
+
     "anchor-navigation-link-1": "Citizen Science “Zürich Style”",
     "anchor-navigation-link-2": "Projekte",
     "anchor-navigation-link-3": "Vorteile",
@@ -381,6 +385,11 @@ export default {
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
+    metaInfo: function() {
+        return {
+            title: this.$t('page-title')
+        }
+    },
   methods: {
     openInNewTab: function(url) {
       var win = window.open(url, '_blank');

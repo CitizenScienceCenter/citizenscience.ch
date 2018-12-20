@@ -1,6 +1,8 @@
 <i18n>
 {
   "en": {
+    "page-title": "About us",
+
     "section-mission-heading": "Mission & Goals",
     "section-mission-text": "<b>The Center aims at:</b>",
     "section-mission-listitem-1": "Engaging academic scientists and the public in next-generation citizen science projects, tackling problems in different fields of science and society, from fundamental physics to human health.",
@@ -35,6 +37,8 @@
     "section-newsletter-heading": "Sign up for our Newsletter"
   },
   "de": {
+    "page-title": "Über uns",
+
     "section-mission-heading": "Mission & Ziele",
     "section-mission-text": "<b>Die Ziele des Centers sind folgende:</b>",
     "section-mission-listitem-1": "Forscherinnen und Forschern sowie Bürgerinnen und Bürgern die Möglichkeit zu geben, gemeinsame Forschungsprojekte in verschiedenen Bereichen von Wissenschaft und Gesellschaft durchzuführen, von Grundlagenphysik bis hin zu Gesundheitsthemen.",
@@ -291,6 +295,11 @@ export default {
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
+    metaInfo: function() {
+        return {
+            title: this.$t('page-title')
+        }
+    },
   methods: {
       openInNewTab: function(url) {
           var win = window.open(url, '_blank');

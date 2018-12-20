@@ -27,54 +27,42 @@ export const i18n = new VueI18n({
   messages: {
     'en': {
       'page-homepage': {
-        'link': 'Home',
-        'title': 'Citizen Science Center Zurich'
+        'link': 'Home'
       },
       'page-activities': {
-        'link': 'What we do',
-        'title': 'What we do – Citizen Science Center Zürich'
+        'link': 'What we do'
       },
       'page-offer': {
-        'link': 'What we offer',
-        'title': 'What we offer – Citizen Science Center Zürich'
+        'link': 'What we offer'
       },
       'page-about': {
-        'link': 'About us',
-        'title': 'About us – Citizen Science Center Zurich'
+        'link': 'About us'
       },
       'page-events': {
-          'link': 'Events',
-          'title': 'Events – Citizen Science Center Zurich'
+          'link': 'Events'
       },
       'page-terms': {
-          'link': 'Privacy Policy & Terms of Use',
-          'title': 'Privacy Policy & Terms of Use – Citizen Science Center Zurich'
+          'link': 'Privacy Policy & Terms of Use'
       }
     },
     'de': {
       'page-homepage': {
-        'link': 'Home',
-        'title': 'Citizen Science Center Zurich'
+        'link': 'Home'
       },
       'page-activities': {
-        'link': 'Was wir tun',
-        'title': 'Was wir tun – Citizen Science Center Zürich'
+        'link': 'Was wir tun'
       },
       'page-offer': {
-        'link': 'Was wir bieten',
-        'title': 'Was wir bieten – Citizen Science Center Zürich'
+        'link': 'Was wir bieten'
       },
       'page-about': {
-        'link': 'Über uns',
-        'title': 'Über uns – Citizen Science Center Zürich'
+        'link': 'Über uns'
       },
       'page-events': {
-          'link': 'Events',
-          'title': 'Events – Citizen Science Center Zürich'
+          'link': 'Events'
       },
       'page-terms': {
-          'link': 'Privacy Policy & Terms of Use',
-          'title': 'Privacy Policy & Terms of Use – Citizen Science Center Zürich'
+          'link': 'Privacy Policy & Terms of Use'
       }
     }
   }

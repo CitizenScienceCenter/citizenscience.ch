@@ -1,6 +1,9 @@
 <i18n>
 {
   "en": {
+    "page-title": "Citizen Science Center Zurich",
+
+
     "cover-heading": "Next Generation Citizen Science",
     "cover-subheading": "Citizen Science Center Zurich",
     "cover-button-projects": "Start contributing",
@@ -34,6 +37,8 @@
     "section-newsletter-heading": "Sign up for our Newsletter"
   },
   "de": {
+    "page-title": "Citizen Science Center Zürich",
+
     "cover-heading": "Next Generation Citizen Science",
     "cover-subheading": "Citizen Science Center Zurich",
     "cover-button-projects": "Jetzt mitforschen",
@@ -298,6 +303,12 @@ export default {
     'app-project-list': ProjectList,
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
+  },
+  metaInfo: function() {
+      return {
+        title: this.$t('page-title'),
+        titleTemplate: null
+      }
   }
 }
 

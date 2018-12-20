@@ -230,7 +230,7 @@
       </div>
     </app-content-section>
 
-    <app-content-section>
+    <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">

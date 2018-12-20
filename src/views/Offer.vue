@@ -96,30 +96,30 @@
 <template>
   <div>
 
-    <div class="anchor-navigation">
+    <app-content-section class="content-section-flat" color="superlight-greyish">
       <div class="content-wrapper scroll-effect">
         <div class="row row-centered">
           <div class="col col-tablet-portrait-8 col-large-12">
-
-            <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
-            <ul>
-              <li>
-                <a v-scroll-to="'#tools'">{{ $t('section-tools-heading') }}</a>
-              </li>
-              <li>
-                <a v-scroll-to="'#community'">{{ $t('section-community-heading') }}</a>
-              </li>
-              <li>
-                <a v-scroll-to="'#knowledge'">{{ $t('section-knowledge-heading') }}</a>
-              </li>
-            </ul>
-
+            <div class="anchor-navigation">
+              <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
+              <ul>
+                <li>
+                  <a v-scroll-to="'#tools'">{{ $t('section-tools-heading') }}</a>
+                </li>
+                <li>
+                  <a v-scroll-to="'#community'">{{ $t('section-community-heading') }}</a>
+                </li>
+                <li>
+                  <a v-scroll-to="'#knowledge'">{{ $t('section-knowledge-heading') }}</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </app-content-section>
 
-    <app-content-section>
+    <app-content-section class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
@@ -176,8 +176,7 @@
       </div>
     </app-content-section>
 
-    <app-content-section>
-
+    <app-content-section class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
@@ -205,7 +204,6 @@
           </div>
         </div>
       </div>
-
     </app-content-section>
 
 
@@ -257,7 +255,7 @@
     </app-content-section>
 
 
-    <app-content-section>
+    <app-content-section class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
@@ -286,7 +284,7 @@
       </div>
     </app-content-section>
 
-    <app-content-section color="light-greyish">
+    <app-content-section color="light-greyish" class="overflow-hidden">
 
       <div class="content-wrapper scroll-effect">
         <div class="row">

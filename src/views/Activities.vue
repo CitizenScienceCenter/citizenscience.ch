@@ -1,7 +1,7 @@
 <i18n>
 {
   "en": {
-    "anchor-navigation-link-1": "Citizen Science",
+    "anchor-navigation-link-1": "Citizen Science “Zurich Style”",
     "anchor-navigation-link-2": "Projects",
     "anchor-navigation-link-3": "Benefits",
     "anchor-navigation-link-4": "Sustainable Development Goals",
@@ -52,13 +52,13 @@
     "section-newsletter-heading": "Sign up for our Newsletter"
   },
   "de": {
-    "anchor-navigation-link-1": "Citizen Science",
+    "anchor-navigation-link-1": "Citizen Science “Zürich Style”",
     "anchor-navigation-link-2": "Projekte",
     "anchor-navigation-link-3": "Vorteile",
     "anchor-navigation-link-4": "Sustainable Development Goals",
     "anchor-navigation-link-5": "Partnerschaften",
 
-    "section-citizenscience-heading": "Citizen Science",
+    "section-citizenscience-heading": "Citizen Science “Zürich Style”",
     "section-citizenscience-text": "Am Citizen Science Center Zürich sehen wir unsere Aufgabe im Erkunden, Unterstützen und Verbreiten von Citizen Science, zu deutsch Bürgerwissenschaft. Citizen Science hat sich in den letzten 100 Jahren immer mehr etabliert; man versteht darunter die Beteiligung der breiten Öffentlichkeit an wissenschaftlicher Forschung. Ein Citizen Scientist kann jede und jeder werden, unabhängig von Herkunft und Staatsangehörigkeit.",
     "section-citizenscience-example": "<b>Beispiel:</b> Im Projekt Galaxy Zoo haben hunderttausende Citizen Scientists anhand von Teleskopaufnahmen Millionen von Galaxien klassifiziert. (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
     "section-citizenscience-text-2": "Die Beteiligung von nicht professionell wissenschaftlich tätigen Personen in der Forschung ist eine Praxis, die viele Formen annehmen kann: Community based research, Crowdsourcing, community-based monitoring, civic science und mehr. Was Citizen Science dabei besonders ausmacht, ist die <b>Zusammenarbeit von professionellen Wissenschaftlern mit Bürgerinnen</b>, die aktive Beteiligung von beiden Seiten und die Mitwirkung der forschenden Bürger potenziell in allen Phasen des Forschungsprozesses.",
@@ -108,36 +108,37 @@
 <template>
   <div>
 
-    <div class="anchor-navigation">
+    <app-content-section class="content-section-flat" color="superlight-greyish">
       <div class="content-wrapper scroll-effect">
         <div class="row row-centered">
           <div class="col col-tablet-portrait-8 col-large-12">
+            <div class="anchor-navigation">
 
             <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
-            <ul>
-              <li>
-                <a v-scroll-to="'#citizen-science'">{{ $t('anchor-navigation-link-1') }}</a>
-              </li>
-              <li>
-                <a v-scroll-to="'#projects'">{{ $t('anchor-navigation-link-2') }}</a>
-              </li>
-              <li>
-                <a v-scroll-to="'#benefits'">{{ $t('anchor-navigation-link-3') }}</a>
-              </li>
-              <li>
-                <a v-scroll-to="'#sdgs'">{{ $t('anchor-navigation-link-4') }}</a>
-              </li>
-              <li>
-                <a v-scroll-to="'#partnerships'">{{ $t('anchor-navigation-link-5') }}</a>
-              </li>
-            </ul>
-
+              <ul>
+                <li>
+                  <a v-scroll-to="'#citizen-science'">{{ $t('anchor-navigation-link-1') }}</a>
+                </li>
+                <li>
+                  <a v-scroll-to="'#projects'">{{ $t('anchor-navigation-link-2') }}</a>
+                </li>
+                <li>
+                  <a v-scroll-to="'#benefits'">{{ $t('anchor-navigation-link-3') }}</a>
+                </li>
+                <li>
+                  <a v-scroll-to="'#sdgs'">{{ $t('anchor-navigation-link-4') }}</a>
+                </li>
+                <li>
+                  <a v-scroll-to="'#partnerships'">{{ $t('anchor-navigation-link-5') }}</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </app-content-section>
 
-    <app-content-section>
+    <app-content-section class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
@@ -177,7 +178,7 @@
     </app-content-section>
 
 
-    <app-content-section color="light-greyish">
+    <app-content-section color="light-greyish" class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
@@ -225,7 +226,7 @@
 
 
 
-    <app-content-section>
+    <app-content-section class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">

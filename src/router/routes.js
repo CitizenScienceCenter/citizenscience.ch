@@ -39,6 +39,6 @@ export const routes = [
     { path: '/activities', component: Activities, meta: {page: 'page-activities', nav: true} },
     { path: '/offer', component: Offer, meta: {page: 'page-offer', nav: true} },
     { path: '/about', component: About, meta: {page: 'page-about', nav: true} },
-    { path: '/events', component: Events, meta: {page: 'page-events', nav: true} },
+    { path: '/events', component: Events, meta: {page: 'page-events', nav: false} },
     { path: '/terms', component: Terms, meta: {page: 'page-terms', nav: false} }
 ]

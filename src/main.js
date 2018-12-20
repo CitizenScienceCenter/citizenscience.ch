@@ -28,7 +28,6 @@ store.watch(
     // (state) => state.c3s && state.c3s.client,
     (value) => {
         if (value !== null) {
-            console.log('loaded');
             new Vue({
                 store,
                 router,

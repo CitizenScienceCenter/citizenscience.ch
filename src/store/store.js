@@ -1,30 +1,24 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import settings from './modules/settings'
-import VuexPersist from 'vuex-persist'
+// import VuexPersist from 'vuex-persist'
 
 
+/*
 const vuexPersist = new VuexPersist({
   key: 'my-app',
-  storage: localStorage
+  storage: sessionStorage
 })
+*/
 
 Vue.use(Vuex)
 
 const debug = process.env.NODE_ENV !== 'production'
 
-/*
 export default new Vuex.Store({
   modules: {
     settings
   },
   strict: debug,
-  plugins: [vuexPersist.plugin]
-})
-*/
-export default new Vuex.Store({
-    modules: {
-        settings
-    },
-    strict: debug
+  //plugins: [vuexPersist.plugin]
 })

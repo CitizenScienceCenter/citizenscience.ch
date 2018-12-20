@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Crawl-delay: 5
+Sitemap: https://www.citizenscience.ch/sitemap.xml

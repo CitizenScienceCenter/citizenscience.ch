@@ -140,7 +140,7 @@
             <p v-html="$t('section-tools-text')"></p>
             <h3 class="subheading">{{ $t('section-tools-subheading-1') }}</h3>
             <p v-html="$t('section-tools-text-2')"></p>
-            <p>
+            <div class="margin-bottom">
               <div class="row row-middle">
                 <div class="col col-3">
                   <img src="img/projects/geotagx.jpg" style="display: block; width:100%; border-radius:50%"/>
@@ -149,10 +149,10 @@
                   <p v-html="$t('section-tools-example-1')" class="small"></p>
                 </div>
               </div>
-            </p>
+            </div>
             <h3 class="subheading">{{ $t('section-tools-subheading-2') }}</h3>
             <p v-html="$t('section-tools-text-3')"></p>
-            <p>
+            <div class="margin-bottom">
               <div class="row row-middle">
                 <div class="col col-3">
                   <img src="img/projects/mosquito.jpg" style="display: block; width:100%; border-radius:50%"/>
@@ -161,7 +161,7 @@
                   <p v-html="$t('section-tools-example-2')" class="small"></p>
                 </div>
               </div>
-            </p>
+            </div>
             <p v-html="$t('section-tools-text-4')"></p>
             <p v-html="$t('section-tools-text-5')"></p>
           </div>

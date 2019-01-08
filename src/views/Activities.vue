@@ -159,7 +159,7 @@
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-no-bottom-margin">
             <h2 class="heading centered left-aligned-large" id="citizen-science">{{ $t('section-citizenscience-heading') }}</h2>
             <p v-html="$t('section-citizenscience-text')"></p>
-            <p>
+            <div class="margin-bottom">
               <div class="row row-middle">
                 <div class="col col-3">
                   <img src="img/projects/galaxyzoo.jpg" style="display: block; width:100%; border-radius:50%"/>
@@ -168,7 +168,7 @@
                   <p v-html="$t('section-citizenscience-example')" class="small"></p>
                 </div>
               </div>
-            </p>
+            </div>
             <p v-html="$t('section-citizenscience-text-2')"></p>
             <p v-html="$t('section-citizenscience-text-3')"></p>
             <p v-html="$t('section-citizenscience-text-4')"></p>

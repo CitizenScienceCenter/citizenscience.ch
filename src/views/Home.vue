@@ -207,7 +207,7 @@
                 {{ $t('section-build-project-text') }}
               </p>
               <p class="button-group centered left-aligned-large">
-                <button class="button button-secondary button-icon">
+                <button class="button button-secondary button-icon" @click="openInNewTab('mailto:info@citizenscience.ch')">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                   <path d="M502.3,190.8c3.9-3.1,9.7-0.2,9.7,4.7V400c0,26.5-21.5,48-48,48H48c-26.5,0-48-21.5-48-48V195.6c0-5,5.7-7.8,9.7-4.7
@@ -217,7 +217,7 @@
                   </svg>
                   info@citizenscience.ch
                 </button>
-                <button class="button button-secondary button-icon">
+                <button class="button button-secondary button-icon" @click="openInNewTab('tel:+41446342197')">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                   <path d="M493.4,24.6l-104-24c-11.3-2.6-22.9,3.3-27.5,13.9l-48,112c-4.2,9.8-1.4,21.3,6.9,28l60.6,49.6
@@ -309,7 +309,13 @@ export default {
         title: this.$t('page-title'),
         titleTemplate: null
       }
-  }
+  },
+    methods: {
+        openInNewTab: function(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+    }
 }
 
 </script>

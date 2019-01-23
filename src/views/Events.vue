@@ -3,27 +3,21 @@
   "en": {
     "page-title": "Events",
 
-    "section-events-heading": "Events",
+    "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
+    "section-lunches-subheading": "Brown Bag Lunches in Spring Term 2019",
+    "section-lunches-text": "Always from 12am – 1 pm at RAF-E-011, Rämistrasse 66 (left entrance), unless told otherwise Drinks and sandwiches provided",
+    "section-lunches-text-2": "<b>Please register via E-Mail</b>",
 
-    "event-genealogy-date": "1. Dezember 2018",
-    "event-genealogy-heading": "Workshop: Genetische Genealogie – Chancen und Herausforderungen",
-    "event-genealogy-text": "Woher komme ich, wer waren meine Ahnen, wer bin ich? Diese zentralen Fragen beschäftigen die Familienforscherin und den Familienforscher seit jeher.",
-    "event-genealogy-text-2": "ETH Zürich Hönggerberg, Gebäude HCI<br>Registration until: 23.11.2018",
-    "event-genealogy-button": "Event Website",
 
     "section-newsletter-heading": "Sign up for our Newsletter"
-
     },
   "de": {
-    "page-title": "Veranstaltungen",
+    "page-title": "Events",
 
-    "section-events-heading": "Events",
-
-    "event-genealogy-date": "1. Dezember 2018",
-    "event-genealogy-heading": "Workshop: Genetische Genealogie – Chancen und Herausforderungen",
-    "event-genealogy-text": "Woher komme ich, wer waren meine Ahnen, wer bin ich? Diese zentralen Fragen beschäftigen die Familienforscherin und den Familienforscher seit jeher.",
-    "event-genealogy-text-2": "ETH Zürich Hönggerberg, Gebäude HCI<br>Anmeldeschluss: 23.11.2018",
-    "event-genealogy-button": "Zur Event Website",
+    "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
+    "section-lunches-subheading": "Brown Bag Lunches in Spring Term 2019",
+    "section-lunches-text": "Always from 12am – 1 pm at RAF-E-011, Rämistrasse 66 (left entrance), unless told otherwise Drinks and sandwiches provided",
+    "section-lunches-text-2": "<b>Please register via E-Mail</b>",
 
     "section-newsletter-heading": "Abonniere unseren Newsletter"
   }
@@ -32,42 +26,70 @@
 <template>
   <div>
 
-      <app-content-section>
-
-          <div class="content-wrapper">
-              <div class="row row-centered scroll-effect">
-                  <div class="col col-large-10">
-                      <h2 class="heading centered" id="projects">{{ $t('section-events-heading') }}</h2>
-                  </div>
-              </div>
-          </div>
-
-          <div class="content-subsection">
+      <app-content-section class="overflow-hidden">
+          <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
               <div class="content-wrapper">
-                  <div class="row row-centered row-reverse-large row-middle">
-                      <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-                          <h3 class="subheading centered left-aligned-large">
-                              <p class="lead">{{ $t('event-genealogy-date') }}</p>
-                              {{ $t('event-genealogy-heading') }}
-                          </h3>
-                          <p v-html="$t('event-genealogy-text')"></p>
-                          <p v-html="$t('event-genealogy-text-2')"></p>
-                          <p class="centered left-aligned-large">
-                              <button class="button button-secondary button-icon" @click="openInNewTab('https://woherkommenwir.ch/')">
-                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
-                                  {{ $t('event-genealogy-button') }}
-                              </button>
-                          </p>
-                      </div>
-                      <div class="col col-large-6 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-1">
-                          <div class="extra-padding-h">
-                              <img src="img/events/genealogy.jpg" style="width:100%; border-radius:50%" />
-                          </div>
+                  <div class="row row-centered row-in-background">
+                      <div class="col col-6 col-wrapping col-large-no-bottom-margin">
+                          <img src="img/events/brownbag.jpg" style="border-radius: 50%"/>
                       </div>
                   </div>
               </div>
           </div>
+          <div class="content-wrapper">
+              <div class="row">
+                  <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin scroll-effect">
 
+                      <div class="content-subsection">
+
+                          <h2 class="heading centered left-aligned-large" id="mission">{{ $t('section-events-heading') }}</h2>
+                          <h3 class="subheading">{{ $t('section-lunches-subheading') }}</h3>
+                          <p class="list-intro" v-html="$t('section-lunches-text')"></p>
+                          <p class="list-intro" v-html="$t('section-lunches-text-2')"></p>
+                          <div class="margin-bottom">
+                              <button class="button button-secondary button-icon" @click="openInNewTab('mailto:info@citizenscience.ch?subject=Brown Bag Lunch')">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                      <path d="M502.3,190.8c3.9-3.1,9.7-0.2,9.7,4.7V400c0,26.5-21.5,48-48,48H48c-26.5,0-48-21.5-48-48V195.6c0-5,5.7-7.8,9.7-4.7c22.4,17.4,52.1,39.5,154.1,113.6c21.1,15.4,56.7,47.8,92.2,47.6c35.7,0.3,72-32.8,92.3-47.6C450.3,230.4,479.9,208.2,502.3,190.8zM256,320c23.2,0.4,56.6-29.2,73.4-41.4c132.7-96.3,142.8-104.7,173.4-128.7c5.8-4.5,9.2-11.5,9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5,64,0,85.5,0,112v19c0,7.4,3.4,14.3,9.2,18.9c30.6,23.9,40.7,32.4,173.4,128.7C199.4,290.8,232.8,320.4,256,320L256,320z"/>
+                                  </svg>
+                                  info@citizenscience.ch
+                              </button>
+                          </div>
+
+                      </div>
+
+                      <div class="content-subsection">
+
+                          <h3 class="subheading" style="margin-bottom: 0">Wednesday, February 20, 2019</h3>
+                          <p>
+                              Dana Mahr, University of Geneva<br/>
+                              Rethinking Science and Public Participation (working title)
+                          </p>
+                          <h3 class="subheading" style="margin-bottom: 0">Wednesday, March 20, 2019</h3>
+                          <p>
+                              Claudia Müller-Birn, Freie Universität Berlin<br/>
+                              Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an
+                              effective Partnership
+                          </p>
+                          <h3 class="subheading" style="margin-bottom: 0">Monday, April 15, 2019</h3>
+                          <p>
+                              Shannon Dosemagen, Public Lab (invited)
+                          </p>
+                          <h3 class="subheading" style="margin-bottom: 0">Wednesday, May 15, 2019</h3>
+                          <p>
+                              Danièle Pralong, Project Noah<br/>
+                              Citizen Science: Managing Expectations of Participants and Scientists
+                          </p>
+                          <h3 class="subheading" style="margin-bottom: 0">Wednesday, June 5, 2019</h3>
+                          <p>
+                              Jose Luis Fernandez-Marquez, University of Geneva<br/>
+                              Social Media Analysis and Crowd-Sourcing for Disaster Management
+                          </p>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
       </app-content-section>
 
     <app-content-section color="greyish">

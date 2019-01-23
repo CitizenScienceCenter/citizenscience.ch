@@ -8,6 +8,17 @@
     "section-lunches-text": "Always from 12am – 1 pm at RAF-E-011, Rämistrasse 66 (left entrance), unless told otherwise Drinks and sandwiches provided",
     "section-lunches-text-2": "<b>Please register via E-Mail</b>",
 
+    "section-lunches-lunch-title-1": "Wednesday, February 20, 2019",
+    "section-lunches-lunch-text-1": "Dana Mahr, University of Geneva<br/>Rethinking Science and Public Participation (working title)",
+    "section-lunches-lunch-title-2": "Wednesday, March 20, 2019",
+    "section-lunches-lunch-text-2": "Claudia Müller-Birn, Freie Universität Berlin<br/>Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an effective Partnership.",
+    "section-lunches-lunch-title-3": "Monday, April 15, 2019",
+    "section-lunches-lunch-text-3": "Shannon Dosemagen, Public Lab (invited)",
+    "section-lunches-lunch-title-4": "Wednesday, May 15, 2019",
+    "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists",
+    "section-lunches-lunch-title-5": "Wednesday, June 5, 2019",
+    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, University of Geneva<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management",
+
 
     "section-newsletter-heading": "Sign up for our Newsletter"
     },
@@ -15,9 +26,20 @@
     "page-title": "Events",
 
     "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
-    "section-lunches-subheading": "Brown Bag Lunches in Spring Term 2019",
-    "section-lunches-text": "Always from 12am – 1 pm at RAF-E-011, Rämistrasse 66 (left entrance), unless told otherwise Drinks and sandwiches provided",
-    "section-lunches-text-2": "<b>Please register via E-Mail</b>",
+    "section-lunches-subheading": "Brown Bag Lunches im Frühjahrssemester 2019",
+    "section-lunches-text": "Jeweils von 12:00 – 13:00 Uhr<br/>Universität Zürich, Rämistrasse 66 (linker Eingang), Raum RAF-E-011<br/>Getränke und Sandwiches offeriert",
+    "section-lunches-text-2": "<b>Bitte melden Sie sich an unter:</b>",
+
+    "section-lunches-lunch-title-1": "Mittwoch, 20. Februar 2019",
+    "section-lunches-lunch-text-1": "Dana Mahr, Universität Genf<br/>Rethinking Science and Public Participation (Arbeitstitel)",
+    "section-lunches-lunch-title-2": "Mittwoch, 20. März 2019",
+    "section-lunches-lunch-text-2": "Claudia Müller-Birn, Freie Universität Berlin<br/>Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an effective Partnership.",
+    "section-lunches-lunch-title-3": "Montag, 15. April 2019",
+    "section-lunches-lunch-text-3": "Shannon Dosemagen, Public Lab (eingeladen)",
+    "section-lunches-lunch-title-4": "Mittwoch, 15. Mai 2019",
+    "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists",
+    "section-lunches-lunch-title-5": "Mittwoch, 5. Juni 2019",
+    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, Universität Genf<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management",
 
     "section-newsletter-heading": "Abonniere unseren Newsletter"
   }
@@ -59,31 +81,19 @@
 
                       <div class="content-subsection">
 
-                          <h3 class="subheading" style="margin-bottom: 0">Wednesday, February 20, 2019</h3>
-                          <p>
-                              Dana Mahr, University of Geneva<br/>
-                              Rethinking Science and Public Participation (working title)
+                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-1')"></h3>
+                          <p v-html="$t('section-lunches-lunch-text-5')">
+
                           </p>
-                          <h3 class="subheading" style="margin-bottom: 0">Wednesday, March 20, 2019</h3>
-                          <p>
-                              Claudia Müller-Birn, Freie Universität Berlin<br/>
-                              Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an
-                              effective Partnership
-                          </p>
-                          <h3 class="subheading" style="margin-bottom: 0">Monday, April 15, 2019</h3>
-                          <p>
-                              Shannon Dosemagen, Public Lab (invited)
-                          </p>
-                          <h3 class="subheading" style="margin-bottom: 0">Wednesday, May 15, 2019</h3>
-                          <p>
-                              Danièle Pralong, Project Noah<br/>
-                              Citizen Science: Managing Expectations of Participants and Scientists
-                          </p>
-                          <h3 class="subheading" style="margin-bottom: 0">Wednesday, June 5, 2019</h3>
-                          <p>
-                              Jose Luis Fernandez-Marquez, University of Geneva<br/>
-                              Social Media Analysis and Crowd-Sourcing for Disaster Management
-                          </p>
+                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-2')"></h3>
+                          <p v-html="$t('section-lunches-lunch-text-5')"></p>
+                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-3')"></h3>
+                          <p v-html="$t('section-lunches-lunch-text-5')"></p>
+                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-4')"></h3>
+                          <p v-html="$t('section-lunches-lunch-text-5')"></p>
+                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-5')"></h3>
+                          <p v-html="$t('section-lunches-lunch-text-5')"></p>
+
 
                       </div>
 

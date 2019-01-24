@@ -5,7 +5,7 @@
 
     "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
     "section-lunches-subheading": "Brown Bag Lunches in Spring Term 2019",
-    "section-lunches-text": "Always from 12am – 1 pm at RAF-E-011, Rämistrasse 66 (left entrance), unless told otherwise Drinks and sandwiches provided",
+    "section-lunches-text": "Always from 12am – 1 pm<br/>at room RAF-E-011, Rämistrasse 66 (left entrance), Zürich<br/>Drinks and sandwiches provided",
     "section-lunches-text-2": "<b>Please register via E-Mail</b>",
 
     "section-lunches-lunch-title-1": "Wednesday, February 20, 2019",
@@ -82,15 +82,13 @@
                       <div class="content-subsection">
 
                           <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-1')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-5')">
-
-                          </p>
+                          <p v-html="$t('section-lunches-lunch-text-1')"></p>
                           <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-2')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-5')"></p>
+                          <p v-html="$t('section-lunches-lunch-text-2')"></p>
                           <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-3')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-5')"></p>
+                          <p v-html="$t('section-lunches-lunch-text-3')"></p>
                           <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-4')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-5')"></p>
+                          <p v-html="$t('section-lunches-lunch-text-4')"></p>
                           <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-5')"></h3>
                           <p v-html="$t('section-lunches-lunch-text-5')"></p>
 

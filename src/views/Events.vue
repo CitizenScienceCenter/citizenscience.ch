@@ -5,11 +5,12 @@
 
     "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
     "section-lunches-subheading": "Brown Bag Lunches in Spring Term 2019",
-    "section-lunches-text": "Always from 12:15 pm – 1:15 pm<br/>Location: University of Zurich, Center (room to be announced)<br/>Drinks and sandwiches provided",
-    "section-lunches-text-2": "<b>Please register via E-Mail</b>",
+    "section-lunches-text": "Always from 12:15 pm – 1:15 pm<br/>Location: University of Zurich, Main Building (KOL), Rämistrasse 71, 8006 Zürich<br>Drinks and sandwiches provided",
+    "section-lunches-text-info": "<b>Please note:</b><br>Rooms change for each BB lunch, you will find the information in time under each date below.",
+    "section-lunches-text-register": "<b>Please register via E-Mail</b>",
 
     "section-lunches-lunch-title-1": "Wednesday, February 20, 2019",
-    "section-lunches-lunch-text-1": "Dana Mahr, University of Geneva<br/>Rethinking Science and Public Participation (working title)",
+    "section-lunches-lunch-text-1": "Dana Mahr, University of Geneva<br/>The Role of Experiential Knowledge for Citizen Science<br>Room: KOL-N-1 (Uniturm/Uni Tower)",
     "section-lunches-lunch-title-2": "Wednesday, March 20, 2019",
     "section-lunches-lunch-text-2": "Claudia Müller-Birn, Freie Universität Berlin<br/>Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an effective Partnership.",
     "section-lunches-lunch-title-3": "April, 2019 (Date will be announced)",
@@ -27,11 +28,12 @@
 
     "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
     "section-lunches-subheading": "Brown Bag Lunches im Frühjahrssemester 2019",
-    "section-lunches-text": "Jeweils von 12:15 – 13:15 Uhr<br/>Ort: Universität Zürich, Zentrum (Raum wird noch bekannt gegeben)<br/>Getränke und Sandwiches offeriert",
-    "section-lunches-text-2": "<b>Bitte melden Sie sich an unter:</b>",
+    "section-lunches-text": "Jeweils von 12:15 – 13:15 Uhr<br/>Ort: Hauptgebäude im Zentrum (KOL), Rämistrasse 71, 8006 Zürich<br/>Getränke und Sandwiches offeriert",
+    "section-lunches-text-info": "<b>Achtung:</b><br>Wechselnde Räume, die jeweilige Raumangabe wird rechtzeitig unten bekannt gegeben",
+    "section-lunches-text-register": "<b>Bitte melden Sie sich an unter:</b>",
 
     "section-lunches-lunch-title-1": "Mittwoch, 20. Februar 2019",
-    "section-lunches-lunch-text-1": "Dana Mahr, Universität Genf<br/>Rethinking Science and Public Participation (Arbeitstitel)",
+    "section-lunches-lunch-text-1": "Dana Mahr, Universität Genf<br/>The Role of Experiential Knowledge for Citizen Science<br>Raum: KOL-N-1 (Uniturm)",
     "section-lunches-lunch-title-2": "Mittwoch, 20. März 2019",
     "section-lunches-lunch-text-2": "Claudia Müller-Birn, Freie Universität Berlin<br/>Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an effective Partnership.",
     "section-lunches-lunch-title-3": "April 2019 (Termin wird bekannt gegeben)",
@@ -67,7 +69,8 @@
                           <h2 class="heading centered left-aligned-large" id="mission">{{ $t('section-events-heading') }}</h2>
                           <h3 class="subheading">{{ $t('section-lunches-subheading') }}</h3>
                           <p class="list-intro" v-html="$t('section-lunches-text')"></p>
-                          <p class="list-intro" v-html="$t('section-lunches-text-2')"></p>
+                          <p class="list-intro small" v-html="$t('section-lunches-text-info')"></p>
+                          <p class="list-intro" v-html="$t('section-lunches-text-register')"></p>
                           <div class="margin-bottom">
                               <button class="button button-secondary button-icon" @click="openInNewTab('mailto:info@citizenscience.ch?subject=Brown Bag Lunch')">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

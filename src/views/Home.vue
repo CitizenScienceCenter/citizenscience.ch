@@ -71,8 +71,8 @@
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
 
     "project-snake-title": "Snake ID Challenge",
-    "project-snake-topic": "Herpetology",
-    "project-snake-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br>Refine your identification skills with our SnakeID challenge!",
+    "project-snake-topic": "Herpetologie",
+    "project-snake-description": "Du hast den Winter satt und kannst es kaum erwarten im Frühling wieder Schlangen zu beobachten? Nutze die kalte Jahreszeit um deine Fähigkeiten im Bestimmen von Schlangen zu testen und zu verbessern – mit der Snake ID Challenge!",
     "project-snake-button": "Mach mit",
 
     "project-wenker-title": "Projekt Wenker",

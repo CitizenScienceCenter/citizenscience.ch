@@ -25,6 +25,16 @@
     "section-projects-heading": "Get involved",
     "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
+    "project-snake-title": "Snake ID Challenge",
+    "project-snake-topic": "Herpetology",
+    "project-snake-description": "Stuck indoors this winter? Dreaming of seeing snakes in the spring? Take advantage of the cold weather to test and refine your identification skills with our SnakeID challenge!",
+    "project-snake-button": "Take part",
+
+    "project-wenker-title": "Project Wenker",
+    "project-wenker-topic": "Linguistics",
+    "project-wenker-description": "Our first Citizen Science Project is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
+    "project-wenker-button": "Take part",
+
     "section-build-project-heading": "Do you have a project in mind? We can help you.",
     "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
 
@@ -60,6 +70,16 @@
     "section-projects-heading": "Mach mit",
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
 
+    "project-snake-title": "Snake ID Challenge",
+    "project-snake-topic": "Herpetology",
+    "project-snake-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br>Refine your identification skills with our SnakeID challenge!",
+    "project-snake-button": "Mach mit",
+
+    "project-wenker-title": "Projekt Wenker",
+    "project-wenker-topic": "Sprachwissenschaften",
+    "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
+    "project-wenker-button": "Mach mit",
+
     "section-build-project-heading": "Haben Sie eine Projekt-Idee? Wir helfen Ihnen!",
     "section-build-project-text": "Wir sind jederzeit offen für Austausch und Gespräch. Gerne überlegen wir mit Ihnen gemeinsam, wie man die Welt mit Citizen Science ein kleines Stück besser machen könnte. Treten Sie mit uns in Kontakt, wenn Sie eine Projektidee haben. Wir können Ihnen bei der Weiterentwicklung der Idee helfen und Ihnen bei positiver Evaluation unsere Tools und Expertise zur Verfügung stellen, um das Projekt realisieren.",
 
@@ -86,11 +106,71 @@
       </p>
     </app-cover>
 
+
+
     <app-content-section>
+      <div class="content-wrapper">
+        <div class="row row-centered">
+          <div class="col col-large-10">
+            <h2 class="heading centered" id="projects">{{ $t('section-projects-heading') }}</h2>
+          </div>
+        </div>
+        <div class="scroll-effect">
+          <div class="row row-centered">
+
+            <div class="col col-large-10 col-xlarge-8 scroll-effect">
+
+              <div class="margin-bottom">
+                <project-teaser
+                        :projectTitle="$t('project-snake-title')"
+                        :projectTopic="$t('project-snake-topic')"
+                        :projectDescription="$t('project-snake-description')"
+                        :buttonText="$t('project-snake-button')"
+                        projectBgImage="img/projects/snakechallenge.jpg"
+                        projectImage="img/projects/snakechallenge-intro.png"
+                        url="https://snakes.citizenscience.ch"
+                        colorGradientStart="#9a4b23"
+                        colorGradientEnd="#418677"
+                ></project-teaser>
+              </div>
+
+            </div>
+
+            <div class="col col-large-10 col-xlarge-8 scroll-effect">
+
+              <div class="margin-bottom">
+                <project-teaser
+                        :projectTitle="$t('project-wenker-title')"
+                        :projectTopic="$t('project-wenker-topic')"
+                        :projectDescription="$t('project-wenker-description')"
+                        :buttonText="$t('project-wenker-button')"
+                        projectBgImage="img/projects/wenker.jpg"
+                        projectImage="img/projects/wenker-intro.png"
+                        url="https://wenker.citizenscience.ch"
+                        colorGradientStart="#3e6189"
+                        colorGradientEnd="#766b51"
+                ></project-teaser>
+              </div>
+
+            </div>
+
+            <div class="col col-large-6 col-wrapping scroll-effect">
+              <div class="button-group centered">
+                <button class="button button-secondary" v-scroll-to="'#start-project'">{{ $t('cover-button-your-project') }}</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </app-content-section>
+
+
+    <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered row-middle">
 
-          <div class="col col-10 col-large-6 col-wrapping scroll-effect">
+          <div class="col col-10 col-large-6 col-wrapping">
             <div>
               <div class="extra-padding-large-h">
                 <img src="img/graphic-citizen-science.png"/>
@@ -98,7 +178,7 @@
             </div>
           </div>
 
-          <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
+          <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin">
             <div>
               <p class="lead" v-html="$t('section-explanation-lead')"></p>
               <p v-html="$t('section-explanation-text')"></p>
@@ -113,15 +193,15 @@
       </div>
     </app-content-section>
 
-    <app-content-section color="light-greyish">
+    <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered">
 
-          <div class="col col-large-10 scroll-effect">
+          <div class="col col-large-10">
             <h2 class="heading centered">{{ $t('section-offer-heading') }}</h2>
           </div>
 
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping  col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin scroll-effect">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <img src="img/graphic-platform.png"/>
@@ -132,7 +212,7 @@
               {{ $t('section-offer-1-text') }}
             </p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <img src="img/graphic-community.png"/>
@@ -143,7 +223,7 @@
               {{ $t('section-offer-2-text') }}
             </p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-3">
+          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-2">
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <img src="img/graphic-knowledge.png"/>
@@ -166,29 +246,6 @@
     </app-content-section>
 
 
-    <app-content-section>
-      <div class="content-wrapper">
-        <div class="row row-centered scroll-effect">
-          <div class="col col-large-10">
-            <h2 class="heading centered" id="projects">{{ $t('section-projects-heading') }}</h2>
-          </div>
-        </div>
-        <div class="scroll-effect">
-          <div class="row row-centered">
-            <div class="col col-large-10 col-xlarge-8">
-              <app-project-list></app-project-list>
-            </div>
-          </div>
-          <div class="row row-centered">
-            <div class="col col-tablet-portrait-10 col-large-6">
-              <p class="">
-                {{ $t('section-projects-text') }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
 
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
@@ -291,16 +348,16 @@
 
 import Cover from '@/components/shared/Cover.vue'
 import ContentSection from '@/components/shared/ContentSection.vue'
-import ProjectList from '@/components/shared/ProjectList.vue'
 import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
 import Footer from '@/components/shared/Footer.vue'
+import ProjectTeaser from '@/components/ProjectTeaser';
 
 export default {
   name: 'Home',
   components: {
+      ProjectTeaser,
     'app-cover': Cover,
     'app-content-section': ContentSection,
-    'app-project-list': ProjectList,
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },

@@ -282,7 +282,7 @@
 
 import Cover from '@/components/shared/Cover.vue'
 import ContentSection from '@/components/shared/ContentSection.vue'
-import PeopleList from '@/components/shared/PeopleList.vue'
+import PeopleList from '@/components/PeopleList.vue'
 import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
 import Footer from '@/components/shared/Footer.vue'
 

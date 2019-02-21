@@ -6,7 +6,6 @@ import App from './App.vue';
 import store from './store/store.js';
 import Vuex from 'vuex';
 import { i18n } from './i18n.js';
-// import c3s from 'vuex-c3s';
 import Meta from 'vue-meta';
 
 Vue.config.productionTip = false;

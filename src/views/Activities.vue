@@ -214,7 +214,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-middle row-reverse-large row-wrapping">
 
-            <div class="col col-6 col-large-5 col-large-after-1 col-wrapping">
+            <div class="col col-6 col-large-4 col-large-after-1 col-wrapping">
               <div>
                 <div class="extra-padding-large-h">
                   <img src="img/graphic-checklist.png"/>
@@ -222,7 +222,7 @@
               </div>
             </div>
 
-            <div class="col col-large-5 col-large-before-1 col-wrapping">
+            <div class="col col-large-6 col-large-before-1 col-wrapping">
               <div>
                 <h2 class="subheading centered left-aligned-large">Requirement Check</h2>
                 <p>
@@ -254,7 +254,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-middle row-wrapping">
 
-            <div class="col col-6 col-large-5 col-large-before-1 col-wrapping">
+            <div class="col col-6 col-large-4 col-large-before-1 col-wrapping">
               <div>
                 <div class="extra-padding-large-h">
                   <img src="img/graphic-steps.png"/>
@@ -262,7 +262,7 @@
               </div>
             </div>
 
-            <div class="col col-large-5 col-large-after-1 col-wrapping">
+            <div class="col col-large-6 col-large-after-1 col-wrapping">
               <div>
                 <h2 class="subheading centered left-aligned-large">Phases of a Citizen Science Project</h2>
                 <p>
@@ -456,7 +456,7 @@
       </div>
     </app-content-section>
 
-    <app-footer></app-footer>
+    <app-footer :platform="platform"></app-footer>
 
   </div>
 </template>
@@ -476,6 +476,12 @@ export default {
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
+    props: {
+        platform: {
+            type: Boolean,
+            default: false
+        }
+    },
     metaInfo: function() {
         return {
             title: this.$t('page-title')

@@ -331,7 +331,7 @@
       </div>
     </app-content-section>
 
-    <app-footer></app-footer>
+    <app-footer :platform="platform"></app-footer>
 
   </div>
 </template>
@@ -345,6 +345,12 @@ import Footer from '@/components/shared/Footer.vue'
 
 export default {
   name: 'What',
+    props: {
+        platform: {
+            type: Boolean,
+            default: false
+        }
+    },
   components: {
     'app-cover': Cover,
     'app-content-section': ContentSection,

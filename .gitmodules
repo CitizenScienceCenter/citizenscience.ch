@@ -7,3 +7,6 @@
 [submodule "src/assets/shared"]
 	path = src/assets/shared
 	url = git@github.com:CitizenScienceCenter/shared-assets.git
+[submodule "src/views/shared"]
+	path = src/views/shared
+	url = git@github.com:CitizenScienceCenter/shared-views.git

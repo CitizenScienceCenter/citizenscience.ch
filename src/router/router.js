@@ -20,13 +20,12 @@ router.beforeEach((to, from, next) => {
 let hashNavTimeout;
 router.afterEach((to, from, next) => {
   if( to.hash ) {
-    console.log( from );
     if( to.path !== from.path ){
         const app = router.app;
         hashNavTimeout = setTimeout( function() {
             app.$scrollTo( to.hash );
             clearInterval(hashNavTimeout);
-        }, 0);
+        }, 100);
     }
   }
 });

@@ -116,11 +116,11 @@
           </div>
         </div>
         <div class="scroll-effect">
-          <div class="row row-centered">
+          <div class="row row-centered row-wrapping">
 
-            <div class="col col-large-10 col-xlarge-8 scroll-effect">
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
 
-              <div class="margin-bottom">
+              <div>
                 <project-teaser
                         :projectTitle="$t('project-snake-title')"
                         :projectTopic="$t('project-snake-topic')"
@@ -136,9 +136,9 @@
 
             </div>
 
-            <div class="col col-large-10 col-xlarge-8 scroll-effect">
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
 
-              <div class="margin-bottom">
+              <div>
                 <project-teaser
                         :projectTitle="$t('project-wenker-title')"
                         :projectTopic="$t('project-wenker-topic')"
@@ -154,7 +154,7 @@
 
             </div>
 
-            <div class="col col-large-6 col-wrapping scroll-effect">
+            <div class="col col-wrapping col-large-6 col-wrapping scroll-effect">
               <div class="button-group centered">
                 <button class="button button-secondary" v-scroll-to="'#start-project'">{{ $t('cover-button-your-project') }}</button>
               </div>
@@ -339,7 +339,7 @@
       </div>
     </app-content-section>
 
-    <app-footer color="greyish"></app-footer>
+    <app-footer :platform="platform"></app-footer>
 
   </div>
 </template>
@@ -361,6 +361,12 @@ export default {
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
+    props: {
+      platform: {
+          type: Boolean,
+          default: false
+      }
+    },
   metaInfo: function() {
       return {
         title: this.$t('page-title'),

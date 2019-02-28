@@ -16,7 +16,7 @@
     <!--<app-header :languages="['en']"></app-header>-->
     <app-header hideLogin></app-header>
     <div class="content-area">
-      <router-view @hashNav="hashNav"></router-view>
+      <router-view platform @hashNav="hashNav"></router-view>
     </div>
   </div>
 </template>

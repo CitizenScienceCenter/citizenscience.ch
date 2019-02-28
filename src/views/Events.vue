@@ -118,7 +118,7 @@
       </div>
     </app-content-section>
 
-    <app-footer></app-footer>
+    <app-footer :platform="platform"></app-footer>
 
   </div>
 </template>
@@ -136,6 +136,12 @@ export default {
     'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
+    props: {
+        platform: {
+            type: Boolean,
+            default: false
+        }
+    },
     metaInfo: function() {
         return {
             title: this.$t('page-title')

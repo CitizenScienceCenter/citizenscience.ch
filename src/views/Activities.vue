@@ -7,7 +7,7 @@
     "anchor-navigation-link-2": "Projects",
     "anchor-navigation-link-3": "Benefits",
     "anchor-navigation-link-4": "Sustainable Development Goals",
-    "anchor-navigation-link-5": "Partnerships",
+    "anchor-navigation-link-5": "Collaborations",
 
     "section-citizenscience-heading": "Citizen Science “Zurich Style”",
     "section-citizenscience-text": "The activities of the Citizen Science Center Zurich focus on exploring, supporting, and promoting Citizen Science. Citizen Science is a form of public participation in scientific research (where “citizen” denotes a member of the general public, independent from citizenship) that has been around for more than a century.",
@@ -39,7 +39,7 @@
     "section-sdgquote-quote": "«The monitoring and accountability framework [...] must be people ­centred, inclusive, transparent and participatory»",
     "section-sdgquote-source": "<a href='http://tapnetwork2030.org/' target='_blank'>Transparency, Accountability & Participation (TAP) Network 2030</a>",
 
-    "section-partnerships-heading": "Partnerships and Collaborations",
+    "section-partnerships-heading": "Collaborations",
     "section-partnerships-openseventeen-subheading": "The Open Seventeen Challenge",
     "section-partnerships-openseventeen-lead": "Coaching for Citizen Science Innovation",
     "section-partnerships-openseventeen-text": "O17 is a challenged-based, online interactive coaching programme to help young global innovators connect and shape good ideas into viable social innovation projects for the 17 UN Sustainable Development Goals (SDGs). O17 supports projects that encourage grassroots public participation and citizen science through the use of open data and crowdsourcing.<br>The Challenge is a joint initiative with the Citizen Cyberlab at University of Geneva, and the Governance Lab at New York University.",
@@ -47,7 +47,7 @@
     "section-partnerships-toolkit-lead": "Crowdsourcing Sustainable Development",
     "section-partnerships-toolkit-text": "The SDG Crowdsourcing Toolkit is an ambitious initiative led by CC-CS, in collaboration with the Citizen Cyberlab in Geneva, and aims at positioning Swiss CS at the core of scientific data taking for the SDGs. It will provide a set of open and flexible tools that feature the functionalities required by the most common CS projects, and that can integrate existing platforms and communities. All tools contribute data to a structured and easily accessible database, that - by making data sharing seamless - will facilitate cross-pollination of projects and initiatives.",
     "section-partnerships-toolkit-text-2": "To know more, please contact the CS Center’s team.",
-    "section-partnerships-snapp-heading": "SnApp",
+    "section-partnerships-snapp-heading": "Snake ID Challenge",
     "section-partnerships-snapp-text": "The Citizen Science Center Zurich is collaborating with several Swiss and international partners on a support tool for snake identification based on crowdsourcing and Artificial Intelligence.",
     "section-partnerships-snapp-text-2": "Snakebite causes over 100,000 human deaths and 400,000 victims of disability and disfigurement globally every year, due to limited medical expertise in herpetology and limited access to antivenoms. To reduce potentially erroneous and/or delayed healthcare actions, the Snake App (SnApp) will combine computer vision with the expertise from a network of professional and non-professional herpetologists to identify photos of snakes. This app will serve as an educational and capacity-building platform for both citizens and healthcare professionals around the world, it will improve scientist’s understanding of snakebites and reinforce health systems in snakebite endemic countries.",
 
@@ -57,10 +57,10 @@
     "page-title": "Was wir tun",
 
     "anchor-navigation-link-1": "Citizen Science “Zürich Style”",
-    "anchor-navigation-link-2": "Projekte",
+    "anchor-navigation-link-2": "Projekt",
     "anchor-navigation-link-3": "Vorteile",
     "anchor-navigation-link-4": "Sustainable Development Goals",
-    "anchor-navigation-link-5": "Partnerschaften",
+    "anchor-navigation-link-5": "Kollaborationen",
 
     "section-citizenscience-heading": "Citizen Science “Zürich Style”",
     "section-citizenscience-text": "Am Citizen Science Center Zürich sehen wir unsere Aufgabe im Erkunden, Unterstützen und Verbreiten von Citizen Science, zu deutsch Bürgerwissenschaft. Citizen Science hat sich in den letzten 100 Jahren immer mehr etabliert; man versteht darunter die Beteiligung der breiten Öffentlichkeit an wissenschaftlicher Forschung. Ein Citizen Scientist kann jede und jeder werden, unabhängig von Herkunft und Staatsangehörigkeit.",
@@ -71,7 +71,7 @@
 
     "section-next-gen-citizenscience-subheading": "Next Generation Citizen Science",
     "section-next-gen-citizenscience-text": "Das grösste Ziel wissenschaftlicher Forschung, einschliesslich Citizen Science, besteht darin, die Welt, in der wir leben, besser zu verstehen. Wir finden ausserdem, dass die Wissenschaft der Gesellschaft ein gewisses Mass an «anwendbarem Wissen und Verständnis» zur Verfügung stellen sollte, das Bürgerinnen und Bürger dazu befähigt, neue Daten und gewonnenes Wissen für konkrete Veränderungsprozesse zu nutzen.",
-  "section-next-gen-citizenscience-text-2": "Das Citizen Science Center Zürich unterstützt zukunftsweisende Citizen Science Projekte, die moderne Kollaborations-Technologien nutzen, die höchste wissenschaftliche Standards einhalten und <b>exzellente Forschung</b> betreiben und die <b>Open Data</b> produzieren, um Bürgern, Communities und Regierungen zu helfen, mehr Nachhaltigkeit zu erreichen.",
+    "section-next-gen-citizenscience-text-2": "Das Citizen Science Center Zürich unterstützt zukunftsweisende Citizen Science Projekte, die moderne Kollaborations-Technologien nutzen, die höchste wissenschaftliche Standards einhalten und <b>exzellente Forschung</b> betreiben und die <b>Open Data</b> produzieren, um Bürgern, Communities und Regierungen zu helfen, mehr Nachhaltigkeit zu erreichen.",
 
     "section-projects-heading": "Citizen Science Projekte",
     "section-projects-text": "In den meisten Citizen Science Projekten beteiligen sich Bürgerinnen und Bürger durch das Sammeln und Auswerten von Daten. Dies geschieht häufig mithilfe von Smartphones, Apps und anderen mobilen Geräten oder interaktiven Websites. Immer häufiger sind Citizen Scientists auch in anderen Phasen des Forschungsprozesses aktiv: Sie definieren Forschungsfragen, interpretieren Ergebnisse und veröffentlichen Schlussfolgerungen.<br>In den letzten 20 Jahren erfreut sich Citizen Science immer grösserer Beliebtheit bei Wissenschaftlern und in der Öffentlichkeit; und auch das Themenspektrum wird immer breiter.",
@@ -92,7 +92,7 @@
     "section-sdgquote-quote": "«The monitoring and accountability framework [...] must be people ­centred, inclusive, transparent and participatory»",
     "section-sdgquote-source": "<a href='http://tapnetwork2030.org/' target='_blank'>Transparency, Accountability & Participation (TAP) Network 2030</a>",
 
-    "section-partnerships-heading": "Partnerschaften und Kollaborationen",
+    "section-partnerships-heading": "Kollaborationen",
     "section-partnerships-openseventeen-subheading": "Die Open Seventeen Challenge",
     "section-partnerships-openseventeen-lead": "Coaching für innovative Citizen Science",
     "section-partnerships-openseventeen-text": "Der O17-Wettbewerb ist ein interaktives Online-Coaching-Programm, das jungen Innovatoren weltweit helfen soll, sich zu vernetzen und gute Ideen zu tragfähigen sozialen Innovationsprojekten weiterzuentwickeln. O17 unterstützt Projekte, die im engen Bezug zu den 17 UN-Nachhaltigkeitszielen (SDGs) stehen und die mit Hilfe von Open Data und Crowdsourcing Bürgerbeteiligung und Citizen Science fördern.<br>Der Wettbewerb ist eine gemeinsame Initiative des Citizen Cyberlab der Universität Genf und des Governance Lab der New York University.",
@@ -100,7 +100,7 @@
     "section-partnerships-toolkit-lead": "Crowdsourcing für nachhaltige Entwicklung",
     "section-partnerships-toolkit-text": "Das SDG Crowdsourcing Toolkit ist eine gemeinsame Initiative des Kompetenzzentrums Citizen Science Zürich und des Citizen Cyberlabs in Genf. Ziel ist es, Citizen Science in der Schweiz als zentrales Element der wissenschaftlichen Datensammlung für die Sustainable Development Goals (SDGs) zu positionieren. Die gängigsten von Citizen Science-Projekten benötigten Funktionen stehen durch die flexibel einsetzbaren Tools frei zur Verfügung. Darüber hinaus können bereits existierende Plattformen und Communities integriert werden. Die Tools teilen bestimmte Daten mit einer zentralen und leicht zugänglichen Datenbank, wo sie von allen genutzt werden können; so können sich Projekte und Initiativen gegenseitig befruchten.",
     "section-partnerships-toolkit-text-2": "Wenn Sie mehr über das Toolkit erfahren möchten, wenden Sie sich bitte an das Team des Citizen Science-Centers.",
-    "section-partnerships-snapp-heading": "SnApp",
+    "section-partnerships-snapp-heading": "Snake ID Challenge",
     "section-partnerships-snapp-text": "Das Citizen Science Center Zürich entwickelt zusammen mit verschiedenen Schweizer und internationalen Partnern ein Online-Tool zur Bestimmung von Schlangen. Das Tool verbindet Crowdsourcing und künstliche Intelligenz zur Datengewinnung.",
     "section-partnerships-snapp-text-2": "Schlangenbisse kosten weltweit jedes Jahr über 100’000 Menschenleben und verursachen 400'000 Fälle von Behinderung und Verstümmelung. Denn oft fehlt das Wissen darüber, um welche Schlangenart es sich handelt und somit auch die Antwort auf die Frage, welches das passende Gegengift ist.<br>Die Snake App (SnAPP) soll helfen, die Zahl von fälschlich oder zu spät durchgeführten medizinische Behandlungen zu reduzieren. Die App kombiniert computergestützte Bilderkennung mit der Expertise von professionellen Schlangenexperten und einem Netz aus Hobby-Herpetologen, um Schlangen zu identifizieren.<br>SnAPP soll eine Plattform für Weiterbildung und Capacity Building für Bürger und Gesundheitspersonal und auf der ganzen Welt werden. Es soll Wissenschaftlern helfen, das Phänomen Schlangenbiss besser zu verstehen und auch Gesundheitssysteme in betroffenen Regionen bei ihrer Arbeit unterstützen.",
 
@@ -121,19 +121,19 @@
             <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
               <ul>
                 <li>
-                  <a v-scroll-to="'#citizen-science'">{{ $t('anchor-navigation-link-1') }}</a>
+                  <a v-scroll-to="'#citizen-science'" @click="$emit('hashNav','#citizen-science')">{{ $t('anchor-navigation-link-1') }}</a>
                 </li>
                 <li>
-                  <a v-scroll-to="'#projects'">{{ $t('anchor-navigation-link-2') }}</a>
+                  <a v-scroll-to="'#projects'" @click="$emit('hashNav','#projects')">{{ $t('anchor-navigation-link-2') }}</a>
                 </li>
                 <li>
-                  <a v-scroll-to="'#benefits'">{{ $t('anchor-navigation-link-3') }}</a>
+                  <a v-scroll-to="'#benefits'" @click="$emit('hashNav','#benefits')">{{ $t('anchor-navigation-link-3') }}</a>
                 </li>
                 <li>
-                  <a v-scroll-to="'#sdgs'">{{ $t('anchor-navigation-link-4') }}</a>
+                  <a v-scroll-to="'#sdgs'" @click="$emit('hashNav','#sdgs')">{{ $t('anchor-navigation-link-4') }}</a>
                 </li>
                 <li>
-                  <a v-scroll-to="'#partnerships'">{{ $t('anchor-navigation-link-5') }}</a>
+                  <a v-scroll-to="'#partnerships'" @click="$emit('hashNav','#partnerships')">{{ $t('anchor-navigation-link-5') }}</a>
                 </li>
               </ul>
             </div>
@@ -181,25 +181,116 @@
       </div>
     </app-content-section>
 
-
-    <app-content-section color="light-greyish" class="overflow-hidden">
-      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
+    <app-content-section color="light-greyish">
+      <div class="content-subsection">
         <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-6 col-wrapping col-large-no-bottom-margin">
-              <img src="img/graphic-projects.png"/>
+          <div class="row row-centered row-middle">
+
+            <div class="col col-10 col-large-6 col-wrapping">
+              <div>
+                <div class="extra-padding-large-h">
+                  <img src="img/graphic-question.png"/>
+                </div>
+              </div>
             </div>
+
+            <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin">
+              <div>
+                <!-- <h2 class="heading centered left-aligned-large" id="projects">{{ $t('section-projects-heading') }}</h2> -->
+                <h2 class="heading centered left-aligned-large" id="projects">Conducting Citizen Science Projects</h2>
+                <p v-html="$t('section-projects-text')"></p>
+                <div class="button-group centered left-aligned-large">
+                  <router-link tag="button" to="/#projects" class="button button-secondary">Discover our Projects</router-link>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="content-subsection">
+        <div class="content-wrapper">
+          <div class="row row-centered row-middle row-reverse-large row-wrapping">
+
+            <div class="col col-6 col-large-5 col-large-after-1 col-wrapping">
+              <div>
+                <div class="extra-padding-large-h">
+                  <img src="img/graphic-checklist.png"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-large-5 col-large-before-1 col-wrapping">
+              <div>
+                <h2 class="subheading centered left-aligned-large">Requirement Check</h2>
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                </p>
+                <div class="button-group centered left-aligned-large">
+                  <button class="button button-secondary button-icon" @click="openInNewTab('files/geschaeftsordnung_cccs.pdf')">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <path d="M245.9,256.1c-5-16-4.9-46.9-2-46.9C252.3,209.2,251.5,246.1,245.9,256.1z M244.2,303.3c-7.7,20.2-17.3,43.3-28.4,62.7
+                        c18.3-7,39-17.2,62.9-21.9C266,334.5,253.8,320.7,244.2,303.3L244.2,303.3z M150.1,428.1c0,0.8,13.2-5.4,34.9-40.2
+                        C178.3,394.2,155.9,412.4,150.1,428.1z M312,160h136v328c0,13.3-10.7,24-24,24H88c-13.3,0-24-10.7-24-24V24C64,10.7,74.7,0,88,0h200
+                        v136C288,149.2,298.8,160,312,160z M304,331.8c-20-12.2-33.3-29-42.7-53.8c4.5-18.5,11.6-46.6,6.2-64.2
+                        c-4.7-29.4-42.4-26.5-47.8-6.8c-5,18.3-0.4,44.1,8.1,77c-11.6,27.6-28.7,64.6-40.8,85.8c-0.1,0-0.1,0.1-0.2,0.1
+                        c-27.1,13.9-73.6,44.5-54.5,68c5.6,6.9,16,10,21.5,10c17.9,0,35.7-18,61.1-61.8c25.8-8.5,54.1-19.1,79-23.2
+                        c21.7,11.8,47.1,19.5,64,19.5c29.2,0,31.2-32,19.7-43.4C363.7,325.4,323.3,329.3,304,331.8z M441,105L343,7c-4.5-4.5-10.6-7-17-7h-6
+                        v128h128v-6.1C448,115.6,445.5,109.5,441,105z M366.9,360.3c4.1-2.7-2.5-11.9-42.8-9C361.2,367.1,366.9,360.3,366.9,360.3z"/>
+                    </svg>
+                    Requirement Checklist for Projects
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-      <div class="content-wrapper scroll-effect">
-        <div class="row">
-          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large" id="projects">{{ $t('section-projects-heading') }}</h2>
-            <p v-html="$t('section-projects-text')"></p>
+
+      <div class="content-subsection">
+        <div class="content-wrapper">
+          <div class="row row-centered row-middle row-wrapping">
+
+            <div class="col col-6 col-large-5 col-large-before-1 col-wrapping">
+              <div>
+                <div class="extra-padding-large-h">
+                  <img src="img/graphic-steps.png"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-large-5 col-large-after-1 col-wrapping">
+              <div>
+                <h2 class="subheading centered left-aligned-large">Phases of a Citizen Science Project</h2>
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                </p>
+                <div class="button-group centered left-aligned-large">
+                  <button class="button button-secondary button-icon" @click="openInNewTab('files/geschaeftsordnung_cccs.pdf')">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <path d="M245.9,256.1c-5-16-4.9-46.9-2-46.9C252.3,209.2,251.5,246.1,245.9,256.1z M244.2,303.3c-7.7,20.2-17.3,43.3-28.4,62.7
+                        c18.3-7,39-17.2,62.9-21.9C266,334.5,253.8,320.7,244.2,303.3L244.2,303.3z M150.1,428.1c0,0.8,13.2-5.4,34.9-40.2
+                        C178.3,394.2,155.9,412.4,150.1,428.1z M312,160h136v328c0,13.3-10.7,24-24,24H88c-13.3,0-24-10.7-24-24V24C64,10.7,74.7,0,88,0h200
+                        v136C288,149.2,298.8,160,312,160z M304,331.8c-20-12.2-33.3-29-42.7-53.8c4.5-18.5,11.6-46.6,6.2-64.2
+                        c-4.7-29.4-42.4-26.5-47.8-6.8c-5,18.3-0.4,44.1,8.1,77c-11.6,27.6-28.7,64.6-40.8,85.8c-0.1,0-0.1,0.1-0.2,0.1
+                        c-27.1,13.9-73.6,44.5-54.5,68c5.6,6.9,16,10,21.5,10c17.9,0,35.7-18,61.1-61.8c25.8-8.5,54.1-19.1,79-23.2
+                        c21.7,11.8,47.1,19.5,64,19.5c29.2,0,31.2-32,19.7-43.4C363.7,325.4,323.3,329.3,304,331.8z M441,105L343,7c-4.5-4.5-10.6-7-17-7h-6
+                        v128h128v-6.1C448,115.6,445.5,109.5,441,105z M366.9,360.3c4.1-2.7-2.5-11.9-42.8-9C361.2,367.1,366.9,360.3,366.9,360.3z"/>
+                    </svg>
+                    Description of Project Phases
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
+
     </app-content-section>
 
 
@@ -338,9 +429,9 @@
                 </h3>
                 <p v-html="$t('section-partnerships-snapp-text')"></p>
                 <p v-html="$t('section-partnerships-snapp-text-2')"></p>
-                <p>
 
-                </p>
+                <button class="button button-secondary" @click="openInNewTab('https://snakes.citizenscience.ch')">Visit the Project</button>
+
               </div>
             </div>
           </div>

@@ -13,13 +13,20 @@ export const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   const lang = store.state.settings.language || 'de';
-  /*
-  const title = i18n.messages[lang][to.meta.page]['title'];
-  if (title) {
-    document.title = title;
-  } else {
-    document.title = "";
-  }
-  */
   next();
+});
+
+// handling hash urls
+let hashNavTimeout;
+router.afterEach((to, from, next) => {
+  if( to.hash ) {
+    console.log( from );
+    if( to.path !== from.path ){
+        const app = router.app;
+        hashNavTimeout = setTimeout( function() {
+            app.$scrollTo( to.hash );
+            clearInterval(hashNavTimeout);
+        }, 0);
+    }
+  }
 });

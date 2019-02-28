@@ -26,7 +26,7 @@
     "section-people-heading": "People",
 
     "section-partnership-heading": "Partners",
-    "section-partnership-text": "The Citizen Cyberlab in Geneva develops methods and studies motivations for new forms of public participation in research.",
+    "partnership-cyberlab-text": "The Citizen Cyberlab is a partnership between the European Particle Physics Laboratory, CERN, the UN Institute for Training and Research, UNITAR, and the University of Geneva. IN the lab, researchers from many disciplines develop methods and study motivations for new forms of public participation in research.",
 
     "section-contact-heading": "Contact Us",
     "section-contact-text": "Feel free to reachout to the Center’s Team, we would love to hear from you!",
@@ -62,7 +62,7 @@
     "section-people-heading": "Leute",
 
     "section-partnership-heading": "Partner",
-    "section-partnership-text": "Das Citizen Cyberlab in Genf entwickelt Methoden und untersucht die Motivation für innovative Formen von öffentlicher Beteiligung in der Wissenschaft.",
+    "partnership-cyberlab-text": "Das Citizen Cyberlab in Genf entwickelt Methoden und untersucht die Motivation für innovative Formen von öffentlicher Beteiligung in der Wissenschaft.",
 
     "section-contact-heading": "Kontakt",
     "section-contact-text": "Treten Sie mit uns in Kontakt, wir würden uns freuen, von Ihnen zu hören!",
@@ -86,19 +86,19 @@
             <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
             <ul>
               <li>
-                <a v-scroll-to="'#mission'">{{ $t('section-mission-heading') }}</a>
+                <a v-scroll-to="'#mission'" @click="$emit('hashNav','#mission')">{{ $t('section-mission-heading') }}</a>
               </li>
               <li>
-                <a v-scroll-to="'#principles'">{{ $t('section-principles-heading') }}</a>
+                <a v-scroll-to="'#principles'" @click="$emit('hashNav','#principles')">{{ $t('section-principles-heading') }}</a>
               </li>
               <li>
-                <a v-scroll-to="'#people'">{{ $t('section-people-heading') }}</a>
+                <a v-scroll-to="'#people'" @click="$emit('hashNav','#people')">{{ $t('section-people-heading') }}</a>
               </li>
               <li>
-                <a v-scroll-to="'#partners'">{{ $t('section-partnership-heading') }}</a>
+                <a v-scroll-to="'#partners'" @click="$emit('hashNav','#partners')">{{ $t('section-partnership-heading') }}</a>
               </li>
               <li>
-                <a v-scroll-to="'#contact'">{{ $t('section-contact-heading') }}</a>
+                <a v-scroll-to="'#contact'" @click="$emit('hashNav','#contact')">{{ $t('section-contact-heading') }}</a>
               </li>
             </ul>
             </div>
@@ -223,23 +223,67 @@
     </app-content-section>
 
     <app-content-section color="light-greyish">
-      <div class="content-wrapper">
-        <div class="row row-centered">
-          <div class="col col-large-10">
-            <h2 class="heading centered" id="partners">{{ $t('section-partnership-heading') }}</h2>
-          </div>
-        </div>
-        <div class="row row-centered">
-          <div class="col col-large-6">
-            <div>
-              <p class="centered">
-                <img src="img/ccl-logo.png" style="width: 50%" />
-              </p>
-              <p v-html="$t('section-partnership-text')"></p>
+        <div class="content-wrapper">
+          <div class="row row-centered">
+            <div class="col col-large-6">
+
+              <div class="content-subsection">
+                <h2 class="heading centered" id="partners">{{ $t('section-partnership-heading') }}</h2>
+
+                <h3 class="subheading centered">Research Partners</h3>
+
+                <p class="centered">
+                  <img src="img/ccl-logo.png" style="width: 50%" />
+                </p>
+                <p v-html="$t('partnership-cyberlab-text')" class="margin-bottom-reduced"></p>
+                <div class="button-group centered margin-bottom">
+                  <button class="button button-secondary button-icon" @click="openInNewTab('https://ecsa.citizen-science.net/sites/default/files/ecsa_ten_principles_of_citizen_science.pdf')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                    citizencyberlab.org
+                  </button>
+                </div>
+
+                <p class="centered"><b>URPP Dynamics of Healthy Aging, UZH</b></p>
+                <p>
+                  At the University Research Priority Program (URPP) Dynamics of Healthy Aging, researchers examine the stabilization of psychological health and quality of life at low, intermediate and high levels of functioning from middle adulthood to advanced old age.
+                </p>
+                <div class="button-group centered margin-bottom">
+                  <button class="button button-secondary button-icon" @click="openInNewTab('https://ecsa.citizen-science.net/sites/default/files/ecsa_ten_principles_of_citizen_science.pdf')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                    dynage.uzh.ch
+                  </button>
+                </div>
+
+                <p class="centered"><b>People and Computing Lab, Department of Informatics, UZH</b></p>
+                <p>
+                  People and Computing Lab is part of the Human-Computer Interaction group at the University of Zurich. The group takes an approach to research that goes beyond interface design and usability, and focuses on gaining a deep, contextualized understanding of the relationship between people and computing technologies.
+                </p>
+                <div class="button-group centered margin-bottom">
+                  <button class="button button-secondary button-icon" @click="openInNewTab('https://ecsa.citizen-science.net/sites/default/files/ecsa_ten_principles_of_citizen_science.pdf')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                    Website
+                  </button>
+                </div>
+
+              </div>
+
+              <div class="content-subsection">
+                <h3 class="subheading centered">Project Partners</h3>
+                <p class="centered">
+                  <img src="img/crowdwater-logo.png" style="width: 50%" />
+                </p>
+                <p>CrowdWater is a citizen science project to collect hydrological data. The goal is to develop a cheap and easy to use method of data collection that can be used to predict floods and low flow.</p>
+                <div class="button-group centered">
+                  <button class="button button-secondary button-icon" @click="openInNewTab('https://ecsa.citizen-science.net/sites/default/files/ecsa_ten_principles_of_citizen_science.pdf')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                    crowdwater.ch
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-      </div>
     </app-content-section>
 
     <app-content-section>

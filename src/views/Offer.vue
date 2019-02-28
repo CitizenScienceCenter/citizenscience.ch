@@ -108,13 +108,13 @@
               <label>{{ $t(this.$router.currentRoute.meta.page).link }}:</label>
               <ul>
                 <li>
-                  <a v-scroll-to="'#tools'">{{ $t('section-tools-heading') }}</a>
+                  <a v-scroll-to="'#tools'" @click="$emit('hashNav','#tools')">{{ $t('section-tools-heading') }}</a>
                 </li>
                 <li>
-                  <a v-scroll-to="'#community'">{{ $t('section-community-heading') }}</a>
+                  <a v-scroll-to="'#community'" @click="$emit('hashNav','#community')">{{ $t('section-community-heading') }}</a>
                 </li>
                 <li>
-                  <a v-scroll-to="'#knowledge'">{{ $t('section-knowledge-heading') }}</a>
+                  <a v-scroll-to="'#knowledge'" @click="$emit('hashNav','#knowledge')">{{ $t('section-knowledge-heading') }}</a>
                 </li>
               </ul>
             </div>

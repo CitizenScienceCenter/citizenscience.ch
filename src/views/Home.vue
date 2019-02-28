@@ -253,7 +253,7 @@
 
             <div class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect scroll-effect-delayed-1">
                 <div class="extra-padding-h">
-                    <img src="img/graphic-create-project.png" />
+                    <img src="img/graphic-question.png" />
                 </div>
             </div>
 

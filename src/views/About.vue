@@ -142,7 +142,7 @@
                       c-27.1,13.9-73.6,44.5-54.5,68c5.6,6.9,16,10,21.5,10c17.9,0,35.7-18,61.1-61.8c25.8-8.5,54.1-19.1,79-23.2
                       c21.7,11.8,47.1,19.5,64,19.5c29.2,0,31.2-32,19.7-43.4C363.7,325.4,323.3,329.3,304,331.8z M441,105L343,7c-4.5-4.5-10.6-7-17-7h-6
                       v128h128v-6.1C448,115.6,445.5,109.5,441,105z M366.9,360.3c4.1-2.7-2.5-11.9-42.8-9C361.2,367.1,366.9,360.3,366.9,360.3z"/>
-                  </svg>
+                </svg>
                 {{ $t('section-mission-download-button') }}
               </button>
             </p>
@@ -298,7 +298,7 @@
               <p class="reduced-bottom-margin">
                 <img src="img/crowdwater-logo.png" style="height: 48px" />
               </p>
-              <div class="button-group">
+              <div class="button-group margin-bottom">
                 <button class="button button-secondary button-icon" @click="openInNewTab('https://crowdwater.ch')">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
                   crowdwater.ch
@@ -322,9 +322,11 @@
 
             </div>
 
+
           </div>
         </div>
     </app-content-section>
+
 
     <app-content-section>
       <div class="content-wrapper">

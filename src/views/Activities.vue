@@ -4,7 +4,7 @@
     "page-title": "What we do",
 
     "anchor-navigation-link-1": "Citizen Science “Zurich Style”",
-    "anchor-navigation-link-2": "Projects",
+    "anchor-navigation-link-2": "Conducting Projects",
     "anchor-navigation-link-3": "Benefits",
     "anchor-navigation-link-4": "Sustainable Development Goals",
     "anchor-navigation-link-5": "Collaborations",
@@ -57,7 +57,7 @@
     "page-title": "Was wir tun",
 
     "anchor-navigation-link-1": "Citizen Science “Zürich Style”",
-    "anchor-navigation-link-2": "Projekt",
+    "anchor-navigation-link-2": "Projekte durchführen",
     "anchor-navigation-link-3": "Vorteile",
     "anchor-navigation-link-4": "Sustainable Development Goals",
     "anchor-navigation-link-5": "Kollaborationen",
@@ -223,26 +223,13 @@
             </div>
 
             <div class="col col-large-6 col-large-before-1 col-wrapping">
-              <div>
-                <h2 class="subheading centered left-aligned-large">Requirement Check</h2>
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                </p>
-                <div class="button-group centered left-aligned-large">
-                  <button class="button button-secondary button-icon" @click="openInNewTab('files/geschaeftsordnung_cccs.pdf')">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                    <path d="M245.9,256.1c-5-16-4.9-46.9-2-46.9C252.3,209.2,251.5,246.1,245.9,256.1z M244.2,303.3c-7.7,20.2-17.3,43.3-28.4,62.7
-                        c18.3-7,39-17.2,62.9-21.9C266,334.5,253.8,320.7,244.2,303.3L244.2,303.3z M150.1,428.1c0,0.8,13.2-5.4,34.9-40.2
-                        C178.3,394.2,155.9,412.4,150.1,428.1z M312,160h136v328c0,13.3-10.7,24-24,24H88c-13.3,0-24-10.7-24-24V24C64,10.7,74.7,0,88,0h200
-                        v136C288,149.2,298.8,160,312,160z M304,331.8c-20-12.2-33.3-29-42.7-53.8c4.5-18.5,11.6-46.6,6.2-64.2
-                        c-4.7-29.4-42.4-26.5-47.8-6.8c-5,18.3-0.4,44.1,8.1,77c-11.6,27.6-28.7,64.6-40.8,85.8c-0.1,0-0.1,0.1-0.2,0.1
-                        c-27.1,13.9-73.6,44.5-54.5,68c5.6,6.9,16,10,21.5,10c17.9,0,35.7-18,61.1-61.8c25.8-8.5,54.1-19.1,79-23.2
-                        c21.7,11.8,47.1,19.5,64,19.5c29.2,0,31.2-32,19.7-43.4C363.7,325.4,323.3,329.3,304,331.8z M441,105L343,7c-4.5-4.5-10.6-7-17-7h-6
-                        v128h128v-6.1C448,115.6,445.5,109.5,441,105z M366.9,360.3c4.1-2.7-2.5-11.9-42.8-9C361.2,367.1,366.9,360.3,366.9,360.3z"/>
-                    </svg>
-                    Requirement Checklist for Projects
-                  </button>
-                </div>
+              <h2 class="subheading centered left-aligned-large">Requirement Check</h2>
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+              </p>
+              <div class="button-group centered left-aligned-large">
+                <router-link tag="button" to="/activities/checklist" class="button button-secondary">
+                  Criteria for Project Proposals</router-link>
               </div>
             </div>
 
@@ -263,26 +250,13 @@
             </div>
 
             <div class="col col-large-6 col-large-after-1 col-wrapping">
-              <div>
-                <h2 class="subheading centered left-aligned-large">Phases of a Citizen Science Project</h2>
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                </p>
-                <div class="button-group centered left-aligned-large">
-                  <button class="button button-secondary button-icon" @click="openInNewTab('files/geschaeftsordnung_cccs.pdf')">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                    <path d="M245.9,256.1c-5-16-4.9-46.9-2-46.9C252.3,209.2,251.5,246.1,245.9,256.1z M244.2,303.3c-7.7,20.2-17.3,43.3-28.4,62.7
-                        c18.3-7,39-17.2,62.9-21.9C266,334.5,253.8,320.7,244.2,303.3L244.2,303.3z M150.1,428.1c0,0.8,13.2-5.4,34.9-40.2
-                        C178.3,394.2,155.9,412.4,150.1,428.1z M312,160h136v328c0,13.3-10.7,24-24,24H88c-13.3,0-24-10.7-24-24V24C64,10.7,74.7,0,88,0h200
-                        v136C288,149.2,298.8,160,312,160z M304,331.8c-20-12.2-33.3-29-42.7-53.8c4.5-18.5,11.6-46.6,6.2-64.2
-                        c-4.7-29.4-42.4-26.5-47.8-6.8c-5,18.3-0.4,44.1,8.1,77c-11.6,27.6-28.7,64.6-40.8,85.8c-0.1,0-0.1,0.1-0.2,0.1
-                        c-27.1,13.9-73.6,44.5-54.5,68c5.6,6.9,16,10,21.5,10c17.9,0,35.7-18,61.1-61.8c25.8-8.5,54.1-19.1,79-23.2
-                        c21.7,11.8,47.1,19.5,64,19.5c29.2,0,31.2-32,19.7-43.4C363.7,325.4,323.3,329.3,304,331.8z M441,105L343,7c-4.5-4.5-10.6-7-17-7h-6
-                        v128h128v-6.1C448,115.6,445.5,109.5,441,105z M366.9,360.3c4.1-2.7-2.5-11.9-42.8-9C361.2,367.1,366.9,360.3,366.9,360.3z"/>
-                    </svg>
-                    Description of Project Phases
-                  </button>
-                </div>
+              <h2 class="subheading centered left-aligned-large">Phases of a Citizen Science Project</h2>
+              <p>
+                The aim of the roadmap is to facilitate an agreed and transparent functioning of the Center. It lays down the key milestones that define the ideal process to propose a set up a Citizen Science project in collaboration with the Center.
+              </p>
+              <div class="button-group centered left-aligned-large">
+                <router-link tag="button" to="/activities/phases" class="button button-secondary">
+                  Project Phases</router-link>
               </div>
             </div>
 

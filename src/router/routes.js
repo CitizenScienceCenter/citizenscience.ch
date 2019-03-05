@@ -13,6 +13,16 @@ const Activities = resolve => {
     resolve( require('../views/Activities.vue') );
   });
 };
+const Checklist = resolve => {
+    require.ensure(['../views/Checklist.vue'], () => {
+        resolve( require('../views/Checklist.vue') );
+    });
+};
+const Phases = resolve => {
+    require.ensure(['../views/Phases.vue'], () => {
+        resolve( require('../views/Phases.vue') );
+    });
+};
 const Offer = resolve => {
   require.ensure(['../views/Offer.vue'], () => {
     resolve( require('../views/Offer.vue') );
@@ -37,6 +47,8 @@ const Terms = resolve => {
 export const routes = [
     { path: '/', component: Home, meta: {page: 'page-homepage', nav: false} },
     { path: '/activities', component: Activities, meta: {page: 'page-activities', nav: true} },
+    { path: '/activities/checklist', component: Checklist, meta: {nav: false} },
+    { path: '/activities/phases', component: Phases, meta: {nav: false} },
     { path: '/offer', component: Offer, meta: {page: 'page-offer', nav: true} },
     { path: '/about', component: About, meta: {page: 'page-about', nav: true} },
     { path: '/events', component: Events, meta: {page: 'page-events', nav: true} },

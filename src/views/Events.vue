@@ -6,19 +6,19 @@
     "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
     "section-lunches-subheading": "Brown Bag Lunches in Spring Term 2019",
     "section-lunches-text": "Always from 12:15 pm – 1:15 pm<br/>Location: University of Zurich, Main Building (KOL), Rämistrasse 71, 8006 Zürich<br>Drinks and sandwiches provided",
-    "section-lunches-text-info": "<b>Please note:</b><br>Rooms change for each BB lunch, you will find the information in time under each date below.",
+    "section-lunches-text-info": "<b>Please note:</b><br>Rooms change for each BB lunch, you find the information under each date below.",
     "section-lunches-text-register": "<b>Please register via E-Mail</b>",
 
     "section-lunches-lunch-title-1": "Wednesday, February 20, 2019",
-    "section-lunches-lunch-text-1": "Dana Mahr, University of Geneva<br/>The Role of Experiential Knowledge for Citizen Science<br>Room: KOL-N-1 (Uniturm/Uni Tower)",
+    "section-lunches-lunch-text-1": "Dana Mahr, University of Geneva<br/>The Role of Experiential Knowledge for Citizen Science<br>Room: KOL-N-1 (Uniturm / Uni Tower)",
     "section-lunches-lunch-title-2": "Wednesday, March 20, 2019",
-    "section-lunches-lunch-text-2": "Claudia Müller-Birn, Freie Universität Berlin<br/>Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an effective Partnership.",
-    "section-lunches-lunch-title-3": "April, 2019 (Date will be announced)",
-    "section-lunches-lunch-text-3": "Shannon Dosemagen, Public Lab",
+    "section-lunches-lunch-text-2": "Claudia Müller-Birn, Freie Universität Berlin<br/>Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an effective Partnership<br>Room: KOL-N-1 (Uniturm / Uni Tower)",
+    "section-lunches-lunch-title-3": "Monday, April 1, 2019",
+    "section-lunches-lunch-text-3": "Shannon Dosemagen, Public Lab<br/>Room: KOL-N-1 (Uniturm / Uni Tower)",
     "section-lunches-lunch-title-4": "Wednesday, May 15, 2019",
-    "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists",
+    "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists<br/>Room: KOL-G-212 (University of Zurich Main Building)",
     "section-lunches-lunch-title-5": "Wednesday, June 5, 2019",
-    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, University of Geneva<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management",
+    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, University of Geneva<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Room: KOL-G-210 (University of Zurich Main Building)",
 
 
     "section-newsletter-heading": "Sign up for our Newsletter"
@@ -29,19 +29,19 @@
     "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
     "section-lunches-subheading": "Brown Bag Lunches im Frühjahrssemester 2019",
     "section-lunches-text": "Jeweils von 12:15 – 13:15 Uhr<br/>Ort: Hauptgebäude im Zentrum (KOL), Rämistrasse 71, 8006 Zürich<br/>Getränke und Sandwiches offeriert",
-    "section-lunches-text-info": "<b>Achtung:</b><br>Wechselnde Räume, die jeweilige Raumangabe wird rechtzeitig unten bekannt gegeben",
+    "section-lunches-text-info": "<b>Achtung:</b><br>Wechselnde Räume, die jeweilige Raumangabe finden Sie unten.",
     "section-lunches-text-register": "<b>Bitte melden Sie sich an unter:</b>",
 
     "section-lunches-lunch-title-1": "Mittwoch, 20. Februar 2019",
-    "section-lunches-lunch-text-1": "Dana Mahr, Universität Genf<br/>The Role of Experiential Knowledge for Citizen Science<br>Raum: KOL-N-1 (Uniturm)",
+    "section-lunches-lunch-text-1": "Dana Mahr, Universität Genf<br/>The Role of Experiential Knowledge for Citizen Science<br/>Raum: KOL-N-1 (Uniturm)",
     "section-lunches-lunch-title-2": "Mittwoch, 20. März 2019",
-    "section-lunches-lunch-text-2": "Claudia Müller-Birn, Freie Universität Berlin<br/>Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an effective Partnership.",
-    "section-lunches-lunch-title-3": "April 2019 (Termin wird bekannt gegeben)",
-    "section-lunches-lunch-text-3": "Shannon Dosemagen, Public Lab",
+    "section-lunches-lunch-text-2": "Claudia Müller-Birn, Freie Universität Berlin<br/>Taking the Best of Both Worlds: the Concept of Human-Machine Collaboration for Designing an effective Partnership<br/>Raum: KOL-N-1 (Uniturm)",
+    "section-lunches-lunch-title-3": "Montag, 1. April 2019",
+    "section-lunches-lunch-text-3": "Shannon Dosemagen, Public Lab<br/>Raum: KOL-N-1 (Uniturm)",
     "section-lunches-lunch-title-4": "Mittwoch, 15. Mai 2019",
-    "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists",
+    "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists<br/>Raum: KOL-G-212 (Universität Zürich Hauptgebäude)",
     "section-lunches-lunch-title-5": "Mittwoch, 5. Juni 2019",
-    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, Universität Genf<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management",
+    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, Universität Genf<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Raum: KOL-G-210 (Universität Zürich Hauptgebäude)",
 
     "section-newsletter-heading": "Abonniere unseren Newsletter"
   }
@@ -72,7 +72,7 @@
                           <p class="list-intro small" v-html="$t('section-lunches-text-info')"></p>
                           <p class="list-intro" v-html="$t('section-lunches-text-register')"></p>
                           <div class="margin-bottom">
-                              <button class="button button-secondary button-icon" @click="openInNewTab('mailto:info@citizenscience.ch?subject=Brown Bag Lunch')">
+                              <button class="button button-secondary button-normal-case button-icon" @click="openInNewTab('mailto:info@citizenscience.ch?subject=Brown Bag Lunch')">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                       <path d="M502.3,190.8c3.9-3.1,9.7-0.2,9.7,4.7V400c0,26.5-21.5,48-48,48H48c-26.5,0-48-21.5-48-48V195.6c0-5,5.7-7.8,9.7-4.7c22.4,17.4,52.1,39.5,154.1,113.6c21.1,15.4,56.7,47.8,92.2,47.6c35.7,0.3,72-32.8,92.3-47.6C450.3,230.4,479.9,208.2,502.3,190.8zM256,320c23.2,0.4,56.6-29.2,73.4-41.4c132.7-96.3,142.8-104.7,173.4-128.7c5.8-4.5,9.2-11.5,9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5,64,0,85.5,0,112v19c0,7.4,3.4,14.3,9.2,18.9c30.6,23.9,40.7,32.4,173.4,128.7C199.4,290.8,232.8,320.4,256,320L256,320z"/>
                                   </svg>

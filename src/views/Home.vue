@@ -263,6 +263,7 @@
               <p class="">
                 {{ $t('section-build-project-text') }}
               </p>
+              <!--
               <p class="button-group centered left-aligned-large">
                 <button class="button button-secondary button-icon" @click="openInNewTab('mailto:info@citizenscience.ch')">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -283,6 +284,10 @@
                   </svg>
                   +41 44 634 21 97
                 </button>
+              </p>
+              -->
+              <p class="centered left-aligned-large">
+                <router-link tag="button" to="/activities#projects" class="button button-secondary">Learn more</router-link>
               </p>
             </div>
           </div>

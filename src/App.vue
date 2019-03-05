@@ -14,7 +14,7 @@
 <template>
   <div id="app">
     <!--<app-header :languages="['en']"></app-header>-->
-    <app-header hideLogin></app-header>
+    <app-header></app-header>
     <div class="content-area">
       <router-view platform @hashNav="hashNav"></router-view>
     </div>

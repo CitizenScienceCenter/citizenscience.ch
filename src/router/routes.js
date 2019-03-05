@@ -1,6 +1,10 @@
-// import Home from './views/Home.vue'
-// import About from './views/About.vue'
-// import Events from './views/Events.vue'
+import Login from '@/views/shared/user/Login'
+import Register from '@/views/shared/user/Register'
+import Profile from '@/views/shared/user/Profile'
+
+import RequestReset from '@/views/shared/user/RequestReset'
+import Reset from '@/views/shared/user/Reset'
+
 
 // lazy loading routes
 const Home = resolve => {
@@ -52,5 +56,11 @@ export const routes = [
     { path: '/offer', component: Offer, meta: {page: 'page-offer', nav: true} },
     { path: '/about', component: About, meta: {page: 'page-about', nav: true} },
     { path: '/events', component: Events, meta: {page: 'page-events', nav: true} },
-    { path: '/terms', component: Terms, meta: {page: 'page-terms', nav: false} }
-]
+    { path: '/terms', component: Terms, meta: {page: 'page-terms', nav: false} },
+
+    { path: '/login', component: Login, meta: {page: 'page-terms', nav: false} },
+    { path: '/register', component: Register, meta: {page: 'page-terms', nav: false} },
+    { path: '/profile', component: Profile, meta: {requiresAuth: true, page: 'page-terms', nav: false} },
+    { path: '/reset', component: Profile, meta: {page: 'page-terms', nav: false} },
+    { path: '/reset/:token', component: Profile, meta: {page: 'page-terms', nav: false} }
+];

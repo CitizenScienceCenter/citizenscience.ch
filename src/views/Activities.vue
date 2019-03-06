@@ -20,8 +20,15 @@
     "section-next-gen-citizenscience-text": "The main goal of scientific research, including Citizen Science projects, is to produce excellent science to advance our understanding of the world we leave in. We strongly believe that it should also empower society with a form of actionable understanding, ie. with the opportunity to produce data for change.",
     "section-next-gen-citizenscience-text-2": "The Citizen Science Center Zurich Center aims at supporting next generation Citizen Science, ie. projects that use the latest collaborative technologies and the highest quality standards to produce <b>excellent science and quality open data</b> that can help citizens, communities and governments to move toward a more sustainable world.",
 
-    "section-projects-heading": "Citizen Science Projects",
+    "section-projects-heading": "Conducting Citizen Science Projects",
     "section-projects-text": "Traditional Citizen Science projects involve members of the public in gathering data (often geo-located) via mobile or sensing technologies, or in analysing existing data via interactive and highly visual web interfaces. In an increasing number of cases the public is also involved in other phases of the research process, including the definition of the research questions, the interpretation of results, and the final dissemination of conclusions.<br>In the past two decades, citizen science has gained tremendous popularity both with scientists and the public, and citizen science projects span today a wide range of research topics.",
+    "section-projects-button": "Discover our Projects",
+    "section-projects-checklist-heading": "Requirement Check",
+    "section-projects-checklist-text": "We provide you with a set of agreed criteria for the transparent selection of Citizen Science projects, that wish to be supported by the Center.",
+    "section-projects-checklist-button": "Criteria for Project Proposals",
+    "section-projects-phases-heading": "Phases of a Citizen Science Project",
+    "section-projects-phases-text": "In order to facilitate an agreed and transparent functioning of the Center, we provide you with a predefined process to propose and set up a Citizen Science project in collaboration with the Center.",
+    "section-projects-phases-button": "Project Phases",
 
     "section-benefits-heading": "Benefits of Citizen Science",
     "section-benefits-subheading-1": "For Scientists",
@@ -73,8 +80,15 @@
     "section-next-gen-citizenscience-text": "Das grösste Ziel wissenschaftlicher Forschung, einschliesslich Citizen Science, besteht darin, die Welt, in der wir leben, besser zu verstehen. Wir finden ausserdem, dass die Wissenschaft der Gesellschaft ein gewisses Mass an «anwendbarem Wissen und Verständnis» zur Verfügung stellen sollte, das Bürgerinnen und Bürger dazu befähigt, neue Daten und gewonnenes Wissen für konkrete Veränderungsprozesse zu nutzen.",
     "section-next-gen-citizenscience-text-2": "Das Citizen Science Center Zürich unterstützt zukunftsweisende Citizen Science Projekte, die moderne Kollaborations-Technologien nutzen, die höchste wissenschaftliche Standards einhalten und <b>exzellente Forschung</b> betreiben und die <b>Open Data</b> produzieren, um Bürgern, Communities und Regierungen zu helfen, mehr Nachhaltigkeit zu erreichen.",
 
-    "section-projects-heading": "Citizen Science Projekte",
+    "section-projects-heading": "Durchführen von Citizen Science Projekten",
     "section-projects-text": "In den meisten Citizen Science Projekten beteiligen sich Bürgerinnen und Bürger durch das Sammeln und Auswerten von Daten. Dies geschieht häufig mithilfe von Smartphones, Apps und anderen mobilen Geräten oder interaktiven Websites. Immer häufiger sind Citizen Scientists auch in anderen Phasen des Forschungsprozesses aktiv: Sie definieren Forschungsfragen, interpretieren Ergebnisse und veröffentlichen Schlussfolgerungen.<br>In den letzten 20 Jahren erfreut sich Citizen Science immer grösserer Beliebtheit bei Wissenschaftlern und in der Öffentlichkeit; und auch das Themenspektrum wird immer breiter.",
+    "section-projects-button": "Entdecke unsere Projekte",
+    "section-projects-checklist-heading": "Anforderungen",
+    "section-projects-checklist-text": "Hier finden Sie die Kriterien für die Auswahl von Citizen Science-Projekten, die vom Zentrum unterstützt werden möchten.",
+    "section-projects-checklist-button": "Kriterien für Projektevorschläge",
+    "section-projects-phases-heading": "Phasen eines Citizen Science Projekts",
+    "section-projects-phases-text": "Mit dieser Anleitung wollen wir unserer Vorgehensweise bei der Entwicklung von Projekten nachvollziehbar machen. Anhand von Meilensteinen ​​wird gezeigt, wie ein Citizen Science-Projekt in Zusammenarbeit mit dem Zentrum entstehen kann.",
+    "section-projects-phases-button": "Projektphasen",
 
     "section-benefits-heading": "Was bringt Citizen Science?",
     "section-benefits-subheading-1": "Für Wissenschaftler",
@@ -197,10 +211,10 @@
             <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin">
               <div>
                 <!-- <h2 class="heading centered left-aligned-large" id="projects">{{ $t('section-projects-heading') }}</h2> -->
-                <h2 class="heading centered left-aligned-large" id="projects">Conducting Citizen Science Projects</h2>
+                <h2 class="heading centered left-aligned-large" id="projects">{{ $t('section-projects-heading') }}</h2>
                 <p v-html="$t('section-projects-text')"></p>
                 <div class="button-group centered left-aligned-large">
-                  <router-link tag="button" to="/#projects" class="button button-secondary">Discover our Projects</router-link>
+                  <router-link tag="button" to="/#projects" class="button button-secondary">{{ $t('section-projects-button') }}</router-link>
                 </div>
               </div>
             </div>
@@ -223,13 +237,10 @@
             </div>
 
             <div class="col col-large-6 col-large-before-1 col-wrapping">
-              <h2 class="subheading centered left-aligned-large">Requirement Check</h2>
-              <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-              </p>
+              <h2 class="subheading centered left-aligned-large">{{ $t('section-projects-checklist-heading') }}</h2>
+              <p v-html="$t('section-projects-checklist-text')"></p>
               <div class="button-group centered left-aligned-large">
-                <router-link tag="button" to="/activities/checklist" class="button button-secondary">
-                  Criteria for Project Proposals</router-link>
+                <router-link tag="button" to="/activities/checklist" class="button button-secondary">{{ $t('section-projects-checklist-button') }}</router-link>
               </div>
             </div>
 
@@ -250,13 +261,10 @@
             </div>
 
             <div class="col col-large-6 col-large-after-1 col-wrapping">
-              <h2 class="subheading centered left-aligned-large">Phases of a Citizen Science Project</h2>
-              <p>
-                The aim of the roadmap is to facilitate an agreed and transparent functioning of the Center. It lays down the key milestones that define the ideal process to propose a set up a Citizen Science project in collaboration with the Center.
-              </p>
+              <h2 class="subheading centered left-aligned-large">{{ $t('section-projects-phases-heading') }}</h2>
+              <p v-html="$t('section-projects-phases-text')"></p>
               <div class="button-group centered left-aligned-large">
-                <router-link tag="button" to="/activities/phases" class="button button-secondary">
-                  Project Phases</router-link>
+                <router-link tag="button" to="/activities/phases" class="button button-secondary">{{ $t('section-projects-phases-button') }}</router-link>
               </div>
             </div>
 

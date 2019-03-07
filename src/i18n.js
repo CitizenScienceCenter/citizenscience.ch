@@ -25,45 +25,75 @@ language = store.state.settings.language;
 export const i18n = new VueI18n({
   locale: language,
   messages: {
+
     'en': {
-      'page-homepage': {
+
+    'page-homepage': {
         'link': 'Home'
-      },
-      'page-activities': {
+    },
+    'page-activities': {
         'link': 'What we do'
-      },
-      'page-offer': {
+    },
+    'page-offer': {
         'link': 'What we offer'
-      },
-      'page-about': {
+    },
+    'page-about': {
         'link': 'About us'
-      },
-      'page-events': {
-          'link': 'Events'
-      },
-      'page-terms': {
-          'link': 'Privacy Policy & Terms of Use'
-      }
+    },
+    'page-events': {
+      'link': 'Events'
+    },
+    'page-terms': {
+      'link': 'Privacy Policy & Terms of Use'
+    },
+    'page-login': {
+        'link': 'Login'
+    },
+    'page-register': {
+        'link': 'Register'
+    },
+    'page-profile': {
+        'link': 'Profile'
+    },
+    'page-reset': {
+        'link': 'Reset'
+    }
+
     },
     'de': {
-      'page-homepage': {
+
+    'page-homepage': {
         'link': 'Home'
-      },
-      'page-activities': {
+    },
+    'page-activities': {
         'link': 'Was wir tun'
-      },
-      'page-offer': {
+    },
+    'page-offer': {
         'link': 'Was wir bieten'
-      },
-      'page-about': {
+    },
+    'page-about': {
         'link': 'Über uns'
-      },
-      'page-events': {
-          'link': 'Events'
-      },
-      'page-terms': {
-          'link': 'Privacy Policy & Terms of Use'
-      }
+    },
+    'page-events': {
+        'link': 'Events'
+    },
+    'page-terms': {
+        'link': 'Privacy Policy & Terms of Use'
+    },
+    'page-login': {
+        'link': 'Login'
+    },
+    'page-register': {
+        'link': 'Registrieren'
+    },
+    'page-profile': {
+        'link': 'Profil'
+    },
+    'page-reset': {
+        'link': 'Zurücksetzen'
     }
-  }
+
+    }
+
+    }
 })

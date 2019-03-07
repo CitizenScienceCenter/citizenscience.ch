@@ -58,9 +58,9 @@ export const routes = [
     { path: '/events', component: Events, meta: {page: 'page-events', nav: true} },
     { path: '/terms', component: Terms, meta: {page: 'page-terms', nav: false} },
 
-    { path: '/login', component: Login, meta: {page: 'page-terms', nav: false} },
-    { path: '/register', component: Register, meta: {page: 'page-terms', nav: false} },
-    { path: '/profile', component: Profile, meta: {requiresAuth: true, page: 'page-terms', nav: false} },
-    { path: '/reset', component: Profile, meta: {page: 'page-terms', nav: false} },
-    { path: '/reset/:token', component: Profile, meta: {page: 'page-terms', nav: false} }
+    { path: '/login', component: Login, meta: {page: 'page-login', nav: false} },
+    { path: '/register', component: Register, meta: {page: 'page-register', nav: false} },
+    { path: '/profile', component: Profile, meta: {requiresAccount: true, page: 'page-profile', nav: false} },
+    { path: '/reset', component: RequestReset, meta: {page: 'page-reset', nav: false} },
+    { path: '/reset/:token', component: Reset, meta: {page: 'page-reset', nav: false} }
 ];

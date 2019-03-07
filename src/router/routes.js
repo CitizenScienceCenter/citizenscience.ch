@@ -1,9 +1,12 @@
-import Login from '@/views/shared/user/Login'
-import Register from '@/views/shared/user/Register'
-import Profile from '@/views/shared/user/Profile'
+import Login from '@/views/shared/user/Login';
+import Register from '@/views/shared/user/Register';
+import Profile from '@/views/shared/user/Profile';
 
-import RequestReset from '@/views/shared/user/RequestReset'
-import Reset from '@/views/shared/user/Reset'
+import RequestReset from '@/views/shared/user/RequestReset';
+import Reset from '@/views/shared/user/Reset';
+
+import Forum from '@/views/Forum';
+
 
 
 // lazy loading routes
@@ -56,11 +59,13 @@ export const routes = [
     { path: '/offer', component: Offer, meta: {page: 'page-offer', nav: true} },
     { path: '/about', component: About, meta: {page: 'page-about', nav: true} },
     { path: '/events', component: Events, meta: {page: 'page-events', nav: true} },
-    { path: '/terms', component: Terms, meta: {page: 'page-terms', nav: false} },
+    { path: '/forum', component: Forum, meta: {requiresAuth: true, page: 'page-forum', nav: true} },
 
     { path: '/login', component: Login, meta: {page: 'page-login', nav: false} },
     { path: '/register', component: Register, meta: {page: 'page-register', nav: false} },
     { path: '/profile', component: Profile, meta: {requiresAccount: true, page: 'page-profile', nav: false} },
     { path: '/reset', component: RequestReset, meta: {page: 'page-reset', nav: false} },
-    { path: '/reset/:token', component: Reset, meta: {page: 'page-reset', nav: false} }
+    { path: '/reset/:token', component: Reset, meta: {page: 'page-reset', nav: false} },
+
+    { path: '/terms', component: Terms, meta: {page: 'page-terms', nav: false} }
 ];

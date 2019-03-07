@@ -12,7 +12,6 @@ export const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    const lang = store.state.settings.language || 'de';
 
     if( to.matched.some(record => record.meta.requiresAuth) ) {
         console.log('auth required');
@@ -50,6 +49,7 @@ router.beforeEach((to, from, next) => {
     else {
         next();
     }
+
 });
 
 // handling hash urls

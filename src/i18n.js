@@ -43,9 +43,10 @@ export const i18n = new VueI18n({
     'page-events': {
       'link': 'Events'
     },
-    'page-terms': {
-      'link': 'Privacy Policy & Terms of Use'
+    'page-forum': {
+        'link': 'Forum'
     },
+
     'page-login': {
         'link': 'Login'
     },
@@ -57,6 +58,10 @@ export const i18n = new VueI18n({
     },
     'page-reset': {
         'link': 'Reset'
+    },
+
+    'page-terms': {
+        'link': 'Privacy Policy & Terms of Use'
     }
 
     },
@@ -77,9 +82,10 @@ export const i18n = new VueI18n({
     'page-events': {
         'link': 'Events'
     },
-    'page-terms': {
-        'link': 'Privacy Policy & Terms of Use'
+    'page-forum': {
+        'link': 'Forum'
     },
+
     'page-login': {
         'link': 'Login'
     },
@@ -91,6 +97,10 @@ export const i18n = new VueI18n({
     },
     'page-reset': {
         'link': 'Zurücksetzen'
+    },
+
+    'page-terms': {
+        'link': 'Privacy Policy & Terms of Use'
     }
 
     }

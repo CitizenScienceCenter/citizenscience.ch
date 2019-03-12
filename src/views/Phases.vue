@@ -40,7 +40,7 @@
             <p>In order to facilitate an agreed and transparent functioning of the Center, we provide you with a predefined process to propose and set up a Citizen Science project in collaboration with the Center.</p>
             <p>This is the result of a series of open discussions between the Center’s management and team, and representatives of the UZ and ETHZ research community.</p>
             <div class="button-group centered left-aligned-large">
-              <button class="button button-secondary button-icon" @click="openInNewTab('/files/CSCenterZurich-Roadmap.pdf')">
+              <button class="button button-secondary button-icon" @click="openInNewTab('/files/CS Center Zurich - Roadmap for Project Implementation.pdf')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M245.9,256.1c-5-16-4.9-46.9-2-46.9C252.3,209.2,251.5,246.1,245.9,256.1z M244.2,303.3c-7.7,20.2-17.3,43.3-28.4,62.7
                         c18.3-7,39-17.2,62.9-21.9C266,334.5,253.8,320.7,244.2,303.3L244.2,303.3z M150.1,428.1c0,0.8,13.2-5.4,34.9-40.2
@@ -209,7 +209,7 @@
 
             <div class="col col-large-6">
               <div class="button-group centered">
-                <button class="button button-secondary button-icon" @click="openInNewTab('/files/CSCenterZurich-Roadmap.pdf')">
+                <button class="button button-secondary button-icon" @click="openInNewTab('/files/CS Center Zurich - Roadmap for Project Implementation.pdf')">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M245.9,256.1c-5-16-4.9-46.9-2-46.9C252.3,209.2,251.5,246.1,245.9,256.1z M244.2,303.3c-7.7,20.2-17.3,43.3-28.4,62.7
                         c18.3-7,39-17.2,62.9-21.9C266,334.5,253.8,320.7,244.2,303.3L244.2,303.3z M150.1,428.1c0,0.8,13.2-5.4,34.9-40.2

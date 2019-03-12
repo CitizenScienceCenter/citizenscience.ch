@@ -61,7 +61,7 @@
               <li>The results of the project are published in an open-access format, provided there are no legal or ethical arguments against doing so.</li>
             </ul>
             <div class="button-group centered left-aligned-large">
-              <button class="button button-secondary button-icon" @click="openInNewTab('/files/CCCS-CriteriaProjects.pdf')">
+              <button class="button button-secondary button-icon" @click="openInNewTab('/files/CS Center Zurich - CriteriaProjects.pdf')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M245.9,256.1c-5-16-4.9-46.9-2-46.9C252.3,209.2,251.5,246.1,245.9,256.1z M244.2,303.3c-7.7,20.2-17.3,43.3-28.4,62.7
                         c18.3-7,39-17.2,62.9-21.9C266,334.5,253.8,320.7,244.2,303.3L244.2,303.3z M150.1,428.1c0,0.8,13.2-5.4,34.9-40.2

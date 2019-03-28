@@ -1,14 +1,10 @@
 <i18n>
   {
   "en": {
-  "page-title": "What we do",
-
-  "section-newsletter-heading": "Sign up for our Newsletter"
+  "page-title": "Project Phases"
   },
   "de": {
-  "page-title": "Was wir tun",
-
-  "section-newsletter-heading": "Abonniere unseren Newsletter"
+  "page-title": "Projektphasen"
   }
   }
 </i18n>
@@ -233,20 +229,7 @@
     </app-content-section>
 
 
-    <app-content-section color="greyish">
-      <div class="content-wrapper">
-        <div class="row row-centered">
-          <div class="col col-mobile-large-10">
-            <h2 class="heading centered">{{ $t('section-newsletter-heading') }}</h2>
-          </div>
-        </div>
-        <div class="row row-centered">
-          <div class="col col-mobile-large-10 col-tablet-portrait-8 col-large-12">
-            <app-newsletter-signup></app-newsletter-signup>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
+    <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
 
@@ -255,16 +238,15 @@
 
 <script>
 
-    import Cover from '@/components/shared/Cover.vue'
     import ContentSection from '@/components/shared/ContentSection.vue'
-    import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
     import Footer from '@/components/shared/Footer.vue'
+    import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
     export default {
         name: 'What',
         components: {
+            SectionNewsletterSignup,
             'app-content-section': ContentSection,
-            'app-newsletter-signup': NewsletterSignup,
             'app-footer': Footer
         },
         props: {

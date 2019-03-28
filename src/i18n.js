@@ -28,78 +28,172 @@ export const i18n = new VueI18n({
 
     'en': {
 
-    'page-homepage': {
+    'navigation-homepage': {
         'link': 'Home'
     },
-    'page-activities': {
-        'link': 'What we do'
+
+    'navigation-contribute': {
+        'link': 'Contribute'
     },
-    'page-offer': {
-        'link': 'What we offer'
+    'navigation-contribute-projects': {
+        'link': 'Projects'
     },
-    'page-about': {
+    'navigation-contribute-collaborations': {
+        'link': 'Collaborations'
+    },
+
+    'navigation-startproject': {
+        'link': 'Start a Project'
+    },
+    'navigation-startproject-overview': {
+        'link': 'Overview'
+    },
+    'navigation-startproject-offer': {
+        'link': 'Our Offer'
+    },
+    'navigation-startproject-checklist': {
+        'link': 'Checklist'
+    },
+    'navigation-startproject-phases': {
+        'link': 'Project Phases'
+    },
+
+    'navigation-citizenscience': {
+        'link': 'Citizen Science'
+    },
+    'navigation-citizenscience-zurichstyle': {
+        'link': 'Zurich Style'
+    },
+    'navigation-citizenscience-sdg': {
+        'link': 'Sustainable Development Goals'
+    },
+
+    'navigation-about': {
         'link': 'About us'
     },
-    'page-events': {
+    'navigation-about-mission': {
+        'link': 'Mission & Goals'
+    },
+    'navigation-about-people': {
+        'link': 'People'
+    },
+    'navigation-about-partnerships': {
+        'link': 'Partnerships'
+    },
+    'navigation-about-pwa': {
+        'link': 'PWA'
+    },
+    'navigation-about-contact': {
+        'link': 'Contact'
+    },
+
+    'navigation-events': {
       'link': 'Events'
     },
-    'page-forum': {
+    'navigation-forum': {
         'link': 'Forum'
     },
 
-    'page-login': {
+    'navigation-login': {
         'link': 'Login'
     },
-    'page-register': {
+    'navigation-register': {
         'link': 'Register'
     },
-    'page-profile': {
+    'navigation-profile': {
         'link': 'Profile'
     },
-    'page-reset': {
+    'navigation-reset': {
         'link': 'Reset'
     },
 
-    'page-terms': {
+    'navigation-terms': {
         'link': 'Privacy Policy & Terms of Use'
     }
 
     },
     'de': {
 
-    'page-homepage': {
+    'navigation-homepage': {
         'link': 'Home'
     },
-    'page-activities': {
-        'link': 'Was wir tun'
+
+    'navigation-contribute': {
+        'link': 'Mitmachen'
     },
-    'page-offer': {
-        'link': 'Was wir bieten'
+    'navigation-contribute-projects': {
+        'link': 'Projekte'
     },
-    'page-about': {
-        'link': 'Über uns'
+    'navigation-contribute-collaborations': {
+        'link': 'Kollaborationen'
     },
-    'page-events': {
+
+    'navigation-startproject': {
+        'link': 'Projekt starten'
+    },
+    'navigation-startproject-overview': {
+        'link': 'Übersicht'
+    },
+    'navigation-startproject-offer': {
+        'link': 'Unser Angebot'
+    },
+    'navigation-startproject-checklist': {
+        'link': 'Checklist'
+    },
+    'navigation-startproject-phases': {
+        'link': 'Projektphasen'
+    },
+
+    'navigation-citizenscience': {
+        'link': 'Citizen Science'
+    },
+    'navigation-citizenscience-zurichstyle': {
+        'link': 'Zurich Style'
+    },
+    'navigation-citizenscience-sdg': {
+        'link': 'Sustainable Development Goals'
+    },
+
+    'navigation-about': {
+        'link': 'About us'
+    },
+    'navigation-about-mission': {
+        'link': 'Mission & Goals'
+    },
+    'navigation-about-people': {
+        'link': 'People'
+    },
+    'navigation-about-partnerships': {
+        'link': 'Partnerships'
+    },
+    'navigation-about-pwa': {
+        'link': 'PWA'
+    },
+    'navigation-about-contact': {
+        'link': 'Contact'
+    },
+
+    'navigation-events': {
         'link': 'Events'
     },
-    'page-forum': {
+    'navigation-forum': {
         'link': 'Forum'
     },
 
-    'page-login': {
+    'navigation-login': {
         'link': 'Login'
     },
-    'page-register': {
+    'navigation-register': {
         'link': 'Registrieren'
     },
-    'page-profile': {
+    'navigation-profile': {
         'link': 'Profil'
     },
-    'page-reset': {
+    'navigation-reset': {
         'link': 'Zurücksetzen'
     },
 
-    'page-terms': {
+    'navigation-terms': {
         'link': 'Privacy Policy & Terms of Use'
     }
 

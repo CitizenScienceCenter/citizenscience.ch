@@ -18,10 +18,7 @@
     "section-lunches-lunch-title-4": "Wednesday, May 15, 2019",
     "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists<br/>Room: KOL-G-212 (University of Zurich Main Building)",
     "section-lunches-lunch-title-5": "Wednesday, June 5, 2019",
-    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, University of Geneva<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Room: KOL-G-210 (University of Zurich Main Building)",
-
-
-    "section-newsletter-heading": "Sign up for our Newsletter"
+    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, University of Geneva<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Room: KOL-G-210 (University of Zurich Main Building)"
     },
   "de": {
     "page-title": "Events",
@@ -41,9 +38,7 @@
     "section-lunches-lunch-title-4": "Mittwoch, 15. Mai 2019",
     "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists<br/>Raum: KOL-G-212 (Universität Zürich Hauptgebäude)",
     "section-lunches-lunch-title-5": "Mittwoch, 5. Juni 2019",
-    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, Universität Genf<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Raum: KOL-G-210 (Universität Zürich Hauptgebäude)",
-
-    "section-newsletter-heading": "Abonniere unseren Newsletter"
+    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, Universität Genf<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Raum: KOL-G-210 (Universität Zürich Hauptgebäude)"
   }
 }
 </i18n>
@@ -103,20 +98,7 @@
           </div>
       </app-content-section>
 
-    <app-content-section color="greyish">
-      <div class="content-wrapper">
-        <div class="row row-centered">
-          <div class="col col-mobile-large-10">
-            <h2 class="heading centered">{{ $t('section-newsletter-heading') }}</h2>
-          </div>
-        </div>
-        <div class="row row-centered">
-          <div class="col col-mobile-large-10 col-tablet-portrait-8 col-large-12">
-            <app-newsletter-signup></app-newsletter-signup>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
+    <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
 
@@ -128,12 +110,13 @@
 import ContentSection from '@/components/shared/ContentSection.vue'
 import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
 import Footer from '@/components/shared/Footer.vue'
+import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 
 export default {
   name: 'Events',
   components: {
+      SectionNewsletterSignup,
     'app-content-section': ContentSection,
-    'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
     props: {

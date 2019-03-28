@@ -42,9 +42,7 @@
     "section-about-text": "The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.",
     "section-about-text-2": "Switzerland has a deep tradition of direct democracy and participatory decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.",
     "section-about-text-3": "Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy.",
-    "section-about-button": "Learn more about us",
-
-    "section-newsletter-heading": "Sign up for our Newsletter"
+    "section-about-button": "Learn more about us"
   },
   "de": {
     "page-title": "Citizen Science Center Zürich",
@@ -87,9 +85,7 @@
     "section-about-text": "Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt.",
     "section-about-text-2": "Die Schweiz ist bekannt für ihre lange Tradition in direkter Demokratie und politischer Mitbestimmung. Citizen Science könnte als Übertragung dieser Idee von der Politik in die Wissenschaft angesehen werden.",
     "section-about-text-3": "Auch Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Diese Kombination an Wissen und Kompetenzen am Standort Zürich ermöglicht vielfältige Synergien.",
-    "section-about-button": "Mehr über uns",
-
-    "section-newsletter-heading": "Abonniere unseren Newsletter"
+    "section-about-button": "Mehr über uns"
   }
 }
 </i18n>
@@ -329,20 +325,8 @@
       </div>
     </app-content-section>
 
-    <app-content-section color="greyish">
-      <div class="content-wrapper">
-        <div class="row row-centered">
-          <div class="col col-mobile-large-10">
-            <h2 class="heading centered">{{ $t('section-newsletter-heading') }}</h2>
-          </div>
-        </div>
-        <div class="row row-centered">
-          <div class="col col-mobile-large-10 col-tablet-portrait-8 col-large-12">
-            <app-newsletter-signup></app-newsletter-signup>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
+
+    <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
 
@@ -353,17 +337,17 @@
 
 import Cover from '@/components/shared/Cover.vue'
 import ContentSection from '@/components/shared/ContentSection.vue'
-import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
 import Footer from '@/components/shared/Footer.vue'
 import ProjectTeaser from '@/components/ProjectTeaser';
+import SectionNewsletterSignup from '../components/shared/SectionNewsletterSignup';
 
 export default {
   name: 'Home',
   components: {
+      SectionNewsletterSignup,
       ProjectTeaser,
     'app-cover': Cover,
     'app-content-section': ContentSection,
-    'app-newsletter-signup': NewsletterSignup,
     'app-footer': Footer
   },
     props: {

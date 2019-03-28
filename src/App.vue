@@ -16,7 +16,7 @@
     <!--<app-header :languages="['en']"></app-header>-->
     <app-header></app-header>
     <div class="content-area">
-      <router-view platform @hashNav="hashNav"></router-view>
+      <router-view platform></router-view>
     </div>
   </div>
 </template>
@@ -69,11 +69,6 @@ export default {
     window.setTimeout(function() {
       app.classList.add("show");
     }, 1);
-  },
-  methods: {
-    hashNav( hash ) {
-        this.$router.push( { hash: hash } );
-    }
   }
 }
 

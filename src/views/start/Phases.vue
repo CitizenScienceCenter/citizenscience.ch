@@ -25,13 +25,6 @@
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-            <div class="button-group centered left-aligned-large margin-bottom">
-              <router-link tag="button" to="/activities#projects" class="button button-secondary button-secondary-naked button-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576">
-                  <path class="st0" d="M130.5,239L324.9,44.7c9.4-9.4,24.6-9.4,33.9,0l22.7,22.7c9.4,9.4,9.4,24.5,0,33.9L227.5,256l154,154.8 c9.3,9.4,9.3,24.5,0,33.9l-22.7,22.7c-9.4,9.4-24.6,9.4-33.9,0L130.5,273C121.2,263.6,121.2,248.4,130.5,239z"/>
-                </svg>
-                Conducting Citizen Science Projects</router-link>
-            </div>
             <h2 class="heading centered left-aligned-large">Project Phases</h2>
             <p>In order to facilitate an agreed and transparent functioning of the Center, we provide you with a predefined process to propose and set up a Citizen Science project in collaboration with the Center.</p>
             <p>This is the result of a series of open discussions between the Center’s management and team, and representatives of the UZ and ETHZ research community.</p>
@@ -71,7 +64,7 @@
 
             <div class="col col-large-6 col-large-after-2 col-wrapping">
               <h2 class="subheading centered left-aligned-large">Milestone 1 – You have an idea for a citizen science project – what’s first?</h2>
-              <p>
+              <p class="reduced-bottom-margin">
                 You (scientist or citizen) have an idea for a Citizen Science project and wish to collaborate with the Center to receive support. First thing you should do is check if your project fits the “Criteria for project support”.
               </p>
               <div class="button-group centered left-aligned-large">

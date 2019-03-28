@@ -89,8 +89,8 @@ const Events = resolve => {
     });
 };
 const Terms = resolve => {
-    require.ensure(['../views/shared/Terms.vue'], () => {
-        resolve( require('../views/shared/Terms.vue') );
+    require.ensure(['../views/shared/static/Terms.vue'], () => {
+        resolve( require('../views/shared/static/Terms.vue') );
     });
 };
 

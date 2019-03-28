@@ -64,7 +64,7 @@
       <div class="row row-centered">
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="img/people/abraham.jpg" class="photo"/>
+            <img src="/img/people/abraham.jpg" class="photo"/>
             <span class="name">Abraham Bernstein</span>
             <span class="position">{{ $t('people-abraham-position') }}</span>
             <a href="mailto:bernstein@ifi.uzh.ch">bernstein@ifi.uzh.ch</a>
@@ -72,7 +72,7 @@
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="img/people/ernst.jpg" class="photo"/>
+            <img src="/img/people/ernst.jpg" class="photo"/>
             <span class="name">Ernst Hafen</span>
             <span class="position">{{ $t('people-ernst-position') }}</span>
             <a href="mailto:hafen@imsb.biol.ethz.ch">hafen@imsb.biol.ethz.ch</a>
@@ -80,7 +80,7 @@
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="img/people/mike.jpg" class="photo"/>
+            <img src="/img/people/mike.jpg" class="photo"/>
             <span class="name">Mike Martin</span>
             <span class="position">{{ $t('people-mike-position') }}</span>
             <a href="mailto:m.martin@psychologie.uzh.ch">m.martin@psychologie.uzh.ch</a>
@@ -88,7 +88,7 @@
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-tablet-portrait-no-bottom-margin">
           <div class="person centered">
-            <img src="img/people/michael.jpg" class="photo"/>
+            <img src="/img/people/michael.jpg" class="photo"/>
             <span class="name">Michael Ristow</span>
             <span class="position">{{ $t('people-michael-position') }}</span>
             <a href="mailto:michael-ristow@ethz.ch">michael-ristow@ethz.ch</a>
@@ -96,7 +96,7 @@
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-tablet-portrait-no-bottom-margin">
           <div class="person centered">
-            <img src="img/people/effy.jpg" class="photo"/>
+            <img src="/img/people/effy.jpg" class="photo"/>
             <span class="name">Effy Vayena</span>
             <span class="position">{{ $t('people-effy-position') }}</span>
             <a href="mailto:effy.vayena@hest.ethz.ch">effy.vayena@hest.ethz.ch</a>
@@ -104,7 +104,7 @@
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-no-bottom-margin">
           <div class="person centered">
-            <img src="img/people/claudia.jpg" class="photo"/>
+            <img src="/img/people/claudia.jpg" class="photo"/>
             <span class="name">Claudia Witt</span>
             <span class="position">{{ $t('people-claudia-position') }}</span>
             <a href="mailto:claudia.witt@uzh.ch">claudia.witt@uzh.ch</a>
@@ -119,7 +119,7 @@
       <div class="row row-centered">
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-no-bottom-margin">
           <div class="person centered">
-            <img src="img/people/dirk.jpg" class="photo"/>
+            <img src="/img/people/dirk.jpg" class="photo"/>
             <span class="name">Dirk Helbing</span>
             <span class="position">{{ $t('people-dirk-position') }}</span>
             <a href="mailto:dirk.helbing@gess.ethz.ch">dirk.helbing@gess.ethz.ch</a>
@@ -138,7 +138,7 @@
           <div class="row row-centered">
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
               <div class="person centered">
-                <img src="img/people/rosy.jpg" class="photo"/>
+                <img src="/img/people/rosy.jpg" class="photo"/>
                 <span class="name">Rosy Mondardini</span>
                 <span class="position">{{ $t('people-rosy-position') }}</span>
                 <a href="mailto:maria.mondardini@uzh.ch">maria.mondardini@uzh.ch</a>
@@ -146,7 +146,7 @@
             </div>
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
               <div class="person centered">
-                <img src="img/people/chris.jpg" class="photo"/>
+                <img src="/img/people/chris.jpg" class="photo"/>
                 <span class="name">Chris Gwilliams</span>
                 <span class="position">{{ $t('people-chris-position') }}</span>
                 <a href="mailto:christopher.gwilliams@uzh.ch ">christopher.gwilliams@uzh.ch</a>
@@ -154,7 +154,7 @@
             </div>
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
               <div class="person centered">
-                <img src="img/people/fanny.jpg" class="photo"/>
+                <img src="/img/people/fanny.jpg" class="photo"/>
                 <span class="name">Fanny Jones</span>
                 <span class="position">{{ $t('people-fanny-position') }}</span>
                 <a href="mailto:fanny.jones@uzh.ch">fanny.jones@uzh.ch</a>
@@ -162,7 +162,7 @@
             </div>
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping col-large-no-bottom-margin">
               <div class="person centered">
-                <img src="img/people/marcel.jpg" class="photo"/>
+                <img src="/img/people/marcel.jpg" class="photo"/>
                 <span class="name">Marcel Tanner</span>
                 <span class="position">{{ $t('people-marcel-position') }}</span>
                 <a href="mailto:marcel.tanner@uzh.ch">marcel.tanner@uzh.ch</a>
@@ -170,7 +170,7 @@
             </div>
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping col-no-bottom-margin">
               <div class="person centered">
-                <img src="img/people/marina.jpg" class="photo"/>
+                <img src="/img/people/marina.jpg" class="photo"/>
                 <span class="name">Marina Gagetti</span>
                 <span class="position">{{ $t('people-marina-position') }}</span>
                 <a href="mailto:marina.gagetti@zfg.uzh.ch">marina.gagetti@zfg.uzh.ch</a>

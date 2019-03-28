@@ -13,10 +13,10 @@
   <div>
 
     <app-content-section class="overflow-hidden">
-      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
-            <div class="col col-6 col-large-7 col-large-before-1 col-wrapping col-large-no-bottom-margin">
+            <div class="col col-6 col-large-7 col-large-after-1 col-wrapping col-large-no-bottom-margin">
               <img src="/img/graphic-checklist.png"/>
             </div>
           </div>
@@ -24,14 +24,7 @@
       </div>
       <div class="content-wrapper scroll-effect">
         <div class="row">
-          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-            <div class="button-group centered left-aligned-large margin-bottom">
-              <router-link tag="button" to="/activities#projects" class="button button-secondary button-secondary-naked button-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576">
-                  <path class="st0" d="M130.5,239L324.9,44.7c9.4-9.4,24.6-9.4,33.9,0l22.7,22.7c9.4,9.4,9.4,24.5,0,33.9L227.5,256l154,154.8 c9.3,9.4,9.3,24.5,0,33.9l-22.7,22.7c-9.4,9.4-24.6,9.4-33.9,0L130.5,273C121.2,263.6,121.2,248.4,130.5,239z"/>
-                </svg>
-                Conducting Citizen Science Projects</router-link>
-            </div>
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large">Criteria for Project Proposals</h2>
             <p>The criteria allow a transparent selection of proposals and guarantee quality and consistency for the projects featured in the platform. </p>
             <ul>
@@ -106,6 +99,12 @@ export default {
     metaInfo: function() {
         return {
             title: this.$t('page-title')
+        }
+    },
+    methods: {
+        openInNewTab: function(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
         }
     }
 }

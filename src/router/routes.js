@@ -9,7 +9,7 @@ import Reset from '@/views/shared/user/Reset';
 
 import Forum from '@/views/Forum';
 
-import ChildView from '@/views/ChildView';
+import ChildView from '@/views/shared/ChildView';
 
 
 // lazy loading routes

@@ -13,8 +13,6 @@ Vue.config.productionTip = false;
 
 
 let swaggerURL = 'https://api.citizenscience.ch/api/v2/swagger.json';
-//let swaggerURL = 'http://localhost:8080/api/v2/swagger.json';
-//let swaggerURL = 'http://10.12.7.217:8080/api/v2/swagger.json';
 
 Vue.use(c3s.plugin, { store, swaggerURL});
 Vue.use(VueRouter);

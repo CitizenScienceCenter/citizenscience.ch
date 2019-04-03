@@ -13,13 +13,13 @@ export const router = new VueRouter({
 router.beforeEach((to, from, next) => {
 
     if( to.matched.some(record => record.meta.requiresAuth) ) {
-        console.log('auth required');
+
 
         if( store.state.c3s.user.currentUser ) {
-            console.log('validate user '+store.state.c3s.user.currentUser.username);
+            //console.log('validate user '+store.state.c3s.user.currentUser.username);
 
             store.dispatch('c3s/user/validate').then(v => {
-                console.log('validation success');
+                //console.log('validation success');
                 if (v) {
                     next();
                 }
@@ -37,7 +37,7 @@ router.beforeEach((to, from, next) => {
 
     }
     else if( to.matched.some(record => record.meta.requiresAccount) ) {
-        console.log('account required');
+
         if( !store.state.c3s.user.currentUser || store.state.c3s.user.isAnon ) {
             router.push('/login');
         }

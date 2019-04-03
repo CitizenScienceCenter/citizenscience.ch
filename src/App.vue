@@ -66,9 +66,11 @@ export default {
   },
   mounted: function() {
     var app = this.$el;
-    window.setTimeout(function() {
-      app.classList.add("show");
-    }, 1);
+    var cover = new Image();
+    cover.onload = function() {
+        app.classList.add("show");
+    };
+    cover.src = '/img/cover.jpg';
   }
 }
 

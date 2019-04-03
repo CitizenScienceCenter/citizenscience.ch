@@ -162,7 +162,7 @@
           </div>
         </div>
       </div>
-      <div class="content-wrapper scroll-effect">
+      <div class="content-wrapper scroll-effect content-subsection">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-5 col-wrapping col-large-no-bottom-margin">
             <h2 class="heading centered left-aligned-large" id="community">{{ $t('section-community-heading') }}</h2>
@@ -180,11 +180,7 @@
           </div>
         </div>
       </div>
-    </app-content-section>
-
-
-    <app-content-section color="greyish">
-      <div class="content-wrapper scroll-effect">
+      <div class="content-wrapper scroll-effect content-subsection">
 
         <div class="row row-centered">
           <div class="col">

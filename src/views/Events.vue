@@ -49,7 +49,7 @@
           <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
               <div class="content-wrapper">
                   <div class="row row-centered row-in-background">
-                      <div class="col col-6 col-wrapping col-large-no-bottom-margin">
+                      <div class="col col-6 col-large-7 col-large-after-1 col-wrapping col-large-no-bottom-margin">
                           <img src="img/events/brownbag.jpg" style="border-radius: 50%"/>
                       </div>
                   </div>

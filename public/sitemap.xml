@@ -4,15 +4,50 @@
     <url>
         <loc>https://www.citizenscience.ch</loc>
     </url>
+
     <url>
-        <loc>https://www.citizenscience.ch/activities</loc>
+        <loc>https://www.citizenscience.ch/contribute/projects</loc>
     </url>
     <url>
-        <loc>https://www.citizenscience.ch/offer</loc>
+        <loc>https://www.citizenscience.ch/contribute/collaborations</loc>
+    </url>
+
+    <url>
+        <loc>https://www.citizenscience.ch/start/startproject</loc>
     </url>
     <url>
-        <loc>https://www.citizenscience.ch/about</loc>
+        <loc>https://www.citizenscience.ch/start/offer</loc>
     </url>
+    <url>
+        <loc>https://www.citizenscience.ch/start/checklist</loc>
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/start/phases</loc>
+    </url>
+
+    <url>
+        <loc>https://www.citizenscience.ch/citizenscience/zurichstyle</loc>
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/citizenscience/sdg</loc>
+    </url>
+
+    <url>
+        <loc>https://www.citizenscience.ch/about/mission</loc>
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/about/people</loc>
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/about/partnerships</loc>
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/about/pwa</loc>
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/about/contact</loc>
+    </url>
+
     <url>
         <loc>https://www.citizenscience.ch/events</loc>
     </url>

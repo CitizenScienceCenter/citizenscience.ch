@@ -155,9 +155,9 @@
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
               <div class="person centered">
                 <img src="/img/people/fanny.jpg" class="photo"/>
-                <span class="name">Fanny Jones</span>
+                <span class="name">Fanny Gutsche Jones</span>
                 <span class="position">{{ $t('people-fanny-position') }}</span>
-                <a href="mailto:fanny.jones@uzh.ch">fanny.jones@uzh.ch</a>
+                <a href="mailto:fanny.jones@uzh.ch">fanny.gutsche-jones@uzh.ch</a>
               </div>
             </div>
             <div class="col col-tablet-portrait-6 col-large-4 col-wrapping col-large-no-bottom-margin">

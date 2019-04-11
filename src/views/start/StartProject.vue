@@ -62,8 +62,10 @@
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
-            <div class="col col-6 col-large-7 col-large-after-1 col-wrapping col-large-no-bottom-margin">
-              <img src="/img/graphic-question.png"/>
+            <div class="col col-tablet-portrait-10 col-large-6">
+              <div class="extra-padding">
+                <img src="/img/graphic-question.png"/>
+              </div>
             </div>
           </div>
         </div>

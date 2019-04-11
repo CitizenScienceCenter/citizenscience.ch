@@ -111,7 +111,7 @@
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
-            <div class="col col-tablet-portrait-10 col-large-7">
+            <div class="col col-tablet-portrait-10 col-large-7 col-large-after-1">
               <img src="/img/uzh-eth.jpg" style="border-radius:50%"/>
             </div>
           </div>

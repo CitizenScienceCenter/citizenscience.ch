@@ -102,8 +102,8 @@ export const routes = [
         path: '/contribute', component: ChildView, meta: {i18n: 'navigation-contribute', nav: true},
         redirect: '/contribute/projects',
         children: [
-            { path: 'contribute/projects', component: Projects, meta: {i18n: 'navigation-contribute-projects', nav: true} },
-            { path: 'contribute/collaborations', component: Collaborations, meta: {i18n: 'navigation-contribute-collaborations', nav: true} }
+            { path: '/contribute/projects', component: Projects, meta: {i18n: 'navigation-contribute-projects', nav: true} },
+            { path: '/contribute/collaborations', component: Collaborations, meta: {i18n: 'navigation-contribute-collaborations', nav: true} }
         ]
     },
 
@@ -111,10 +111,10 @@ export const routes = [
         path: '/start', component: ChildView, meta: {i18n: 'navigation-startproject', nav: true},
         redirect: '/start/startproject',
         children: [
-            { path: 'start/startproject', component: StartProject, meta: {i18n: 'navigation-startproject-overview', nav: true} },
-            { path: 'start/offer', component: Offer, meta: {i18n: 'navigation-startproject-offer', nav: true} },
-            { path: 'start/checklist', component: Checklist, meta: {i18n: 'navigation-startproject-checklist', nav: true} },
-            { path: 'start/phases', component: Phases, meta: {i18n: 'navigation-startproject-phases', nav: true} }
+            { path: '/start/startproject', component: StartProject, meta: {i18n: 'navigation-startproject-overview', nav: true} },
+            { path: '/start/offer', component: Offer, meta: {i18n: 'navigation-startproject-offer', nav: true} },
+            { path: '/start/checklist', component: Checklist, meta: {i18n: 'navigation-startproject-checklist', nav: true} },
+            { path: '/start/phases', component: Phases, meta: {i18n: 'navigation-startproject-phases', nav: true} }
         ]
     },
 
@@ -122,8 +122,8 @@ export const routes = [
         path: '/citizenscience', component: ChildView, meta: {i18n: 'navigation-citizenscience', nav: true},
         redirect: '/citizenscience/zurichstyle',
         children: [
-            { path: 'citizenscience/zurichstyle', component: ZurichStyle, meta: {i18n: 'navigation-citizenscience-zurichstyle', nav: true} },
-            { path: 'citizenscience/sdg', component: SDG, meta: {i18n: 'navigation-citizenscience-sdg', nav: true} }
+            { path: '/citizenscience/zurichstyle', component: ZurichStyle, meta: {i18n: 'navigation-citizenscience-zurichstyle', nav: true} },
+            { path: '/citizenscience/sdg', component: SDG, meta: {i18n: 'navigation-citizenscience-sdg', nav: true} }
         ]
     },
 
@@ -131,11 +131,11 @@ export const routes = [
         path: '/about', component: ChildView, meta: {i18n: 'navigation-about', nav: true},
         redirect: '/about/mission',
         children: [
-            { path: 'about/mission', component: Mission, meta: {i18n: 'navigation-about-mission', nav: true} },
-            { path: 'about/people', component: People, meta: {i18n: 'navigation-about-people', nav: true} },
-            { path: 'about/partnerships', component: Partnerships, meta: {i18n: 'navigation-about-partnerships', nav: true} },
-            { path: 'about/pwa', component: PWA, meta: {i18n: 'navigation-about-pwa', nav: true} },
-            { path: 'about/contact', component: Contact, meta: {i18n: 'navigation-about-contact', nav: true} }
+            { path: '/about/mission', component: Mission, meta: {i18n: 'navigation-about-mission', nav: true} },
+            { path: '/about/people', component: People, meta: {i18n: 'navigation-about-people', nav: true} },
+            { path: '/about/partnerships', component: Partnerships, meta: {i18n: 'navigation-about-partnerships', nav: true} },
+            { path: '/about/pwa', component: PWA, meta: {i18n: 'navigation-about-pwa', nav: true} },
+            { path: '/about/contact', component: Contact, meta: {i18n: 'navigation-about-contact', nav: true} }
         ]
     },
 

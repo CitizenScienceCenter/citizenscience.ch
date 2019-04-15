@@ -17,6 +17,7 @@ module.exports = {
     configureWebpack: {
         plugins: [
             new PrerenderSPAPlugin({
+                //staticDir: __dirname+'/dist', // The path to the folder where index.html is.
                 staticDir: path.join(__dirname, 'dist'),
                 routes: [
                     '/',

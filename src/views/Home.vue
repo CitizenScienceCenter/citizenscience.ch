@@ -201,6 +201,7 @@
     </app-content-section>
 
 
+
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered row-middle row-reverse-large">
@@ -228,6 +229,36 @@
 
       </div>
     </app-content-section>
+
+    <!--
+    <app-content-section>
+      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
+        <div class="content-wrapper">
+          <div class="row row-centered row-in-background">
+            <div class="col col-tablet-portrait-10 col-large-10 col-large-before-2">
+              <img src="/img/device-mockup.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="row row-middle">
+
+          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin">
+            <div>
+              <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
+              <p v-html="$t('section-explanation-text')"></p>
+              <p class="centered left-aligned-large">
+                <router-link tag="button" to="/citizenscience" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </app-content-section>
+    -->
 
 
     <app-content-section class="overflow-hidden" color="light-greyish">

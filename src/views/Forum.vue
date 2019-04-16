@@ -49,7 +49,6 @@
 
     import ContentSection from '@/components/shared/ContentSection.vue'
     import Comments from '@/components/shared/Comments.vue'
-    import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
     import Footer from '@/components/shared/Footer.vue'
     import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 

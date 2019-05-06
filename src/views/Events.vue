@@ -18,7 +18,9 @@
     "section-lunches-lunch-title-4": "Wednesday, May 15, 2019",
     "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists<br/>Room: KOL-G-212 (University of Zurich Main Building)",
     "section-lunches-lunch-title-5": "Wednesday, June 5, 2019",
-    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, University of Geneva<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Room: KOL-G-210 (University of Zurich Main Building)"
+    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, University of Geneva<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Room: KOL-G-210 (University of Zurich Main Building)",
+
+    "section-lunches-content-link": "Details"
     },
   "de": {
     "page-title": "Events",
@@ -38,8 +40,11 @@
     "section-lunches-lunch-title-4": "Mittwoch, 15. Mai 2019",
     "section-lunches-lunch-text-4": "Danièle Pralong, Project Noah<br/>Citizen Science: Managing Expectations of Participants and Scientists<br/>Raum: KOL-G-212 (Universität Zürich Hauptgebäude)",
     "section-lunches-lunch-title-5": "Mittwoch, 5. Juni 2019",
-    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, Universität Genf<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Raum: KOL-G-210 (Universität Zürich Hauptgebäude)"
-  }
+    "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, Universität Genf<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Raum: KOL-G-210 (Universität Zürich Hauptgebäude)",
+
+    "section-lunches-content-link": "Details"
+
+    }
 }
 </i18n>
 <template>
@@ -79,17 +84,45 @@
 
                       <div class="content-subsection">
 
-                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-1')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-1')"></p>
-                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-2')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-2')"></p>
-                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-3')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-3')"></p>
-                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-4')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-4')"></p>
-                          <h3 class="subheading" style="margin-bottom: 0" v-html="$t('section-lunches-lunch-title-5')"></h3>
-                          <p v-html="$t('section-lunches-lunch-text-5')"></p>
-
+                          <h3 class="subheading reduced-bottom-margin" v-html="$t('section-lunches-lunch-title-1')"></h3>
+                          <p class="reduced-bottom-margin" v-html="$t('section-lunches-lunch-text-1')"></p>
+                          <expandable small>
+                              <template slot="header">{{ $t('section-lunches-content-link') }}</template>
+                              <template slot="content">
+                                  With this presentation I explore an alternative explanatory narrative for the rise of participatory science in the 21st Century. I argue that experiential knowledge and individual bodily perception, the cornerstones of social movements in the 1970s, have been re-discovered within the epistemological framework of citizen science.
+                              </template>
+                          </expandable>
+                          <h3 class="subheading reduced-bottom-margin" v-html="$t('section-lunches-lunch-title-2')"></h3>
+                          <p class="reduced-bottom-margin"  v-html="$t('section-lunches-lunch-text-2')"></p>
+                          <expandable small>
+                              <template slot="header">{{ $t('section-lunches-content-link') }}</template>
+                              <template slot="content">
+                                  In the last years, peer production systems (e.g., Wikipedia, Wikidata) have emerged that involve a large number of people in problem-solving processes. Although the role of humans in such processes is essential, we want to show to what extent human and machine intelligence are combined to realize the complex tasks in these peer production systems.<br>
+                                  Previous research has investigated the process of vandalism control in Wikipedia or the translation of social norms into algorithmic mechanisms defined by software functions and bots. From the discussion of these works, we infer the concept of human-machine collaboration and determine initial design parameters that allow us to transfer our findings to other application areas. We present, thus, the first results of our research on human-machine collaboration in the field of ideation.
+                              </template>
+                          </expandable>
+                          <h3 class="subheading reduced-bottom-margin" v-html="$t('section-lunches-lunch-title-3')"></h3>
+                          <p class="reduced-bottom-margin"  v-html="$t('section-lunches-lunch-text-3')"></p>
+                          <expandable small>
+                              <template slot="header">{{ $t('section-lunches-content-link') }}</template>
+                              <template slot="content">
+                                  Driven by people with environmental questions, the ability to use the scientific process of question asking, data collection and development of narrative gives agency and ownership to people who are impacted by environmental injustices. This model of using science to support community organizing has been leveraged by advances in civic technology, open source ecosystems and distributed networks. Using the case of Public Lab, we’ll take a closer look at how science and community action can be intertwined in our social lives as a way to better understand and engage with narratives that can shift and redistribute power.
+                              </template>
+                          </expandable>
+                          <h3 class="subheading reduced-bottom-margin" v-html="$t('section-lunches-lunch-title-4')"></h3>
+                          <p class="reduced-bottom-margin"  v-html="$t('section-lunches-lunch-text-4')"></p>
+                          <expandable small>
+                              <template slot="header">{{ $t('section-lunches-content-link') }}</template>
+                              <template slot="content">
+                                  Citizen science is on the rise worldwide, drawing large numbers of participants from the general public and the scientific community. The reasons for this are many, from pressuring concerns about climate, biodiversity and environmental issues calling for large data sets, to the availability of dedicated websites and innovative smartphone applications. Participants in citizen science projects come with a wide range of educational backgrounds and motivations that need to be catered for and adequately managed. Similarly, the expectation of scientists and the purpose of projects (education, awareness building, published research) should be clarified from the start. In this context community managers and educated members of the public can play a key role in bridging the culture gap between participants and the scientific community. Also, motivational incentives and engagement tools built into data collection platforms and applications should be carefully designed as to not favor data quantity at the expense of quality. At the same time, for publishable research solid data validation mechanisms should be put in place.<br>
+                                  This presentation will draw from personal experience and management practice with a large worldwide citizen science platform, as well as from case studies and literature overview.
+                              </template>
+                          </expandable>
+                          <h3 class="subheading reduced-bottom-margin" v-html="$t('section-lunches-lunch-title-5')"></h3>
+                          <p class="reduced-bottom-margin"  v-html="$t('section-lunches-lunch-text-5')"></p>
+                          <p class="small">
+                              Abstract will follow
+                          </p>
 
                       </div>
 
@@ -108,13 +141,14 @@
 <script>
 
 import ContentSection from '@/components/shared/ContentSection.vue'
-import NewsletterSignup from '@/components/shared/NewsletterSignup.vue'
 import Footer from '@/components/shared/Footer.vue'
-import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
+import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
+import Expandable from "@/components/shared/Expandable";
 
 export default {
   name: 'Events',
   components: {
+      Expandable,
       SectionNewsletterSignup,
     'app-content-section': ContentSection,
     'app-footer': Footer

@@ -1,6 +1,7 @@
 <i18n>
 {
   "en": {
+    "subheading-directors-chair": "Chair of the Board of Directors",
     "subheading-directors": "Directors",
     "subheading-advisors": "Advisors",
     "subheading-team": "Team",
@@ -26,6 +27,7 @@
     "members-text": "Membership at the Citizen Science Center Zurich is open to professors with research groups at the two founding Institutions, leaders of research groups from other universities or public-legal institutions, and individual researchers and students.<br>Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Currently the Center has a scientific community of more than 200 researchers in fields ranging epidemiology, psychology, geography, neurosciences, and more. Combining these researchers’ expertise represents a unique opportunity for synergy."
   },
   "de": {
+    "subheading-directors-chair": "Vorsitzende",
     "subheading-directors": "Direktorium",
     "subheading-advisors": "Beraterinnen und Berater",
     "subheading-team": "Team",
@@ -58,6 +60,29 @@
 
   <div class="people-list">
 
+    <h3 class="subheading centered">{{ $t('subheading-directors-chair') }}</h3>
+
+    <div class="people-section">
+      <div class="row row-centered">
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
+          <div class="person centered">
+            <img src="/img/people/mike.jpg" class="photo"/>
+            <span class="name">Mike Martin</span>
+            <span class="position">{{ $t('people-mike-position') }}</span>
+            <a href="mailto:m.martin@psychologie.uzh.ch">m.martin@psychologie.uzh.ch</a>
+          </div>
+        </div>
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-tablet-portrait-no-bottom-margin">
+          <div class="person centered">
+            <img src="/img/people/michael.jpg" class="photo"/>
+            <span class="name">Michael Ristow</span>
+            <span class="position">{{ $t('people-michael-position') }}</span>
+            <a href="mailto:michael-ristow@ethz.ch">michael-ristow@ethz.ch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h3 class="subheading centered">{{ $t('subheading-directors') }}</h3>
 
     <div class="people-section">
@@ -76,22 +101,6 @@
             <span class="name">Ernst Hafen</span>
             <span class="position">{{ $t('people-ernst-position') }}</span>
             <a href="mailto:hafen@imsb.biol.ethz.ch">hafen@imsb.biol.ethz.ch</a>
-          </div>
-        </div>
-        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
-          <div class="person centered">
-            <img src="/img/people/mike.jpg" class="photo"/>
-            <span class="name">Mike Martin</span>
-            <span class="position">{{ $t('people-mike-position') }}</span>
-            <a href="mailto:m.martin@psychologie.uzh.ch">m.martin@psychologie.uzh.ch</a>
-          </div>
-        </div>
-        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-tablet-portrait-no-bottom-margin">
-          <div class="person centered">
-            <img src="/img/people/michael.jpg" class="photo"/>
-            <span class="name">Michael Ristow</span>
-            <span class="position">{{ $t('people-michael-position') }}</span>
-            <a href="mailto:michael-ristow@ethz.ch">michael-ristow@ethz.ch</a>
           </div>
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-tablet-portrait-no-bottom-margin">

@@ -20,7 +20,8 @@
     "section-lunches-lunch-title-5": "Wednesday, June 5, 2019",
     "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, University of Geneva<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Room: KOL-G-210 (University of Zurich Main Building)",
 
-    "section-lunches-content-link": "Details"
+    "section-lunches-content-link": "Details",
+    "section-lunches-missing-abstract": "Details will follow"
     },
   "de": {
     "page-title": "Events",
@@ -42,7 +43,8 @@
     "section-lunches-lunch-title-5": "Mittwoch, 5. Juni 2019",
     "section-lunches-lunch-text-5": "Jose Luis Fernandez-Marquez, Universität Genf<br/>Social Media Analysis and Crowd-Sourcing for Disaster Management<br/>Raum: KOL-G-210 (Universität Zürich Hauptgebäude)",
 
-    "section-lunches-content-link": "Details"
+    "section-lunches-content-link": "Details",
+    "section-lunches-missing-abstract": "Details folgen"
 
     }
 }
@@ -121,7 +123,7 @@
                           <h3 class="subheading reduced-bottom-margin" v-html="$t('section-lunches-lunch-title-5')"></h3>
                           <p class="reduced-bottom-margin"  v-html="$t('section-lunches-lunch-text-5')"></p>
                           <p class="small">
-                              Abstract will follow
+                              {{ $t('section-lunches-missing-abstract') }}
                           </p>
 
                       </div>

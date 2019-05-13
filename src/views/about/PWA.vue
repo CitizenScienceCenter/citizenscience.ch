@@ -79,6 +79,12 @@
             return {
                 title: this.$t('page-title')
             }
+        },
+        methods: {
+            openInNewTab: function(url) {
+                var win = window.open(url, '_blank');
+                win.focus();
+            }
         }
     }
 

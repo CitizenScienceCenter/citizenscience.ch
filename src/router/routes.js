@@ -148,5 +148,7 @@ export const routes = [
     { path: '/reset', component: RequestReset, meta: {i18n: 'navigation-reset', nav: false} },
     { path: '/reset/:token', component: Reset, meta: {i18n: 'navigation-reset', nav: false} },
 
-    { path: '/terms', component: Terms, meta: {i18n: 'navigation-terms', nav: false} }
+    { path: '/terms', component: Terms, meta: {i18n: 'navigation-terms', nav: false} },
+
+    { path: '/*', redirect: '/', meta: { nav: false } }
 ];

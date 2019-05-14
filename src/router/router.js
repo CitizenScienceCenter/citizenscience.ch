@@ -49,17 +49,3 @@ router.beforeEach((to, from, next) => {
     }
 
 });
-
-// handling hash urls
-let hashNavTimeout;
-router.afterEach((to, from, next) => {
-  if( to.hash ) {
-    if( to.path !== from.path ){
-        const app = router.app;
-        hashNavTimeout = setTimeout( function() {
-            app.$scrollTo( to.hash );
-            clearInterval(hashNavTimeout);
-        }, 100);
-    }
-  }
-});

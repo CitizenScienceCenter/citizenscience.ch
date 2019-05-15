@@ -5,11 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "postbuild": "react-snap"
   },
   "dependencies": {
     "crypto-js": "^3.1.9-1",
-    "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "swagger-client": "^3.8.22",
     "vue": "^2.5.17",
@@ -27,6 +27,8 @@
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
+    "node-sass": "^4.12.0",
+    "react-snap": "^1.23.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -47,6 +49,21 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "reactSnap": {
+    "source": "dist",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    },
+    "puppeteerArgs": [
+      "--disable-setuid-sandbox",
+      "--no-sandbox"
+    ],
+    "concurrency": 1,
+    "inlineCss": false,
+    //"puppeteerExecutablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "puppeteerExecutablePath": "/usr/bin/chromium-browser"
   },
   "browserslist": [
     "> 1%",

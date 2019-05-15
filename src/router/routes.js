@@ -96,59 +96,66 @@ const Terms = resolve => {
 
 
 export const routes = [
-    { path: '/', component: Home, meta: {i18n: 'navigation-homepage', nav: false} },
-
     {
-        path: '/contribute', component: ChildView, meta: {i18n: 'navigation-contribute', nav: true},
-        redirect: '/contribute/projects',
+        path: '/:lang',
+        component: { render (c) { return c('router-view') } },
         children: [
-            { path: '/contribute/projects', component: Projects, meta: {i18n: 'navigation-contribute-projects', nav: true} },
-            { path: '/contribute/collaborations', component: Collaborations, meta: {i18n: 'navigation-contribute-collaborations', nav: true} }
+            {
+                path: '',
+                meta: {i18n: 'navigation-homepage', nav: false},
+                component: Home
+            },
+            {
+                path: 'contribute', component: ChildView, meta: {i18n: 'navigation-contribute', nav: true},
+                redirect: 'contribute/projects',
+                children: [
+                    { path: 'projects', component: Projects, meta: {i18n: 'navigation-contribute-projects', nav: true} },
+                    { path: 'collaborations', component: Collaborations, meta: {i18n: 'navigation-contribute-collaborations', nav: true} }
+                ]
+            },
+
+            {
+                path: 'start', component: ChildView, meta: {i18n: 'navigation-startproject', nav: true},
+                redirect: 'start/startproject',
+                children: [
+                    { path: 'startproject', component: StartProject, meta: {i18n: 'navigation-startproject-overview', nav: true} },
+                    { path: 'offer', component: Offer, meta: {i18n: 'navigation-startproject-offer', nav: true} },
+                    { path: 'checklist', component: Checklist, meta: {i18n: 'navigation-startproject-checklist', nav: true} },
+                    { path: 'phases', component: Phases, meta: {i18n: 'navigation-startproject-phases', nav: true} }
+                ]
+            },
+
+            {
+                path: 'citizenscience', component: ChildView, meta: {i18n: 'navigation-citizenscience', nav: true},
+                redirect: 'citizenscience/zurichstyle',
+                children: [
+                    { path: 'zurichstyle', component: ZurichStyle, meta: {i18n: 'navigation-citizenscience-zurichstyle', nav: true} },
+                    { path: 'sdg', component: SDG, meta: {i18n: 'navigation-citizenscience-sdg', nav: true} }
+                ]
+            },
+
+            {
+                path: 'about', component: ChildView, meta: {i18n: 'navigation-about', nav: true},
+                redirect: 'about/mission',
+                children: [
+                    { path: 'mission', component: Mission, meta: {i18n: 'navigation-about-mission', nav: true} },
+                    { path: 'people', component: People, meta: {i18n: 'navigation-about-people', nav: true} },
+                    { path: 'partnerships', component: Partnerships, meta: {i18n: 'navigation-about-partnerships', nav: true} },
+                    { path: 'pwa', component: PWA, meta: {i18n: 'navigation-about-pwa', nav: true} },
+                    { path: 'contact', component: Contact, meta: {i18n: 'navigation-about-contact', nav: true} }
+                ]
+            },
+
+            { path: 'events', component: Events, meta: {i18n: 'navigation-events', nav: true} },
+            { path: 'forum', component: Forum, meta: {requiresAuth: true, i18n: 'navigation-forum', nav: true} },
+
+            { path: 'login', component: Login, meta: {requiresAuth: true, i18n: 'navigation-login', nav: false} },
+            { path: 'register', component: Register, meta: {i18n: 'navigation-register', nav: false} },
+            { path: 'profile', component: Profile, meta: {requiresAccount: true, i18n: 'navigation-profile', nav: false} },
+            { path: 'reset', component: RequestReset, meta: {i18n: 'navigation-reset', nav: false} },
+            { path: 'reset/:token', component: Reset, meta: {i18n: 'navigation-reset', nav: false} },
+
+            { path: 'terms', component: Terms, meta: {i18n: 'navigation-terms', nav: false} },
         ]
-    },
-
-    {
-        path: '/start', component: ChildView, meta: {i18n: 'navigation-startproject', nav: true},
-        redirect: '/start/startproject',
-        children: [
-            { path: '/start/startproject', component: StartProject, meta: {i18n: 'navigation-startproject-overview', nav: true} },
-            { path: '/start/offer', component: Offer, meta: {i18n: 'navigation-startproject-offer', nav: true} },
-            { path: '/start/checklist', component: Checklist, meta: {i18n: 'navigation-startproject-checklist', nav: true} },
-            { path: '/start/phases', component: Phases, meta: {i18n: 'navigation-startproject-phases', nav: true} }
-        ]
-    },
-
-    {
-        path: '/citizenscience', component: ChildView, meta: {i18n: 'navigation-citizenscience', nav: true},
-        redirect: '/citizenscience/zurichstyle',
-        children: [
-            { path: '/citizenscience/zurichstyle', component: ZurichStyle, meta: {i18n: 'navigation-citizenscience-zurichstyle', nav: true} },
-            { path: '/citizenscience/sdg', component: SDG, meta: {i18n: 'navigation-citizenscience-sdg', nav: true} }
-        ]
-    },
-
-    {
-        path: '/about', component: ChildView, meta: {i18n: 'navigation-about', nav: true},
-        redirect: '/about/mission',
-        children: [
-            { path: '/about/mission', component: Mission, meta: {i18n: 'navigation-about-mission', nav: true} },
-            { path: '/about/people', component: People, meta: {i18n: 'navigation-about-people', nav: true} },
-            { path: '/about/partnerships', component: Partnerships, meta: {i18n: 'navigation-about-partnerships', nav: true} },
-            { path: '/about/pwa', component: PWA, meta: {i18n: 'navigation-about-pwa', nav: true} },
-            { path: '/about/contact', component: Contact, meta: {i18n: 'navigation-about-contact', nav: true} }
-        ]
-    },
-
-    { path: '/events', component: Events, meta: {i18n: 'navigation-events', nav: true} },
-    { path: '/forum', component: Forum, meta: {requiresAuth: true, i18n: 'navigation-forum', nav: true} },
-
-    { path: '/login', component: Login, meta: {requiresAuth: true, i18n: 'navigation-login', nav: false} },
-    { path: '/register', component: Register, meta: {i18n: 'navigation-register', nav: false} },
-    { path: '/profile', component: Profile, meta: {requiresAccount: true, i18n: 'navigation-profile', nav: false} },
-    { path: '/reset', component: RequestReset, meta: {i18n: 'navigation-reset', nav: false} },
-    { path: '/reset/:token', component: Reset, meta: {i18n: 'navigation-reset', nav: false} },
-
-    { path: '/terms', component: Terms, meta: {i18n: 'navigation-terms', nav: false} },
-
-    { path: '/*', redirect: '/', meta: { nav: false } }
+    }
 ];

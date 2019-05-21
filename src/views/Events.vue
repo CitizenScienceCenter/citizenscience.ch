@@ -3,6 +3,8 @@
   "en": {
     "page-title": "Events",
 
+    "pint-subheading": "Wednesday, May 22, 2019<br>Snakebite Scenarios – How Would you React?",
+
     "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
     "section-lunches-subheading": "Brown Bag Lunches in Spring Term 2019",
     "section-lunches-text": "Always from 12:15 pm – 1:15 pm<br/>Location: University of Zurich, Main Building (KOL), Rämistrasse 71, 8006 Zürich<br>Drinks and sandwiches provided",
@@ -25,6 +27,8 @@
     },
   "de": {
     "page-title": "Events",
+
+    "pint-subheading": "Mittwoch, 22. Mai, 2019<br>Snakebite Scenarios – How Would you React?",
 
     "section-events-heading": "Exploring Citizen Science – Methods, Projects, People",
     "section-lunches-subheading": "Brown Bag Lunches im Frühjahrssemester 2019",
@@ -51,6 +55,37 @@
 </i18n>
 <template>
   <div>
+
+      <app-content-section>
+          <div class="content-wrapper">
+              <div class="row row-centered row-middle row-reverse-large">
+
+                  <div class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect">
+                      <div class="extra-padding-h">
+                          <img src="img/events/pint_of_science.jpg" />
+                      </div>
+                  </div>
+
+                  <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
+                      <div>
+                          <h2 class="heading centered left-aligned-large" id="start-project">Pint of Science</h2>
+                          <h3 class="subheading" v-html="$t('pint-subheading')"></h3>
+                          <p class="">
+                              Team up to decide how best to treat several snakebite scenarios from around the world. After, <b>snake expert Andrew Durso</b> from the University of Geneva will guide us through the answers & tell us a bit about the snakes of Switzerland.
+                          </p>
+
+                          <button class="button button-secondary button-icon" @click="openInNewTab('https://posfrorga.wixsite.com/pintofsciencech/bookoflifezurich')">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                              Pint of Science
+                          </button>
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+      </app-content-section>
+
 
       <app-content-section class="overflow-hidden">
           <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">

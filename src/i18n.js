@@ -6,25 +6,30 @@ Vue.use(VueI18n);
 
 var language;
 if( !store.state.settings.language ) {
-    // no language in store, check browser
+    // no language in store
+
+    // check browser
     language = window.navigator.userLanguage || window.navigator.language;
-    if (language.indexOf('-') !== -1) {
-        language = language.split('-')[0];
-    }
-    else if (language.indexOf('_') !== -1) {
-        language = language.split('_')[0];
-    }
+
+    // trim
+    language = language.substr(0,2);
+
+    // check if valid
     if( language !== 'en' && language !== 'de') {
         language = "de";
     }
 
-  store.dispatch("settings/setLanguage", language );
+    // language for prerendering default routes
+    if( navigator.userAgent === 'ReactSnap' ) {
+        language = "de";
+    }
+
+    store.dispatch("settings/setLanguage", language );
 }
-language = store.state.settings.language;
 
 export const i18n = new VueI18n({
     silentTranslationWarn: true,
-    locale: language,
+    locale: store.state.settings.language,
     messages: {
 
     'en': {

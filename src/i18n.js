@@ -6,7 +6,9 @@ Vue.use(VueI18n);
 
 var language;
 if( !store.state.settings.language ) {
-    // no language in store, check browser
+    // no language in store
+
+    // check browser
     language = window.navigator.userLanguage || window.navigator.language;
     if (language.indexOf('-') !== -1) {
         language = language.split('-')[0];
@@ -14,7 +16,14 @@ if( !store.state.settings.language ) {
     else if (language.indexOf('_') !== -1) {
         language = language.split('_')[0];
     }
+
+    // check if valid
     if( language !== 'en' && language !== 'de') {
+        language = "de";
+    }
+
+    // language for prerendering default routes
+    if( navigator.userAgent === 'ReactSnap' ) {
         language = "de";
     }
 

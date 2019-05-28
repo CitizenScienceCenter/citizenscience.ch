@@ -32,10 +32,10 @@ export default {
   },
   metaInfo: function() {
       return {
-        // if no subcomponents specify a metaInfo.title, this title will be used
-        title: '',
-        // all titles will be injected into this template
-        titleTemplate: '%s | '+this.$t('site-title'),
+          // if no subcomponents specify a metaInfo.title, this title will be used
+          title: '',
+          // all titles will be injected into this template
+          titleTemplate: '%s | '+this.$t('site-title'),
           meta: [
               {
                   name: 'description',
@@ -61,6 +61,9 @@ export default {
                   property: 'og:image',
                   content: 'https://www.citizenscience.ch/img/citsci-promo.jpg'
               }
+          ],
+          link: [
+              {rel: 'canonical', href: 'https://citizenscience.ch'+this.$route.path}
           ]
       }
   },

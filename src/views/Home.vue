@@ -81,7 +81,7 @@
 <template>
   <div>
 
-    <app-cover imageUrl="img/cover.jpg">
+    <app-cover imageUrl="/img/cover.jpg">
       <h2 class="cover-heading scroll-effect">{{ $t('cover-heading') }}</h2>
       <p class="cover-subheading scroll-effect scroll-effect-delayed-1">{{ $t('cover-subheading') }}</p>
       <p class="button-group centered scroll-effect scroll-effect-delayed-2">
@@ -156,7 +156,7 @@
 
           <div class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect">
             <div class="extra-padding-h">
-              <img src="img/graphic-question.png" />
+              <img src="/img/graphic-question.png" />
             </div>
           </div>
 
@@ -209,7 +209,7 @@
           <div class="col col-10 col-large-6 col-wrapping">
             <div>
               <div class="extra-padding-large-h">
-                <img src="img/graphic-citizen-science.png"/>
+                <img src="/img/graphic-citizen-science.png"/>
               </div>
             </div>
           </div>

@@ -128,7 +128,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-6 col-large-7 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-              <img src="img/graphic-platform.png"/>
+              <img src="/img/graphic-platform.png"/>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@
             <div class="margin-bottom">
               <div class="row row-middle">
                 <div class="col col-3">
-                  <img src="img/projects/geotagx.jpg" style="display: block; width:100%; border-radius:50%"/>
+                  <img src="/img/projects/geotagx.jpg" style="display: block; width:100%; border-radius:50%"/>
                 </div>
                 <div class="col col-9" style="padding-left: 0">
                   <p v-html="$t('section-tools-example-1')" class="small"></p>
@@ -155,7 +155,7 @@
             <div class="margin-bottom">
               <div class="row row-middle">
                 <div class="col col-3">
-                  <img src="img/projects/mosquito.jpg" style="display: block; width:100%; border-radius:50%"/>
+                  <img src="/img/projects/mosquito.jpg" style="display: block; width:100%; border-radius:50%"/>
                 </div>
                 <div class="col col-9" style="padding-left: 0">
                   <p v-html="$t('section-tools-example-2')" class="small"></p>
@@ -185,7 +185,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-6 col-large-7 col-large-after-1 col-wrapping col-large-no-bottom-margin">
-              <img src="img/graphic-community.png"/>
+              <img src="/img/graphic-community.png"/>
             </div>
           </div>
         </div>
@@ -264,7 +264,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-6 col-large-7 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-              <img src="img/graphic-knowledge.png"/>
+              <img src="/img/graphic-knowledge.png"/>
             </div>
           </div>
         </div>
@@ -308,7 +308,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-6">
-              <img src="img/pwa.png"/>
+              <img src="/img/pwa.png"/>
             </div>
           </div>
         </div>

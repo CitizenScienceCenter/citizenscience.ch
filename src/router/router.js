@@ -26,6 +26,7 @@ router.beforeEach((to, from, next) => {
         store.dispatch("settings/setLanguage", language);
         i18n.locale = language;
 
+
         // --- auth / account
 
         if( to.matched.some(record => record.meta.requiresAuth) ) {

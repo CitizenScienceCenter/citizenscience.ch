@@ -10,12 +10,9 @@ if( !store.state.settings.language ) {
 
     // check browser
     language = window.navigator.userLanguage || window.navigator.language;
-    if (language.indexOf('-') !== -1) {
-        language = language.split('-')[0];
-    }
-    else if (language.indexOf('_') !== -1) {
-        language = language.split('_')[0];
-    }
+
+    // trim
+    language = language.substr(0,2);
 
     // check if valid
     if( language !== 'en' && language !== 'de') {
@@ -27,13 +24,12 @@ if( !store.state.settings.language ) {
         language = "de";
     }
 
-  store.dispatch("settings/setLanguage", language );
+    store.dispatch("settings/setLanguage", language );
 }
-language = store.state.settings.language;
 
 export const i18n = new VueI18n({
     silentTranslationWarn: true,
-    locale: language,
+    locale: store.state.settings.language,
     messages: {
 
     'en': {

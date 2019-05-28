@@ -162,7 +162,7 @@
           <div class="row row-centered row-in-background">
             <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin">
               <div class="extra-padding">
-                <img src="img/graphic-citizen-science.png"/>
+                <img src="/img/graphic-citizen-science.png"/>
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@
             <div class="margin-bottom">
               <div class="row row-middle">
                 <div class="col col-3">
-                  <img src="img/projects/galaxyzoo.jpg" style="display: block; width:100%; border-radius:50%"/>
+                  <img src="/img/projects/galaxyzoo.jpg" style="display: block; width:100%; border-radius:50%"/>
                 </div>
                 <div class="col col-9" style="padding-left: 0">
                   <p v-html="$t('section-citizenscience-example')" class="small"></p>
@@ -203,7 +203,7 @@
             <div class="col col-10 col-large-6 col-wrapping">
               <div>
                 <div class="extra-padding-large-h">
-                  <img src="img/graphic-question.png"/>
+                  <img src="/img/graphic-question.png"/>
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@
                 <h2 class="heading centered left-aligned-large" id="projects">{{ $t('section-projects-heading') }}</h2>
                 <p v-html="$t('section-projects-text')"></p>
                 <div class="button-group centered left-aligned-large">
-                  <router-link tag="button" to="/#projects" class="button button-secondary">{{ $t('section-projects-button') }}</router-link>
+                  <router-link tag="button" to="/projects" class="button button-secondary">{{ $t('section-projects-button') }}</router-link>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@
             <div class="col col-6 col-large-4 col-large-after-1 col-wrapping">
               <div>
                 <div class="extra-padding-large-h">
-                  <img src="img/graphic-checklist.png"/>
+                  <img src="/img/graphic-checklist.png"/>
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@
             <div class="col col-6 col-large-4 col-large-before-1 col-wrapping">
               <div>
                 <div class="extra-padding-large-h">
-                  <img src="img/graphic-steps.png"/>
+                  <img src="/img/graphic-steps.png"/>
                 </div>
               </div>
             </div>
@@ -308,7 +308,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-8 col-large-6 col-wrapping col-large-no-bottom-margin">
-              <img src="img/sdg-wheel.png"/>
+              <img src="/img/sdg-wheel.png"/>
             </div>
           </div>
         </div>
@@ -354,7 +354,7 @@
             <div class="row row-centered row-reverse-large row-middle">
               <div class="col col-10 col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
                 <div class="extra-padding-h">
-                  <img src="img/o17.jpg" style="border-radius:50%" />
+                  <img src="/img/o17.jpg" style="border-radius:50%" />
                 </div>
               </div>
               <div class="col col-large-5 col-large-before-1 col-wrapping col-no-bottom-margin scroll-effect">
@@ -378,7 +378,7 @@
             <div class="row row-centered row-middle">
               <div class="col col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
                 <div class="extra-padding-h">
-                  <img src="img/graphic-toolkit.png" />
+                  <img src="/img/graphic-toolkit.png" />
                 </div>
               </div>
               <div class="col col-large-5 col-large-after-1 col-wrapping col-no-bottom-margin scroll-effect">
@@ -398,10 +398,10 @@
               <div class="col col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
                 <div class="extra-padding-h">
                   <p>
-                    <img src="img/snapp.jpg" style="border-radius:50%;" />
+                    <img src="/img/snapp.jpg" style="border-radius:50%;" />
                   </p>
                   <p>
-                    <img src="img/snapp-logos.png" />
+                    <img src="/img/snapp-logos.png" />
                   </p>
                 </div>
               </div>

@@ -113,7 +113,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-6 col-large-7 col-large-after-1 col-wrapping col-large-no-bottom-margin">
-              <img src="img/graphic-roadmap.png"/>
+              <img src="/img/graphic-roadmap.png"/>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <div class="extra-padding-h">
-                  <img src="img/graphic-excellence.png"/>
+                  <img src="/img/graphic-excellence.png"/>
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <div class="extra-padding-h">
-                  <img src="img/graphic-participation.png"/>
+                  <img src="/img/graphic-participation.png"/>
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <div class="extra-padding-h">
-                  <img src="img/graphic-openness.png"/>
+                  <img src="/img/graphic-openness.png"/>
                 </div>
               </div>
             </div>
@@ -197,7 +197,7 @@
             <div class="row row-centered">
               <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
                 <div class="extra-padding-h">
-                  <img src="img/graphic-sustainability.png"/>
+                  <img src="/img/graphic-sustainability.png"/>
                 </div>
               </div>
             </div>
@@ -243,7 +243,7 @@
               <p class="reduced-bottom-margin"><b>Citizen Cyberlab</b></p>
               <p v-html="$t('partnership-cyberlab-text')" class="reduced-bottom-margin"></p>
               <p class="reduced-bottom-margin">
-                <img src="img/ccl-logo.png" style="height: 48px" />
+                <img src="/img/ccl-logo.png" style="height: 48px" />
               </p>
               <div class="button-group margin-bottom">
                 <button class="button button-secondary button-icon" @click="openInNewTab('http://citizencyberlab.org')">
@@ -296,7 +296,7 @@
               <p class="reduced-bottom-margin"><b>CrowdWater</b></p>
               <p class="reduced-bottom-margin">CrowdWater is a citizen science project to collect hydrological data. The goal is to develop a cheap and easy to use method of data collection that can be used to predict floods and low flow.</p>
               <p class="reduced-bottom-margin">
-                <img src="img/crowdwater-logo.png" style="height: 48px" />
+                <img src="/img/crowdwater-logo.png" style="height: 48px" />
               </p>
               <div class="button-group margin-bottom">
                 <button class="button button-secondary button-icon" @click="openInNewTab('https://crowdwater.ch')">

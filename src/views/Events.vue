@@ -62,7 +62,7 @@
 
                   <div class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect">
                       <div class="extra-padding-h">
-                          <img src="img/events/pint_of_science.jpg" />
+                          <img src="/img/events/pint_of_science.jpg" />
                       </div>
                   </div>
 
@@ -92,7 +92,7 @@
               <div class="content-wrapper">
                   <div class="row row-centered row-in-background">
                       <div class="col col-6 col-large-7 col-large-after-1 col-wrapping col-large-no-bottom-margin">
-                          <img src="img/events/brownbag.jpg" style="border-radius: 50%"/>
+                          <img src="/img/events/brownbag.jpg" style="border-radius: 50%"/>
                       </div>
                   </div>
               </div>

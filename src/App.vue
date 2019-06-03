@@ -1,16 +1,3 @@
-<i18n>
-{
-  "en": {
-    "site-title": "Citizen Science Center Zurich",
-    "site-description": "Next Level Citizen Science"
-  },
-"de": {
-    "site-title": "Citizen Science Center Zürich",
-    "site-description": "Next Level Citizen Science"
-  }
-}
-</i18n>
-
 <template>
   <div id="app">
     <!--<app-header :languages="['en']"></app-header>-->
@@ -42,24 +29,16 @@ export default {
                   content: this.$t('site-description')
               },
               {
-                  property: 'og:title',
-                  content: this.$t('site-title')
-              },
-              {
-                  property: 'og:description',
-                  content: this.$t('site-description')
-              },
-              {
                   property: 'og:type',
                   content: 'website'
               },
               {
                   property: 'og:url',
-                  content: 'https://www.citizenscience.ch'
+                  content: 'https://citizenscience.ch'+this.$route.path
               },
               {
                   property: 'og:image',
-                  content: 'https://www.citizenscience.ch/img/citsci-promo.jpg'
+                  content: 'https://citizenscience.ch/img/citsci-promo.jpg'
               }
           ],
           link: [

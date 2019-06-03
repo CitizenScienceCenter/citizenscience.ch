@@ -305,7 +305,13 @@ export default {
   metaInfo: function() {
       return {
         title: this.$t('page-title'),
-        titleTemplate: null
+        titleTemplate: null,
+        meta: [
+            {
+                property: 'og:title',
+                content: this.$t('page-title')
+            }
+        ]
       }
   },
     methods: {

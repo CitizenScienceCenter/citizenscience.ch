@@ -359,7 +359,14 @@ export default {
   },
     metaInfo: function() {
         return {
-            title: this.$t('page-title')
+            title: this.$t('page-title'),
+            meta: [
+                {
+                    property: 'og:title',
+                    content: this.$t('page-title'),
+                    template: '%s | '+this.$t('site-title')
+                }
+            ]
         }
     },
   methods: {

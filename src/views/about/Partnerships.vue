@@ -84,10 +84,10 @@
             </div>
 
             <div class="col col-large-5 col-wrapping">
-              <h3 class="subheading reduced-bottom-margin">Citizen Science Network Austria (CSNA)H</h3>
+              <h3 class="subheading reduced-bottom-margin">Citizen Science Network Austria (CSNA)</h3>
               <!-- <p class="reduced-bottom-margin"><b>Citizen Science Network Austria (CSNA)</b></p> -->
               <p class="reduced-bottom-margin">
-                The Citizen Science Network Austria is coordinated by the University of Natural Resources and Life Sciences in Vienna, and includes partner institutions in Austria and beyond. The network of aims at promoting quality Citizen Science and strengthen the dialogue between science and society.
+                The Citizen Science Network Austria is coordinated by the University of Natural Resources and Life Sciences in Vienna, and includes partner institutions in Austria and beyond. The network aims at promoting quality Citizen Science and strengthen the dialogue between science and society.
               </p>
               <p class="reduced-bottom-margin">
                 <img src="/img/oesterreich-forscht.png" style="height: 40px" />
@@ -171,7 +171,14 @@
         },
         metaInfo: function() {
             return {
-                title: this.$t('page-title')
+                title: this.$t('page-title'),
+                meta: [
+                    {
+                        property: 'og:title',
+                        content: this.$t('page-title'),
+                        template: '%s | '+this.$t('site-title')
+                    }
+                ]
             }
         },
         methods: {

@@ -34,6 +34,9 @@ export const i18n = new VueI18n({
 
     'en': {
 
+    'site-title': 'Citizen Science Center Zurich',
+    'site-description': 'Next Level Citizen Science',
+
     'navigation-homepage': {
         'link': 'Home'
     },
@@ -119,6 +122,10 @@ export const i18n = new VueI18n({
 
     },
     'de': {
+
+    'site-title': 'Citizen Science Center Zürich',
+    'site-description': 'Next Level Citizen Science',
+
 
     'navigation-homepage': {
         'link': 'Home'

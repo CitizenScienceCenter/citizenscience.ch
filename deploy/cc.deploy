@@ -1,0 +1,5 @@
+export NAME=cccs-prod
+export NS=c3s-prod
+export PORT=80
+export TAG=${TAG}
+export HOST=citizenscience.ch

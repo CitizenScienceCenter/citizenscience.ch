@@ -1,54 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://www.citizenscience.ch</loc>
+        <loc>https://www.citizenscience.ch/de</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/contribute/projects</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/contribute/projects" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/contribute/projects" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/contribute/collaborations</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/contribute/collaborations" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/contribute/collaborations" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/start/startproject</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/startproject" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/startproject" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/start/offer</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/offer" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/offer" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/start/checklist</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/checklist" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/checklist" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/start/phases</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/phases" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/phases" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/citizenscience/zurichstyle</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/citizenscience/zurichstyle" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/citizenscience/zurichstyle" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/citizenscience/sdg</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/citizenscience/sdg" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/citizenscience/sdg" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/about/mission</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/mission" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/mission" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/about/people</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/people" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/people" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/about/partnerships</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/partnerships" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/partnerships" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/about/pwa</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/pwa" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/pwa" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/about/contact</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/contact" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/contact" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/events</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/events" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/events" />
     </url>
 
-    <url>
-        <loc>https://www.citizenscience.ch/contribute/projects</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/contribute/collaborations</loc>
-    </url>
-
-    <url>
-        <loc>https://www.citizenscience.ch/start/startproject</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/start/offer</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/start/checklist</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/start/phases</loc>
-    </url>
-
-    <url>
-        <loc>https://www.citizenscience.ch/citizenscience/zurichstyle</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/citizenscience/sdg</loc>
-    </url>
-
-    <url>
-        <loc>https://www.citizenscience.ch/about/mission</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/about/people</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/about/partnerships</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/about/pwa</loc>
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/about/contact</loc>
-    </url>
-
-    <url>
-        <loc>https://www.citizenscience.ch/events</loc>
-    </url>
 </urlset>

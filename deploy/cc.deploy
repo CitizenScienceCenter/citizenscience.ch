@@ -1,4 +1,5 @@
 export NAME=cccs-prod
+export IMG=ccsite
 export NS=c3s-prod
 export PORT=80
 export TAG=${TAG}

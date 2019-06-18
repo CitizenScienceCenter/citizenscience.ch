@@ -5,6 +5,7 @@
     "subheading-directors": "Directors",
     "subheading-advisors": "Advisors",
     "subheading-team": "Team",
+    "subheading-guest-researchers": "Researchers in Residence",
     "subheading-members": "Members",
 
     "people-abraham-position": "Department of Informatics – University of Zurich",
@@ -22,6 +23,9 @@
     "people-rosy-position": "Managing Director",
     "people-marcel-position": "UX Designer / Frontend Developer",
 
+    "people-liesbet-position": "Post-doctoral Researcher, KU Leuven",
+    "people-clea-position": "Intern, Citizen Science Global Partnership",
+
     "members-button-show": "Show all Members",
     "members-button-hide": "Hide all Members",
     "members-text": "Membership at the Citizen Science Center Zurich is open to professors with research groups at the two founding Institutions, leaders of research groups from other universities or public-legal institutions, and individual researchers and students.<br>Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Currently the Center has a scientific community of more than 200 researchers in fields ranging epidemiology, psychology, geography, neurosciences, and more. Combining these researchers’ expertise represents a unique opportunity for synergy."
@@ -31,6 +35,7 @@
     "subheading-directors": "Direktorium",
     "subheading-advisors": "Beraterinnen und Berater",
     "subheading-team": "Team",
+    "subheading-guest-researchers": "Gastforscher",
     "subheading-members": "Mitglieder",
 
     "people-abraham-position": "Department of Informatics – University of Zurich",
@@ -47,6 +52,9 @@
     "people-fanny-position": "Community Manager",
     "people-rosy-position": "Managing Director",
     "people-marcel-position": "UX Designer / Frontend Developer",
+
+    "people-clea-position": "Praktikantin, Citizen Science Global Partnership",
+    "people-liesbet-position": "Postdoktorandin, KU Leuven",
 
     "members-button-show": "Alle Mitglieder anzeigen",
     "members-button-hide": "Mitglieder verbergen",
@@ -183,6 +191,36 @@
                 <span class="name">Marina Gagetti</span>
                 <span class="position">{{ $t('people-marina-position') }}</span>
                 <a href="mailto:marina.gagetti@zfg.uzh.ch">marina.gagetti@zfg.uzh.ch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <h3 class="subheading centered">{{ $t('subheading-guest-researchers')}}</h3>
+
+    <div class="people-section">
+      <!-- special row wrapping here -->
+      <div class="row row-centered">
+        <div class="col col-large-9">
+
+          <div class="row row-centered">
+            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
+              <div class="person centered">
+                <img src="/img/people/liesbet.jpg" class="photo"/>
+                <span class="name">Liesbet Jacobs</span>
+                <span class="position">{{ $t('people-liesbet-position') }}</span>
+                <a href="mailto:maria.mondardini@uzh.ch">liesbet.jacobs@kuleuven.be</a>
+              </div>
+            </div>
+            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
+              <div class="person centered">
+                <img src="/img/people/clea.jpg" class="photo"/>
+                <span class="name">Clea Montanari</span>
+                <span class="position">{{ $t('people-clea-position') }}</span>
+                <a href="mailto:cleamonti95@gmail.com">cleamonti95@gmail.com</a>
               </div>
             </div>
           </div>

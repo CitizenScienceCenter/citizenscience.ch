@@ -10,6 +10,7 @@
 
 <script>
 
+import {mapState} from 'vuex';
 import Header from './components/shared/Header.vue'
 
 export default {
@@ -43,9 +44,15 @@ export default {
           ],
           link: [
               {rel: 'canonical', href: 'https://citizenscience.ch'+this.$route.path}
-          ]
+          ],
+          htmlAttrs: {
+              lang: this.language
+          }
       }
   },
+  computed: mapState({
+      language: state => state.settings.language
+  }),
   mounted: function() {
 
     // body fade

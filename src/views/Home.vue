@@ -102,25 +102,6 @@
           <div class="row row-centered row-wrapping">
 
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
-
-              <div>
-                <project-teaser
-                        :projectTitle="$t('project-snake-title')"
-                        :projectTopic="$t('project-snake-topic')"
-                        :projectDescription="$t('project-snake-description')"
-                        :buttonText="$t('project-snake-button')"
-                        projectBgImage="/img/projects/snakechallenge.jpg"
-                        projectImage="/img/projects/snakechallenge-intro.png"
-                        url="https://snakes.citizenscience.ch"
-                        colorGradientStart="#9a4b23"
-                        colorGradientEnd="#418677"
-                ></project-teaser>
-              </div>
-
-            </div>
-
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
-
               <div>
                 <project-teaser
                         :projectTitle="$t('project-wenker-title')"
@@ -134,7 +115,22 @@
                         colorGradientEnd="#766b51"
                 ></project-teaser>
               </div>
+            </div>
 
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-snake-title')"
+                        :projectTopic="$t('project-snake-topic')"
+                        :projectDescription="$t('project-snake-description')"
+                        :buttonText="$t('project-snake-button')"
+                        projectBgImage="/img/projects/snakechallenge.jpg"
+                        projectImage="/img/projects/snakechallenge-intro.png"
+                        url="https://snakes.citizenscience.ch"
+                        colorGradientStart="#9a4b23"
+                        colorGradientEnd="#418677"
+                ></project-teaser>
+              </div>
             </div>
 
             <div class="col col-wrapping col-large-6 col-wrapping scroll-effect">

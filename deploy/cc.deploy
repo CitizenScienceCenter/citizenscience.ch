@@ -1,6 +1,7 @@
-export NAME=cccs-prod
-export IMG=ccsite
-export NS=c3s-prod
-export PORT=80
-export TAG=${TAG}
-export HOST=citizenscience.ch
+{
+  "name": "cccs-prod",
+  "img": "ccsite",
+  "ns": "c3s-prod",
+  "port": 80,
+  "host": "citizenscience.ch"
+}

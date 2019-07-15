@@ -7,7 +7,7 @@ import Profile from '@/views/shared/user/Profile';
 import RequestReset from '@/views/shared/user/RequestReset';
 import Reset from '@/views/shared/user/Reset';
 
-import Forum from '@/views/Forum';
+// import Forum from '@/views/Forum';
 
 import ChildView from '@/views/shared/ChildView';
 
@@ -147,7 +147,9 @@ export const routes = [
             },
 
             { path: 'events', component: Events, meta: {i18n: 'navigation-events', nav: true} },
+            /*
             { path: 'forum', component: Forum, meta: {requiresAuth: true, i18n: 'navigation-forum', nav: true} },
+            */
 
             { path: 'login', component: Login, meta: {requiresAuth: true, i18n: 'navigation-login', nav: false} },
             { path: 'register', component: Register, meta: {i18n: 'navigation-register', nav: false} },

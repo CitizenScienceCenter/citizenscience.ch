@@ -26,6 +26,7 @@
     "project-snake-topic": "Herpetology",
     "project-snake-description": "Stuck indoors this winter? Dreaming of seeing snakes in the spring? Take advantage of the cold weather to test and refine your identification skills with our SnakeID challenge!",
     "project-snake-button": "Take part",
+    "project-snake-info": "The first challenge is over. There are more to come...",
 
     "project-wenker-title": "Project Wenker",
     "project-wenker-topic": "Linguistics",
@@ -63,6 +64,7 @@
     "project-snake-topic": "Herpetologie",
     "project-snake-description": "Du hast den Winter satt und kannst es kaum erwarten im Frühling wieder Schlangen zu beobachten? Nutze die kalte Jahreszeit um deine Fähigkeiten im Bestimmen von Schlangen zu testen und zu verbessern – mit der Snake ID Challenge!",
     "project-snake-button": "Mach mit",
+    "project-snake-info": "Die Erste Challenge ist vorüber. Weitere folgen...",
 
     "project-wenker-title": "Projekt Wenker",
     "project-wenker-topic": "Sprachwissenschaften",
@@ -129,6 +131,7 @@
                         url="https://snakes.citizenscience.ch"
                         colorGradientStart="#9a4b23"
                         colorGradientEnd="#418677"
+                        :infoText="$t('project-snake-info')"
                 ></project-teaser>
               </div>
             </div>

@@ -1,5 +1,5 @@
 {
   "name": "citizenscience",
-  "subdomain": false
+  "subdomain": false,
   "port": 80
 }

@@ -1,5 +1,5 @@
 {
-  "name": "",
-  "namespace": "c3s-staging",
+  "name": "citizenscience",
+  "subdomain": true
   "port": 80
 }

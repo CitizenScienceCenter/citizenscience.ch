@@ -22,6 +22,7 @@
     "people-fanny-position": "Community Manager",
     "people-rosy-position": "Managing Director",
     "people-marcel-position": "UX Designer / Frontend Developer",
+    "people-anna-position": "Researcher (Ethics)",
 
     "people-liesbet-position": "Post-doctoral Researcher, KU Leuven",
     "people-clea-position": "Intern, Citizen Science Global Partnership",
@@ -52,6 +53,7 @@
     "people-fanny-position": "Community Manager",
     "people-rosy-position": "Managing Director",
     "people-marcel-position": "UX Designer / Frontend Developer",
+    "people-anna-position": "Forscherin (Ethik)",
 
     "people-clea-position": "Praktikantin, Citizen Science Global Partnership",
     "people-liesbet-position": "Postdoktorandin, KU Leuven",
@@ -71,7 +73,7 @@
     <h3 class="subheading centered">{{ $t('subheading-directors-chair') }}</h3>
 
     <div class="people-section">
-      <div class="row row-centered">
+      <div class="row row-centered row-wrapping">
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
             <img src="/img/people/mike.jpg" class="photo"/>
@@ -80,7 +82,7 @@
             <a href="mailto:m.martin@psychologie.uzh.ch">m.martin@psychologie.uzh.ch</a>
           </div>
         </div>
-        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-tablet-portrait-no-bottom-margin">
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
             <img src="/img/people/michael.jpg" class="photo"/>
             <span class="name">Michael Ristow</span>
@@ -94,7 +96,7 @@
     <h3 class="subheading centered">{{ $t('subheading-directors') }}</h3>
 
     <div class="people-section">
-      <div class="row row-centered">
+      <div class="row row-centered row-wrapping">
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
             <img src="/img/people/abraham.jpg" class="photo"/>
@@ -111,7 +113,7 @@
             <a href="mailto:hafen@imsb.biol.ethz.ch">hafen@imsb.biol.ethz.ch</a>
           </div>
         </div>
-        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-tablet-portrait-no-bottom-margin">
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
             <img src="/img/people/effy.jpg" class="photo"/>
             <span class="name">Effy Vayena</span>
@@ -119,7 +121,7 @@
             <a href="mailto:effy.vayena@hest.ethz.ch">effy.vayena@hest.ethz.ch</a>
           </div>
         </div>
-        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-no-bottom-margin">
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
             <img src="/img/people/claudia.jpg" class="photo"/>
             <span class="name">Claudia Witt</span>
@@ -133,8 +135,8 @@
     <h3 class="subheading centered">{{ $t('subheading-advisors') }}</h3>
 
     <div class="people-section">
-      <div class="row row-centered">
-        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping col-no-bottom-margin">
+      <div class="row row-centered row-wrapping">
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
             <img src="/img/people/dirk.jpg" class="photo"/>
             <span class="name">Dirk Helbing</span>
@@ -149,7 +151,7 @@
 
     <div class="people-section">
       <!-- special row wrapping here -->
-      <div class="row row-centered">
+      <div class="row row-centered row-wrapping">
         <div class="col col-large-9">
 
           <div class="row row-centered">
@@ -177,7 +179,7 @@
                 <a href="mailto:fanny.jones@uzh.ch">fanny.gutsche-jones@uzh.ch</a>
               </div>
             </div>
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping col-large-no-bottom-margin">
+            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
               <div class="person centered">
                 <img src="/img/people/marcel.jpg" class="photo"/>
                 <span class="name">Marcel Tanner</span>
@@ -185,12 +187,20 @@
                 <a href="mailto:marcel.tanner@uzh.ch">marcel.tanner@uzh.ch</a>
               </div>
             </div>
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping col-no-bottom-margin">
+            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
               <div class="person centered">
                 <img src="/img/people/marina.jpg" class="photo"/>
                 <span class="name">Marina Gagetti</span>
                 <span class="position">{{ $t('people-marina-position') }}</span>
                 <a href="mailto:marina.gagetti@zfg.uzh.ch">marina.gagetti@zfg.uzh.ch</a>
+              </div>
+            </div>
+            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
+              <div class="person centered">
+                <img src="/img/people/anna.jpg" class="photo"/>
+                <span class="name">Anna Jobin</span>
+                <span class="position">{{ $t('people-anna-position') }}</span>
+                <a href="mailto:marina.gagetti@zfg.uzh.ch">anna.jobin@hest.ethz.ch</a>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 {
   "name": "",
-  "namespace": "c3s-prod",
+  "namespace": "c3s-staging",
   "port": 80
 }

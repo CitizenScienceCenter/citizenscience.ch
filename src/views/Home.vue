@@ -26,7 +26,7 @@
     "project-snake-topic": "Herpetology",
     "project-snake-description": "Stuck indoors this winter? Dreaming of seeing snakes in the spring? Take advantage of the cold weather to test and refine your identification skills with our SnakeID challenge!",
     "project-snake-button": "Take part",
-    "project-snake-info": "The first challenge is over. There are more to come...",
+    "project-snake-info": "first challenge is over. There are more to come...",
 
     "project-wenker-title": "Project Wenker",
     "project-wenker-topic": "Linguistics",

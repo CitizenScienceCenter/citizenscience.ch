@@ -61,8 +61,8 @@
     <app-content-section class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-tablet-portrait-10 col-large-6">
+          <div class="row row-centered">
+            <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin">
               <div class="extra-padding">
                 <img src="/img/graphic-question.png"/>
               </div>

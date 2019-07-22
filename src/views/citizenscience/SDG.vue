@@ -33,7 +33,7 @@
     <app-content-section class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
+          <div class="row row-centered">
             <div class="col col-8 col-large-6 col-wrapping col-large-no-bottom-margin">
               <img src="/img/sdg-wheel.png"/>
             </div>

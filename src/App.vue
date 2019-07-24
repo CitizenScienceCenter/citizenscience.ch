@@ -5,6 +5,7 @@
     <div class="content-area">
       <router-view platform></router-view>
     </div>
+    <g-d-p-r></g-d-p-r>
   </div>
 </template>
 
@@ -12,11 +13,13 @@
 
 import {mapState} from 'vuex';
 import Header from './components/shared/Header.vue'
+import GDPR from "./components/shared/GDPR";
 
 export default {
   name: 'app',
   components: {
-    'app-header': Header
+    'app-header': Header,
+    GDPR
   },
   metaInfo: function() {
       return {

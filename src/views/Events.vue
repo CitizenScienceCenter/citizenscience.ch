@@ -3,7 +3,7 @@
   "en": {
     "page-title": "Events",
 
-    "section-scientifica-heading": "Scientifica 2019: Science Fiction – Science Facts",
+    "section-scientifica-heading": "Scientifica 2019:<br> Science Fiction – Science Facts",
     "section-scientifica-text-1": "From August 30 until September 1st you can explore the world of science at <a href='https://www.scientifica.ch/' target='_blank'>Scientifica</a>, a big fair created by the University of Zurich and ETH Zürich.",
     "section-scientifica-text-2": "The Citizen Science Center will have a stand in the big tent on Polyterasse where you can try out Citizen Science projects directly on site. In this occasion we are launching a new project about weasels in Switzerland. Developed in collaboration with passionate researchers at <a href='http://www.swild.ch/' target='_blank'>SWILD</a>, it engages citizens in an exploration of Swiss small mammals (mustelids), an entertaining activity perfect for adult and kids! Stop by for a chat, we are looking forward to meeting you. <a href='https://www.scientifica.ch/ausstellung/kultur-gesellschaft/Citizen-Science-in-Zuerich/' target='_blank'>More info on our stand (in German)</a>",
 
@@ -34,7 +34,7 @@
   "de": {
     "page-title": "Events",
 
-    "section-scientifica-heading": "Scientifica 2019: Science Fiction – Science Facts",
+    "section-scientifica-heading": "Scientifica 2019:<br> Science Fiction – Science Facts",
     "section-scientifica-text-1": "Vom 30. August bis 1. September können Sie auf der <a href='https://www.scientifica.ch/' target='_blank'>Scientifica</a>, einer Kollaboration der Universität Zürich und der ETH Zürich, die Welt der Wissenschaft erkunden.",
     "section-scientifica-text-2": "Besuchen Sie unseren Stand im grossen Zelt auf der Polyterasse und probieren Sie Citizen Science-Projekte direkt vor Ort aus. Wir werden ein neues Projekt über Wiesel in der Schweiz vorstellen. Entwickelt in Zusammenarbeit mit engagierten Forschenden von <a href='http://www.swild.ch/' target='_blank'>SWILD</a>, bietet es Bürgerinnen und Bürgern an, anhand von Filmausschnitten diesen scheuen Tieren auf die Spur zu kommen. Eine unterhaltsame Aktivität, die sich perfekt für Erwachsene und Kinder eignet! Kommen Sie vorbei, wir freuen uns auf Sie. <a href='https://www.scientifica.ch/ausstellung/kultur-gesellschaft/Citizen-Science-in-Zuerich/' target='_blank'>Mehr Infos zu unserem Stand</a>",
 
@@ -80,7 +80,7 @@
           <div class="content-wrapper">
               <div class="row">
                   <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-                      <h2 class="heading centered left-aligned-large" id="mission">{{ $t('section-scientifica-heading') }}</h2>
+                      <h2 class="heading centered left-aligned-large" v-html="$t('section-scientifica-heading')"></h2>
                       <p v-html="$t('section-scientifica-text-1')"></p>
                       <p v-html="$t('section-scientifica-text-2')"></p>
                   </div>
@@ -105,7 +105,7 @@
 
                       <div class="content-subsection">
 
-                          <h2 class="heading centered left-aligned-large" id="mission">{{ $t('section-lunches-heading') }}</h2>
+                          <h2 class="heading centered left-aligned-large" v-html="$t('section-lunches-heading')"></h2>
                           <h3 class="subheading">{{ $t('section-lunches-subheading') }}</h3>
                           <p class="list-intro" v-html="$t('section-lunches-text')"></p>
                           <p class="list-intro" v-html="$t('section-lunches-text-info')"></p>
@@ -202,9 +202,9 @@
           </div>
           -->
           <div class="content-wrapper">
-              <div class="row">
-                  <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
-                      <h2 class="heading centered left-aligned-large" id="mission">{{ $t('section-lecture-heading') }}</h2>
+              <div class="row row-centered">
+                  <div class="col col-tablet-portrait-7 col-large-6 scroll-effect">
+                      <h2 class="heading centered left-aligned-large" v-html="$t('section-lecture-heading')"></h2>
                       <p v-html="$t('section-lecture-text')"></p>
                   </div>
               </div>

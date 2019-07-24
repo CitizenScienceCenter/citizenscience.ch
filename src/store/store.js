@@ -8,11 +8,27 @@ Vue.use(Vuex);
 
 const debug = process.env.NODE_ENV !== 'production';
 
-export default new Vuex.Store({
-    modules: {
-        settings,
-        consts
-    },
-    strict: debug,
-    plugins: [createPersistedState({ storage: window.localStorage})]
-});
+let store;
+if( window.localStorage ) {
+    store = new Vuex.Store({
+        modules: {
+            settings,
+            consts,
+            gdpr
+        },
+        strict: debug,
+        plugins: [createPersistedState({ storage: window.localStorage})]
+    });
+}
+else {
+    store = new Vuex.Store({
+        modules: {
+            settings,
+            consts,
+            gdpr
+        },
+        strict: debug
+    });
+}
+
+export default store;

@@ -189,21 +189,19 @@
           </div>
       </app-content-section>
 
-      <app-content-section>
-          <!--
+      <app-content-section class="overflow-hidden">
           <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
               <div class="content-wrapper">
                   <div class="row row-centered">
                       <div class="col col-6 col-large-7 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-                          <img src="/img/events/scientifica.jpg"/>
+                          <img src="/img/events/ringvorlesung.jpg" style="border-radius:50%" />
                       </div>
                   </div>
               </div>
           </div>
-          -->
           <div class="content-wrapper">
-              <div class="row row-centered">
-                  <div class="col col-tablet-portrait-7 col-large-6 scroll-effect">
+              <div class="row">
+                  <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin scroll-effect">
                       <h2 class="heading centered left-aligned-large" v-html="$t('section-lecture-heading')"></h2>
                       <p v-html="$t('section-lecture-text')"></p>
                   </div>

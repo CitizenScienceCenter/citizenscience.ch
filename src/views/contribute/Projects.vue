@@ -5,10 +5,20 @@
 
   "section-projects-heading": "Our Projects",
 
+  "project-wiesel-title": "Weasel Wanted",
+  "project-wiesel-topic": "Wild Life Research",
+  "project-wiesel-description": "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
+  "project-wiesel-button": "Take part",
+
+  "project-hatespeech-title": "Geschlechtsspezifische Hassausdrücke (german only)",
+  "project-hatespeech-topic": "Linguistics",
+  "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
+  "project-hatespeech-button": "Take part",
+
   "project-snake-title": "Snake ID Challenge",
   "project-snake-topic": "Herpetology",
   "project-snake-description": "Stuck indoors this winter? Dreaming of seeing snakes in the spring? Take advantage of the cold weather to test and refine your identification skills with our SnakeID challenge!",
-  "project-snake-button": "Take part",
+  "project-snake-button": "Take a look",
   "project-snake-info": "The first challenge is over. There are more to come...",
 
   "project-wenker-title": "Project Wenker",
@@ -28,16 +38,25 @@
 
   "section-projects-heading": "Unsere Projekte",
 
+  "project-wiesel-title": "Wiesel gesucht",
+  "project-wiesel-topic": "Wildtierforschung",
+  "project-wiesel-description": "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box.",
+  "project-wiesel-button": "Mitmachen",
+
+  "project-hatespeech-title": "Geschlechtsspezifische Hassausdrücke",
+  "project-hatespeech-topic": "Sprachwissenschaften",
+  "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
+  "project-hatespeech-button": "Mitmachen",
   "project-snake-title": "Snake ID Challenge",
   "project-snake-topic": "Herpetologie",
   "project-snake-description": "Du hast den Winter satt und kannst es kaum erwarten im Frühling wieder Schlangen zu beobachten? Nutze die kalte Jahreszeit um deine Fähigkeiten im Bestimmen von Schlangen zu testen und zu verbessern – mit der Snake ID Challenge!",
-  "project-snake-button": "Mach mit",
+  "project-snake-button": "Ansehen",
   "project-snake-info": "Die Erste Challenge ist vorüber. Weitere folgen...",
 
   "project-wenker-title": "Projekt Wenker",
   "project-wenker-topic": "Sprachwissenschaften",
   "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
-  "project-wenker-button": "Mach mit",
+  "project-wenker-button": "Mitmachen",
 
   "section-partner-projects-heading": "Partnerprojekte",
   "section-partner-projects-crowdwater-text": "CrowdWater ist ein Projekt der Universität Zürich und untersucht das Potential von crowdsourcing im Bereich Hydrologie. Konkret geht es um Wasserstand, Abfluss und Bodenfeuchte. Das Ziel ist es, möglichst viele Beobachtungen zu erheben und damit die Vorhersage hydrologischer Ereignisse wie zum Beispiel Trockenheit oder Überschwemmung zu verbessern.",
@@ -61,6 +80,40 @@
         </div>
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
+
+            <!--
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-wiesel-title')"
+                        :projectTopic="$t('project-wiesel-topic')"
+                        :projectDescription="$t('project-wiesel-description')"
+                        :buttonText="$t('project-wiesel-button')"
+                        projectBgImage="/img/projects/wiesel.jpg"
+                        projectImage="/img/projects/wiesel-intro.png"
+                        url="https://wiesel.citizenscience.ch"
+                        colorGradientStart="#99695c"
+                        colorGradientEnd="#3f6fa0"
+                ></project-teaser>
+              </div>
+            </div>
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-wenker-title')"
+                        :projectTopic="$t('project-wenker-topic')"
+                        :projectDescription="$t('project-wenker-description')"
+                        :buttonText="$t('project-wenker-button')"
+                        projectBgImage="/img/projects/hatespeech.jpg"
+                        projectImage="/img/projects/hatespeech-intro.png"
+                        url="https://hatespeech.citizenscience.ch"
+                        colorGradientStart="#6e4f9e"
+                        colorGradientEnd="#478161"
+                ></project-teaser>
+              </div>
+            </div>
+            -->
 
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>

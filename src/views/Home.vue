@@ -9,9 +9,33 @@
     "cover-button-projects": "Start contributing",
     "cover-button-your-project": "Suggest a project",
 
+
     "section-projects-heading": "Get involved",
     "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
+
+    "project-wiesel-title": "Weasel Wanted",
+    "project-wiesel-topic": "Wild Life Research",
+    "project-wiesel-description": "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
+    "project-wiesel-button": "Take part",
+
+    "project-hatespeech-title": "Geschlechtsspezifische Hassausdrücke (german only)",
+    "project-hatespeech-topic": "Linguistics",
+    "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
+    "project-hatespeech-button": "Take part",
+
+    "project-wenker-title": "Project Wenker",
+    "project-wenker-topic": "Linguistics",
+    "project-wenker-description": "Our first Citizen Science Project is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
+    "project-wenker-button": "Take part",
+
+    "project-snake-title": "Snake ID Challenge",
+    "project-snake-topic": "Herpetology",
+    "project-snake-description": "Stuck indoors this winter? Dreaming of seeing snakes in the spring? Take advantage of the cold weather to test and refine your identification skills with our SnakeID challenge!",
+    "project-snake-button": "Take a look",
+    "project-snake-info": "The first challenge is over. There are more to come...",
+
     "section-projects-button": "See all Projects",
+
 
     "section-build-project-heading": "Do you have a project in mind? We can help you.",
     "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
@@ -21,17 +45,6 @@
     "section-explanation-lead": "The Citizen Science Center Zurich enables <b>researchers</b> and <b>citizens</b> to create and conduct research projects that produce <b>excellent</b> and <b>participatory science</b> while supporting the UN SDGs.",
     "section-explanation-text": "In next–generation Citizen Science projects the general public provides new and invaluable knowledge in areas from physics to linguistics to human health. Projects produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
     "section-explanation-button": "Learn more",
-
-    "project-snake-title": "Snake ID Challenge",
-    "project-snake-topic": "Herpetology",
-    "project-snake-description": "Stuck indoors this winter? Dreaming of seeing snakes in the spring? Take advantage of the cold weather to test and refine your identification skills with our SnakeID challenge!",
-    "project-snake-button": "Take part",
-    "project-snake-info": "The first challenge is over. There are more to come...",
-
-    "project-wenker-title": "Project Wenker",
-    "project-wenker-topic": "Linguistics",
-    "project-wenker-description": "Our first Citizen Science Project is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
-    "project-wenker-button": "Take part",
 
     "section-about-heading": "A Joint Initiative",
     "section-about-text": "The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.",
@@ -47,9 +60,33 @@
     "cover-button-projects": "Jetzt mitforschen",
     "cover-button-your-project": "Neue Projektidee?",
 
+
     "section-projects-heading": "Machen Sie mit",
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
+
+    "project-wiesel-title": "Wiesel gesucht",
+    "project-wiesel-topic": "Wildtierforschung",
+    "project-wiesel-description": "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box.",
+    "project-wiesel-button": "Mitmachen",
+
+    "project-hatespeech-title": "Geschlechtsspezifische Hassausdrücke",
+    "project-hatespeech-topic": "Sprachwissenschaften",
+    "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
+    "project-hatespeech-button": "Mitmachen",
+
+    "project-wenker-title": "Projekt Wenker",
+    "project-wenker-topic": "Sprachwissenschaften",
+    "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
+    "project-wenker-button": "Mitmachen",
+
+    "project-snake-title": "Snake ID Challenge",
+    "project-snake-topic": "Herpetologie",
+    "project-snake-description": "Du hast den Winter satt und kannst es kaum erwarten im Frühling wieder Schlangen zu beobachten? Nutze die kalte Jahreszeit um deine Fähigkeiten im Bestimmen von Schlangen zu testen und zu verbessern – mit der Snake ID Challenge!",
+    "project-snake-button": "Ansehen",
+    "project-snake-info": "Die Erste Challenge ist vorüber. Weitere folgen...",
+
     "section-projects-button": "Alle Projekte",
+
 
     "section-build-project-heading": "Haben Sie eine Projekt-Idee? Wir helfen Ihnen!",
     "section-build-project-text": "Wir sind jederzeit offen für Austausch und Gespräch. Gerne überlegen wir mit Ihnen gemeinsam, wie man die Welt mit Citizen Science ein kleines Stück besser machen könnte. Treten Sie mit uns in Kontakt, wenn Sie eine Projektidee haben. Wir können Ihnen bei der Weiterentwicklung der Idee helfen und Ihnen bei positiver Evaluation unsere Tools und Expertise zur Verfügung stellen, um das Projekt realisieren.",
@@ -59,17 +96,6 @@
     "section-explanation-lead": "Das Citizen Science Center Zürich bringt <b>Wissenschaftler</b> und <b>Bürger</b> zusammen, um gemeinsam <b>exzellente</b> und <b>partizipative Forschung</b> zu betreiben, die die UN SDGs unterstützt.",
     "section-explanation-text": "In zukunftsweisenden Citizen Science Projekten entsteht durch Einbezug der breiten Bevölkerung neues und wertvolles Wissen in Bereichen wie Physik, Linguistik oder Gesundheit. Projekte mit hohen wissenschaftlichen Standards und Open Data helfen Bürgern, Communities und Regierungen die UN Ziele für nachhaltige Entwicklung umzusetzen.",
     "section-explanation-button": "Mehr erfahren",
-
-    "project-snake-title": "Snake ID Challenge",
-    "project-snake-topic": "Herpetologie",
-    "project-snake-description": "Du hast den Winter satt und kannst es kaum erwarten im Frühling wieder Schlangen zu beobachten? Nutze die kalte Jahreszeit um deine Fähigkeiten im Bestimmen von Schlangen zu testen und zu verbessern – mit der Snake ID Challenge!",
-    "project-snake-button": "Mach mit",
-    "project-snake-info": "Die Erste Challenge ist vorüber. Weitere folgen...",
-
-    "project-wenker-title": "Projekt Wenker",
-    "project-wenker-topic": "Sprachwissenschaften",
-    "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
-    "project-wenker-button": "Mach mit",
 
     "section-about-heading": "Eine gemeinsame Initiative",
     "section-about-text": "Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt.",
@@ -114,6 +140,40 @@
         </div>
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
+
+            <!--
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-wiesel-title')"
+                        :projectTopic="$t('project-wiesel-topic')"
+                        :projectDescription="$t('project-wiesel-description')"
+                        :buttonText="$t('project-wiesel-button')"
+                        projectBgImage="/img/projects/wiesel.jpg"
+                        projectImage="/img/projects/wiesel-intro.png"
+                        url="https://wiesel.citizenscience.ch"
+                        colorGradientStart="#99695c"
+                        colorGradientEnd="#3f6fa0"
+                ></project-teaser>
+              </div>
+            </div>
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-wenker-title')"
+                        :projectTopic="$t('project-wenker-topic')"
+                        :projectDescription="$t('project-wenker-description')"
+                        :buttonText="$t('project-wenker-button')"
+                        projectBgImage="/img/projects/hatespeech.jpg"
+                        projectImage="/img/projects/hatespeech-intro.png"
+                        url="https://hatespeech.citizenscience.ch"
+                        colorGradientStart="#6e4f9e"
+                        colorGradientEnd="#478161"
+                ></project-teaser>
+              </div>
+            </div>
+            -->
 
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>

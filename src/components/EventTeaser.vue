@@ -71,9 +71,7 @@
         .col:nth-child(2) {
             .text {
 
-                padding-top: $spacing-3;
-                padding-bottom: $spacing-3;
-                padding-right: $grid-gutter-large;
+                padding: $spacing-3 $grid-gutter-large;
 
                 .subheading {
                     margin-bottom: $spacing-1;

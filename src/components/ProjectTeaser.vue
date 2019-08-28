@@ -236,7 +236,7 @@
                 .col-image {
                     display: block;
                     img {
-                        transform: scale(1.5);
+                        transform: scale(1.5) translateX(-10%);
                     }
                 }
             }
@@ -275,7 +275,7 @@
 
                 .col-image {
                     img {
-                        transform: scale(1.75);
+                        transform: scale(1.75) translateY(20%);
                     }
                 }
 

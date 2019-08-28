@@ -92,6 +92,18 @@
       </p>
     </app-cover>
 
+    <app-content-section color="light-greyish" class="content-section-condensed">
+      <div class="content-wrapper">
+          <div class="row row-centered row-wrapping">
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <event-teaser></event-teaser>
+            </div>
+
+          </div>
+      </div>
+    </app-content-section>
+
 
     <app-content-section>
       <div class="content-wrapper">
@@ -285,10 +297,12 @@ import ContentSection from '@/components/shared/ContentSection.vue'
 import Footer from '@/components/shared/Footer.vue'
 import ProjectTeaser from '@/components/ProjectTeaser';
 import SectionNewsletterSignup from '../components/shared/SectionNewsletterSignup';
+import EventTeaser from "../components/shared/EventTeaser";
 
 export default {
   name: 'Home',
   components: {
+      EventTeaser,
       SectionNewsletterSignup,
       ProjectTeaser,
     'app-cover': Cover,

@@ -297,7 +297,7 @@ import ContentSection from '@/components/shared/ContentSection.vue'
 import Footer from '@/components/shared/Footer.vue'
 import ProjectTeaser from '@/components/ProjectTeaser';
 import SectionNewsletterSignup from '../components/shared/SectionNewsletterSignup';
-import EventTeaser from "../components/shared/EventTeaser";
+import EventTeaser from "../components/EventTeaser";
 
 export default {
   name: 'Home',

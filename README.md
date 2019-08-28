@@ -24,3 +24,4 @@ npm run test
 ```
 npm run lint
 ```
+## Deployed with autodeploy

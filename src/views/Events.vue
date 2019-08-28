@@ -83,6 +83,18 @@
                       <h2 class="heading centered left-aligned-large" v-html="$t('section-scientifica-heading')"></h2>
                       <p v-html="$t('section-scientifica-text-1')"></p>
                       <p v-html="$t('section-scientifica-text-2')"></p>
+                      <div class="button-group centered left-aligned-large">
+                          <button class="button button-secondary button-icon button-normal-case" @click="openInNewTab('https://www.scientifica.ch/')">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                              scientifica.ch
+                          </button>
+                          <!--
+                          <button class="button button-secondary button-icon button-normal-case" @click="openInNewTab('https://wiesel.citizenscience.ch')">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                              wiesel.citizenscience.ch
+                          </button>
+                          -->
+                      </div>
                   </div>
               </div>
           </div>

@@ -81,7 +81,6 @@
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
 
-            <!--
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
@@ -113,7 +112,6 @@
                 ></project-teaser>
               </div>
             </div>
-            -->
 
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>

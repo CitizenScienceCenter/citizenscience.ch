@@ -141,7 +141,6 @@
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
 
-            <!--
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
@@ -151,7 +150,7 @@
                         :buttonText="$t('project-wiesel-button')"
                         projectBgImage="/img/projects/wiesel.jpg"
                         projectImage="/img/projects/wiesel-intro.png"
-                        url="https://wiesel.citizenscience.ch"
+                        url="https://wiesel-gesucht.citizenscience.ch"
                         colorGradientStart="#99695c"
                         colorGradientEnd="#3f6fa0"
                 ></project-teaser>
@@ -173,7 +172,6 @@
                 ></project-teaser>
               </div>
             </div>
-            -->
 
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
@@ -191,6 +189,9 @@
               </div>
             </div>
 
+
+            <!--
+
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
@@ -207,6 +208,8 @@
                 ></project-teaser>
               </div>
             </div>
+
+            -->
 
             <div class="col col-wrapping col-large-6 col-wrapping scroll-effect">
               <div class="button-group centered">

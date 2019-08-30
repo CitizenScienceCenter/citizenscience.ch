@@ -160,10 +160,10 @@
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
-                        :projectTitle="$t('project-wenker-title')"
-                        :projectTopic="$t('project-wenker-topic')"
-                        :projectDescription="$t('project-wenker-description')"
-                        :buttonText="$t('project-wenker-button')"
+                        :projectTitle="$t('project-hatespeech-title')"
+                        :projectTopic="$t('project-hatespeech-topic')"
+                        :projectDescription="$t('project-hatespeech-description')"
+                        :buttonText="$t('project-hatespeech-button')"
                         projectBgImage="/img/projects/hatespeech.jpg"
                         projectImage="/img/projects/hatespeech-intro.png"
                         url="https://hatespeech.citizenscience.ch"

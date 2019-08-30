@@ -8,6 +8,7 @@ import Vuex from 'vuex';
 import { i18n } from './i18n.js';
 import Meta from 'vue-meta';
 import c3s from 'vuex-c3s';
+import SimpleAnalytics from "simple-analytics-vue";
 
 Vue.config.productionTip = false;
 
@@ -22,7 +23,7 @@ Vue.use(VueScrollTo, {
      offset: -32
  });
 Vue.use(Vuex);
-
+Vue.use(SimpleAnalytics, { skip: process.env.NODE_ENV !== "production" });
 
 
 store.watch(

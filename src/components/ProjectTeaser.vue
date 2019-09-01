@@ -122,6 +122,7 @@
                 text-align: left;
                 text-transform: none;
                 margin-bottom: $spacing-2;
+                text-transform: uppercase;
             }
 
             p {

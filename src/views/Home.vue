@@ -118,6 +118,7 @@
       </p>
     </app-cover>
 
+    <!--
     <app-content-section color="light-greyish" class="content-section-condensed">
       <div class="content-wrapper">
           <div class="row row-centered row-wrapping">
@@ -129,6 +130,7 @@
           </div>
       </div>
     </app-content-section>
+    -->
 
 
     <app-content-section>

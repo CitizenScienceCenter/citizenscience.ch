@@ -90,7 +90,7 @@
                         :buttonText="$t('project-wiesel-button')"
                         projectBgImage="/img/projects/wiesel.jpg"
                         projectImage="/img/projects/wiesel-intro.png"
-                        url="https://wiesel.citizenscience.ch"
+                        url="https://wiesel-gesucht.citizenscience.ch"
                         colorGradientStart="#99695c"
                         colorGradientEnd="#3f6fa0"
                 ></project-teaser>

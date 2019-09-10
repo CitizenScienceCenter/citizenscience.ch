@@ -19,7 +19,7 @@
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.13.0",
     "vuex": "^3.0.1",
-    "vuex-c3s": "^1.0.9",
+    "vuex-c3s": "^1.1.0",
     "vuex-persist": "^1.8.0",
     "vuex-persistedstate": "^2.5.4"
   },

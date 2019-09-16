@@ -1,7 +1,7 @@
 <template>
     <div class="event-list">
         <div class="margin-bottom" v-for="event in events" :key="event.path">
-            <div class="scroll-effect scroll-effect-delayed-1">
+            <div class="scroll-effect">
                 <router-link tag="div" class="event" :to="'/events/'+event.path">
                     <div class="row row-wrapping row-centered">
                         <div class="col col-wrapping col-6 col-tablet-portrait-4">

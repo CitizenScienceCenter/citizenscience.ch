@@ -5,7 +5,7 @@
     "page-title": "Events",
 
     "brownbag-info-heading": "Brown Bag Lunches in Autumn 2019",
-    "brownbag-info-text": "The Brown Bag Lunches will start again are back in the fall. The series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Thanks to you and the feedback that you gave us, we designed an agenda that includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
+    "brownbag-info-text": "The Brown Bag Lunches series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Our agenda this year includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
     "brownbag-register-text": "<b>Please register via E-Mail:</b>",
 
     "ringvorlesung-info-heading": "Ringvorlesung Partizipative Wissenschaftsakademie",
@@ -19,7 +19,7 @@
     "page-title": "Events",
 
     "brownbag-info-heading": "Brown Bag Lunches in Autumn 2019",
-    "brownbag-info-text": "The Brown Bag Lunches will start again are back in the fall. The series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Thanks to you and the feedback that you gave us, we designed an agenda that includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
+    "brownbag-info-text": "The Brown Bag Lunches series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Our agenda this year includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
     "brownbag-register-text": "<b>Please register via E-Mail:</b>",
 
     "ringvorlesung-info-heading": "Ringvorlesung Partizipative Wissenschaftsakademie",

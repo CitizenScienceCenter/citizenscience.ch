@@ -140,7 +140,7 @@
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered">
-          <div class="col col-large-10">
+          <div class="col col-large-10 scroll-effect">
             <h2 class="heading centered" id="projects">{{ $t('section-projects-heading') }}</h2>
           </div>
         </div>
@@ -242,7 +242,7 @@
 
 
             <div class="button-group centered">
-              <router-link tag="button" to="/events" class="button button-secondary">{{ $t('section-events-button') }}</router-link>
+              <router-link tag="button" to="/events" class="button button-secondary scroll-effect">{{ $t('section-events-button') }}</router-link>
             </div>
 
           </div>

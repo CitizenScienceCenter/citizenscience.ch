@@ -10,7 +10,7 @@
   "project-wiesel-description": "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
   "project-wiesel-button": "Take part",
 
-  "project-hatespeech-title": "Geschlechtsspezifische Hassausdrücke (german only)",
+  "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke (german only)",
   "project-hatespeech-topic": "Linguistics",
   "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
   "project-hatespeech-button": "Take part",
@@ -43,7 +43,7 @@
   "project-wiesel-description": "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box.",
   "project-wiesel-button": "Mitmachen",
 
-  "project-hatespeech-title": "Geschlechtsspezifische Hassausdrücke",
+  "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke",
   "project-hatespeech-topic": "Sprachwissenschaften",
   "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
   "project-hatespeech-button": "Mitmachen",

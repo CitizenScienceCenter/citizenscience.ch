@@ -14,7 +14,7 @@
                 <div class="col col-tablet-portrait-8 col-large-6 col-large-after-2 col-wrapping">
 
                     <span class="project-type">{{ projectTopic }}</span>
-                    <h3>{{ projectTitle }}</h3>
+                    <h3 v-html="projectTitle"></h3>
                     <p v-html="projectDescription"></p>
 
                     <button class="button button-primary" @click="link('http://wenker.citizenscience.ch')">{{ buttonText }}</button>

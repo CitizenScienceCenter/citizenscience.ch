@@ -88,6 +88,11 @@ const Events = resolve => {
         resolve( require('../views/Events.vue') );
     });
 };
+const EventDetail = resolve => {
+    require.ensure(['../views/EventDetail.vue'], () => {
+        resolve( require('../views/EventDetail.vue') );
+    });
+};
 const Terms = resolve => {
     require.ensure(['../views/shared/static/Terms.vue'], () => {
         resolve( require('../views/shared/static/Terms.vue') );
@@ -146,7 +151,13 @@ export const routes = [
                 ]
             },
 
-            { path: 'events', component: Events, meta: {i18n: 'navigation-events', nav: true} },
+            {
+                path: 'events', component: Events, meta: {i18n: 'navigation-events', nav: true}
+            },
+            {
+                path: 'events/:event', component: EventDetail, meta: {nav: false}
+            },
+
             /*
             { path: 'forum', component: Forum, meta: {requiresAuth: true, i18n: 'navigation-forum', nav: true} },
             */

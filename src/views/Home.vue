@@ -9,9 +9,11 @@
     "cover-button-projects": "Start contributing",
     "cover-button-your-project": "Suggest a project",
 
-
     "section-projects-heading": "Get involved",
     "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
+
+    "section-events-heading": "Our Next Event",
+    "section-events-button": "See all Events",
 
     "project-wiesel-title": "Weasel Wanted",
     "project-wiesel-topic": "Wild Life Research",
@@ -60,9 +62,11 @@
     "cover-button-projects": "Jetzt mitforschen",
     "cover-button-your-project": "Neue Projektidee?",
 
-
     "section-projects-heading": "Machen Sie mit",
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
+
+    "section-events-heading": "Unser nächster Event",
+    "section-events-button": "Zu den Events",
 
     "project-wiesel-title": "Wiesel gesucht",
     "project-wiesel-topic": "Wildtierforschung",
@@ -225,8 +229,29 @@
     </app-content-section>
 
 
-
     <app-content-section color="light-greyish">
+      <div class="content-wrapper">
+        <div class="row row-centered">
+          <div class="col col-large-10 col-xlarge-8">
+
+            <h2 class="heading centered scroll-effect">{{ $t('section-events-heading') }}</h2>
+
+            <div class="margin-bottom">
+              <event-list :limit="1"></event-list>
+            </div>
+
+
+            <div class="button-group centered">
+              <router-link tag="button" to="/events" class="button button-secondary">{{ $t('section-events-button') }}</router-link>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </app-content-section>
+
+
+    <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered row-middle">
 
@@ -256,7 +281,7 @@
 
 
 
-    <app-content-section>
+    <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered row-middle row-reverse-large">
 
@@ -315,7 +340,7 @@
     -->
 
 
-    <app-content-section class="overflow-hidden" color="light-greyish">
+    <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-reverse-large">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
@@ -363,10 +388,12 @@ import Footer from '@/components/shared/Footer.vue'
 import ProjectTeaser from '@/components/ProjectTeaser';
 import SectionNewsletterSignup from '../components/shared/SectionNewsletterSignup';
 import EventTeaser from "../components/EventTeaser";
+import EventList from "../components/EventList";
 
 export default {
   name: 'Home',
   components: {
+      EventList,
       EventTeaser,
       SectionNewsletterSignup,
       ProjectTeaser,

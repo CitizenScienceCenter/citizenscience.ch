@@ -25,7 +25,9 @@
     "people-anna-position": "Researcher (Ethics)",
 
     "people-liesbet-position": "Post-doctoral Researcher, KU Leuven",
+    "people-liesbet-duration": "June-Sep 2019",
     "people-clea-position": "Intern, Citizen Science Global Partnership",
+    "people-clea-duration": "May-August 2019",
 
     "members-button-show": "Show all Members",
     "members-button-hide": "Hide all Members",
@@ -55,8 +57,10 @@
     "people-marcel-position": "UX Designer / Frontend Developer",
     "people-anna-position": "Forscherin (Ethik)",
 
-    "people-clea-position": "Praktikantin, Citizen Science Global Partnership",
+    "people-liesbet-duration": "June-Sep 2019",
     "people-liesbet-position": "Postdoktorandin, KU Leuven",
+    "people-clea-position": "Praktikantin, Citizen Science Global Partnership",
+    "people-clea-duration": "May-August 2019",
 
     "members-button-show": "Alle Mitglieder anzeigen",
     "members-button-hide": "Mitglieder verbergen",
@@ -222,6 +226,7 @@
                 <img src="/img/people/liesbet.jpg" class="photo"/>
                 <span class="name">Liesbet Jacobs</span>
                 <span class="position">{{ $t('people-liesbet-position') }}</span>
+                <span class="position">{{ $t('people-liesbet-duration') }}</span>
                 <a href="mailto:maria.mondardini@uzh.ch">liesbet.jacobs@kuleuven.be</a>
               </div>
             </div>
@@ -230,6 +235,7 @@
                 <img src="/img/people/clea.jpg" class="photo"/>
                 <span class="name">Clea Montanari</span>
                 <span class="position">{{ $t('people-clea-position') }}</span>
+                <span class="position">{{ $t('people-clea-duration') }}</span>
                 <a href="mailto:cleamonti95@gmail.com">cleamonti95@gmail.com</a>
               </div>
             </div>

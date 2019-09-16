@@ -37,6 +37,14 @@ export const i18n = new VueI18n({
     'site-title': 'Citizen Science Center Zurich',
     'site-description': 'Next Level Citizen Science',
 
+    'weekday-monday': 'Mon',
+    'weekday-tuesday': 'Tue',
+    'weekday-wednesday': 'Wed',
+    'weekday-thursday': 'Thu',
+    'weekday-friday': 'Fri',
+    'weekday-saturday': 'Sat',
+    'weekday-sunday': 'Sun',
+
     'navigation-homepage': {
         'link': 'Home'
     },
@@ -126,6 +134,13 @@ export const i18n = new VueI18n({
     'site-title': 'Citizen Science Center Zürich',
     'site-description': 'Next Level Citizen Science',
 
+    'weekday-monday': 'Mo',
+    'weekday-tuesday': 'Di',
+    'weekday-wednesday': 'Mi',
+    'weekday-thursday': 'Do',
+    'weekday-friday': 'Fr',
+    'weekday-saturday': 'Sa',
+    'weekday-sunday': 'So',
 
     'navigation-homepage': {
         'link': 'Home'

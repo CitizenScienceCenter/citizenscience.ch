@@ -140,6 +140,10 @@ export default {
                     property: 'og:title',
                     content: this.$t('page-title'),
                     template: '%s | '+this.$t('site-title')
+                },
+                {
+                    property: 'og:image',
+                    content: 'https://citizenscience.ch/img/events/'+this.event.image
                 }
             ]
         }

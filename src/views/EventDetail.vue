@@ -143,7 +143,7 @@ export default {
                 },
                 {
                     property: 'og:image',
-                    content: 'https://citizenscience.ch/img/events/'+this.event.image
+                    content: this.ogImageUrl
                 }
             ]
         }
@@ -159,7 +159,8 @@ export default {
                 'weekday-thursday',
                 'weekday-friday',
                 'weekday-saturday',
-            ]
+            ],
+            ogImageUrl: ''
         }
     },
     methods: {
@@ -192,6 +193,8 @@ export default {
         if( !this.event ) {
             this.$router.push('/events');
         }
+
+        this.ogImageUrl = 'https://citizenscience.ch/img/events/'+this.event.image;
     }
 }
 

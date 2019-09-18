@@ -29,6 +29,7 @@ export default {
           titleTemplate: '%s | '+this.$t('site-title'),
           meta: [
               {
+                  vmid: 'description', // because it gets overwritten by some
                   name: 'description',
                   content: this.$t('site-description')
               },

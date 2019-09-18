@@ -142,6 +142,11 @@ export default {
                     template: '%s | '+this.$t('site-title')
                 },
                 {
+                    vmid: 'description',
+                    property: 'description',
+                    content: this.eventDisplayDate(this.startDate,this.endDate)
+                },
+                {
                     vmid: 'og:image',
                     property: 'og:image',
                     content: 'https://citizenscience.ch/img/events/'+this.ogImage
@@ -162,7 +167,9 @@ export default {
                 'weekday-saturday',
             ],
             ogImage: undefined,
-            pageTitle: undefined
+            pageTitle: undefined,
+            startDate: undefined,
+            endDate: undefined
         }
     },
     methods: {
@@ -200,6 +207,8 @@ export default {
     mounted() {
         this.ogImage = this.event.image;
         this.pageTitle = this.event.title;
+        this.startDate = this.event.start;
+        this.endDate = this.event.end;
     }
 }
 

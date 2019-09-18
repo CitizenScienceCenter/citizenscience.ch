@@ -204,7 +204,6 @@
             line-height: 1;
             padding: $spacing-1;
             border-radius: $border-radius;
-            max-width: 120px;
         }
 
 

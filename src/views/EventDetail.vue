@@ -147,6 +147,11 @@ export default {
                     content: this.eventDisplayDate(this.startDate,this.endDate)
                 },
                 {
+                    vmid: 'og:description',
+                    property: 'og:description',
+                    content: this.eventDisplayDate(this.startDate,this.endDate)
+                },
+                {
                     vmid: 'og:image',
                     property: 'og:image',
                     content: 'https://citizenscience.ch/img/events/'+this.ogImage

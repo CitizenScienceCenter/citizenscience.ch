@@ -34,6 +34,11 @@ export default {
                   content: this.$t('site-description')
               },
               {
+                vmid: 'og:description', // because it gets overwritten by some
+                property: 'og:description',
+                content: this.$t('site-description')
+              },
+              {
                   property: 'og:type',
                   content: 'website'
               },

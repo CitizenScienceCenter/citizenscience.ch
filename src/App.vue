@@ -41,6 +41,7 @@ export default {
                   content: 'https://citizenscience.ch'+this.$route.path
               },
               {
+                  vmid: 'og:image', // because it gets overwritten by some
                   property: 'og:image',
                   content: 'https://citizenscience.ch/img/citsci-promo.jpg'
               }

@@ -20,6 +20,7 @@
   "project-snake-description": "Stuck indoors this winter? Dreaming of seeing snakes in the spring? Take advantage of the cold weather to test and refine your identification skills with our SnakeID challenge!",
   "project-snake-button": "Take a look",
   "project-snake-info": "The first challenge is over. There are more to come...",
+  "project-snake-sign": "Ended",
 
   "project-wenker-title": "Project Wenker",
   "project-wenker-topic": "Linguistics",
@@ -52,6 +53,7 @@
   "project-snake-description": "Du hast den Winter satt und kannst es kaum erwarten im Frühling wieder Schlangen zu beobachten? Nutze die kalte Jahreszeit um deine Fähigkeiten im Bestimmen von Schlangen zu testen und zu verbessern – mit der Snake ID Challenge!",
   "project-snake-button": "Ansehen",
   "project-snake-info": "Die Erste Challenge ist vorüber. Weitere folgen...",
+  "project-snake-sign": "Beendet",
 
   "project-wenker-title": "Projekt Wenker",
   "project-wenker-topic": "Sprachwissenschaften",
@@ -109,6 +111,7 @@
                         url="https://hatespeech.citizenscience.ch"
                         colorGradientStart="#6e4f9e"
                         colorGradientEnd="#478161"
+                        infoSign="Beta"
                 ></project-teaser>
               </div>
             </div>
@@ -142,6 +145,7 @@
                         colorGradientStart="#9a4b23"
                         colorGradientEnd="#418677"
                         :infoText="$t('project-snake-info')"
+                        :infoSign="$t('project-snake-sign')"
                 ></project-teaser>
               </div>
             </div>

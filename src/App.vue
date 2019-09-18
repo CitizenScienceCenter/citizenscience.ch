@@ -70,9 +70,12 @@ export default {
     var cover = new Image();
     cover.src = '/img/cover.jpg';
     cover.onload = function() {
+        /*
         if( navigator.userAgent !== 'ReactSnap' ) {
             app.classList.add("show");
         }
+       */
+        app.classList.add("show");
     };
   }
 }

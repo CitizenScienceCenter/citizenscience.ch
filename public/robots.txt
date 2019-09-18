@@ -1,6 +1,2 @@
 User-agent: *
-Disallow:
 Sitemap: https://www.citizenscience.ch/sitemap.xml
-Allow: /css/
-Allow: /img/
-Allow: /js/

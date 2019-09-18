@@ -2,7 +2,7 @@
 {
   "en": {
 
-    "page-title": "Events",
+    "button-overview": "Overview",
 
     "brownbag-info-heading": "Brown Bag Lunches in Autumn 2019",
     "brownbag-info-text": "The Brown Bag Lunches series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Our agenda this year includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
@@ -16,7 +16,7 @@
     },
   "de": {
 
-    "page-title": "Events",
+    "button-overview": "Zur Übersicht",
 
     "brownbag-info-heading": "Brown Bag Lunches in Autumn 2019",
     "brownbag-info-text": "The Brown Bag Lunches series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Our agenda this year includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
@@ -41,7 +41,7 @@
                       <div class="centered margin-bottom">
                           <router-link to="/events" tag="button" class="button button-secondary button-secondary-naked button-icon">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M159.69,239l136-136a23.9,23.9,0,0,1,33.9,0l22.6,22.6a23.9,23.9,0,0,1,0,33.9L255.89,256l96.4,96.4a23.9,23.9,0,0,1,0,33.9L329.69,409a23.9,23.9,0,0,1-33.9,0l-136-136a23.93,23.93,0,0,1-.1-34Z"/></svg>
-                              Zur Übersicht
+                              {{$t('button-overview')}}
                           </router-link>
                       </div>
 
@@ -134,11 +134,11 @@ export default {
     },
     metaInfo: function() {
         return {
-            title: this.$t('page-title'),
+            title: this.pageTitle,
             meta: [
                 {
                     property: 'og:title',
-                    content: this.$t('page-title'),
+                    content: this.pageTitle,
                     template: '%s | '+this.$t('site-title')
                 },
                 {
@@ -161,7 +161,8 @@ export default {
                 'weekday-friday',
                 'weekday-saturday',
             ],
-            ogImage: undefined
+            ogImage: undefined,
+            pageTitle: undefined
         }
     },
     methods: {
@@ -198,6 +199,7 @@ export default {
     },
     mounted() {
         this.ogImage = this.event.image;
+        this.pageTitle = this.event.title;
     }
 }
 

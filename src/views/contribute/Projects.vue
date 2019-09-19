@@ -48,6 +48,7 @@
   "project-hatespeech-topic": "Sprachwissenschaften",
   "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
   "project-hatespeech-button": "Mitmachen",
+
   "project-snake-title": "Snake ID Challenge",
   "project-snake-topic": "Herpetologie",
   "project-snake-description": "Du hast den Winter satt und kannst es kaum erwarten im Frühling wieder Schlangen zu beobachten? Nutze die kalte Jahreszeit um deine Fähigkeiten im Bestimmen von Schlangen zu testen und zu verbessern – mit der Snake ID Challenge!",
@@ -102,6 +103,22 @@
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
+                        :projectTitle="$t('project-wenker-title')"
+                        :projectTopic="$t('project-wenker-topic')"
+                        :projectDescription="$t('project-wenker-description')"
+                        :buttonText="$t('project-wenker-button')"
+                        projectBgImage="/img/projects/wenker.jpg"
+                        projectImage="/img/projects/wenker-intro.png"
+                        url="https://wenker.citizenscience.ch"
+                        colorGradientStart="#3e6189"
+                        colorGradientEnd="#766b51"
+                ></project-teaser>
+              </div>
+            </div>
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
                         :projectTitle="$t('project-hatespeech-title')"
                         :projectTopic="$t('project-hatespeech-topic')"
                         :projectDescription="$t('project-hatespeech-description')"
@@ -112,22 +129,6 @@
                         colorGradientStart="#6e4f9e"
                         colorGradientEnd="#478161"
                         infoSign="Beta"
-                ></project-teaser>
-              </div>
-            </div>
-
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
-              <div>
-                <project-teaser
-                        :projectTitle="$t('project-wenker-title')"
-                        :projectTopic="$t('project-wenker-topic')"
-                        :projectDescription="$t('project-wenker-description')"
-                        :buttonText="$t('project-wenker-button')"
-                        projectBgImage="/img/projects/wenker.jpg"
-                        projectImage="/img/projects/wenker-intro.png"
-                        url="https://wenker.citizenscience.ch"
-                        colorGradientStart="#3e6189"
-                        colorGradientEnd="#766b51"
                 ></project-teaser>
               </div>
             </div>

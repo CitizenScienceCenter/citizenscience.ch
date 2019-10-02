@@ -259,7 +259,7 @@
                 .col-image {
                     display: block;
                     img {
-                        transform: scale(1.5) translateX(-10%);
+                        transform: scale(1.5) translateX(-5%);
                     }
                 }
             }
@@ -298,7 +298,7 @@
 
                 .col-image {
                     img {
-                        transform: scale(1.75) translateY(20%);
+                        transform: scale(1.5) translateY(12.5%);
                     }
                 }
 

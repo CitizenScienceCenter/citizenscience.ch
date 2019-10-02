@@ -27,6 +27,11 @@
   "project-wenker-description": "Our first Citizen Science Project is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
   "project-wenker-button": "Take part",
 
+  "project-cohcoh-title": "Cause of Health",
+  "project-cohcoh-topic": "Health",
+  "project-cohcoh-description": "Health and wellbeing are different in each individual and depend on the genome, the environment and behavior of each individual (Health Triangle). In order to understand the causes of health we need large sets of health-relevant data from a large number of people.",
+  "project-cohcoh-button": "Take part",
+
   "section-partner-projects-heading": "Partner's Projects",
   "section-partner-projects-crowdwater-text": "CrowdWater at the university of Zurich aims to examine the potential of crowdsourcing in the field of hydrology. The focus lies on water level, streamflow and soil moisture data. The aim of the project is to collect a large amount of data and to improve the forecast of hydrological events, such as droughts or floods.",
   "section-partner-projects-crowdwater-button": "Visit Project",
@@ -60,6 +65,11 @@
   "project-wenker-topic": "Sprachwissenschaften",
   "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
   "project-wenker-button": "Mitmachen",
+
+  "project-cohcoh-title": "Cause of Health",
+  "project-cohcoh-topic": "Health",
+  "project-cohcoh-description": "Health and wellbeing are different in each individual and depend on the genome, the environment and behavior of each individual (Health Triangle). In order to understand the causes of health we need large sets of health-relevant data from a large number of people.",
+  "project-cohcoh-button": "Take part",
 
   "section-partner-projects-heading": "Partnerprojekte",
   "section-partner-projects-crowdwater-text": "CrowdWater ist ein Projekt der Universität Zürich und untersucht das Potential von crowdsourcing im Bereich Hydrologie. Konkret geht es um Wasserstand, Abfluss und Bodenfeuchte. Das Ziel ist es, möglichst viele Beobachtungen zu erheben und damit die Vorhersage hydrologischer Ereignisse wie zum Beispiel Trockenheit oder Überschwemmung zu verbessern.",
@@ -143,10 +153,26 @@
                         projectBgImage="/img/projects/snakechallenge.jpg"
                         projectImage="/img/projects/snakechallenge-intro.png"
                         url="https://snakes.citizenscience.ch"
-                        colorGradientStart="#9a4b23"
-                        colorGradientEnd="#418677"
+                        colorGradientStart="#A35026"
+                        colorGradientEnd="#448D7D"
                         :infoText="$t('project-snake-info')"
                         :infoSign="$t('project-snake-sign')"
+                ></project-teaser>
+              </div>
+            </div>
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-cohcoh-title')"
+                        :projectTopic="$t('project-cohcoh-topic')"
+                        :projectDescription="$t('project-cohcoh-description')"
+                        :buttonText="$t('project-cohcoh-button')"
+                        projectBgImage="/img/projects/cohcoh.jpg"
+                        projectImage="/img/projects/cohcoh-graphic.png"
+                        url="https://cause-of-health.citizenscience.ch"
+                        colorGradientStart="#4ca942"
+                        colorGradientEnd="#4697cb"
                 ></project-teaser>
               </div>
             </div>

@@ -76,7 +76,7 @@
                     && startDate.getMonth() === endDate.getMonth()
                     && startDate.getFullYear() === endDate.getFullYear() ) {
                     // same day
-                    return this.$t(this.i18nWeekdays[startDate.getDay()]) +', '+ startDate.getDate()+'.'+(startDate.getMonth()+1)+'.'+startDate.getFullYear()+', '+startDate.getHours()+':'+startDate.getMinutes()+'–'+endDate.getHours()+':'+(endDate.getMinutes()<10?'0':'') + endDate.getMinutes();
+                    return this.$t(this.i18nWeekdays[startDate.getDay()]) +', '+ startDate.getDate()+'.'+(startDate.getMonth()+1)+'.'+startDate.getFullYear()+', '+startDate.getHours()+':'+(startDate.getMinutes()<10?'0':'') + startDate.getMinutes()+'–'+endDate.getHours()+':'+(endDate.getMinutes()<10?'0':'') + endDate.getMinutes();
                 }
                 else {
                     // different day

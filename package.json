@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "prebuild": "git init && cd src/components && git submodule add https://github.com/citizensciencecenter/shared-components shared && cd ../styles && git submodule add https://github.com/citizensciencecenter/shared-styles shared && cd ../views && git submodule add https://github.com/citizensciencecenter/shared-views shared && git submodule update --remote --recursive",
-    "build": "npm update caniuse-lite browserslist && vue-cli-service build",
+    "prebuild": "git init && cd src/components && git submodule add https://github.com/citizensciencecenter/shared-components shared && cd ../styles && git submodule add https://github.com/citizensciencecenter/shared-styles shared && cd ../views && git submodule add https://github.com/citizensciencecenter/shared-views shared && git submodule update --remote --recursive && npm update caniuse-lite browserslist",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

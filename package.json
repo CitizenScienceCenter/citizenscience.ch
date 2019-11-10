@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "prebuild": "git init && cd src/components && git submodule add https://github.com/citizensciencecenter/shared-components shared && cd ../../styles && git submodule add https://github.com/citizensciencecenter/shared-styles && cd ../../views && git submodule add https://github.com/citizensciencecenter/shared-views && git submodule update --remote --recursive",
+    "prebuild": "git init && cd src/components && git submodule add https://github.com/citizensciencecenter/shared-components shared && cd src/styles && git submodule add https://github.com/citizensciencecenter/shared-styles && cd src/views && git submodule add https://github.com/citizensciencecenter/shared-views && git submodule update --remote --recursive",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

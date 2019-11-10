@@ -10,3 +10,12 @@
 [submodule "src/views/shared"]
 	path = src/views/shared
 	url = git@github.com:CitizenScienceCenter/shared-views.git
+[submodule "shared-components"]
+	path = shared-components
+	url = https://github.com/citizensciencecenter/shared-components
+[submodule "shared-views"]
+	path = shared-views
+	url = https://github.com/citizensciencecenter/shared-views
+[submodule "shared-styles"]
+	path = shared-styles
+	url = https://github.com/citizensciencecenter/shared-styles

@@ -9,6 +9,7 @@ RUN apk update && apk upgrade && \
     apk add --no-cache \
       chromium@edge=72.0.3626.121-r0 \
       nss@edge \
+      git \
       freetype@edge \
       harfbuzz@edge \
       ttf-freefont@edge
@@ -34,6 +35,7 @@ COPY . .
 USER root
 RUN chown -R pptruser:pptruser /app
 USER pptruser
+RUN git init && git submodule add https://github.com/citizensciencecenter/shared-components && git submodule add https://github.com/citizensciencecenter/shared-views && git submodule add https://github.com/citizensciencecenter/shared-styles && git submodule update --recursive
 RUN npm install
 RUN npm run build
 

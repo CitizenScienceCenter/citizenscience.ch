@@ -5,13 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "prebuild": "git init && cd src/components && git submodule add https://github.com/citizensciencecenter/shared-components shared && cd ../styles && git submodule add https://github.com/citizensciencecenter/shared-styles shared && cd ../views && git submodule add https://github.com/citizensciencecenter/shared-views shared && git submodule update --remote --recursive",
-    "build": "vue-cli-service build",
+    "build": "npm update caniuse-lite browserslist && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^2.0.0",
     "crypto-js": "^3.1.9-1",
-    "puppeteer-core": "^2.0.0",
     "sass-loader": "^7.1.0",
     "simple-analytics-vue": "^1.1.0",
     "swagger-client": "^3.8.22",
@@ -52,20 +50,6 @@
     "plugins": {
       "autoprefixer": {}
     }
-  },
-  "reactSnap": {
-    "source": "dist",
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    },
-    "puppeteerArgs": [
-      "--disable-setuid-sandbox",
-      "--no-sandbox"
-    ],
-    "concurrency": 1,
-    "inlineCss": false,
-    "puppeteerExecutablePath": "./node_modules/puppeteer/.local-chromium/linux-656675/chrome-linux/chrome"
   },
   "browserslist": [
     "> 1%",

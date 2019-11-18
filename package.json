@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && react-snap",
     "lint": "vue-cli-service lint",
-    "postbuild": "react-snap"
+    "now-build": "vue-cli-service build",
+    "deploy": "now --prod"
   },
   "dependencies": {
     "crypto-js": "^3.1.9-1",
@@ -27,7 +28,7 @@
     "@kazupon/vue-i18n-loader": "^0.3.0",
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
+    "@vue/cli-service": "^3.12.1",
     "node-sass": "^4.12.0",
     "react-snap": "^1.23.0",
     "vue-template-compiler": "^2.5.17"

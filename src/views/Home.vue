@@ -32,9 +32,9 @@
 
     "project-snake-title": "Snake ID Challenge",
     "project-snake-topic": "Herpetology",
-    "project-snake-description": "Stuck indoors this winter? Dreaming of seeing snakes in the spring? Take advantage of the cold weather to test and refine your identification skills with our SnakeID challenge!",
+    "project-snake-description": "Fall is here! You can take advantage of the cooler weather to test and refine your identification skills with the second phase of the SnakeID challenge.",
     "project-snake-button": "Take a look",
-    "project-snake-info": "The first challenge is over. There are more to come...",
+    "project-snake-sign": "Coming soon",
 
     "section-projects-button": "See all Projects",
 
@@ -85,9 +85,9 @@
 
     "project-snake-title": "Snake ID Challenge",
     "project-snake-topic": "Herpetologie",
-    "project-snake-description": "Du hast den Winter satt und kannst es kaum erwarten im Frühling wieder Schlangen zu beobachten? Nutze die kalte Jahreszeit um deine Fähigkeiten im Bestimmen von Schlangen zu testen und zu verbessern – mit der Snake ID Challenge!",
+    "project-snake-description": "Der Herbst ist da! Nutzt das kühlere Wetter, um eure Identifikationsfähigkeiten in der zweiten Phase der SnakeID-Challenge zu testen und zu verfeinern.",
     "project-snake-button": "Ansehen",
-    "project-snake-info": "Die Erste Challenge ist vorüber. Weitere folgen...",
+    "project-snake-sign": "Beginnt bald",
 
     "section-projects-button": "Alle Projekte",
 
@@ -150,6 +150,22 @@
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
+                        :projectTitle="$t('project-snake-title')"
+                        :projectTopic="$t('project-snake-topic')"
+                        :projectDescription="$t('project-snake-description')"
+                        :buttonText="$t('project-snake-button')"
+                        projectBgImage="/img/projects/snakechallenge.jpg"
+                        projectImage="/img/projects/snakechallenge-intro.png"
+                        url="https://snakes.citizenscience.ch"
+                        colorGradientStart="#A35026"
+                        colorGradientEnd="#448D7D"
+                ></project-teaser>
+              </div>
+            </div>
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
                         :projectTitle="$t('project-wiesel-title')"
                         :projectTopic="$t('project-wiesel-topic')"
                         :projectDescription="$t('project-wiesel-description')"
@@ -179,6 +195,7 @@
               </div>
             </div>
 
+            <!--
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
@@ -195,26 +212,6 @@
                 ></project-teaser>
               </div>
             </div>
-
-            <!--
-
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
-              <div>
-                <project-teaser
-                        :projectTitle="$t('project-snake-title')"
-                        :projectTopic="$t('project-snake-topic')"
-                        :projectDescription="$t('project-snake-description')"
-                        :buttonText="$t('project-snake-button')"
-                        projectBgImage="/img/projects/snakechallenge.jpg"
-                        projectImage="/img/projects/snakechallenge-intro.png"
-                        url="https://snakes.citizenscience.ch"
-                        colorGradientStart="#9a4b23"
-                        colorGradientEnd="#418677"
-                        :infoText="$t('project-snake-info')"
-                ></project-teaser>
-              </div>
-            </div>
-
             -->
 
             <div class="col col-wrapping col-large-6 col-wrapping scroll-effect">

@@ -65,7 +65,7 @@
     ],
     "concurrency": 1,
     "inlineCss": false,
-    "puppeteerExecutablePath": "/usr/bin/chromium-browser"
+    "puppeteerExecutablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
   },
   "browserslist": [
     "> 1%",

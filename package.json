@@ -7,7 +7,7 @@
     "build": "vue-cli-service build && react-snap",
     "lint": "vue-cli-service lint",
     "now-build": "vue-cli-service build",
-    "now static build": "vue-cli-service build && react-snap && cp config/now.json dist && cd dist && now --prod",
+    "now-static": "vue-cli-service build && react-snap && cp config/now.json dist && cd dist && now --prod",
     "deploy": "now --prod"
   },
   "dependencies": {

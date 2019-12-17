@@ -1,7 +1,0 @@
-{
-  "name": "cccs-prod",
-  "img": "ccsite",
-  "ns": "c3s-prod",
-  "port": 80,
-  "host": "citizenscience.ch"
-}

@@ -4,7 +4,7 @@
 
     "button-overview": "Overview",
 
-    "brownbag-info-heading": "Brown Bag Lunches in Autumn 2019",
+    "brownbag-info-heading": "Brown Bag Lunches",
     "brownbag-info-text": "The Brown Bag Lunches series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Our agenda this year includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
     "brownbag-register-text": "<b>Please register via E-Mail:</b>",
 
@@ -18,7 +18,7 @@
 
     "button-overview": "Zur Übersicht",
 
-    "brownbag-info-heading": "Brown Bag Lunches in Autumn 2019",
+    "brownbag-info-heading": "Brown Bag Lunches",
     "brownbag-info-text": "The Brown Bag Lunches series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Our agenda this year includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
     "brownbag-register-text": "<b>Please register via E-Mail:</b>",
 

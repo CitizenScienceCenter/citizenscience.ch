@@ -1,5 +1,38 @@
 [
   {
+    "path": "brownbag-2020-05-06",
+    "start": "2020-05-06T12:15",
+    "end": "2020-05-06T13:15",
+    "location": "University of Zurich, Main Building",
+    "title": "Brown Bag Lunch: The Future of Citizen Science: Inter-Stitching Human Learning and Machine Learning?",
+    "abstract": "",
+    "speakers": "Carsten Østerlund, Professor, School of Information Studies, Syracuse University, New York",
+    "content": "<p>The presentation will discuss the benefits and challenges of integrating Machine Learning (ML) into citizen science projects while maintain a dynamic division of labor that benefits the volunteers’ learning and motivation. Drawing on the <a href='https://www.gravityspy.org' target='_blank'>www.GravitySpy.org project as an example, we will describe how volunteers assist in the search of gravitational waves by training a ML unit to find glitches in data from the advanced laser interferometer gravitational-wave observatory (LIGO).  We designed the project so it would allow for changes to take place in the relationship between the human and the machine as both get better at distinguishing increasingly subtle abnormalities in the gravitational wave data. Build on the Zooniverse.org platform, Gravity Spy has to date attracted more than 17,000 participants classifying millions of glitches.</p>",
+    "image": "brownbag.jpg"
+  },
+  {
+    "path": "brownbag-2020-04-01",
+    "start": "2020-04-01T12:15",
+    "end": "2020-04-01T13:15",
+    "location": "University of Zurich, Main Building",
+    "title": "Brown Bag Lunch: StadtWildTiere (Urban Wildlife) and Wilde Nachbarn (Wild Neighbors) – Monitoring wildlife at the intersection of public awareness, research, and nature conservation",
+    "abstract": "",
+    "speakers": "Anouk-Lisa Taucher, SWILD – Urban Ecology & Wildlife Research",
+    "content": "<p>Most urban dwellers are unaware of the vast diversity of wild neighbors they share their habitat with. In the citizen science projects StadtWildTiere and Wilde Nachbarn we want to raise awareness of the nature right in front of people’s doorsteps. While awareness is a crucial step towards conservation, taking action requires evidence-based knowledge. Anouk Taucher will present the two platforms, which focus on urban and suburban mammals, and will provide examples of completed projects which have successfully addressed wildlife research questions with the help of the public.</p>",
+    "image": "brownbag.jpg"
+  },
+  {
+    "path": "brownbag-2020-03-04",
+    "start": "2020-03-04T12:15",
+    "end": "2020-03-04T13:15",
+    "location": "University of Zurich, Main Building",
+    "title": "Brown Bag Lunch: Citizen science research for sharks and rays in Latin America",
+    "abstract": "",
+    "speakers": "Nathalia Carolina Mora Arciniegas (MSc Aquatic Tropical Ecology - Bremen University & Scuba Diving Instructor)",
+    "content": "Biodiversity loss is a well-known global problem. For this, the support through initiatives and projects which connect biological conservation efforts and members of society is urgently needed. Aiming to provide reliable and efficient low-cost baseline information the Sharks and Rays Sighting National Program of Colombia (PNAT, Programa Nacional de Avistamiento de Tiburones y Rayas de Colombia, Spanish), has collected over 3500 sightings reports from SCUBA divers for the last 17 years. Nathalia Mora will share the main ecological results; the strengths and weaknesses found through the PNAT citizen science evaluation and, the future plans to keep the active participation of the diving community in the program in the country.",
+    "image": "brownbag.jpg"
+  },
+  {
     "path": "brownbag-2020-02-19",
     "start": "2020-02-19T12:15",
     "end": "2020-02-19T13:15",

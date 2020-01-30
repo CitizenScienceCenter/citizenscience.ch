@@ -68,7 +68,7 @@
                 You (scientist or citizen) have an idea for a Citizen Science project and wish to collaborate with the Center to receive support. First thing you should do is check if your project fits the “Criteria for project support”.
               </p>
               <div class="button-group centered left-aligned-large">
-                <router-link tag="button" to="/activities/checklist" class="button button-secondary">
+                <router-link tag="button" to="/start/checklist" class="button button-secondary">
                   Criteria for Project Proposals</router-link>
               </div>
             </div>

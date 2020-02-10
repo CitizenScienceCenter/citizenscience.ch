@@ -95,16 +95,21 @@
                 </div>
 
                 <div class="col col-large-6 col-wrapping">
-                  <h3 class="subheading reduced-bottom-margin">Science et Cité</h3>
+                  <h3 class="subheading reduced-bottom-margin">Science et Cité – Schweiz forscht</h3>
                   <!-- <p class="reduced-bottom-margin"><b>Citizen Science Network Austria (CSNA)</b></p> -->
                   <p class="reduced-bottom-margin" v-html="$t('partnership-science-et-Cite-text')"></p>
                   <p class="reduced-bottom-margin">
-                    <img src="/img/science-et-cite.jpg" style="height: 56px" />
+                    <img src="/img/science-et-cite.jpg" style="display: inline-block; height: 48px; margin-right: 24px;" />
+                    <img src="/img/schweiz-forscht.png" style="display: inline-block; height: 40px" />
                   </p>
-                  <div class="button-group margin-bottom">
+                  <div class="button-group">
                     <button class="button button-secondary button-icon button-normal-case" @click="openInNewTab('https://www.science-et-cite.ch/')">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
                       science-et-cite.ch
+                    </button>
+                    <button class="button button-secondary button-icon button-normal-case" @click="openInNewTab('https://www.schweiz-forscht.ch//')">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                      schweiz-forscht.ch
                     </button>
                   </div>
                 </div>

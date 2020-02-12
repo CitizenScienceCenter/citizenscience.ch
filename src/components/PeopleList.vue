@@ -19,6 +19,7 @@
 
     "people-marina-position": "Admin Assistant",
     "people-chris-position": "Developer",
+    "people-nikos-position": "Developer",
     "people-fanny-position": "Community Manager",
     "people-rosy-position": "Managing Director",
     "people-marcel-position": "UX Designer / Frontend Developer",
@@ -52,6 +53,7 @@
 
     "people-marina-position": "Admin Assistant",
     "people-chris-position": "Developer",
+    "people-nikos-position": "Developer",
     "people-fanny-position": "Community Manager",
     "people-rosy-position": "Managing Director",
     "people-marcel-position": "UX Designer / Frontend Developer",
@@ -154,63 +156,62 @@
     <h3 class="subheading centered">{{ $t('subheading-team') }}</h3>
 
     <div class="people-section">
-      <!-- special row wrapping here -->
-      <div class="row row-centered row-wrapping">
-        <div class="col col-large-9">
 
-          <div class="row row-centered">
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
-              <div class="person centered">
-                <img src="/img/people/rosy.jpg" class="photo"/>
-                <span class="name">Rosy Mondardini</span>
-                <span class="position">{{ $t('people-rosy-position') }}</span>
-                <a href="mailto:maria.mondardini@uzh.ch">maria.mondardini@uzh.ch</a>
-              </div>
-            </div>
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
-              <div class="person centered">
-                <img src="/img/people/chris.jpg" class="photo"/>
-                <span class="name">Chris Gwilliams</span>
-                <span class="position">{{ $t('people-chris-position') }}</span>
-                <a href="mailto:christopher.gwilliams@uzh.ch ">christopher.gwilliams@uzh.ch</a>
-              </div>
-            </div>
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
-              <div class="person centered">
-                <img src="/img/people/fanny.jpg" class="photo"/>
-                <span class="name">Fanny Gutsche Jones</span>
-                <span class="position">{{ $t('people-fanny-position') }}</span>
-                <a href="mailto:fanny.jones@uzh.ch">fanny.gutsche-jones@uzh.ch</a>
-              </div>
-            </div>
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
-              <div class="person centered">
-                <img src="/img/people/marcel.jpg" class="photo"/>
-                <span class="name">Marcel Tanner</span>
-                <span class="position">{{ $t('people-marcel-position') }}</span>
-                <a href="mailto:marcel.tanner@uzh.ch">marcel.tanner@uzh.ch</a>
-              </div>
-            </div>
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
-              <div class="person centered">
-                <img src="/img/people/marina.jpg" class="photo"/>
-                <span class="name">Marina Gagetti</span>
-                <span class="position">{{ $t('people-marina-position') }}</span>
-                <a href="mailto:marina.gagetti@zfg.uzh.ch">marina.gagetti@zfg.uzh.ch</a>
-              </div>
-            </div>
-            <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
-              <div class="person centered">
-                <img src="/img/people/anna.jpg" class="photo"/>
-                <span class="name">Anna Jobin</span>
-                <span class="position">{{ $t('people-anna-position') }}</span>
-                <a href="mailto:marina.gagetti@zfg.uzh.ch">anna.jobin@hest.ethz.ch</a>
-              </div>
-            </div>
+      <div class="row row-centered">
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
+          <div class="person centered">
+            <img src="/img/people/rosy.jpg" class="photo"/>
+            <span class="name">Rosy Mondardini</span>
+            <span class="position">{{ $t('people-rosy-position') }}</span>
+            <a href="mailto:maria.mondardini@uzh.ch">maria.mondardini@uzh.ch</a>
           </div>
         </div>
-
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
+          <div class="person centered">
+            <img src="/img/people/fanny.jpg" class="photo"/>
+            <span class="name">Fanny Gutsche Jones</span>
+            <span class="position">{{ $t('people-fanny-position') }}</span>
+            <a href="mailto:fanny.jones@uzh.ch">fanny.gutsche-jones@uzh.ch</a>
+          </div>
+        </div>
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
+          <div class="person centered">
+            <img src="/img/people/nikos.jpg" class="photo"/>
+            <span class="name">Nikos Georgomanolis</span>
+            <span class="position">{{ $t('people-nikos-position') }}</span>
+            <a href="mailto:nikolaos.georgomanolis@uzh.chf">nikolaos.georgomanolis@uzh.ch</a>
+          </div>
+        </div>
+        <!--
+        <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
+          <div class="person centered">
+            <img src="/img/people/marcel.jpg" class="photo"/>
+            <span class="name">Marcel Tanner</span>
+            <span class="position">{{ $t('people-marcel-position') }}</span>
+            <a href="mailto:marcel.tanner@uzh.ch">marcel.tanner@uzh.ch</a>
+          </div>
+        </div>
+        -->
+        <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
+          <div class="person centered">
+            <img src="/img/people/marina.jpg" class="photo"/>
+            <span class="name">Marina Gagetti</span>
+            <span class="position">{{ $t('people-marina-position') }}</span>
+            <a href="mailto:marina.gagetti@zfg.uzh.ch">marina.gagetti@zfg.uzh.ch</a>
+          </div>
+        </div>
+        <!--
+        <div class="col col-tablet-portrait-6 col-large-4 col-wrapping">
+          <div class="person centered">
+            <img src="/img/people/anna.jpg" class="photo"/>
+            <span class="name">Anna Jobin</span>
+            <span class="position">{{ $t('people-anna-position') }}</span>
+            <a href="mailto:marina.gagetti@zfg.uzh.ch">anna.jobin@hest.ethz.ch</a>
+          </div>
+        </div>
+        -->
       </div>
+
     </div>
 
     <h3 class="subheading centered">{{ $t('subheading-guest-researchers')}}</h3>

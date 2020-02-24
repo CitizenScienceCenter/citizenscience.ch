@@ -250,103 +250,68 @@
       <div class="col col-large-6">
         <h3 class="subheading centered">{{ $t('subheading-members') }}</h3>
         <p v-html="$t('members-text')"></p>
-        <div class="button-group centered">
-          <button class="button button-secondary button-icon" @click="showMembers = !showMembers">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-               <path d="M127.3,192h257.3c17.8,0,26.7,21.5,14.1,34.1L270.1,354.8c-7.8,7.8-20.5,7.8-28.3,0L113.2,226.1 C100.6,213.5,109.5,192,127.3,192z"/>
-            </svg>
-            <template v-if="!showMembers">{{ $t('members-button-show') }}</template>
-            <template v-else>{{ $t('members-button-hide') }}</template>
-          </button>
+        <div class="margin-bottom">
+          <div class="button-group centered">
+            <button class="button button-secondary button-icon" @click="showMembers = !showMembers">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                 <path d="M127.3,192h257.3c17.8,0,26.7,21.5,14.1,34.1L270.1,354.8c-7.8,7.8-20.5,7.8-28.3,0L113.2,226.1 C100.6,213.5,109.5,192,127.3,192z"/>
+              </svg>
+              <template v-if="!showMembers">{{ $t('members-button-show') }}</template>
+              <template v-else>{{ $t('members-button-hide') }}</template>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="col col-large-8" v-show="showMembers">
-        <ul class="members row">
-            <li class="col col-large-6">
-              <span class="name"><a href="http://www.socio.ethz.ch/die-gruppe/personen/person-detail.html?persid=110988" target="_blank">Prof. Andreas Diekmann</a></span>
-              <span class="position">ETH, Departement Geistes-, Sozial- und Staatswissenschaften</span>
-            </li>
-            <li class="col col-large-6">
-              <span class="name"><a href="https://las.inf.ethz.ch/krausea" target="_blank">Prof. Andreas Krause</a></span>
-              <span class="position">ETH, Departement Informatik</span>
-            </li>
-            <li class="col col-large-6">
-              <span class="name"><a href="https://www.ifi.uzh.ch/en/ddis/people/bernstein.html" target="_blank">Prof. Abraham Bernstein</a></span>
-              <span class="position">UZH, Institut für Informatik</span>
-            </li>
-            <li class="col col-large-6">
-              <span class="name"><a href="https://www.linguistik.uzh.ch/en/about/mitglieder/bickel.html" target="_blank">Prof. Balthasar Bickel</a></span>
-              <span class="position">UZH, Institut für Vergleichende Sprachwissenschaft, ZüKL</span>
-            </li>
-            <li class="col col-large-6">
-              <span class="name"><a href="https://www.med.uzh.ch/de/UeberdieFakultaet/fakultaetsvorstand/wittclaudia.html" target="_blank">Prof. Claudia Witt</a></span>
-              <span class="position">USZ, Institut für Komplementäre und Integrative Medizin</span>
-            </li>
-            <li class="col col-large-6">
-              <span class="name"><a href="http://www.coss.ethz.ch/people/helbing.html" target="_blank">Prof. Dirk Helbing</a></span>
-              <span class="position">ETH, Departement Geistes-, Sozial- und Staatswissenschaften</span>
-            </li>
-            <li class="col col-large-6">
-              <span class="name"><a href="http://www.itm.ethz.ch/research/bioethics-and-politics.html" target="_blank">Prof. Effy Vayena</a></span>
-              <span class="position">ETH, Departement Gesundheitswissenschaften und Technologie</span>
-            </li>
-            <li class="col col-large-6">
-              <span class="name"><a href="https://www.rose.uzh.ch/de/seminar/personen/stark.html" target="_blank">Prof. Elisabeth Stark</a></span>
-              <span class="position">UZH, Romanisches Seminar, ZüKL</span>
-            </li>
-            <li class="col col-large-6">
-              <span class="name"><a href="https://www.phil.uzh.ch/de/forschung/frauen/glaser.html" target="_blank">Prof. Elvira Glaser</a></span>
-              <span class="position">UZH, UFSP Sprache und Raum</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="http://www.imsb.ethz.ch/research/hafen/people/ernst-hafen.html" target="_blank">Prof. Ernst Hafen</a></span>
-              <span class="position">ETH, Department Biologie</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.ctac.uzh.ch/research/groups/lake.html" target="_blank">Prof. George Lake</a></span>
-              <span class="position">UZH, Institut für Computational Science</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.geo.uzh.ch/en/studying/spez_master/physical_geography/People/seibert.html" target="_blank">Prof. Jan Seibert</a></span>
-              <span class="position">UZH, Geographisches Institut</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.musethno.uzh.ch/de/museum/mitarbeitende/mareile-flitsch.html" target="_blank">Prof. Mareile Flitsch</a></span>
-              <span class="position">UZH, Völkerkundemuseum</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.es.uzh.ch/en/aboutus/team/mhundt.html" target="_blank">Prof. Marianne Hundt</a></span>
-              <span class="position">UZH, Englisches Seminar, ZüKL</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.cl.uzh.ch/de/people/team/compling/volk.html" target="_blank">Prof. Martin Volk</a></span>
-              <span class="position">UZH, Institut für Computerlinguistik, ZüKL</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.hest.ethz.ch/en/studies/health-sciences-and-technology/master-hst/majors/tutors/tutors-a-z/michael-ristow.html" target="_blank">Prof. Michael Ristow</a></span>
-              <span class="position">ETH, Departement Gesundheitswissenschaften und Technologie</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.psychology.uzh.ch/en/areas/dev/geronto/team/mmartin.html" target="_blank">Prof. Mike Martin</a></span>
-              <span class="position">UZH, Psychologisches Institut</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.ebpi.uzh.ch/en/aboutus/director.html" target="_blank">Prof. Milo Puhan</a></span>
-              <span class="position">UZH, Epidemiology, Biostatistics and Prevention Institute</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.geo.uzh.ch/en/studying/spez_master/Geographies_of_global_change/People/backhaus.html" target="_blank">Prof. Norman Backhaus</a></span>
-              <span class="position">UZH, Geographisches Institut</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.ee.ethz.ch/the-department/faculty/professors/person-detail.NTI3MDk=.TGlzdC80MTEsMTA1ODA0MjU5.html" target="_blank">Prof. Richard Hahnloser</a></span>
-              <span class="position">ETH, Systems Neurosciences</span>
-            </li>
-          <li class="col col-large-6">
-              <span class="name"><a href="https://www.geo.uzh.ch/en/studying/spez_master/msc_spez_giscience/People/purves.html" target="_blank">Prof. Ross Purves</a></span>
-              <span class="position">UZH, Geographisches Institut</span>
-            </li>
-        </ul>
+        <div v-show="showMembers">
+          <ul>
+              <li>Prof. Norman Backhaus, UZH, Geographisches Institut</li>
+              <li>Prof. Abraham Bernstein, UZH, Institut für Informatik</li>
+              <li>Prof. Balthasar Bickel ,UZH, Institut für Vergleichende Sprachwissenschaft, ZüKL</li>
+              <li>Prof. Nikolas Biller Adorno, UZH, Institut für Biomedizinische Ethik und Medizingeschichte</li>
+              <li>Dr. Christine Bratrich, ETH, Leiterin Sustainability</li>
+              <li>Dr. Claudia Canella, USZ, UniversitätsSpital Zürich</li>
+              <li>Dr. Markus  Christen, UZH, Digital Society Initiative</li>
+              <li>Prof. Volker Dellwo, UZH, Institut für Computerlinguistik</li>
+              <li>Prof. Andreas Diekmann, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
+              <li>Eliane Escher, UZH, Institut für Molekulare Biologie</li>
+              <li>Simon Etter, UZH, Geographisches Institut</li>
+              <li>Prof. Mareile Flitsch, UZH, Völkerkundemuseum</li>
+              <li>Prof. Barbara Flueckiger, UZH, Seminar für Filmwissenschaft</li>
+              <li>Michael Gasser, ETH Bibliothek</li>
+              <li>Prof. Elvira Glaser, UZH, UFSP Sprache und Raum</li>
+              <li>Prof. Marc Gruenig, ETH, Departement Umweltsystemwissenschaften</li>
+              <li>Prof. Ernst Hafen, ETH, Department Biologie</li>
+              <li>Prof. Richard Hahnloser, ETH, Systems Neurosciences</li>
+              <li>Prof. Dirk Helbing, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
+              <li>Prof. Marianne Hundt, UZH, Englisches Seminar, ZüKL</li>
+              <li>Dr. Matthias Huss, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
+              <li>Dr. Ulrike Kastrup, ETH, focus Terra</li>
+              <li>Stefan Klauser, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
+              <li>Prof. Hubert Klumpner, ETH, Departement Architektur</li>
+              <li>Prof. Andreas Krause, ETH, Departement Informatik</li>
+              <li>Prof. George Lake, UZH, Institut für Computational Science</li>
+              <li>Dr. Bregt Lameris, UZH, Seminar für Filmwissenschaft</li>
+              <li>Prof. Nicolas Langer, UZH, Psychologisches Institut</li>
+              <li>Prof. Mike Martin, UZH, Psychologisches Institut</li>
+              <li>Dr. Rebecca Mörgen, UZH, Institut für Erziehungswissenschaft</li>
+              <li>Corine Mouton Dorey, UZH, Institut für Biomedizinische Ethik und Medizingeschichte</li>
+              <li>Dr. Robin Muller, ETH, Climate-KIC</li>
+              <li>Dr. Maximiliane Okonnek ,ETH, Library Lab</li>
+              <li>Prof. Milo PuhanUZH, Epidemiology, Biostatistics and Prevention Institute</li>
+              <li>Prof. Ross Purves, UZH, Geographisches Institut</li>
+              <li>Prof. Michael Ristow, ETH, Departement Gesundheitswissenschaften und Technologie</li>
+              <li>Dr. Carmenza Robledo Abad Althaus, ETH, TdLab</li>
+              <li>Prof. Prasenjit Saha, UZH, Physik-Institut</li>
+              <li>Dr. Juanita Clare Schlaepfer-Miller, ETH, Departement Umweltsystemwissenschaften</li>
+              <li>Prof. Thomas Schlag, UZH, Theologische Fakultät</li>
+              <li>Prof. Jan SeibertUZH, Geographisches Institut</li>
+              <li>Prof. Uwe Serdult – UZH/ZDA, Zentrum für Demokratie Aarau</li>
+              <li>Prof. Elisabeth StarkUZH, Romanisches Seminar, ZüKL</li>
+              <li>Barbara Strobl, UZH, Geographisches Institut</li>
+              <li>Prof. Effy Vayena, ETH, Departement Gesundheitswissenschaften und Technologie</li>
+              <li>Prof. Martin Volk, UZH, Institut für Computerlinguistik, ZüKL</li>
+              <li>Prof. Claudia Witt, USZ, Institut für Komplementäre und Integrative Medizin</li>
+          </ul>
+        </div>
       </div>
     </div>
 

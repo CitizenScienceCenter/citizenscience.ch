@@ -214,10 +214,13 @@
 
     </div>
 
+
+    <!--
+
     <h3 class="subheading centered">{{ $t('subheading-guest-researchers')}}</h3>
 
     <div class="people-section">
-      <!-- special row wrapping here -->
+
       <div class="row row-centered">
         <div class="col col-large-9">
 
@@ -245,6 +248,8 @@
 
       </div>
     </div>
+
+    -->
 
     <div class="row row-centered">
       <div class="col col-large-6">

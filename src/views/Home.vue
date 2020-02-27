@@ -3,12 +3,6 @@
   "en": {
     "page-title": "Citizen Science Center Zurich",
 
-
-    "cover-heading": "Next Generation Citizen Science",
-    "cover-subheading": "Citizen Science Center Zurich",
-    "cover-button-projects": "Start contributing",
-    "cover-button-your-project": "Suggest a project",
-
     "section-projects-heading": "Get involved",
     "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
@@ -56,11 +50,6 @@
   },
   "de": {
     "page-title": "Citizen Science Center Zürich",
-
-    "cover-heading": "Next Generation Citizen Science",
-    "cover-subheading": "Citizen Science Center Zurich",
-    "cover-button-projects": "Jetzt mitforschen",
-    "cover-button-your-project": "Neue Projektidee?",
 
     "section-projects-heading": "Machen Sie mit",
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
@@ -113,14 +102,8 @@
 <template>
   <div>
 
-    <app-cover imageUrl="/img/cover.jpg">
-      <h2 class="cover-heading scroll-effect">{{ $t('cover-heading') }}</h2>
-      <p class="cover-subheading scroll-effect scroll-effect-delayed-1">{{ $t('cover-subheading') }}</p>
-      <p class="button-group centered scroll-effect scroll-effect-delayed-2">
-        <router-link tag="button" to="/contribute" class="button button-primary">{{ $t('cover-button-projects') }}</router-link>
-        <router-link tag="button" to="/start" class="button button-secondary button-secondary-inverted">{{ $t('cover-button-your-project') }}</router-link>
-      </p>
-    </app-cover>
+    <carousel-cover></carousel-cover>
+
 
     <!--
     <app-content-section color="light-greyish" class="content-section-condensed">
@@ -386,10 +369,12 @@ import ProjectTeaser from '@/components/ProjectTeaser';
 import SectionNewsletterSignup from '../components/shared/SectionNewsletterSignup';
 import EventTeaser from "../components/EventTeaser";
 import EventList from "../components/EventList";
+import CarouselCover from "../components/CarouselCover";
 
 export default {
   name: 'Home',
   components: {
+    CarouselCover,
       EventList,
       EventTeaser,
       SectionNewsletterSignup,

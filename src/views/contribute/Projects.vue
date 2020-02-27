@@ -31,6 +31,11 @@
   "project-cohcoh-description": "Health and wellbeing are different in each individual and depend on the genome, the environment and behavior of each individual (Health Triangle). In order to understand the causes of health we need large sets of health-relevant data from a large number of people.",
   "project-cohcoh-button": "Take part",
 
+  "project-mitrends-title": "MitrendS Study",
+  "project-mitrends-topic": "Health",
+  "project-mitrends-description": "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
+  "project-mitrends-button": "Take part",
+
   "section-partner-projects-heading": "Partner's Projects",
   "section-partner-projects-crowdwater-text": "CrowdWater at the university of Zurich aims to examine the potential of crowdsourcing in the field of hydrology. The focus lies on water level, streamflow and soil moisture data. The aim of the project is to collect a large amount of data and to improve the forecast of hydrological events, such as droughts or floods.",
   "section-partner-projects-crowdwater-button": "Visit Project",
@@ -66,8 +71,13 @@
 
   "project-cohcoh-title": "Cause of Health",
   "project-cohcoh-topic": "Health",
-  "project-cohcoh-description": "Health and wellbeing are different in each individual and depend on the genome, the environment and behavior of each individual (Health Triangle). In order to understand the causes of health we need large sets of health-relevant data from a large number of people.",
+  "project-cohcoh-description": "Gesundheit und Wohlbefinden sind individuell verschieden und werden durch das “Gesundheitsdreieck” bestimmt: Dem Zusammenhang zwischen Genom, Umwelt und Verhalten. Zur Erforschung von Gesundheit und Wohlbefinden braucht die Wissenschaft gesundheitsrelevante Daten von möglichst vielen Menschen.",
   "project-cohcoh-button": "Take part",
+
+  "project-mitrends-title": "MitrendS Study (EN)",
+  "project-mitrends-topic": "Health",
+  "project-mitrends-description": "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
+  "project-mitrends-button": "Take part",
 
   "section-partner-projects-heading": "Partnerprojekte",
   "section-partner-projects-crowdwater-text": "CrowdWater ist ein Projekt der Universität Zürich und untersucht das Potential von crowdsourcing im Bereich Hydrologie. Konkret geht es um Wasserstand, Abfluss und Bodenfeuchte. Das Ziel ist es, möglichst viele Beobachtungen zu erheben und damit die Vorhersage hydrologischer Ereignisse wie zum Beispiel Trockenheit oder Überschwemmung zu verbessern.",
@@ -169,6 +179,22 @@
                         url="https://cause-of-health.citizenscience.ch"
                         colorGradientStart="#4ca942"
                         colorGradientEnd="#4697cb"
+                ></project-teaser>
+              </div>
+            </div>
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-mitrends-title')"
+                        :projectTopic="$t('project-mitrends-topic')"
+                        :projectDescription="$t('project-mitrends-description')"
+                        :buttonText="$t('project-mitrends-button')"
+                        projectBgImage="/img/projects/mitrends.jpg"
+                        projectImage="/img/projects/mitrends-graphic.png"
+                        url="https://mitrends.citizenscience.ch"
+                        colorGradientStart="#fc5c4a"
+                        colorGradientEnd="#7284cd"
                 ></project-teaser>
               </div>
             </div>

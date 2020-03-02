@@ -26,7 +26,7 @@
               <div class="content-wrapper">
                 <div class="row row-centered">
                   <div class="col col-large-6 col-large-before-6 scroll-effect">
-                    <div class="slide-image-wrapper">
+                    <div class="news-image-wrapper">
                       <img :src="'/img/'+news[0].image" />
                       <img :src="'/img/'+news[0].image" />
                     </div>
@@ -171,10 +171,11 @@ export default {
                 height: 100%;
                 .col {
                   height: 100%;
-                  .slide-image-wrapper {
+                  .news-image-wrapper {
                     height: 100%;
                     position: relative;
                     img {
+                      box-shadow: 0 0 0 $spacing-1 rgba(white, 0.1);
                       display: block;
                       position: absolute;
                       top: 0;
@@ -342,7 +343,7 @@ export default {
                   .col {
                     padding: 0;
                     text-align: right;
-                    .slide-image-wrapper {
+                    .news-image-wrapper {
                       display: inline-block;
                       overflow: hidden;
                       border-radius: 50%;
@@ -350,6 +351,7 @@ export default {
                       transform: scale(2);
                       box-shadow: 0 0 0 $spacing-2 rgba(white, 0.1);
                       img {
+                        box-shadow: none;
                         position: relative;
                         left: 0;
                         right: 0;

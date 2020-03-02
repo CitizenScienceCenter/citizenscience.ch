@@ -3,13 +3,13 @@
     "image": "events/open-house.jpg",
     "expiration": "2020-03-05T18:00+01:00",
     "en": {
-      "title": "märz Visit us at Our Upcoming Brownbag Lunch plus some more text for testing",
+      "title": "Visit us at Our Upcoming Brownbag Lunch",
       "lead": "Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte with some additional text for testing.",
       "path": "events/brownbag-2020-03-04",
       "button": "Details & Registration"
     },
     "de": {
-      "title": "märz Visit us at Our Upcoming Brownbag Lunch plus some more text for testing",
+      "title": "Visit us at Our Upcoming Brownbag ",
       "lead": "Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte with some additional text for testing.",
       "path": "events/brownbag-2020-03-04",
       "button": "Details & Registration"

@@ -102,7 +102,8 @@
 <template>
   <div>
 
-    <carousel-cover></carousel-cover>
+
+    <news-cover></news-cover>
 
 
     <!--
@@ -369,12 +370,12 @@ import ProjectTeaser from '@/components/ProjectTeaser';
 import SectionNewsletterSignup from '../components/shared/SectionNewsletterSignup';
 import EventTeaser from "../components/EventTeaser";
 import EventList from "../components/EventList";
-import CarouselCover from "../components/CarouselCover";
+import NewsCover from "../components/NewsCover";
 
 export default {
   name: 'Home',
   components: {
-    CarouselCover,
+    NewsCover,
       EventList,
       EventTeaser,
       SectionNewsletterSignup,

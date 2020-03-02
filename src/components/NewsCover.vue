@@ -16,19 +16,19 @@
 </i18n>
 
 <template>
-  <section v-if="hasSlides" class="carousel-cover">
-
-    <div class="slider">
-      <div class="slide" :style="'background-image: url(/img/'+slides[0].image+')'">
-        <div class="slide-content-wrapper">
-          <div class="slide-content">
+  <section v-if="hasNews" class="news-cover">
+    <!-- shows first upcoming news -->
+    <div class="news-container">
+      <div class="news-entry" :style="'background-image: url(/img/'+news[0].image+')'">
+        <div class="news-content-wrapper">
+          <div class="news-content">
             <content-section class="content-section-flat content-section-image" color="transparent">
               <div class="content-wrapper">
                 <div class="row row-centered">
                   <div class="col col-large-6 col-large-before-6 scroll-effect">
                     <div class="slide-image-wrapper">
-                      <img :src="'/img/'+slides[0].image" />
-                      <img :src="'/img/'+slides[0].image" />
+                      <img :src="'/img/'+news[0].image" />
+                      <img :src="'/img/'+news[0].image" />
                     </div>
                   </div>
                 </div>
@@ -38,10 +38,12 @@
               <div class="content-wrapper">
                 <div class="row row-middle">
                   <div class="col col-large-5 col-large-before-1 scroll-effect">
-                    <h2 class="heading centered left-aligned-large">{{ slides[0][$i18n.locale].title }}</h2>
-                    <p class="centered left-aligned-large">{{ slides[0][$i18n.locale].lead }}</p>
+                    <h2 class="heading centered left-aligned-large">{{ news[0][$i18n.locale].title }}</h2>
+                    <p class="centered left-aligned-large">{{ news[0][$i18n.locale].lead }}</p>
                     <div class="button-group centered left-aligned-large">
-                      <router-link to="/about" class="button button-primary">{{ slides[0][$i18n.locale].button }}</router-link>
+                      <!-- simple external link handler, with target _blank -->
+                      <a v-if="news[0][$i18n.locale].path.startsWith('http')" :href="news[0][$i18n.locale].path" target="_blank" class="button button-primary">{{ news[0][$i18n.locale].button }}</a>
+                      <router-link v-else :to="news[0][$i18n.locale].path" class="button button-primary">{{ news[0][$i18n.locale].button }}</router-link>
                     </div>
                   </div>
                 </div>
@@ -67,7 +69,7 @@
   </section>
 
 
-  <!-- default cover -->
+  <!-- no news > default cover -->
   <cover v-else imageUrl="/img/cover.jpg">
     <h2 class="cover-heading scroll-effect">{{ $t('cover-heading') }}</h2>
     <p class="cover-subheading scroll-effect scroll-effect-delayed-1">{{ $t('cover-subheading') }}</p>
@@ -80,21 +82,21 @@
 
 <script>
 
-import slides from "@/assets/carousel.json";
+import news from "@/assets/cover_news.json";
 import Cover from "./shared/Cover";
 import ContentSection from "./shared/ContentSection";
 
 export default {
-  name: 'CarouselCover',
+  name: 'NewsCover',
   components: {ContentSection, Cover},
   data() {
     return {
-      slides: slides
+      news: news
     }
   },
   computed: {
-    hasSlides() {
-      if( this.slides.length > 0 ) {
+    hasNews() {
+      if( this.news.length > 0 ) {
         return true;
       }
       else {
@@ -116,9 +118,9 @@ export default {
     }
   },
   created() {
-    this.slides = this.slides.filter(slide => Date.parse(slide.expiration) >= Date.now() );
+    this.news = this.news.filter(slide => Date.parse(slide.expiration) >= Date.now() );
     // sort by date
-    this.slides.sort(function(a, b){
+    this.news.sort(function(a, b){
       return Date.parse(a.start) - Date.parse(b.start);
     });
   },
@@ -130,18 +132,18 @@ export default {
 @import '@/styles/theme.scss';
 @import '@/styles/shared/variables.scss';
 
-.carousel-cover {
+.news-cover {
   height: 440px;
   position: relative;
 
-  .slider {
+  .news-container {
     height: 100%;
-    .slide {
+    .news-entry {
       height: 100%;
       background-size: cover;
       background-position: 50% 50%;
 
-      .slide-content-wrapper {
+      .news-content-wrapper {
 
         position: relative;
         overflow: visible;
@@ -149,7 +151,7 @@ export default {
 
         height: calc(100% - 80px);
 
-        .slide-content {
+        .news-content {
 
           height: 100%;
           display: flex;
@@ -274,12 +276,12 @@ export default {
 }
 
 @media only screen and (min-width: $viewport-mobile-large) {
-  .carousel-cover {
+  .news-cover {
     height: 480px;
 
-    .slider {
-      .slide {
-        .slide-content-wrapper {
+    .news-container {
+      .news-entry {
+        .news-content-wrapper {
           height: calc(100% - 80px);
         }
       }
@@ -288,12 +290,12 @@ export default {
 }
 
 @media only screen and (min-width: $viewport-tablet-portrait) {
-  .carousel-cover {
+  .news-cover {
     height: 470px;
 
-    .slider {
-      .slide {
-        .slide-content-wrapper {
+    .news-container {
+      .news-entry {
+        .news-content-wrapper {
           height: calc(100% - 96px);
 
         }
@@ -316,16 +318,16 @@ export default {
 }
 
 @media only screen and (min-width: $viewport-large) {
-  .carousel-cover {
+  .news-cover {
     height: 80vh;
     max-height: 470px;
 
-    .slider {
-      .slide {
+    .news-container {
+      .news-entry {
         overflow: hidden;
-        .slide-content-wrapper {
+        .news-content-wrapper {
           height: calc(100% - 104px);
-          .slide-content {
+          .news-content {
             display: block;
             .content-section-image {
               position: absolute;
@@ -414,17 +416,17 @@ export default {
 }
 
 @media only screen and (min-width: $viewport-xlarge) {
-  .carousel-cover {
+  .news-cover {
 
     height: 80vh;
     max-height: 600px;
 
-    .slider {
-      .slide {
-        .slide-content-wrapper {
+    .news-container {
+      .news-entry {
+        .news-content-wrapper {
           height: calc(100% - 104px);
 
-          .slide-content {
+          .news-content {
 
             // heading / paragraph change
             .content-section {

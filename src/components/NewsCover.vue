@@ -153,7 +153,7 @@ export default {
         overflow: visible;
         z-index: 1;
 
-        height: calc(100% - 80px);
+        height: calc(100% - 88px);
 
         .news-content {
 
@@ -289,7 +289,6 @@ export default {
     .news-container {
       .news-entry {
         .news-content-wrapper {
-          height: calc(100% - 80px);
 
           .news-content {
             .content-section-image {

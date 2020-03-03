@@ -1,34 +1,34 @@
 [
   {
-    "image": "events/open-house.jpg",
-    "expiration": "2020-03-05T18:00+01:00",
+    "image": "events/brownbag.jpg",
+    "expiration": "2020-03-04T13:15+01:00",
     "en": {
-      "title": "Come and Visit us at Our Upcoming Brownbag Lunch",
-      "lead": "Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte with some additional text for testing.",
+      "title": "Join our next Brown Bag Lunch: Citizen Science Research for Sharks and Rays in Latin America",
+      "lead": "Marine biologist and diving instructor Nathalia Mora from Colombia presents experiences and results of her ongoing Citizen Science project (lecture in English)",
       "path": "events/brownbag-2020-03-04",
       "button": "Details & Registration"
     },
     "de": {
-      "title": "Besuchen Sie uns an unserem nächsten Brownbag Lunch",
-      "lead": "Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte with some additional text for testing.",
+      "title": "Komm zum nächsten Brown Bag Lunch: Citizen Science Research for Sharks and Rays in Latin America",
+      "lead": "Meeresbiologin und Tauchlehrerin Nathalia Mora aus Kolumbien präsentiert Erfahrungen und Ergebnisse ihres laufenden Citizen Science Projekts (Vortrag auf Englisch)",
       "path": "events/brownbag-2020-03-04",
-      "button": "Details & Registration"
+      "button": "Details & Registrierung"
     }
   },
   {
     "image": "events/open-house.jpg",
-    "expiration": "2020-04-02T18:00+02:00",
+    "expiration": "2020-03-05T18:00+01:00",
     "en": {
-      "title": "april Visit us at Our Upcoming Brownbag Lunch plus some more text for testing",
-      "lead": "Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte with some additional text for testing.",
-      "path": "https://www.google.com",
-      "button": "Details & Registration"
+      "title": "Come on in! Citizen Science Zurich Open House",
+      "lead": "Do you have any questions about Citizen Science or are you curious about how we can support your project? We look forward to new ideas, seeing good acquaintances and meeting new people!",
+      "path": "events/openhouse-2020-03-05",
+      "button": "More Information"
     },
     "de": {
-      "title": "april Visit us at Our Upcoming Brownbag Lunch plus some more text for testing",
-      "lead": "Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte with some additional text for testing.",
-      "path": "https://www.google.com",
-      "button": "Details & Registration"
+      "title": "Hereinspaziert! Citizen Science Zürich öffnet seine Türen",
+      "lead": "Habt ihr Fragen zu Citizen Science oder seid neugierig, wie wir euer Projekt unterstützen können? Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte.",
+      "path": "events/openhouse-2020-03-05",
+      "button": "Mehr Informationen"
     }
   }
 ]

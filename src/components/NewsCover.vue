@@ -37,7 +37,7 @@
             <content-section class="content-section-flat content-section-text" color="transparent">
               <div class="content-wrapper">
                 <div class="row row-middle">
-                  <div class="col col-large-5 col-large-before-1 scroll-effect">
+                  <div class="col col-large-6 col-large-before-0_5 col-xlarge-5 col-xlarge-before-1 scroll-effect">
                     <h2 class="heading centered left-aligned-large">{{ news[0][$i18n.locale].title }}</h2>
                     <p class="centered left-aligned-large">{{ news[0][$i18n.locale].lead }}</p>
                     <div class="button-group centered left-aligned-large">
@@ -119,10 +119,14 @@ export default {
   },
   created() {
     this.news = this.news.filter(slide => Date.parse(slide.expiration) >= Date.now() );
+    console.log('filtered');
+    console.log( this.news );
     // sort by date
     this.news.sort(function(a, b){
-      return Date.parse(a.start) - Date.parse(b.start);
+      return Date.parse(a.expiration) - Date.parse(b.expiration);
     });
+    console.log('sorted');
+    console.log( this.news );
   },
 }
 </script>
@@ -197,12 +201,14 @@ export default {
               color: white;
               padding-bottom: 0;
               margin-bottom: $spacing-1;
+              font-size: $font-size-large;
               &:after {
                 opacity: 0;
               }
             }
             p {
               color: white;
+              font-size: $font-size-small;
               margin-bottom: $spacing-2;
             }
           }
@@ -284,6 +290,14 @@ export default {
       .news-entry {
         .news-content-wrapper {
           height: calc(100% - 80px);
+
+          .news-content {
+            .content-section-image {
+              .content-wrapper {
+                padding: $spacing-3 0;
+              }
+            }
+          }
         }
       }
     }
@@ -319,6 +333,12 @@ export default {
 }
 
 @media only screen and (min-width: $viewport-large) {
+
+
+  .col-large-before-0_5 {
+    margin-left: 4.166%;
+  }
+
   .news-cover {
     height: 80vh;
     max-height: 470px;
@@ -385,7 +405,6 @@ export default {
             // heading / paragraph change
             .content-section {
               .heading {
-                font-size: $font-size-large;
                 padding-bottom: $spacing-3;
                 margin-bottom: $spacing-3;
                 &:after {
@@ -442,6 +461,7 @@ export default {
               }
 
               p {
+                font-size: $font-size-normal;
                 margin-bottom: $spacing-4;
               }
             }

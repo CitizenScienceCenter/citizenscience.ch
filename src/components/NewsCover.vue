@@ -201,7 +201,7 @@ export default {
               color: white;
               padding-bottom: 0;
               margin-bottom: $spacing-1;
-              font-size: $font-size-large;
+              font-size: $font-size-medium;
               &:after {
                 opacity: 0;
               }
@@ -312,7 +312,14 @@ export default {
       .news-entry {
         .news-content-wrapper {
           height: calc(100% - 96px);
-
+          .news-content {
+            // heading / paragraph change
+            .content-section {
+              .heading {
+                //font-size: $font-size-large;
+              }
+            }
+          }
         }
       }
     }
@@ -398,6 +405,9 @@ export default {
                 height: 100%;
                 .row {
                   height: 100%;
+                  .col {
+                    padding-right: 0;
+                  }
                 }
               }
             }
@@ -407,6 +417,7 @@ export default {
               .heading {
                 padding-bottom: $spacing-3;
                 margin-bottom: $spacing-3;
+                font-size: $font-size-large;
                 &:after {
                   opacity: 1;
                 }

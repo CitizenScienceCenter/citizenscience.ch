@@ -412,6 +412,9 @@ export default {
       height: 48px;
       bottom: $spacing-3;
       right: $spacing-3;
+      img {
+        filter: drop-shadow( 0px 2px 8px rgba( $color-black, 0.2 ) );
+      }
     }
 
   }

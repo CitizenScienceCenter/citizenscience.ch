@@ -293,7 +293,6 @@
               <li>Stefan Klauser, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
               <li>Prof. Hubert Klumpner, ETH, Departement Architektur</li>
               <li>Prof. Andreas Krause, ETH, Departement Informatik</li>
-              <li>Prof. George Lake, UZH, Institut für Computational Science</li>
               <li>Dr. Bregt Lameris, UZH, Seminar für Filmwissenschaft</li>
               <li>Prof. Nicolas Langer, UZH, Psychologisches Institut</li>
               <li>Prof. Mike Martin, UZH, Psychologisches Institut</li>

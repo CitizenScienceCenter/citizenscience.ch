@@ -267,54 +267,54 @@
           </div>
         </div>
         <div v-show="showMembers">
-          <ul>
-              <li>Prof. Norman Backhaus, UZH, Geographisches Institut</li>
-              <li>Prof. Abraham Bernstein, UZH, Institut für Informatik</li>
-              <li>Prof. Balthasar Bickel ,UZH, Institut für Vergleichende Sprachwissenschaft, ZüKL</li>
-              <li>Prof. Nikolas Biller Adorno, UZH, Institut für Biomedizinische Ethik und Medizingeschichte</li>
-              <li>Dr. Christine Bratrich, ETH, Leiterin Sustainability</li>
-              <li>Dr. Claudia Canella, USZ, UniversitätsSpital Zürich</li>
-              <li>Dr. Markus  Christen, UZH, Digital Society Initiative</li>
-              <li>Prof. Volker Dellwo, UZH, Institut für Computerlinguistik</li>
-              <li>Prof. Andreas Diekmann, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
-              <li>Eliane Escher, UZH, Institut für Molekulare Biologie</li>
-              <li>Simon Etter, UZH, Geographisches Institut</li>
-              <li>Prof. Mareile Flitsch, UZH, Völkerkundemuseum</li>
-              <li>Prof. Barbara Flueckiger, UZH, Seminar für Filmwissenschaft</li>
-              <li>Michael Gasser, ETH Bibliothek</li>
-              <li>Prof. Elvira Glaser, UZH, UFSP Sprache und Raum</li>
-              <li>Prof. Marc Gruenig, ETH, Departement Umweltsystemwissenschaften</li>
-              <li>Prof. Ernst Hafen, ETH, Department Biologie</li>
-              <li>Prof. Richard Hahnloser, ETH, Systems Neurosciences</li>
-              <li>Prof. Dirk Helbing, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
-              <li>Prof. Marianne Hundt, UZH, Englisches Seminar, ZüKL</li>
-              <li>Dr. Matthias Huss, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
-              <li>Dr. Ulrike Kastrup, ETH, focus Terra</li>
-              <li>Stefan Klauser, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
-              <li>Prof. Hubert Klumpner, ETH, Departement Architektur</li>
-              <li>Prof. Andreas Krause, ETH, Departement Informatik</li>
-              <li>Dr. Bregt Lameris, UZH, Seminar für Filmwissenschaft</li>
-              <li>Prof. Nicolas Langer, UZH, Psychologisches Institut</li>
-              <li>Prof. Mike Martin, UZH, Psychologisches Institut</li>
-              <li>Dr. Rebecca Mörgen, UZH, Institut für Erziehungswissenschaft</li>
-              <li>Corine Mouton Dorey, UZH, Institut für Biomedizinische Ethik und Medizingeschichte</li>
-              <li>Dr. Robin Muller, ETH, Climate-KIC</li>
-              <li>Dr. Maximiliane Okonnek ,ETH, Library Lab</li>
-              <li>Prof. Milo PuhanUZH, Epidemiology, Biostatistics and Prevention Institute</li>
-              <li>Prof. Ross Purves, UZH, Geographisches Institut</li>
-              <li>Prof. Michael Ristow, ETH, Departement Gesundheitswissenschaften und Technologie</li>
-              <li>Dr. Carmenza Robledo Abad Althaus, ETH, TdLab</li>
-              <li>Prof. Prasenjit Saha, UZH, Physik-Institut</li>
-              <li>Dr. Juanita Clare Schlaepfer-Miller, ETH, Departement Umweltsystemwissenschaften</li>
-              <li>Prof. Thomas Schlag, UZH, Theologische Fakultät</li>
-              <li>Prof. Jan SeibertUZH, Geographisches Institut</li>
-              <li>Prof. Uwe Serdult – UZH/ZDA, Zentrum für Demokratie Aarau</li>
-              <li>Prof. Elisabeth StarkUZH, Romanisches Seminar, ZüKL</li>
-              <li>Barbara Strobl, UZH, Geographisches Institut</li>
-              <li>Prof. Effy Vayena, ETH, Departement Gesundheitswissenschaften und Technologie</li>
-              <li>Prof. Martin Volk, UZH, Institut für Computerlinguistik, ZüKL</li>
-              <li>Prof. Claudia Witt, USZ, Institut für Komplementäre und Integrative Medizin</li>
-          </ul>
+            <ul>
+                <li>Prof. Norman Backhaus, UZH, Geographisches Institut</li>
+                <li>Prof. Abraham Bernstein, UZH, Institut für Informatik</li>
+                <li>Prof. Balthasar Bickel ,UZH, Institut für Vergleichende Sprachwissenschaft, ZüKL</li>
+                <li>Prof. Nikolas Biller Adorno, UZH, Institut für Biomedizinische Ethik und Medizingeschichte</li>
+                <li>Dr. Christine Bratrich, ETH, Leiterin Sustainability</li>
+                <li>Dr. Claudia Canella, USZ, UniversitätsSpital Zürich</li>
+                <li>Dr. Markus Christen, UZH, Digital Society Initiative</li>
+                <li>Prof. Volker Dellwo, UZH, Institut für Computerlinguistik</li>
+                <li>Prof. Andreas Diekmann, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
+                <li>Eliane Escher, UZH, Institut für Molekulare Biologie</li>
+                <li>Simon Etter, UZH, Geographisches Institut</li>
+                <li>Prof. Mareile Flitsch, UZH, Völkerkundemuseum</li>
+                <li>Prof. Barbara Flueckiger, UZH, Seminar für Filmwissenschaft</li>
+                <li>Michael Gasser, ETH Bibliothek</li>
+                <li>Prof. Elvira Glaser, UZH, UFSP Sprache und Raum</li>
+                <li>Prof. Marc Gruenig, ETH, Departement Umweltsystemwissenschaften</li>
+                <li>Prof. Ernst Hafen, ETH, Department Biologie</li>
+                <li>Prof. Richard Hahnloser, ETH, Systems Neurosciences</li>
+                <li>Prof. Dirk Helbing, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
+                <li>Prof. Marianne Hundt, UZH, Englisches Seminar, ZüKL</li>
+                <li>Dr. Matthias Huss, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
+                <li>Dr. Ulrike Kastrup, ETH, focus Terra</li>
+                <li>Stefan Klauser, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
+                <li>Prof. Hubert Klumpner, ETH, Departement Architektur</li>
+                <li>Prof. Andreas Krause, ETH, Departement Informatik</li>
+                <li>Dr. Bregt Lameris, UZH, Seminar für Filmwissenschaft</li>
+                <li>Prof. Nicolas Langer, UZH, Psychologisches Institut</li>
+                <li>Prof. Mike Martin, UZH, Psychologisches Institut</li>
+                <li>Dr. Rebecca Mörgen, UZH, Institut für Erziehungswissenschaft</li>
+                <li>Corine Mouton Dorey, UZH, Institut für Biomedizinische Ethik und Medizingeschichte</li>
+                <li>Dr. Robin Muller, ETH, Climate-KIC</li>
+                <li>Dr. Maximiliane Okonnek ,ETH, Library Lab</li>
+                <li>Prof. Milo PuhanUZH, Epidemiology, Biostatistics and Prevention Institute</li>
+                <li>Prof. Ross Purves, UZH, Geographisches Institut</li>
+                <li>Prof. Michael Ristow, ETH, Departement Gesundheitswissenschaften und Technologie</li>
+                <li>Dr. Carmenza Robledo Abad Althaus, ETH, TdLab</li>
+                <li>Prof. Prasenjit Saha, UZH, Physik-Institut</li>
+                <li>Dr. Juanita Clare Schlaepfer-Miller, ETH, Departement Umweltsystemwissenschaften</li>
+                <li>Prof. Thomas Schlag, UZH, Theologische Fakultät</li>
+                <li>Prof. Jan SeibertUZH, Geographisches Institut</li>
+                <li>Prof. Uwe Serdult – UZH/ZDA, Zentrum für Demokratie Aarau</li>
+                <li>Prof. Elisabeth StarkUZH, Romanisches Seminar, ZüKL</li>
+                <li>Barbara Strobl, UZH, Geographisches Institut</li>
+                <li>Prof. Effy Vayena, ETH, Departement Gesundheitswissenschaften und Technologie</li>
+                <li>Prof. Martin Volk, UZH, Institut für Computerlinguistik, ZüKL</li>
+                <li>Prof. Claudia Witt, USZ, Institut für Komplementäre und Integrative Medizin</li>
+            </ul>
         </div>
       </div>
     </div>

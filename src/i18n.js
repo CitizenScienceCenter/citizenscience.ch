@@ -69,10 +69,10 @@ export const i18n = new VueI18n({
         'link': 'Our Offer'
     },
     'navigation-startproject-checklist': {
-        'link': 'Checklist'
+        'link': 'Criteria'
     },
     'navigation-startproject-phases': {
-        'link': 'Project Phases'
+        'link': 'Checklist'
     },
 
     'navigation-citizenscience': {
@@ -166,10 +166,10 @@ export const i18n = new VueI18n({
         'link': 'Unser Angebot'
     },
     'navigation-startproject-checklist': {
-        'link': 'Checkliste'
+        'link': 'Kriterien'
     },
     'navigation-startproject-phases': {
-        'link': 'Projektphasen'
+        'link': 'Checkliste'
     },
 
     'navigation-citizenscience': {

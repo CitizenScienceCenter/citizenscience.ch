@@ -1,10 +1,10 @@
 <i18n>
   {
   "en": {
-  "page-title": "Project Phases"
+  "page-title": "Checklist"
   },
   "de": {
-  "page-title": "Projektphasen"
+  "page-title": "Checkliste"
   }
   }
 </i18n>
@@ -25,7 +25,7 @@
       <div class="content-wrapper scroll-effect">
         <div class="row">
           <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-            <h2 class="heading centered left-aligned-large">Project Phases</h2>
+            <h2 class="heading centered left-aligned-large">Preparation Checklist</h2>
             <p>In order to facilitate an agreed and transparent functioning of the Center, we provide you with a predefined process to propose and set up a Citizen Science project in collaboration with the Center.</p>
             <p>This is the result of a series of open discussions between the Center’s management and team, and representatives of the UZ and ETHZ research community.</p>
             <div class="button-group centered left-aligned-large">
@@ -63,7 +63,7 @@
             </div>
 
             <div class="col col-large-6 col-large-after-2 col-wrapping">
-              <h2 class="subheading centered left-aligned-large">Milestone 1 – You have an idea for a citizen science project – what’s first?</h2>
+              <h2 class="subheading centered left-aligned-large">Check Point 1 – You have an idea for a citizen science project – what’s first?</h2>
               <p class="reduced-bottom-margin">
                 You (scientist or citizen) have an idea for a Citizen Science project and wish to collaborate with the Center to receive support. First thing you should do is check if your project fits the “Criteria for project support”.
               </p>
@@ -90,7 +90,7 @@
             </div>
 
             <div class="col col-large-6 col-large-after-2 col-wrapping">
-              <h2 class="subheading centered left-aligned-large">Milestone 2 – The Citizen Science Center Zurich supports the Sustainable Development Goals: do you?</h2>
+              <h2 class="subheading centered left-aligned-large">Check Point 2 – The Citizen Science Center Zurich supports the Sustainable Development Goals: do you?</h2>
               <p>
                 Is your research going to generate knowledge and data that can help assessing, monitoring and in general achieving the Sustainable Development Goals (SDGs)?
               </p>
@@ -113,7 +113,7 @@
             </div>
 
             <div class="col col-large-6 col-large-after-2 col-wrapping">
-              <h2 class="subheading centered left-aligned-large">Milestone 3 – You are ready for action: which kind of support do you need from the Center?</h2>
+              <h2 class="subheading centered left-aligned-large">Check Point 3 – You are ready for action: which kind of support do you need from the Center?</h2>
               <p>
                 You may have done citizen science projects before, or you may only have heard about it, and are just exploring the opportunity. In all cases, the Center is available to investigate with you all aspects of your project and makes sure that CS is an appropriate solution, and that your project will produce excellent scientific results while maximizing the involvement of citizens at all possible stages (Citizen Science “Zurich style”).
               </p>
@@ -136,7 +136,7 @@
             </div>
 
             <div class="col col-large-6 col-large-after-2 col-wrapping">
-              <h2 class="subheading centered left-aligned-large">Milestone 4 –  How to access our support</h2>
+              <h2 class="subheading centered left-aligned-large">Check Point 4 –  How to access our support</h2>
               <p>
                 Before reaching out to the Citizen Science Center Zurich, please prepare some structured information to help us understand your idea and plans.
               </p>
@@ -159,7 +159,7 @@
             </div>
 
             <div class="col col-large-6 col-large-after-2 col-wrapping">
-              <h2 class="subheading centered left-aligned-large">Milestone 5 – Need additional resources? Consider partnerships</h2>
+              <h2 class="subheading centered left-aligned-large">Check Point 5 – Need additional resources? Consider partnerships</h2>
               <p>
                 Once the resources  required for your project are clear, you may decide that you need additional skills, people, or financial resources. If so, it may be interesting to explore more formal and longer-term partnerships with the Center or its network.
               </p>
@@ -182,7 +182,7 @@
             </div>
 
             <div class="col col-large-6 col-large-after-2 col-wrapping">
-              <h2 class="subheading centered left-aligned-large">Milestone 6 – Have you thought about ethics?</h2>
+              <h2 class="subheading centered left-aligned-large">Check Point 6 – Have you thought about ethics?</h2>
               <p>
                 When setting up a project that involves the participation of citizens, researchers need to be aware of possible ethical and social issues. The Center has partnered with the Health Ethics and Policy Lab at ETH  and with the Digital Society Initiative at UZH to build and provide the necessary knowledge in the field.
               </p>

@@ -1,10 +1,10 @@
 <i18n>
 {
   "en": {
-    "page-title": "Checklist"
+    "page-title": "Criteria"
   },
   "de": {
-    "page-title": "Checkliste"
+    "page-title": "Kriterien"
   }
 }
 </i18n>

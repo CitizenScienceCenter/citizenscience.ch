@@ -74,9 +74,9 @@
   "project-cohcoh-description": "Gesundheit und Wohlbefinden sind individuell verschieden und werden durch das “Gesundheitsdreieck” bestimmt: Dem Zusammenhang zwischen Genom, Umwelt und Verhalten. Zur Erforschung von Gesundheit und Wohlbefinden braucht die Wissenschaft gesundheitsrelevante Daten von möglichst vielen Menschen.",
   "project-cohcoh-button": "Take part",
 
-  "project-mitrends-title": "MitrendS Study (EN)",
+  "project-mitrends-title": "MITRENDS STUDIE",
   "project-mitrends-topic": "Health",
-  "project-mitrends-description": "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
+  "project-mitrends-description": "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verkauf der Krankheit und die Symptome von MS zu erlangen.",
   "project-mitrends-button": "Take part",
 
   "section-partner-projects-heading": "Partnerprojekte",

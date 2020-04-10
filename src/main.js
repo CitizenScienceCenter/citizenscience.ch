@@ -8,7 +8,8 @@ import Vuex from 'vuex';
 import { i18n } from './i18n.js';
 import Meta from 'vue-meta';
 import c3s from 'vuex-c3s';
-import SimpleAnalytics from "simple-analytics-vue";
+//import SimpleAnalytics from "simple-analytics-vue";
+import VueGtag from "vue-gtag";
 
 Vue.config.productionTip = false;
 
@@ -23,8 +24,10 @@ Vue.use(VueScrollTo, {
      offset: -32
  });
 Vue.use(Vuex);
-Vue.use(SimpleAnalytics, { skip: process.env.NODE_ENV !== "production" });
-
+//Vue.use(SimpleAnalytics, { skip: process.env.NODE_ENV !== "production" });
+Vue.use(VueGtag, {
+    config: { id: "UA-162894944-2" }
+  },router);
 
 store.watch(
     (state) => state.c3s && state.c3s.client,

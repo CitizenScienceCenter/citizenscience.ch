@@ -1,5 +1,21 @@
 [
   {
+    "image": "events/img_CSC Homepage_20200406_wenker_sc.jpg",
+    "expiration": "2020-04-21T13:15+01:00",
+    "en": {
+      "title": "Neues aus den dialektologischen Untiefen",
+      "lead": "Lesen Sie den neuen Blog-Beitrag zum Linguistik-Projekt „Schweizerdeutsch 1930/2020“",
+      "path": "https://citizensciencezurich.blog/2020/04/02/neues-aus-den-dialektologischen-untiefen/",
+      "button": "Mehr Informationen"
+    },
+    "de": {
+      "title": "Neues aus den dialektologischen Untiefen",
+      "lead": "Lesen Sie den neuen Blog-Beitrag zum Linguistik-Projekt „Schweizerdeutsch 1930/2020“",
+      "path": "https://citizensciencezurich.blog/2020/04/02/neues-aus-den-dialektologischen-untiefen/",
+      "button": "Mehr Informationen"
+    }
+  },
+  {
     "image": "events/brownbag.jpg",
     "expiration": "2020-03-04T13:15+01:00",
     "en": {

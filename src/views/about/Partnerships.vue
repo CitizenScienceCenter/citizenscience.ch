@@ -31,7 +31,7 @@
 
             <div class="content-subsection">
 
-              <h2 class="heading centered scroll-effect" id="partners">Research Partners</h2>
+              <h2 class="heading centered scroll-effect" id="partners">Partners</h2>
 
               <div class="row row-wrapping scroll-effect">
 
@@ -131,16 +131,6 @@
                   </div>
                 </div>
 
-              </div>
-
-            </div>
-
-            <div class="content-subsection">
-
-              <h2 class="heading centered scroll-effect">Project Partners</h2>
-
-              <div class="row row-wrapping scroll-effect">
-
                 <div class="col col-large-6 col-wrapping">
                   <h3 class="subheading reduced-bottom-margin">CrowdWater</h3>
                   <!-- <p class="reduced-bottom-margin"><b>CrowdWater</b></p> -->
@@ -166,6 +156,63 @@
                     <button class="button button-secondary button-icon" @click="openInNewTab('https://www.film.uzh.ch/de/research/projects/verbund/ercfilmcolors.html')">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
                       Website
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col col-large-6 col-wrapping">
+                  <h3 class="subheading reduced-bottom-margin">SeniorWeb</h3>
+                  <!-- <p class="reduced-bottom-margin"><b>CrowdWater</b></p> -->
+                  <p class="reduced-bottom-margin">SeniorWeb is a platform for senior citizens created in 1998, that provides age-appropriate forms of communication for generations 50+ in Switzerland. The website serves a community of more than 50K senior citizens and offers cross-media content aimed at active and interested users, covering issue related in particular to health and preventive care, and providing help and advice on topics of digital technology.</p>
+                  <p class="reduced-bottom-margin">
+                    <img src="/img/logo_senior.png" style="height: 48px" />
+                  </p>
+                  <div class="button-group margin-bottom">
+                    <button class="button button-secondary button-icon button-normal-case" @click="openInNewTab('https://seniorweb.ch/')">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                      seniorweb.ch
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col col-large-6 col-wrapping">
+                  <h3 class="subheading reduced-bottom-margin">ZHAW Digital Health Lab</h3>
+                  <p class="reduced-bottom-margin">The ZHAW Digital Health Lab brings together experts from the fields of biomedicine, health, technology and business, who together create innovations for digitisation in healthcare. In particular, the lab aims at making healthcare more accurate, personalized, and preventive, by focusing on the individual.</p>
+                  <p class="reduced-bottom-margin">
+                    <img src="/img/logo-zhaw.png" style="height: 48px" />
+                  </p>
+                  <div class="button-group margin-bottom">
+                    <button class="button button-secondary button-icon button-normal-case" @click="openInNewTab('https://www.zhaw.ch/en/research/inter-school-cooperation/digital-health-lab/')">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                      www.zhaw.ch
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col col-large-6 col-wrapping">
+                  <h3 class="subheading reduced-bottom-margin">Woman’s Brain Project</h3>
+                  <p class="reduced-bottom-margin">Women’s Brain Project is an international organization advocating for & carrying out research on women’s brain and mental health. It advocates also for a scientific discussion on sex and gender aspects of ongoing research and its results. WBP addresses these issues through scientific research, debate, public engagement and advocacy.</p>
+                  <p class="reduced-bottom-margin">
+                    <img src="/img/women-brain-project-logo.png" style="height: 68px" />
+                  </p>
+                  <div class="button-group margin-bottom">
+                    <button class="button button-secondary button-icon button-normal-case" @click="openInNewTab('http://www.womensbrainproject.com/')">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                      www.womensbrainproject.com
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col col-large-6 col-wrapping">
+                  <h3 class="subheading reduced-bottom-margin">Senioren-Universität Zürich</h3>
+                  <p class="reduced-bottom-margin">Die Senioren-Universität UZH3 mit ihren 3000 Mitgliedern 60+ bietet regelmässige Forschungsvorträge von Dozierenden von UZH und ETH, Sonderveranstaltungen und Sportangebote des Partners ASVZ. Ko-kreative Citizen Science wird mit über 35 Mitgliedern im Rahmen einer «Partizipativen UZH3 Arbeitsgruppe» mit Projekten im Bereich Forschung oder Angebotsentwicklung betrieben. Die Mitarbeit steht allen Mitgliedern offen und wird von der Partizipativen Wissenschaftsakademie am Citizen Science Center professionell unterstützt.</p>
+                  <p class="reduced-bottom-margin">
+                    <!--<img src="/img/women-brain-project-logo.png" style="height: 68px" />-->
+                  </p>
+                  <div class="button-group margin-bottom">
+                    <button class="button button-secondary button-icon button-normal-case" @click="openInNewTab('www.seniorenuni.uzh.ch')">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576"><path d="M576,56V184c0,21.47-26,32-41,17l-35.71-35.71L255.8,408.77a24,24,0,0,1-33.94,0l-22.63-22.63a24,24,0,0,1,0-33.94L442.76,108.68,407.05,73C392,57.9,402.66,32,424,32H552A24,24,0,0,1,576,56ZM407,302.79l-16,16a24,24,0,0,0-7,17V480H64V160H328a24,24,0,0,0,17-7l16-16c15.12-15.12,4.41-41-17-41H48A48,48,0,0,0,0,144V496a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V319.76C448,298.38,422.15,287.67,407,302.79Z"/></svg>
+                      www.seniorenuni.uzh.ch
                     </button>
                   </div>
                 </div>

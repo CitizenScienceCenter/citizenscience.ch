@@ -1,5 +1,21 @@
 [
   {
+    "image": "events/hackathons-home.jpg",
+    "expiration": "2020-05-10T13:15+01:00",
+    "en": {
+      "title": "CROWD vs COVID-19",
+      "lead": "Read in our latest blog how to hack COVID-19 with AI and Citizen Science",
+      "path": "https://citizensciencezurich.blog/2020/04/28/hacking-covid-19-with-ai-and-citizen-science/",
+      "button": "More Information"
+    },
+    "de": {
+      "title": "CROWD vs COVID-19",
+      "lead": "Read in our latest blog how to hack COVID-19 with AI and Citizen Science",
+      "path": "https://citizensciencezurich.blog/2020/04/28/hacking-covid-19-with-ai-and-citizen-science/",
+      "button": "More Information"
+    }
+  },
+  {
     "image": "events/img_CSC Homepage_20200406_wenker_sc.jpg",
     "expiration": "2020-04-21T13:15+01:00",
     "en": {

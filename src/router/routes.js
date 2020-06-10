@@ -124,6 +124,11 @@ export const routes = [
                 redirect: 'start/startproject',
                 children: [
                     { path: 'startproject', component: StartProject, meta: {i18n: 'navigation-startproject-overview', nav: true} },
+                    { path: 'builder',  meta: {i18n: 'navigation-startproject-builder', nav: true},
+                        beforeEnter(to, from) {
+                            window.open("https://lab.citizenscience.ch", '_blank')
+                        } 
+                    },
                     { path: 'offer', component: Offer, meta: {i18n: 'navigation-startproject-offer', nav: true} },
                     { path: 'checklist', component: Checklist, meta: {i18n: 'navigation-startproject-checklist', nav: true} },
                     { path: 'phases', component: Phases, meta: {i18n: 'navigation-startproject-phases', nav: true} }

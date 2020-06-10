@@ -65,6 +65,9 @@ export const i18n = new VueI18n({
     'navigation-startproject-overview': {
         'link': 'Overview'
     },
+    'navigation-startproject-builder': {
+        'link': 'Project Builder'
+    },
     'navigation-startproject-offer': {
         'link': 'Our Offer'
     },

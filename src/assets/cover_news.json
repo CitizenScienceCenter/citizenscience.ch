@@ -1,5 +1,21 @@
 [ 
   {
+  "image": "events/CitSci.JPG",
+  "expiration": "2020-08-21T13:15+01:00",
+  "en": {
+    "title": "Submit to CitSci Helvetia 2021",
+    "lead": "The Call for ideas for the first Swiss Citizen Science Conference (January 14-15, 2021 in Zurich and online) is now open!",
+    "path": "http://citscihelvetia.ch/",
+    "button": "Conference Website"
+  },
+  "de": {
+    "title": "Mach mit bei der CitSci Helvetia 2021",
+    "lead": "Der Call für Ideas für die erste Schweizer Citizen Science Konferenz (14.-15. Januar 2021 in Zürich und online) ist jetzt offen!",
+    "path": "http://citscihelvetia.ch/",
+    "button": "Konferenz-Website"
+  }
+  },
+  {
   "image": "events/image-launch.jpg",
   "expiration": "2020-05-21T13:15+01:00",
   "en": {

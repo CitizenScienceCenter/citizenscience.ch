@@ -46,7 +46,12 @@
     "section-about-text": "The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.",
     "section-about-text-2": "Switzerland has a deep tradition of direct democracy and participatory decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.",
     "section-about-text-3": "Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy.",
-    "section-about-button": "Learn more about us"
+    "section-about-button": "Learn more about us",
+
+    "builder-title": "Explore the Citizen Science PROJECT BUILDER",
+    "builder-lead": "The CS Center released the beta version of the CS Project Builder, an open, free and simple tool to create your own Citizen Science Data Analysis project. ",
+    "builder-path": "https://lab.citizenscience.ch/en/",
+    "builder-button": "Explore"
   },
   "de": {
     "page-title": "Citizen Science Center Zürich",
@@ -94,7 +99,12 @@
     "section-about-text": "Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt.",
     "section-about-text-2": "Die Schweiz ist bekannt für ihre lange Tradition in direkter Demokratie und politischer Mitbestimmung. Citizen Science könnte als Übertragung dieser Idee von der Politik in die Wissenschaft angesehen werden.",
     "section-about-text-3": "Auch Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Diese Kombination an Wissen und Kompetenzen am Standort Zürich ermöglicht vielfältige Synergien.",
-    "section-about-button": "Mehr über uns"
+    "section-about-button": "Mehr über uns",
+
+    "builder-title": "Entdecke den Citizen Science PROJECT BUILDER",
+    "builder-lead": "Das CS Center hat die Beta-Version des CS Project Builders veröffentlicht: Ein offenes, kostenloses und einfaches Tool zum Erstellen Deines eigenen Citizen Science Datenanalyse-Projekts.",
+    "builder-path": "https://lab.citizenscience.ch/de/",
+    "builder-button": "Entdecken"
   }
 }
 </i18n>
@@ -130,6 +140,22 @@
         </div>
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        projectTitle="PROJECT BUILDER"
+                        projectTopic="Citizen Science"
+                        :projectDescription="$t('builder-lead')"
+                        :buttonText="$t('builder-button')"
+                        projectBgImage="/img/projects/project-builder-launch.jpg"
+                        projectImage="/img/projects/pb-launch.png"
+                        :url="$t('builder-path')"
+                        colorGradientStart="#6e4f9e"
+                        colorGradientEnd="#478161"
+                ></project-teaser>
+              </div>
+            </div>
 
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>

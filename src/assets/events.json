@@ -1,5 +1,38 @@
 [
   {
+    "path": "helvetia-2021-01-014",
+    "start": "2021-01-14T08:00+01:00",
+    "end": "2021-01-15T17:00+01:00",
+    "location": "ETH Zurich &amp; virtually",
+    "title": "CitSci Helvetia 2021 - Connecting Citizen Science in Switzerland",
+    "abstract": "",
+    "speakers": "",
+    "content": "The aim of “CitSci Helvetia 2021”, the first Swiss Citizen Science conference, is to bring together communities of practitioners in order to discover and connect the different traditions of Citizen Science in Switzerland. The goal is to celebrate this diversity as a significant contributor to the co-production of knowledge for a better future, and to provide a space to explore, share and develop new ideas and practices for Swiss participatory research. Further information on the conference website: <a href='http://citscihelvetia.ch' target='_blank'> citscihelvetia.ch</a>",
+    "image": "logo-CitSciHelvetia.png"
+  },
+  {
+    "path": "project-builder-workshop-2020-07-09",
+    "start": "2020-07-09T16:00+02:00",
+    "end": "2020-07-09T17:00+02:00",
+    "location": "Weblink via Zoom. Register via Email to info@citizenscience.ch",
+    "title": "Workshop &quot;Discover the Citizen Science Project Builder&quot;",
+    "abstract": "",
+    "speakers": "Rosy Mondardini",
+    "content": "About a month ago we launched the beta version of our <a href='https://lab.citizenscience.ch/en/' target='_blank'>Citizen Science Project Builder</a>. The Citizen Science Project Builder is a web-based tool for research projects that allow volunteers to classify large amounts of data in the form of images, audiovisuals, audios, and texts (<a href='https://lab.citizenscience.ch/en/about' target='_blank'>more here</a>). In this 1h workshop we will go over the functionalities of the builder, look at examples, and discuss possible applications. Enough time for questions will be provided as well.",
+    "image": "image-launch-sq.jpg"
+  },
+  {
+    "path": "project-builder-workshop-2020-07-02",
+    "start": "2020-07-02T09:00+02:00",
+    "end": "2020-07-02T10:00+02:00",
+    "location": "Weblink via Zoom. Register via Email to info@citizenscience.ch",
+    "title": "Workshop &quot;Discover the Citizen Science Project Builder&quot;",
+    "abstract": "",
+    "speakers": "Rosy Mondardini",
+    "content": "About a month ago we launched the beta version of our <a href='https://lab.citizenscience.ch/en/' target='_blank'>Citizen Science Project Builder</a>. The Citizen Science Project Builder is a web-based tool for research projects that allow volunteers to classify large amounts of data in the form of images, audiovisuals, audios, and texts (<a href='https://lab.citizenscience.ch/en/about' target='_blank'>more here</a>). In this 1h workshop we will go over the functionalities of the builder, look at examples, and discuss possible applications. Enough time for questions will be provided as well.",
+    "image": "image-launch-sq.jpg"
+  },
+  {
     "path": "vhs-2020-06-09",
     "start": "2020-06-09T09:00+02:00",
     "end": "2020-06-09T13:00+02:00",

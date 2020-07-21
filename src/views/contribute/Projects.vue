@@ -102,6 +102,23 @@
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
 
+
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-mitrends-title')"
+                        :projectTopic="$t('project-mitrends-topic')"
+                        :projectDescription="$t('project-mitrends-description')"
+                        :buttonText="$t('project-mitrends-button')"
+                        projectBgImage="/img/projects/mitrends.jpg"
+                        projectImage="/img/projects/mitrends-graphic.png"
+                        url="https://mitrends.citizenscience.ch"
+                        colorGradientStart="#fc5c4a"
+                        colorGradientEnd="#7284cd"
+                ></project-teaser>
+              </div>
+            </div>
+
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
@@ -179,22 +196,6 @@
                         url="https://cause-of-health.citizenscience.ch"
                         colorGradientStart="#4ca942"
                         colorGradientEnd="#4697cb"
-                ></project-teaser>
-              </div>
-            </div>
-
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
-              <div>
-                <project-teaser
-                        :projectTitle="$t('project-mitrends-title')"
-                        :projectTopic="$t('project-mitrends-topic')"
-                        :projectDescription="$t('project-mitrends-description')"
-                        :buttonText="$t('project-mitrends-button')"
-                        projectBgImage="/img/projects/mitrends.jpg"
-                        projectImage="/img/projects/mitrends-graphic.png"
-                        url="https://mitrends.citizenscience.ch"
-                        colorGradientStart="#fc5c4a"
-                        colorGradientEnd="#7284cd"
                 ></project-teaser>
               </div>
             </div>

@@ -30,6 +30,11 @@
     "project-snake-button": "Take a look",
     "project-snake-sign": "Coming soon",
 
+    "project-mitrends-title": "MitrendS Study",
+    "project-mitrends-topic": "Health",
+    "project-mitrends-description": "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
+    "project-mitrends-button": "Take part",
+
     "section-projects-button": "See all Projects",
 
 
@@ -82,6 +87,11 @@
     "project-snake-description": "Der Herbst ist da! Nutzt das kühlere Wetter, um eure Identifikationsfähigkeiten in der zweiten Phase der SnakeID-Challenge zu testen und zu verfeinern.",
     "project-snake-button": "Ansehen",
     "project-snake-sign": "Beginnt bald",
+
+    "project-mitrends-title": "MITRENDS STUDIE",
+    "project-mitrends-topic": "Health",
+    "project-mitrends-description": "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verkauf der Krankheit und die Symptome von MS zu erlangen.",
+    "project-mitrends-button": "Take part",
 
     "section-projects-button": "Alle Projekte",
 
@@ -140,6 +150,22 @@
         </div>
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
+
+             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+              <div>
+                <project-teaser
+                        :projectTitle="$t('project-mitrends-title')"
+                        :projectTopic="$t('project-mitrends-topic')"
+                        :projectDescription="$t('project-mitrends-description')"
+                        :buttonText="$t('project-mitrends-button')"
+                        projectBgImage="/img/projects/mitrends.jpg"
+                        projectImage="/img/projects/mitrends-graphic.png"
+                        url="https://mitrends.citizenscience.ch"
+                        colorGradientStart="#fc5c4a"
+                        colorGradientEnd="#7284cd"
+                ></project-teaser>
+              </div>
+            </div>
 
             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>

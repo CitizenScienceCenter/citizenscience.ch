@@ -90,8 +90,8 @@
 
     "project-mitrends-title": "MITRENDS STUDIE",
     "project-mitrends-topic": "Health",
-    "project-mitrends-description": "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verkauf der Krankheit und die Symptome von MS zu erlangen.",
-    "project-mitrends-button": "Take part",
+    "project-mitrends-description": "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome von MS zu erlangen.",
+    "project-mitrends-button": "Mitmachen",
 
     "section-projects-button": "Alle Projekte",
 

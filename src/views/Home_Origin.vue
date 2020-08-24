@@ -121,10 +121,13 @@
 
 <template>
   <div>
-    <!-- Cover component -->
-    <head-cover></head-cover>
 
-    <!-- <app-content-section color="light-greyish" class="content-section-condensed">
+
+    <news-cover></news-cover>
+
+
+    <!--
+    <app-content-section color="light-greyish" class="content-section-condensed">
       <div class="content-wrapper">
           <div class="row row-centered row-wrapping">
 
@@ -134,106 +137,96 @@
 
           </div>
       </div>
-    </app-content-section> -->
+    </app-content-section>
+    -->
 
-    <!-- Project cards -->
+
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered" id="projects">
-              {{ $t("section-projects-heading") }}
-            </h2>
+            <h2 class="heading centered" id="projects">{{ $t('section-projects-heading') }}</h2>
           </div>
         </div>
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
+
+             <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
-                  :projectTitle="$t('project-mitrends-title')"
-                  :projectTopic="$t('project-mitrends-topic')"
-                  :projectDescription="$t('project-mitrends-description')"
-                  :buttonText="$t('project-mitrends-button')"
-                  projectBgImage="/img/projects/mitrends.jpg"
-                  projectImage="/img/projects/mitrends-graphic.png"
-                  url="https://mitrends.citizenscience.ch"
-                  colorGradientStart="#fc5c4a"
-                  colorGradientEnd="#7284cd"
+                        :projectTitle="$t('project-mitrends-title')"
+                        :projectTopic="$t('project-mitrends-topic')"
+                        :projectDescription="$t('project-mitrends-description')"
+                        :buttonText="$t('project-mitrends-button')"
+                        projectBgImage="/img/projects/mitrends.jpg"
+                        projectImage="/img/projects/mitrends-graphic.png"
+                        url="https://mitrends.citizenscience.ch"
+                        colorGradientStart="#fc5c4a"
+                        colorGradientEnd="#7284cd"
                 ></project-teaser>
               </div>
             </div>
 
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
-                  projectTitle="PROJECT BUILDER"
-                  projectTopic="Citizen Science"
-                  :projectDescription="$t('builder-lead')"
-                  :buttonText="$t('builder-button')"
-                  projectBgImage="/img/projects/project-builder-launch.jpg"
-                  projectImage="/img/projects/pb-launch.png"
-                  :url="$t('builder-path')"
-                  colorGradientStart="#6e4f9e"
-                  colorGradientEnd="#478161"
+                        projectTitle="PROJECT BUILDER"
+                        projectTopic="Citizen Science"
+                        :projectDescription="$t('builder-lead')"
+                        :buttonText="$t('builder-button')"
+                        projectBgImage="/img/projects/project-builder-launch.jpg"
+                        projectImage="/img/projects/pb-launch.png"
+                        :url="$t('builder-path')"
+                        colorGradientStart="#6e4f9e"
+                        colorGradientEnd="#478161"
                 ></project-teaser>
               </div>
             </div>
 
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
-                  :projectTitle="$t('project-snake-title')"
-                  :projectTopic="$t('project-snake-topic')"
-                  :projectDescription="$t('project-snake-description')"
-                  :buttonText="$t('project-snake-button')"
-                  projectBgImage="/img/projects/snakechallenge.jpg"
-                  projectImage="/img/projects/snakechallenge-intro.png"
-                  url="https://snakes.citizenscience.ch"
-                  colorGradientStart="#A35026"
-                  colorGradientEnd="#448D7D"
+                        :projectTitle="$t('project-snake-title')"
+                        :projectTopic="$t('project-snake-topic')"
+                        :projectDescription="$t('project-snake-description')"
+                        :buttonText="$t('project-snake-button')"
+                        projectBgImage="/img/projects/snakechallenge.jpg"
+                        projectImage="/img/projects/snakechallenge-intro.png"
+                        url="https://snakes.citizenscience.ch"
+                        colorGradientStart="#A35026"
+                        colorGradientEnd="#448D7D"
                 ></project-teaser>
               </div>
             </div>
 
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
-                  :projectTitle="$t('project-wiesel-title')"
-                  :projectTopic="$t('project-wiesel-topic')"
-                  :projectDescription="$t('project-wiesel-description')"
-                  :buttonText="$t('project-wiesel-button')"
-                  projectBgImage="/img/projects/wiesel.jpg"
-                  projectImage="/img/projects/wiesel-intro.png"
-                  url="https://wiesel-gesucht.citizenscience.ch"
-                  colorGradientStart="#99695c"
-                  colorGradientEnd="#3f6fa0"
+                        :projectTitle="$t('project-wiesel-title')"
+                        :projectTopic="$t('project-wiesel-topic')"
+                        :projectDescription="$t('project-wiesel-description')"
+                        :buttonText="$t('project-wiesel-button')"
+                        projectBgImage="/img/projects/wiesel.jpg"
+                        projectImage="/img/projects/wiesel-intro.png"
+                        url="https://wiesel-gesucht.citizenscience.ch"
+                        colorGradientStart="#99695c"
+                        colorGradientEnd="#3f6fa0"
                 ></project-teaser>
               </div>
             </div>
 
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
+            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
               <div>
                 <project-teaser
-                  :projectTitle="$t('project-wenker-title')"
-                  :projectTopic="$t('project-wenker-topic')"
-                  :projectDescription="$t('project-wenker-description')"
-                  :buttonText="$t('project-wenker-button')"
-                  projectBgImage="/img/projects/wenker.jpg"
-                  projectImage="/img/projects/wenker-intro.png"
-                  url="https://wenker.citizenscience.ch"
-                  colorGradientStart="#3e6189"
-                  colorGradientEnd="#766b51"
+                        :projectTitle="$t('project-wenker-title')"
+                        :projectTopic="$t('project-wenker-topic')"
+                        :projectDescription="$t('project-wenker-description')"
+                        :buttonText="$t('project-wenker-button')"
+                        projectBgImage="/img/projects/wenker.jpg"
+                        projectImage="/img/projects/wenker-intro.png"
+                        url="https://wenker.citizenscience.ch"
+                        colorGradientStart="#3e6189"
+                        colorGradientEnd="#766b51"
                 ></project-teaser>
               </div>
             </div>
@@ -257,121 +250,95 @@
             </div>
             -->
 
-            <div
-              class="col col-wrapping col-large-6 col-wrapping scroll-effect"
-            >
+            <div class="col col-wrapping col-large-6 col-wrapping scroll-effect">
               <div class="button-group centered">
-                <router-link
-                  tag="button"
-                  to="/contribute/projects"
-                  class="button button-secondary"
-                  >{{ $t("section-projects-button") }}</router-link
-                >
+                <router-link tag="button" to="/contribute/projects" class="button button-secondary">{{ $t('section-projects-button') }}</router-link>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </app-content-section>
 
-    <!-- Our next Event -->
+
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 col-xlarge-8">
-            <h2 class="heading centered scroll-effect">
-              {{ $t("section-events-heading") }}
-            </h2>
+
+            <h2 class="heading centered scroll-effect">{{ $t('section-events-heading') }}</h2>
 
             <div class="margin-bottom">
               <event-list :limit="1"></event-list>
             </div>
 
+
             <div class="button-group centered">
-              <router-link
-                tag="button"
-                to="/events"
-                class="button button-secondary scroll-effect"
-                >{{ $t("section-events-button") }}</router-link
-              >
+              <router-link tag="button" to="/events" class="button button-secondary scroll-effect">{{ $t('section-events-button') }}</router-link>
             </div>
+
           </div>
         </div>
       </div>
     </app-content-section>
 
-    <!-- Do you have a project in mind? -->
+
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered row-middle">
-          <div
-            class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect"
-          >
+
+          <div class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect">
             <div class="extra-padding-h">
               <img src="/img/graphic-question.png" />
             </div>
           </div>
 
-          <div
-            class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1"
-          >
+          <div class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
             <div>
-              <h2
-                class="heading centered left-aligned-large"
-                id="start-project"
-              >
-                {{ $t("section-build-project-heading") }}
-              </h2>
+              <h2 class="heading centered left-aligned-large" id="start-project">{{ $t('section-build-project-heading') }}</h2>
               <p class="">
-                {{ $t("section-build-project-text") }}
+                {{ $t('section-build-project-text') }}
               </p>
 
               <p class="centered left-aligned-large">
-                <router-link
-                  tag="button"
-                  to="/start"
-                  class="button button-secondary"
-                  >{{ $t("section-build-project-button") }}</router-link
-                >
+                <router-link tag="button" to="/start" class="button button-secondary">{{ $t('section-build-project-button') }}</router-link>
               </p>
             </div>
           </div>
+
         </div>
+
       </div>
     </app-content-section>
 
-    <!-- Citizen Science «Zurich Style» -->
+
+
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered row-middle row-reverse-large">
+
           <div class="col col-10 col-large-6 col-wrapping">
             <div>
               <div class="extra-padding-large-h">
-                <img src="/img/graphic-citizen-science.png" />
+                <img src="/img/graphic-citizen-science.png"/>
               </div>
             </div>
           </div>
 
-          <div
-            class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin"
-          >
+          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin">
             <div>
-              <h2 class="heading centered left-aligned-large">
-                {{ $t("section-explanation-heading") }}
-              </h2>
+              <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
               <!-- <p class="lead" v-html="$t('section-explanation-lead')"></p> -->
               <p v-html="$t('section-explanation-text')"></p>
               <p class="centered left-aligned-large">
-                <router-link
-                  tag="button"
-                  to="/citizenscience"
-                  class="button button-secondary"
-                  >{{ $t("section-explanation-button") }}</router-link
-                >
+                <router-link tag="button" to="/citizenscience" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
               </p>
             </div>
           </div>
+
         </div>
+
       </div>
     </app-content-section>
 
@@ -405,132 +372,118 @@
     </app-content-section>
     -->
 
-    <!-- A Joint Initiative -->
+
     <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-reverse-large">
-          <div
-            class="col col-tablet-portrait-7 col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect"
-          >
-            <h2 class="heading centered left-aligned-large">
-              {{ $t("section-about-heading") }}
-            </h2>
-            <p>{{ $t("section-about-text") }}</p>
+          <div class="col col-tablet-portrait-7 col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect">
+            <h2 class="heading centered left-aligned-large">{{ $t('section-about-heading') }}</h2>
+            <p>{{ $t('section-about-text') }}</p>
             <p>
-              {{ $t("section-about-text-2") }}<br />
-              {{ $t("section-about-text-3") }}
+              {{ $t('section-about-text-2') }}<br/>
+              {{ $t('section-about-text-3') }}
             </p>
             <p class="centered left-aligned-large">
-              <img
-                v-if="this.$i18n.locale === 'en'"
-                class="uzh-eth-logo"
-                alt="University of Zurich / ETH Zurich"
-                src="@/assets/shared/uzh_eth_logo_e_pos.svg"
-              />
-              <img
-                v-else
-                alt="Universität Zürich / ETH Zürich"
-                class="uzh-eth-logo"
-                src="@/assets/shared/uzh_eth_logo_d_pos.svg"
-              />
+              <img v-if="this.$i18n.locale === 'en'" class="uzh-eth-logo" alt="University of Zurich / ETH Zurich" src="@/assets/shared/uzh_eth_logo_e_pos.svg" />
+              <img v-else alt="Universität Zürich / ETH Zürich" class="uzh-eth-logo" src="@/assets/shared/uzh_eth_logo_d_pos.svg" />
             </p>
             <p class="centered left-aligned-large extra-margin-top">
-              <router-link
-                tag="button"
-                to="/about"
-                class="button button-secondary"
-                >{{ $t("section-about-button") }}</router-link
-              >
+              <router-link tag="button" to="/about" class="button button-secondary">{{ $t('section-about-button') }}</router-link>
             </p>
           </div>
+
         </div>
       </div>
-      <div
-        class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1"
-      >
+      <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered">
-            <div
-              class="col col-tablet-portrait-10 col-large-7 col-large-after-1"
-            >
-              <img src="/img/uzh-eth.jpg" style="border-radius: 50%;" />
+            <div class="col col-tablet-portrait-10 col-large-7 col-large-after-1">
+              <img src="/img/uzh-eth.jpg" style="border-radius:50%"/>
             </div>
           </div>
         </div>
       </div>
     </app-content-section>
 
-    <!-- Sign up for our Newsletter -->
+
     <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
+
   </div>
 </template>
 
 <script>
-import Cover from "@/components/shared/Cover.vue";
-import ContentSection from "@/components/shared/ContentSection.vue";
-import Footer from "@/components/shared/Footer.vue";
-import ProjectTeaser from "@/components/ProjectTeaser";
-import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
+
+import Cover from '@/components/shared/Cover.vue'
+import ContentSection from '@/components/shared/ContentSection.vue'
+import Footer from '@/components/shared/Footer.vue'
+import ProjectTeaser from '@/components/ProjectTeaser';
+import SectionNewsletterSignup from '../components/shared/SectionNewsletterSignup';
 import EventTeaser from "../components/EventTeaser";
 import EventList from "../components/EventList";
-import HeadCover from "../components/HeadCover";
+import NewsCover from "../components/NewsCover";
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    HeadCover,
-    EventList,
-    EventTeaser,
-    SectionNewsletterSignup,
-    ProjectTeaser,
-    "app-cover": Cover,
-    "app-content-section": ContentSection,
-    "app-footer": Footer,
+    NewsCover,
+      EventList,
+      EventTeaser,
+      SectionNewsletterSignup,
+      ProjectTeaser,
+    'app-cover': Cover,
+    'app-content-section': ContentSection,
+    'app-footer': Footer
   },
-  props: {
-    platform: {
-      type: Boolean,
-      default: false,
+    props: {
+      platform: {
+          type: Boolean,
+          default: false
+      }
     },
+  metaInfo: function() {
+      return {
+        title: this.$t('page-title'),
+        titleTemplate: null,
+        meta: [
+            {
+                property: 'og:title',
+                content: this.$t('page-title')
+            }
+        ]
+      }
   },
-  metaInfo: function () {
-    return {
-      title: this.$t("page-title"),
-      titleTemplate: null,
-      meta: [
-        {
-          property: "og:title",
-          content: this.$t("page-title"),
-        },
-      ],
-    };
-  },
-  methods: {
-    openInNewTab: function (url) {
-      var win = window.open(url, "_blank");
-      win.focus();
-    },
-  },
-};
+    methods: {
+        openInNewTab: function(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+    }
+}
+
 </script>
 
 <style lang="scss">
-@import "@/styles/theme.scss";
-@import "@/styles/shared/variables.scss";
 
-.content-section {
-  .uzh-eth-logo {
-    width: 75%;
-  }
-}
 
-@media only screen and (min-width: $viewport-large) {
-  .content-section {
-    .uzh-eth-logo {
-      width: 66.667%;
+    @import '@/styles/theme.scss';
+    @import '@/styles/shared/variables.scss';
+
+    .content-section {
+        .uzh-eth-logo {
+            width: 75%;
+        }
     }
-  }
-}
+
+    @media only screen and (min-width: $viewport-large) {
+
+        .content-section {
+            .uzh-eth-logo {
+                width: 66.667%;
+            }
+        }
+
+    }
+
 </style>

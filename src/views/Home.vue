@@ -122,7 +122,42 @@
 <template>
   <div>
     <!-- Cover component -->
-    <head-cover :coverInfo="coverInfo"></head-cover>
+    <app-cover :coverInfo="coverInfo"></app-cover>
+
+    <app-content-section class="no-padding">
+      <div class="row row-centered">
+        <div
+          class="col col-xlarge-8 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
+        >
+          <div class="row padding-h" style="background: red;">
+            <h3>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </h3>
+          </div>
+          <div class="row padding-h" style="background: blue;">
+            <h3>Container for News.vue</h3>
+          </div>
+          <div class="row padding-h" style="background: green;">
+            <h3>Container for StaticGenericContent.vue</h3>
+          </div>
+        </div>
+        <div
+          class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
+          style="background: yellow;"
+        >
+          <div class="row padding-h"><h3>Container</h3></div>
+        </div>
+      </div>
+    </app-content-section>
 
     <!-- Project cards -->
     <app-content-section>
@@ -456,7 +491,6 @@
 </template>
 
 <script>
-import Cover from "@/components/shared/Cover.vue";
 import ContentSection from "@/components/shared/ContentSection.vue";
 import Footer from "@/components/shared/Footer.vue";
 import ProjectTeaser from "@/components/ProjectTeaser";
@@ -473,12 +507,11 @@ export default {
     };
   },
   components: {
-    HeadCover,
     EventList,
     EventTeaser,
     SectionNewsletterSignup,
     ProjectTeaser,
-    "app-cover": Cover,
+    "app-cover": HeadCover,
     "app-content-section": ContentSection,
     "app-footer": Footer,
   },
@@ -542,16 +575,15 @@ export default {
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
 
-.content-section {
-  .uzh-eth-logo {
-    width: 75%;
+.row {
+  &.padding-h {
+    padding: 0 $spacing-1;
   }
 }
-
-@media only screen and (min-width: $viewport-large) {
-  .content-section {
-    .uzh-eth-logo {
-      width: 66.667%;
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .row {
+    &.padding-h {
+      padding: 0 $spacing-2;
     }
   }
 }

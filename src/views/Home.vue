@@ -122,19 +122,7 @@
 <template>
   <div>
     <!-- Cover component -->
-    <head-cover></head-cover>
-
-    <!-- <app-content-section color="light-greyish" class="content-section-condensed">
-      <div class="content-wrapper">
-          <div class="row row-centered row-wrapping">
-
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
-              <event-teaser></event-teaser>
-            </div>
-
-          </div>
-      </div>
-    </app-content-section> -->
+    <head-cover :coverInfo="coverInfo"></head-cover>
 
     <!-- Project cards -->
     <app-content-section>
@@ -479,6 +467,11 @@ import HeadCover from "../components/HeadCover";
 
 export default {
   name: "Home",
+  data() {
+    return {
+      coverInfo: {},
+    };
+  },
   components: {
     HeadCover,
     EventList,
@@ -512,6 +505,35 @@ export default {
       var win = window.open(url, "_blank");
       win.focus();
     },
+    setCoverInfo: function () {
+      // TODO: This information will be replaced by database retrieved data
+      this.coverInfo = {
+        heading: {
+          content: {
+            en: "Next Generation Citizen Science",
+            de: "Citizen Science der nächsten Generation",
+          },
+          config: { disabled: false, visible: true },
+        },
+        subheading: {
+          content: {
+            en: "Citizen Science Center Zurich",
+            de: "Citizen Science Center Zürich",
+          },
+          config: { disabled: false, visible: true },
+        },
+        img_background: "https://citizenscience.ch/img/uzh-eth.jpg",
+        uzh_eth_logo: { disabled: false, visible: true },
+        sdg_logo: { disabled: false, visible: true },
+        extra_logos: {
+          logo_right: "https://citizenscience.ch/img/uzh-eth.jpg",
+          logo_left: "https://citizenscience.ch/img/uzh-eth.jpg",
+        },
+      };
+    },
+  },
+  created() {
+    this.setCoverInfo();
   },
 };
 </script>

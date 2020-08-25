@@ -1,29 +1,32 @@
 <i18n>
   {
   "en": {
-    "cover-heading": "Next Generation Citizen Science",
-    "cover-subheading": "Citizen Science Center Zurich",
     "cover-button-projects": "Start contributing",
-    "cover-button-your-project": "Suggest a project"
+    "cover-button-your-project": "Suggest a project",
+    "joint-initiative-UZH_ETH": "A joint initiative by"
   },
   "de": {
-    "cover-heading": "Citizen Science der nächsten Generation",
-    "cover-subheading": "Citizen Science Center Zürich",
     "cover-button-projects": "Jetzt mitforschen",
-    "cover-button-your-project": "Neue Projektidee?"
+    "cover-button-your-project": "Neue Projektidee?",
+    "joint-initiative-UZH_ETH": "Ein gemeinsamer Effort von"
   }
   }
 </i18n>
 <template>
-  <section class="cover" :style="{ 'background-image': 'url('+backgroundImage+')' }">
+  <section
+    class="cover"
+    :style="{ 'background-image': 'url(' + backgroundImage + ')' }"
+  >
     <div class="content-wrapper">
       <div class="row">
         <div class="col">
-          <h2 class="cover-heading scroll-effect">{{ $t("cover-heading") }}</h2>
+          <h2 class="cover-heading scroll-effect">
+            {{ localTranslation(heading.content) }}
+          </h2>
           <p class="cover-subheading scroll-effect scroll-effect-delayed-1">
-            {{ $t("cover-subheading") }}
+            {{ localTranslation(subheading.content) }}
           </p>
-          <p
+          <!-- <p
             class="button-group centered scroll-effect scroll-effect-delayed-2"
           >
             <router-link
@@ -38,40 +41,56 @@
               class="button button-secondary button-secondary-inverted"
               >{{ $t("cover-button-your-project") }}</router-link
             >
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
 
-    <div class="uzh-eth">
-      <span v-if="this.$i18n.locale === 'en'">A joint initiative by</span>
-      <span v-else>Ein gemeinsamer Effort von</span>
+    <!-- UZH and ETH logos -->
+    <div class="uzh-eth" v-if="uzh_eth_logo.visible">
+      <span>{{ $t("joint-initiative-UZH_ETH") }}</span>
       <img
         v-if="this.$i18n.locale === 'en'"
         alt="University of Zurich / ETH Zurich"
         src="@/assets/shared/uzh_eth_logo_e_neg.svg"
         @click="logoClick($event)"
+        :class="{ disabled: uzh_eth_logo.disabled }"
       />
       <img
         v-else
         alt="Universität Zürich / ETH Zürich"
         src="@/assets/shared/uzh_eth_logo_d_neg.svg"
         @click="logoClick($event)"
+        :class="{ disabled: uzh_eth_logo.disabled }"
       />
     </div>
 
-    <div class="bottom-right-logo" v-scroll-to="'#sdg'">
+    <!-- Goal logos -->
+    <div class="bottom-right-logo" v-scroll-to="'#sdg'" v-if="sdg_logo.visible">
       <img v-if="goal" class="goal" :src="goalImage" />
-      <img src="@/assets/shared/sdg-logo-white.svg" />
+      <img
+        id="sdg_logo"
+        src="@/assets/shared/sdg-logo-white.svg"
+        @click="openInNewTab('https://sdgs.un.org/goals', sdg_logo.disabled)"
+        :class="{ disabled: sdg_logo.disabled }"
+      />
     </div>
 
+    <!-- Extra top right logos -->
     <div
       class="top-right-logo"
-      v-if="logoUrl"
-      :class="{ mitrends: logosMitrends }"
+      v-if="coverInfo.extra_logos"
+      :class="{ mitrends: false }"
     >
-      <img :src="logoUrl" />
-      <img v-if="logo2Url" :src="logo2Url" />
+      <img
+        v-if="coverInfo.extra_logos.logo_right"
+        :src="coverInfo.extra_logos.logo_right"
+      />
+      <img
+        class="left"
+        v-if="coverInfo.extra_logos.logo_left"
+        :src="coverInfo.extra_logos.logo_left"
+      />
     </div>
 
     <div class="cover-overlay"></div>
@@ -81,10 +100,16 @@
 <script>
 export default {
   name: "Cover",
+  data() {
+    return {
+      sdg_logo: { visible: true, disabled: false },
+      uzh_eth_logo: { visible: true, disabled: false },
+      heading: { content: {}, config: { visible: false, disabled: false } },
+      subheading: { content: {}, config: { visible: false, disabled: false } },
+    };
+  },
   props: {
-    imageUrl: String,
-    logoUrl: String,
-    logo2Url: String,
+    coverInfo: Object,
     logosMitrends: Boolean,
     goal: String,
   },
@@ -93,18 +118,21 @@ export default {
       return require("@/assets/shared/sdgs/neg/" + this.goal + ".svg");
     },
     backgroundImage() {
-      const img = this.imageUrl
-        ? this.imageUrl
-        : "/img/cover.jpg";
+      const img = this.coverInfo.img_background || "/img/cover.jpg";
       return img;
-    }
+    },
   },
   methods: {
-    openInNewTab: function (url) {
+    openInNewTab: function(url, disabled = false) {
+      if (disabled) {
+        return;
+      }
       var win = window.open(url, "_blank");
       win.focus();
     },
-    logoClick: function (e) {
+    logoClick: function(e) {
+      // Validate first if logo is disabled
+      if (this.coverInfo.uzh_eth_logo.config.disabled) return;
       var rect = e.target.getBoundingClientRect();
       var x = e.clientX - rect.left;
       var width = rect.width;
@@ -114,10 +142,24 @@ export default {
         this.openInNewTab("https://www.ethz.ch");
       }
     },
+    localTranslation(textContent) {
+      // Recieves the text content in multiple languages and return the selected
+      const lang = this.$i18n.locale;
+      return textContent[lang] || textContent.en;
+    },
+    setCoverInfo() {
+      this.sdg_logo = this.coverInfo.sdg_logo || this.sdg_logo;
+      this.uzh_eth_logo = this.coverInfo.uzh_eth_logo || this.uzh_eth_logo;
+      this.heading = this.coverInfo.heading || this.heading;
+      this.subheading = this.coverInfo.subheading || this.subheading;
+    },
   },
-  mounted: function () {
+  created() {
+    this.setCoverInfo();
+  },
+  mounted: function() {
     let matches = this.$el.querySelectorAll(".scroll-effect");
-    window.setTimeout(function () {
+    window.setTimeout(function() {
       for (let i = 0; i < matches.length; i++) {
         matches[i].classList.add("scrolled");
       }
@@ -167,7 +209,7 @@ export default {
   .uzh-eth {
     display: block;
     position: absolute;
-    bottom: $spacing-1;
+    bottom: $spacing-2;
     left: $spacing-1;
     z-index: 1;
 
@@ -182,13 +224,16 @@ export default {
       display: block;
       height: 20px;
       cursor: pointer;
+      &.disabled {
+        cursor: default;
+      }
     }
   }
 
   .bottom-right-logo {
     height: 20px;
     position: absolute;
-    bottom: $spacing-1;
+    bottom: $spacing-2;
     right: $spacing-1;
     z-index: 1;
     cursor: pointer;
@@ -197,6 +242,9 @@ export default {
       height: 100%;
       &.goal {
         margin-right: $spacing-1;
+      }
+      &.disabled {
+        cursor: default;
       }
     }
   }
@@ -210,17 +258,16 @@ export default {
     justify-content: flex-end;
 
     img {
-      max-height: 48px;
-      max-width: 72px;
-
-      &:nth-child(2) {
-        margin-left: $spacing-1;
+      max-height: 38px;
+      max-width: 60px;
+      &.left {
+        display: none;
       }
     }
 
     &.mitrends {
       img {
-        max-height: 56px;
+        max-height: 46px;
         max-width: none;
       }
     }
@@ -231,7 +278,7 @@ export default {
     z-index: 1;
     width: 100%;
 
-    padding-bottom: $spacing-4;
+    padding-bottom: $spacing-2;
 
     .cover-heading {
       font-size: $font-size-medium;
@@ -277,7 +324,7 @@ export default {
     .top-right-logo {
       &.mitrends {
         img {
-          max-height: 64px;
+          max-height: 54px;
           max-width: none;
         }
       }
@@ -306,7 +353,7 @@ export default {
       img {
         height: 22px;
       }
-      span{
+      span {
         font-size: $font-size-mini;
       }
     }
@@ -317,17 +364,19 @@ export default {
     }
     .top-right-logo {
       img {
-        max-height: 64px;
-        max-width: 80px;
-
+        max-height: 40px;
+        max-width: 60px;
+        &.left {
+          display: flex;
+        }
         &:nth-child(2) {
-          margin-left: $spacing-2;
+          margin-left: $spacing-1;
         }
       }
 
       &.mitrends {
         img {
-          max-height: 80px;
+          max-height: 70px;
           max-width: none;
         }
       }
@@ -355,7 +404,7 @@ export default {
       img {
         height: 28px;
       }
-      span{
+      span {
         font-size: $font-size-mini;
       }
     }
@@ -365,17 +414,17 @@ export default {
       right: $spacing-2;
     }
     .top-right-logo {
-      top: $spacing-2;
-      right: $spacing-2;
+      top: $spacing-1;
+      right: $spacing-1;
 
       img {
-        max-height: 72px;
-        max-width: 104px;
+        max-height: 62px;
+        max-width: 84px;
       }
 
       &.mitrends {
         img {
-          max-height: 88px;
+          max-height: 78px;
           max-width: none;
         }
       }
@@ -400,7 +449,7 @@ export default {
     .top-right-logo {
       &.mitrends {
         img {
-          max-height: 104px;
+          max-height: 100px;
           max-width: none;
         }
       }

@@ -20,10 +20,13 @@
     <div class="content-wrapper">
       <div class="row">
         <div class="col">
-          <h2 class="cover-heading scroll-effect">
+          <h2 class="cover-heading scroll-effect" v-if="heading.config.visible">
             {{ localTranslation(heading.content) }}
           </h2>
-          <p class="cover-subheading scroll-effect scroll-effect-delayed-1">
+          <p
+            class="cover-subheading scroll-effect scroll-effect-delayed-1"
+            v-if="subheading.config.visible"
+          >
             {{ localTranslation(subheading.content) }}
           </p>
           <!-- <p
@@ -104,8 +107,8 @@ export default {
     return {
       sdg_logo: { visible: true, disabled: false },
       uzh_eth_logo: { visible: true, disabled: false },
-      heading: { content: {}, config: { visible: false, disabled: false } },
-      subheading: { content: {}, config: { visible: false, disabled: false } },
+      heading: { content: {}, config: { visible: false } },
+      subheading: { content: {}, config: { visible: false } },
     };
   },
   props: {
@@ -429,15 +432,6 @@ export default {
         }
       }
     }
-
-    .content-wrapper {
-      .cover-heading {
-        font-size: $font-size-xlarge;
-      }
-      .cover-subheading {
-        font-size: $font-size-medium;
-      }
-    }
   }
 }
 
@@ -457,11 +451,44 @@ export default {
 
     .content-wrapper {
       .cover-heading {
-        font-size: $font-size-xlarge;
+        font-size: $font-size-xxlarge;
       }
       .cover-subheading {
-        font-size: $font-size-medium;
+        font-size: $font-size-large;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: $viewport-xxlarge) {
+  .cover {
+    .top-right-logo {
+      &.mitrends {
+        img {
+          max-height: 120px;
+          max-width: none;
+        }
+      }
+    }
+
+    .content-wrapper {
+      .cover-heading {
+        font-size: $font-size-xxxlarge;
+      }
+      .cover-subheading {
+        font-size: $font-size-xlarge;
+      }
+    }
+    .uzh-eth {
+      img {
+        height: 38px;
+      }
+      span {
+        font-size: $font-size-small;
+      }
+    }
+    .bottom-right-logo {
+      height: 48px;
     }
   }
 }

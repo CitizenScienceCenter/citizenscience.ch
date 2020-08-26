@@ -2,8 +2,6 @@
 {
   "en": {
     "page-title": "Citizen Science Center Zurich",
-
-    "section-projects-heading": "Get involved",
     "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
     "section-events-heading": "Our Next Event",
@@ -35,8 +33,6 @@
     "project-mitrends-description": "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
     "project-mitrends-button": "Take part",
 
-    "section-projects-button": "See all Projects",
-
 
     "section-build-project-heading": "Do you have a project in mind? We can help you.",
     "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
@@ -60,8 +56,6 @@
   },
   "de": {
     "page-title": "Citizen Science Center Zürich",
-
-    "section-projects-heading": "Machen Sie mit",
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
 
     "section-events-heading": "Unser nächster Event",
@@ -93,8 +87,6 @@
     "project-mitrends-description": "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome von MS zu erlangen.",
     "project-mitrends-button": "Mitmachen",
 
-    "section-projects-button": "Alle Projekte",
-
 
     "section-build-project-heading": "Haben Sie eine Projekt-Idee? Wir helfen Ihnen!",
     "section-build-project-text": "Wir sind jederzeit offen für Austausch und Gespräch. Gerne überlegen wir mit Ihnen gemeinsam, wie man die Welt mit Citizen Science ein kleines Stück besser machen könnte. Treten Sie mit uns in Kontakt, wenn Sie eine Projektidee haben. Wir können Ihnen bei der Weiterentwicklung der Idee helfen und Ihnen bei positiver Evaluation unsere Tools und Expertise zur Verfügung stellen, um das Projekt realisieren.",
@@ -124,12 +116,28 @@
     <!-- Cover component -->
     <app-cover :coverInfo="coverInfo"></app-cover>
 
+    <!-- Content Section -->
     <app-content-section class="no-padding">
       <div class="row row-centered">
         <div
           class="col col-xlarge-8 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
         >
-          <div class="row padding-h" style="background: red;">
+          <!-- Project Cards component -->
+          <project-cards :projects="projects"></project-cards>
+
+          <div class="row ph-mv" style="background: blue;">
+            <h3>Container for News.vue</h3>
+          </div>
+          <div class="row ph-mv" style="background: green;">
+            <h3>Container for StaticGenericContent.vue</h3>
+          </div>
+        </div>
+        <div
+          class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
+          style="background: yellow;"
+        >
+          <div class="row row-end ph-mv">
+            <h2>StaticGenericContent.vue</h2>
             <h3>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -143,159 +151,116 @@
               dolor sit amet.
             </h3>
           </div>
-          <div class="row padding-h" style="background: blue;">
-            <h3>Container for News.vue</h3>
-          </div>
-          <div class="row padding-h" style="background: green;">
-            <h3>Container for StaticGenericContent.vue</h3>
-          </div>
-        </div>
-        <div
-          class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
-          style="background: yellow;"
-        >
-          <div class="row padding-h"><h3>Container</h3></div>
         </div>
       </div>
     </app-content-section>
 
     <!-- Project cards -->
-    <app-content-section>
-      <div class="content-wrapper">
+    <!-- <app-content-section>
+      <div>
         <div class="row row-centered">
-          <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered" id="projects">
+          <div class="col col-12 scroll-effect">
+            <h2 class="heading small">
               {{ $t("section-projects-heading") }}
             </h2>
           </div>
         </div>
-        <div class="scroll-effect">
-          <div class="row row-centered row-wrapping">
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :projectTitle="$t('project-mitrends-title')"
-                  :projectTopic="$t('project-mitrends-topic')"
-                  :projectDescription="$t('project-mitrends-description')"
-                  :buttonText="$t('project-mitrends-button')"
-                  projectBgImage="/img/projects/mitrends.jpg"
-                  projectImage="/img/projects/mitrends-graphic.png"
-                  url="https://mitrends.citizenscience.ch"
-                  colorGradientStart="#fc5c4a"
-                  colorGradientEnd="#7284cd"
-                ></project-teaser>
-              </div>
-            </div>
+        <div class="row row-centered row-wrapping scroll-effect">
+          <div
+            class="col col-wrapping col-mobile-large-6 col-large-4 scroll-effect"
+          >
+            <project-teaser
+              :projectTitle="$t('project-mitrends-title')"
+              :projectTopic="$t('project-mitrends-topic')"
+              :projectDescription="$t('project-mitrends-description')"
+              :buttonText="$t('project-mitrends-button')"
+              projectBgImage="/img/projects/mitrends.jpg"
+              projectImage="/img/projects/mitrends-graphic.png"
+              url="https://mitrends.citizenscience.ch"
+              colorGradientStart="#fc5c4a"
+              colorGradientEnd="#7284cd"
+            ></project-teaser>
+          </div>
 
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  projectTitle="PROJECT BUILDER"
-                  projectTopic="Citizen Science"
-                  :projectDescription="$t('builder-lead')"
-                  :buttonText="$t('builder-button')"
-                  projectBgImage="/img/projects/project-builder-launch.jpg"
-                  projectImage="/img/projects/pb-launch.png"
-                  :url="$t('builder-path')"
-                  colorGradientStart="#6e4f9e"
-                  colorGradientEnd="#478161"
-                ></project-teaser>
-              </div>
-            </div>
+          <div
+            class="col col-wrapping col-mobile-large-6 col-large-4 scroll-effect"
+          >
+            <project-teaser
+              projectTitle="PROJECT BUILDER"
+              projectTopic="Citizen Science"
+              :projectDescription="$t('builder-lead')"
+              :buttonText="$t('builder-button')"
+              projectBgImage="/img/projects/project-builder-launch.jpg"
+              projectImage="/img/projects/pb-launch.png"
+              :url="$t('builder-path')"
+              colorGradientStart="#6e4f9e"
+              colorGradientEnd="#478161"
+            ></project-teaser>
+          </div>
 
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :projectTitle="$t('project-snake-title')"
-                  :projectTopic="$t('project-snake-topic')"
-                  :projectDescription="$t('project-snake-description')"
-                  :buttonText="$t('project-snake-button')"
-                  projectBgImage="/img/projects/snakechallenge.jpg"
-                  projectImage="/img/projects/snakechallenge-intro.png"
-                  url="https://snakes.citizenscience.ch"
-                  colorGradientStart="#A35026"
-                  colorGradientEnd="#448D7D"
-                ></project-teaser>
-              </div>
-            </div>
+          <div
+            class="col col-wrapping col-mobile-large-6 col-large-4 scroll-effect"
+          >
+            <project-teaser
+              :projectTitle="$t('project-snake-title')"
+              :projectTopic="$t('project-snake-topic')"
+              :projectDescription="$t('project-snake-description')"
+              :buttonText="$t('project-snake-button')"
+              projectBgImage="/img/projects/snakechallenge.jpg"
+              projectImage="/img/projects/snakechallenge-intro.png"
+              url="https://snakes.citizenscience.ch"
+              colorGradientStart="#A35026"
+              colorGradientEnd="#448D7D"
+            ></project-teaser>
+          </div>
 
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :projectTitle="$t('project-wiesel-title')"
-                  :projectTopic="$t('project-wiesel-topic')"
-                  :projectDescription="$t('project-wiesel-description')"
-                  :buttonText="$t('project-wiesel-button')"
-                  projectBgImage="/img/projects/wiesel.jpg"
-                  projectImage="/img/projects/wiesel-intro.png"
-                  url="https://wiesel-gesucht.citizenscience.ch"
-                  colorGradientStart="#99695c"
-                  colorGradientEnd="#3f6fa0"
-                ></project-teaser>
-              </div>
+          <div
+            class="col col-wrapping col-mobile-large-6 col-large-8 col-xlarge-8 scroll-effect"
+          >
+            <div>
+              <project-teaser
+                :projectTitle="$t('project-wiesel-title')"
+                :projectTopic="$t('project-wiesel-topic')"
+                :projectDescription="$t('project-wiesel-description')"
+                :buttonText="$t('project-wiesel-button')"
+                projectBgImage="/img/projects/wiesel.jpg"
+                projectImage="/img/projects/wiesel-intro.png"
+                url="https://wiesel-gesucht.citizenscience.ch"
+                colorGradientStart="#99695c"
+                colorGradientEnd="#3f6fa0"
+              ></project-teaser>
             </div>
+          </div>
 
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :projectTitle="$t('project-wenker-title')"
-                  :projectTopic="$t('project-wenker-topic')"
-                  :projectDescription="$t('project-wenker-description')"
-                  :buttonText="$t('project-wenker-button')"
-                  projectBgImage="/img/projects/wenker.jpg"
-                  projectImage="/img/projects/wenker-intro.png"
-                  url="https://wenker.citizenscience.ch"
-                  colorGradientStart="#3e6189"
-                  colorGradientEnd="#766b51"
-                ></project-teaser>
-              </div>
+          <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+            <div>
+              <project-teaser
+                :projectTitle="$t('project-wenker-title')"
+                :projectTopic="$t('project-wenker-topic')"
+                :projectDescription="$t('project-wenker-description')"
+                :buttonText="$t('project-wenker-button')"
+                projectBgImage="/img/projects/wenker.jpg"
+                projectImage="/img/projects/wenker-intro.png"
+                url="https://wenker.citizenscience.ch"
+                colorGradientStart="#3e6189"
+                colorGradientEnd="#766b51"
+              ></project-teaser>
             </div>
+          </div>
 
-            <!--
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
-              <div>
-                <project-teaser
-                        :projectTitle="$t('project-hatespeech-title')"
-                        :projectTopic="$t('project-hatespeech-topic')"
-                        :projectDescription="$t('project-hatespeech-description')"
-                        :buttonText="$t('project-hatespeech-button')"
-                        projectBgImage="/img/projects/hatespeech.jpg"
-                        projectImage="/img/projects/hatespeech-intro.png"
-                        url="https://hatespeech.citizenscience.ch"
-                        colorGradientStart="#6e4f9e"
-                        colorGradientEnd="#478161"
-                        infoSign="Beta"
-                ></project-teaser>
-              </div>
-            </div>
-            -->
-
-            <div
-              class="col col-wrapping col-large-6 col-wrapping scroll-effect"
-            >
-              <div class="button-group centered">
-                <router-link
-                  tag="button"
-                  to="/contribute/projects"
-                  class="button button-secondary"
-                  >{{ $t("section-projects-button") }}</router-link
-                >
-              </div>
+          <div class="col col-wrapping col-large-6 col-wrapping scroll-effect">
+            <div class="button-group centered">
+              <router-link
+                tag="button"
+                to="/contribute/projects"
+                class="button button-secondary"
+                >{{ $t("section-projects-button") }}</router-link
+              >
             </div>
           </div>
         </div>
       </div>
-    </app-content-section>
+    </app-content-section> -->
 
     <!-- Our next Event -->
     <app-content-section color="light-greyish">
@@ -330,7 +295,7 @@
           <div
             class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect"
           >
-            <div class="extra-padding-h">
+            <div class="extra-ph-mv">
               <img src="/img/graphic-question.png" />
             </div>
           </div>
@@ -492,8 +457,8 @@
 
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
+import ProjectCards from "@/components/ProjectCards";
 import Footer from "@/components/shared/Footer.vue";
-import ProjectTeaser from "@/components/ProjectTeaser";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 import EventTeaser from "../components/EventTeaser";
 import EventList from "../components/EventList";
@@ -504,13 +469,14 @@ export default {
   data() {
     return {
       coverInfo: {},
+      projects:{}
     };
   },
   components: {
     EventList,
     EventTeaser,
     SectionNewsletterSignup,
-    ProjectTeaser,
+    ProjectCards,
     "app-cover": HeadCover,
     "app-content-section": ContentSection,
     "app-footer": Footer,
@@ -546,14 +512,14 @@ export default {
             en: "Next Generation Citizen Science",
             de: "Citizen Science der nächsten Generation",
           },
-          config: { disabled: false, visible: true },
+          config: { visible: true },
         },
         subheading: {
           content: {
             en: "Citizen Science Center Zurich",
             de: "Citizen Science Center Zürich",
           },
-          config: { disabled: false, visible: true },
+          config: { visible: true },
         },
         img_background: "https://citizenscience.ch/img/uzh-eth.jpg",
         uzh_eth_logo: { disabled: false, visible: true },
@@ -576,14 +542,23 @@ export default {
 @import "@/styles/shared/variables.scss";
 
 .row {
-  &.padding-h {
+  &.ph-mv {
     padding: 0 $spacing-1;
+    margin: $spacing-2 0;
   }
 }
-@media only screen and (min-width: $viewport-tablet-portrait) {
+@media only screen and (min-width: $viewport-large) {
   .row {
-    &.padding-h {
-      padding: 0 $spacing-2;
+    &.ph-mv {
+      padding: 0 $spacing-3;
+      margin: $spacing-3 0;
+    }
+  }
+}
+@media only screen and (min-width: $viewport-xxlarge) {
+  .row {
+    &.ph-mv {
+      padding: 0 $spacing-4;
     }
   }
 }

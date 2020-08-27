@@ -2,11 +2,13 @@
 {
   "en": {
     "section-projects-heading": "Get involved",
-    "section-projects-button": "See all Projects"
+    "section-projects-button": "See all Projects",
+    "new-project-button": "Create Project"
   },
   "de": {
     "section-projects-heading": "Machen Sie mit",
-    "section-projects-button": "Alle Projekte"}
+    "section-projects-button": "Alle Projekte",
+    "new-project-button": "Projekt erstellen"}
 }
 </i18n>
 <template>
@@ -18,7 +20,7 @@
         </h2>
       </div>
     </div>
-    <div class="row row-centered row-wrapping scroll-effect ">
+    <div class="row row-centered row-wrapping scroll-effect">
       <div
         class="col col-wrapping col-mobile-large-12 col-tablet-portrait-6 col-large-4 scroll-effect"
       >
@@ -67,14 +69,20 @@
         ></project-teaser>
       </div>
     </div>
-    <div class="col col-large-12 scroll-effect extra-margin-top centered">
+    <div class="col col-large-12 scroll-effect centered extra-margin-top-2">
       <div class="button-group centered">
         <router-link
           tag="button"
           to="/contribute/projects"
-          class="button button-secondary"
+          class="button button-primary"
           >{{ $t("section-projects-button") }}</router-link
         >
+        <button
+          @click="openUrl(`https://lab.citizenscience.ch/${$i18n.locale}`)"
+          class="button button-secondary"
+        >
+          {{ $t("new-project-button") }}
+        </button>
       </div>
     </div>
   </div>
@@ -86,6 +94,15 @@ export default {
   name: "ProjectCards",
   components: {
     ProjectTeaser,
+  },
+  methods: {
+    openUrl: function(url, disabled = false) {
+      if (disabled) {
+        return;
+      }
+      var win = window.open(url);
+      win.focus();
+    },
   },
 };
 </script>

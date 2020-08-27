@@ -470,25 +470,16 @@ export default {
         }
       }
     }
-
-    .content-wrapper {
-      .cover-heading {
-        font-size: $font-size-xxxlarge;
-      }
-      .cover-subheading {
-        font-size: $font-size-xlarge;
-      }
-    }
     .uzh-eth {
       img {
-        height: 38px;
+        height: 35px;
       }
       span {
         font-size: $font-size-small;
       }
     }
     .bottom-right-logo {
-      height: 48px;
+      height: 45px;
     }
   }
 }

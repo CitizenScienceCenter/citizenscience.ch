@@ -12,74 +12,46 @@
 }
 </i18n>
 <template>
-  <div class="row ph-mv">
+  <div class="row ph-mv" v-if="projectList && projectList.length != 0">
     <div class="row row-centered">
-      <div class="col col-large-12 scroll-effect">
+      <div class="col col-12 scroll-effect">
         <h2 class="heading small">
           {{ $t("section-projects-heading") }}
         </h2>
       </div>
     </div>
-    <div class="row row-centered row-wrapping scroll-effect">
+    <div class="row row-centered scroll-effect">
       <div
-        class="col col-wrapping col-mobile-large-12 col-tablet-portrait-6 col-large-4 scroll-effect"
+        class="col col-wrapping col-tablet-portrait-bottom-margin-2 col-mobile-large-12 scroll-effect"
+        :class="validateOrientation()"
+        v-for="p in getProjects"
+        :key="p.id"
       >
         <project-teaser
-          :projectTitle="$t('project-mitrends-title')"
-          :projectTopic="$t('project-mitrends-topic')"
-          :projectDescription="$t('project-mitrends-description')"
-          :buttonText="$t('project-mitrends-button')"
-          projectBgImage="/img/projects/mitrends.jpg"
-          projectImage="/img/projects/mitrends-graphic.png"
-          url="https://mitrends.citizenscience.ch"
-          colorGradientStart="#fc5c4a"
-          colorGradientEnd="#7284cd"
-        ></project-teaser>
-      </div>
-
-      <div
-        class="col col-wrapping col-mobile-large-12 col-tablet-portrait-6 col-large-4 scroll-effect"
-      >
-        <project-teaser
-          projectTitle="PROJECT BUILDER"
-          projectTopic="Citizen Science"
-          :projectDescription="$t('builder-lead')"
-          :buttonText="$t('builder-button')"
-          projectBgImage="/img/projects/project-builder-launch.jpg"
-          projectImage="/img/projects/pb-launch.png"
-          :url="$t('builder-path')"
-          colorGradientStart="#6e4f9e"
-          colorGradientEnd="#478161"
-        ></project-teaser>
-      </div>
-
-      <div
-        class="col col-wrapping col-mobile-large-12 col-tablet-portrait-6 col-large-4 scroll-effect"
-      >
-        <project-teaser
-          :projectTitle="$t('project-snake-title')"
-          :projectTopic="$t('project-snake-topic')"
-          :projectDescription="$t('project-snake-description')"
-          :buttonText="$t('project-snake-button')"
-          projectBgImage="/img/projects/snakechallenge.jpg"
-          projectImage="/img/projects/snakechallenge-intro.png"
-          url="https://snakes.citizenscience.ch"
-          colorGradientStart="#A35026"
-          colorGradientEnd="#448D7D"
+          :projectTitle="p.title"
+          :projectTopic="p.topic"
+          :projectDescription="p.description"
+          :button="p.button"
+          :projectBgImage="p.img_background"
+          :projectImage="p.img_project"
+          :url="p.link"
+          :colorGradient="p.gradient"
+          :vOrientation="vOrientation"
+          :projectId="p.id"
         ></project-teaser>
       </div>
     </div>
-    <div class="col col-large-12 scroll-effect centered extra-margin-top-2">
+    <div class="col col-large-12 extra-margin-top scroll-effect centered">
       <div class="button-group centered">
         <router-link
           tag="button"
           to="/contribute/projects"
-          class="button button-primary"
+          class="button button-primary-main"
           >{{ $t("section-projects-button") }}</router-link
         >
         <button
           @click="openUrl(`https://lab.citizenscience.ch/${$i18n.locale}`)"
-          class="button button-secondary"
+          class="button button-secondary-main"
         >
           {{ $t("new-project-button") }}
         </button>
@@ -92,8 +64,26 @@ import ProjectTeaser from "@/components/ProjectTeaser";
 
 export default {
   name: "ProjectCards",
+  data() {
+    return {
+      numberOfProjects: 3,
+      projects: [],
+    };
+  },
+  props: {
+    vOrientation: Boolean,
+    projectList: Array,
+  },
   components: {
     ProjectTeaser,
+  },
+  computed: {
+    getProjects() {
+      const projects = this.projectList
+        .slice(0, this.numberOfProjects)
+        .map((p) => this.validateProjectContent(p));
+      return projects;
+    },
   },
   methods: {
     openUrl: function(url, disabled = false) {
@@ -103,6 +93,47 @@ export default {
       var win = window.open(url);
       win.focus();
     },
+    validateOrientation: function() {
+      // This function is used to set the columns per row acording vertical or horizontal orientation
+      const viewConfig = {
+        vertical: "col-tablet-portrait-12 col-large-4",
+        horizontal: "col-tablet-portrait-12 col-large-6",
+      };
+      if (this.vOrientation) {
+        return viewConfig.vertical;
+      }
+      return viewConfig.horizontal;
+    },
+    validateProjectContent(p) {
+      // This variable avoid undefined or null errors
+      const keys = [
+        "id",
+        "title",
+        "topic",
+        "description",
+        "img_background",
+        "img_project",
+        "link",
+        "button",
+        "gradient",
+      ];
+      const project = {};
+      keys.forEach((key) => {
+        project[key] = p[key] || null;
+      });
+      return project;
+    },
+  },
+  created() {
+  },
+  destroyed() {
   },
 };
 </script>
+
+<style scoped>
+.row {
+  width: 100%;
+  margin: auto !important;
+}
+</style>

@@ -35,7 +35,7 @@
             <router-link
               tag="button"
               to="/contribute"
-              class="button button-primary"
+              class="button button-primary-main"
               >{{ $t("cover-button-projects") }}</router-link
             >
             <router-link

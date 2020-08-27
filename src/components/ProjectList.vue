@@ -29,7 +29,7 @@
           {{ $t('project-wenker-description') }}
         </p>
         <div class="buttons">
-          <button class="button button-primary" @click="link('http://wenker.citizenscience.ch')">{{ $t('project-button') }}</button>
+          <button class="button button-primary-main" @click="link('http://wenker.citizenscience.ch')">{{ $t('project-button') }}</button>
         </div>
 
       </div>
@@ -71,7 +71,7 @@ $color-wenker-primary-shade-20: shade( $color-wenker-primary, 20% );
   margin-bottom: $spacing-4;
 
   .button {
-    &.button-primary {
+    &.button-primary-main {
       background-color: $color-wenker-primary;
       &:active {
         background-color: $color-wenker-primary-shade-20;
@@ -162,14 +162,14 @@ $color-wenker-primary-shade-20: shade( $color-wenker-primary, 20% );
     transition: all $transition-duration-long*2 $transition-timing-function;
     &:active {
       transform: translateY(-$spacing-1/2);
-      .button-primary {
+      .button-primary-main {
         background-color: $color-wenker-primary-shade-20;
       }
     }
     @media (hover: hover) {
       &:hover {
         transform: translateY(-$spacing-1/2);
-        .button-primary {
+        .button-primary-main {
           background-color: $color-wenker-primary-shade-20;
         }
       }

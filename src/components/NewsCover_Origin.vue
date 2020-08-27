@@ -42,8 +42,8 @@
                     <p class="centered left-aligned-large">{{ news[0][$i18n.locale].lead }}</p>
                     <div class="button-group centered left-aligned-large">
                       <!-- simple external link handler, with target _blank -->
-                      <a v-if="news[0][$i18n.locale].path.startsWith('http')" :href="news[0][$i18n.locale].path" target="_blank" class="button button-primary">{{ news[0][$i18n.locale].button }}</a>
-                      <router-link v-else :to="news[0][$i18n.locale].path" class="button button-primary">{{ news[0][$i18n.locale].button }}</router-link>
+                      <a v-if="news[0][$i18n.locale].path.startsWith('http')" :href="news[0][$i18n.locale].path" target="_blank" class="button button-primary-main">{{ news[0][$i18n.locale].button }}</a>
+                      <router-link v-else :to="news[0][$i18n.locale].path" class="button button-primary-main">{{ news[0][$i18n.locale].button }}</router-link>
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@
     <h2 class="cover-heading scroll-effect">{{ $t('cover-heading') }}</h2>
     <p class="cover-subheading scroll-effect scroll-effect-delayed-1">{{ $t('cover-subheading') }}</p>
     <p class="button-group centered scroll-effect scroll-effect-delayed-2">
-      <router-link tag="button" to="/contribute" class="button button-primary">{{ $t('cover-button-projects') }}</router-link>
+      <router-link tag="button" to="/contribute" class="button button-primary-main">{{ $t('cover-button-projects') }}</router-link>
       <router-link tag="button" to="/start" class="button button-secondary button-secondary-inverted">{{ $t('cover-button-your-project') }}</router-link>
     </p>
   </cover>

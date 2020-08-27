@@ -113,8 +113,7 @@
                         projectBgImage="/img/projects/mitrends.jpg"
                         projectImage="/img/projects/mitrends-graphic.png"
                         url="https://mitrends.citizenscience.ch"
-                        colorGradientStart="#fc5c4a"
-                        colorGradientEnd="#7284cd"
+                        :colorGradient="{start:'#fc5c4a', end:'#7284cd'}"
                 ></project-teaser>
               </div>
             </div>
@@ -129,8 +128,7 @@
                         projectBgImage="/img/projects/snakechallenge.jpg"
                         projectImage="/img/projects/snakechallenge-intro.png"
                         url="https://snakes.citizenscience.ch"
-                        colorGradientStart="#A35026"
-                        colorGradientEnd="#448D7D"
+                        :colorGradient="{start:'#A35026', end:'#448D7D'}"
                 ></project-teaser>
               </div>
             </div>
@@ -145,8 +143,7 @@
                         projectBgImage="/img/projects/wiesel.jpg"
                         projectImage="/img/projects/wiesel-intro.png"
                         url="https://wiesel-gesucht.citizenscience.ch"
-                        colorGradientStart="#99695c"
-                        colorGradientEnd="#3f6fa0"
+                        :colorGradient="{start:'#99695c', end:'#3f6fa0'}"
                 ></project-teaser>
               </div>
             </div>
@@ -161,8 +158,7 @@
                         projectBgImage="/img/projects/wenker.jpg"
                         projectImage="/img/projects/wenker-intro.png"
                         url="https://wenker.citizenscience.ch"
-                        colorGradientStart="#3e6189"
-                        colorGradientEnd="#766b51"
+                        :colorGradient="{start:'#3e6189', end:'#766b51'}"
                 ></project-teaser>
               </div>
             </div>
@@ -177,8 +173,7 @@
                         projectBgImage="/img/projects/hatespeech.jpg"
                         projectImage="/img/projects/hatespeech-intro.png"
                         url="https://hatespeech.citizenscience.ch"
-                        colorGradientStart="#6e4f9e"
-                        colorGradientEnd="#478161"
+                        :colorGradient="{start:'#6e4f9e', end:'#478161'}"
                         infoSign="Beta"
                 ></project-teaser>
               </div>
@@ -194,8 +189,7 @@
                         projectBgImage="/img/projects/cohcoh.jpg"
                         projectImage="/img/projects/cohcoh-graphic.png"
                         url="https://cause-of-health.citizenscience.ch"
-                        colorGradientStart="#4ca942"
-                        colorGradientEnd="#4697cb"
+                        :colorGradient="{start:'#4ca942', end:'#4697cb'}"
                 ></project-teaser>
               </div>
             </div>

@@ -7,11 +7,6 @@
     "section-events-heading": "Our Next Event",
     "section-events-button": "See all Events",
 
-    "project-wiesel-title": "Weasel Wanted",
-    "project-wiesel-topic": "Wild Life Research",
-    "project-wiesel-description": "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
-    "project-wiesel-button": "Take part",
-
     "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke (german only)",
     "project-hatespeech-topic": "Linguistics",
     "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
@@ -21,18 +16,6 @@
     "project-wenker-topic": "Linguistics",
     "project-wenker-description": "Our first Citizen Science Project is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
     "project-wenker-button": "Take part",
-
-    "project-snake-title": "Snake ID Challenge",
-    "project-snake-topic": "Herpetology",
-    "project-snake-description": "Fall is here! You can take advantage of the cooler weather to test and refine your identification skills with the second phase of the SnakeID challenge.",
-    "project-snake-button": "Take a look",
-    "project-snake-sign": "Coming soon",
-
-    "project-mitrends-title": "MitrendS Study",
-    "project-mitrends-topic": "Health",
-    "project-mitrends-description": "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
-    "project-mitrends-button": "Take part",
-
 
     "section-build-project-heading": "Do you have a project in mind? We can help you.",
     "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
@@ -61,11 +44,6 @@
     "section-events-heading": "Unser nächster Event",
     "section-events-button": "Zu den Events",
 
-    "project-wiesel-title": "Wiesel gesucht",
-    "project-wiesel-topic": "Wildtierforschung",
-    "project-wiesel-description": "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box.",
-    "project-wiesel-button": "Mitmachen",
-
     "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke",
     "project-hatespeech-topic": "Sprachwissenschaften",
     "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
@@ -75,17 +53,6 @@
     "project-wenker-topic": "Sprachwissenschaften",
     "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
     "project-wenker-button": "Mitmachen",
-
-    "project-snake-title": "Snake ID Challenge",
-    "project-snake-topic": "Herpetologie",
-    "project-snake-description": "Der Herbst ist da! Nutzt das kühlere Wetter, um eure Identifikationsfähigkeiten in der zweiten Phase der SnakeID-Challenge zu testen und zu verfeinern.",
-    "project-snake-button": "Ansehen",
-    "project-snake-sign": "Beginnt bald",
-
-    "project-mitrends-title": "MITRENDS STUDIE",
-    "project-mitrends-topic": "Health",
-    "project-mitrends-description": "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome von MS zu erlangen.",
-    "project-mitrends-button": "Mitmachen",
 
 
     "section-build-project-heading": "Haben Sie eine Projekt-Idee? Wir helfen Ihnen!",
@@ -120,10 +87,13 @@
     <app-content-section class="no-padding">
       <div class="row row-centered">
         <div
-          class="col col-xlarge-8 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
+          class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
         >
           <!-- Project Cards component -->
-          <project-cards :projects="projects"></project-cards>
+          <project-cards
+            :projectList="projectList"
+            :vOrientation="vOrientation"
+          ></project-cards>
 
           <div class="row ph-mv" style="background: blue;">
             <h3>Container for News.vue</h3>
@@ -469,7 +439,8 @@ export default {
   data() {
     return {
       coverInfo: {},
-      projects:{}
+      projectList: [],
+      vOrientation: true,
     };
   },
   components: {
@@ -530,9 +501,127 @@ export default {
         },
       };
     },
+    setProjectList: function () {
+      // TODO: This information will be replaced by database retrieved data
+      this.projectList = [
+        {
+          id: "83",
+          title: {
+            content: {
+              en: "MitrendS Study",
+              de: "MITRENDS STUDIE",
+            },
+            config: { visible: true },
+          },
+          topic: {
+            content: {
+              en: "Health",
+              de: "Gesundheit",
+            },
+            config: { visible: true },
+          },
+          description: {
+            content: {
+              en:
+                "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
+              de:
+                "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome von MS zu erlangen.",
+            },
+            config: { visible: true },
+          },
+          img_background: "/img/projects/mitrends.jpg",
+          img_project: "/img/projects/mitrends-graphic.png",
+          gradient: { start: "#34ebde", end: "#ebdc34" },
+          link: "https://mitrends.citizenscience.ch",
+          button: {
+            content: {
+              en: "Take part",
+              de: "Mitmachen",
+            },
+            config: { visible: true, disabled: false },
+          },
+        },
+        {
+          id: "104",
+          title: {
+            content: {
+              en: "Snake ID Challenge",
+              de: "Snake-ID Herausforderung",
+            },
+            config: { visible: true },
+          },
+          topic: {
+            content: {
+              en: "Herpetology",
+              de: "Herpetologie",
+            },
+            config: { visible: true },
+          },
+          description: {
+            content: {
+              en:
+                "Fall is here! You can take advantage of the cooler weather to test and refine your identification skills with the second phase of the SnakeID challenge.",
+              de:
+                "Der Herbst ist da! Nutzt das kühlere Wetter, um eure Identifikationsfähigkeiten in der zweiten Phase der SnakeID-Challenge zu testen und zu verfeinern.",
+            },
+            config: { visible: true },
+          },
+          img_background:
+            "https://specials-images.forbesimg.com/imageserve/5ea5284f165a170006a5c82b/960x0.jpg?cropX1=0&cropX2=1440&cropY1=32&cropY2=1113",
+          img_project: "/img/projects/snakechallenge-intro.png",
+          gradient: { start: "#ABCDEF", end: "#123456" },
+          link: "https://snakes.citizenscience.ch",
+          button: {
+            content: {
+              en: "Take a look",
+              de: "Ansehen",
+            },
+            config: { visible: true, disabled: false },
+          },
+        },
+        {
+          id: "12",
+          title: {
+            content: {
+              en: "Weasel Wanted",
+              de: "Wiesel gesucht",
+            },
+            config: { visible: true },
+          },
+          topic: {
+            content: {
+              en: "Wild Life Research",
+              de: "Wildtierforschung",
+            },
+            config: { visible: true },
+          },
+          description: {
+            content: {
+              en:
+                "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
+              de:
+                "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box.",
+            },
+            config: { visible: true },
+          },
+          img_background: "/img/projects/wiesel.jpg",
+          img_project: "/img/projects/wiesel-intro.png",
+          gradient: { end: "#3f6fa0" },
+          link: "https://wiesel-gesucht.citizenscience.ch",
+          button: {
+            content: {
+              en: "Contribute",
+              de: "Beitragen",
+            },
+            config: { visible: true, disabled: false },
+          },
+        },
+      ];
+    },
   },
   created() {
     this.setCoverInfo();
+    this.setProjectList();
   },
 };
 </script>

@@ -1,45 +1,48 @@
 <template>
-  <div class="project" @click="openInNewTab(url)">
+  <div class="project" @click="openInNewTab(project.link)">
     <div class="project-info">
       <div class="row row-reverse-large row-centered row-middle row-wrapping">
         <div
           class="col col-4 col-image col-wrapping centered"
           :class="validateOrientation('img-content')"
+          v-if="project.img_project"
         >
-          <img :src="projectImage" />
+          <img :src="project.img_project" />
         </div>
 
-        <div
-          class="col col-8 col-wrapping"
-          :class="validateOrientation('text-content')"
-        >
-          <span class="project-type">{{ projectTopic }}</span>
-          <h3 v-html="projectTitle"></h3>
-          <p v-html="projectDescription"></p>
+        <div class="col col-8" :class="validateOrientation('text-content')">
+          <span class="project-type" v-if="project.topic.config.visible">{{
+            localTranslation(project.topic.content)
+          }}</span>
+          <h3 v-if="project.title.config.visible">
+            {{ localTranslation(project.title.content) }}
+          </h3>
+          <p v-if="project.description.config.visible">
+            {{ localTranslation(project.description.content) }}
+          </p>
         </div>
-        <button class="button button-primary">
-          {{ buttonText }}
-        </button>
+        <div class="col col-12">
+          <button
+            class="button button-primary-main"
+            v-if="project.button.config.visible && project.link"
+          >
+            {{ localTranslation(project.button.content) }}
+          </button>
+        </div>
       </div>
     </div>
 
     <div
       class="overlay"
       :style="{
-        background:
-          'linear-gradient(to bottom right, ' +
-          colorGradientStart +
-          '' +
-          ', ' +
-          colorGradientEnd +
-          ')',
+        background: `linear-gradient(to bottom right, ${project.gradient.start}, ${project.gradient.end})`,
       }"
     ></div>
 
     <div
       class="project-bg-image"
       :style="{
-        backgroundImage: 'url(' + projectBgImage + ')',
+        backgroundImage: 'url(' + project.img_background + ')',
       }"
     ></div>
 
@@ -61,44 +64,87 @@
 </template>
 
 <script>
+import variable from "@/styles/theme.scss";
 export default {
   name: "ProjectTeaser",
+  data() {
+    return {
+      project: {},
+    };
+  },
   props: {
     projectBgImage: String,
     projectImage: String,
-    projectTitle: String,
-    projectTopic: String,
-    projectDescription: String,
-    buttonText: String,
+    projectId: String,
+    projectTitle: Object,
+    projectTopic: Object,
+    projectDescription: Object,
+    button: Object,
     url: String,
-    colorGradientStart: String,
-    colorGradientEnd: String,
+    colorGradient: Object,
     infoText: String,
     infoSign: String,
     vOrientation: Boolean,
   },
+  computed: {
+    backgroundImage() {
+      const img = this.projectBgImage || "/img/cover.jpg";
+      return img;
+    },
+  },
   methods: {
     openInNewTab: function(url) {
+      if (!url) {
+        return;
+      }
       var win = window.open(url, "_blank");
       win.focus();
     },
     validateOrientation: function(e) {
       const viewConfig = {
         vertical: {
-          "img-content": "col-tablet-portrait-12 col-large-12 vertical",
-          "text-content": "col-tablet-portrait-12 col-large-12 ",
+          "img-content": " col-large-12 vertical",
+          "text-content": " col-large-12 ",
         },
         horizontal: {
-          "img-content": "col-tablet-portrait-4 col-large-4",
-          "text-content": "col-tablet-portrait-8 col-large-6 col-large-after-2",
+          "img-content": "col-large-4",
+          "text-content": "col-large-6 col-large-after-2",
         },
       };
       let selectedView = viewConfig.horizontal;
-      if (!this.vOrientation) {
+      if (this.vOrientation) {
         selectedView = viewConfig.vertical;
       }
       return selectedView[e];
     },
+    localTranslation(textContent) {
+      // Recieves the text content in multiple languages and return the selected
+      const lang = this.$i18n.locale;
+      return textContent[lang] || textContent.en;
+    },
+    setProjectData() {
+      const defaultValue = { content: {}, config: { visible: false } };
+      const gradient = this.colorGradient
+        ? {
+            start: this.colorGradient.start || variable.primary,
+            end: this.colorGradient.end || variable.secondary,
+          }
+        : { start: variable.primary, end: "#16496b" };
+      this.project = {
+        id: this.projectId,
+        title: this.projectTitle || defaultValue,
+        topic: this.projectTopic || defaultValue,
+        description: this.projectDescription || defaultValue,
+        img_background: this.backgroundImage,
+        img_project: this.projectImage,
+        link: this.url,
+        button: this.button || { content: {}, config: { visible: false } },
+        gradient: gradient,
+      };
+    },
+  },
+  created() {
+    this.setProjectData();
   },
 };
 </script>
@@ -106,22 +152,6 @@ export default {
 <style lang="scss">
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
-
-/*
-    .button {
-        &.button-primary {
-            background-color: $color-primary;
-            &:active {
-                background-color: $color-primary-shade-20;
-            }
-            @media (hover: hover) {
-                &:hover {
-                    background-color: $color-primary-shade-20;
-                }
-            }
-        }
-    }
-    */
 
 .project {
   position: relative;
@@ -135,7 +165,6 @@ export default {
     z-index: 2;
     color: white;
     height: 100%;
-
     .project-type {
       display: block;
       font-size: $font-size-mini;
@@ -148,7 +177,7 @@ export default {
       line-height: 1.25;
       text-align: left;
       text-transform: none;
-      margin-bottom: $spacing-1;
+      margin-bottom: $spacing-3;
       text-transform: uppercase;
     }
 
@@ -167,6 +196,7 @@ export default {
       img {
         transform: scale(1) translateX(-10%);
         max-height: 100px;
+        border-radius: $border-radius;
       }
     }
   }
@@ -238,14 +268,14 @@ export default {
   transition: all $transition-duration-long * 2 $transition-timing-function;
   &:active {
     //transform: translateY(-$spacing-1/2);
-    .button-primary {
+    .button-primary-main {
       background-color: $color-primary-shade-20;
     }
   }
   @media (hover: hover) {
     &:hover {
       //transform: translateY(-$spacing-1/2);
-      .button-primary {
+      .button-primary-main {
         background-color: $color-primary-shade-20;
       }
     }
@@ -255,7 +285,7 @@ export default {
 @media only screen and (min-width: $viewport-mobile-large) {
   .project {
     .project-info {
-      padding: $spacing-3 $spacing-2;
+      padding: $spacing-2 $spacing-1;
       h3 {
         font-size: $font-size-normal;
       }
@@ -264,14 +294,15 @@ export default {
         margin-bottom: $spacing-1;
       }
       p {
-        font-size: $font-size-mini;
-        margin-bottom: 0;
+        font-size: $font-size-tiny;
+        padding-bottom: $spacing-3;
         display: block;
       }
-    }
-    .col-image {
-      img {
-        transform: scale(1.2) translateX(-10%);
+      .col-image {
+        display: block;
+        img {
+          transform: scale(1.3) translateX(-10%);
+        }
       }
     }
 
@@ -284,32 +315,17 @@ export default {
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .project {
     .project-info {
+      padding: $spacing-3 $spacing-1;
       p {
         font-size: $font-size-mini;
-      }
-      .vertical {
-        margin: $spacing-1;
-        padding-bottom: $spacing-1;
-        &.col-image {
-          display: block;
-          img {
-            transform: scale(1) translateX(-5%) translateY(6.25%);
-          }
-        }
+        padding-bottom: $spacing-4;
       }
       .col-image {
-        display: block;
         img {
-          transform: scale(2) translateX(-10%) translateY(10%);
+          transform: scale(1.3) translateX(-5%);
         }
       }
-      button {
-        display: block;
-        position: relative;
-        bottom: $spacing-4;
-      }
     }
-
     .info-text {
       max-width: none;
     }
@@ -319,25 +335,28 @@ export default {
 @media only screen and (min-width: $viewport-large) {
   .project {
     height: 100%;
-
     .project-info {
+      padding-bottom: $spacing-4;
       .project-type {
         font-size: $font-size-small;
       }
       p {
-        font-size: $font-size-small;
+        font-size: $font-size-mini;
+        padding-bottom: $spacing-2;
       }
       .vertical {
         padding-bottom: $spacing-3;
         &.col-image {
           img {
-            transform: scale(1.2) translateY(12.5%);
+            transform: scale(1.5) translateY(12.5%);
           }
         }
       }
       .button {
+        display: block;
+        transform: scale(0.9);
         position: relative;
-        bottom: $spacing-4;
+        margin-bottom: $spacing-4;
       }
 
       .row {
@@ -346,7 +365,7 @@ export default {
 
       .col-image {
         img {
-          transform: scale(2) translateY(12%);
+          transform: scale(2) translateY(5%);
         }
       }
     }
@@ -370,16 +389,16 @@ export default {
         font-size: $font-size-normal;
       }
       .vertical {
-        padding-bottom: $spacing-5;
+        padding-bottom: $spacing-2;
         &.col-image {
-        img {
-          transform: scale(1.5) translateY(18.75%);
-        }
+          img {
+            transform: scale(1.7) translateY(15%);
+          }
         }
       }
       .col-image {
         img {
-          transform: scale(2.5) translateY(12%);
+          transform: scale(2.5) translateY(10%);
         }
       }
     }

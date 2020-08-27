@@ -73,7 +73,7 @@
                           <div v-if="event.path.indexOf('brownbag') !== -1">
                               <p class="reduced-bottom-margin centered" v-html="$t('brownbag-register-text')"></p>
                               <div class="margin-bottom centered">
-                                  <button class="button button-primary button-icon button-normal-case" @click="openInNewTab('mailto:info@citizenscience.ch')">
+                                  <button class="button button-primary-main button-icon button-normal-case" @click="openInNewTab('mailto:info@citizenscience.ch')">
                                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3,190.8a6,6,0,0,1,9.7,4.7V400a48,48,0,0,1-48,48H48A48,48,0,0,1,0,400V195.6a6,6,0,0,1,9.7-4.7c22.4,17.4,52.1,39.5,154.1,113.6,21.1,15.4,56.7,47.8,92.2,47.6,35.7.3,72-32.8,92.3-47.6C450.3,230.4,479.9,208.2,502.3,190.8ZM256,320c23.2.4,56.6-29.2,73.4-41.4,132.7-96.3,142.8-104.7,173.4-128.7A23.93,23.93,0,0,0,512,131V112a48,48,0,0,0-48-48H48A48,48,0,0,0,0,112v19a24.08,24.08,0,0,0,9.2,18.9c30.6,23.9,40.7,32.4,173.4,128.7,16.8,12.2,50.2,41.8,73.4,41.4Z"/></svg>
                                       info@citizenscience.ch
                                   </button>

@@ -84,7 +84,7 @@
     <app-cover :coverInfo="coverInfo"></app-cover>
 
     <!-- Content Section -->
-    <app-content-section class="no-padding">
+    <app-content-section class="small-padding">
       <div class="row row-centered">
         <div
           class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
@@ -531,7 +531,7 @@ export default {
           },
           img_background: "/img/projects/mitrends.jpg",
           img_project: "/img/projects/mitrends-graphic.png",
-          gradient: { start: "#34ebde", end: "#ebdc34" },
+          gradient: { start: "", end: "#ebdc34" },
           link: "https://mitrends.citizenscience.ch",
           button: {
             content: {
@@ -569,7 +569,7 @@ export default {
           img_background:
             "https://specials-images.forbesimg.com/imageserve/5ea5284f165a170006a5c82b/960x0.jpg?cropX1=0&cropX2=1440&cropY1=32&cropY2=1113",
           img_project: "/img/projects/snakechallenge-intro.png",
-          gradient: { start: "#ABCDEF", end: "#123456" },
+          gradient: { start: "#ABCDEF", end: "green" },
           link: "https://snakes.citizenscience.ch",
           button: {
             content: {

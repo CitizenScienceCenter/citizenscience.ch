@@ -338,14 +338,14 @@ export default {
     .project-info {
       padding-bottom: $spacing-4;
       .project-type {
-        font-size: $font-size-small;
+        font-size: $font-size-mini;
       }
       p {
         font-size: $font-size-mini;
         padding-bottom: $spacing-2;
       }
       .vertical {
-        padding-bottom: $spacing-3;
+        padding-bottom: $spacing-1;
         &.col-image {
           img {
             transform: scale(1.5) translateY(12.5%);
@@ -380,13 +380,16 @@ export default {
   .project {
     .project-info {
       .project-type {
-        font-size: $font-size-normal;
+        font-size: $font-size-small;
+        padding: 0 $spacing-2;
       }
       h3 {
         font-size: $font-size-medium;
+        padding: 0 $spacing-2;
       }
       p {
-        font-size: $font-size-normal;
+        font-size: $font-size-small;
+        padding: 0 $spacing-2;
       }
       .vertical {
         padding-bottom: $spacing-2;

@@ -1,5 +1,9 @@
 <template>
-  <div class="project" @click="openInNewTab(project.link)">
+  <div
+    class="project"
+    @click.prevent="openInNewTab(project.link)"
+    :class="{ 'not-allowed': project.button.config.visible && project.button.config.disabled }"
+  >
     <div class="project-info">
       <div class="row row-reverse-large row-centered row-middle row-wrapping">
         <div
@@ -21,10 +25,11 @@
             {{ localTranslation(project.description.content) }}
           </p>
         </div>
-        <div class="col col-12">
+        <div class="col col-6">
           <button
             class="button button-primary-main"
             v-if="project.button.config.visible && project.link"
+            :disabled="project.button.config.disabled"
           >
             {{ localTranslation(project.button.content) }}
           </button>
@@ -65,6 +70,7 @@
 
 <script>
 import variable from "@/styles/theme.scss";
+
 export default {
   name: "ProjectTeaser",
   data() {
@@ -94,7 +100,11 @@ export default {
   },
   methods: {
     openInNewTab: function(url) {
-      if (!url) {
+      if (
+        !url ||
+        (this.project.button.config.visible &&
+          this.project.button.config.disabled)
+      ) {
         return;
       }
       var win = window.open(url, "_blank");
@@ -138,7 +148,10 @@ export default {
         img_background: this.backgroundImage,
         img_project: this.projectImage,
         link: this.url,
-        button: this.button || { content: {}, config: { visible: false } },
+        button: this.button || {
+          content: {},
+          config: { visible: false, disabled: true },
+        },
         gradient: gradient,
       };
     },
@@ -159,6 +172,9 @@ export default {
   box-shadow: 0px 4px 8px -4px rgba($color-black, 0.2);
   overflow: hidden;
   cursor: pointer;
+  &.not-allowed {
+    cursor: not-allowed;
+  }
 
   .project-info {
     position: relative;

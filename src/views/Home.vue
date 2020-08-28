@@ -90,147 +90,39 @@
           class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
         >
           <!-- Project Cards component -->
-          <project-cards
-            :projectList="projectList"
-            :vOrientation="vOrientation"
-          ></project-cards>
-
-          <div class="row ph-mv" style="background: blue;">
+          <app-content-section class="row ph-mv">
+            <project-cards
+              :projectList="projectList"
+              :vOrientation="projectCardConfig.vOrientation"
+              :visible="projectCardConfig.visible"
+            ></project-cards>
+          </app-content-section>
+          <app-content-section class="row ph-mv" color="greyish">
             <h3>Container for News.vue</h3>
-          </div>
-          <div class="row ph-mv" style="background: green;">
-            <h3>Container for StaticGenericContent.vue</h3>
-          </div>
+          </app-content-section>
+          <!-- Static Generic Content for Our Community -->
+          <app-content-section class="row ph-mv">
+            <generic-content-block
+              :visible="ourCommunityConfig.visible"
+              :vOrientation="ourCommunityConfig.vOrientation"
+              :content="ourCommunity"
+            ></generic-content-block>
+          </app-content-section>
         </div>
         <div
           class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
-          style="background: yellow;"
         >
-          <div class="row row-end ph-mv">
-            <h2>StaticGenericContent.vue</h2>
-            <h3>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet.
-            </h3>
-          </div>
+          <!-- Static Generic Content for Our Mission -->
+          <app-content-section class="row ph-mv">
+            <generic-content-block
+              :visible="ourMissionConfig.visible"
+              :vOrientation="ourMissionConfig.vOrientation"
+              :content="ourMission"
+            ></generic-content-block>
+          </app-content-section>
         </div>
       </div>
     </app-content-section>
-
-    <!-- Project cards -->
-    <!-- <app-content-section>
-      <div>
-        <div class="row row-centered">
-          <div class="col col-12 scroll-effect">
-            <h2 class="heading small">
-              {{ $t("section-projects-heading") }}
-            </h2>
-          </div>
-        </div>
-        <div class="row row-centered row-wrapping scroll-effect">
-          <div
-            class="col col-wrapping col-mobile-large-6 col-large-4 scroll-effect"
-          >
-            <project-teaser
-              :projectTitle="$t('project-mitrends-title')"
-              :projectTopic="$t('project-mitrends-topic')"
-              :projectDescription="$t('project-mitrends-description')"
-              :buttonText="$t('project-mitrends-button')"
-              projectBgImage="/img/projects/mitrends.jpg"
-              projectImage="/img/projects/mitrends-graphic.png"
-              url="https://mitrends.citizenscience.ch"
-              colorGradientStart="#fc5c4a"
-              colorGradientEnd="#7284cd"
-            ></project-teaser>
-          </div>
-
-          <div
-            class="col col-wrapping col-mobile-large-6 col-large-4 scroll-effect"
-          >
-            <project-teaser
-              projectTitle="PROJECT BUILDER"
-              projectTopic="Citizen Science"
-              :projectDescription="$t('builder-lead')"
-              :buttonText="$t('builder-button')"
-              projectBgImage="/img/projects/project-builder-launch.jpg"
-              projectImage="/img/projects/pb-launch.png"
-              :url="$t('builder-path')"
-              colorGradientStart="#6e4f9e"
-              colorGradientEnd="#478161"
-            ></project-teaser>
-          </div>
-
-          <div
-            class="col col-wrapping col-mobile-large-6 col-large-4 scroll-effect"
-          >
-            <project-teaser
-              :projectTitle="$t('project-snake-title')"
-              :projectTopic="$t('project-snake-topic')"
-              :projectDescription="$t('project-snake-description')"
-              :buttonText="$t('project-snake-button')"
-              projectBgImage="/img/projects/snakechallenge.jpg"
-              projectImage="/img/projects/snakechallenge-intro.png"
-              url="https://snakes.citizenscience.ch"
-              colorGradientStart="#A35026"
-              colorGradientEnd="#448D7D"
-            ></project-teaser>
-          </div>
-
-          <div
-            class="col col-wrapping col-mobile-large-6 col-large-8 col-xlarge-8 scroll-effect"
-          >
-            <div>
-              <project-teaser
-                :projectTitle="$t('project-wiesel-title')"
-                :projectTopic="$t('project-wiesel-topic')"
-                :projectDescription="$t('project-wiesel-description')"
-                :buttonText="$t('project-wiesel-button')"
-                projectBgImage="/img/projects/wiesel.jpg"
-                projectImage="/img/projects/wiesel-intro.png"
-                url="https://wiesel-gesucht.citizenscience.ch"
-                colorGradientStart="#99695c"
-                colorGradientEnd="#3f6fa0"
-              ></project-teaser>
-            </div>
-          </div>
-
-          <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
-            <div>
-              <project-teaser
-                :projectTitle="$t('project-wenker-title')"
-                :projectTopic="$t('project-wenker-topic')"
-                :projectDescription="$t('project-wenker-description')"
-                :buttonText="$t('project-wenker-button')"
-                projectBgImage="/img/projects/wenker.jpg"
-                projectImage="/img/projects/wenker-intro.png"
-                url="https://wenker.citizenscience.ch"
-                colorGradientStart="#3e6189"
-                colorGradientEnd="#766b51"
-              ></project-teaser>
-            </div>
-          </div>
-
-          <div class="col col-wrapping col-large-6 col-wrapping scroll-effect">
-            <div class="button-group centered">
-              <router-link
-                tag="button"
-                to="/contribute/projects"
-                class="button button-secondary"
-                >{{ $t("section-projects-button") }}</router-link
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </app-content-section> -->
 
     <!-- Our next Event -->
     <app-content-section color="light-greyish">
@@ -426,13 +318,15 @@
 </template>
 
 <script>
+import HeadCover from "../components/HeadCover";
 import ContentSection from "@/components/shared/ContentSection.vue";
+import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import ProjectCards from "@/components/ProjectCards";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 import EventTeaser from "../components/EventTeaser";
 import EventList from "../components/EventList";
-import HeadCover from "../components/HeadCover";
+
 
 export default {
   name: "Home",
@@ -440,7 +334,11 @@ export default {
     return {
       coverInfo: {},
       projectList: [],
-      vOrientation: true,
+      projectCardConfig: { vOrientation: true, visible: true },
+      ourCommunity: {},
+      ourCommunityConfig: { vOrientation: false, visible: true },
+      ourMission: {},
+      ourMissionConfig: { vOrientation: true, visible: true },
     };
   },
   components: {
@@ -448,6 +346,7 @@ export default {
     EventTeaser,
     SectionNewsletterSignup,
     ProjectCards,
+    GenericContentBlock,
     "app-cover": HeadCover,
     "app-content-section": ContentSection,
     "app-footer": Footer,
@@ -538,7 +437,7 @@ export default {
               en: "Take part",
               de: "Mitmachen",
             },
-            config: { visible: true, disabled: false },
+            config: { visible: true, disabled: true },
           },
         },
         {
@@ -618,10 +517,76 @@ export default {
         },
       ];
     },
+    setOurCommunity() {
+      this.ourCommunity = {
+        heading: {
+          content: {
+            en: "Our Community",
+            de: "Unsere Gemeinschaft",
+          },
+          config: { visible: true },
+        },
+        description: {
+          content: {
+            en: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.`,
+          },
+          config: { visible: true },
+        },
+        image: "https://citizenscience.ch/img/uzh-eth.jpg",
+        img_description: {
+          content: {
+            en: "Image Description",
+            de: "Bildbeschreibung",
+          },
+          config: { visible: true },
+        },
+        button: {
+          link: "null",
+          content: { en: "Learn More", de: "mehr erfahren" },
+          config: { disabled: false, visible: true },
+        },
+      };
+    },
+    setOurMission() {
+      this.ourMission = {
+        heading: {
+          content: {
+            en: "Our Mission",
+            de: "Unsere Gemeinschaft",
+          },
+          config: { visible: true },
+        },
+        description: {
+          content: {
+            en: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
+          },
+          config: { visible: true },
+        },
+        button: {
+          link: "null",
+          content: { en: "Learn More", de: "mehr erfahren" },
+          config: { disabled: false, visible: true },
+        },
+      };
+    },
   },
   created() {
     this.setCoverInfo();
     this.setProjectList();
+    this.setOurCommunity();
+    this.setOurMission();
   },
 };
 </script>

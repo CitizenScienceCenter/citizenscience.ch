@@ -12,7 +12,7 @@
 }
 </i18n>
 <template>
-  <div class="row ph-mv" v-if="projectList && projectList.length != 0">
+  <div v-if="projectList && projectList.length != 0 && visible">
     <div class="row row-centered">
       <div class="col col-12 scroll-effect">
         <h2 class="heading small">
@@ -41,7 +41,7 @@
         ></project-teaser>
       </div>
     </div>
-    <div class="col col-large-12 extra-margin-top scroll-effect centered">
+    <div class="col col-large-12 extra-margin-top-2 scroll-effect centered">
       <div class="button-group centered">
         <router-link
           tag="button"
@@ -73,6 +73,7 @@ export default {
   props: {
     vOrientation: Boolean,
     projectList: Array,
+    visible: Boolean,
   },
   components: {
     ProjectTeaser,
@@ -124,10 +125,8 @@ export default {
       return project;
     },
   },
-  created() {
-  },
-  destroyed() {
-  },
+  created() {},
+  destroyed() {},
 };
 </script>
 

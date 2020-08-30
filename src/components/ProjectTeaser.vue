@@ -25,7 +25,7 @@
             {{ localTranslation(project.description.content) }}
           </p>
         </div>
-        <div class="col col-6">
+        <div class="col col-6 col-large-12">
           <button
             class="button button-primary-main"
             v-if="project.button.config.visible && project.link"

@@ -8,7 +8,7 @@
   >
     <!-- Section Title  -->
     <div class="row row-centered " v-if="heading.config.visible">
-      <div class="col col-12 scroll-effect">
+      <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
           {{ localTranslation(heading.content) }}
         </h2>
@@ -94,8 +94,8 @@ export default {
           "text-content": " col-12 vertical",
         },
         horizontal: {
-          "img-content": "col-4",
-          "text-content": "col-8",
+          "img-content": "col-3",
+          "text-content": "col-9",
         },
       };
       let selectedView = viewConfig.horizontal;
@@ -121,6 +121,9 @@ export default {
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
 
+.heading-section {
+  padding-left: $spacing-3;
+}
 .img-section {
   .col-image {
     transform: scale(0.75) translateY(-10%);
@@ -150,7 +153,7 @@ export default {
   &.vertical {
     p,
     .button-section {
-      padding-left: $spacing-2;
+      padding-left: $spacing-3;
     }
   }
 }
@@ -201,6 +204,7 @@ export default {
     }
   }
   .text-section {
+    padding: 0 $spacing-4;
     p {
       font-size: $font-size-normal;
     }
@@ -210,6 +214,12 @@ export default {
         font-size: $font-size-normal;
       }
     }
+    &.vertical {
+    p,
+    .button-section {
+      padding-left: $spacing-1;
+    }
+  }
   }
 }
 </style>

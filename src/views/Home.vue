@@ -90,18 +90,22 @@
           class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
         >
           <!-- Project Cards component -->
-          <app-content-section class="row ph-mv">
-            <project-cards
+          <app-content-section class="row ph-mv" style="background:yellow">
+            <project-cards-block
               :projectList="projectList"
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"
-            ></project-cards>
+            ></project-cards-block>
           </app-content-section>
-          <app-content-section class="row ph-mv" color="greyish">
-            <h3>Container for News.vue</h3>
+          <!-- News component  -->
+          <app-content-section class="row ph-mv" style="background:yellow">
+            <news-block
+              :visible="ourMissionConfig.visible"
+              :content="ourMission"
+            ></news-block>
           </app-content-section>
-          <!-- Static Generic Content for Our Community -->
-          <app-content-section class="row ph-mv">
+          <!-- Generic Content component for Our Community -->
+          <app-content-section class="row ph-mv" style="background:yellow">
             <generic-content-block
               :visible="ourCommunityConfig.visible"
               :vOrientation="ourCommunityConfig.vOrientation"
@@ -112,7 +116,7 @@
         <div
           class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
         >
-          <!-- Static Generic Content for Our Mission -->
+          <!-- Generic Content component for Our Mission -->
           <app-content-section class="row ph-mv">
             <generic-content-block
               :visible="ourMissionConfig.visible"
@@ -318,15 +322,15 @@
 </template>
 
 <script>
-import HeadCover from "../components/HeadCover";
+import HeadCoverBlock from "../components/HeadCoverBlock";
 import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
-import ProjectCards from "@/components/ProjectCards";
+import ProjectCardsBlock from "@/components/ProjectCardsBlock";
+import NewsBlock from "@/components/NewsBlock";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 import EventTeaser from "../components/EventTeaser";
 import EventList from "../components/EventList";
-
 
 export default {
   name: "Home",
@@ -345,9 +349,10 @@ export default {
     EventList,
     EventTeaser,
     SectionNewsletterSignup,
-    ProjectCards,
+    ProjectCardsBlock,
     GenericContentBlock,
-    "app-cover": HeadCover,
+    NewsBlock,
+    "app-cover": HeadCoverBlock,
     "app-content-section": ContentSection,
     "app-footer": Footer,
   },
@@ -357,7 +362,7 @@ export default {
       default: false,
     },
   },
-  metaInfo: function () {
+  metaInfo: function() {
     return {
       title: this.$t("page-title"),
       titleTemplate: null,
@@ -370,11 +375,11 @@ export default {
     };
   },
   methods: {
-    openInNewTab: function (url) {
+    openInNewTab: function(url) {
       var win = window.open(url, "_blank");
       win.focus();
     },
-    setCoverInfo: function () {
+    setCoverInfo: function() {
       // TODO: This information will be replaced by database retrieved data
       this.coverInfo = {
         heading: {
@@ -400,7 +405,7 @@ export default {
         },
       };
     },
-    setProjectList: function () {
+    setProjectList: function() {
       // TODO: This information will be replaced by database retrieved data
       this.projectList = [
         {

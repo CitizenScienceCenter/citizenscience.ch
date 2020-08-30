@@ -63,7 +63,7 @@
 import ProjectTeaser from "@/components/ProjectTeaser";
 
 export default {
-  name: "ProjectCards",
+  name: "ProjectCardsBlock",
   data() {
     return {
       numberOfProjects: 3,

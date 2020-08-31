@@ -8,18 +8,9 @@
 }
 </i18n>
 <template>
-  <div
-    v-if="
-      visible &&
-        Object.keys(content).length !== 0 &&
-        content.constructor === Object
-    "
-  >
+  <div class="news" v-if="visible && content.length !== 0">
     <!-- Section Title  -->
-    <div
-      class="row row-centered extra-margin-top-2"
-      v-if="heading.config.visible"
-    >
+    <div class="row row-centered extra-margin-top-2">
       <div class="col col-12 scroll-effect heading-section ">
         <h2 class="heading small">
           {{ $t("section-heading") }}
@@ -27,18 +18,29 @@
       </div>
     </div>
     <!-- Section Content  -->
+
     <div class="row row-centered text-section">
       <div class="col col-12 scroll-effect">
-        <small>
-          {{ new Date().toDateString() }}
-        </small>
+        <transition name="slide-fade" mode="out-in">
+          <span :key="indexCurrentNew" class="date">
+            {{ currentNew.date }}
+          </span>
+        </transition>
       </div>
       <div class="col col-12 scroll-effect">
-        <h3>{{ localTranslation(heading.content) }} - {{ countDown }}</h3>
+        <transition name="slide-fade" mode="out-in">
+          <h3 :key="indexCurrentNew">
+            {{ localTranslation(currentNew.title.content) }}
+          </h3>
+        </transition>
       </div>
       <!-- Text sub-section Content  -->
       <div class="col col-12 scroll-effect ">
-        <p>{{ localTranslation(description.content) }}</p>
+        <transition name="slide-fade" mode="out-in">
+          <p :key="indexCurrentNew">
+            {{ localTranslation(currentNew.description.content) }}
+          </p>
+        </transition>
       </div>
     </div>
   </div>
@@ -48,17 +50,17 @@ export default {
   name: "GenericContentBlock",
   data() {
     return {
-      countDown: 30,
-      heading: { content: {}, config: { visible: false } },
-      description: { content: {}, config: { visible: false } },
-      img_description: { content: {}, config: { visible: false } },
-      button: { content: {}, config: { visible: false, disabled: true } },
+      countDown: 0,
+      news: [],
+      currentNew: {},
+      indexCurrentNew: 0,
+      toggle: false,
     };
   },
   props: {
-    content: Object,
+    content: Array,
     visible: Boolean,
-    vOrientation: Boolean,
+    timeToRefresh: Number,
   },
   methods: {
     localTranslation(textContent) {
@@ -74,11 +76,17 @@ export default {
       win.focus();
     },
     setData() {
-      this.description = this.content.description || this.description;
-      this.heading = this.content.heading || this.heading;
-      this.img_description =
-        this.content.img_description || this.img_description;
-      this.button = this.content.button || this.button;
+      this.news = this.content.map((x, i) => this.validateNewsContent(x, i));
+    },
+    validateNewsContent(n, i) {
+      // This variable avoid undefined or null errors
+      const keys = ["title", "date", "description"];
+      const item = {};
+      item["index"] = i;
+      keys.forEach((key) => {
+        item[key] = n[key] || null;
+      });
+      return item;
     },
 
     countDownTimer() {
@@ -88,25 +96,36 @@ export default {
           this.countDownTimer();
         }, 1000);
       } else {
-        this.countDown = 30;
+        const time =
+          typeof this.timeToRefresh === "number" && this.timeToRefresh > 0
+            ? this.timeToRefresh
+            : 30;
+        this.countDown = time;
+        this.currentNew = this.news[this.indexCurrentNew];
+        this.indexCurrentNew =
+          this.indexCurrentNew < this.news.length - 1
+            ? this.indexCurrentNew + 1
+            : 0;
+        this.toggle = !this.toggle;
         this.countDownTimer();
       }
     },
   },
   created() {
     this.setData();
-    this.countDownTimer();
+    if (this.news.length > 1 && this.timeToRefresh > 0) this.countDownTimer();
   },
 };
 </script>
 <style lang="scss" scoped>
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
+
 .heading-section {
   padding-left: $spacing-3;
 }
 .text-section {
-  padding-left: $spacing-1;
+  padding-left: $spacing-2;
   h3 {
     font-weight: 700;
   }
@@ -114,6 +133,20 @@ export default {
     font-size: $font-size-tiny;
     padding-bottom: $spacing-2;
   }
+  .date {
+    font-size: $font-size-tiny;
+  }
+}
+.slide-fade-enter-active {
+  transition: all 0.5s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(20px);
+  opacity: 0;
 }
 @media only screen and (min-width: $viewport-mobile-large) {
   .text-section {
@@ -125,11 +158,29 @@ export default {
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .text-section {
     p {
+      font-size: calc((2vw + 1.3vh) / 2);
+    }
+  }
+}
+@media only screen and (min-width: $viewport-large) {
+  .text-section {
+    padding-left: $spacing-1;
+    p {
       font-size: $font-size-small;
     }
   }
 }
 @media only screen and (min-width: $viewport-xlarge) {
+  .text-section {
+    p {
+      font-size: calc((2vw + 1.3vh) / 2);
+    }
+    .date {
+      font-size: $font-size-mini;
+    }
+  }
+}
+@media only screen and (min-width: $viewport-xxlarge) {
   .text-section {
     p {
       font-size: $font-size-normal;

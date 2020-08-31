@@ -90,7 +90,7 @@
           class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
         >
           <!-- Project Cards component -->
-          <app-content-section class="row ph-mv" style="background:yellow">
+          <app-content-section class="row ph-mv">
             <project-cards-block
               :projectList="projectList"
               :vOrientation="projectCardConfig.vOrientation"
@@ -98,14 +98,18 @@
             ></project-cards-block>
           </app-content-section>
           <!-- News component  -->
-          <app-content-section class="row ph-mv" style="background:yellow">
+          <app-content-section class="row ph-mv" color="light-greyish">
             <news-block
-              :visible="ourMissionConfig.visible"
-              :content="ourMission"
-            ></news-block>
+              :visible="newsConfig.visible"
+              :content="news"
+              :timeToRefresh="20"
+              style="height: 30vh"
+            >
+              ></news-block
+            >
           </app-content-section>
           <!-- Generic Content component for Our Community -->
-          <app-content-section class="row ph-mv" style="background:yellow">
+          <app-content-section class="row ph-mv">
             <generic-content-block
               :visible="ourCommunityConfig.visible"
               :vOrientation="ourCommunityConfig.vOrientation"
@@ -117,19 +121,44 @@
           class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
         >
           <!-- Generic Content component for Our Mission -->
-          <app-content-section class="row ph-mv">
+          <app-content-section class="row ph-mv sm-margin-left">
             <generic-content-block
               :visible="ourMissionConfig.visible"
               :vOrientation="ourMissionConfig.vOrientation"
               :content="ourMission"
             ></generic-content-block>
           </app-content-section>
+          <!-- Our next Event -->
+          <app-content-section class="row ph-mv sm-margin-left" color="greyish">
+            <div class="content-wrapper">
+              <div class="row row-centered">
+                <div class="col col-large-10 col-xlarge-8">
+                  <h2 class="heading centered scroll-effect">
+                    {{ $t("section-events-heading") }}
+                  </h2>
+
+                  <div class="margin-bottom">
+                    <event-list :limit="1"></event-list>
+                  </div>
+
+                  <div class="button-group centered">
+                    <router-link
+                      tag="button"
+                      to="/events"
+                      class="button button-secondary scroll-effect"
+                      >{{ $t("section-events-button") }}</router-link
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </app-content-section>
         </div>
       </div>
     </app-content-section>
 
     <!-- Our next Event -->
-    <app-content-section color="light-greyish">
+    <!-- <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 col-xlarge-8">
@@ -152,7 +181,7 @@
           </div>
         </div>
       </div>
-    </app-content-section>
+    </app-content-section> -->
 
     <!-- Do you have a project in mind? -->
     <app-content-section>
@@ -343,6 +372,8 @@ export default {
       ourCommunityConfig: { vOrientation: false, visible: true },
       ourMission: {},
       ourMissionConfig: { vOrientation: true, visible: true },
+      news: [],
+      newsConfig: { visible: true },
     };
   },
   components: {
@@ -586,12 +617,79 @@ export default {
         },
       };
     },
+    setNews() {
+      this.news = [
+        {
+          title: {
+            content: {
+              en: "News #1",
+              de: "Nachrichten #1",
+            },
+            config: { visible: true },
+          },
+          date: new Date().toDateString(),
+          description: {
+            content: {
+              en: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
+            },
+            config: { visible: true },
+          },
+        },
+        {
+          title: {
+            content: {
+              en: "News #2",
+              de: "Nachrichten #2",
+            },
+            config: { visible: true },
+          },
+          date: new Date().toDateString(),
+          description: {
+            content: {
+              en: `At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 😄`,
+              de: `At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
+            },
+            config: { visible: true },
+          },
+        },
+        {
+          title: {
+            content: {
+              en: "News #3",
+              de: "Nachrichten #2",
+            },
+            config: { visible: true },
+          },
+          date: new Date().toDateString(),
+          description: {
+            content: {
+              en: `At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 😄`,
+              de: `At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
+            },
+            config: { visible: true },
+          },
+        },
+      ];
+    },
   },
   created() {
     this.setCoverInfo();
     this.setProjectList();
     this.setOurCommunity();
     this.setOurMission();
+    this.setNews();
   },
 };
 </script>

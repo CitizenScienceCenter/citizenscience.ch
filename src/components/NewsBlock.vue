@@ -1,10 +1,12 @@
 <i18n>
 {
   "en": {
-    "section-heading": "News"
+    "section-heading": "News",
+    "more-button": "More"
   },
   "de": {
-    "section-heading": "Nachrichten"}
+    "section-heading": "Nachrichten",
+    "more-button": "Mehr"}
 }
 </i18n>
 <template>
@@ -39,6 +41,9 @@
         <transition name="slide-fade" mode="out-in">
           <p :key="indexCurrentNew">
             {{ localTranslation(currentNew.description.content) }}
+            <a @click="openUrlTab(currentNew.link)"
+              >{{ $t("more-button") }}</a
+            >
           </p>
         </transition>
       </div>
@@ -72,21 +77,42 @@ export default {
       if (!url) {
         return;
       }
-      var win = window.open(url, "_self");
+      var win = window.open(url, "_blank");
       win.focus();
     },
     setData() {
-      this.news = this.content.map((x, i) => this.validateNewsContent(x, i));
+      this.news = this.content
+        .map((x, i) => this.validateNewsContent(x, i))
+        .filter((nw) => typeof nw != "undefined");
+      console.log(this.news);
     },
     validateNewsContent(n, i) {
       // This variable avoid undefined or null errors
-      const keys = ["title", "date", "description"];
+      const keys = ["title", "date", "description", "link"];
       const item = {};
+      // Due to is a dyamic component is required filter the complete information
+      if (
+        keys.some((x) => typeof n[x] == "undefined") ||
+        Object.values(n).some((x) => x == null)
+      ) {
+        return;
+      }
       item["index"] = i;
       keys.forEach((key) => {
-        item[key] = n[key] || null;
+        item[key] = n[key];
       });
+      item.description.content = this.validateDescriptionLength(
+        item.description.content
+      );
       return item;
+    },
+    validateDescriptionLength(description) {
+      // Here is fixed the maximun number of words and characters for news description
+      const MAXCHARS = 350;
+      Object.keys(description).map(function(key) {
+        description[key] = description[key].slice(0, MAXCHARS) + "... ";
+      });
+      return description;
     },
 
     countDownTimer() {
@@ -113,7 +139,9 @@ export default {
   },
   created() {
     this.setData();
-    if (this.news.length > 1 && this.timeToRefresh > 0) this.countDownTimer();
+    if (this.news.length > 0 && this.timeToRefresh > 0) {
+      this.countDownTimer();
+    }
   },
 };
 </script>
@@ -121,69 +149,88 @@ export default {
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
 
-.heading-section {
-  padding-left: $spacing-3;
-}
-.text-section {
-  padding-left: $spacing-2;
-  h3 {
-    font-weight: 700;
+.news {
+  height: 30vh;
+  position: relative;
+  box-sizing: border-box;
+  .heading-section {
+    padding-left: $spacing-3;
+    .heading {
+      margin-bottom: 0 !important;
+    }
   }
-  p {
-    font-size: $font-size-tiny;
+  .text-section {
+    padding-left: $spacing-2;
     padding-bottom: $spacing-2;
+    h3 {
+      font-weight: 700;
+    }
+    p {
+      font-size: $font-size-tiny;
+      a {
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+    .date {
+      font-size: $font-size-tiny;
+    }
   }
-  .date {
-    font-size: $font-size-tiny;
+  .slide-fade-enter-active {
+    transition: all 0.5s ease;
   }
-}
-.slide-fade-enter-active {
-  transition: all 0.5s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
+  .slide-fade-leave-active {
+    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active for <2.1.8 */ {
-  transform: translateX(20px);
-  opacity: 0;
+    transform: translateX(20px);
+    opacity: 0;
+  }
 }
 @media only screen and (min-width: $viewport-mobile-large) {
-  .text-section {
-    p {
-      font-size: $font-size-mini;
+  .news {    
+    .text-section {
+      padding-left: $spacing-1;
+      p {
+        font-size: $font-size-mini;
+      }
     }
   }
 }
 @media only screen and (min-width: $viewport-tablet-portrait) {
-  .text-section {
-    p {
-      font-size: calc((2vw + 1.3vh) / 2);
+  .news {
+    height: 35vh;
+    .text-section {
+      padding-left: $spacing-2;
+      p {
+        font-size: calc((2vw + 1.5vh) / 2);
+      }
     }
   }
 }
 @media only screen and (min-width: $viewport-large) {
-  .text-section {
-    padding-left: $spacing-1;
-    p {
-      font-size: $font-size-small;
+  .news {
+    .text-section {
+      padding-left: $spacing-1;
     }
   }
 }
 @media only screen and (min-width: $viewport-xlarge) {
-  .text-section {
-    p {
-      font-size: calc((2vw + 1.3vh) / 2);
-    }
-    .date {
-      font-size: $font-size-mini;
+  .news {
+    .text-section {
+      .date {
+        font-size: $font-size-mini;
+      }
     }
   }
 }
 @media only screen and (min-width: $viewport-xxlarge) {
-  .text-section {
-    p {
-      font-size: $font-size-normal;
+  .news {
+    .text-section {
+      p {
+        font-size: $font-size-normal;
+      }
     }
   }
 }

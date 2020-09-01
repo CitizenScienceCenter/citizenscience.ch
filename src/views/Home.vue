@@ -98,12 +98,14 @@
             ></project-cards-block>
           </app-content-section>
           <!-- News component  -->
-          <app-content-section class="row ph-mv" color="light-greyish">
+          <app-content-section
+            class="row ph-mv sm-margin-right"
+            color="greyish"
+          >
             <news-block
               :visible="newsConfig.visible"
               :content="news"
-              :timeToRefresh="20"
-              style="height: 30vh"
+              :timeToRefresh="10"
             >
               ></news-block
             >
@@ -129,7 +131,7 @@
             ></generic-content-block>
           </app-content-section>
           <!-- Our next Event -->
-          <app-content-section class="row ph-mv sm-margin-left" color="greyish">
+          <!-- <app-content-section class="row ph-mv sm-margin-left" color="greyish">
             <div class="content-wrapper">
               <div class="row row-centered">
                 <div class="col col-large-10 col-xlarge-8">
@@ -152,7 +154,7 @@
                 </div>
               </div>
             </div>
-          </app-content-section>
+          </app-content-section> -->
         </div>
       </div>
     </app-content-section>
@@ -622,21 +624,29 @@ export default {
         {
           title: {
             content: {
-              en: "News #1",
-              de: "Nachrichten #1",
+              en: "Citizen Science",
+              de: "Bürgerwissenschaft",
             },
-            config: { visible: true },
           },
           date: new Date().toDateString(),
+          link: "https://en.wikipedia.org/wiki/Citizen_science",
           description: {
             content: {
-              en: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
+              en: `Citizen science (CS; also known as community science, crowd science, 
+              crowd-sourced science, civic science, volunteer monitoring, or online citizen 
+              science) is scientific research conducted, in whole or in part, by amateur 
+              (or nonprofessional) scientists.[1] Citizen science is sometimes described as 
+              "public participation in scientific research," participatory monitoring, 
+              and participatory action research whose outcomes are often advancements 
+              in scientific research, as well as an increase in the public's understanding 
+              of science.[2][3] Based on Alexa rankings[4] iNaturalist is currently 
+              the most popular citizen science website[5] followed by eBird[6] and then 
+              Zooniverse[7] in second and third place respectively`,
+              de: `Citizen Science (Bürgerwissenschaft) ist eine Form der Offenen Wissenschaft, 
+              ei der Projekte unter Mithilfe von oder komplett durch interessierte Laien 
+              durchgeführt werden. Sie melden Beobachtungen, führen Messungen durch oder 
+              werten Daten aus.`,
             },
-            config: { visible: true },
           },
         },
         {
@@ -645,9 +655,9 @@ export default {
               en: "News #2",
               de: "Nachrichten #2",
             },
-            config: { visible: true },
           },
           date: new Date().toDateString(),
+          link: "https://lab.citizenscience.ch/",
           description: {
             content: {
               en: `At vero eos et accusam et justo duo dolores
@@ -657,16 +667,14 @@ export default {
             et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
             Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
             },
-            config: { visible: true },
           },
         },
         {
           title: {
             content: {
               en: "News #3",
-              de: "Nachrichten #2",
+              de: "Nachrichten #3",
             },
-            config: { visible: true },
           },
           date: new Date().toDateString(),
           description: {
@@ -678,7 +686,6 @@ export default {
             et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
             Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
             },
-            config: { visible: true },
           },
         },
       ];

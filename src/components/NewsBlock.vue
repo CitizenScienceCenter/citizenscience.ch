@@ -24,26 +24,24 @@
     <div class="row row-centered text-section">
       <div class="col col-12 scroll-effect">
         <transition name="slide-fade" mode="out-in">
-          <span :key="indexCurrentNew" class="date">
-            {{ currentNew.date }}
+          <span :key="index" class="date">
+            {{ news[index].date }}
           </span>
         </transition>
       </div>
       <div class="col col-12 scroll-effect">
         <transition name="slide-fade" mode="out-in">
-          <h3 :key="indexCurrentNew">
-            {{ localTranslation(currentNew.title.content) }}
+          <h3 :key="index">
+            {{ localTranslation(news[index].title.content) }}
           </h3>
         </transition>
       </div>
       <!-- Text sub-section Content  -->
       <div class="col col-12 scroll-effect ">
         <transition name="slide-fade" mode="out-in">
-          <p :key="indexCurrentNew">
-            {{ localTranslation(currentNew.description.content) }}
-            <a @click="openUrlTab(currentNew.link)"
-              >{{ $t("more-button") }}</a
-            >
+          <p :key="index">
+            {{ localTranslation(news[index].description.content) }}
+            <a @click="openUrlTab(news[index].link)" v-show="news[index].link">...{{ $t("more-button") }}</a>
           </p>
         </transition>
       </div>
@@ -57,8 +55,7 @@ export default {
     return {
       countDown: 0,
       news: [],
-      currentNew: {},
-      indexCurrentNew: 0,
+      index: 0,
       toggle: false,
     };
   },
@@ -88,7 +85,7 @@ export default {
     },
     validateNewsContent(n, i) {
       // This variable avoid undefined or null errors
-      const keys = ["title", "date", "description", "link"];
+      const keys = ["title", "date", "description"];
       const item = {};
       // Due to is a dyamic component is required filter the complete information
       if (
@@ -97,10 +94,12 @@ export default {
       ) {
         return;
       }
-      item["index"] = i;
+      // This section looking the required keys      
       keys.forEach((key) => {
         item[key] = n[key];
       });
+      item["index"] = i;
+      item["link"] = n.link || null;
       item.description.content = this.validateDescriptionLength(
         item.description.content
       );
@@ -110,7 +109,7 @@ export default {
       // Here is fixed the maximun number of words and characters for news description
       const MAXCHARS = 350;
       Object.keys(description).map(function(key) {
-        description[key] = description[key].slice(0, MAXCHARS) + "... ";
+        description[key] = description[key].slice(0, MAXCHARS);
       });
       return description;
     },
@@ -127,11 +126,7 @@ export default {
             ? this.timeToRefresh
             : 30;
         this.countDown = time;
-        this.currentNew = this.news[this.indexCurrentNew];
-        this.indexCurrentNew =
-          this.indexCurrentNew < this.news.length - 1
-            ? this.indexCurrentNew + 1
-            : 0;
+        this.index = this.index < this.news.length - 1 ? this.index + 1 : 0;
         this.toggle = !this.toggle;
         this.countDownTimer();
       }
@@ -189,7 +184,7 @@ export default {
   }
 }
 @media only screen and (min-width: $viewport-mobile-large) {
-  .news {    
+  .news {
     .text-section {
       padding-left: $spacing-1;
       p {
@@ -212,13 +207,13 @@ export default {
 @media only screen and (min-width: $viewport-large) {
   .news {
     .text-section {
-      padding-left: $spacing-1;
     }
   }
 }
 @media only screen and (min-width: $viewport-xlarge) {
   .news {
     .text-section {
+      padding-left: $spacing-1;
       .date {
         font-size: $font-size-mini;
       }
@@ -228,6 +223,7 @@ export default {
 @media only screen and (min-width: $viewport-xxlarge) {
   .news {
     .text-section {
+      padding-left: 0;
       p {
         font-size: $font-size-normal;
       }

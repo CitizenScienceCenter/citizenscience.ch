@@ -131,7 +131,7 @@
             ></generic-content-block>
           </app-content-section>
           <!-- Our next Event -->
-          <!-- <app-content-section class="row ph-mv sm-margin-left" color="greyish">
+          <app-content-section class="row ph-mv sm-margin-left" color="greyish">
             <div class="content-wrapper">
               <div class="row row-centered">
                 <div class="col col-large-10 col-xlarge-8">
@@ -154,7 +154,7 @@
                 </div>
               </div>
             </div>
-          </app-content-section> -->
+          </app-content-section>
         </div>
       </div>
     </app-content-section>

@@ -16,43 +16,40 @@
         >
         <router-link tag="div" class="event" :to="'/events/' + event.path">
           <div class="row row-wrapping row-centered">
+            <!-- Image Subsection -->
             <div
-              class="col col-wrapping col-6 col-tablet-portrait-4 event-image"
-              v-if="true"
+              class="col col-wrapping event-image"
+              :class="validateImage('img-content', event)"
+              v-if="event.image && !hideImage"
             >
               <img :src="'/img/events/' + event.image" />
             </div>
-            <div class="col col-wrapping col-tablet-portrait-12">
+            <div
+              class="col col-wrapping"
+              :class="validateImage('text-content', event)"
+            >
+              <!-- Date Subsection -->
               <p class="event-date">
                 {{ eventDisplayDate(event.start, event.end) }}
               </p>
-
+              <!-- Title Subsection -->
               <h3 class="subheading event-title" v-html="event.title"></h3>
-
-              <p
-                v-if="event.abstract !== ''"
-                v-html="event.abstract"
-                class="event-abstract"
-              ></p>
-
+              <!-- Abstract Subsection -->
+              <div class="event-abstract" v-if="event.abstract">
+                <font-awesome-icon icon="info-circle" class="icon" />
+                <p v-if="event.abstract !== ''" v-html="event.abstract"></p>
+              </div>
+              <!-- Speakers Subsection -->
               <div class="event-speakers" v-if="event.speakers !== ''">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M256,256A128,128,0,1,0,128,128,128,128,0,0,0,256,256Zm89.6,32H328.9a174.08,174.08,0,0,1-145.8,0H166.4A134.43,134.43,0,0,0,32,422.4V464a48,48,0,0,0,48,48H432a48,48,0,0,0,48-48V422.4A134.43,134.43,0,0,0,345.6,288Z"
-                  />
-                </svg>
+                <font-awesome-icon icon="user" class="icon" />
                 <p v-html="event.speakers"></p>
               </div>
-
+              <!-- Location Subsection -->
               <div class="event-location">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M236.27,501.67C91,291,64,269.41,64,192,64,86,150,0,256,0S448,86,448,192c0,77.41-27,99-172.27,309.67a24,24,0,0,1-39.46,0ZM256,272a80,80,0,1,0-80-80A80,80,0,0,0,256,272Z"
-                  />
-                </svg>
+                <font-awesome-icon icon="map-marker-alt" class="icon" />
                 <p v-html="event.location"></p>
               </div>
-
+              <!-- Details button Subsection -->
               <div class="button-group" v-if="false">
                 <router-link
                   tag="button"
@@ -108,13 +105,45 @@ export default {
       type: Number,
       default: 0,
     },
-    heading: { type: Object, default: { text: null, visible: false } },
+    heading: {
+      type: Object,
+      default() {
+        return {
+          text: null,
+          visible: false,
+        };
+      },
+    },
     eventsButton: {
       type: Object,
-      default: { text: null, visible: false, disabled: true },
+      default() {
+        return {
+          text: null,
+          visible: false,
+          disabled: true,
+        };
+      },
     },
+    hideImage: { type: Boolean, default: false },
   },
   methods: {
+    validateImage(item, event) {
+      const viewConfig = {
+        withImage: {
+          "img-content": " col-6 col-tablet-portrait-4",
+          "text-content": " col-tablet-portrait-8 ",
+        },
+        withoutImage: {
+          "img-content": "col-large-4",
+          "text-content": "col-tablet-portrait-12",
+        },
+      };
+      let selectedView = viewConfig.withoutImage;
+      if (event.image && !this.hideImage) {
+        selectedView = viewConfig.withImage;
+      }
+      return selectedView[item];
+    },
     eventDisplayDate(start, end) {
       let startDate = new Date(start);
       let endDate = new Date(end);
@@ -225,12 +254,12 @@ export default {
   }
   .event {
     padding: $spacing-2 $spacing-3;
-    cursor: pointer;
+    cursor: pointer;    
     .event-image {
-      margin-bottom: -$spacing-2;
+      margin-bottom: $spacing-1;
       img {
         border-radius: 50%;
-        transform: scale(0.75) translateY(-10%);
+        transform: scale(0.9);
         max-height: 200px;
       }
     }
@@ -244,25 +273,20 @@ export default {
       margin-bottom: $spacing-1;
       font-size: $font-size-normal;
     }
-    .event-abstract {
-      margin-bottom: $spacing-1;
-      font-size: $font-size-mini;
-    }
+    .event-abstract,
     .event-speakers,
     .event-location {
-      font-size: $font-size-mini;
-      position: relative;
-      margin-bottom: $spacing-1;
-      svg {
-        position: absolute;
-        top: calc((#{$font-size-normal}* 1.5 - 20px) / 2);
-        left: 0;
-        width: 15px;
-        height: 15px;
-        fill: $color-secondary;
+      display: inline-flex;
+      width: 100%;
+      padding-left: $spacing-1;
+      .icon {
+        font-size: $font-size-small;
+        color: $color-secondary;
+        transform: translateY(20%);
       }
       p {
-        padding-left: calc(15px + #{$spacing-2});
+        padding-left: $spacing-1;
+        font-size: $font-size-mini;
       }
     }
     button {
@@ -276,18 +300,11 @@ export default {
       .event-title {
         font-size: $font-size-small;
       }
-      .event-abstract {
-        font-size: $font-size-mini;
-      }
+      .event-abstract,
       .event-speakers,
       .event-location {
-        font-size: calc((2vw + 1.5vh) / 2);
-        svg {
-          width: 10px;
-          height: 10px;
-        }
-        p {
-          padding-left: calc(10px + #{$spacing-1});
+        .icon {
+          font-size: $font-size-mini;
         }
       }
     }
@@ -296,45 +313,18 @@ export default {
 @media only screen and (min-width: $viewport-large) {
   .event-list {
     .event {
-      .event-speakers,
-      .event-location {
-        font-size: calc((2vw + 1.5vh) / 2);
-        svg {
-          width: 13px;
-          height: 13px;
-        }
-        p {
-          padding-left: calc(13px + #{$spacing-1});
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-width: $viewport-xlarge) {
-  .event-list {
-    .event {
-      .event-image {
-        margin-bottom: $spacing-1;
-        img {
-          transform: scale(1) translateY(10%);
-          max-height: 200px;
-        }
-      }
-      .event-date {
-        font-size: $font-size-small;
-      }
       .event-title {
         font-size: $font-size-normal;
       }
+      .event-abstract,
       .event-speakers,
       .event-location {
-        font-size: $font-size-small;
-        svg {
-          width: 15px;
-          height: 15px;
+        .icon {
+          font-size: $font-size-small;
         }
         p {
-          padding-left: calc(15px + #{$spacing-1});
+          padding-left: $spacing-1;
+          font-size: $font-size-small;
         }
       }
     }

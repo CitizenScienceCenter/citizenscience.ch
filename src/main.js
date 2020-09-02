@@ -11,6 +11,14 @@ import c3s from 'vuex-c3s';
 //import SimpleAnalytics from "simple-analytics-vue";
 import VueGtag from "vue-gtag";
 
+// FontAwesomeIcon section
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(fas)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 Vue.config.productionTip = false;
 
 

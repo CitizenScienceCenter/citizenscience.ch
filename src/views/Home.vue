@@ -140,8 +140,9 @@
               :eventsButton="{
                 text: $t('section-events-button'),
                 visible: true,
-                disabled: false,
+                disabled: false,                
               }"
+              :hideImage= true
             ></event-list>
           </app-content-section>
         </div>

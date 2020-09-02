@@ -208,7 +208,8 @@ export default {
     }
   }
   .text-section {
-    padding: 0 $spacing-4;
+    padding-left:$spacing-4;
+    padding-right:$spacing-3;
     p {
       font-size: $font-size-normal;
     }

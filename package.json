@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
     "crypto-js": "^3.1.9-1",
     "sass-loader": "^7.1.0",
     "simple-analytics-vue": "^1.1.0",
@@ -31,7 +33,7 @@
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.12.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "react-snap": "^1.23.0",
     "vue-template-compiler": "^2.5.17"
   },

@@ -183,6 +183,10 @@ export default {
     p {
       font-size: $font-size-small;
     }
+  }
+}
+@media only screen and (min-width: $viewport-large) {
+  .text-section {
     .button-section {
       .button {
         height: 35px;
@@ -215,11 +219,11 @@ export default {
       }
     }
     &.vertical {
-    p,
-    .button-section {
-      padding-left: $spacing-1;
+      p,
+      .button-section {
+        padding-left: $spacing-1;
+      }
     }
-  }
   }
 }
 </style>

@@ -4,6 +4,9 @@
     "page-title": "Citizen Science Center Zurich",
     "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
+    "section-events-heading": "Coming Up",
+    "section-events-button": "All Events",
+
     "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke (german only)",
     "project-hatespeech-topic": "Linguistics",
     "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
@@ -37,6 +40,9 @@
   "de": {
     "page-title": "Citizen Science Center Zürich",
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
+
+    "section-events-heading": "Demnächst",
+    "section-events-button": "Alle Ereignisse",
 
     "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke",
     "project-hatespeech-topic": "Sprachwissenschaften",
@@ -128,7 +134,15 @@
           </app-content-section>
           <!-- Our next Event -->
           <app-content-section class="row ph-mv sm-margin-left">
-            <event-list :limit="1"></event-list>
+            <event-list
+              :limit="2"
+              :heading="{ text: $t('section-events-heading'), visible: true }"
+              :eventsButton="{
+                text: $t('section-events-button'),
+                visible: true,
+                disabled: false,
+              }"
+            ></event-list>
           </app-content-section>
         </div>
       </div>
@@ -660,6 +674,9 @@ export default {
     margin: $spacing-2 0;
   }
 }
+.sm-margin-right {
+  margin-right: 0 !important;
+}
 @media only screen and (min-width: $viewport-large) {
   .row {
     &.ph-mv {
@@ -673,6 +690,9 @@ export default {
     &.ph-mv {
       padding: 0 $spacing-4;
     }
+  }
+  .sm-margin-right {
+    margin-right: $spacing-2 !important;
   }
 }
 </style>

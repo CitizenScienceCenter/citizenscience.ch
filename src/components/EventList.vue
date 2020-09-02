@@ -1,37 +1,28 @@
-<i18n>
-{
-    "en":{
-        "section-events-heading": "Our Next Event",
-        "section-events-button": "All Events"
-    },
-    "de":{
-        "section-events-heading": "Unser nächster Event",
-        "section-events-button": "Zu den Events"
-    }
-}
-</i18n>
 <template>
   <div class="event-list">
-      <!-- Heading Section -->
-    <div class="row row-centered extra-margin-top-2">
+    <!-- Heading Section -->
+    <div class="row row-centered extra-margin-top-2" v-if="heading.visible">
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
-          {{ $t("section-events-heading") }}
+          {{ heading.text }}
         </h2>
       </div>
     </div>
     <!-- Event section -->
     <div class="row row-centered" v-for="event in events" :key="event.path">
       <div class="scroll-effect">
-        <router-link :to="'/events/' + event.path" style="display:none">link</router-link>
+        <router-link :to="'/events/' + event.path" style="display:none"
+          >link</router-link
+        >
         <router-link tag="div" class="event" :to="'/events/' + event.path">
           <div class="row row-wrapping row-centered">
             <div
               class="col col-wrapping col-6 col-tablet-portrait-4 event-image"
+              v-if="true"
             >
               <img :src="'/img/events/' + event.image" />
             </div>
-            <div class="col col-wrapping col-tablet-portrait-8">
+            <div class="col col-wrapping col-tablet-portrait-12">
               <p class="event-date">
                 {{ eventDisplayDate(event.start, event.end) }}
               </p>
@@ -77,12 +68,13 @@
     </div>
 
     <!-- All events button -->
-    <div class="row button-section">
+    <div class="row button-section" v-if="eventsButton.visible">
       <router-link
         tag="button"
         to="/events"
         class="button button-secondary scroll-effect"
-        >{{ $t("section-events-button") }}</router-link
+        :disabled="eventsButton.disabled"
+        >{{ eventsButton.text }}</router-link
       >
     </div>
   </div>
@@ -115,6 +107,11 @@ export default {
     limit: {
       type: Number,
       default: 0,
+    },
+    heading: { type: Object, default: { text: null, visible: false } },
+    eventsButton: {
+      type: Object,
+      default: { text: null, visible: false, disabled: true },
     },
   },
   methods: {
@@ -149,7 +146,6 @@ export default {
         );
       } else {
         // different day
-        //console.log('different day');
         return (
           this.$t(this.i18nWeekdays[startDate.getDay()]) +
           ", " +
@@ -217,20 +213,24 @@ export default {
     padding-left: $spacing-3;
   }
   .button-section {
-    padding: $spacing-4 $spacing-3;
+    padding: $spacing-2 $spacing-3;
     .button {
       height: 30px;
       font-size: $font-size-mini;
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   }
   .event {
-    padding: 0 $spacing-3;
+    padding: $spacing-2 $spacing-3;
     cursor: pointer;
     .event-image {
-      margin-bottom: -$spacing-3;
+      margin-bottom: -$spacing-2;
       img {
         border-radius: 50%;
-        transform: scale(0.75) translateY(-15%);
+        transform: scale(0.75) translateY(-10%);
         max-height: 200px;
       }
     }
@@ -246,33 +246,97 @@ export default {
     }
     .event-abstract {
       margin-bottom: $spacing-1;
-      font-size: $font-size-small;
+      font-size: $font-size-mini;
     }
     .event-speakers,
     .event-location {
       font-size: $font-size-mini;
       position: relative;
+      margin-bottom: $spacing-1;
       svg {
         position: absolute;
-        top: calc((#{$font-size-normal}* 1.5 - 16px) / 2);
+        top: calc((#{$font-size-normal}* 1.5 - 20px) / 2);
         left: 0;
-        width: 16px;
-        height: 16px;
+        width: 15px;
+        height: 15px;
         fill: $color-secondary;
       }
       p {
-        padding-left: calc(16px + #{$spacing-2});
+        padding-left: calc(15px + #{$spacing-2});
       }
     }
-    .event-speakers {
-      margin-bottom: $spacing-1;
-    }
-    .event-location {
-      margin-bottom: $spacing-1;
-    }
-
     button {
       padding: 0;
+    }
+  }
+}
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .event-list {
+    .event {
+      .event-title {
+        font-size: $font-size-small;
+      }
+      .event-abstract {
+        font-size: $font-size-mini;
+      }
+      .event-speakers,
+      .event-location {
+        font-size: calc((2vw + 1.5vh) / 2);
+        svg {
+          width: 10px;
+          height: 10px;
+        }
+        p {
+          padding-left: calc(10px + #{$spacing-1});
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: $viewport-large) {
+  .event-list {
+    .event {
+      .event-speakers,
+      .event-location {
+        font-size: calc((2vw + 1.5vh) / 2);
+        svg {
+          width: 13px;
+          height: 13px;
+        }
+        p {
+          padding-left: calc(13px + #{$spacing-1});
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: $viewport-xlarge) {
+  .event-list {
+    .event {
+      .event-image {
+        margin-bottom: $spacing-1;
+        img {
+          transform: scale(1) translateY(10%);
+          max-height: 200px;
+        }
+      }
+      .event-date {
+        font-size: $font-size-small;
+      }
+      .event-title {
+        font-size: $font-size-normal;
+      }
+      .event-speakers,
+      .event-location {
+        font-size: $font-size-small;
+        svg {
+          width: 15px;
+          height: 15px;
+        }
+        p {
+          padding-left: calc(15px + #{$spacing-1});
+        }
+      }
     }
   }
 }

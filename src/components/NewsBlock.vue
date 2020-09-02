@@ -41,7 +41,9 @@
         <transition name="slide-fade" mode="out-in">
           <p :key="index">
             {{ localTranslation(news[index].description.content) }}
-            <a @click="openUrlTab(news[index].link)" v-show="news[index].link">...{{ $t("more-button") }}</a>
+            <a @click="openUrlTab(news[index].link)" v-show="news[index].link"
+              >...{{ $t("more-button") }}</a
+            >
           </p>
         </transition>
       </div>
@@ -94,7 +96,7 @@ export default {
       ) {
         return;
       }
-      // This section looking the required keys      
+      // This section looking the required keys
       keys.forEach((key) => {
         item[key] = n[key];
       });
@@ -206,17 +208,12 @@ export default {
 }
 @media only screen and (min-width: $viewport-large) {
   .news {
-    .text-section {
-    }
   }
 }
 @media only screen and (min-width: $viewport-xlarge) {
   .news {
     .text-section {
       padding-left: $spacing-1;
-      .date {
-        font-size: $font-size-mini;
-      }
     }
   }
 }
@@ -226,6 +223,9 @@ export default {
       padding-left: 0;
       p {
         font-size: $font-size-normal;
+      }
+      .date {
+        font-size: $font-size-mini;
       }
     }
   }

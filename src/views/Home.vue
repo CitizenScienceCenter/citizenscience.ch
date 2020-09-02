@@ -4,9 +4,6 @@
     "page-title": "Citizen Science Center Zurich",
     "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
-    "section-events-heading": "Our Next Event",
-    "section-events-button": "See all Events",
-
     "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke (german only)",
     "project-hatespeech-topic": "Linguistics",
     "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
@@ -40,9 +37,6 @@
   "de": {
     "page-title": "Citizen Science Center Zürich",
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
-
-    "section-events-heading": "Unser nächster Event",
-    "section-events-button": "Zu den Events",
 
     "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke",
     "project-hatespeech-topic": "Sprachwissenschaften",
@@ -86,6 +80,7 @@
     <!-- Content Section -->
     <app-content-section class="small-padding">
       <div class="row row-centered">
+        <!-- Left Column -->
         <div
           class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
         >
@@ -105,7 +100,7 @@
             <news-block
               :visible="newsConfig.visible"
               :content="news"
-              :timeToRefresh="10"
+              :timeToRefresh="20"
             >
               ></news-block
             >
@@ -119,6 +114,7 @@
             ></generic-content-block>
           </app-content-section>
         </div>
+        <!-- Right Column -->
         <div
           class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
         >
@@ -131,59 +127,12 @@
             ></generic-content-block>
           </app-content-section>
           <!-- Our next Event -->
-          <app-content-section class="row ph-mv sm-margin-left" color="greyish">
-            <div class="content-wrapper">
-              <div class="row row-centered">
-                <div class="col col-large-10 col-xlarge-8">
-                  <h2 class="heading centered scroll-effect">
-                    {{ $t("section-events-heading") }}
-                  </h2>
-
-                  <div class="margin-bottom">
-                    <event-list :limit="1"></event-list>
-                  </div>
-
-                  <div class="button-group centered">
-                    <router-link
-                      tag="button"
-                      to="/events"
-                      class="button button-secondary scroll-effect"
-                      >{{ $t("section-events-button") }}</router-link
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
+          <app-content-section class="row ph-mv sm-margin-left">
+            <event-list :limit="1"></event-list>
           </app-content-section>
         </div>
       </div>
     </app-content-section>
-
-    <!-- Our next Event -->
-    <!-- <app-content-section color="light-greyish">
-      <div class="content-wrapper">
-        <div class="row row-centered">
-          <div class="col col-large-10 col-xlarge-8">
-            <h2 class="heading centered scroll-effect">
-              {{ $t("section-events-heading") }}
-            </h2>
-
-            <div class="margin-bottom">
-              <event-list :limit="1"></event-list>
-            </div>
-
-            <div class="button-group centered">
-              <router-link
-                tag="button"
-                to="/events"
-                class="button button-secondary scroll-effect"
-                >{{ $t("section-events-button") }}</router-link
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </app-content-section> -->
 
     <!-- Do you have a project in mind? -->
     <app-content-section>

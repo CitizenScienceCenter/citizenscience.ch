@@ -51,6 +51,8 @@
   </div>
 </template>
 <script>
+import { getTranslation, openUrl } from "@/assets/support.js";
+
 export default {
   name: "GenericContentBlock",
   data() {
@@ -68,16 +70,10 @@ export default {
   },
   methods: {
     localTranslation(textContent) {
-      // Recieves the text content in multiple languages and return the selected
-      const lang = this.$i18n.locale;
-      return textContent[lang] || textContent.en;
+      return getTranslation(textContent, this.$i18n.locale);
     },
     openUrlTab: function(url) {
-      if (!url) {
-        return;
-      }
-      var win = window.open(url, "_blank");
-      win.focus();
+      openUrl(url)
     },
     setData() {
       this.news = this.content

@@ -1,5 +1,5 @@
 <template>
-  <div class="event-list">
+  <div class="event-list" v-if="events && events.length != 0 && visible">
     <!-- Heading Section -->
     <div class="row row-centered extra-margin-top-2" v-if="heading.visible">
       <div class="col col-12 scroll-effect heading-section">
@@ -124,6 +124,7 @@ export default {
         };
       },
     },
+    visible: Boolean,
     hideImage: { type: Boolean, default: false },
   },
   methods: {

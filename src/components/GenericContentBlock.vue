@@ -6,7 +6,7 @@
         content.constructor === Object
     "
   >
-    <!-- Section Title  -->
+    <!-- Heading Section -->
     <div class="row row-centered " v-if="heading.config.visible">
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
@@ -14,7 +14,7 @@
         </h2>
       </div>
     </div>
-    <!-- Section Content  -->
+    <!-- Content Section -->
     <div class="row row-centered">
       <!-- Image sub-section Content  -->
       <div
@@ -30,7 +30,7 @@
             class="col col-12 centered"
             v-if="img_description.config.visible"
           >
-            <p>{{ localTranslation(img_description.content) }}</p>
+            <p>{{ this.localTranslation(img_description.content) }}</p>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
         :class="validateOrientation('text-content')"
       >
         <div class="row" v-if="description.config.visible">
-          <p>{{ localTranslation(description.content) }}</p>
+          <p>{{ this.localTranslation(description.content) }}</p>
         </div>
         <div
           class="row button-section"
@@ -51,7 +51,7 @@
             @click="openUrlTab(button.link)"
             :disabled="button.config.disabled"
           >
-            {{ localTranslation(button.content) }}
+            {{ this.localTranslation(button.content) }}
           </button>
         </div>
       </div>
@@ -59,6 +59,8 @@
   </div>
 </template>
 <script>
+import { getTranslation, openUrl } from "@/assets/support.js";
+
 export default {
   name: "GenericContentBlock",
   data() {
@@ -76,16 +78,10 @@ export default {
   },
   methods: {
     localTranslation(textContent) {
-      // Recieves the text content in multiple languages and return the selected
-      const lang = this.$i18n.locale;
-      return textContent[lang] || textContent.en;
+      return getTranslation(textContent, this.$i18n.locale);
     },
     openUrlTab: function(url) {
-      if (!url) {
-        return;
-      }
-      var win = window.open(url, "_self");
-      win.focus();
+      openUrl(url, true);
     },
     validateOrientation: function(e) {
       const viewConfig = {
@@ -123,6 +119,9 @@ export default {
 
 .heading-section {
   padding-left: $spacing-3;
+  .heading {
+    margin-bottom: $spacing-2;
+  }
 }
 .img-section {
   .col-image {
@@ -174,10 +173,7 @@ export default {
     .col-image {
       transform: scale(0.8) translateY(-5%);
       margin-bottom: -$spacing-2;
-    }
-    p {
-      font-size: $font-size-small;
-    }
+    }    
   }
   .text-section {
     p {
@@ -208,8 +204,8 @@ export default {
     }
   }
   .text-section {
-    padding-left:$spacing-4;
-    padding-right:$spacing-3;
+    padding-left: $spacing-4;
+    padding-right: $spacing-3;
     p {
       font-size: $font-size-normal;
     }
@@ -223,6 +219,16 @@ export default {
       p,
       .button-section {
         padding-left: $spacing-1;
+      }
+    }
+  }
+}
+@media only screen and (min-width: $viewport-xxlarge) {
+  .text-section {
+    &.vertical {
+      p,
+      .button-section {
+        padding-left: $spacing-2;
       }
     }
   }

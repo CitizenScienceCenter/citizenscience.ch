@@ -7,6 +7,8 @@
     "section-events-heading": "Coming Up",
     "section-events-button": "All Events",
 
+    "section-social-heading": "Follow Us",
+
     "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke (german only)",
     "project-hatespeech-topic": "Linguistics",
     "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
@@ -43,6 +45,8 @@
 
     "section-events-heading": "Demnächst",
     "section-events-button": "Alle Ereignisse",
+
+    "section-social-heading": "Folgen Sie uns",
 
     "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke",
     "project-hatespeech-topic": "Sprachwissenschaften",
@@ -135,15 +139,23 @@
           <!-- Our next Event -->
           <app-content-section class="row ph-mv sm-margin-left">
             <event-list
-              :limit="2"
+              :limit="eventsConfig.limit"
               :heading="{ text: $t('section-events-heading'), visible: true }"
+              :hideImage="eventsConfig.hideImg"
               :eventsButton="{
                 text: $t('section-events-button'),
                 visible: true,
-                disabled: false,                
-              }"
-              :hideImage= true
+                disabled: false,
+              }"              
+              :visible="eventsConfig.visible"
             ></event-list>
+          </app-content-section>
+          <!-- Twitter embed feed -->
+          <app-content-section class="row ph-mv sm-margin-left">
+            <social-feed-block
+              :visible="true"
+              :heading="{ text: $t('section-social-heading'), visible: true }"
+            ></social-feed-block>
           </app-content-section>
         </div>
       </div>
@@ -322,6 +334,7 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import ProjectCardsBlock from "@/components/ProjectCardsBlock";
 import NewsBlock from "@/components/NewsBlock";
+import SocialFeedBlock from "@/components/SocialFeedBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 import EventTeaser from "../components/EventTeaser";
@@ -340,6 +353,7 @@ export default {
       ourMissionConfig: { vOrientation: true, visible: true },
       news: [],
       newsConfig: { visible: true },
+      eventsConfig: { visible: true, limit: 1, hideImg: true },
     };
   },
   components: {
@@ -349,6 +363,7 @@ export default {
     ProjectCardsBlock,
     GenericContentBlock,
     NewsBlock,
+    SocialFeedBlock,
     "app-cover": HeadCoverBlock,
     "app-content-section": ContentSection,
     "app-footer": Footer,
@@ -551,7 +566,7 @@ export default {
           config: { visible: true },
         },
         button: {
-          link: "null",
+          link: "/citizenscience/zurichstyle",
           content: { en: "Learn More", de: "mehr erfahren" },
           config: { disabled: false, visible: true },
         },
@@ -577,7 +592,7 @@ export default {
           config: { visible: true },
         },
         button: {
-          link: "null",
+          link: "/about/mission",
           content: { en: "Learn More", de: "mehr erfahren" },
           config: { disabled: false, visible: true },
         },

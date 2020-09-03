@@ -2,7 +2,10 @@
   <div
     class="project"
     @click.prevent="openInNewTab(project.link)"
-    :class="{ 'not-allowed': project.button.config.visible && project.button.config.disabled }"
+    :class="{
+      'not-allowed':
+        project.button.config.visible && project.button.config.disabled,
+    }"
   >
     <div class="project-info">
       <div class="row row-reverse-large row-centered row-middle row-wrapping">

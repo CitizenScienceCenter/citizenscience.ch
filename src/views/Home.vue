@@ -105,7 +105,7 @@
           <!-- News component  -->
           <app-content-section
             class="row ph-mv sm-margin-right"
-            color="greyish"
+            color="light-greyish"
           >
             <news-block
               :visible="newsConfig.visible"
@@ -162,7 +162,7 @@
     </app-content-section>
 
     <!-- Do you have a project in mind? -->
-    <app-content-section>
+    <!-- <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered row-middle">
           <div
@@ -199,10 +199,10 @@
           </div>
         </div>
       </div>
-    </app-content-section>
+    </app-content-section> -->
 
     <!-- Citizen Science «Zurich Style» -->
-    <app-content-section color="light-greyish">
+    <!-- <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered row-middle row-reverse-large">
           <div class="col col-10 col-large-6 col-wrapping">
@@ -220,7 +220,6 @@
               <h2 class="heading centered left-aligned-large">
                 {{ $t("section-explanation-heading") }}
               </h2>
-              <!-- <p class="lead" v-html="$t('section-explanation-lead')"></p> -->
               <p v-html="$t('section-explanation-text')"></p>
               <p class="centered left-aligned-large">
                 <router-link
@@ -234,7 +233,7 @@
           </div>
         </div>
       </div>
-    </app-content-section>
+    </app-content-section> -->
 
     <!--
     <app-content-section>
@@ -267,7 +266,7 @@
     -->
 
     <!-- A Joint Initiative -->
-    <app-content-section class="overflow-hidden">
+    <!-- <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-reverse-large">
           <div
@@ -319,7 +318,7 @@
           </div>
         </div>
       </div>
-    </app-content-section>
+    </app-content-section> -->
 
     <!-- Sign up for our Newsletter -->
     <section-newsletter-signup></section-newsletter-signup>

@@ -14,11 +14,11 @@
         <Timeline
           id="CitSciZurich"
           sourceType="profile"
+          class="scroll-effect"
           :options="{
             tweetLimit: '1',
-            chrome: 'nofooter noheader noborders',
-            width: '600',
-            height: '300',
+            chrome: 'nofooter noheader noborders transparent',
+            width: 600,
             lang: $i18n.locale,
             dnt: true,
           }"
@@ -81,12 +81,11 @@ export default {
   .heading-section {
     padding-left: $spacing-3;
     .heading {
-      margin-bottom: $spacing-2;
+      margin-bottom: $spacing-1;
     }
   }
   .content-section {
-    padding-left: $spacing-2;
-    transform: scaleY(0.65) scaleX(0.75) translateY(-25%);
+    padding: 0 $spacing-2;
   }
   .footer-section {
     padding-left: $spacing-3;
@@ -108,10 +107,21 @@ export default {
     }
   }
 }
+@media only screen and (min-width: $viewport-mobile-large) {
+  .social {
+    .content-section {
+      padding: 0 $spacing-8;
+      margin: -$spacing-3 0;
+      transform: scaleY(0.9);
+    }
+  }
+}
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .social {
     .content-section {
-      transform: scale(1) translateY(0%);
+      padding: 0 $spacing-2;
+      margin: 0;
+      transform: scale(1);
     }
   }
 }

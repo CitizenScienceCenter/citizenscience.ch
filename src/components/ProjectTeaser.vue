@@ -198,6 +198,7 @@ export default {
       text-transform: none;
       margin-bottom: $spacing-3;
       text-transform: uppercase;
+      transition: margin-bottom 0.5s ease-in-out;
     }
 
     p {
@@ -216,6 +217,17 @@ export default {
         transform: scale(1) translateX(-10%);
         max-height: 100px;
         border-radius: $border-radius;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+  .project-info:hover {
+    .vertical {
+      &.col-image {
+        img {
+          max-height: 110px;
+          position: relative;
+        }
       }
     }
   }
@@ -307,6 +319,7 @@ export default {
       padding: $spacing-2 $spacing-1;
       h3 {
         font-size: $font-size-normal;
+        margin-bottom: $spacing-1;
       }
       .project-type {
         font-size: $font-size-mini;
@@ -314,7 +327,6 @@ export default {
       }
       p {
         font-size: $font-size-tiny;
-        padding-bottom: $spacing-3;
         display: block;
       }
       .col-image {
@@ -337,7 +349,6 @@ export default {
       padding: $spacing-3 $spacing-1;
       p {
         font-size: $font-size-mini;
-        padding-bottom: $spacing-4;
       }
       .col-image {
         img {
@@ -361,7 +372,6 @@ export default {
       }
       p {
         font-size: $font-size-mini;
-        padding-bottom: $spacing-2;
       }
       .vertical {
         padding-bottom: $spacing-1;
@@ -373,9 +383,13 @@ export default {
       }
       .button {
         display: block;
-        transform: scale(0.9);
         position: relative;
-        margin-bottom: $spacing-4;
+        height: 35px;
+        font-size: $font-size-mini;
+        margin: 0 $spacing-2;
+        margin-bottom: $spacing-3;
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(200px);
       }
 
       .row {
@@ -391,6 +405,11 @@ export default {
 
     .project-image {
       background-position: 50% 10%;
+    }
+  }
+  .project-info:hover {
+    .button {
+      transform: translateY(0%);
     }
   }
 }
@@ -411,7 +430,6 @@ export default {
         padding: 0 $spacing-2;
       }
       .vertical {
-        padding-bottom: $spacing-2;
         &.col-image {
           img {
             transform: scale(1.7) translateY(15%);

@@ -438,9 +438,9 @@ export default {
           description: {
             content: {
               en:
-                "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
+                "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease.",
               de:
-                "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome von MS zu erlangen.",
+                "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome.",
             },
             config: { visible: true },
           },
@@ -453,7 +453,7 @@ export default {
               en: "Take part",
               de: "Mitmachen",
             },
-            config: { visible: true, disabled: true },
+            config: { visible: true, disabled: false },
           },
         },
         {
@@ -528,7 +528,7 @@ export default {
               en: "Contribute",
               de: "Beitragen",
             },
-            config: { visible: true, disabled: false },
+            config: { visible: false, disabled: false },
           },
         },
       ];

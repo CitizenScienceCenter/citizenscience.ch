@@ -1,13 +1,9 @@
 <i18n>
   {
   "en": {
-    "cover-button-projects": "Start contributing",
-    "cover-button-your-project": "Suggest a project",
     "joint-initiative-UZH_ETH": "A joint initiative by"
   },
   "de": {
-    "cover-button-projects": "Jetzt mitforschen",
-    "cover-button-your-project": "Neue Projektidee?",
     "joint-initiative-UZH_ETH": "Ein gemeinsamer Effort von"
   }
   }
@@ -16,66 +12,74 @@
   <section
     class="cover"
     :style="{ 'background-image': 'url(' + backgroundImage + ')' }"
+    v-if="br.visible"
   >
     <div class="content-wrapper">
       <div class="row">
         <div class="col">
-          <h2 class="cover-heading scroll-effect" v-if="heading.config.visible">
-            {{ localTranslation(heading.content) }}
+          <h2 class="cover-heading scroll-effect" v-if="br.heading.visible">
+            {{ localTranslation(coverInfo.title) }}
           </h2>
           <p
             class="cover-subheading scroll-effect scroll-effect-delayed-1"
-            v-if="subheading.config.visible"
+            v-if="br.subheading.visible"
           >
-            {{ localTranslation(subheading.content) }}
+            {{ localTranslation(coverInfo.lead) }}
           </p>
-          <!-- <p
-            class="button-group centered scroll-effect scroll-effect-delayed-2"
+          <div
+            class="button-group centered"
+            v-if="localTranslation(coverInfo.path)"
           >
-            <router-link
-              tag="button"
-              to="/contribute"
+            <!-- simple external link handler, with target _blank -->
+            <a
+              v-if="localTranslation(coverInfo.path).startsWith('http')"
+              :href="localTranslation(coverInfo.path)"
+              target="_blank"
               class="button button-primary-main"
-              >{{ $t("cover-button-projects") }}</router-link
+              >{{ localTranslation(coverInfo.button) }}</a
             >
             <router-link
-              tag="button"
-              to="/start"
-              class="button button-secondary button-secondary-inverted"
-              >{{ $t("cover-button-your-project") }}</router-link
+              v-else
+              :to="localTranslation(coverInfo.path)"
+              class="button button-primary-main"
+              >{{ localTranslation(coverInfo.button) }}</router-link
             >
-          </p> -->
+          </div>
         </div>
       </div>
     </div>
 
     <!-- UZH and ETH logos -->
-    <div class="uzh-eth" v-if="uzh_eth_logo.visible">
+    <div class="uzh-eth" v-if="br.uzh_eth_logo.visible">
       <span>{{ $t("joint-initiative-UZH_ETH") }}</span>
       <img
         v-if="this.$i18n.locale === 'en'"
         alt="University of Zurich / ETH Zurich"
         src="@/assets/shared/uzh_eth_logo_e_neg.svg"
         @click="logoClick($event)"
-        :class="{ disabled: uzh_eth_logo.disabled }"
+        :class="{ disabled: br.uzh_eth_logo.disabled }"
       />
       <img
         v-else
         alt="Universität Zürich / ETH Zürich"
         src="@/assets/shared/uzh_eth_logo_d_neg.svg"
         @click="logoClick($event)"
-        :class="{ disabled: uzh_eth_logo.disabled }"
+        :class="{ disabled: br.uzh_eth_logo.disabled }"
       />
     </div>
 
     <!-- Goal logos -->
-    <div class="bottom-right-logo" v-scroll-to="'#sdg'" v-if="sdg_logo.visible">
+    <div
+      class="bottom-right-logo"
+      v-scroll-to="'#sdg'"
+      v-if="br.sdg_logo.visible"
+    >
       <img v-if="goal" class="goal" :src="goalImage" />
       <img
         id="sdg_logo"
         src="@/assets/shared/sdg-logo-white.svg"
-        @click="openInNewTab('https://sdgs.un.org/goals', sdg_logo.disabled)"
-        :class="{ disabled: sdg_logo.disabled }"
+        @click="openInNewTab('https://sdgs.un.org/goals', br.sdg_logo.disabled)"
+        :class="{ disabled: br.sdg_logo.disabled }"
       />
     </div>
 
@@ -101,37 +105,42 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import { getTranslation, openUrl } from "@/assets/support.js";
+import news from "@/assets/cover_news.json";
+
 export default {
   name: "Cover",
   data() {
     return {
-      sdg_logo: { visible: true, disabled: false },
-      uzh_eth_logo: { visible: true, disabled: false },
-      heading: { content: {}, config: { visible: false } },
-      subheading: { content: {}, config: { visible: false } },
+      br: {},
+      coverInfo: {},
+      cover: news,
     };
   },
   props: {
-    coverInfo: Object,
     logosMitrends: Boolean,
     goal: String,
   },
   computed: {
+    ...mapGetters({ view: "viewconfig/getHomeConfig" }),
     goalImage() {
       return require("@/assets/shared/sdgs/neg/" + this.goal + ".svg");
     },
     backgroundImage() {
-      const img = this.coverInfo.img_background || "/img/cover.jpg";
+      const img = `/img/${this.coverInfo.image}` || "/img/cover.jpg";
       return img;
     },
   },
   methods: {
+    localTranslation(textContent) {
+      return getTranslation(textContent, this.$i18n.locale);
+    },
     openInNewTab: function(url, disabled = false) {
       if (disabled) {
         return;
       }
-      var win = window.open(url, "_blank");
-      win.focus();
+      openUrl(url);
     },
     logoClick: function(e) {
       // Validate first if logo is disabled
@@ -145,19 +154,17 @@ export default {
         this.openInNewTab("https://www.ethz.ch");
       }
     },
-    localTranslation(textContent) {
-      // Recieves the text content in multiple languages and return the selected
-      const lang = this.$i18n.locale;
-      return textContent[lang] || textContent.en;
-    },
     setCoverInfo() {
-      this.sdg_logo = this.coverInfo.sdg_logo || this.sdg_logo;
-      this.uzh_eth_logo = this.coverInfo.uzh_eth_logo || this.uzh_eth_logo;
-      this.heading = this.coverInfo.heading || this.heading;
-      this.subheading = this.coverInfo.subheading || this.subheading;
+      const coverlist = this.cover.news
+        .filter((slide) => Date.parse(slide.expiration) >= Date.now())
+        .sort(function(a, b) {
+          return Date.parse(a.expiration) - Date.parse(b.expiration);
+        });
+      this.coverInfo = coverlist[0] || this.cover.default;
     },
   },
   created() {
+    this.br = this.view("cover");
     this.setCoverInfo();
   },
   mounted: function() {
@@ -207,6 +214,8 @@ export default {
 
   .button {
     margin: $spacing-1;
+    transform: scale(0.75);
+    transition: transform 1 ease-in-out;
   }
 
   .uzh-eth {
@@ -338,7 +347,7 @@ export default {
         font-size: $font-size-large;
       }
       .cover-subheading {
-        font-size: $font-size-normal;
+        font-size: $font-size-small;
         margin-bottom: $spacing-2;
       }
     }
@@ -390,7 +399,7 @@ export default {
         font-size: $font-size-xlarge;
       }
       .cover-subheading {
-        font-size: $font-size-medium;
+        font-size: $font-size-normal;
       }
     }
   }
@@ -432,6 +441,9 @@ export default {
         }
       }
     }
+    .button {
+      transform: scale(0.9);
+    }
   }
 }
 
@@ -454,7 +466,7 @@ export default {
         font-size: $font-size-xxlarge;
       }
       .cover-subheading {
-        font-size: $font-size-large;
+        font-size: $font-size-medium;
       }
     }
   }

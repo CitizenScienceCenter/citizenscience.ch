@@ -9,16 +9,6 @@
 
     "section-social-heading": "Follow Us",
 
-    "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke (german only)",
-    "project-hatespeech-topic": "Linguistics",
-    "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
-    "project-hatespeech-button": "Take part",
-
-    "project-wenker-title": "Project Wenker",
-    "project-wenker-topic": "Linguistics",
-    "project-wenker-description": "Our first Citizen Science Project is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
-    "project-wenker-button": "Take part",
-
     "section-build-project-heading": "Do you have a project in mind? We can help you.",
     "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
     "section-build-project-button": "Learn more",
@@ -48,17 +38,6 @@
 
     "section-social-heading": "Folgen Sie uns",
 
-    "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke",
-    "project-hatespeech-topic": "Sprachwissenschaften",
-    "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
-    "project-hatespeech-button": "Mitmachen",
-
-    "project-wenker-title": "Projekt Wenker",
-    "project-wenker-topic": "Sprachwissenschaften",
-    "project-wenker-description": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben.",
-    "project-wenker-button": "Mitmachen",
-
-
     "section-build-project-heading": "Haben Sie eine Projekt-Idee? Wir helfen Ihnen!",
     "section-build-project-text": "Wir sind jederzeit offen für Austausch und Gespräch. Gerne überlegen wir mit Ihnen gemeinsam, wie man die Welt mit Citizen Science ein kleines Stück besser machen könnte. Treten Sie mit uns in Kontakt, wenn Sie eine Projektidee haben. Wir können Ihnen bei der Weiterentwicklung der Idee helfen und Ihnen bei positiver Evaluation unsere Tools und Expertise zur Verfügung stellen, um das Projekt realisieren.",
     "section-build-project-button": "Mehr erfahren",
@@ -85,7 +64,7 @@
 <template>
   <div>
     <!-- Cover component -->
-    <app-cover :coverInfo="coverInfo"></app-cover>
+    <app-cover></app-cover>
 
     <!-- Content Section -->
     <app-content-section class="small-padding">
@@ -146,7 +125,7 @@
                 text: $t('section-events-button'),
                 visible: true,
                 disabled: false,
-              }"              
+              }"
               :visible="eventsConfig.visible"
             ></event-list>
           </app-content-section>
@@ -160,165 +139,6 @@
         </div>
       </div>
     </app-content-section>
-
-    <!-- Do you have a project in mind? -->
-    <!-- <app-content-section>
-      <div class="content-wrapper">
-        <div class="row row-centered row-middle">
-          <div
-            class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect"
-          >
-            <div class="extra-ph-mv">
-              <img src="/img/graphic-question.png" />
-            </div>
-          </div>
-
-          <div
-            class="col col-large-5 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1"
-          >
-            <div>
-              <h2
-                class="heading centered left-aligned-large"
-                id="start-project"
-              >
-                {{ $t("section-build-project-heading") }}
-              </h2>
-              <p class="">
-                {{ $t("section-build-project-text") }}
-              </p>
-
-              <p class="centered left-aligned-large">
-                <router-link
-                  tag="button"
-                  to="/start"
-                  class="button button-secondary"
-                  >{{ $t("section-build-project-button") }}</router-link
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </app-content-section> -->
-
-    <!-- Citizen Science «Zurich Style» -->
-    <!-- <app-content-section color="light-greyish">
-      <div class="content-wrapper">
-        <div class="row row-centered row-middle row-reverse-large">
-          <div class="col col-10 col-large-6 col-wrapping">
-            <div>
-              <div class="extra-padding-large-h">
-                <img src="/img/graphic-citizen-science.png" />
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin"
-          >
-            <div>
-              <h2 class="heading centered left-aligned-large">
-                {{ $t("section-explanation-heading") }}
-              </h2>
-              <p v-html="$t('section-explanation-text')"></p>
-              <p class="centered left-aligned-large">
-                <router-link
-                  tag="button"
-                  to="/citizenscience"
-                  class="button button-secondary"
-                  >{{ $t("section-explanation-button") }}</router-link
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </app-content-section> -->
-
-    <!--
-    <app-content-section>
-      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
-        <div class="content-wrapper">
-          <div class="row row-centered row-in-background">
-            <div class="col col-tablet-portrait-10 col-large-10 col-large-before-2">
-              <img src="/img/device-mockup.png" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content-wrapper">
-        <div class="row row-middle">
-
-          <div class="col col-large-5 col-large-before-1 col-wrapping col-large-no-bottom-margin">
-            <div>
-              <h2 class="heading centered left-aligned-large">{{ $t('section-explanation-heading') }}</h2>
-              <p v-html="$t('section-explanation-text')"></p>
-              <p class="centered left-aligned-large">
-                <router-link tag="button" to="/citizenscience" class="button button-secondary">{{ $t('section-explanation-button') }}</router-link>
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </app-content-section>
-    -->
-
-    <!-- A Joint Initiative -->
-    <!-- <app-content-section class="overflow-hidden">
-      <div class="content-wrapper">
-        <div class="row row-reverse-large">
-          <div
-            class="col col-tablet-portrait-7 col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect"
-          >
-            <h2 class="heading centered left-aligned-large">
-              {{ $t("section-about-heading") }}
-            </h2>
-            <p>{{ $t("section-about-text") }}</p>
-            <p>
-              {{ $t("section-about-text-2") }}<br />
-              {{ $t("section-about-text-3") }}
-            </p>
-            <p class="centered left-aligned-large">
-              <img
-                v-if="this.$i18n.locale === 'en'"
-                class="uzh-eth-logo"
-                alt="University of Zurich / ETH Zurich"
-                src="@/assets/shared/uzh_eth_logo_e_pos.svg"
-              />
-              <img
-                v-else
-                alt="Universität Zürich / ETH Zürich"
-                class="uzh-eth-logo"
-                src="@/assets/shared/uzh_eth_logo_d_pos.svg"
-              />
-            </p>
-            <p class="centered left-aligned-large extra-margin-top">
-              <router-link
-                tag="button"
-                to="/about"
-                class="button button-secondary"
-                >{{ $t("section-about-button") }}</router-link
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1"
-      >
-        <div class="content-wrapper">
-          <div class="row row-centered">
-            <div
-              class="col col-tablet-portrait-10 col-large-7 col-large-after-1"
-            >
-              <img src="/img/uzh-eth.jpg" style="border-radius: 50%;" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </app-content-section> -->
 
     <!-- Sign up for our Newsletter -->
     <section-newsletter-signup></section-newsletter-signup>
@@ -336,14 +156,14 @@ import NewsBlock from "@/components/NewsBlock";
 import SocialFeedBlock from "@/components/SocialFeedBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
-import EventTeaser from "../components/EventTeaser";
 import EventList from "../components/EventList";
+
+import { mapMutations } from "vuex";
 
 export default {
   name: "Home",
   data() {
     return {
-      coverInfo: {},
       projectList: [],
       projectCardConfig: { vOrientation: true, visible: true },
       ourCommunity: {},
@@ -357,7 +177,6 @@ export default {
   },
   components: {
     EventList,
-    EventTeaser,
     SectionNewsletterSignup,
     ProjectCardsBlock,
     GenericContentBlock,
@@ -386,35 +205,10 @@ export default {
     };
   },
   methods: {
+    ...mapMutations({ setHomeConfig: "viewconfig/setHomeConfig" }),
     openInNewTab: function(url) {
       var win = window.open(url, "_blank");
       win.focus();
-    },
-    setCoverInfo: function() {
-      // TODO: This information will be replaced by database retrieved data
-      this.coverInfo = {
-        heading: {
-          content: {
-            en: "Next Generation Citizen Science",
-            de: "Citizen Science der nächsten Generation",
-          },
-          config: { visible: true },
-        },
-        subheading: {
-          content: {
-            en: "Citizen Science Center Zurich",
-            de: "Citizen Science Center Zürich",
-          },
-          config: { visible: true },
-        },
-        img_background: "https://citizenscience.ch/img/uzh-eth.jpg",
-        uzh_eth_logo: { disabled: false, visible: true },
-        sdg_logo: { disabled: false, visible: true },
-        extra_logos: {
-          logo_right: "https://citizenscience.ch/img/uzh-eth.jpg",
-          logo_left: "https://citizenscience.ch/img/uzh-eth.jpg",
-        },
-      };
     },
     setProjectList: function() {
       // TODO: This information will be replaced by database retrieved data
@@ -670,7 +464,9 @@ export default {
     },
   },
   created() {
-    this.setCoverInfo();
+    // Load the view configuration in vuex state
+    this.setHomeConfig();
+    
     this.setProjectList();
     this.setOurCommunity();
     this.setOurMission();

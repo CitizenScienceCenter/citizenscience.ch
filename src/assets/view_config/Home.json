@@ -4,6 +4,6 @@
     "heading": { "visible": true },
     "subheading": { "visible": true },
     "uzh_eth_logo": { "disabled": false, "visible": true },
-    "sdg_logo": { "disabled": true, "visible": true }
+    "sdg_logo": { "disabled": false, "visible": true }
   }
 }

@@ -36,17 +36,17 @@
               <h3 class="subheading event-title" v-html="event.title"></h3>
               <!-- Abstract Subsection -->
               <div class="event-abstract" v-if="event.abstract">
-                <font-awesome-icon icon="info-circle" class="icon" />
+                <i class="fas fa-info-circle icon"></i>
                 <p v-if="event.abstract !== ''" v-html="event.abstract"></p>
               </div>
               <!-- Speakers Subsection -->
               <div class="event-speakers" v-if="event.speakers !== ''">
-                <font-awesome-icon icon="user" class="icon" />
+                <i class="fas fa-user icon"></i>
                 <p v-html="event.speakers"></p>
               </div>
               <!-- Location Subsection -->
               <div class="event-location">
-                <font-awesome-icon icon="map-marker-alt" class="icon" />
+                <i class="fas fa-map-marker-alt icon"></i>
                 <p v-html="event.location"></p>
               </div>
               <!-- Details button Subsection -->
@@ -283,7 +283,7 @@ export default {
       .icon {
         font-size: $font-size-small;
         color: $color-secondary;
-        transform: translateY(20%);
+        transform: translateY(5%);
       }
       p {
         padding-left: $spacing-1;

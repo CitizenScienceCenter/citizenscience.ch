@@ -1,69 +1,51 @@
 [
   {
     "title": {
-      "content": {
-        "en": "Citizen Science",
-        "de": "Bürgerwissenschaft"
-      }
+      "en": "Citizen Science #1",
+      "de": "Bürgerwissenschaft #1"
     },
-    "date": new Date().toDateString(),
+    "date": "2020-12-30",
     "link": "https://en.wikipedia.org/wiki/Citizen_science",
     "description": {
-      "content": {
-        "en": `Citizen science (CS; also known as community science, crowd science, 
-          crowd-sourced science, civic science, volunteer monitoring, or online citizen 
-          science) is scientific research conducted, in whole or in part, by amateur 
-          (or nonprofessional) scientists.[1] Citizen science is sometimes described as 
-          "public participation in scientific research," participatory monitoring, 
-          and participatory action research whose outcomes are often advancements 
-          in scientific research, as well as an increase in the public's understanding 
-          of science.[2][3] Based on Alexa rankings[4] iNaturalist is currently 
-          the most popular citizen science website[5] followed by eBird[6] and then 
-          Zooniverse[7] in second and third place respectively`,
-        "de": `Citizen Science (Bürgerwissenschaft) ist eine Form der Offenen Wissenschaft, 
-          ei der Projekte unter Mithilfe von oder komplett durch interessierte Laien 
-          durchgeführt werden. Sie melden Beobachtungen, führen Messungen durch oder 
-          werten Daten aus.`
-      }
+      "en": "Citizen science (CS; also known as community science, crowd science, crowd-sourced science, civic science, volunteer monitoring, or online citizen science) is scientific research conducted, in whole or in part, by amateur (or nonprofessional) scientists.[1] Citizen science is sometimes described as participatory monitoring, and participatory action research whose outcomes are often advancements in scientific research, as well as an increase in the public's understanding of science.[2][3] Based on Alexa rankings[4] iNaturalist is currently the most popular citizen science website[5] followed by eBird[6] and then Zooniverse[7] in second and third place respectively",
+      "de": "Citizen Science (Bürgerwissenschaft) ist eine Form der Offenen Wissenschaft, bei der Projekte unter Mithilfe von oder komplett durch interessierte Laien durchgeführt werden. Sie melden Beobachtungen, führen Messungen durch oder werten Daten aus."
     }
   },
   {
     "title": {
-      "content": {
-        "en": "News #2",
-        "de": "Nachrichten #2"
-      }
+      "en": "News #2",
+      "de": "Nachrichten #2"
     },
-    "date": new Date().toDateString(),
+    "date": "2020-10-30",
     "link": "https://lab.citizenscience.ch/",
     "description": {
-      "content": {
-        "en": `At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 😄`,
-        "de": `At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`
-      }
+      "en": "😄 The term CS has multiple origins, as well as differing concepts.[8] It was first defined independently in the mid-1990s by Rick Bonney in the United States and Alan Irwin in the United Kingdom.[8][9][10] Alan Irwin, a British sociologist, defines CS as \"developing concepts of scientific citizenship which foregrounds the necessity of opening up science and science policy processes to the public\".[8] Irwin sought to reclaim two dimensions of the relationship between citizens and science: 1) that science should be responsive to citizens' concerns and needs; and 2) that citizens themselves could produce reliable scientific knowledge.[11] The American ornithologist Rick Bonney, unaware of Irwin's work, defined CS as projects in which nonscientists, such as amateur birdwatchers, voluntarily contributed scientific data. This describes a more limited role for citizens in scientific research than Irwin's conception of the term.",
+      "de": "😄 Der Begriff Citizen Science (CS) kennt mehrere Ursprünge und unterschiedliche Konzepte.[1] Rick Bonney in den USA und Alan Irwin im Vereinigten Königreich definierten ihn Mitte der 1990er-Jahre unabhängig voneinander.[1][2][3] Alan Irwin definiert CS im Bezug auf „seine Entwicklung von Konzepten wissenschaftlicher Bürgerschaft, welche die Notwendigkeit hervorheben, die Wissenschaften und Wissenschaftspolitik für die Gesellschaft zu öffnen“.[1] Rick Bonney definiert CS mit Bezug auf „gesellschaftliche Beteiligungs- und"
     }
   },
   {
     "title": {
-      "content": {
-        "en": "News #3",
-        "de": "Nachrichten #3"
-      }
+      "en": "News #3",
+      "de": "Nachrichten #3"
     },
-    "date": new Date().toDateString(),
+    "date": "2021-03-30",
+    "link": "https://www.citizenscience.ch/",
     "description": {
-      "content": {
-        "en": `At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 😄`,
-        "de": `At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`
-      }
+      "en": "🙂 The term CS has multiple origins, as well as differing concepts.[8] It was first defined independently in the mid-1990s by Rick Bonney in the United States and Alan Irwin in the United Kingdom.[8][9][10] Alan Irwin, a British sociologist, defines CS as \"developing concepts of scientific citizenship which foregrounds the necessity of opening up science and science policy processes to the public\".[8] Irwin sought to reclaim two dimensions of the relationship between citizens and science: 1) that science should be responsive to citizens' concerns and needs; and 2) that citizens themselves could produce reliable scientific knowledge.[11] The American ornithologist Rick Bonney, unaware of Irwin's work, defined CS as projects in which nonscientists, such as amateur birdwatchers, voluntarily contributed scientific data. This describes a more limited role for citizens in scientific research than Irwin's conception of the term.",
+      "de": "🙂 Der Begriff Citizen Science (CS) kennt mehrere Ursprünge und unterschiedliche Konzepte.[1] Rick Bonney in den USA und Alan Irwin im Vereinigten Königreich definierten ihn Mitte der 1990er-Jahre unabhängig voneinander.[1][2][3] Alan Irwin definiert CS im Bezug auf „seine Entwicklung von Konzepten wissenschaftlicher Bürgerschaft, welche die Notwendigkeit hervorheben, die Wissenschaften und Wissenschaftspolitik für die Gesellschaft zu öffnen“.[1] Rick Bonney definiert CS mit Bezug auf „gesellschaftliche Beteiligungs- und"
+    }
+  }
+  ,
+  {
+    "title": {
+      "en": "News #4",
+      "de": "Nachrichten #4"
+    },
+    "date": "2020-03-30",
+    "link": "https://www.citizenscience.ch/",
+    "description": {
+      "en": "👨‍🔬👩‍🔬 The term CS has multiple origins, as well as differing concepts.[8] It was first defined independently in the mid-1990s by Rick Bonney in the United States and Alan Irwin in the United Kingdom.[8][9][10] Alan Irwin, a British sociologist, defines CS as \"developing concepts of scientific citizenship which foregrounds the necessity of opening up science and science policy processes to the public\".[8] Irwin sought to reclaim two dimensions of the relationship between citizens and science: 1) that science should be responsive to citizens' concerns and needs; and 2) that citizens themselves could produce reliable scientific knowledge.[11] The American ornithologist Rick Bonney, unaware of Irwin's work, defined CS as projects in which nonscientists, such as amateur birdwatchers, voluntarily contributed scientific data. This describes a more limited role for citizens in scientific research than Irwin's conception of the term.",
+      "de": "👨‍🔬👩‍🔬 Der Begriff Citizen Science (CS) kennt mehrere Ursprünge und unterschiedliche Konzepte.[1] Rick Bonney in den USA und Alan Irwin im Vereinigten Königreich definierten ihn Mitte der 1990er-Jahre unabhängig voneinander.[1][2][3] Alan Irwin definiert CS im Bezug auf „seine Entwicklung von Konzepten wissenschaftlicher Bürgerschaft, welche die Notwendigkeit hervorheben, die Wissenschaften und Wissenschaftspolitik für die Gesellschaft zu öffnen“.[1] Rick Bonney definiert CS mit Bezug auf „gesellschaftliche Beteiligungs- und"
     }
   }
 ]

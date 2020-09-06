@@ -28,7 +28,7 @@
 
                       <h2 class="heading centered scroll-effect">{{ $t('upcoming-events-heading') }}</h2>
 
-                      <event-list></event-list>
+                      <event-list visible></event-list>
 
                   </div>
               </div>
@@ -42,7 +42,7 @@
 
                       <h2 class="heading centered scroll-effect">{{ $t('past-events-heading') }}</h2>
 
-                      <event-list past></event-list>
+                      <event-list past visible></event-list>
 
                   </div>
               </div>

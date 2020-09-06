@@ -6,7 +6,7 @@
     "uzh_eth_logo": { "disabled": false, "visible": true },
     "sdg_logo": { "disabled": false, "visible": true }
   },
-  "news": { "visible": true, "timeToRefresh": 2 },
+  "news": { "visible": true, "timeToRefresh": 10 },
   "bottom_left": {
     "visible": true,
     "vOrientation": false,

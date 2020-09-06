@@ -29,16 +29,8 @@
     <div class="row">
       <div class="col col-12 scroll-effect footer-section">
         <span>Follow us on</span>
-        <font-awesome-icon
-          :icon="['fab', 'facebook']"
-          class="icon fcbk"
-          @click="openUrlTab(fb_link)"
-        />
-        <font-awesome-icon
-          :icon="['fab', 'twitter']"
-          class="icon twttr"
-          @click="openUrlTab(tw_link)"
-        />
+        <i class="fab fa-facebook icon fcbk" @click="openUrlTab(fb_link)"></i>
+        <i class="fab fa-twitter icon twttr" @click="openUrlTab(tw_link)"></i>
       </div>
     </div>
   </div>

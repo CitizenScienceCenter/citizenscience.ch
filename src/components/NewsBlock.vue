@@ -25,14 +25,14 @@
       <div class="col col-12 scroll-effect">
         <transition name="slide-fade" mode="out-in">
           <span :key="index" class="date">
-            {{ news[index].date }}
+            {{ formatDate(news[index].date) }}
           </span>
         </transition>
       </div>
       <div class="col col-12 scroll-effect">
         <transition name="slide-fade" mode="out-in">
           <h3 :key="index">
-            {{ localTranslation(news[index].title.content) }}
+            {{ localTranslation(news[index].title) }}
           </h3>
         </transition>
       </div>
@@ -40,7 +40,7 @@
       <div class="col col-12 scroll-effect ">
         <transition name="slide-fade" mode="out-in">
           <p :key="index">
-            {{ localTranslation(news[index].description.content) }}
+            {{ localTranslation(news[index].description) }}
             <a @click="openUrlTab(news[index].link)" v-show="news[index].link"
               >...{{ $t("more-button") }}</a
             >
@@ -52,6 +52,8 @@
 </template>
 <script>
 import { getTranslation, openUrl } from "@/assets/support.js";
+import { mapState } from "vuex";
+import moment from "moment";
 
 export default {
   name: "GenericContentBlock",
@@ -59,7 +61,7 @@ export default {
     return {
       countDown: 0,
       news: [],
-      index: 0,
+      index: -1,
       toggle: false,
     };
   },
@@ -68,18 +70,24 @@ export default {
     visible: Boolean,
     timeToRefresh: Number,
   },
+  computed: {
+    ...mapState({
+      language: (state) => state.settings.language,
+    }),
+  },
   methods: {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
     openUrlTab: function(url) {
-      openUrl(url)
+      openUrl(url);
     },
     setData() {
+      // Formating data to be rendered
       this.news = this.content
+        .sort((b, a) => moment(a.date).diff(b.date))
         .map((x, i) => this.validateNewsContent(x, i))
         .filter((nw) => typeof nw != "undefined");
-      console.log(this.news);
     },
     validateNewsContent(n, i) {
       // This variable avoid undefined or null errors
@@ -98,9 +106,7 @@ export default {
       });
       item["index"] = i;
       item["link"] = n.link || null;
-      item.description.content = this.validateDescriptionLength(
-        item.description.content
-      );
+      item.description = this.validateDescriptionLength(item.description);
       return item;
     },
     validateDescriptionLength(description) {
@@ -111,7 +117,9 @@ export default {
       });
       return description;
     },
-
+    formatDate(date) {
+      return moment(date).format("MMMM Do YYYY");
+    },
     countDownTimer() {
       if (this.countDown > 0) {
         setTimeout(() => {
@@ -131,10 +139,16 @@ export default {
     },
   },
   created() {
+    moment.locale(this.$i18n.locale);
     this.setData();
     if (this.news.length > 0 && this.timeToRefresh > 0) {
       this.countDownTimer();
     }
+  },
+  watch: {
+    language: function(lan) {
+      moment.locale(lan);
+    },
   },
 };
 </script>

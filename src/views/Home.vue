@@ -162,6 +162,7 @@ import EventList from "../components/EventList";
 
 import { mapMutations, mapGetters } from "vuex";
 import content from "@/assets/generic_content.json";
+import news_src from "@/assets/news.json";
 
 export default {
   name: "Home",
@@ -343,75 +344,7 @@ export default {
     },
     setNews() {
       this.newsConfig = this.view("news");
-      this.news = [
-        {
-          title: {
-            content: {
-              en: "Citizen Science",
-              de: "Bürgerwissenschaft",
-            },
-          },
-          date: new Date().toDateString(),
-          link: "https://en.wikipedia.org/wiki/Citizen_science",
-          description: {
-            content: {
-              en: `Citizen science (CS; also known as community science, crowd science, 
-              crowd-sourced science, civic science, volunteer monitoring, or online citizen 
-              science) is scientific research conducted, in whole or in part, by amateur 
-              (or nonprofessional) scientists.[1] Citizen science is sometimes described as 
-              "public participation in scientific research," participatory monitoring, 
-              and participatory action research whose outcomes are often advancements 
-              in scientific research, as well as an increase in the public's understanding 
-              of science.[2][3] Based on Alexa rankings[4] iNaturalist is currently 
-              the most popular citizen science website[5] followed by eBird[6] and then 
-              Zooniverse[7] in second and third place respectively`,
-              de: `Citizen Science (Bürgerwissenschaft) ist eine Form der Offenen Wissenschaft, 
-              ei der Projekte unter Mithilfe von oder komplett durch interessierte Laien 
-              durchgeführt werden. Sie melden Beobachtungen, führen Messungen durch oder 
-              werten Daten aus.`,
-            },
-          },
-        },
-        {
-          title: {
-            content: {
-              en: "News #2",
-              de: "Nachrichten #2",
-            },
-          },
-          date: new Date().toDateString(),
-          link: "https://lab.citizenscience.ch/",
-          description: {
-            content: {
-              en: `At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 😄`,
-              de: `At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
-            },
-          },
-        },
-        {
-          title: {
-            content: {
-              en: "News #3",
-              de: "Nachrichten #3",
-            },
-          },
-          date: new Date().toDateString(),
-          description: {
-            content: {
-              en: `At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 😄`,
-              de: `At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
-            },
-          },
-        },
-      ];
+      this.news = news_src;
     },
   },
   created() {

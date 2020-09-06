@@ -12,16 +12,11 @@ import c3s from 'vuex-c3s';
 import VueGtag from "vue-gtag";
 
 // FontAwesomeIcon section
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-library.add(fas, fab)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 
 Vue.config.productionTip = false;
 
+Vue.use(require('vue-moment'));
 
 let swaggerURL = 'https://api.citizenscience.ch/api/v2/swagger.json';
 //let swaggerURL = 'http://localhost:8080/api/v2/swagger.json';

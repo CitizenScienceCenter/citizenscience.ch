@@ -7,10 +7,10 @@
     "
   >
     <!-- Heading Section -->
-    <div class="row row-centered " v-if="heading.config.visible">
+    <div class="row row-centered " v-if="br.heading.visible">
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
-          {{ localTranslation(heading.content) }}
+          {{ localTranslation(heading) }}
         </h2>
       </div>
     </div>
@@ -20,17 +20,15 @@
       <div
         class="col scroll-effect"
         :class="validateOrientation('img-content')"
-        v-if="content.image"
+        v-if="content.image && br.image.visible"
       >
+        <!-- TODO: && br.image.visible -->
         <div class="row row-centered img-section">
           <div class="col col-12 centered">
             <img :src="content.image" class="col-image" />
           </div>
-          <div
-            class="col col-12 centered"
-            v-if="img_description.config.visible"
-          >
-            <p>{{ this.localTranslation(img_description.content) }}</p>
+          <div class="col col-12 centered" v-if="br.img_description.visible">
+            <p>{{ this.localTranslation(img_description) }}</p>
           </div>
         </div>
       </div>
@@ -39,19 +37,16 @@
         class="col scroll-effect text-section"
         :class="validateOrientation('text-content')"
       >
-        <div class="row" v-if="description.config.visible">
-          <p>{{ this.localTranslation(description.content) }}</p>
+        <div class="row" v-if="br.description.visible">
+          <p>{{ this.localTranslation(description) }}</p>
         </div>
-        <div
-          class="row button-section"
-          v-if="button.config.visible && button.link"
-        >
+        <div class="row button-section" v-if="br.button.visible && button.link">
           <button
             class="button button-secondary"
             @click="openUrlTab(button.link)"
-            :disabled="button.config.disabled"
+            :disabled="br.button.disabled"
           >
-            {{ this.localTranslation(button.content) }}
+            {{ this.localTranslation(button) }}
           </button>
         </div>
       </div>
@@ -65,16 +60,18 @@ export default {
   name: "GenericContentBlock",
   data() {
     return {
-      heading: { content: {}, config: { visible: false } },
-      description: { content: {}, config: { visible: false } },
-      img_description: { content: {}, config: { visible: false } },
-      button: { content: {}, config: { visible: false, disabled: true } },
+      br: this.viewConfig,
+      heading: {},
+      description: {},
+      img_description: {},
+      button: {},
     };
   },
   props: {
     content: Object,
     visible: Boolean,
     vOrientation: Boolean,
+    viewConfig: Object,
   },
   methods: {
     localTranslation(textContent) {
@@ -173,7 +170,7 @@ export default {
     .col-image {
       transform: scale(0.8) translateY(-5%);
       margin-bottom: -$spacing-2;
-    }    
+    }
   }
   .text-section {
     p {
@@ -196,7 +193,7 @@ export default {
     .col-image {
       transform: scale(1) translateY(0%);
       margin-bottom: $spacing-2;
-      max-height: 250px;
+      max-height: 225px;
     }
     p {
       font-size: $font-size-small;
@@ -219,6 +216,7 @@ export default {
       p,
       .button-section {
         padding-left: $spacing-1;
+        font-size: $font-size-small;
       }
     }
   }

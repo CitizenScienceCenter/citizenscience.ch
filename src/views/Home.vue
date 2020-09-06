@@ -89,7 +89,7 @@
             <news-block
               :visible="newsConfig.visible"
               :content="news"
-              :timeToRefresh="20"
+              :timeToRefresh="newsConfig.timeToRefresh"
             >
               ></news-block
             >
@@ -97,9 +97,10 @@
           <!-- Generic Content component for Our Community -->
           <app-content-section class="row ph-mv">
             <generic-content-block
-              :visible="ourCommunityConfig.visible"
-              :vOrientation="ourCommunityConfig.vOrientation"
+              :visible="bottomLeftConfig.visible"
+              :vOrientation="bottomLeftConfig.vOrientation"
               :content="ourCommunity"
+              :viewConfig="bottomLeftConfig"
             ></generic-content-block>
           </app-content-section>
         </div>
@@ -110,9 +111,10 @@
           <!-- Generic Content component for Our Mission -->
           <app-content-section class="row ph-mv sm-margin-left">
             <generic-content-block
-              :visible="ourMissionConfig.visible"
-              :vOrientation="ourMissionConfig.vOrientation"
+              :visible="topRightConfig.visible"
+              :vOrientation="topRightConfig.vOrientation"
               :content="ourMission"
+              :viewConfig="topRightConfig"
             ></generic-content-block>
           </app-content-section>
           <!-- Our next Event -->
@@ -158,7 +160,8 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 import EventList from "../components/EventList";
 
-import { mapMutations } from "vuex";
+import { mapMutations, mapGetters } from "vuex";
+import content from "@/assets/generic_content.json";
 
 export default {
   name: "Home",
@@ -167,9 +170,9 @@ export default {
       projectList: [],
       projectCardConfig: { vOrientation: true, visible: true },
       ourCommunity: {},
-      ourCommunityConfig: { vOrientation: false, visible: true },
+      bottomLeftConfig: { vOrientation: false, visible: true },
       ourMission: {},
-      ourMissionConfig: { vOrientation: true, visible: true },
+      topRightConfig: { vOrientation: true, visible: true },
       news: [],
       newsConfig: { visible: true },
       eventsConfig: { visible: true, limit: 1, hideImg: true },
@@ -203,6 +206,9 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapGetters({ view: "viewconfig/getHomeConfig" }),
   },
   methods: {
     ...mapMutations({ setHomeConfig: "viewconfig/setHomeConfig" }),
@@ -328,70 +334,15 @@ export default {
       ];
     },
     setOurCommunity() {
-      this.ourCommunity = {
-        heading: {
-          content: {
-            en: "Our Community",
-            de: "Unsere Gemeinschaft",
-          },
-          config: { visible: true },
-        },
-        description: {
-          content: {
-            en: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.`,
-          },
-          config: { visible: true },
-        },
-        image: "https://citizenscience.ch/img/uzh-eth.jpg",
-        img_description: {
-          content: {
-            en: "Image Description",
-            de: "Bildbeschreibung",
-          },
-          config: { visible: true },
-        },
-        button: {
-          link: "/citizenscience/zurichstyle",
-          content: { en: "Learn More", de: "mehr erfahren" },
-          config: { disabled: false, visible: true },
-        },
-      };
+      this.bottomLeftConfig = this.view("bottom_left");
+      this.ourCommunity = content.home_ourCommunity;
     },
     setOurMission() {
-      this.ourMission = {
-        heading: {
-          content: {
-            en: "Our Mission",
-            de: "Unsere Gemeinschaft",
-          },
-          config: { visible: true },
-        },
-        description: {
-          content: {
-            en: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.`,
-          },
-          config: { visible: true },
-        },
-        button: {
-          link: "/about/mission",
-          content: { en: "Learn More", de: "mehr erfahren" },
-          config: { disabled: false, visible: true },
-        },
-      };
+      this.topRightConfig = this.view("top_right");
+      this.ourMission = content.home_ourMission;
     },
     setNews() {
+      this.newsConfig = this.view("news");
       this.news = [
         {
           title: {
@@ -466,7 +417,7 @@ export default {
   created() {
     // Load the view configuration in vuex state
     this.setHomeConfig();
-    
+
     this.setProjectList();
     this.setOurCommunity();
     this.setOurMission();

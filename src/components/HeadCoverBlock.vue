@@ -107,7 +107,7 @@
 <script>
 import { mapGetters } from "vuex";
 import { getTranslation, openUrl } from "@/assets/support.js";
-import news from "@/assets/cover_news.json";
+import news from "@/assets/cover_list.json";
 
 export default {
   name: "Cover",

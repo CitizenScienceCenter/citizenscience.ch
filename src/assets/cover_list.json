@@ -3,18 +3,18 @@
     "image": "cover.jpg",
     "expiration": "",
     "title": {
-      "en": "Citizen Science Center",
-      "de": "Citizen Science Center"
+      "en": "Citizen Science Center Zurich",
+      "de": "Citizen Science Center Zürich"
     },
     "lead": {
-      "en": "The Citizen Science Center Zurich adheres to the principles of Open Science and operates in a fully transparent manner",
-      "de": "Das Citizen Science Center Zürich sieht sich den Prinzipien von Open Science und Transparenz verpflichtet"
+      "en": "Next Generation Citizen Science",
+      "de": "Bürgerwissenschaft der nächsten Generation"
     },
     "path": { "en": null, "de": null },
     "button": { "en": null, "de": null },
     "extra_logos": {
-      "logo_right": "https://citizenscience.ch/img/uzh-eth.jpg",
-      "logo_left": "https://citizenscience.ch/img/uzh-eth.jpg"
+      "logo_right": null,
+      "logo_left": null
     }
   },
   "news": [

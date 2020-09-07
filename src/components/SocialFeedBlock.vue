@@ -1,10 +1,21 @@
+<i18n>
+{
+  "en": {
+    "section-heading": "Follow Us",
+    "footer-label": "Follow us on"
+  },
+  "de": {
+    "section-heading": "Folgen Sie uns",
+    "footer-label": "Folgen Sie uns auf"}
+}
+</i18n>
 <template>
   <div class="social" v-if="visible">
     <!-- Heading Section -->
-    <div class="row row-centered " v-if="heading.visible">
+    <div class="row row-centered " v-if="br.heading.visible">
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
-          {{ heading.text }}
+          {{ $t("section-heading") }}
         </h2>
       </div>
     </div>
@@ -26,11 +37,21 @@
       </div>
     </div>
     <!-- Footer Section -->
-    <div class="row">
+    <div class="row" v-if="br.footer.visible">
       <div class="col col-12 scroll-effect footer-section">
-        <span>Follow us on</span>
-        <i class="fab fa-facebook icon fcbk" @click="openUrlTab(fb_link)"></i>
-        <i class="fab fa-twitter icon twttr" @click="openUrlTab(tw_link)"></i>
+        <span>{{ $t("footer-label") }}</span>
+        <i
+          class="fab fa-facebook icon fcbk"
+          @click="openUrlTab(fb_link, br.fb_button.disabled)"
+          v-if="br.fb_button.visible"
+          :class="{ disabled: br.fb_button.disabled }"
+        ></i>
+        <i
+          class="fab fa-twitter icon twttr"
+          @click="openUrlTab(tw_link,  br.tw_button.disabled)"
+          v-if="br.tw_button.visible"
+          :class="{ disabled: br.tw_button.disabled }"
+        ></i>
       </div>
     </div>
   </div>
@@ -45,21 +66,18 @@ export default {
   components: { Timeline },
   data() {
     return {
+      br: this.viewConfig,
       fb_link: "https://www.facebook.com/CitSciZurich/",
       tw_link: "https://twitter.com/CitSciZurich",
     };
   },
   props: {
-    heading: {
-      type: Object,
-      default() {
-        return { text: "", visible: false };
-      },
-    },
+    viewConfig: Object,
     visible: Boolean,
   },
   methods: {
-    openUrlTab: function(url) {
+    openUrlTab: function(url, disabled = false) {
+      if (disabled) return;
       openUrl(url);
     },
   },
@@ -95,6 +113,9 @@ export default {
       }
       &.twttr {
         color: #00acee;
+      }
+      &.disabled {
+        cursor: default;
       }
     }
   }

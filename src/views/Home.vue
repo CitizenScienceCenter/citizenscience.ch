@@ -4,11 +4,6 @@
     "page-title": "Citizen Science Center Zurich",
     "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
 
-    "section-events-heading": "Coming Up",
-    "section-events-button": "All Events",
-
-    "section-social-heading": "Follow Us",
-
     "section-build-project-heading": "Do you have a project in mind? We can help you.",
     "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
     "section-build-project-button": "Learn more",
@@ -32,11 +27,6 @@
   "de": {
     "page-title": "Citizen Science Center Zürich",
     "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
-
-    "section-events-heading": "Demnächst",
-    "section-events-button": "Alle Ereignisse",
-
-    "section-social-heading": "Folgen Sie uns",
 
     "section-build-project-heading": "Haben Sie eine Projekt-Idee? Wir helfen Ihnen!",
     "section-build-project-text": "Wir sind jederzeit offen für Austausch und Gespräch. Gerne überlegen wir mit Ihnen gemeinsam, wie man die Welt mit Citizen Science ein kleines Stück besser machen könnte. Treten Sie mit uns in Kontakt, wenn Sie eine Projektidee haben. Wir können Ihnen bei der Weiterentwicklung der Idee helfen und Ihnen bei positiver Evaluation unsere Tools und Expertise zur Verfügung stellen, um das Projekt realisieren.",
@@ -88,7 +78,6 @@
           >
             <news-block
               :visible="newsConfig.visible"
-              :content="news"
               :timeToRefresh="newsConfig.timeToRefresh"
             >
               ></news-block
@@ -121,21 +110,16 @@
           <app-content-section class="row ph-mv sm-margin-left">
             <event-list
               :limit="eventsConfig.limit"
-              :heading="{ text: $t('section-events-heading'), visible: true }"
-              :hideImage="eventsConfig.hideImg"
-              :eventsButton="{
-                text: $t('section-events-button'),
-                visible: true,
-                disabled: false,
-              }"
+              :content="eventsContent"
+              :viewConfig="eventsConfig"
               :visible="eventsConfig.visible"
             ></event-list>
           </app-content-section>
           <!-- Twitter embed feed -->
           <app-content-section class="row ph-mv sm-margin-left">
             <social-feed-block
-              :visible="true"
-              :heading="{ text: $t('section-social-heading'), visible: true }"
+              :visible="socialConfig.visible"
+              :viewConfig="socialConfig"
             ></social-feed-block>
           </app-content-section>
         </div>
@@ -162,7 +146,6 @@ import EventList from "../components/EventList";
 
 import { mapMutations, mapGetters } from "vuex";
 import content from "@/assets/generic_content.json";
-import news_src from "@/assets/news.json";
 
 export default {
   name: "Home",
@@ -174,9 +157,10 @@ export default {
       bottomLeftConfig: { vOrientation: false, visible: true },
       ourMission: {},
       topRightConfig: { vOrientation: true, visible: true },
-      news: [],
       newsConfig: { visible: true },
+      eventsContent: {},
       eventsConfig: { visible: true, limit: 1, hideImg: true },
+      socialConfig: { visible: true },
     };
   },
   components: {
@@ -342,9 +326,15 @@ export default {
       this.topRightConfig = this.view("top_right");
       this.ourMission = content.home_ourMission;
     },
+    setEventsConfig() {
+      this.eventsConfig = this.view("events");
+      this.eventsContent = content.events;
+    },
     setNews() {
       this.newsConfig = this.view("news");
-      this.news = news_src;
+    },
+    setSocialFeed() {
+      this.socialConfig = this.view("social_feed");
     },
   },
   created() {
@@ -354,7 +344,9 @@ export default {
     this.setProjectList();
     this.setOurCommunity();
     this.setOurMission();
+    this.setEventsConfig();
     this.setNews();
+    this.setSocialFeed();
   },
 };
 </script>

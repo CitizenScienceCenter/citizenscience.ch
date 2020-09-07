@@ -32,5 +32,9 @@
       "en": "Learn More",
       "de": "mehr erfahren"
     }
+  },
+  "events": {
+    "heading": { "en": "Coming Up", "de": "Demnächst" },
+    "eventsButton": { "en": "All Events", "de": "Alle Ereignisse" }
   }
 }

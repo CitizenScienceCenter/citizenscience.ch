@@ -1,10 +1,10 @@
 <template>
   <div class="event-list" v-if="events && events.length != 0 && visible">
     <!-- Heading Section -->
-    <div class="row row-centered extra-margin-top-2" v-if="heading.visible">
+    <div class="row row-centered extra-margin-top-2" v-if="br.heading.visible">
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
-          {{ heading.text }}
+          {{ localTranslation(pl.heading)  }}
         </h2>
       </div>
     </div>
@@ -20,7 +20,7 @@
             <div
               class="col col-wrapping event-image"
               :class="validateImage('img-content', event)"
-              v-if="event.image && !hideImage"
+              v-if="event.image && !br.hideImage"
             >
               <img :src="'/img/events/' + event.image" />
             </div>
@@ -65,13 +65,13 @@
     </div>
 
     <!-- All events button -->
-    <div class="row button-section" v-if="eventsButton.visible">
+    <div class="row button-section" v-if="br.button.visible">
       <router-link
         tag="button"
         to="/events"
         class="button button-secondary scroll-effect"
-        :disabled="eventsButton.disabled"
-        >{{ eventsButton.text }}</router-link
+        :disabled="br.button.disabled"
+        >{{ localTranslation(pl.eventsButton) }}</router-link
       >
     </div>
   </div>
@@ -79,11 +79,17 @@
 
 <script>
 import events from "@/assets/events.json";
+import { getTranslation } from "@/assets/support.js";
 
 export default {
   name: "EventList",
   data() {
     return {
+      br: this.viewConfig,
+      pl: {
+        heading: this.content.heading,
+        eventsButton: this.content.eventsButton,
+      },
       events: events,
       i18nWeekdays: [
         "weekday-sunday",
@@ -105,29 +111,14 @@ export default {
       type: Number,
       default: 0,
     },
-    heading: {
-      type: Object,
-      default() {
-        return {
-          text: null,
-          visible: false,
-        };
-      },
-    },
-    eventsButton: {
-      type: Object,
-      default() {
-        return {
-          text: null,
-          visible: false,
-          disabled: true,
-        };
-      },
-    },
+    content: Object,
     visible: Boolean,
-    hideImage: { type: Boolean, default: false },
+    viewConfig: Object,
   },
   methods: {
+    localTranslation(textContent) {
+      return getTranslation(textContent, this.$i18n.locale);
+    },
     validateImage(item, event) {
       const viewConfig = {
         withImage: {
@@ -140,7 +131,7 @@ export default {
         },
       };
       let selectedView = viewConfig.withoutImage;
-      if (event.image && !this.hideImage) {
+      if (event.image && !this.br.hideImage) {
         selectedView = viewConfig.withImage;
       }
       return selectedView[item];
@@ -255,7 +246,7 @@ export default {
   }
   .event {
     padding: $spacing-2 $spacing-3;
-    cursor: pointer;    
+    cursor: pointer;
     .event-image {
       margin-bottom: $spacing-1;
       img {

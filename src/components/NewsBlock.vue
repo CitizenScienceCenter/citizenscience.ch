@@ -10,7 +10,7 @@
 }
 </i18n>
 <template>
-  <div class="news" v-if="visible && content.length !== 0">
+  <div class="news" v-if="visible && news_src.length !== 0">
     <!-- Section Title  -->
     <div class="row row-centered extra-margin-top-2">
       <div class="col col-12 scroll-effect heading-section ">
@@ -55,10 +55,13 @@ import { getTranslation, openUrl } from "@/assets/support.js";
 import { mapState } from "vuex";
 import moment from "moment";
 
+import news_src from "@/assets/news.json";
+
 export default {
   name: "GenericContentBlock",
   data() {
     return {
+      news_src: news_src,
       countDown: 0,
       news: [],
       index: -1,
@@ -66,7 +69,6 @@ export default {
     };
   },
   props: {
-    content: Array,
     visible: Boolean,
     timeToRefresh: Number,
   },
@@ -84,7 +86,7 @@ export default {
     },
     setData() {
       // Formating data to be rendered
-      this.news = this.content
+      this.news = this.news_src
         .sort((b, a) => moment(a.date).diff(b.date))
         .map((x, i) => this.validateNewsContent(x, i))
         .filter((nw) => typeof nw != "undefined");

@@ -25,6 +25,18 @@
     "img_description": { "visible": false },
     "button": { "disabled": false, "visible": true }
   },
-  "events": {},
-  "social_feed": {}
+  "events": {
+    "visible": true,
+    "hideImage": true,
+    "limit": 1,
+    "heading": { "visible": true },
+    "button": { "disabled": false, "visible": true }
+  },
+  "social_feed": {
+    "visible": true,
+    "heading": { "visible": true },
+    "footer": { "visible": true },
+    "tw_button": { "disabled": false, "visible": true },
+    "fb_button": { "disabled": false, "visible": true }
+  }
 }

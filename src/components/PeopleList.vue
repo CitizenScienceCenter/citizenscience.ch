@@ -179,7 +179,7 @@
             <img src="/img/people/nikos.jpg" class="photo"/>
             <span class="name">Nikos Georgomanolis</span>
             <span class="position">{{ $t('people-nikos-position') }}</span>
-            <a href="mailto:nikolaos.georgomanolis@uzh.chf">nikolaos.georgomanolis@uzh.ch</a>
+            <a href="mailto:nikolaos.georgomanolis@uzh.ch">nikolaos.georgomanolis@uzh.ch</a>
           </div>
         </div>
         <!--

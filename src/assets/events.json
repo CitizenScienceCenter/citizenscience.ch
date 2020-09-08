@@ -1,5 +1,38 @@
 [
   {
+    "path": "brownbag-2020-11-26",
+    "start": "2020-11-26T12:15+01:00",
+    "end": "2020-11-26T13:15+01:00",
+    "location": "Weblink via Zoom. Register via Email to info@citizenscience.ch",
+    "title": "Lunch Talk: Bergbau goes public: Entdecken von alten Spuren mit neuen Mitteln–Historischer Bergbau und moderne Fernerkundung",
+    "abstract": "",
+    "speakers": "Beat Meier, Privatforscher, Olten &amp; Rouven Turck, UZH",
+    "content":"",
+    "image": "brownbag.jpg"
+  },
+  {
+    "path": "taucher-2020-10-28",
+    "start": "2020-10-28T12:15+01:00",
+    "end": "2020-10-28T13:15+01:00",
+    "location": "Weblink via Zoom. Register via Email to info@citizenscience.ch",
+    "title": "Lunch Talk: StadtWildTiere (Urban Wildlife) and Wilde Nachbarn (Wild Neighbors): Monitoring wildlife at the intersection of public awareness, research, and nature conservation",
+    "abstract": "",
+    "speakers": "Anouk-Lisa Taucher, SWILD – Urban Ecology &amp; Wildlife Research",
+    "content":"Most urban dwellers are unaware of the vast diversity of wild neighbors they share their habitat with. In the citizen science projects  <a href='https://stadtwildtiere.ch/' target='_blank'>StadtWildTiere</a>  and <a href='https://wildenachbarn.ch/' target='_blank'>Wilde Nachbarn</a> we want to raise awareness of the nature right in front of people’s doorsteps. While awareness is a crucial step towards conservation, taking action requires evidence-based knowledge. Anouk Taucher will present the two platforms, which focus on urban and suburban mammals, and will provide examples of completed projects which have successfully addressed wildlife research questions with the help of the public.",
+    "image": "brownbag.jpg"
+  },
+  {
+    "path": "brownbag-2020-09-24",
+    "start": "2020-09-24T12:15+02:00",
+    "end": "2020-09-24T13:15+02:00",
+    "location": "Weblink via Zoom. Register via Email to info@citizenscience.ch",
+    "title": "Lunch Talk: News and updates about our activities in the upcoming year",
+    "abstract": "",
+    "speakers": "Team of the Citizen Science Center Zurich",
+    "content": "As a kick-off of the new fall lunch talk series, we would like to share our news and updates with you: What are current activities of the Centers team? Which features does the new <a href='https://lab.citizenscience.ch/en/' target='_blank'>Citizen Science Project Builder</a> offer? What are next steps and plans? Come and find out!<br/>There will be as always time for question and discussion, but also for your news! We warmly invite you to use the opportunity and tell the BB lunch community about your current activities or plans in Citizen Science, in order to build networks and support each other.",
+    "image": "brownbag.jpg"
+  },
+  {
     "path": "helvetia-2021-01-014",
     "start": "2021-01-14T08:00+01:00",
     "end": "2021-01-15T17:00+01:00",

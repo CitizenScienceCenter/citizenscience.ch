@@ -1,0 +1,9 @@
+{
+  "events": {
+    "visible": true,
+    "hideImage": false,
+    "limit": null,
+    "heading": { "visible": false },
+    "button": { "disabled": false, "visible": false }
+  }
+}

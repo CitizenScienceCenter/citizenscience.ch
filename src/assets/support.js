@@ -1,4 +1,7 @@
 export function getTranslation(textContent, lang = "en") {
+  if (!textContent || !textContent.en) {
+    return;
+  }
   // Recieves the text content in multiple languages and return the selected
   return textContent[lang] || textContent.en;
 }

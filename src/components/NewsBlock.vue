@@ -159,7 +159,6 @@ export default {
 @import "@/styles/shared/variables.scss";
 
 .news {
-  height: 30vh;
   position: relative;
   box-sizing: border-box;
   .heading-section {
@@ -209,7 +208,6 @@ export default {
 }
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .news {
-    height: 35vh;
     .text-section {
       padding-left: $spacing-2;
       p {

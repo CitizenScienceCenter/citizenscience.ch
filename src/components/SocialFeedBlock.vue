@@ -27,7 +27,7 @@
           sourceType="profile"
           class="scroll-effect"
           :options="{
-            tweetLimit: '1',
+            tweetLimit: limit,
             chrome: 'nofooter noheader noborders transparent',
             width: 600,
             lang: $i18n.locale,
@@ -48,7 +48,7 @@
         ></i>
         <i
           class="fab fa-twitter icon twttr"
-          @click="openUrlTab(tw_link,  br.tw_button.disabled)"
+          @click="openUrlTab(tw_link, br.tw_button.disabled)"
           v-if="br.tw_button.visible"
           :class="{ disabled: br.tw_button.disabled }"
         ></i>
@@ -74,6 +74,7 @@ export default {
   props: {
     viewConfig: Object,
     visible: Boolean,
+    limit: { type: Number, default: 1 },
   },
   methods: {
     openUrlTab: function(url, disabled = false) {
@@ -96,6 +97,9 @@ export default {
   }
   .content-section {
     padding: 0 $spacing-2;
+    margin-bottom: $spacing-2;
+    max-height: 50vh;
+    overflow-y: auto;
   }
   .footer-section {
     padding-left: $spacing-3;
@@ -123,18 +127,14 @@ export default {
 @media only screen and (min-width: $viewport-mobile-large) {
   .social {
     .content-section {
-      padding: 0 $spacing-8;
-      margin: -$spacing-3 0;
-      transform: scaleY(0.9);
+      padding: 0 $spacing-2;
     }
   }
 }
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .social {
     .content-section {
-      padding: 0 $spacing-2;
-      margin: 0;
-      transform: scale(1);
+      max-height: 60vh;
     }
   }
 }

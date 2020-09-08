@@ -28,16 +28,17 @@
         :key="p.id"
       >
         <project-teaser
-          :projectTitle="p.title"
+          :projectTitle="p.name"
           :projectTopic="p.topic"
           :projectDescription="p.description"
           :button="p.button"
           :projectBgImage="p.img_background"
-          :projectImage="p.img_project"
+          :projectTbImage="p.img_project"
           :url="p.link"
           :colorGradient="p.gradient"
           :vOrientation="vOrientation"
           :projectId="p.id"
+          :viewConfig="br"
         ></project-teaser>
       </div>
     </div>
@@ -61,24 +62,43 @@
 </template>
 <script>
 import ProjectTeaser from "@/components/ProjectTeaser";
+import { mapState } from "vuex";
+
+// This variable avoid undefined or null errors
+const keys = [
+  "id",
+  "name",
+  "topic",
+  "description",
+  "img_background",
+  "img_project",
+  "link",
+  "button",
+  "gradient",
+];
 
 export default {
   name: "ProjectCardsBlock",
   data() {
     return {
-      numberOfProjects: 3,
+      br: {},
+      numberOfProjects: this.limit,
       projects: [],
     };
   },
   props: {
     vOrientation: Boolean,
-    projectList: Array,
     visible: Boolean,
+    limit: { type: Number, default: 3 },
+    viewConfig: Object,
   },
   components: {
     ProjectTeaser,
   },
   computed: {
+    ...mapState({
+      projectList: (state) => state.project.projects,
+    }),
     getProjects() {
       const projects = this.projectList
         .slice(0, this.numberOfProjects)
@@ -87,6 +107,12 @@ export default {
     },
   },
   methods: {
+    setViewConfig() {
+      // Set view configuration for project card
+      keys.forEach((key) => {
+        this.br[key] = this.viewConfig[key] || {};
+      });
+    },
     openUrl: function(url, disabled = false) {
       if (disabled) {
         return;
@@ -106,26 +132,24 @@ export default {
       return viewConfig.horizontal;
     },
     validateProjectContent(p) {
-      // This variable avoid undefined or null errors
-      const keys = [
-        "id",
-        "title",
-        "topic",
-        "description",
-        "img_background",
-        "img_project",
-        "link",
-        "button",
-        "gradient",
-      ];
       const project = {};
       keys.forEach((key) => {
         project[key] = p[key] || null;
       });
+      project.id = project.id.toString();
+      // TODO: implement env instead
+      project.link = `https://lab.citizenscience.ch/${this.$i18n.locale}/project/${project.id}`;
+      project.button = project.button || {
+        en: "Contribute ",
+        de: "Beitragen",
+      };
+      project.img_background = p.info.thumbnail_url;
       return project;
     },
   },
-  created() {},
+  created() {
+    this.setViewConfig();
+  },
   destroyed() {},
 };
 </script>

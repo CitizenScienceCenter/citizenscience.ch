@@ -22,7 +22,6 @@
         :class="validateOrientation('img-content')"
         v-if="content.image && br.image.visible"
       >
-        <!-- TODO: && br.image.visible -->
         <div class="row row-centered img-section">
           <div class="col col-12 centered">
             <img :src="content.image" class="col-image" />
@@ -184,6 +183,15 @@ export default {
       .button {
         height: 35px;
         font-size: $font-size-small;
+      }
+    }
+    &.vertical {
+      p,
+      .button-section {
+        .button {
+          height: 30px;
+          font-size: $font-size-mini;
+        }
       }
     }
   }

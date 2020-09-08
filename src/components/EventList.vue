@@ -4,7 +4,7 @@
     <div class="row row-centered extra-margin-top-2" v-if="br.heading.visible">
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
-          {{ localTranslation(pl.heading)  }}
+          {{ localTranslation(pl.heading) }}
         </h2>
       </div>
     </div>
@@ -86,10 +86,7 @@ export default {
   data() {
     return {
       br: this.viewConfig,
-      pl: {
-        heading: this.content.heading,
-        eventsButton: this.content.eventsButton,
-      },
+      pl: {},
       events: events,
       i18nWeekdays: [
         "weekday-sunday",
@@ -135,6 +132,10 @@ export default {
         selectedView = viewConfig.withImage;
       }
       return selectedView[item];
+    },
+    setStyle() {
+      this.pl["heading"] = this.content ? this.content.heading : null;
+      this.pl["eventsButton"] = this.content ? this.content.eventsButton : null;
     },
     eventDisplayDate(start, end) {
       let startDate = new Date(start);
@@ -198,6 +199,7 @@ export default {
     },
   },
   created() {
+    this.setStyle();
     if (!this.past) {
       // filter for future events
       this.events = this.events.filter(
@@ -232,6 +234,9 @@ export default {
 .event-list {
   .heading-section {
     padding-left: $spacing-3;
+    .heading {
+      margin-bottom: 0;
+    }
   }
   .button-section {
     padding: $spacing-2 $spacing-3;

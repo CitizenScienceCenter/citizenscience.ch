@@ -66,9 +66,10 @@
           <!-- Project Cards component -->
           <app-content-section class="row ph-mv">
             <project-cards-block
-              :projectList="projectList"
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"
+              :limit="projectCardConfig.limit"
+              :viewConfig="projectCardConfig"
             ></project-cards-block>
           </app-content-section>
           <!-- News component  -->
@@ -120,6 +121,7 @@
             <social-feed-block
               :visible="socialConfig.visible"
               :viewConfig="socialConfig"
+              :limit="socialConfig.limit"
             ></social-feed-block>
           </app-content-section>
         </div>
@@ -144,7 +146,7 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 import EventList from "../components/EventList";
 
-import { mapMutations, mapGetters } from "vuex";
+import { mapActions, mapMutations, mapGetters } from "vuex";
 import content from "@/assets/generic_content.json";
 
 export default {
@@ -197,126 +199,15 @@ export default {
   },
   methods: {
     ...mapMutations({ setHomeConfig: "viewconfig/setHomeConfig" }),
+    ...mapActions({ getProjects: "project/getFeaturedProjects" }),
     openInNewTab: function(url) {
       var win = window.open(url, "_blank");
       win.focus();
     },
     setProjectList: function() {
-      // TODO: This information will be replaced by database retrieved data
-      this.projectList = [
-        {
-          id: "83",
-          title: {
-            content: {
-              en: "MitrendS Study",
-              de: "MITRENDS STUDIE",
-            },
-            config: { visible: true },
-          },
-          topic: {
-            content: {
-              en: "Health",
-              de: "Gesundheit",
-            },
-            config: { visible: true },
-          },
-          description: {
-            content: {
-              en:
-                "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease.",
-              de:
-                "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome.",
-            },
-            config: { visible: true },
-          },
-          img_background: "/img/projects/mitrends.jpg",
-          img_project: "/img/projects/mitrends-graphic.png",
-          gradient: { start: "", end: "#ebdc34" },
-          link: "https://mitrends.citizenscience.ch",
-          button: {
-            content: {
-              en: "Take part",
-              de: "Mitmachen",
-            },
-            config: { visible: true, disabled: false },
-          },
-        },
-        {
-          id: "104",
-          title: {
-            content: {
-              en: "Snake ID Challenge",
-              de: "Snake-ID Herausforderung",
-            },
-            config: { visible: true },
-          },
-          topic: {
-            content: {
-              en: "Herpetology",
-              de: "Herpetologie",
-            },
-            config: { visible: true },
-          },
-          description: {
-            content: {
-              en:
-                "Fall is here! You can take advantage of the cooler weather to test and refine your identification skills with the second phase of the SnakeID challenge.",
-              de:
-                "Der Herbst ist da! Nutzt das kühlere Wetter, um eure Identifikationsfähigkeiten in der zweiten Phase der SnakeID-Challenge zu testen und zu verfeinern.",
-            },
-            config: { visible: true },
-          },
-          img_background:
-            "https://specials-images.forbesimg.com/imageserve/5ea5284f165a170006a5c82b/960x0.jpg?cropX1=0&cropX2=1440&cropY1=32&cropY2=1113",
-          img_project: "/img/projects/snakechallenge-intro.png",
-          gradient: { start: "#ABCDEF", end: "green" },
-          link: "https://snakes.citizenscience.ch",
-          button: {
-            content: {
-              en: "Take a look",
-              de: "Ansehen",
-            },
-            config: { visible: true, disabled: false },
-          },
-        },
-        {
-          id: "12",
-          title: {
-            content: {
-              en: "Weasel Wanted",
-              de: "Wiesel gesucht",
-            },
-            config: { visible: true },
-          },
-          topic: {
-            content: {
-              en: "Wild Life Research",
-              de: "Wildtierforschung",
-            },
-            config: { visible: true },
-          },
-          description: {
-            content: {
-              en:
-                "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
-              de:
-                "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box.",
-            },
-            config: { visible: true },
-          },
-          img_background: "/img/projects/wiesel.jpg",
-          img_project: "/img/projects/wiesel-intro.png",
-          gradient: { end: "#3f6fa0" },
-          link: "https://wiesel-gesucht.citizenscience.ch",
-          button: {
-            content: {
-              en: "Contribute",
-              de: "Beitragen",
-            },
-            config: { visible: false, disabled: false },
-          },
-        },
-      ];
+      //Load featured projects from pybossa
+      this.getProjects();
+      this.projectCardConfig = this.view("projectCards");
     },
     setOurCommunity() {
       this.bottomLeftConfig = this.view("bottom_left");
@@ -340,6 +231,8 @@ export default {
   created() {
     // Load the view configuration in vuex state
     this.setHomeConfig();
+
+    this.getProjects();
 
     this.setProjectList();
     this.setOurCommunity();

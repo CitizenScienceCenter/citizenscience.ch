@@ -3,38 +3,38 @@
     class="project"
     @click.prevent="openInNewTab(project.link)"
     :class="{
-      'not-allowed':
-        project.button.config.visible && project.button.config.disabled,
+      'not-allowed': br.button.visible && br.button.disabled,
     }"
   >
     <div class="project-info">
       <div class="row row-reverse-large row-centered row-middle row-wrapping">
         <div
-          class="col col-4 col-image col-wrapping centered"
+          class="col col-4 col-wrapping centered col-image"
           :class="validateOrientation('img-content')"
-          v-if="project.img_project"
+          v-if="br.img_project.visible"
         >
-          <img :src="project.img_project" />
+          <!-- Validate if project_img exist -->
+          <img :src="project.img_project" :class="{ round: !projectTbImage }" />
         </div>
 
         <div class="col col-8" :class="validateOrientation('text-content')">
-          <span class="project-type" v-if="project.topic.config.visible">{{
-            localTranslation(project.topic.content)
-          }}</span>
-          <h3 v-if="project.title.config.visible">
-            {{ localTranslation(project.title.content) }}
+          <span class="project-type" v-if="br.topic.visible">
+            {{ project.topic }}
+          </span>
+          <h3 v-if="br.name.visible">
+            {{ project.name }}
           </h3>
-          <p v-if="project.description.config.visible">
-            {{ localTranslation(project.description.content) }}
+          <p v-if="br.description.visible">
+            {{ project.description }}
           </p>
         </div>
         <div class="col col-6 col-large-12">
           <button
             class="button button-primary-main"
-            v-if="project.button.config.visible && project.link"
-            :disabled="project.button.config.disabled"
+            v-if="br.button.visible && project.link"
+            :disabled="br.button.disabled"
           >
-            {{ localTranslation(project.button.content) }}
+            {{ localTranslation(project.button) }}
           </button>
         </div>
       </div>
@@ -73,48 +73,54 @@
 
 <script>
 import variable from "@/styles/theme.scss";
+import { getTranslation, openUrl } from "@/assets/support.js";
 
 export default {
   name: "ProjectTeaser",
   data() {
     return {
+      br: this.viewConfig,
       project: {},
     };
   },
   props: {
     projectBgImage: String,
-    projectImage: String,
+    projectTbImage: String,
     projectId: String,
-    projectTitle: Object,
-    projectTopic: Object,
-    projectDescription: Object,
+    projectTitle: String,
+    projectTopic: String,
+    projectDescription: String,
     button: Object,
     url: String,
     colorGradient: Object,
     infoText: String,
     infoSign: String,
     vOrientation: Boolean,
+    viewConfig: Object,
   },
   computed: {
     backgroundImage() {
-      const img = this.projectBgImage || "/img/cover.jpg";
-      return img;
+      return this.projectBgImage || "/img/cover.jpg";
+    },
+    projectImage() {
+      return this.projectTbImage || this.projectBgImage || "/img/cover.jpg";
     },
   },
   methods: {
+    localTranslation(textContent) {
+      if (typeof textContent == "string") {
+        return textContent;
+      }
+      return getTranslation(textContent, this.$i18n.locale);
+    },
     openInNewTab: function(url) {
-      if (
-        !url ||
-        (this.project.button.config.visible &&
-          this.project.button.config.disabled)
-      ) {
+      if (!url || (this.br.button.visible && this.br.button.disabled)) {
         return;
       }
-      var win = window.open(url, "_blank");
-      win.focus();
+      openUrl(url);
     },
     validateOrientation: function(e) {
-      const viewConfig = {
+      const vc = {
         vertical: {
           "img-content": " col-large-12 vertical",
           "text-content": " col-large-12 ",
@@ -124,30 +130,24 @@ export default {
           "text-content": "col-large-6 col-large-after-2",
         },
       };
-      let selectedView = viewConfig.horizontal;
+      let selectedView = vc.horizontal;
       if (this.vOrientation) {
-        selectedView = viewConfig.vertical;
+        selectedView = vc.vertical;
       }
       return selectedView[e];
     },
-    localTranslation(textContent) {
-      // Recieves the text content in multiple languages and return the selected
-      const lang = this.$i18n.locale;
-      return textContent[lang] || textContent.en;
-    },
     setProjectData() {
-      const defaultValue = { content: {}, config: { visible: false } };
       const gradient = this.colorGradient
         ? {
             start: this.colorGradient.start || variable.primary,
             end: this.colorGradient.end || variable.secondary,
           }
-        : { start: variable.primary, end: "#16496b" };
+        : { start: variable.primary, end: variable.secondary };
       this.project = {
         id: this.projectId,
-        title: this.projectTitle || defaultValue,
-        topic: this.projectTopic || defaultValue,
-        description: this.projectDescription || defaultValue,
+        name: this.projectTitle,
+        topic: this.projectTopic,
+        description: this.projectDescription,
         img_background: this.backgroundImage,
         img_project: this.projectImage,
         link: this.url,
@@ -185,7 +185,6 @@ export default {
     color: white;
     height: 100%;
     .project-type {
-      display: block;
       font-size: $font-size-mini;
       text-transform: uppercase;
     }
@@ -195,7 +194,6 @@ export default {
       font-weight: 700;
       line-height: 1.25;
       text-align: left;
-      text-transform: none;
       margin-bottom: $spacing-3;
       text-transform: uppercase;
       transition: margin-bottom 0.5s ease-in-out;
@@ -218,6 +216,9 @@ export default {
         max-height: 100px;
         border-radius: $border-radius;
         transition: all 0.5s ease-in-out;
+        &.round {
+          border-radius: 50% !important;
+        }
       }
     }
   }
@@ -316,7 +317,7 @@ export default {
 @media only screen and (min-width: $viewport-mobile-large) {
   .project {
     .project-info {
-      padding: $spacing-2 $spacing-1;
+      padding: $spacing-3 $spacing-1;
       h3 {
         font-size: $font-size-normal;
         margin-bottom: $spacing-1;
@@ -332,7 +333,7 @@ export default {
       .col-image {
         display: block;
         img {
-          transform: scale(1.3) translateX(-10%);
+          transform: scale(1.2) translateX(-10%);
         }
       }
     }
@@ -346,13 +347,12 @@ export default {
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .project {
     .project-info {
-      padding: $spacing-3 $spacing-1;
       p {
         font-size: $font-size-mini;
       }
       .col-image {
         img {
-          transform: scale(1.3) translateX(-5%);
+          transform: scale(1.2) translateX(-10%);
         }
       }
     }
@@ -377,7 +377,7 @@ export default {
         padding-bottom: $spacing-1;
         &.col-image {
           img {
-            transform: scale(1.5) translateY(12.5%);
+            transform: scale(1.3) translateY(12.5%);
           }
         }
       }
@@ -432,7 +432,7 @@ export default {
       .vertical {
         &.col-image {
           img {
-            transform: scale(1.7) translateY(15%);
+            transform: scale(1.5) translateY(15%);
           }
         }
       }

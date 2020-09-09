@@ -64,7 +64,7 @@
           class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
         >
           <!-- Project Cards component -->
-          <app-content-section class="row ph-mv">
+          <app-content-section class="row ph-mv" v-if="is_data_fetched">
             <project-cards-block
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"
@@ -146,7 +146,7 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 import EventList from "../components/EventList";
 
-import { mapActions, mapMutations, mapGetters } from "vuex";
+import { mapActions, mapMutations, mapGetters, mapState } from "vuex";
 import content from "@/assets/generic_content.json";
 
 export default {
@@ -196,18 +196,29 @@ export default {
   },
   computed: {
     ...mapGetters({ view: "viewconfig/getHomeConfig" }),
+    ...mapState({ is_data_fetched: (state) => state.project.is_data_fetched }),
   },
   methods: {
-    ...mapMutations({ setHomeConfig: "viewconfig/setHomeConfig" }),
-    ...mapActions({ getProjects: "project/getFeaturedProjects" }),
+    ...mapMutations({
+      setHomeConfig: "viewconfig/setHomeConfig",
+    }),
+    ...mapActions({
+      getFeaturedProjects: "project/getFeaturedProjects",
+      getFlagshipProjects: "project/getFlagshipProjects",
+    }),
     openInNewTab: function(url) {
       var win = window.open(url, "_blank");
       win.focus();
     },
     setProjectList: function() {
-      //Load featured projects from pybossa
-      this.getProjects();
       this.projectCardConfig = this.view("projectCards");
+      if (this.projectCardConfig.flagship) {
+        //TODO: Load flagship projects, pending to do
+        this.getFlagshipProjects();        
+      } else {
+        //Load featured projects from pybossa
+        this.getFeaturedProjects();
+      }
     },
     setOurCommunity() {
       this.bottomLeftConfig = this.view("bottom_left");
@@ -231,8 +242,6 @@ export default {
   created() {
     // Load the view configuration in vuex state
     this.setHomeConfig();
-
-    this.getProjects();
 
     this.setProjectList();
     this.setOurCommunity();

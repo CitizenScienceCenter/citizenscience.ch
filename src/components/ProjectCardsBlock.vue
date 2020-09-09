@@ -34,8 +34,8 @@
           :button="p.button"
           :projectBgImage="p.img_background"
           :projectTbImage="p.img_project"
-          :url="p.link"
-          :colorGradient="p.gradient"
+          :url="p.url"
+          :colorGradient="p.color_gradient"
           :vOrientation="vOrientation"
           :projectId="p.id"
           :viewConfig="br"
@@ -62,7 +62,7 @@
 </template>
 <script>
 import ProjectTeaser from "@/components/ProjectTeaser";
-import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 // This variable avoid undefined or null errors
 const keys = [
@@ -72,9 +72,9 @@ const keys = [
   "description",
   "img_background",
   "img_project",
-  "link",
+  "url",
   "button",
-  "gradient",
+  "color_gradient",
 ];
 
 export default {
@@ -83,7 +83,7 @@ export default {
     return {
       br: {},
       numberOfProjects: this.limit,
-      projects: [],
+      projectList: [],
     };
   },
   props: {
@@ -96,9 +96,7 @@ export default {
     ProjectTeaser,
   },
   computed: {
-    ...mapState({
-      projectList: (state) => state.project.projects,
-    }),
+    ...mapGetters({ getProjectList: "project/getProjectList" }),
     getProjects() {
       const projects = this.projectList
         .slice(0, this.numberOfProjects)
@@ -138,19 +136,21 @@ export default {
       });
       project.id = project.id.toString();
       // TODO: implement env instead
-      project.link = `https://lab.citizenscience.ch/${this.$i18n.locale}/project/${project.id}`;
+      project.url =
+        project.url ||
+        `https://lab.citizenscience.ch/${this.$i18n.locale}/project/${project.id}`;
       project.button = project.button || {
         en: "Contribute ",
         de: "Beitragen",
       };
-      project.img_background = p.info.thumbnail_url;
+      project.img_background = project.img_background || p.info.thumbnail_url;
       return project;
     },
   },
   created() {
+    this.projectList = this.getProjectList;
     this.setViewConfig();
   },
-  destroyed() {},
 };
 </script>
 

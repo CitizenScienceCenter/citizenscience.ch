@@ -10,7 +10,7 @@
   "project-wiesel-description": "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
   "project-wiesel-button": "Take part",
 
-  "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke (german only)",
+  "project-hatespeech-title": "Geschlechtsspezifische Hassausdrücke (german only)",
   "project-hatespeech-topic": "Linguistics",
   "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
   "project-hatespeech-button": "Take part",
@@ -53,7 +53,7 @@
   "project-wiesel-description": "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box.",
   "project-wiesel-button": "Mitmachen",
 
-  "project-hatespeech-title": "Geschlechts&shy;spezifische Hassausdrücke",
+  "project-hatespeech-title": "Geschlechtsspezifische Hassausdrücke",
   "project-hatespeech-topic": "Sprachwissenschaften",
   "project-hatespeech-description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
   "project-hatespeech-button": "Mitmachen",
@@ -91,111 +91,132 @@
 
 <template>
   <div>
-
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
-            <h2 class="heading centered" id="projects">{{ $t('section-projects-heading') }}</h2>
+            <h2 class="heading centered" id="projects">
+              {{ $t("section-projects-heading") }}
+            </h2>
           </div>
         </div>
         <div class="scroll-effect">
           <div class="row row-centered row-wrapping">
-
-
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+            <div
+              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
+            >
               <div>
                 <project-teaser
-                        :projectTitle="$t('project-mitrends-title')"
-                        :projectTopic="$t('project-mitrends-topic')"
-                        :projectDescription="$t('project-mitrends-description')"
-                        :buttonText="$t('project-mitrends-button')"
-                        projectBgImage="/img/projects/mitrends.jpg"
-                        projectImage="/img/projects/mitrends-graphic.png"
-                        url="https://mitrends.citizenscience.ch"
-                        :colorGradient="{start:'#fc5c4a', end:'#7284cd'}"
+                  :viewConfig="view"
+                  :vOrientation="view.vOrientation"
+                  :projectTitle="$t('project-mitrends-title')"
+                  :projectTopic="$t('project-mitrends-topic')"
+                  :projectDescription="$t('project-mitrends-description')"
+                  :button="{ en: $t('project-mitrends-button') }"
+                  projectBgImage="/img/projects/mitrends.jpg"
+                  projectTbImage="/img/projects/mitrends-graphic.png"
+                  url="https://mitrends.citizenscience.ch"
+                  :colorGradient="{ start: '#fc5c4a', end: '#7284cd' }"
                 ></project-teaser>
               </div>
             </div>
 
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+            <div
+              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
+            >
               <div>
                 <project-teaser
-                        :projectTitle="$t('project-snake-title')"
-                        :projectTopic="$t('project-snake-topic')"
-                        :projectDescription="$t('project-snake-description')"
-                        :buttonText="$t('project-snake-button')"
-                        projectBgImage="/img/projects/snakechallenge.jpg"
-                        projectImage="/img/projects/snakechallenge-intro.png"
-                        url="https://snakes.citizenscience.ch"
-                        :colorGradient="{start:'#A35026', end:'#448D7D'}"
+                  :viewConfig="view"
+                  :vOrientation="view.vOrientation"
+                  :projectTitle="$t('project-snake-title')"
+                  :projectTopic="$t('project-snake-topic')"
+                  :projectDescription="$t('project-snake-description')"
+                  :button="{ en: $t('project-snake-button') }"
+                  projectBgImage="/img/projects/snakechallenge.jpg"
+                  projectTbImage="/img/projects/snakechallenge-intro.png"
+                  url="https://snakes.citizenscience.ch"
+                  :colorGradient="{ start: '#A35026', end: '#448D7D' }"
                 ></project-teaser>
               </div>
             </div>
 
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+            <div
+              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
+            >
               <div>
                 <project-teaser
-                        :projectTitle="$t('project-wiesel-title')"
-                        :projectTopic="$t('project-wiesel-topic')"
-                        :projectDescription="$t('project-wiesel-description')"
-                        :buttonText="$t('project-wiesel-button')"
-                        projectBgImage="/img/projects/wiesel.jpg"
-                        projectImage="/img/projects/wiesel-intro.png"
-                        url="https://wiesel-gesucht.citizenscience.ch"
-                        :colorGradient="{start:'#99695c', end:'#3f6fa0'}"
+                  :viewConfig="view"
+                  :vOrientation="view.vOrientation"
+                  :projectTitle="$t('project-wiesel-title')"
+                  :projectTopic="$t('project-wiesel-topic')"
+                  :projectDescription="$t('project-wiesel-description')"
+                  :button="{ en: $t('project-wiesel-button') }"
+                  projectBgImage="/img/projects/wiesel.jpg"
+                  projectTbImage="/img/projects/wiesel-intro.png"
+                  url="https://wiesel-gesucht.citizenscience.ch"
+                  :colorGradient="{ start: '#99695c', end: '#3f6fa0' }"
                 ></project-teaser>
               </div>
             </div>
 
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+            <div
+              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
+            >
               <div>
                 <project-teaser
-                        :projectTitle="$t('project-wenker-title')"
-                        :projectTopic="$t('project-wenker-topic')"
-                        :projectDescription="$t('project-wenker-description')"
-                        :buttonText="$t('project-wenker-button')"
-                        projectBgImage="/img/projects/wenker.jpg"
-                        projectImage="/img/projects/wenker-intro.png"
-                        url="https://wenker.citizenscience.ch"
-                        :colorGradient="{start:'#3e6189', end:'#766b51'}"
+                  :viewConfig="view"
+                  :vOrientation="view.vOrientation"
+                  :projectTitle="$t('project-wenker-title')"
+                  :projectTopic="$t('project-wenker-topic')"
+                  :projectDescription="$t('project-wenker-description')"
+                  :button="{ en: $t('project-wenker-button') }"
+                  projectBgImage="/img/projects/wenker.jpg"
+                  projectTbImage="/img/projects/wenker-intro.png"
+                  url="https://wenker.citizenscience.ch"
+                  :colorGradient="{ start: '#3e6189', end: '#766b51' }"
                 ></project-teaser>
               </div>
             </div>
 
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+            <div
+              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
+            >
               <div>
                 <project-teaser
-                        :projectTitle="$t('project-hatespeech-title')"
-                        :projectTopic="$t('project-hatespeech-topic')"
-                        :projectDescription="$t('project-hatespeech-description')"
-                        :buttonText="$t('project-hatespeech-button')"
-                        projectBgImage="/img/projects/hatespeech.jpg"
-                        projectImage="/img/projects/hatespeech-intro.png"
-                        url="https://hatespeech.citizenscience.ch"
-                        :colorGradient="{start:'#6e4f9e', end:'#478161'}"
-                        infoSign="Beta"
+                  :viewConfig="view"
+                  :vOrientation="view.vOrientation"
+                  :projectTitle="$t('project-hatespeech-title')"
+                  :projectTopic="$t('project-hatespeech-topic')"
+                  :projectDescription="$t('project-hatespeech-description')"
+                  :button="{ en: $t('project-hatespeech-button') }"
+                  projectBgImage="/img/projects/hatespeech.jpg"
+                  projectTbImage="/img/projects/hatespeech-intro.png"
+                  url="https://hatespeech.citizenscience.ch"
+                  :colorGradient="{ start: '#6e4f9e', end: '#478161' }"
+                  infoSign="Beta"
                 ></project-teaser>
               </div>
             </div>
 
-            <div class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect">
+            <div
+              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
+            >
               <div>
                 <project-teaser
-                        :projectTitle="$t('project-cohcoh-title')"
-                        :projectTopic="$t('project-cohcoh-topic')"
-                        :projectDescription="$t('project-cohcoh-description')"
-                        :buttonText="$t('project-cohcoh-button')"
-                        projectBgImage="/img/projects/cohcoh.jpg"
-                        projectImage="/img/projects/cohcoh-graphic.png"
-                        url="https://cause-of-health.citizenscience.ch"
-                        :colorGradient="{start:'#4ca942', end:'#4697cb'}"
+                  :viewConfig="view"
+                  :vOrientation="view.vOrientation"
+                  :projectTitle="$t('project-cohcoh-title')"
+                  :projectTopic="$t('project-cohcoh-topic')"
+                  :projectDescription="$t('project-cohcoh-description')"
+                  :button="{ en: $t('project-cohcoh-button') }"
+                  projectBgImage="/img/projects/cohcoh.jpg"
+                  projectTbImage="/img/projects/cohcoh-graphic.png"
+                  url="https://cause-of-health.citizenscience.ch"
+                  :colorGradient="{ start: '#4ca942', end: '#4697cb' }"
                 ></project-teaser>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </app-content-section>
@@ -204,86 +225,125 @@
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
-            <h2 class="heading centered" id="projects">{{ $t('section-partner-projects-heading') }}</h2>
+            <h2 class="heading centered" id="projects">
+              {{ $t("section-partner-projects-heading") }}
+            </h2>
           </div>
         </div>
 
         <div class="row row-centered scroll-effect row-wrapping margin-bottom">
-          <div class="col col-6 col-tablet-portrait-6 col-large-3 col-large-before-2 col-wrapping">
+          <div
+            class="col col-6 col-tablet-portrait-6 col-large-3 col-large-before-2 col-wrapping"
+          >
             <img src="/img/projects/crowdwater.png" />
           </div>
-          <div class="col col-tablet-portrait-10 col-large-5 col-large-after-2 col-wrapping">
-            <p class="reduced-bottom-margin" v-html="$t('section-partner-projects-crowdwater-text')"></p>
+          <div
+            class="col col-tablet-portrait-10 col-large-5 col-large-after-2 col-wrapping"
+          >
+            <p
+              class="reduced-bottom-margin"
+              v-html="$t('section-partner-projects-crowdwater-text')"
+            ></p>
             <div class="centered left-aligned-large">
-              <button class="button button-secondary" @click="openInNewTab('https://www.crowdwater.ch')">{{ $t('section-partner-projects-crowdwater-button') }}</button>
+              <button
+                class="button button-secondary"
+                @click="openInNewTab('https://www.crowdwater.ch')"
+              >
+                {{ $t("section-partner-projects-crowdwater-button") }}
+              </button>
             </div>
           </div>
         </div>
 
         <div class="row row-centered scroll-effect row-wrapping">
-          <div class="col col-6 col-tablet-portrait-6 col-large-3 col-large-before-2 col-wrapping">
+          <div
+            class="col col-6 col-tablet-portrait-6 col-large-3 col-large-before-2 col-wrapping"
+          >
             <img src="/img/projects/stophatespeech.png" />
           </div>
-          <div class="col col-tablet-portrait-10 col-large-5 col-large-after-2 col-wrapping">
-            <p class="reduced-bottom-margin" v-html="$t('section-partner-projects-hatespeech-text')"></p>
+          <div
+            class="col col-tablet-portrait-10 col-large-5 col-large-after-2 col-wrapping"
+          >
+            <p
+              class="reduced-bottom-margin"
+              v-html="$t('section-partner-projects-hatespeech-text')"
+            ></p>
             <div class="centered left-aligned-large">
-              <button class="button button-secondary" @click="openInNewTab('http://www.stophatespeech.ch')">{{ $t('section-partner-projects-hatespeech-button') }}</button>
+              <button
+                class="button button-secondary"
+                @click="openInNewTab('http://www.stophatespeech.ch')"
+              >
+                {{ $t("section-partner-projects-hatespeech-button") }}
+              </button>
             </div>
           </div>
         </div>
-
       </div>
     </app-content-section>
 
     <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
-
   </div>
 </template>
 
 <script>
+import ContentSection from "@/components/shared/ContentSection.vue";
+import Footer from "@/components/shared/Footer.vue";
+import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
+import ProjectTeaser from "@/components/ProjectTeaser";
 
-    import ContentSection from '@/components/shared/ContentSection.vue'
-    import Footer from '@/components/shared/Footer.vue'
-    import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-    import ProjectTeaser from '@/components/ProjectTeaser';
-
-    export default {
-        components: {
-            SectionNewsletterSignup,
-            ProjectTeaser,
-            'app-content-section': ContentSection,
-            'app-footer': Footer
+export default {
+  data() {
+    return {
+      view: {},
+    };
+  },
+  components: {
+    SectionNewsletterSignup,
+    ProjectTeaser,
+    "app-content-section": ContentSection,
+    "app-footer": Footer,
+  },
+  props: {
+    platform: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  metaInfo: function() {
+    return {
+      title: this.$t("page-title"),
+      meta: [
+        {
+          property: "og:title",
+          content: this.$t("page-title"),
+          template: "%s | " + this.$t("site-title"),
         },
-        props: {
-            platform: {
-                type: Boolean,
-                default: false
-            }
-        },
-        metaInfo: function() {
-            return {
-                title: this.$t('page-title'),
-                meta: [
-                    {
-                        property: 'og:title',
-                        content: this.$t('page-title'),
-                        template: '%s | '+this.$t('site-title')
-                    }
-                ]
-            }
-        },
-        methods: {
-            openInNewTab: function(url) {
-                var win = window.open(url, '_blank');
-                win.focus();
-            }
-        }
-    }
-
+      ],
+    };
+  },
+  methods: {
+    openInNewTab: function(url) {
+      var win = window.open(url, "_blank");
+      win.focus();
+    },
+    setViewConfig() {
+      this.view = {
+        visible: true,
+        vOrientation: false,
+        img_project: { visible: true },
+        topic: { visible: true },
+        name: { visible: true },
+        description: { visible: true },
+        button: { disabled: false, visible: true },
+      };
+    },
+  },
+  created() {
+    this.setViewConfig()
+  },
+};
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

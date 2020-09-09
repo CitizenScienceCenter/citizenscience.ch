@@ -144,7 +144,7 @@ export default {
     },
     logoClick: function(e) {
       // Validate first if logo is disabled
-      if (this.uzh_eth_logo.disabled) return;
+      if (this.br.uzh_eth_logo.disabled) return;
       var rect = e.target.getBoundingClientRect();
       var x = e.clientX - rect.left;
       var width = rect.width;

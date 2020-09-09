@@ -218,6 +218,11 @@ export default {
 }
 @media only screen and (min-width: $viewport-large) {
   .news {
+    .text-section {
+      p {
+        font-size: $font-size-small;
+      }
+    }
   }
 }
 @media only screen and (min-width: $viewport-xlarge) {

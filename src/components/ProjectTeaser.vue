@@ -7,7 +7,7 @@
     }"
   >
     <div class="project-info">
-      <div class="row row-reverse-large row-centered row-middle row-wrapping">
+      <div class="row row-reverse-large row-centered row-wrapping">
         <div
           class="col col-4 col-wrapping centered col-image"
           :class="validateOrientation('img-content')"
@@ -19,13 +19,13 @@
 
         <div class="col col-8" :class="validateOrientation('text-content')">
           <span class="project-type" v-if="br.topic.visible">
-            {{ project.topic }}
+            {{ localTranslation(project.topic) }}
           </span>
           <h3 v-if="br.name.visible">
-            {{ project.name }}
+            {{ localTranslation(project.name) }}
           </h3>
           <p v-if="br.description.visible">
-            {{ project.description }}
+            {{ localTranslation(project.description) }}
           </p>
         </div>
         <div class="col col-6 col-large-12">
@@ -87,9 +87,9 @@ export default {
     projectBgImage: String,
     projectTbImage: String,
     projectId: String,
-    projectTitle: String,
-    projectTopic: String,
-    projectDescription: String,
+    projectTitle: [String, Object],
+    projectTopic: [String, Object],
+    projectDescription: [String, Object],
     button: Object,
     url: String,
     colorGradient: Object,
@@ -108,9 +108,6 @@ export default {
   },
   methods: {
     localTranslation(textContent) {
-      if (typeof textContent == "string") {
-        return textContent;
-      }
       return getTranslation(textContent, this.$i18n.locale);
     },
     openInNewTab: function(url) {
@@ -151,10 +148,7 @@ export default {
         img_background: this.backgroundImage,
         img_project: this.projectImage,
         link: this.url,
-        button: this.button || {
-          content: {},
-          config: { visible: false, disabled: true },
-        },
+        button: this.button,
         gradient: gradient,
       };
     },
@@ -171,6 +165,7 @@ export default {
 
 .project {
   position: relative;
+  padding-bottom: $spacing-1;
   border-radius: $border-radius;
   box-shadow: 0px 4px 8px -4px rgba($color-black, 0.2);
   overflow: hidden;
@@ -354,7 +349,7 @@ export default {
         img {
           transform: scale(1.2) translateX(-10%);
         }
-      }
+      }      
     }
     .info-text {
       max-width: none;
@@ -369,10 +364,7 @@ export default {
       padding-bottom: $spacing-4;
       .project-type {
         font-size: $font-size-mini;
-      }
-      p {
-        font-size: $font-size-mini;
-      }
+      }      
       .vertical {
         padding-bottom: $spacing-1;
         &.col-image {
@@ -398,7 +390,7 @@ export default {
 
       .col-image {
         img {
-          transform: scale(2) translateY(5%);
+          transform: scale(2) translateY(15%);
         }
       }
     }
@@ -438,7 +430,7 @@ export default {
       }
       .col-image {
         img {
-          transform: scale(2.5) translateY(10%);
+          transform: scale(2.2) translateY(17%);
         }
       }
     }

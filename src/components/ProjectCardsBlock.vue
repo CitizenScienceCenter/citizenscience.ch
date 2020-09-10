@@ -21,6 +21,7 @@
       </div>
     </div>
     <div class="row row-centered scroll-effect">
+      <!-- Project cards list -->
       <div
         class="col col-wrapping col-tablet-portrait-bottom-margin-2 col-mobile-large-12 scroll-effect"
         :class="validateOrientation()"
@@ -63,6 +64,7 @@
 <script>
 import ProjectTeaser from "@/components/ProjectTeaser";
 import { mapGetters } from "vuex";
+import { getNested } from "@/assets/support.js";
 
 // This variable avoid undefined or null errors
 const keys = [
@@ -143,7 +145,8 @@ export default {
         en: "Contribute ",
         de: "Beitragen",
       };
-      project.img_background = project.img_background || p.info.thumbnail_url;
+      project.img_background =
+        project.img_background || getNested(p, "info", "thumbnail_url");
       return project;
     },
   },

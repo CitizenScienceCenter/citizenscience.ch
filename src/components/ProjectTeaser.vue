@@ -8,15 +8,15 @@
   >
     <div class="project-info">
       <div class="row row-reverse-large row-centered row-wrapping">
+        <!-- Project image section  -->
         <div
           class="col col-4 col-wrapping centered col-image"
           :class="validateOrientation('img-content')"
           v-if="br.img_project.visible"
         >
-          <!-- Validate if project_img exist -->
           <img :src="project.img_project" :class="{ round: !projectTbImage }" />
         </div>
-
+        <!-- Text Content section  -->
         <div class="col col-8" :class="validateOrientation('text-content')">
           <span class="project-type" v-if="br.topic.visible">
             {{ localTranslation(project.topic) }}
@@ -218,6 +218,12 @@ export default {
     }
   }
   .project-info:hover {
+    .col-image {
+      img {
+        max-height: 110px;
+        position: relative;
+      }
+    }
     .vertical {
       &.col-image {
         img {
@@ -349,7 +355,7 @@ export default {
         img {
           transform: scale(1.2) translateX(-10%);
         }
-      }      
+      }
     }
     .info-text {
       max-width: none;
@@ -364,7 +370,7 @@ export default {
       padding-bottom: $spacing-4;
       .project-type {
         font-size: $font-size-mini;
-      }      
+      }
       .vertical {
         padding-bottom: $spacing-1;
         &.col-image {

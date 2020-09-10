@@ -7,7 +7,7 @@
     "sdg_logo": { "disabled": false, "visible": true }
   },
   "projectCards": {
-    "flagship":true,
+    "flagship":false,
     "visible": true,
     "vOrientation": true,
     "limit": 3,

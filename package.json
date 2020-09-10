@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-free": "^5.14.0",
     "axios": "^0.20.0",
     "crypto-js": "^3.1.9-1",
+    "minio": "^7.0.16",
     "sass-loader": "^7.1.0",
     "simple-analytics-vue": "^1.1.0",
     "swagger-client": "^3.8.22",

@@ -48,11 +48,43 @@
       "de": "Geschlechtsspezifische Hassausdrücke"
     },
     "topic": { "en": "Linguistics", "de": "Sprachwissenschaften" },
-    "description":  "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
+    "description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
     "button": { "en": "Take part", "de": "Mitmachen" },
     "img_background": "/img/projects/hatespeech.jpg",
     "img_project": "/img/projects/hatespeech-intro.png",
     "url": "https://hatespeech.citizenscience.ch",
     "color_gradient": { "start": "#6e4f9e", "end": "#478161" }
+  },
+  {
+    "id": "fs5",
+    "name": {
+      "en": "Snake ID Challenge"
+    },
+    "topic": { "en": "Herpetology", "de": "Herpetologie" },
+    "description": {
+      "en": "Fall is here! You can take advantage of the cooler weather to test and refine your identification skills with the second phase of the SnakeID challenge.",
+      "de": "Der Herbst ist da! Nutzt das kühlere Wetter, um eure Identifikationsfähigkeiten in der zweiten Phase der SnakeID-Challenge zu testen und zu verfeinern."
+    },
+    "button": { "en": "Take a look", "de": "Ansehen" },
+    "img_background": "/img/projects/snakechallenge.jpg",
+    "img_project": "/img/projects/snakechallenge-intro.png",
+    "url": "https://snakes.citizenscience.ch",
+    "color_gradient": { "start": "#A35026", "end": "#448D7D" }
+  },
+  {
+    "id": "fs6",
+    "name": {
+      "en": "Cause of Health"
+    },
+    "topic": { "en": "Health", "de": "Gesundheit" },
+    "description": {
+      "en": "Health and wellbeing are different in each individual and depend on the genome, the environment and behavior of each individual (Health Triangle). In order to understand the causes of health we need large sets of health-relevant data from a large number of people.",
+      "de": "Gesundheit und Wohlbefinden sind individuell verschieden und werden durch das “Gesundheitsdreieck” bestimmt: Dem Zusammenhang zwischen Genom, Umwelt und Verhalten. Zur Erforschung von Gesundheit und Wohlbefinden braucht die Wissenschaft gesundheitsrelevante Daten von möglichst vielen Menschen."
+    },
+    "button": { "en": "Take part", "de": "Ansehen" },
+    "img_background": "/img/projects/cohcoh.jpg",
+    "img_project": "/img/projects/cohcoh-graphic.png",
+    "url": "https://cause-of-health.citizenscience.ch",
+    "color_gradient": { "start": "#4ca942", "end": "#4697cb" }
   }
 ]

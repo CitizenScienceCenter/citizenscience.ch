@@ -26,10 +26,7 @@
           >
             {{ localTranslation(coverInfo.lead) }}
           </p>
-          <div
-            class="button-group centered"
-            v-if="localTranslation(coverInfo.path)"
-          >
+          <div class="button-group centered" v-if="coverInfo.path">
             <!-- simple external link handler, with target _blank -->
             <a
               v-if="localTranslation(coverInfo.path).startsWith('http')"
@@ -185,7 +182,7 @@ export default {
 .cover {
   height: 50vh;
   max-height: 440px;
-  background-position: 50% 50%;
+  background-position: center center;
   background-size: cover;
   position: relative;
   display: flex;

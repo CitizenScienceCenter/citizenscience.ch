@@ -15,3 +15,7 @@ export function openUrl(url, self) {
   let win = self ? "_self" : "_blank";
   window.open(url, win).focus();
 }
+// Function to find the value of nested parameter
+export function getNested(obj, ...args) {
+  return args.reduce((obj, level) => obj && obj[level], obj)
+}

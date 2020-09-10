@@ -1,58 +1,17 @@
 <i18n>
 {
   "en": {
-    "page-title": "Citizen Science Center Zurich",
-    "section-projects-text": "The study of languages is connected to the 17 SDGs, which aim at engaging not only governments but “all people everywhere”, at all levels of society. This requires equal access to education and communication in a multiplicity of languages, including indigenous and heritage language minorities. Knowledge about the structure and history of each language is therefore important to enable this communication in a sustainable way.",
+    "page-title": "Citizen Science Center Zurich"
 
-    "section-build-project-heading": "Do you have a project in mind? We can help you.",
-    "section-build-project-text": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
-    "section-build-project-button": "Learn more",
-
-    "section-explanation-heading": "Citizen Science «Zurich Style»",
-    "section-explanation-lead": "The Citizen Science Center Zurich enables <b>researchers</b> and <b>citizens</b> to create and conduct research projects that produce <b>excellent</b> and <b>participatory science</b> while supporting the UN SDGs.",
-    "section-explanation-text": "In next–generation Citizen Science projects the general public provides new and invaluable knowledge in areas from physics to linguistics to human health. Projects produce excellent science but also quality open data that can help citizens, communities and governments to assess and monitor the UN SDGs.",
-    "section-explanation-button": "Learn more",
-
-    "section-about-heading": "A Joint Initiative",
-    "section-about-text": "The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.",
-    "section-about-text-2": "Switzerland has a deep tradition of direct democracy and participatory decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.",
-    "section-about-text-3": "Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy.",
-    "section-about-button": "Learn more about us",
-
-    "builder-title": "Explore the Citizen Science PROJECT BUILDER",
-    "builder-lead": "The CS Center released the beta version of the CS Project Builder, an open, free and simple tool to create your own Citizen Science Data Analysis project. ",
-    "builder-path": "https://lab.citizenscience.ch/en/",
-    "builder-button": "Explore"
   },
   "de": {
-    "page-title": "Citizen Science Center Zürich",
-    "section-projects-text": "In unserem erstes Citizen Science Projekt geht es um Sprache. Helfen Sie Forschenden der Uni Zürich dabei, schweizerdeutsche Sätze aus den 1930er Jahren abzuschreiben und neu zu übersetzen und sehen Sie selbst, wie Ihr Dialekt sich in den letzten 100 Jahren verändert hat. Das Studium von Sprache ist auch für 17 SDGs von grosser Bedeutung, denn das Thema Nachhaltigkeit betrifft uns alle. Um möglichst vielen Menschen auf allen gesellschaftlichen Ebenen den Zugang zu Bildung und Information rund um das Thema zu ermöglichen, muss in vielen Sprachen kommuniziert werden. Das Wissen über die Struktur und die historische Entwicklung jeder Sprache ist dafür massgeblich.",
-
-    "section-build-project-heading": "Haben Sie eine Projekt-Idee? Wir helfen Ihnen!",
-    "section-build-project-text": "Wir sind jederzeit offen für Austausch und Gespräch. Gerne überlegen wir mit Ihnen gemeinsam, wie man die Welt mit Citizen Science ein kleines Stück besser machen könnte. Treten Sie mit uns in Kontakt, wenn Sie eine Projektidee haben. Wir können Ihnen bei der Weiterentwicklung der Idee helfen und Ihnen bei positiver Evaluation unsere Tools und Expertise zur Verfügung stellen, um das Projekt realisieren.",
-    "section-build-project-button": "Mehr erfahren",
-
-    "section-explanation-heading": "Citizen Science «Züri Style»",
-    "section-explanation-lead": "Das Citizen Science Center Zürich bringt <b>Wissenschaftler</b> und <b>Bürger</b> zusammen, um gemeinsam <b>exzellente</b> und <b>partizipative Forschung</b> zu betreiben, die die UN SDGs unterstützt.",
-    "section-explanation-text": "In zukunftsweisenden Citizen Science Projekten entsteht durch Einbezug der breiten Bevölkerung neues und wertvolles Wissen in Bereichen wie Physik, Linguistik oder Gesundheit. Projekte mit hohen wissenschaftlichen Standards und Open Data helfen Bürgern, Communities und Regierungen die UN Ziele für nachhaltige Entwicklung umzusetzen.",
-    "section-explanation-button": "Mehr erfahren",
-
-    "section-about-heading": "Eine gemeinsame Initiative",
-    "section-about-text": "Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt.",
-    "section-about-text-2": "Die Schweiz ist bekannt für ihre lange Tradition in direkter Demokratie und politischer Mitbestimmung. Citizen Science könnte als Übertragung dieser Idee von der Politik in die Wissenschaft angesehen werden.",
-    "section-about-text-3": "Auch Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Diese Kombination an Wissen und Kompetenzen am Standort Zürich ermöglicht vielfältige Synergien.",
-    "section-about-button": "Mehr über uns",
-
-    "builder-title": "Entdecke den Citizen Science PROJECT BUILDER",
-    "builder-lead": "Das CS Center hat die Beta-Version des CS Project Builders veröffentlicht: Ein offenes, kostenloses und einfaches Tool zum Erstellen Deines eigenen Citizen Science Datenanalyse-Projekts.",
-    "builder-path": "https://lab.citizenscience.ch/de/",
-    "builder-button": "Entdecken"
+    "page-title": "Citizen Science Center Zürich"
   }
 }
 </i18n>
 
 <template>
-  <div>
+  <div v-if="isLoaded">
     <!-- Cover component -->
     <app-cover></app-cover>
 
@@ -146,7 +105,7 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
 import EventList from "../components/EventList";
 
-import { mapActions, mapMutations, mapGetters, mapState } from "vuex";
+import { mapActions, mapGetters, mapState } from "vuex";
 import content from "@/assets/generic_content.json";
 
 export default {
@@ -196,12 +155,12 @@ export default {
   },
   computed: {
     ...mapGetters({ view: "viewconfig/getHomeConfig" }),
-    ...mapState({ is_data_fetched: (state) => state.project.is_data_fetched }),
+    ...mapState({
+      is_data_fetched: (state) => state.project.is_data_fetched,
+      isLoaded: (state) => state.viewconfig.isLoaded,
+    }),
   },
   methods: {
-    ...mapMutations({
-      setHomeConfig: "viewconfig/setHomeConfig",
-    }),
     ...mapActions({
       getFeaturedProjects: "project/getFeaturedProjects",
       getFlagshipProjects: "project/getFlagshipProjects",
@@ -214,7 +173,7 @@ export default {
       this.projectCardConfig = this.view("projectCards");
       if (this.projectCardConfig.flagship) {
         //TODO: Load flagship projects, pending to do
-        this.getFlagshipProjects();        
+        this.getFlagshipProjects();
       } else {
         //Load featured projects from pybossa
         this.getFeaturedProjects();
@@ -241,7 +200,6 @@ export default {
   },
   created() {
     // Load the view configuration in vuex state
-    this.setHomeConfig();
 
     this.setProjectList();
     this.setOurCommunity();

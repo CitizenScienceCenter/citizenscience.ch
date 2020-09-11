@@ -116,7 +116,7 @@ export const routes = [
         beforeEnter: async (to, from, next) => {
           // This redirect the routing acording the flagship project status
           let res = null;
-          res = await store.dispatch("viewconfig/getStyle");
+          res = await store.dispatch("viewconfig/getHomeConfig");
           await store.commit("viewconfig/setHomeConfig", res);
           if (res) next();
         },

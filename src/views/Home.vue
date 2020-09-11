@@ -11,7 +11,7 @@
 </i18n>
 
 <template>
-  <div v-if="isLoaded">
+  <div v-if="isViewLoaded">
     <!-- Cover component -->
     <app-cover></app-cover>
 
@@ -23,7 +23,7 @@
           class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
         >
           <!-- Project Cards component -->
-          <app-content-section class="row ph-mv" v-if="is_data_fetched">
+          <app-content-section class="row ph-mv" v-if="isProjectsLoaded">
             <project-cards-block
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"
@@ -35,10 +35,12 @@
           <app-content-section
             class="row ph-mv sm-margin-right"
             color="light-greyish"
+            v-if="isNewsLoaded"
           >
             <news-block
               :visible="newsConfig.visible"
               :timeToRefresh="newsConfig.timeToRefresh"
+              :limit="newsConfig.limit"
             >
               ></news-block
             >
@@ -154,16 +156,18 @@ export default {
     };
   },
   computed: {
-    ...mapGetters({ view: "viewconfig/getHomeConfig" }),
+    ...mapGetters({ view: "viewconfig/getHomeComponentConfig" }),
     ...mapState({
-      is_data_fetched: (state) => state.project.is_data_fetched,
-      isLoaded: (state) => state.viewconfig.isLoaded,
+      isProjectsLoaded: (state) => state.project.is_data_fetched,
+      isViewLoaded: (state) => state.viewconfig.isLoaded,
+      isNewsLoaded: (state) => state.content.isLoaded,
     }),
   },
   methods: {
     ...mapActions({
       getFeaturedProjects: "project/getFeaturedProjects",
       getFlagshipProjects: "project/getFlagshipProjects",
+      getNewsRemote: "content/getNewsRemote",
     }),
     openInNewTab: function(url) {
       var win = window.open(url, "_blank");
@@ -193,6 +197,7 @@ export default {
     },
     setNews() {
       this.newsConfig = this.view("news");
+      this.getNewsRemote();
     },
     setSocialFeed() {
       this.socialConfig = this.view("social_feed");

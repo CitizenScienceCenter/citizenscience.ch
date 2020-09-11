@@ -1,6 +1,6 @@
 import homePageConfig from "@/assets/view_config/Home.json";
 import eventsPageConfig from "@/assets/view_config/Events.json";
-import { minio } from "@/minio.js";
+import { getRemoteFile } from "@/minio.js";
 
 const state = {
   home_view: undefined,
@@ -9,7 +9,7 @@ const state = {
 };
 
 const getters = {
-  getHomeConfig: (state) => (comp) => {
+  getHomeComponentConfig: (state) => (comp) => {
     return state.home_view[comp];
   },
   getEventsConfig: (state) => (comp) => {
@@ -18,28 +18,14 @@ const getters = {
 };
 
 const actions = {
-  getStyle({ commit }) {
+  async getHomeConfig({ commit }) {
     commit("setIsLoaded", false);
-    let data;
-    // TODO: change bucket name and file from real S3
-    let promise = new Promise(function(resolve, reject) {
-      minio.getObject("test-10092020", "test.json", function(err, dataStream) {
-        if (err) {
-          resolve(homePageConfig);
-        }
-        dataStream.on("data", function(chunk) {
-          data += chunk;
-        });
-        dataStream.on("end", function() {
-          const resp = JSON.parse(data.split("undefined")[1]);
-          resolve(resp);
-        });
-        dataStream.on("error", function(err) {
-          resolve(homePageConfig);
-        });
-      });
-    });
-    return promise;
+    try {
+      const res = await getRemoteFile("test.json");
+      return res;
+    } catch (error) {
+      return homePageConfig;
+    }
   },
 };
 

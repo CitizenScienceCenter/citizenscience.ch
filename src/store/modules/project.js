@@ -15,7 +15,7 @@ const getters = {
 
 const actions = {
   async getFeaturedProjects({ commit, state }) {
-    commit("changeFetchedStatus", false);
+    commit("setIsDataFetched", false);
     try {
       // TODO: implement env instead
       const res = await fetch(
@@ -27,25 +27,23 @@ const actions = {
       );
       const info = await res.json();
       await commit("setProjects", info.projects);
-      await commit("changeFetchedStatus", true);
     } catch (error) {
       console.error(error);
       return;
     }
   },
-  getFlagshipProjects({ commit }) {
-    commit("changeFetchedStatus", false);
+  getFlagshipProjects({ commit, state }) {
+    commit("setIsDataFetched", false);
     commit("setProjects", static_projects);
-    commit("changeFetchedStatus", true);
   },
 };
 
 const mutations = {
   setProjects(state, payload) {
     state.projects = payload;
+    state.is_data_fetched = true;
   },
-  changeFetchedStatus(state, value) {
-    // Used to contol renderization with async data
+  setIsDataFetched(state, value) {
     state.is_data_fetched = value;
   },
 };

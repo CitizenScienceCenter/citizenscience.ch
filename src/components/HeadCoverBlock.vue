@@ -120,7 +120,7 @@ export default {
     goal: String,
   },
   computed: {
-    ...mapGetters({ view: "viewconfig/getHomeConfig" }),
+    ...mapGetters({ view: "viewconfig/getHomeComponentConfig" }),
     goalImage() {
       return require("@/assets/shared/sdgs/neg/" + this.goal + ".svg");
     },

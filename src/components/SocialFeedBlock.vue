@@ -134,7 +134,7 @@ export default {
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .social {
     .content-section {
-      max-height: 60vh;
+      max-height: 70vh;
     }
   }
 }

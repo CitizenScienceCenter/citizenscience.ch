@@ -10,7 +10,7 @@
 }
 </i18n>
 <template>
-  <div class="news" v-if="visible && news_src.length !== 0">
+  <div class="news" v-if="visible && newslist && newslist.length !== 0">
     <!-- Section Title  -->
     <div class="row row-centered extra-margin-top-2">
       <div class="col col-12 scroll-effect heading-section ">
@@ -25,14 +25,14 @@
       <div class="col col-12 scroll-effect">
         <transition name="slide-fade" mode="out-in">
           <span :key="index" class="date">
-            {{ formatDate(news[index].date) }}
+            {{ formatDate(newslist[index].date) }}
           </span>
         </transition>
       </div>
       <div class="col col-12 scroll-effect">
         <transition name="slide-fade" mode="out-in">
           <h3 :key="index">
-            {{ localTranslation(news[index].title) }}
+            {{ localTranslation(newslist[index].title) }}
           </h3>
         </transition>
       </div>
@@ -40,8 +40,10 @@
       <div class="col col-12 scroll-effect ">
         <transition name="slide-fade" mode="out-in">
           <p :key="index">
-            {{ localTranslation(news[index].description) }}
-            <a @click="openUrlTab(news[index].link)" v-show="news[index].link"
+            {{ localTranslation(newslist[index].description) }}
+            <a
+              @click="openUrlTab(newslist[index].link)"
+              v-show="newslist[index].link"
               >...{{ $t("more-button") }}</a
             >
           </p>
@@ -52,30 +54,45 @@
 </template>
 <script>
 import { getTranslation, openUrl } from "@/assets/support.js";
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 import moment from "moment";
 
-import news_src from "@/assets/news.json";
+// import news_src from "@/assets/news.json";
 
 export default {
   name: "GenericContentBlock",
   data() {
     return {
-      news_src: news_src,
       countDown: 0,
-      news: [],
+      newslist: [],
       index: -1,
       toggle: false,
     };
   },
   props: {
     visible: Boolean,
-    timeToRefresh: Number,
+    timeToRefresh: { type: Number, default: 20 },
+    limit: { type: Number, default: 3 },
   },
   computed: {
     ...mapState({
       language: (state) => state.settings.language,
     }),
+    ...mapGetters({ getNewsList: "content/getNewsList" }),
+    getdata() {
+      try {
+        if (this.getNewsList) {
+          return this.getNewsList
+            .map((x, i) => this.validateNewsContent(x, i))
+            .sort((b, a) => moment(a.date).diff(b.date))
+            .filter((nw) => typeof nw != "undefined")
+            .slice(0, this.limit);
+        }
+        return null;
+      } catch (error) {
+        console.error(error);
+      }
+    },
   },
   methods: {
     localTranslation(textContent) {
@@ -84,17 +101,11 @@ export default {
     openUrlTab: function(url) {
       openUrl(url);
     },
-    setData() {
-      // Formating data to be rendered
-      this.news = this.news_src
-        .sort((b, a) => moment(a.date).diff(b.date))
-        .map((x, i) => this.validateNewsContent(x, i))
-        .filter((nw) => typeof nw != "undefined");
-    },
     validateNewsContent(n, i) {
       // This variable avoid undefined or null errors
       const keys = ["title", "date", "description"];
       const item = {};
+      const element = { ...n };
       // Due to is a dyamic component is required filter the complete information
       if (
         keys.some((x) => typeof n[x] == "undefined") ||
@@ -104,20 +115,21 @@ export default {
       }
       // This section looking the required keys
       keys.forEach((key) => {
-        item[key] = n[key];
+        item[key] = element[key];
       });
       item["index"] = i;
-      item["link"] = n.link || null;
-      item.description = this.validateDescriptionLength(item.description);
+      item["link"] = element.link || null;
+      item["description"] = this.validateDescriptionLength(element.description);
       return item;
     },
     validateDescriptionLength(description) {
       // Here is fixed the maximun number of words and characters for news description
       const MAXCHARS = 350;
+      let newDescription = {};
       Object.keys(description).map(function(key) {
-        description[key] = description[key].slice(0, MAXCHARS);
+        newDescription[key] = description[key].slice(0, MAXCHARS);
       });
-      return description;
+      return newDescription;
     },
     formatDate(date) {
       return moment(date).format("MMMM Do YYYY");
@@ -134,20 +146,24 @@ export default {
             ? this.timeToRefresh
             : 30;
         this.countDown = time;
-        this.index = this.index < this.news.length - 1 ? this.index + 1 : 0;
+        this.index = this.index < this.newslist.length - 1 ? this.index + 1 : 0;
         this.toggle = !this.toggle;
         this.countDownTimer();
       }
     },
   },
   created() {
+    // Define the locale for moment datetime
     moment.locale(this.$i18n.locale);
-    this.setData();
-    if (this.news.length > 0 && this.timeToRefresh > 0) {
+
+    // get news from remote storage
+    this.newslist = this.getdata;
+    if (this.newslist && this.newslist.length > 0 && this.timeToRefresh > 0) {
       this.countDownTimer();
     }
   },
   watch: {
+    // validate when laguage change, to change the format date
     language: function(lan) {
       moment.locale(lan);
     },

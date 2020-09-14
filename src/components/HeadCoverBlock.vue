@@ -26,7 +26,7 @@
           >
             {{ localTranslation(coverInfo.lead) }}
           </p>
-          <div class="button-group centered" v-if="coverInfo.path">
+          <div class="button-group centered" v-if="localTranslation(coverInfo.path)">
             <!-- simple external link handler, with target _blank -->
             <a
               v-if="localTranslation(coverInfo.path).startsWith('http')"

@@ -1,10 +1,21 @@
+<i18n>
+{
+  "en": {
+    "section-heading": "Coming Up",
+    "all-events-button": "All Events"
+  },
+  "de": {
+    "section-heading": "Demnächst",
+    "all-events-button": "Alle Ereignisse"}
+}
+</i18n>
 <template>
   <div class="event-list" v-if="events && events.length != 0 && visible">
     <!-- Heading Section -->
     <div class="row row-centered extra-margin-top-2" v-if="br.heading.visible">
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
-          {{ localTranslation(pl.heading) }}
+          {{ $t(localTranslation(pl.heading)) }}
         </h2>
       </div>
     </div>
@@ -71,15 +82,15 @@
         to="/events"
         class="button button-secondary scroll-effect"
         :disabled="br.button.disabled"
-        >{{ localTranslation(pl.eventsButton) }}</router-link
+        >{{ $t(localTranslation(pl.eventsButton)) }}</router-link
       >
     </div>
   </div>
 </template>
 
 <script>
-import events from "@/assets/events.json";
 import { getTranslation } from "@/assets/support.js";
+import { mapGetters } from "vuex";
 
 export default {
   name: "EventList",
@@ -87,7 +98,7 @@ export default {
     return {
       br: this.viewConfig,
       pl: {},
-      events: events,
+      events: [],
       i18nWeekdays: [
         "weekday-sunday",
         "weekday-monday",
@@ -111,6 +122,19 @@ export default {
     content: Object,
     visible: Boolean,
     viewConfig: Object,
+  },
+  computed: {
+    ...mapGetters({ getEvents: "content/getEvents" }),
+    getdata() {
+      try {
+        if (this.getEvents) {
+          return this.getEvents;
+        }
+        return null;
+      } catch (error) {
+        return null;
+      }
+    },
   },
   methods: {
     localTranslation(textContent) {
@@ -200,6 +224,7 @@ export default {
   },
   created() {
     this.setStyle();
+    this.events = this.getdata;
     if (!this.past) {
       // filter for future events
       this.events = this.events.filter(

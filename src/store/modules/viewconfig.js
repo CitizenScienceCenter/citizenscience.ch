@@ -21,7 +21,8 @@ const actions = {
   async getHomeConfig({ commit }) {
     commit("setIsLoaded", false);
     try {
-      const res = await getRemoteFile("test.json");
+      // Replace for final version of json document
+      const res = await getRemoteFile("home_style.json");
       return res;
     } catch (error) {
       return homePageConfig;

@@ -2,15 +2,16 @@
   <div
     v-if="
       visible &&
-        Object.keys(content).length !== 0 &&
-        content.constructor === Object
+        contentData &&
+        Object.keys(contentData).length !== 0 &&
+        contentData.constructor === Object
     "
   >
     <!-- Heading Section -->
     <div class="row row-centered " v-if="br.heading.visible">
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
-          {{ localTranslation(heading) }}
+          {{ localTranslation(contentData.heading) }}
         </h2>
       </div>
     </div>
@@ -20,14 +21,14 @@
       <div
         class="col scroll-effect"
         :class="validateOrientation('img-content')"
-        v-if="content.image && br.image.visible"
+        v-if="contentData.image && br.image.visible"
       >
         <div class="row row-centered img-section">
           <div class="col col-12 centered">
-            <img :src="content.image" class="col-image" />
+            <img :src="contentData.image" class="col-image" />
           </div>
           <div class="col col-12 centered" v-if="br.img_description.visible">
-            <p>{{ this.localTranslation(img_description) }}</p>
+            <p>{{ this.localTranslation(contentData.img_description) }}</p>
           </div>
         </div>
       </div>
@@ -37,15 +38,18 @@
         :class="validateOrientation('text-content')"
       >
         <div class="row" v-if="br.description.visible">
-          <p>{{ this.localTranslation(description) }}</p>
+          <p>{{ this.localTranslation(contentData.description) }}</p>
         </div>
-        <div class="row button-section" v-if="br.button.visible && button.link">
+        <div
+          class="row button-section"
+          v-if="br.button.visible && contentData.button.link"
+        >
           <button
             class="button button-secondary"
-            @click="openUrlTab(button.link)"
+            @click="openUrlTab(contentData.button.link)"
             :disabled="br.button.disabled"
           >
-            {{ this.localTranslation(button) }}
+            {{ this.localTranslation(contentData.button) }}
           </button>
         </div>
       </div>
@@ -54,23 +58,35 @@
 </template>
 <script>
 import { getTranslation, openUrl } from "@/assets/support.js";
+import { mapGetters } from "vuex";
 
 export default {
   name: "GenericContentBlock",
   data() {
     return {
       br: this.viewConfig,
-      heading: {},
-      description: {},
-      img_description: {},
-      button: {},
+      contentData: {},
     };
   },
   props: {
-    content: Object,
+    content: String,
     visible: Boolean,
     vOrientation: Boolean,
     viewConfig: Object,
+  },
+  computed: {
+    ...mapGetters({ getContent: "content/getGenericContent" }),
+    getdata() {
+      try {
+        const contentData = this.getContent(this.content);
+        if (contentData) {
+          return contentData;
+        }
+        return null;
+      } catch (error) {
+        return null;
+      }
+    },
   },
   methods: {
     localTranslation(textContent) {
@@ -96,16 +112,9 @@ export default {
       }
       return selectedView[e];
     },
-    setData() {
-      this.description = this.content.description || this.description;
-      this.heading = this.content.heading || this.heading;
-      this.img_description =
-        this.content.img_description || this.img_description;
-      this.button = this.content.button || this.button;
-    },
   },
   created() {
-    this.setData();
+    this.contentData = this.getdata;
   },
 };
 </script>

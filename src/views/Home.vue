@@ -46,11 +46,11 @@
             >
           </app-content-section>
           <!-- Generic Content component for Our Community -->
-          <app-content-section class="row ph-mv">
+          <app-content-section class="row ph-mv" v-if="isGCLoaded">
             <generic-content-block
               :visible="bottomLeftConfig.visible"
               :vOrientation="bottomLeftConfig.vOrientation"
-              :content="ourCommunity"
+              content="home_ourCommunity"
               :viewConfig="bottomLeftConfig"
             ></generic-content-block>
           </app-content-section>
@@ -60,16 +60,22 @@
           class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
         >
           <!-- Generic Content component for Our Mission -->
-          <app-content-section class="row ph-mv sm-margin-left">
+          <app-content-section
+            class="row ph-mv sm-margin-left"
+            v-if="isGCLoaded"
+          >
             <generic-content-block
               :visible="topRightConfig.visible"
               :vOrientation="topRightConfig.vOrientation"
-              :content="ourMission"
+              content="home_ourMission"
               :viewConfig="topRightConfig"
             ></generic-content-block>
           </app-content-section>
           <!-- Our next Event -->
-          <app-content-section class="row ph-mv sm-margin-left">
+          <app-content-section
+            class="row ph-mv sm-margin-left"
+            v-if="isEventsLoaded"
+          >
             <event-list
               :limit="eventsConfig.limit"
               :content="eventsContent"
@@ -160,7 +166,9 @@ export default {
     ...mapState({
       isProjectsLoaded: (state) => state.project.is_data_fetched,
       isViewLoaded: (state) => state.viewconfig.isLoaded,
-      isNewsLoaded: (state) => state.content.isLoaded,
+      isNewsLoaded: (state) => state.content.isNewsLoaded,
+      isGCLoaded: (state) => state.content.isGCLoaded,
+      isEventsLoaded: (state) => state.content.isEventsLoaded,
     }),
   },
   methods: {
@@ -168,6 +176,8 @@ export default {
       getFeaturedProjects: "project/getFeaturedProjects",
       getFlagshipProjects: "project/getFlagshipProjects",
       getNewsRemote: "content/getNewsRemote",
+      getGCRemote: "content/getGenericContentRemote",
+      getEventsRemote: "content/getEventsRemote",
     }),
     openInNewTab: function(url) {
       var win = window.open(url, "_blank");
@@ -183,17 +193,13 @@ export default {
         this.getFeaturedProjects();
       }
     },
-    setOurCommunity() {
-      this.bottomLeftConfig = this.view("bottom_left");
-      this.ourCommunity = content.home_ourCommunity;
-    },
-    setOurMission() {
-      this.topRightConfig = this.view("top_right");
-      this.ourMission = content.home_ourMission;
-    },
     setEventsConfig() {
       this.eventsConfig = this.view("events");
-      this.eventsContent = content.events;
+      this.eventsContent = {
+        heading: "section-heading",
+        eventsButton: "all-events-button",
+      };
+      this.getEventsRemote();
     },
     setNews() {
       this.newsConfig = this.view("news");
@@ -202,16 +208,20 @@ export default {
     setSocialFeed() {
       this.socialConfig = this.view("social_feed");
     },
+    setGenericContent() {
+      this.bottomLeftConfig = this.view("bottom_left");
+      this.topRightConfig = this.view("top_right");
+      this.getGCRemote();
+    },
   },
   created() {
     // Load the view configuration in vuex state
 
     this.setProjectList();
-    this.setOurCommunity();
-    this.setOurMission();
     this.setEventsConfig();
     this.setNews();
     this.setSocialFeed();
+    this.setGenericContent();
   },
 };
 </script>

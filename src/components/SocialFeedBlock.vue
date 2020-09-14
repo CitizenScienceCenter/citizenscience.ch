@@ -33,6 +33,7 @@
             lang: $i18n.locale,
             dnt: true,
           }"
+          ><i class="fas fa-sync fa-spin spinner"></i
         ></Timeline>
       </div>
     </div>
@@ -100,6 +101,10 @@ export default {
     margin-bottom: $spacing-2;
     max-height: 50vh;
     overflow-y: auto;
+    .spinner {
+      font-size: $font-size-normal;
+      color: $color-secondary;
+    }
   }
   .footer-section {
     padding-left: $spacing-3;

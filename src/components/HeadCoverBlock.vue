@@ -26,7 +26,10 @@
           >
             {{ localTranslation(coverInfo.lead) }}
           </p>
-          <div class="button-group centered" v-if="localTranslation(coverInfo.path)">
+          <div
+            class="button-group centered"
+            v-if="localTranslation(coverInfo.path)"
+          >
             <!-- simple external link handler, with target _blank -->
             <a
               v-if="localTranslation(coverInfo.path).startsWith('http')"
@@ -441,6 +444,14 @@ export default {
     .button {
       transform: scale(0.9);
     }
+    .content-wrapper {
+      .cover-heading {
+        font-size: $font-size-xxlarge;
+      }
+      .cover-subheading {
+        font-size: $font-size-medium;
+      }
+    }
   }
 }
 
@@ -455,15 +466,6 @@ export default {
           max-height: 100px;
           max-width: none;
         }
-      }
-    }
-
-    .content-wrapper {
-      .cover-heading {
-        font-size: $font-size-xxlarge;
-      }
-      .cover-subheading {
-        font-size: $font-size-medium;
       }
     }
   }
@@ -489,6 +491,14 @@ export default {
     }
     .bottom-right-logo {
       height: 45px;
+    }
+    .content-wrapper {
+      .cover-heading {
+        font-size: $font-size-xxxlarge;
+      }
+      .cover-subheading {
+        font-size: $font-size-large;
+      }
     }
   }
 }

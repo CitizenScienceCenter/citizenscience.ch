@@ -20,7 +20,7 @@
 </i18n>
 <template>
   <div>
-    <app-content-section>
+    <app-content-section id="upcoming-events">
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 col-xlarge-8">
@@ -34,7 +34,7 @@
       </div>
     </app-content-section>
 
-    <app-content-section color="light-greyish">
+    <app-content-section color="light-greyish" id="past-events">
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 col-xlarge-8">

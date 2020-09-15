@@ -231,8 +231,29 @@ export const routes = [
 
       {
         path: "events",
-        component: Events,
         meta: { i18n: "navigation-events", nav: true },
+        component: ChildView,
+        redirect: "events/upcoming",
+        children: [
+          {
+            path: "upcoming",
+            component: Events,
+            meta: {
+              i18n: "navigation-events-upcoming",
+              nav: true,
+              anchor: "#upcoming-events",
+            },
+          },
+          {
+            path: "past",
+            component: Events,
+            meta: {
+              i18n: "navigation-events-past",
+              nav: true,
+              anchor: "#past-events",
+            },
+          },
+        ],
       },
       {
         path: "events/:event",

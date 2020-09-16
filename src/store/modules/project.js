@@ -1,6 +1,5 @@
 // TODO: this would be replaced for flagship projects
 import static_projects from "@/assets/static_projects.json";
-import axios from "axios";
 
 const state = {
   projects: [],
@@ -17,9 +16,8 @@ const actions = {
   async getFeaturedProjects({ commit, state }) {
     commit("setIsDataFetched", false);
     try {
-      // TODO: implement env instead
       const res = await fetch(
-        "https://pybossa-staging.citizenscience.ch/project/category/featured/",
+        process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/",
         {
           method: "GET",
           headers: { "Content-Type": "application/json" },

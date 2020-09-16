@@ -137,10 +137,9 @@ export default {
         project[key] = p[key] || null;
       });
       project.id = project.id.toString();
-      // TODO: implement env instead
       project.url =
         project.url ||
-        `https://lab.citizenscience.ch/${this.$i18n.locale}/project/${project.id}`;
+        `${process.env.VUE_APP_LAB_BASE_URL}/${this.$i18n.locale}/project/${project.id}`;
       project.button = project.button || {
         en: "Contribute ",
         de: "Beitragen",

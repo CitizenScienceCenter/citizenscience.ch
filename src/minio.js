@@ -3,13 +3,13 @@ var Minio = require("minio");
 // Instantiate the minio client with the endpoint
 // and access keys as shown below.
 
-// TODO: Change minio server by S3 one and env
+// TODO: Change minio server by S3 one
 const minio = new Minio.Client({
-  endPoint: "play.min.io",
-  port: 9000,
+  endPoint: process.env.VUE_APP_MINIO_ENDPOINT,
+  port: parseInt(process.env.VUE_APP_MINIO_PORT),
   useSSL: true,
-  accessKey: "Q3AM3UQ867SPQQA43P2F",
-  secretKey: "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
+  accessKey: process.env.VUE_APP_MINIO_ACCESS_KEY,
+  secretKey: process.env.VUE_APP_MINIO_SECRET_KEY,
 });
 
 export const getRemoteFile = function (fname) {

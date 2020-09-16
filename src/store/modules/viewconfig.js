@@ -22,7 +22,7 @@ const actions = {
     commit("setIsLoaded", false);
     try {
       // Replace for final version of json document
-      const res = await getRemoteFile("home_style.json");
+      const res = await getRemoteFile("styles/home_style.json");
       return res;
     } catch (error) {
       return homePageConfig;

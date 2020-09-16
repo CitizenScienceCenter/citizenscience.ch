@@ -6,8 +6,6 @@ var Minio = require("minio");
 // TODO: Change minio server by S3 one
 const minio = new Minio.Client({
   endPoint: process.env.VUE_APP_MINIO_ENDPOINT,
-  port: parseInt(process.env.VUE_APP_MINIO_PORT),
-  useSSL: true,
   accessKey: process.env.VUE_APP_MINIO_ACCESS_KEY,
   secretKey: process.env.VUE_APP_MINIO_SECRET_KEY,
 });
@@ -15,7 +13,7 @@ const minio = new Minio.Client({
 export const getRemoteFile = function (fname) {
   let data;
   const promise = new Promise(function(resolve, reject) {
-    minio.getObject("test-10092020", fname, function(err, dataStream) {
+    minio.getObject(process.env.VUE_APP_BUCKET_NAME, fname, function(err, dataStream) {
       if (err) {
         reject(`Error reteiving object: ${err}`);
       }

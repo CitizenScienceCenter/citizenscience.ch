@@ -115,10 +115,10 @@ export const routes = [
         component: Home,
         beforeEnter: async (to, from, next) => {
           // This redirect the routing acording the flagship project status
-          let res = null;
-          res = await store.dispatch("viewconfig/getHomeConfig");
+          const res = await store.dispatch("viewconfig/getHomeConfig");
           await store.commit("viewconfig/setHomeConfig", res);
-          if (res) next();
+          const cover = await store.dispatch("content/getCoverRemote")
+          if (res && cover) next();
         },
       },
       {

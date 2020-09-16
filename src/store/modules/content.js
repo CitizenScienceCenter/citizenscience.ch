@@ -1,6 +1,8 @@
+import coverListDefault from "@/assets/cover_list.json";
 import { getRemoteFile } from "@/minio.js";
 
 const state = {
+  coverList: undefined,
   news: undefined,
   genericContent: undefined,
   events: undefined,
@@ -22,11 +24,23 @@ const getters = {
 };
 
 const actions = {
+  async getCoverRemote({ commit }) {
+    let res = null;
+    try {
+      res = await getRemoteFile("data/cover_list.json");
+    } catch (error) {
+      console.error(error);
+      res = coverListDefault;
+    } finally {
+      commit("setCoverList", res);
+      return res;
+    }
+  },
   async getNewsRemote({ commit }) {
     commit("removeIsLoaded", "news");
     let res = null;
     try {
-      res = await getRemoteFile("news.json");
+      res = await getRemoteFile("data/news.json");
     } catch (error) {
       console.error(error);
     } finally {
@@ -38,7 +52,7 @@ const actions = {
     commit("removeIsLoaded", "generic");
     let res = null;
     try {
-      res = await getRemoteFile("generic_content.json");
+      res = await getRemoteFile("data/generic_content.json");
     } catch (error) {
       console.error(error);
     } finally {
@@ -50,7 +64,7 @@ const actions = {
     commit("removeIsLoaded", "events");
     let res = null;
     try {
-      res = await getRemoteFile("events.json");
+      res = await getRemoteFile("data/events.json");
     } catch (error) {
       console.error(error);
     } finally {
@@ -61,6 +75,9 @@ const actions = {
 };
 
 const mutations = {
+  setCoverList(state, payload) {
+    state.coverList = payload;
+  },
   setNewsList(state, payload) {
     state.news = payload;
     state.isNewsLoaded = true;

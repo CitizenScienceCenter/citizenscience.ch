@@ -39,6 +39,10 @@
     </div>
     <!-- Footer Section -->
     <div class="row" v-if="br.footer.visible">
+      <!-- <input type="file" @change="Images_onFileChanged" />
+      <button @click="uploadFile">
+        Upload!
+      </button> -->
       <div class="col col-12 scroll-effect footer-section">
         <span>{{ $t("footer-label") }}</span>
         <i
@@ -70,6 +74,7 @@ export default {
       br: this.viewConfig,
       fb_link: "https://www.facebook.com/CitSciZurich/",
       tw_link: "https://twitter.com/CitSciZurich",
+      selectedFile: null,
     };
   },
   props: {
@@ -82,6 +87,12 @@ export default {
       if (disabled) return;
       openUrl(url);
     },
+    // Images_onFileChanged(event) {
+    //   this.selectedFile = event.target.files[0];
+    // },
+    // uploadFile() {
+    //   console.log(this.selectedFile);
+    // },
   },
 };
 </script>

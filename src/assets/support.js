@@ -1,6 +1,6 @@
 export function getTranslation(textContent, lang = "en") {
   if (!textContent) {
-    return;
+    return null;
   }
   if (typeof textContent == "string") {
     return textContent;

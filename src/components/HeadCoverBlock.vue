@@ -1,10 +1,12 @@
 <i18n>
   {
   "en": {
-    "joint-initiative-UZH_ETH": "A joint initiative by"
+    "joint-initiative-UZH_ETH": "A joint initiative by",
+    "default-button-name":"More Information"
   },
   "de": {
-    "joint-initiative-UZH_ETH": "Ein gemeinsamer Effort von"
+    "joint-initiative-UZH_ETH": "Ein gemeinsamer Effort von",
+    "default-button-name":"Weitere Informationen"
   }
   }
 </i18n>
@@ -36,13 +38,17 @@
               :href="localTranslation(coverInfo.path)"
               target="_blank"
               class="button button-primary-main"
-              >{{ localTranslation(coverInfo.button) }}</a
+              >{{
+                localTranslation(coverInfo.button) || $t("default-button-name")
+              }}</a
             >
             <router-link
               v-else
               :to="localTranslation(coverInfo.path)"
               class="button button-primary-main"
-              >{{ localTranslation(coverInfo.button) }}</router-link
+              >{{
+                localTranslation(coverInfo.button) || $t("default-button-name")
+              }}</router-link
             >
           </div>
         </div>
@@ -105,9 +111,9 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { getTranslation, openUrl } from "@/assets/support.js";
-import news from "@/assets/cover_list.json";
+import { mapGetters, mapState } from "vuex";
+import { getTranslation, openUrl} from "@/assets/support.js";
+// import news from "@/assets/cover_list.json";
 
 export default {
   name: "Cover",
@@ -115,7 +121,6 @@ export default {
     return {
       br: {},
       coverInfo: {},
-      cover: news,
     };
   },
   props: {
@@ -123,12 +128,16 @@ export default {
     goal: String,
   },
   computed: {
+    ...mapState({ coverList: (state) => state.content.coverList }),
     ...mapGetters({ view: "viewconfig/getHomeComponentConfig" }),
     goalImage() {
       return require("@/assets/shared/sdgs/neg/" + this.goal + ".svg");
     },
     backgroundImage() {
-      const img = `/img/${this.coverInfo.image}` || "/img/cover.jpg";
+      let img = this.coverInfo.image;
+      if (this.coverInfo.image && !this.coverInfo.image.startsWith("http")) {
+        img = `/img/${this.coverInfo.image}`;
+      }
       return img;
     },
   },
@@ -155,12 +164,16 @@ export default {
       }
     },
     setCoverInfo() {
-      const coverlist = this.cover.news
-        .filter((slide) => Date.parse(slide.expiration) >= Date.now())
-        .sort(function(a, b) {
-          return Date.parse(a.expiration) - Date.parse(b.expiration);
-        });
-      this.coverInfo = coverlist[0] || this.cover.default;
+      let covers = [];
+      if (this.coverList.hasOwnProperty("covers")) {
+        covers = this.coverList.covers
+          .filter((slide) => Date.parse(slide.expiration) >= Date.now())
+          .sort(function(a, b) {
+            return Date.parse(a.expiration) - Date.parse(b.expiration);
+          });
+      }
+      this.coverInfo = covers[0] || this.coverList.default;
+      console.log(this.coverInfo);
     },
   },
   created() {

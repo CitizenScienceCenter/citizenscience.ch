@@ -116,7 +116,9 @@ export const routes = [
         beforeEnter: async (to, from, next) => {
           // This redirect the routing acording the flagship project status
           const res = await store.dispatch("viewconfig/getHomeConfig");
+          // Before route to the Home page, is required load style data
           await store.commit("viewconfig/setHomeConfig", res);
+          // The cover component is required even data is not retrieved
           const cover = await store.dispatch("content/getCoverRemote")
           if (res && cover) next();
         },

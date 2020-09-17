@@ -124,10 +124,19 @@ export default {
     },
     validateDescriptionLength(description) {
       // Here is fixed the maximun number of words and characters for news description
-      const MAXCHARS = 350;
+      const MAX = 350;
+      // any character that is not a word character or whitespace
+      const endChars = [".", ",", " ", "!", "?", ";", ")", "]", "}"];
       let newDescription = {};
       Object.keys(description).map(function(key) {
-        newDescription[key] = description[key].slice(0, MAXCHARS);
+        let RealMax = MAX;
+        let lastChar;
+        do {
+          RealMax++;
+          lastChar = description[key].slice(0, RealMax).slice(-1);
+        } while (description[key].length > MAX && !endChars.includes(lastChar) && RealMax <= MAX + 15);
+        RealMax--;
+        newDescription[key] = description[key].slice(0, RealMax);
       });
       return newDescription;
     },

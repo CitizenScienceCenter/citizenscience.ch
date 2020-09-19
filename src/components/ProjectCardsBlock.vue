@@ -139,7 +139,7 @@ export default {
       project.id = project.id.toString();
       project.url =
         project.url ||
-        `${process.env.VUE_APP_LAB_BASE_URL}/${this.$i18n.locale}/project/${project.id}`;
+        `${process.env.VUE_APP_LAB_BASE_URL}${this.$i18n.locale}/project/${project.id}`;
       project.button = project.button || {
         en: "Contribute ",
         de: "Beitragen",

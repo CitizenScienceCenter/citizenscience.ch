@@ -17,13 +17,13 @@
     v-if="br.visible"
   >
     <div class="content-wrapper">
-      <div class="row">
-        <div class="col">
+      <div class="row cover-content">
+        <div class="col-12">
           <h2 class="cover-heading scroll-effect" v-if="br.heading.visible">
             {{ localTranslation(coverInfo.title) }}
           </h2>
           <p
-            class="cover-subheading scroll-effect scroll-effect-delayed-1"
+            class="cover-subheading scroll-effect scroll-effect-delayed-5"
             v-if="br.subheading.visible"
           >
             {{ localTranslation(coverInfo.lead) }}
@@ -54,7 +54,6 @@
         </div>
       </div>
     </div>
-
     <!-- UZH and ETH logos -->
     <div class="uzh-eth" v-if="br.uzh_eth_logo.visible">
       <span>{{ $t("joint-initiative-UZH_ETH") }}</span>
@@ -112,7 +111,7 @@
 
 <script>
 import { mapGetters, mapState } from "vuex";
-import { getTranslation, openUrl} from "@/assets/support.js";
+import { getTranslation, openUrl } from "@/assets/support.js";
 // import news from "@/assets/cover_list.json";
 
 export default {
@@ -203,7 +202,6 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
-
   .scroll-effect {
     transition: all $transition-duration-super-long $transition-timing-function;
     transform: translateY($scroll-effect-offset);
@@ -302,25 +300,28 @@ export default {
     position: relative;
     z-index: 1;
     width: 100%;
-
     padding-bottom: $spacing-2;
-
-    .cover-heading {
-      font-size: $font-size-medium;
-      line-height: 1.25;
-      font-weight: 700;
-      color: white;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: $spacing-1;
-    }
-    .cover-subheading {
-      font-size: $font-size-mini;
-      font-weight: 400;
-      color: white;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: $spacing-1;
+    .cover-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .cover-heading {
+        font-size: $font-size-medium;
+        line-height: 1.25;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: $spacing-1;
+      }
+      .cover-subheading {
+        font-size: $font-size-mini;
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: $spacing-1;
+      }
     }
   }
 
@@ -356,12 +357,14 @@ export default {
     }
 
     .content-wrapper {
-      .cover-heading {
-        font-size: $font-size-large;
-      }
-      .cover-subheading {
-        font-size: $font-size-small;
-        margin-bottom: $spacing-2;
+      .cover-content {
+        .cover-heading {
+          font-size: $font-size-large;
+        }
+        .cover-subheading {
+          font-size: $font-size-small;
+          margin-bottom: $spacing-2;
+        }
       }
     }
   }
@@ -408,11 +411,13 @@ export default {
     }
 
     .content-wrapper {
-      .cover-heading {
-        font-size: $font-size-xlarge;
-      }
-      .cover-subheading {
-        font-size: $font-size-normal;
+      .cover-content {
+        .cover-heading {
+          font-size: $font-size-xlarge;
+        }
+        .cover-subheading {
+          font-size: $font-size-normal;
+        }
       }
     }
   }
@@ -458,11 +463,13 @@ export default {
       transform: scale(0.9);
     }
     .content-wrapper {
-      .cover-heading {
-        font-size: $font-size-xxlarge;
-      }
-      .cover-subheading {
-        font-size: $font-size-medium;
+      .cover-content {
+        .cover-heading {
+          font-size: $font-size-xxlarge;
+        }
+        .cover-subheading {
+          font-size: $font-size-medium;
+        }
       }
     }
   }
@@ -506,11 +513,13 @@ export default {
       height: 45px;
     }
     .content-wrapper {
-      .cover-heading {
-        font-size: $font-size-xxxlarge;
-      }
-      .cover-subheading {
-        font-size: $font-size-large;
+      .cover-content {
+        .cover-heading {
+          font-size: $font-size-xxxlarge;
+        }
+        .cover-subheading {
+          font-size: $font-size-large;
+        }
       }
     }
   }

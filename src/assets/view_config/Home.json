@@ -4,7 +4,8 @@
     "heading": { "visible": true },
     "subheading": { "visible": true },
     "uzh_eth_logo": { "disabled": false, "visible": true },
-    "sdg_logo": { "disabled": false, "visible": true }
+    "sdg_logo": { "disabled": false, "visible": true },
+    "refresh_time": 5000
   },
   "projectCards": {
     "flagship": false,
@@ -45,7 +46,7 @@
   },
   "social_feed": {
     "visible": true,
-    "limit": 3,
+    "limit": 1,
     "heading": { "visible": true },
     "footer": { "visible": true },
     "tw_button": { "disabled": false, "visible": true },

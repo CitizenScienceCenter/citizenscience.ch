@@ -11,49 +11,87 @@
   }
 </i18n>
 <template>
-  <section
-    class="cover"
-    :style="{ 'background-image': 'url(' + backgroundImage + ')' }"
-    v-if="br.visible"
-  >
+  <!-- cover section -->
+  <section class="cover" v-if="br.visible">
+    <!-- slider -->
     <div class="content-wrapper">
-      <div class="row cover-content">
+      <!-- slide -->
+      <div
+        v-for="(cover, id) in coverInfo"
+        :key="id"
+        class="row cover-content"
+        v-show="toggleCover(id)"
+        :style="{
+          'background-image': `linear-gradient(120deg, 
+          ${color.gradient_start}cc, ${color.gradient_end}cc), 
+          url(${backgroundImage(cover.image)})`,
+        }"
+      >
         <div class="col-12">
           <h2 class="cover-heading scroll-effect" v-if="br.heading.visible">
-            {{ localTranslation(coverInfo.title) }}
+            {{ localTranslation(cover.title) }}
           </h2>
           <p
             class="cover-subheading scroll-effect scroll-effect-delayed-5"
             v-if="br.subheading.visible"
           >
-            {{ localTranslation(coverInfo.lead) }}
+            {{ localTranslation(cover.lead) }}
           </p>
           <div
             class="button-group centered"
-            v-if="localTranslation(coverInfo.path)"
+            v-if="localTranslation(cover.path)"
           >
             <!-- simple external link handler, with target _blank -->
             <a
-              v-if="localTranslation(coverInfo.path).startsWith('http')"
-              :href="localTranslation(coverInfo.path)"
+              v-if="localTranslation(cover.path).startsWith('http')"
+              :href="localTranslation(cover.path)"
               target="_blank"
               class="button button-primary-main"
               >{{
-                localTranslation(coverInfo.button) || $t("default-button-name")
+                localTranslation(cover.button) || $t("default-button-name")
               }}</a
             >
             <router-link
               v-else
-              :to="localTranslation(coverInfo.path)"
+              :to="localTranslation(cover.path)"
               class="button button-primary-main"
               >{{
-                localTranslation(coverInfo.button) || $t("default-button-name")
+                localTranslation(cover.button) || $t("default-button-name")
               }}</router-link
             >
           </div>
         </div>
+        <!-- Extra top right logos -->
+        <div
+          class="top-right-logo"
+          v-if="cover.extra_logos"
+          :class="{ mitrends: false }"
+        >
+          <img
+            v-if="cover.extra_logos.logo_right"
+            :src="cover.extra_logos.logo_right"
+          />
+          <img
+            class="left"
+            v-if="cover.extra_logos.logo_left"
+            :src="cover.extra_logos.logo_left"
+          />
+        </div>
       </div>
     </div>
+    <!-- controls  -->
+    <div class="controls">
+      <div class="prev" @click="setPrev()">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="next" @click="setNext()">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+
+    <!-- indicators -->
+    <div class="indicator"></div>
+
     <!-- UZH and ETH logos -->
     <div class="uzh-eth" v-if="br.uzh_eth_logo.visible">
       <span>{{ $t("joint-initiative-UZH_ETH") }}</span>
@@ -87,31 +125,13 @@
         :class="{ disabled: br.sdg_logo.disabled }"
       />
     </div>
-
-    <!-- Extra top right logos -->
-    <div
-      class="top-right-logo"
-      v-if="coverInfo.extra_logos"
-      :class="{ mitrends: false }"
-    >
-      <img
-        v-if="coverInfo.extra_logos.logo_right"
-        :src="coverInfo.extra_logos.logo_right"
-      />
-      <img
-        class="left"
-        v-if="coverInfo.extra_logos.logo_left"
-        :src="coverInfo.extra_logos.logo_left"
-      />
-    </div>
-
-    <div class="cover-overlay"></div>
   </section>
 </template>
 
 <script>
 import { mapGetters, mapState } from "vuex";
 import { getTranslation, openUrl } from "@/assets/support.js";
+import color from "@/styles/theme.scss";
 // import news from "@/assets/cover_list.json";
 
 export default {
@@ -120,6 +140,9 @@ export default {
     return {
       br: {},
       coverInfo: {},
+      color: color,
+      currentCover: 2,
+      timer: null,
     };
   },
   props: {
@@ -132,15 +155,15 @@ export default {
     goalImage() {
       return require("@/assets/shared/sdgs/neg/" + this.goal + ".svg");
     },
-    backgroundImage() {
-      let img = this.coverInfo.image;
-      if (this.coverInfo.image && !this.coverInfo.image.startsWith("http")) {
-        img = `/img/${this.coverInfo.image}`;
+  },
+  methods: {
+    backgroundImage(image) {
+      let img = image;
+      if (image && !image.startsWith("http")) {
+        img = `/img/${image}`;
       }
       return img;
     },
-  },
-  methods: {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
@@ -171,13 +194,51 @@ export default {
             return Date.parse(a.expiration) - Date.parse(b.expiration);
           });
       }
-      this.coverInfo = covers[0] || this.coverList.default;
-      console.log(this.coverInfo);
+      this.coverInfo = covers.slice(0, 3) || this.coverList.default;
+    },
+
+    // cover change section
+    toggleCover(coverId) {
+      return coverId === this.currentCover;
+    },
+    setPrev() {
+      this.resetTimer();
+      this.currentCover =
+        this.currentCover == 0
+          ? this.coverInfo.length - 1
+          : this.currentCover - 1;
+    },
+    setNext() {
+      this.resetTimer();
+      this.currentCover =
+        this.currentCover < this.coverInfo.length - 1
+          ? this.currentCover + 1
+          : 0;
+    },
+    setRefreshTimer() {
+      // validate refresh_time or set default in 10 seconds
+      this.br.refresh_time =
+        this.br.refresh_time &&
+        this.br.refresh_time <= 30000 &&
+        this.br.refresh_time >= 3000
+          ? this.br.refresh_time
+          : 10000;
+      this.timer = setInterval(this.autoPlay, this.br.refresh_time);
+    },
+    resetTimer() {
+      // This function restart the timer to give the user most time to read
+      clearInterval(this.timer);
+      // then started again timer
+      this.timer = setInterval(this.autoPlay, this.br.refresh_time);
+    },
+    autoPlay() {
+      this.setNext();
     },
   },
   created() {
     this.br = this.view("cover");
     this.setCoverInfo();
+    this.setRefreshTimer();
   },
   mounted: function() {
     let matches = this.$el.querySelectorAll(".scroll-effect");
@@ -197,11 +258,73 @@ export default {
 .cover {
   height: 50vh;
   max-height: 440px;
-  background-position: center center;
-  background-size: cover;
+  overflow: hidden;
   position: relative;
-  display: flex;
-  align-items: center;
+  .content-wrapper {
+    .cover-content {
+      padding: 0 $spacing-1;
+      position: absolute;
+      align-items: center;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      display: flex;
+      animation: slide 1.5s ease;
+      @keyframes slide {
+        0% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .cover-heading {
+        font-size: $font-size-medium;
+        line-height: 1.25;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: $spacing-1;
+      }
+      .cover-subheading {
+        font-size: $font-size-mini;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        margin-bottom: $spacing-1;
+      }
+    }
+  }
+  .controls {
+    display: flex;
+    .prev,
+    .next {
+      position: absolute;
+      z-index: 2;
+      top: 10%;
+      font-size: $font-size-xlarge;
+      width: 25%;
+      height: 50%;
+      color: rgba(255, 255, 255, 0);
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+    .prev:hover,
+    .next:hover {
+      color: rgba(255, 255, 255, 0);
+    }
+    .prev {
+      left: 1%;
+    }
+    .next {
+      right: 1%;
+    }
+  }
   .scroll-effect {
     transition: all $transition-duration-super-long $transition-timing-function;
     transform: translateY($scroll-effect-offset);
@@ -222,13 +345,11 @@ export default {
       opacity: 1;
     }
   }
-
   .button {
     margin: $spacing-1;
     transform: scale(0.75);
     transition: transform 1 ease-in-out;
   }
-
   .uzh-eth {
     display: block;
     position: absolute;
@@ -252,7 +373,6 @@ export default {
       }
     }
   }
-
   .bottom-right-logo {
     height: 20px;
     position: absolute;
@@ -295,56 +415,11 @@ export default {
       }
     }
   }
-
-  .content-wrapper {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    padding-bottom: $spacing-2;
-    .cover-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .cover-heading {
-        font-size: $font-size-medium;
-        line-height: 1.25;
-        font-weight: 700;
-        color: white;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: $spacing-1;
-      }
-      .cover-subheading {
-        font-size: $font-size-mini;
-        font-weight: 400;
-        color: white;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: $spacing-1;
-      }
-    }
-  }
-
-  .cover-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    //background: linear-gradient(to bottom right, $color-secondary, $color-primary-secondary-mix );
-    background: linear-gradient(
-      120deg,
-      $color-gradient-start,
-      $color-gradient-end
-    );
-    opacity: 0.8;
-  }
 }
 
 @media only screen and (min-width: $viewport-mobile-large) {
   .cover {
-    height: 40vh;
+    height: 45vh;
     max-height: 480px;
 
     .top-right-logo {
@@ -355,7 +430,6 @@ export default {
         }
       }
     }
-
     .content-wrapper {
       .cover-content {
         .cover-heading {
@@ -372,9 +446,6 @@ export default {
 
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .cover {
-    height: 40vh;
-    max-height: 470px;
-
     .uzh-eth {
       bottom: $spacing-2;
       left: $spacing-2;
@@ -412,6 +483,7 @@ export default {
 
     .content-wrapper {
       .cover-content {
+        padding: 0 $spacing-5;
         .cover-heading {
           font-size: $font-size-xlarge;
         }
@@ -420,14 +492,26 @@ export default {
         }
       }
     }
+    .controls {
+      .prev,
+      .next {
+        top: 40%;
+        font-size: $font-size-large;
+        width: auto;
+        height: auto;
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+      }
+      .prev:hover,
+      .next:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
   }
 }
 
 @media only screen and (min-width: $viewport-large) {
   .cover {
-    height: 40vh;
-    max-height: 470px;
-
     .uzh-eth {
       bottom: $spacing-2;
       left: $spacing-2;
@@ -459,17 +543,21 @@ export default {
         }
       }
     }
-    .button {
-      transform: scale(0.9);
-    }
     .content-wrapper {
       .cover-content {
+        padding: 0 $spacing-7;
         .cover-heading {
           font-size: $font-size-xxlarge;
         }
         .cover-subheading {
-          font-size: $font-size-medium;
+          font-size: $font-size-normal;
         }
+      }
+    }
+    .controls {
+      .prev,
+      .next {
+        font-size: $font-size-xlarge;
       }
     }
   }
@@ -512,14 +600,23 @@ export default {
     .bottom-right-logo {
       height: 45px;
     }
+    .button {
+      transform: scale(0.9);
+    }
     .content-wrapper {
       .cover-content {
         .cover-heading {
           font-size: $font-size-xxxlarge;
         }
         .cover-subheading {
-          font-size: $font-size-large;
+          font-size: $font-size-medium;
         }
+      }
+    }
+    .controls {
+      .prev,
+      .next {
+        font-size: $font-size-xxlarge;
       }
     }
   }

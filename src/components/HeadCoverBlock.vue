@@ -80,7 +80,7 @@
       </div>
     </div>
     <!-- controls  -->
-    <div class="controls">
+    <div class="controls" v-if="coverInfo.length > 1">
       <div class="prev" @click="setPrev()">
         <i class="fas fa-chevron-left"></i>
       </div>
@@ -139,9 +139,9 @@ export default {
   data() {
     return {
       br: {},
-      coverInfo: {},
+      coverInfo: [],
       color: color,
-      currentCover: 2,
+      currentCover: 0,
       timer: null,
     };
   },
@@ -187,6 +187,7 @@ export default {
     },
     setCoverInfo() {
       let covers = [];
+      this.coverInfo = this.coverList.default;
       if (this.coverList.hasOwnProperty("covers")) {
         covers = this.coverList.covers
           .filter((slide) => Date.parse(slide.expiration) >= Date.now())
@@ -194,7 +195,11 @@ export default {
             return Date.parse(a.expiration) - Date.parse(b.expiration);
           });
       }
-      this.coverInfo = covers.slice(0, 3) || this.coverList.default;
+      // Only the three most upcoming covers in the list
+      covers  = covers.slice(0, 3);
+      if (covers.length > 0) {
+        this.coverInfo = covers;
+      }
     },
 
     // cover change section
@@ -238,7 +243,9 @@ export default {
   created() {
     this.br = this.view("cover");
     this.setCoverInfo();
-    this.setRefreshTimer();
+    if (this.coverInfo && this.coverInfo.length > 1) {
+      this.setRefreshTimer();
+    }
   },
   mounted: function() {
     let matches = this.$el.querySelectorAll(".scroll-effect");
@@ -499,7 +506,7 @@ export default {
         font-size: $font-size-large;
         width: auto;
         height: auto;
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.3);
         cursor: pointer;
       }
       .prev:hover,

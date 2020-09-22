@@ -66,6 +66,9 @@ export const i18n = new VueI18n({
       "navigation-startproject-builder": {
         link: "Project Builder",
       },
+      "navigation-createproject-builder": {
+        link: "Create",
+      },
       "navigation-startproject-offer": {
         link: "Our Offer",
       },
@@ -73,7 +76,7 @@ export const i18n = new VueI18n({
         link: "Criteria",
       },
       "navigation-startproject-phases": {
-        link: "Checklist",
+        link: "Before You Start",
       },
 
       "navigation-citizenscience": {
@@ -167,6 +170,12 @@ export const i18n = new VueI18n({
       "navigation-startproject-overview": {
         link: "Übersicht",
       },
+      "navigation-startproject-builder": {
+        link: "Project Builder",
+      },
+      "navigation-createproject-builder": {
+        link: "Erstellen",
+      },
       "navigation-startproject-offer": {
         link: "Unser Angebot",
       },
@@ -174,7 +183,7 @@ export const i18n = new VueI18n({
         link: "Kriterien",
       },
       "navigation-startproject-phases": {
-        link: "Checkliste",
+        link: "Bevor Sie anfangen",
       },
 
       "navigation-citizenscience": {

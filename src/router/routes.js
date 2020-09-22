@@ -1,3 +1,4 @@
+import { openUrl } from "@/assets/support.js";
 import Home from "@/views/Home";
 
 import Login from "@/views/shared/user/Login";
@@ -119,7 +120,7 @@ export const routes = [
           // Before route to the Home page, is required load style data
           await store.commit("viewconfig/setHomeConfig", res);
           // The cover component is required even data is not retrieved
-          const cover = await store.dispatch("content/getCoverRemote")
+          const cover = await store.dispatch("content/getCoverRemote");
           if (res && cover) next();
         },
       },
@@ -146,34 +147,41 @@ export const routes = [
         path: "start",
         component: ChildView,
         meta: { i18n: "navigation-startproject", nav: true },
-        redirect: "start/startproject",
+        redirect: "start/phases",
         children: [
+          // {
+          //   path: "startproject",
+          //   component: StartProject,
+          //   meta: { i18n: "navigation-startproject-overview", nav: true },
+          // },
+          // {
+          //   path: "offer",
+          //   component: Offer,
+          //   meta: { i18n: "navigation-startproject-offer", nav: true },
+          // },
           {
-            path: "startproject",
-            component: StartProject,
-            meta: { i18n: "navigation-startproject-overview", nav: true },
+            path: "phases",
+            component: Phases,
+            meta: { i18n: "navigation-startproject-phases", nav: true },
+          },
+          {
+            path: "criteria",
+            component: Checklist,
+            meta: { i18n: "navigation-startproject-checklist", nav: true },
           },
           {
             path: "builder",
             meta: { i18n: "navigation-startproject-builder", nav: true },
             beforeEnter(to, from) {
-              window.open("https://lab.citizenscience.ch", "_blank");
+              openUrl(process.env.VUE_APP_LAB_BASE_URL);
             },
           },
           {
-            path: "offer",
-            component: Offer,
-            meta: { i18n: "navigation-startproject-offer", nav: true },
-          },
-          {
-            path: "checklist",
-            component: Checklist,
-            meta: { i18n: "navigation-startproject-checklist", nav: true },
-          },
-          {
-            path: "phases",
-            component: Phases,
-            meta: { i18n: "navigation-startproject-phases", nav: true },
+            path: "create",
+            meta: { i18n: "navigation-createproject-builder", nav: true },
+            beforeEnter(to, from) {
+              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}/en/project/builder/name`);
+            },
           },
         ],
       },

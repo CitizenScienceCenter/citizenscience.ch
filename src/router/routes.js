@@ -114,7 +114,7 @@ export const routes = [
         meta: { i18n: "navigation-homepage", nav: false },
         component: Home,
         beforeEnter: async (to, from, next) => {
-          // This redirect the routing acording the flagship project status
+          // This preload the page style
           const res = await store.dispatch("viewconfig/getHomeConfig");
           // Before route to the Home page, is required load style data
           await store.commit("viewconfig/setHomeConfig", res);
@@ -236,6 +236,10 @@ export const routes = [
         meta: { i18n: "navigation-events", nav: true },
         component: ChildView,
         redirect: "events/upcoming",
+        beforeEnter: async (to, from, next) => {
+          const res = await store.dispatch("content/getEventsRemote");
+          if (res) next();
+        },
         children: [
           {
             path: "upcoming",

@@ -54,7 +54,7 @@ export const i18n = new VueI18n({
         link: "Projects",
       },
       "navigation-contribute-collaborations": {
-        link: "Collaborations",
+        link: "Why Contribute?",
       },
 
       "navigation-startproject": {
@@ -158,7 +158,7 @@ export const i18n = new VueI18n({
         link: "Projekte",
       },
       "navigation-contribute-collaborations": {
-        link: "Kollaborationen",
+        link: "Warum beitragen?",
       },
 
       "navigation-startproject": {

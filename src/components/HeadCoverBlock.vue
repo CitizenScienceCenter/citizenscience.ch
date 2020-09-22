@@ -196,7 +196,7 @@ export default {
           });
       }
       // Only the three most upcoming covers in the list
-      covers  = covers.slice(0, 3);
+      covers = covers.slice(0, 3);
       if (covers.length > 0) {
         this.coverInfo = covers;
       }
@@ -267,6 +267,10 @@ export default {
   max-height: 440px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 10px 10px -6px #777;
+  -moz-box-shadow: 0 10px 10px -6px #777;
+  box-shadow: 0px 2px 5px #333, 0px 10px 10px -6px #777;
   .content-wrapper {
     .cover-content {
       padding: 0 $spacing-1;
@@ -572,7 +576,6 @@ export default {
 
 @media only screen and (min-width: $viewport-xlarge) {
   .cover {
-    height: 40vh;
     max-height: 600px;
 
     .top-right-logo {

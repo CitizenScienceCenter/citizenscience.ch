@@ -58,35 +58,36 @@ export const i18n = new VueI18n({
       },
 
       "navigation-startproject": {
-        link: "Your Project",
+        link: "Create",
       },
       "navigation-startproject-overview": {
-        link: "Overview",
+        link: "Before You Start",
       },
       "navigation-startproject-builder": {
         link: "Project Builder",
       },
       "navigation-createproject-builder": {
         link: "Create",
-      },
-      "navigation-startproject-offer": {
-        link: "Our Offer",
-      },
-      "navigation-startproject-checklist": {
+      },      
+      "navigation-startproject-criteria": {
         link: "Criteria",
       },
       "navigation-startproject-phases": {
-        link: "Before You Start",
+        link: "Checklist",
       },
 
-      "navigation-citizenscience": {
-        link: "Citizen Science",
+      "navigation-community": {
+        link: "Community",
       },
-      "navigation-citizenscience-zurichstyle": {
-        link: "«Zurich Style»",
+      "navigation-community-ourcommunity": {
+        link: "Our Community",
       },
-      "navigation-citizenscience-sdg": {
-        link: "Sustainable Development Goals",
+      "navigation-community-members": {
+        link: "Members",
+      },
+
+      "navigation-pwa": {
+        link: "PWA",
       },
 
       "navigation-about": {
@@ -95,15 +96,18 @@ export const i18n = new VueI18n({
       "navigation-about-mission": {
         link: "Mission & Goals",
       },
+      "navigation-about-zurichstyle": {
+        link: "CS «Zurich Style»",
+      },
+      "navigation-about-offer": {
+        link: "What We Offer",
+      },
       "navigation-about-people": {
         link: "People",
       },
       "navigation-about-partnerships": {
         link: "Partnerships",
-      },
-      "navigation-about-pwa": {
-        link: "PWA",
-      },
+      },      
       "navigation-about-contact": {
         link: "Contact",
       },
@@ -165,35 +169,36 @@ export const i18n = new VueI18n({
       },
 
       "navigation-startproject": {
-        link: "Ihr Projekt",
+        link: "Erstellen",
       },
       "navigation-startproject-overview": {
-        link: "Übersicht",
+        link: "Bevor Sie anfangen",
       },
       "navigation-startproject-builder": {
         link: "Project Builder",
       },
       "navigation-createproject-builder": {
         link: "Erstellen",
-      },
-      "navigation-startproject-offer": {
-        link: "Unser Angebot",
-      },
-      "navigation-startproject-checklist": {
+      },      
+      "navigation-startproject-criteria": {
         link: "Kriterien",
       },
       "navigation-startproject-phases": {
-        link: "Bevor Sie anfangen",
+        link: "Checkliste",
       },
 
-      "navigation-citizenscience": {
-        link: "Citizen Science",
+      "navigation-community": {
+        link: "Gemeinschaft",
       },
-      "navigation-citizenscience-zurichstyle": {
-        link: "«Züri Style»",
+      "navigation-community-ourcommunity": {
+        link: "Unsere Gemeinschaft",
       },
-      "navigation-citizenscience-sdg": {
-        link: "Sustainable Development Goals",
+      "navigation-community-members": {
+        link: "Mitglieder",
+      },
+
+      "navigation-pwa": {
+        link: "PWA",
       },
 
       "navigation-about": {
@@ -202,15 +207,18 @@ export const i18n = new VueI18n({
       "navigation-about-mission": {
         link: "Mission & Ziele",
       },
+      "navigation-about-zurichstyle": {
+        link: "CS «Züri Style»",
+      },
+      "navigation-about-offer": {
+        link: "Unser Angebot",
+      },
       "navigation-about-people": {
         link: "Personen",
       },
       "navigation-about-partnerships": {
         link: "Partnerschaften",
-      },
-      "navigation-about-pwa": {
-        link: "PWA",
-      },
+      },      
       "navigation-about-contact": {
         link: "Kontakt",
       },

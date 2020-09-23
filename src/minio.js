@@ -2,8 +2,6 @@ var Minio = require("minio");
 
 // Instantiate the minio client with the endpoint
 // and access keys as shown below.
-
-// TODO: Change minio server by S3 one
 const minio = new Minio.Client({
   endPoint: process.env.VUE_APP_MINIO_ENDPOINT,
   accessKey: process.env.VUE_APP_MINIO_ACCESS_KEY,

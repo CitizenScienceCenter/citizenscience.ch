@@ -32,11 +32,6 @@ const StartProject = (resolve) => {
     resolve(require("../views/start/StartProject.vue"));
   });
 };
-const Offer = (resolve) => {
-  require.ensure(["../views/start/Offer.vue"], () => {
-    resolve(require("../views/start/Offer.vue"));
-  });
-};
 const Checklist = (resolve) => {
   require.ensure(["../views/start/Checklist.vue"], () => {
     resolve(require("../views/start/Checklist.vue"));
@@ -48,20 +43,29 @@ const Phases = (resolve) => {
   });
 };
 
-const ZurichStyle = (resolve) => {
-  require.ensure(["../views/citizenscience/ZurichStyle.vue"], () => {
-    resolve(require("../views/citizenscience/ZurichStyle.vue"));
-  });
-};
 const SDG = (resolve) => {
   require.ensure(["../views/citizenscience/SDG.vue"], () => {
     resolve(require("../views/citizenscience/SDG.vue"));
   });
 };
-
+const PWA = (resolve) => {
+  require.ensure(["../views/PWA.vue"], () => {
+    resolve(require("../views/PWA.vue"));
+  });
+};
 const Mission = (resolve) => {
   require.ensure(["../views/about/Mission.vue"], () => {
     resolve(require("../views/about/Mission.vue"));
+  });
+};
+const ZurichStyle = (resolve) => {
+  require.ensure(["../views/about/ZurichStyle.vue"], () => {
+    resolve(require("../views/about/ZurichStyle.vue"));
+  });
+};
+const Offer = (resolve) => {
+  require.ensure(["../views/about/Offer.vue"], () => {
+    resolve(require("../views/about/Offer.vue"));
   });
 };
 const People = (resolve) => {
@@ -72,11 +76,6 @@ const People = (resolve) => {
 const Partnerships = (resolve) => {
   require.ensure(["../views/about/Partnerships.vue"], () => {
     resolve(require("../views/about/Partnerships.vue"));
-  });
-};
-const PWA = (resolve) => {
-  require.ensure(["../views/about/PWA.vue"], () => {
-    resolve(require("../views/about/PWA.vue"));
   });
 };
 const Contact = (resolve) => {
@@ -147,27 +146,22 @@ export const routes = [
         path: "start",
         component: ChildView,
         meta: { i18n: "navigation-startproject", nav: true },
-        redirect: "start/phases",
-        children: [
+        redirect: "start/startproject",
+        children: [          
           // {
-          //   path: "startproject",
-          //   component: StartProject,
-          //   meta: { i18n: "navigation-startproject-overview", nav: true },
-          // },
-          // {
-          //   path: "offer",
-          //   component: Offer,
-          //   meta: { i18n: "navigation-startproject-offer", nav: true },
+          //   path: "phases",
+          //   component: Phases,
+          //   meta: { i18n: "navigation-startproject-phases", nav: true },
           // },
           {
-            path: "phases",
-            component: Phases,
-            meta: { i18n: "navigation-startproject-phases", nav: true },
+            path: "startproject",
+            component: StartProject,
+            meta: { i18n: "navigation-startproject-overview", nav: true },
           },
           {
             path: "criteria",
             component: Checklist,
-            meta: { i18n: "navigation-startproject-checklist", nav: true },
+            meta: { i18n: "navigation-startproject-criteria", nav: true },
           },
           {
             path: "builder",
@@ -180,31 +174,55 @@ export const routes = [
             path: "create",
             meta: { i18n: "navigation-createproject-builder", nav: true },
             beforeEnter(to, from) {
-              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}/en/project/builder/name`);
+              openUrl(
+                `${process.env.VUE_APP_LAB_BASE_URL}/en/project/builder/name`
+              );
             },
           },
         ],
       },
-
+      // {
+      //   path: "citizenscience",
+      //   component: ChildView,
+      //   meta: { i18n: "navigation-citizenscience", nav: true },
+      //   redirect: "citizenscience/zurichstyle",
+      //   children: [
+      //     {
+      //       path: "zurichstyle",
+      //       component: ZurichStyle,
+      //       meta: { i18n: "navigation-citizenscience-zurichstyle", nav: true },
+      //     },
+      //     {
+      //       path: "sdg",
+      //       component: SDG,
+      //       meta: { i18n: "navigation-citizenscience-sdg", nav: true },
+      //     },
+      //   ],
+      // },
+      // TODO: The components for community section are pending
       {
-        path: "citizenscience",
+        path: "community",
         component: ChildView,
-        meta: { i18n: "navigation-citizenscience", nav: true },
-        redirect: "citizenscience/zurichstyle",
+        meta: { i18n: "navigation-community", nav: true },
+        redirect: "community/our",
         children: [
           {
-            path: "zurichstyle",
+            path: "our",
             component: ZurichStyle,
-            meta: { i18n: "navigation-citizenscience-zurichstyle", nav: true },
+            meta: { i18n: "navigation-community-ourcommunity", nav: true },
           },
           {
-            path: "sdg",
+            path: "members",
             component: SDG,
-            meta: { i18n: "navigation-citizenscience-sdg", nav: true },
+            meta: { i18n: "navigation-community-members", nav: true },
           },
         ],
       },
-
+      {
+        path: "pwa",
+        meta: { i18n: "navigation-pwa", nav: true },
+        component: PWA,
+      },
       {
         path: "about",
         component: ChildView,
@@ -217,6 +235,16 @@ export const routes = [
             meta: { i18n: "navigation-about-mission", nav: true },
           },
           {
+            path: "zurichstyle",
+            component: ZurichStyle,
+            meta: { i18n: "navigation-about-zurichstyle", nav: true },
+          },
+          {
+            path: "offer",
+            component: Offer,
+            meta: { i18n: "navigation-about-offer", nav: true },
+          },
+          {
             path: "people",
             component: People,
             meta: { i18n: "navigation-about-people", nav: true },
@@ -225,11 +253,6 @@ export const routes = [
             path: "partnerships",
             component: Partnerships,
             meta: { i18n: "navigation-about-partnerships", nav: true },
-          },
-          {
-            path: "pwa",
-            component: PWA,
-            meta: { i18n: "navigation-about-pwa", nav: true },
           },
           {
             path: "contact",

@@ -23,7 +23,7 @@
         v-show="toggleCover(id)"
         :style="{
           'background-image': `linear-gradient(120deg, 
-          ${color.gradient_start}cc, ${color.gradient_end}cc), 
+          ${color.gradient_start}bf, ${color.gradient_end}bf), 
           url(${backgroundImage(cover.image)})`,
         }"
       >

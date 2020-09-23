@@ -21,7 +21,7 @@
 <template>
   <div>
     <app-content-section id="upcoming-events">
-      <div class="content-wrapper">
+      <div class="content-wrapper" >
         <div class="row row-centered">
           <div class="col col-large-10 col-xlarge-8">
             <h2 class="heading centered scroll-effect">

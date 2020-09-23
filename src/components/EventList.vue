@@ -20,60 +20,54 @@
       </div>
     </div>
     <!-- Event section -->
-    <div class="row row-centered" v-for="event in events" :key="event.path">
-      <div class="scroll-effect">
-        <router-link :to="'/events/' + event.path" style="display:none"
-          >link</router-link
-        >
-        <router-link tag="div" class="event" :to="'/events/' + event.path">
-          <div class="row row-wrapping row-centered">
-            <!-- Image Subsection -->
-            <div
-              class="col col-wrapping event-image"
-              :class="validateImage('img-content', event)"
-              v-if="event.image && !br.hideImage"
-            >
-              <img :src="'/img/events/' + event.image" />
-            </div>
-            <div
-              class="col col-wrapping"
-              :class="validateImage('text-content', event)"
-            >
-              <!-- Date Subsection -->
-              <p class="event-date">
-                {{ eventDisplayDate(event.start, event.end) }}
-              </p>
-              <!-- Title Subsection -->
-              <h3 class="subheading event-title" v-html="event.title"></h3>
-              <!-- Abstract Subsection -->
-              <div class="event-abstract" v-if="event.abstract">
-                <i class="fas fa-info-circle icon"></i>
-                <p v-if="event.abstract !== ''" v-html="event.abstract"></p>
-              </div>
-              <!-- Speakers Subsection -->
-              <div class="event-speakers" v-if="event.speakers !== ''">
-                <i class="fas fa-user icon"></i>
-                <p v-html="event.speakers"></p>
-              </div>
-              <!-- Location Subsection -->
-              <div class="event-location">
-                <i class="fas fa-map-marker-alt icon"></i>
-                <p v-html="event.location"></p>
-              </div>
-              <!-- Details button Subsection -->
-              <div class="button-group" v-if="false">
-                <router-link
-                  tag="button"
-                  class="button button-secondary button-secondary-naked"
-                  :to="'/events/' + event.path"
-                  >Details</router-link
-                >
-              </div>
-            </div>
-          </div>
-        </router-link>
+    <router-link
+      tag="div"
+      class="row row-centered event scroll-effect"
+      v-for="event in events"
+      :key="event.path"
+      :to="'/events/' + event.path"
+    >
+      <!-- Image Subsection -->
+      <div
+        class="col-4 event-image"
+        :class="validateImage('img-content', event)"
+        v-if="event.image && !br.hideImage"
+      >
+        <img :src="'/img/events/' + event.image" />
       </div>
-    </div>
+      <div class="col-8" :class="validateImage('text-content', event)">
+        <!-- Date Subsection -->
+        <p class="event-date">
+          {{ eventDisplayDate(event.start, event.end) }}
+        </p>
+        <!-- Title Subsection -->
+        <h3 class="subheading event-title" v-html="event.title"></h3>
+        <!-- Abstract Subsection -->
+        <div class="event-abstract" v-if="event.abstract">
+          <i class="fas fa-info-circle icon"></i>
+          <p v-if="event.abstract !== ''" v-html="event.abstract"></p>
+        </div>
+        <!-- Speakers Subsection -->
+        <div class="event-speakers" v-if="event.speakers !== ''">
+          <i class="fas fa-user icon"></i>
+          <p v-html="event.speakers"></p>
+        </div>
+        <!-- Location Subsection -->
+        <div class="event-location">
+          <i class="fas fa-map-marker-alt icon"></i>
+          <p v-html="event.location"></p>
+        </div>
+        <!-- Details button Subsection -->
+        <div class="button-group" v-if="false">
+          <router-link
+            tag="button"
+            class="button button-secondary button-secondary-naked"
+            :to="'/events/' + event.path"
+            >Details</router-link
+          >
+        </div>
+      </div>
+    </router-link>
 
     <!-- All events button -->
     <div class="row button-section" v-if="br.button.visible">

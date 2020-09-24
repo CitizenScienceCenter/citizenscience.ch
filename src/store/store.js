@@ -6,6 +6,7 @@ import gdpr from "./modules/gdpr";
 import viewconfig from "./modules/viewconfig";
 import project from "./modules/project";
 import content from "./modules/content";
+import user from "./modules/user";
 import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
@@ -22,6 +23,7 @@ if (window.localStorage) {
       viewconfig,
       project,
       content,
+      user,
     },
     strict: debug,
     plugins: [createPersistedState({ storage: window.localStorage })],
@@ -35,6 +37,7 @@ if (window.localStorage) {
       viewconfig,
       project,
       content,
+      user,
     },
     strict: debug,
   });

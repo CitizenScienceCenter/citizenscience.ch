@@ -6,15 +6,15 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer;
 */
 module.exports = {
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.module
       .rule("i18n")
       .resourceQuery(/blockType=i18n/)
-      .type('javascript/auto')
+      .type("javascript/auto")
       .use("i18n")
-        .loader("@kazupon/vue-i18n-loader")
-        .end();
-  }
+      .loader("@kazupon/vue-i18n-loader")
+      .end();
+  },
   /*
     configureWebpack: {
         plugins: [
@@ -39,4 +39,4 @@ module.exports = {
         ]
     }
     */
-}
+};

@@ -268,9 +268,9 @@ export default {
   overflow: hidden;
   position: relative;
   z-index: 1;
-  -webkit-box-shadow: 0 10px 10px -6px #777;
-  -moz-box-shadow: 0 10px 10px -6px #777;
-  box-shadow: 0px 2px 5px #333, 0px 10px 10px -6px #777;
+  -webkit-box-shadow: 0px 1px 2px #333, 0px 10px 15px -6px #777;
+  -moz-box-shadow: 0px 1px 2px #333, 0px 10px 15px -6px #777;
+  box-shadow: 0px 1px 2px #333, 0px 10px 15px -6px #777;
   .content-wrapper {
     .cover-content {
       padding: 0 $spacing-1;
@@ -430,7 +430,7 @@ export default {
 
 @media only screen and (min-width: $viewport-mobile-large) {
   .cover {
-    height: 45vh;
+    height: 40vh;
     max-height: 480px;
 
     .top-right-logo {
@@ -627,6 +627,33 @@ export default {
       .prev,
       .next {
         font-size: $font-size-xxlarge;
+      }
+    }
+  }
+}
+@media only screen and (min-width: $viewport-xxxlarge) {
+  .cover{
+    .uzh-eth {
+      img {
+        height: 40px;
+      }
+    }
+    .bottom-right-logo {
+      height: 50px;
+    }
+    .button {
+      margin: $spacing-3 0;
+      font-size: $font-size-normal;
+      transform: scale(1);
+    }
+    .content-wrapper {
+      .cover-content {
+        .cover-heading {
+          font-size: $font-size-4xlarge;
+        }
+        .cover-subheading {
+          font-size: $font-size-large;
+        }
       }
     }
   }

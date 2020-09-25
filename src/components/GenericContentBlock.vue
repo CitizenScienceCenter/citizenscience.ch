@@ -90,7 +90,10 @@ export default {
     },
   },
   methods: {
-    ...mapActions({ signIn: "user/signIn" }),
+    ...mapActions({
+      signIn: "user/signIn",
+      getAccountProfile: "user/getAccountProfile",
+    }),
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
@@ -115,10 +118,14 @@ export default {
       return selectedView[e];
     },
     submitInfo() {
-      this.signIn({ email: "dev@citizenscience.ch", password: "1q2w3e4r" });
+      this.signIn({
+        email: process.env.VUE_APP_EMAIL,
+        password: process.env.VUE_APP_PASS,
+      });
     },
   },
   created() {
+    this.getAccountProfile();
     this.contentData = this.getdata;
   },
 };

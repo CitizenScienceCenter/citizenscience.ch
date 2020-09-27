@@ -12,7 +12,6 @@
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
           {{ localTranslation(contentData.heading) }}
-          <button @click="submitInfo()">try me</button>
         </h2>
       </div>
     </div>
@@ -59,7 +58,7 @@
 </template>
 <script>
 import { getTranslation, openUrl } from "@/assets/support.js";
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "GenericContentBlock",
@@ -89,11 +88,7 @@ export default {
       }
     },
   },
-  methods: {
-    ...mapActions({
-      signIn: "user/signIn",
-      getAccountProfile: "user/getAccountProfile",
-    }),
+  methods: {    
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
@@ -117,15 +112,8 @@ export default {
       }
       return selectedView[e];
     },
-    submitInfo() {
-      this.signIn({
-        email: process.env.VUE_APP_EMAIL,
-        password: process.env.VUE_APP_PASS,
-      });
-    },
   },
-  created() {
-    this.getAccountProfile();
+  created() {    
     this.contentData = this.getdata;
   },
 };

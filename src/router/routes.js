@@ -9,6 +9,7 @@ import RequestReset from "@/views/shared/user/RequestReset";
 import Reset from "@/views/shared/user/Reset";
 
 import store from "@/store/store";
+import { i18n } from "@/i18n.js";
 
 // import Forum from '@/views/Forum';
 
@@ -167,15 +168,14 @@ export const routes = [
             path: "builder",
             meta: { i18n: "navigation-startproject-builder", nav: true },
             beforeEnter(to, from) {
-              openUrl(process.env.VUE_APP_LAB_BASE_URL);
+              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`);
             },
           },
           {
             path: "create",
             meta: { i18n: "navigation-createproject-builder", nav: true },
             beforeEnter(to, from) {
-              openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}/en/project/builder/name`
+              openUrl( `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`
               );
             },
           },
@@ -306,6 +306,9 @@ export const routes = [
         path: "login",
         component: Login,
         meta: { requiresAuth: true, i18n: "navigation-login", nav: false },
+        beforeEnter(to, from) {
+          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/login`, true);
+        },
       },
       {
         path: "register",

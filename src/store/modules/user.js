@@ -2,15 +2,11 @@ import axios from "axios";
 axios.defaults.headers["Content-Type"] = "application/json";
 
 const state = {
-  user: {},
+  userInfo: null,
   isLogged: false,
 };
 
-const getters = {
-  getUserInfo(state) {
-    return state.user;
-  },
-};
+const getters = {};
 
 const actions = {
   async getAccountProfile({ commit }) {
@@ -29,13 +25,32 @@ const actions = {
         commit("setUserInfo", info.user);
         commit("setLogged", true);
       } else {
-        commit("setUserInfo", {});
+        commit("setUserInfo", null);
         commit("setLogged", false);
       }
     } catch (error) {
       console.error(error);
-      commit("setUserInfo", {});
+      commit("setUserInfo", null);
       commit("setLogged", false);
+    }
+  },
+  async signOut({ commit }) {
+    try {
+      const res = await fetch(
+        `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/signout`,
+        {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+        }
+      );
+      const info = await res.json();
+      if (info.hasOwnProperty('status') && info.status === 'success') {
+        commit("setUserInfo", null);
+        commit("setLogged", false);
+      }
+    } catch (error) {
+      console.error(error);
     }
   },
   // async getLoginOptions({ commit }) {
@@ -85,7 +100,7 @@ const mutations = {
   //   state.loginOptions = options;
   // },
   setUserInfo(state, payload) {
-    state.user = payload;
+    state.userInfo = payload;
   },
   setLogged(state, value) {
     state.isLogged = value;

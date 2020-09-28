@@ -148,7 +148,7 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-startproject", nav: true },
         redirect: "start/startproject",
-        children: [          
+        children: [
           // {
           //   path: "phases",
           //   component: Phases,
@@ -175,7 +175,8 @@ export const routes = [
             path: "create",
             meta: { i18n: "navigation-createproject-builder", nav: true },
             beforeEnter(to, from) {
-              openUrl( `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`
+              openUrl(
+                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`
               );
             },
           },
@@ -307,7 +308,10 @@ export const routes = [
         component: Login,
         meta: { requiresAuth: true, i18n: "navigation-login", nav: false },
         beforeEnter(to, from) {
-          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/login`, true);
+          openUrl(
+            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/login`,
+            true
+          );
         },
       },
       {
@@ -317,8 +321,12 @@ export const routes = [
       },
       {
         path: "profile",
+        name: "profile",
         component: Profile,
         meta: { requiresAccount: true, i18n: "navigation-profile", nav: false },
+        beforeEnter(to, from) {
+          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`);
+        },
       },
       {
         path: "reset",

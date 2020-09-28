@@ -33,7 +33,8 @@ router.beforeEach((to, from, next) => {
     // Here is validated if route requires authentication
     // TODO: modify the requires auth for pybossa
     if (to.matched.some((record) => record.meta.requiresAuth)) {
-      if (store.state.c3s.user.currentUser) {
+      // if (store.state.c3s.user.currentUser) {
+      if (store.state.user.isLogged) {
         console.log(
           "validate user " + store.state.c3s.user.currentUser.username
         );

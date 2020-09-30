@@ -4,13 +4,19 @@ axios.defaults.headers["Content-Type"] = "application/json";
 const state = {
   userInfo: null,
   isLogged: false,
+  loginOptions: {},
 };
 
-const getters = {};
+const getters = {
+  getUserInfo() {
+    return state.userInfo;
+  },
+};
 
 const actions = {
-  async getAccountProfile({ commit }) {
+  async getAccountProfile({ dispatch, commit }) {
     try {
+      dispatch("getLoginOptions");
       const res = await fetch(
         `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/profile`,
         {
@@ -45,7 +51,7 @@ const actions = {
         }
       );
       const info = await res.json();
-      if (info.hasOwnProperty('status') && info.status === 'success') {
+      if (info.hasOwnProperty("status") && info.status === "success") {
         commit("setUserInfo", null);
         commit("setLogged", false);
       }
@@ -53,52 +59,65 @@ const actions = {
       console.error(error);
     }
   },
-  // async getLoginOptions({ commit }) {
-  //   try {
-  //     const res = await fetch(
-  //       process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
-  //       {
-  //         method: "GET",
-  //         headers: { "Content-Type": "application/json" },
-  //       }
-  //     );
-  //     const info = await res.json();
-  //     commit("setLoginOptions", info);
-  //     return info;
-  //   } catch (error) {
-  //     console.error(error);
-  //     return;
-  //   }
-  // },
-  // async signIn({ dispatch }, { email, password }) {
-  //   try {
-  //     const res = await dispatch("getLoginOptions");
-  //     const csrf = await res.form.csrf;
-  //     const log_res = await fetch(
-  //       process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
-  //       {
-  //         method: "POST",
-  //         mode: "cors",
-  //         credentials: "include",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //           Accept: "application/json, text/plain, */*",
-  //           "X-CSRFToken": csrf,
-  //         },
-  //         body: JSON.stringify({
-  //           email: email,
-  //           password: password,
-  //         }),
-  //       }
-  //     );
-  //   } catch (error) {}
-  // },
+  async getLoginOptions({ commit }) {
+    try {
+      const res = await fetch(
+        process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
+        {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      const info = await res.json();
+      commit("setLoginOptions", info);
+      return info;
+    } catch (error) {
+      console.error(error);
+      return;
+    }
+  },
+  async signIn({ state }, { email, password }) {
+    try {
+      // const res = await dispatch("getLoginOptions");
+      const csrf = state.loginOptions.form.csrf;
+      const log_res = await axios.post(
+        process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
+        { email, password, csrf },
+        {
+          withCredentials: true,
+          headers: {
+            "X-CSRFToken": csrf,
+          },
+        }
+      );
+      console.log(log_res.data);
+      // const log_res = await fetch(
+      //   process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
+      //   {
+      //     method: "POST",
+      //     credentials: "include",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       "X-CSRFToken": csrf,
+      //     },
+      //     body: JSON.stringify({
+      //       email: email,
+      //       password: password,
+      //       csrf: csrf,
+      //     })
+      //   }
+      // );
+      // console.log(await log_res.json());      
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 
 const mutations = {
-  // setLoginOptions(state, options) {
-  //   state.loginOptions = options;
-  // },
+  setLoginOptions(state, options) {
+    state.loginOptions = options;
+  },
   setUserInfo(state, payload) {
     state.userInfo = payload;
   },

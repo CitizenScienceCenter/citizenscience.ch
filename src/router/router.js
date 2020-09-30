@@ -35,30 +35,26 @@ router.beforeEach((to, from, next) => {
     if (to.matched.some((record) => record.meta.requiresAuth)) {
       // if (store.state.c3s.user.currentUser) {
       if (store.state.user.isLogged) {
-        console.log(
-          "validate user " + store.state.c3s.user.currentUser.username
-        );
-
-        store.dispatch("c3s/user/validate").then((v) => {
+        // store.dispatch("c3s/user/validate").then((v) => {
           //console.log('validation success');
-          if (v) {
-            next();
-          } else {
-            router.push("/login");
-          }
-        });
-      } else {
-        store.dispatch("c3s/user/generateAnon").then((u) => {
-          console.log("generate anon");
+          // if (v) {
           next();
-        });
-      }
-    } else if (to.matched.some((record) => record.meta.requiresAccount)) {
-      if (!store.state.c3s.user.currentUser || store.state.c3s.user.isAnon) {
-        router.push("/login");
+        // } else {
+        //   router.push("/login");
+        // }
       } else {
-        next();
+        router.push("/login");
+        // store.dispatch("c3s/user/generateAnon").then((u) => {
+        //   console.log("generate anon");
+        //   next();
+        // });
       }
+      // } else if (to.matched.some((record) => record.meta.requiresAccount)) {
+      //   if (!store.state.c3s.user.currentUser || store.state.c3s.user.isAnon) {
+      //     router.push("/login");
+      //   } else {
+      //     next();
+      //   }
     } else {
       next();
     }

@@ -17,6 +17,7 @@
     "sass-loader": "^7.1.0",
     "simple-analytics-vue": "^1.1.0",
     "swagger-client": "^3.8.22",
+    "vercel": "^20.1.1",
     "vue": "^2.5.17",
     "vue-gtag": "^1.6.2",
     "vue-i18n": "^8.2.1",
@@ -50,7 +51,8 @@
     ],
     "rules": {
       "no-console": "off",
-      "no-mixed-spaces-and-tabs": 0
+      "no-mixed-spaces-and-tabs": 0,
+      "no-unused-vars": "off" 
     },
     "parserOptions": {
       "parser": "babel-eslint"
@@ -66,14 +68,7 @@
     "minifyHtml": {
       "collapseWhitespace": false,
       "removeComments": false
-    },
-    "puppeteerArgs": [
-      "--disable-setuid-sandbox",
-      "--no-sandbox"
-    ],
-    "concurrency": 1,
-    "inlineCss": false,
-    "puppeteerExecutablePath": "/usr/bin/google-chrome"
+    }
   },
   "browserslist": [
     "> 1%",

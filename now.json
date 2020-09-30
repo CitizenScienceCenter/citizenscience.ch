@@ -1,5 +1,5 @@
 {
-  "name": "citizenscience.ch",
+  "name": "citizenscience-v2",
   "version": 2,
   "routes": [
     {
@@ -9,7 +9,7 @@
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }
   ],
-  "alias": "citizenscience.ch"
+  "alias": "v1.staging.citizenscience.ch"
 }
 
 

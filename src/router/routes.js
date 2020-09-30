@@ -306,7 +306,7 @@ export const routes = [
       {
         path: "login",
         component: Login,
-        meta: { requiresAuth: true, i18n: "navigation-login", nav: false },
+        meta: { i18n: "navigation-login", nav: false },
         beforeEnter(to, from) {
           openUrl(
             `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/login`,
@@ -323,20 +323,20 @@ export const routes = [
         path: "profile",
         name: "profile",
         component: Profile,
-        meta: { requiresAccount: true, i18n: "navigation-profile", nav: false },
+        meta: { requiresAuth: true, i18n: "navigation-profile", nav: false },
         beforeEnter(to, from) {
-          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`);
+          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`, true);
         },
       },
       {
         path: "reset",
         component: RequestReset,
-        meta: { i18n: "navigation-reset", nav: false },
+        meta: { requiresAuth: true, i18n: "navigation-reset", nav: false },
       },
       {
         path: "reset/:token",
         component: Reset,
-        meta: { i18n: "navigation-reset", nav: false },
+        meta: { requiresAuth: true, i18n: "navigation-reset", nav: false },
       },
 
       {

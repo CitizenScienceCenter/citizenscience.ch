@@ -457,6 +457,7 @@ export default {
 
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .cover {
+    height: 50vh;
     .uzh-eth {
       bottom: $spacing-2;
       left: $spacing-2;
@@ -523,6 +524,7 @@ export default {
 
 @media only screen and (min-width: $viewport-large) {
   .cover {
+    height: 40vh;
     .uzh-eth {
       bottom: $spacing-2;
       left: $spacing-2;

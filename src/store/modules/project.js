@@ -2,43 +2,82 @@
 import static_projects from "@/assets/static_projects.json";
 
 const state = {
-  projects: [],
+  projectList: [],
+  featuredProjects: [],
   is_data_fetched: false,
 };
 
 const getters = {
-  getProjectList(state) {
-    return state.projects;
-  },
+  getProjectList: (state) => (type) => {
+    if (type === "featured") {
+      return state.featuredProjects;
+    }
+    return state.projectList;
+  }
 };
 
 const actions = {
-  async getFeaturedProjects({ commit, state }) {
+  async getFeaturedProjectsRemote({ commit },{limit}) {
     commit("setIsDataFetched", false);
     try {
-      const res = await fetch(
-        process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/",
-        {
-          method: "GET",
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      const info = await res.json();
-      await commit("setProjects", info.projects);
+      // TODO: Static file, replace with dynamic one
+      // const featured = await fetch(
+      //   process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/",
+      //   {
+      //     method: "GET",
+      //     headers: { "Content-Type": "application/json" },
+      //   }
+      // );
+      // let info_feat = [];
+      // if (featured && featured.ok) {
+      //   info_feat = await featured.json();
+      // }
+      // await commit("setFeaturedProjects", info_feat.projects);
+      await commit("setFeaturedProjects", static_projects.slice(0, limit));
+      return static_projects;
     } catch (error) {
       console.error(error);
       return;
     }
   },
-  getFlagshipProjects({ commit, state }) {
+  async getAllProjectsRemote({ commit }) {
     commit("setIsDataFetched", false);
-    commit("setProjects", static_projects);
+    let projects = [];
+    try {
+      const projectCalls = [
+        // TODO: Static file, replace with dynamic one
+        static_projects,
+        fetch(process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/", {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        }),
+      ];
+      //Multiple call to 2 different projects endpoints
+      const [flagship, regular] = await Promise.all(projectCalls);
+      if (regular && regular.ok) {
+        const info_reg = await regular.json();
+        projects = projects.concat(info_reg.projects);
+      }
+      if (flagship) {
+        const info_flag = await flagship;
+        projects = projects.concat(info_flag);
+      }
+      await commit("setProjectList", projects);
+      return projects;
+    } catch (error) {
+      console.error(error);
+      return;
+    }
   },
 };
 
 const mutations = {
-  setProjects(state, payload) {
-    state.projects = payload;
+  setProjectList(state, payload) {
+    state.projectList = payload;
+    state.is_data_fetched = true;
+  },
+  setFeaturedProjects(state, payload) {
+    state.featuredProjects = payload;
     state.is_data_fetched = true;
   },
   setIsDataFetched(state, value) {

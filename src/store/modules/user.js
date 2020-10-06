@@ -26,7 +26,6 @@ const actions = {
         }
       );
       const info = await res.json();
-      console.log(info);
       if (info.hasOwnProperty("user")) {
         commit("setUserInfo", info.user);
         commit("setLogged", true);
@@ -90,7 +89,6 @@ const actions = {
           },
         }
       );
-      console.log(log_res.data);
       // const log_res = await fetch(
       //   process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
       //   {

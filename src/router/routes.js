@@ -325,7 +325,10 @@ export const routes = [
         component: Profile,
         meta: { requiresAuth: true, i18n: "navigation-profile", nav: false },
         beforeEnter(to, from) {
-          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`, true);
+          openUrl(
+            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
+            true
+          );
         },
       },
       {

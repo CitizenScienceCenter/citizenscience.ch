@@ -5,18 +5,21 @@
     "subheading": { "visible": true },
     "uzh_eth_logo": { "disabled": false, "visible": true },
     "sdg_logo": { "disabled": false, "visible": true },
-    "refresh_time": 5000
+    "refresh_time": 10000
   },
   "projectCards": {
-    "flagship": false,
     "visible": true,
     "vOrientation": true,
+    "title": { "visible": true },
+    "buttons": { "visible": true },
     "limit": 3,
-    "img_project": { "visible": true },
-    "topic": { "visible": true },
-    "name": { "visible": true },
-    "description": { "visible": true },
-    "button": { "disabled": false, "visible": true }
+    "project": {
+      "img_project": { "visible": true },
+      "topic": { "visible": true },
+      "name": { "visible": true },
+      "description": { "visible": true },
+      "button": { "disabled": false, "visible": true }
+    }
   },
   "news": { "visible": true, "timeToRefresh": 15, "limit": 5 },
   "bottom_left": {

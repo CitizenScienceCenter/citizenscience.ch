@@ -27,8 +27,8 @@
             <project-cards-block
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"
-              :limit="projectCardConfig.limit"
               :viewConfig="projectCardConfig"
+              projectType="featured"
             ></project-cards-block>
           </app-content-section>
           <!-- News component  -->
@@ -173,8 +173,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      getFeaturedProjects: "project/getFeaturedProjects",
-      getFlagshipProjects: "project/getFlagshipProjects",
+      getFeaturedProjectsRemote: "project/getFeaturedProjectsRemote",
       getNewsRemote: "content/getNewsRemote",
       getGCRemote: "content/getGenericContentRemote",
       getEventsRemote: "content/getEventsRemote",
@@ -185,13 +184,7 @@ export default {
     },
     setProjectList: function() {
       this.projectCardConfig = this.view("projectCards");
-      if (this.projectCardConfig.flagship) {
-        //TODO: Load flagship projects, pending to do
-        this.getFlagshipProjects();
-      } else {
-        //Load featured projects from pybossa
-        this.getFeaturedProjects();
-      }
+      this.getFeaturedProjectsRemote({limit:this.projectCardConfig.limit});
     },
     setEventsConfig() {
       this.eventsConfig = this.view("events");

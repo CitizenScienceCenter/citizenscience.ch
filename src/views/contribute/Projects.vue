@@ -101,122 +101,13 @@
           </div>
         </div>
         <div class="scroll-effect">
-          <div class="row row-centered row-wrapping">
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :viewConfig="view"
-                  :vOrientation="view.vOrientation"
-                  :projectTitle="$t('project-mitrends-title')"
-                  :projectTopic="$t('project-mitrends-topic')"
-                  :projectDescription="$t('project-mitrends-description')"
-                  :button="{ en: $t('project-mitrends-button') }"
-                  projectBgImage="/img/projects/mitrends.jpg"
-                  projectTbImage="/img/projects/mitrends-graphic.png"
-                  url="https://mitrends.citizenscience.ch"
-                  :colorGradient="{ start: '#fc5c4a', end: '#7284cd' }"
-                ></project-teaser>
-              </div>
-            </div>
-
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :viewConfig="view"
-                  :vOrientation="view.vOrientation"
-                  :projectTitle="$t('project-snake-title')"
-                  :projectTopic="$t('project-snake-topic')"
-                  :projectDescription="$t('project-snake-description')"
-                  :button="{ en: $t('project-snake-button') }"
-                  projectBgImage="/img/projects/snakechallenge.jpg"
-                  projectTbImage="/img/projects/snakechallenge-intro.png"
-                  url="https://snakes.citizenscience.ch"
-                  :colorGradient="{ start: '#A35026', end: '#448D7D' }"
-                ></project-teaser>
-              </div>
-            </div>
-
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :viewConfig="view"
-                  :vOrientation="view.vOrientation"
-                  :projectTitle="$t('project-wiesel-title')"
-                  :projectTopic="$t('project-wiesel-topic')"
-                  :projectDescription="$t('project-wiesel-description')"
-                  :button="{ en: $t('project-wiesel-button') }"
-                  projectBgImage="/img/projects/wiesel.jpg"
-                  projectTbImage="/img/projects/wiesel-intro.png"
-                  url="https://wiesel-gesucht.citizenscience.ch"
-                  :colorGradient="{ start: '#99695c', end: '#3f6fa0' }"
-                ></project-teaser>
-              </div>
-            </div>
-
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :viewConfig="view"
-                  :vOrientation="view.vOrientation"
-                  :projectTitle="$t('project-wenker-title')"
-                  :projectTopic="$t('project-wenker-topic')"
-                  :projectDescription="$t('project-wenker-description')"
-                  :button="{ en: $t('project-wenker-button') }"
-                  projectBgImage="/img/projects/wenker.jpg"
-                  projectTbImage="/img/projects/wenker-intro.png"
-                  url="https://wenker.citizenscience.ch"
-                  :colorGradient="{ start: '#3e6189', end: '#766b51' }"
-                ></project-teaser>
-              </div>
-            </div>
-
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :viewConfig="view"
-                  :vOrientation="view.vOrientation"
-                  :projectTitle="$t('project-hatespeech-title')"
-                  :projectTopic="$t('project-hatespeech-topic')"
-                  :projectDescription="$t('project-hatespeech-description')"
-                  :button="{ en: $t('project-hatespeech-button') }"
-                  projectBgImage="/img/projects/hatespeech.jpg"
-                  projectTbImage="/img/projects/hatespeech-intro.png"
-                  url="https://hatespeech.citizenscience.ch"
-                  :colorGradient="{ start: '#6e4f9e', end: '#478161' }"
-                  infoSign="Beta"
-                ></project-teaser>
-              </div>
-            </div>
-
-            <div
-              class="col col-wrapping col-large-10 col-xlarge-8 scroll-effect"
-            >
-              <div>
-                <project-teaser
-                  :viewConfig="view"
-                  :vOrientation="view.vOrientation"
-                  :projectTitle="$t('project-cohcoh-title')"
-                  :projectTopic="$t('project-cohcoh-topic')"
-                  :projectDescription="$t('project-cohcoh-description')"
-                  :button="{ en: $t('project-cohcoh-button') }"
-                  projectBgImage="/img/projects/cohcoh.jpg"
-                  projectTbImage="/img/projects/cohcoh-graphic.png"
-                  url="https://cause-of-health.citizenscience.ch"
-                  :colorGradient="{ start: '#4ca942', end: '#4697cb' }"
-                ></project-teaser>
-              </div>
-            </div>
-          </div>
+          <app-content-section class="row ph-mv" v-if="isProjectsLoaded">
+            <project-cards-block
+              :vOrientation="projectCardConfig.vOrientation"
+              :visible="projectCardConfig.visible"
+              :viewConfig="projectCardConfig"
+            ></project-cards-block>
+          </app-content-section>
         </div>
       </div>
     </app-content-section>
@@ -291,16 +182,32 @@
 import ContentSection from "@/components/shared/ContentSection.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
+import ProjectCardsBlock from "@/components/ProjectCardsBlock";
 import ProjectTeaser from "@/components/ProjectTeaser";
+import { mapActions, mapState } from "vuex";
 
 export default {
   data() {
     return {
       view: {},
+      projectCardConfig: {
+        vOrientation: false,
+        visible: true,
+        title: { visible: false },
+        buttons: { visible: false },
+        project: {
+          img_project: { visible: true },
+          topic: { visible: true },
+          name: { visible: true },
+          description: { visible: true },
+          button: { disabled: false, visible: true },
+        },
+      },
     };
   },
   components: {
     SectionNewsletterSignup,
+    ProjectCardsBlock,
     ProjectTeaser,
     "app-content-section": ContentSection,
     "app-footer": Footer,
@@ -323,7 +230,15 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapState({
+      isProjectsLoaded: (state) => state.project.is_data_fetched,
+    }),
+  },
   methods: {
+    ...mapActions({
+      getAllProjectsRemote: "project/getAllProjectsRemote",
+    }),
     openInNewTab: function(url) {
       var win = window.open(url, "_blank");
       win.focus();
@@ -339,9 +254,13 @@ export default {
         button: { disabled: false, visible: true },
       };
     },
+    setProjectList: function() {
+      this.getAllProjectsRemote();
+    },
   },
   created() {
-    this.setViewConfig()
+    this.setViewConfig();
+    this.setProjectList();
   },
 };
 </script>

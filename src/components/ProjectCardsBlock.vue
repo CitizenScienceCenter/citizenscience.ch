@@ -13,7 +13,7 @@
 </i18n>
 <template>
   <div v-if="projectList && projectList.length != 0 && visible">
-    <div class="row row-centered">
+    <div class="row row-centered" v-if="viewConfig.title.visible">
       <div class="col col-12 scroll-effect">
         <h2 class="heading small">
           {{ $t("section-projects-heading") }}
@@ -43,7 +43,10 @@
         ></project-teaser>
       </div>
     </div>
-    <div class="col col-large-12 extra-margin-top-2 scroll-effect centered">
+    <div
+      class="col col-large-12 extra-margin-top-2 scroll-effect centered"
+      v-if="viewConfig.buttons.visible"
+    >
       <div class="button-group centered">
         <router-link
           tag="button"
@@ -84,15 +87,14 @@ export default {
   data() {
     return {
       br: {},
-      numberOfProjects: this.limit,
       projectList: [],
     };
   },
   props: {
     vOrientation: Boolean,
     visible: Boolean,
-    limit: { type: Number, default: 3 },
     viewConfig: Object,
+    projectType: String,
   },
   components: {
     ProjectTeaser,
@@ -101,7 +103,6 @@ export default {
     ...mapGetters({ getProjectList: "project/getProjectList" }),
     getProjects() {
       const projects = this.projectList
-        .slice(0, this.numberOfProjects)
         .map((p) => this.validateProjectContent(p));
       return projects;
     },
@@ -110,7 +111,7 @@ export default {
     setViewConfig() {
       // Set view configuration for project card
       keys.forEach((key) => {
-        this.br[key] = this.viewConfig[key] || {};
+        this.br[key] = this.viewConfig.project[key] || {};
       });
     },
     openUrl: function(url, disabled = false) {
@@ -124,7 +125,7 @@ export default {
       // This function is used to set the columns per row acording vertical or horizontal orientation
       const viewConfig = {
         vertical: "col-tablet-portrait-12 col-large-4",
-        horizontal: "col-tablet-portrait-12 col-large-6",
+        horizontal: "col-tablet-portrait-12 col-large-10 col-xlarge-8",
       };
       if (this.vOrientation) {
         return viewConfig.vertical;
@@ -136,7 +137,7 @@ export default {
       keys.forEach((key) => {
         project[key] = p[key] || null;
       });
-      project.id = project.id.toString();
+      project.id = project.id ? project.id.toString() : project.id;
       project.url =
         project.url ||
         `${process.env.VUE_APP_LAB_BASE_URL}${this.$i18n.locale}/project/${project.id}`;
@@ -150,7 +151,7 @@ export default {
     },
   },
   created() {
-    this.projectList = this.getProjectList;
+    this.projectList = this.getProjectList(this.projectType);
     this.setViewConfig();
   },
 };

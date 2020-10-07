@@ -3,16 +3,23 @@
   "en": {
     "section-projects-heading": "Get involved",
     "section-projects-button": "See all Projects",
-    "new-project-button": "Create Project"
+    "new-project-button": "Create Project",
+    "search-project-placeholder": "Search",
+    "noresult-project-label": "No projects found, for your search"
   },
   "de": {
     "section-projects-heading": "Machen Sie mit",
     "section-projects-button": "Alle Projekte",
-    "new-project-button": "Projekt erstellen"}
+    "new-project-button": "Projekt erstellen",
+    "search-project-placeholder": "Suchen",
+    "noresult-project-label": "Keine Projekte gefunden, für Ihre Suche"}
 }
 </i18n>
 <template>
-  <div v-if="projectList && projectList.length != 0 && visible">
+  <div
+    v-if="allProjectList && allProjectList.length != 0 && visible"
+    class="project-cards"
+  >
     <div class="row row-centered" v-if="viewConfig.title.visible">
       <div class="col col-12 scroll-effect">
         <h2 class="heading small">
@@ -20,15 +27,26 @@
         </h2>
       </div>
     </div>
+    <div class="row row-centered search " v-if="viewConfig.search.visible">
+      <!-- Searching section -->
+      <div class="col-10">
+        <input
+          type="text"
+          :placeholder="$t('search-project-placeholder')"
+          v-model="search"
+        />
+      </div>
+    </div>
     <div class="row row-centered scroll-effect">
       <!-- Project cards list -->
       <div
-        class="col col-wrapping col-tablet-portrait-bottom-margin-2 col-mobile-large-12 scroll-effect"
+        class="col col-wrapping col-mobile-large-12"
         :class="validateOrientation()"
-        v-for="p in getProjects"
-        :key="p.id"
+        v-for="p in projectList"
+        v-bind:key="p.id"
       >
         <project-teaser
+          v-bind:key="p.id"
           :projectTitle="p.name"
           :projectTopic="p.topic"
           :projectDescription="p.description"
@@ -42,6 +60,9 @@
           :viewConfig="br"
         ></project-teaser>
       </div>
+    </div>
+    <div class="row row-centered" v-if="projectList.length == 0">
+      <p class="no-result">{{ $t("noresult-project-label") }}</p>
     </div>
     <div
       class="col col-large-12 extra-margin-top-2 scroll-effect centered"
@@ -66,7 +87,7 @@
 </template>
 <script>
 import ProjectTeaser from "@/components/ProjectTeaser";
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations, mapState } from "vuex";
 import { getNested } from "@/assets/support.js";
 
 // This variable avoid undefined or null errors
@@ -87,7 +108,8 @@ export default {
   data() {
     return {
       br: {},
-      projectList: [],
+      allProjectList: [],
+      search: null,
     };
   },
   props: {
@@ -100,14 +122,23 @@ export default {
     ProjectTeaser,
   },
   computed: {
+    ...mapState({ projectList: (state) => state.project.projectList }),
     ...mapGetters({ getProjectList: "project/getProjectList" }),
     getProjects() {
-      const projects = this.projectList
-        .map((p) => this.validateProjectContent(p));
+      const projects = this.getProjectList(this.projectType).map((p) =>
+        this.validateProjectContent(p)
+      );
       return projects;
+    },
+    searchProject() {
+      const projects = this.allProjectList.filter((x) =>
+        this.getProjectName(x).includes(this.search.toLowerCase())
+      );
+      this.updateProjectList(projects);
     },
   },
   methods: {
+    ...mapMutations({ updateProjectList: "project/updateProjectList" }),
     setViewConfig() {
       // Set view configuration for project card
       keys.forEach((key) => {
@@ -147,19 +178,38 @@ export default {
       };
       project.img_background =
         project.img_background || getNested(p, "info", "thumbnail_url");
+      project.hide = false; // this attribute is used for realtime searching
       return project;
+    },
+    getProjectName(project) {
+      return project.name[this.$i18n.locale]
+        ? project.name[this.$i18n.locale].toString().toLowerCase()
+        : project.name.toString().toLowerCase();
+    },
+  },
+  watch: {
+    search: function(newValue, oldValue) {
+      this.searchProject;
     },
   },
   created() {
-    this.projectList = this.getProjectList(this.projectType);
+    this.allProjectList = this.getProjects;
+    this.updateProjectList(this.allProjectList);
     this.setViewConfig();
   },
 };
 </script>
 
-<style scoped>
-.row {
-  width: 100%;
-  margin: auto !important;
+<style lang="scss" scoped>
+@import "@/styles/theme.scss";
+@import "@/styles/shared/variables.scss";
+.project-cards {
+  width: 100% !important;
+  .search {
+    margin-bottom: $spacing-3;
+  }
+  .no-result {
+    color: $color-primary-shade-20;
+  }
 }
 </style>

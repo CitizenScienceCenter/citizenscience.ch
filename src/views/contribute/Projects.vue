@@ -95,7 +95,7 @@
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
-            <h2 class="heading centered" id="projects">
+            <h2 class="heading centered " id="projects">
               {{ $t("section-projects-heading") }}
             </h2>
           </div>
@@ -195,6 +195,7 @@ export default {
         visible: true,
         title: { visible: false },
         buttons: { visible: false },
+        search: { visible: true },
         project: {
           img_project: { visible: true },
           topic: { visible: true },
@@ -265,4 +266,4 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

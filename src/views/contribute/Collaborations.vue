@@ -3,7 +3,7 @@
   "en": {
   "page-title": "Collaborations",
 
-  "section-collaborations-heading": "Collaborations",
+  "section-collaborations-heading": "Why Contribute",
   "section-collaborations-openseventeen-subheading": "The Open Seventeen Challenge",
   "section-collaborations-openseventeen-lead": "Coaching for Citizen Science Innovation",
   "section-collaborations-openseventeen-text": "O17 is a challenged-based, online interactive coaching programme to help young global innovators connect and shape good ideas into viable social innovation projects for the 17 UN Sustainable Development Goals (SDGs). O17 supports projects that encourage grassroots public participation and citizen science through the use of open data and crowdsourcing.<br>The Challenge is a joint initiative with the Citizen Cyberlab at University of Geneva, and the Governance Lab at New York University.",
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="content-subsection">
         <div class="content-wrapper">
           <div class="row row-centered row-reverse-large row-middle">

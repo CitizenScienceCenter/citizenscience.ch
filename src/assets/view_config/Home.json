@@ -12,6 +12,7 @@
     "vOrientation": true,
     "title": { "visible": true },
     "buttons": { "visible": true },
+    "search": { "visible": false },
     "limit": 3,
     "project": {
       "img_project": { "visible": true },

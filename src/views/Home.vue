@@ -120,7 +120,6 @@ export default {
   name: "Home",
   data() {
     return {
-      projectList: [],
       projectCardConfig: { vOrientation: true, visible: true },
       ourCommunity: {},
       bottomLeftConfig: { vOrientation: false, visible: true },
@@ -168,7 +167,7 @@ export default {
       isViewLoaded: (state) => state.viewconfig.isLoaded,
       isNewsLoaded: (state) => state.content.isNewsLoaded,
       isGCLoaded: (state) => state.content.isGCLoaded,
-      isEventsLoaded: (state) => state.content.isEventsLoaded,
+      isEventsLoaded: (state) => state.content.isEventsLoaded
     }),
   },
   methods: {
@@ -184,7 +183,7 @@ export default {
     },
     setProjectList: function() {
       this.projectCardConfig = this.view("projectCards");
-      this.getFeaturedProjectsRemote({limit:this.projectCardConfig.limit});
+      this.getFeaturedProjectsRemote({ limit: this.projectCardConfig.limit });
     },
     setEventsConfig() {
       this.eventsConfig = this.view("events");
@@ -219,33 +218,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
 
-.row {
-  &.ph-mv {
-    padding: 0 $spacing-1;
-    margin: $spacing-2 0;
-  }
-}
 .sm-margin-right {
   margin-right: 0 !important;
 }
-@media only screen and (min-width: $viewport-large) {
-  .row {
-    &.ph-mv {
-      padding: 0 $spacing-3;
-      margin: $spacing-3 0;
-    }
-  }
-}
 @media only screen and (min-width: $viewport-xxlarge) {
-  .row {
-    &.ph-mv {
-      padding: 0 $spacing-4;
-    }
-  }
   .sm-margin-right {
     margin-right: $spacing-2 !important;
   }

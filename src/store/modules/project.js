@@ -3,6 +3,7 @@ import static_projects from "@/assets/static_projects.json";
 
 const state = {
   projectList: [],
+  allProjectList: [],
   featuredProjects: [],
   is_data_fetched: false,
 };
@@ -12,12 +13,12 @@ const getters = {
     if (type === "featured") {
       return state.featuredProjects;
     }
-    return state.projectList;
-  }
+    return state.allProjectList;
+  },
 };
 
 const actions = {
-  async getFeaturedProjectsRemote({ commit },{limit}) {
+  async getFeaturedProjectsRemote({ commit }, { limit }) {
     commit("setIsDataFetched", false);
     try {
       // TODO: Static file, replace with dynamic one
@@ -47,10 +48,13 @@ const actions = {
       const projectCalls = [
         // TODO: Static file, replace with dynamic one
         static_projects,
-        fetch(process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/", {
-          method: "GET",
-          headers: { "Content-Type": "application/json" },
-        }),
+        fetch(
+          process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/",
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          }
+        ),
       ];
       //Multiple call to 2 different projects endpoints
       const [flagship, regular] = await Promise.all(projectCalls);
@@ -62,7 +66,7 @@ const actions = {
         const info_flag = await flagship;
         projects = projects.concat(info_flag);
       }
-      await commit("setProjectList", projects);
+      await commit("setAllProjectList", projects);
       return projects;
     } catch (error) {
       console.error(error);
@@ -72,13 +76,16 @@ const actions = {
 };
 
 const mutations = {
-  setProjectList(state, payload) {
-    state.projectList = payload;
+  setAllProjectList(state, payload) {
+    state.allProjectList = payload;
     state.is_data_fetched = true;
   },
   setFeaturedProjects(state, payload) {
     state.featuredProjects = payload;
     state.is_data_fetched = true;
+  },
+  updateProjectList(state, payload) {
+    state.projectList = payload;    
   },
   setIsDataFetched(state, value) {
     state.is_data_fetched = value;

@@ -181,7 +181,7 @@ export default {
         vOrientation: false,
         heading: { visible: false },
         description: { visible: true },
-        image: { visible: true, size: "lg" },
+        image: { visible: true, size: "md" },
         img_description: { visible: false },
         button: { disabled: true, visible: false },
       },

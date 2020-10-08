@@ -19,7 +19,7 @@
     <div class="row row-centered">
       <!-- Image sub-section Content  -->
       <div
-        class="col-8 scroll-effect"
+        class="col-6 scroll-effect"
         :class="validateOrientation('img-content')"
         v-if="contentData.image && br.image.visible"
       >
@@ -57,7 +57,7 @@
   </div>
 </template>
 <script>
-import { getTranslation, openUrl , getNested} from "@/assets/support.js";
+import { getTranslation, openUrl, getNested } from "@/assets/support.js";
 import { mapGetters } from "vuex";
 
 export default {
@@ -159,8 +159,7 @@ export default {
   align-content: center;
   p {
     font-size: $font-size-tiny;
-    padding-bottom: $spacing-2;
-    padding-right: $spacing-3;
+    padding: 0 $spacing-2 $spacing-2 $spacing-1;
   }
   .button-section {
     padding-bottom: $spacing-1;
@@ -170,9 +169,10 @@ export default {
     }
   }
   &.vertical {
+    padding-left: 0;
     p,
     .button-section {
-      padding-left: $spacing-3;
+      padding-left: $spacing-1;
     }
   }
 }
@@ -203,6 +203,9 @@ export default {
 }
 @media only screen and (min-width: $viewport-large) {
   .text-section {
+    p {
+      padding: 0 $spacing-3 $spacing-2 $spacing-2;
+    }
     .button-section {
       .button {
         height: 35px;
@@ -234,8 +237,6 @@ export default {
     }
   }
   .text-section {
-    padding-left: $spacing-4;
-    padding-right: $spacing-3;
     p {
       font-size: $font-size-normal;
     }
@@ -248,7 +249,7 @@ export default {
     &.vertical {
       p,
       .button-section {
-        padding-left: $spacing-1;
+        padding-left: $spacing-2;
         font-size: $font-size-small;
       }
     }
@@ -259,7 +260,6 @@ export default {
     &.vertical {
       p,
       .button-section {
-        padding-left: $spacing-2;
       }
     }
   }

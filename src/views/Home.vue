@@ -120,15 +120,15 @@ export default {
   name: "Home",
   data() {
     return {
-      projectCardConfig: { vOrientation: true, visible: true },
+      projectCardConfig: { vOrientation: true, visible: false },
       ourCommunity: {},
-      bottomLeftConfig: { vOrientation: false, visible: true },
+      bottomLeftConfig: { vOrientation: false, visible: false },
       ourMission: {},
-      topRightConfig: { vOrientation: true, visible: true },
-      newsConfig: { visible: true },
+      topRightConfig: { vOrientation: true, visible: false },
+      newsConfig: { visible: false },
       eventsContent: {},
-      eventsConfig: { visible: true, limit: 1, hideImg: true },
-      socialConfig: { visible: true },
+      eventsConfig: { visible: false, limit: 1, hideImg: true },
+      socialConfig: { visible: false },
     };
   },
   components: {
@@ -161,7 +161,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters({ view: "viewconfig/getHomeComponentConfig" }),
+    ...mapGetters({ view: "viewconfig/getHomeConfig" }),
     ...mapState({
       isProjectsLoaded: (state) => state.project.is_data_fetched,
       isViewLoaded: (state) => state.viewconfig.isLoaded,

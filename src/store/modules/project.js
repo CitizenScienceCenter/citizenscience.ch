@@ -49,7 +49,7 @@ const actions = {
         // TODO: Static file, replace with dynamic one
         static_projects,
         fetch(
-          process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/",
+          process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/thinking/",
           {
             method: "GET",
             headers: { "Content-Type": "application/json" },
@@ -57,14 +57,15 @@ const actions = {
         ),
       ];
       //Multiple call to 2 different projects endpoints
-      const [flagship, regular] = await Promise.all(projectCalls);
-      if (regular && regular.ok) {
-        const info_reg = await regular.json();
-        projects = projects.concat(info_reg.projects);
-      }
+      const [flagship, regular] = await Promise.all(projectCalls);  
+      // TODO: validate flagship.ok
       if (flagship) {
         const info_flag = await flagship;
         projects = projects.concat(info_flag);
+      }
+      if (regular && regular.ok) {
+        const info_reg = await regular.json();
+        projects = projects.concat(info_reg.projects);
       }
       await commit("setAllProjectList", projects);
       return projects;

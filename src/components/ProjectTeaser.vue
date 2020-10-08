@@ -220,7 +220,7 @@ export default {
   .project-info:hover {
     .col-image {
       img {
-        max-height: 110px;
+        max-height: 130px;
         position: relative;
       }
     }

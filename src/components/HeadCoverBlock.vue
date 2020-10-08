@@ -151,7 +151,7 @@ export default {
   },
   computed: {
     ...mapState({ coverList: (state) => state.content.coverList }),
-    ...mapGetters({ view: "viewconfig/getHomeComponentConfig" }),
+    ...mapGetters({ view: "viewconfig/getHomeConfig" }),
     goalImage() {
       return require("@/assets/shared/sdgs/neg/" + this.goal + ".svg");
     },

@@ -19,7 +19,7 @@
     <div class="row row-centered">
       <!-- Image sub-section Content  -->
       <div
-        class="col scroll-effect"
+        class="col-8 scroll-effect"
         :class="validateOrientation('img-content')"
         v-if="contentData.image && br.image.visible"
       >
@@ -34,7 +34,7 @@
       </div>
       <!-- Text sub-section Content  -->
       <div
-        class="col scroll-effect text-section"
+        class="col-10 scroll-effect text-section"
         :class="validateOrientation('text-content')"
       >
         <div class="row" v-if="br.description.visible">
@@ -57,7 +57,7 @@
   </div>
 </template>
 <script>
-import { getTranslation, openUrl } from "@/assets/support.js";
+import { getTranslation, openUrl , getNested} from "@/assets/support.js";
 import { mapGetters } from "vuex";
 
 export default {
@@ -88,7 +88,7 @@ export default {
       }
     },
   },
-  methods: {    
+  methods: {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
@@ -96,24 +96,36 @@ export default {
       openUrl(url, true);
     },
     validateOrientation: function(e) {
-      const viewConfig = {
+      const sizes = ["sm", "md", "lg"];
+      // This validation is only for large and bigger resolution screens
+      const horizontal = {
+        sm: { "img-content": "col-large-3", "text-content": "col-large-9" },
+        md: { "img-content": "col-large-5", "text-content": "col-large-7" },
+        lg: { "img-content": "col-large-7", "text-content": "col-large-5" },
+      };
+      const viewStyle = {
         vertical: {
           "img-content": " col-12 ",
           "text-content": " col-12 vertical",
         },
-        horizontal: {
-          "img-content": "col-3",
-          "text-content": "col-9",
-        },
+        horizontal: horizontal.sm, // by default horizontal asumes small image
       };
-      let selectedView = viewConfig.horizontal;
+      //validate the image size from remote config
+      if (
+        getNested(this.br, "image", "size") != "sm" &&
+        sizes.includes(getNested(this.br, "image", "size"))
+      ) {
+        viewStyle.horizontal = horizontal[getNested(this.br, "image", "size")];
+      }
+
+      let selectedView = viewStyle.horizontal;
       if (this.vOrientation) {
-        selectedView = viewConfig.vertical;
+        selectedView = viewStyle.vertical;
       }
       return selectedView[e];
     },
   },
-  created() {    
+  created() {
     this.contentData = this.getdata;
   },
 };
@@ -133,7 +145,7 @@ export default {
     transform: scale(0.75) translateY(-10%);
     border-radius: 50%;
     margin-bottom: -$spacing-3;
-    max-height: 200px;
+    position: relative;
   }
   p {
     font-size: $font-size-mini;
@@ -142,6 +154,9 @@ export default {
   }
 }
 .text-section {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
   p {
     font-size: $font-size-tiny;
     padding-bottom: $spacing-2;
@@ -209,8 +224,9 @@ export default {
   .img-section {
     .col-image {
       transform: scale(1) translateY(0%);
-      margin-bottom: $spacing-2;
-      max-height: 225px;
+      margin-bottom: $spacing-1;
+      width: 90%;
+      height: auto;
     }
     p {
       font-size: $font-size-small;

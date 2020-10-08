@@ -40,7 +40,7 @@
     <div class="row row-centered scroll-effect">
       <!-- Project cards list -->
       <div
-        class="col col-wrapping col-mobile-large-12"
+        class="col col-wrapping col-mobile-large-12 col-tablet-portrait-12"
         :class="validateOrientation()"
         v-for="p in projectList"
         v-bind:key="p.id"
@@ -156,7 +156,7 @@ export default {
       // This function is used to set the columns per row acording vertical or horizontal orientation
       const viewConfig = {
         vertical: "col-tablet-portrait-12 col-large-4",
-        horizontal: "col-tablet-portrait-12 col-large-10 col-xlarge-8",
+        horizontal: "col-tablet-portrait-12 col-large-6 col-xlarge-6",
       };
       if (this.vOrientation) {
         return viewConfig.vertical;
@@ -182,9 +182,12 @@ export default {
       return project;
     },
     getProjectName(project) {
-      return project.name[this.$i18n.locale]
-        ? project.name[this.$i18n.locale].toString().toLowerCase()
-        : project.name.toString().toLowerCase();
+      const name = project.name[this.$i18n.locale] // validate if name for language exist
+        ? project.name[this.$i18n.locale]
+        : project.name.en // validate if english name exist by default
+        ? project.name.en
+        : project.name;
+      return name.toString().toLowerCase();
     },
   },
   watch: {

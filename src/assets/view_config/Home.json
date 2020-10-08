@@ -28,7 +28,7 @@
     "vOrientation": false,
     "heading": { "visible": true },
     "description": { "visible": true },
-    "image": { "visible": true },
+    "image": { "visible": true, "size": "sm" },
     "img_description": { "visible": true },
     "button": { "disabled": true, "visible": false }
   },

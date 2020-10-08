@@ -1,0 +1,17 @@
+{
+  "projectCards": {
+    "visible": true,
+    "vOrientation": false,
+    "title": { "visible": false },
+    "buttons": { "visible": false },
+    "search": { "visible": true },
+    "limit": 0,
+    "project": {
+      "img_project": { "visible": true },
+      "topic": { "visible": true },
+      "name": { "visible": true },
+      "description": { "visible": true },
+      "button": { "disabled": false, "visible": true }
+    }
+  }
+}

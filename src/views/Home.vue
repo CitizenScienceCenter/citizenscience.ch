@@ -50,7 +50,7 @@
             <generic-content-block
               :visible="bottomLeftConfig.visible"
               :vOrientation="bottomLeftConfig.vOrientation"
-              content="home_ourCommunity"
+              :content="ourCommunity"
               :viewConfig="bottomLeftConfig"
             ></generic-content-block>
           </app-content-section>
@@ -67,7 +67,7 @@
             <generic-content-block
               :visible="topRightConfig.visible"
               :vOrientation="topRightConfig.vOrientation"
-              content="home_ourMission"
+              :content="ourMision"
               :viewConfig="topRightConfig"
             ></generic-content-block>
           </app-content-section>
@@ -114,7 +114,6 @@ import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignu
 import EventList from "../components/EventList";
 
 import { mapActions, mapGetters, mapState } from "vuex";
-import content from "@/assets/generic_content.json";
 
 export default {
   name: "Home",
@@ -123,7 +122,7 @@ export default {
       projectCardConfig: { vOrientation: true, visible: false },
       ourCommunity: {},
       bottomLeftConfig: { vOrientation: false, visible: false },
-      ourMission: {},
+      ourMision: {},
       topRightConfig: { vOrientation: true, visible: false },
       newsConfig: { visible: false },
       eventsContent: {},
@@ -161,20 +160,22 @@ export default {
     };
   },
   computed: {
-    ...mapGetters({ view: "viewconfig/getHomeConfig" }),
+    ...mapGetters({
+      view: "viewconfig/getHomeConfig",
+      getGContent: "content/getGenericContent",
+    }),
     ...mapState({
       isProjectsLoaded: (state) => state.project.is_data_fetched,
       isViewLoaded: (state) => state.viewconfig.isLoaded,
       isNewsLoaded: (state) => state.content.isNewsLoaded,
       isGCLoaded: (state) => state.content.isGCLoaded,
-      isEventsLoaded: (state) => state.content.isEventsLoaded
+      isEventsLoaded: (state) => state.content.isEventsLoaded,
     }),
   },
   methods: {
     ...mapActions({
       getFeaturedProjectsRemote: "project/getFeaturedProjectsRemote",
       getNewsRemote: "content/getNewsRemote",
-      getGCRemote: "content/getGenericContentRemote",
       getEventsRemote: "content/getEventsRemote",
     }),
     openInNewTab: function(url) {
@@ -201,9 +202,12 @@ export default {
       this.socialConfig = this.view("social_feed");
     },
     setGenericContent() {
+      //Load generic content view configuration
       this.bottomLeftConfig = this.view("bottom_left");
       this.topRightConfig = this.view("top_right");
-      this.getGCRemote();
+      //Load generic content data 
+      this.ourCommunity = this.getGContent('home_ourCommunity');
+      this.ourMision = this.getGContent('home_ourMission');
     },
   },
   created() {

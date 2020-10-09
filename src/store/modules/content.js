@@ -48,11 +48,11 @@ const actions = {
       return res;
     }
   },
-  async getGenericContentRemote({ commit }) {
+  async getGenericContentRemote({ commit },{view}) {
     commit("removeIsLoaded", "generic");
     let res = null;
     try {
-      res = await getRemoteFile("data/generic_content.json");
+      res = await getRemoteFile(`data/${view}-generic_content.json`);
     } catch (error) {
       console.error(error);
     } finally {

@@ -55,7 +55,7 @@
             <generic-content-block
               :visible="true"
               :vOrientation="false"
-              content="whyContribute"
+              :content="content"
               :viewConfig="bottomLeftConfig"
             ></generic-content-block>
           </div>
@@ -172,10 +172,12 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
+import { mapGetters } from "vuex";
 
 export default {
   data() {
     return {
+      content:{},
       bottomLeftConfig: {
         visible: true,
         vOrientation: false,
@@ -211,11 +213,20 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapGetters({ getGContent: "content/getGenericContent" }),
+  },
   methods: {
     openInNewTab: function(url) {
       var win = window.open(url, "_blank");
       win.focus();
     },
+    loadContent(){
+      this.content = this.getGContent('whyContribute');
+    }
+  },
+  created() {
+    this.loadContent();
   },
 };
 </script>

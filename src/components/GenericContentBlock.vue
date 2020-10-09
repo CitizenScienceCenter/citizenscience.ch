@@ -69,18 +69,16 @@ export default {
     };
   },
   props: {
-    content: String,
+    content: Object,
     visible: Boolean,
     vOrientation: Boolean,
     viewConfig: Object,
   },
   computed: {
-    ...mapGetters({ getContent: "content/getGenericContent" }),
     getdata() {
       try {
-        const contentData = this.getContent(this.content);
-        if (contentData) {
-          return contentData;
+        if (this.content) {
+          return this.content;
         }
         return null;
       } catch (error) {

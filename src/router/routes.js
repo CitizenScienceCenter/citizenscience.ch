@@ -117,9 +117,12 @@ export const routes = [
         beforeEnter: async (to, from, next) => {
           // This preload the page style
           const res = await store.dispatch("viewconfig/getHomeRemoteConfig");
-          // Before route to the Home page, is required load style data
           // The cover component is required even data is not retrieved
           const cover = await store.dispatch("content/getCoverRemote");
+          // generic conten data retrieving
+          await store.dispatch("content/getGenericContentRemote",
+            { view: "home" }
+          );
           if (res && cover) next();
         },
       },
@@ -146,11 +149,12 @@ export const routes = [
             component: Collaborations,
             meta: { i18n: "navigation-contribute-collaborations", nav: true },
             beforeEnter: async (to, from, next) => {
-              // load content from remote
-              const content = await store.dispatch(
-                "content/getGenericContentRemote"
+              // load content from remote server
+              await store.dispatch(
+                "content/getGenericContentRemote",
+                { view: "contribute" }
               );
-              if (content) next();
+              next();
             },
           },
         ],

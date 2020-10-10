@@ -134,7 +134,10 @@ export default {
     },
     searchProject() {
       const projects = this.allProjectList.filter((x) =>
-        this.getProjectName(x).includes(this.search.toLowerCase())
+        this.search
+          .toLowerCase()
+          .split(" ")
+          .every((term) => this.getProjectName(x).includes(term))
       );
       this.updateProjectList(projects);
       return;

@@ -61,9 +61,6 @@
         ></project-teaser>
       </div>
     </div>
-    <div class="row row-centered" v-if="allProjectList.length == 0">
-      <i class="fas fa-spinner fa-pulse spinner"></i>
-    </div>
     <div class="row row-centered" v-if="projectList.length == 0">
       <p class="no-result">{{ $t("noresult-project-label") }}</p>
     </div>
@@ -126,7 +123,7 @@ export default {
   },
   computed: {
     ...mapState({
-      projectList: (state) => state.project.projectList
+      projectList: (state) => state.project.projectList,
     }),
     ...mapGetters({ getProjectList: "project/getProjectList" }),
     getProjects() {
@@ -140,6 +137,7 @@ export default {
         this.getProjectName(x).includes(this.search.toLowerCase())
       );
       this.updateProjectList(projects);
+      return;
     },
   },
   methods: {
@@ -201,9 +199,9 @@ export default {
     },
   },
   created() {
+    this.setViewConfig();
     this.allProjectList = this.getProjects;
     this.updateProjectList(this.allProjectList);
-    this.setViewConfig();
   },
 };
 </script>
@@ -218,10 +216,6 @@ export default {
   }
   .no-result {
     color: $color-primary-shade-20;
-  }
-  .spinner {
-    font-size: 100px;
-    color: $color-secondary;
   }
 }
 </style>

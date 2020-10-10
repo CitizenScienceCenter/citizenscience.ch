@@ -33,7 +33,7 @@
             lang: $i18n.locale,
             dnt: true,
           }"
-          ><i class="fas fa-spinner fa-pulse spinner"></i
+          ><i class="fas fa-spinner fa-spin spinner"></i
         ></Timeline>
       </div>
     </div>

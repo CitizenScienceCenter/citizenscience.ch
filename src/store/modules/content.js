@@ -48,7 +48,7 @@ const actions = {
       return res;
     }
   },
-  async getGenericContentRemote({ commit },{view}) {
+  async getGenericContentRemote({ commit }, { view }) {
     commit("removeIsLoaded", "generic");
     let res = null;
     try {

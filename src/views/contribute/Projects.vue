@@ -47,6 +47,10 @@
               :viewConfig="projectCardConfig"
             ></project-cards-block>
           </app-content-section>
+          <!-- Loading spiner -->
+          <div class="row row-centered" v-if="!isProjectsLoaded">
+            <i class="fas fa-spinner fa-pulse spinner"></i>
+          </div>
         </div>
       </div>
     </app-content-section>
@@ -185,4 +189,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "@/styles/theme.scss";
+@import "@/styles/shared/variables.scss";
+.spinner {
+  font-size: 100px;
+  color: $color-secondary;
+}
+</style>

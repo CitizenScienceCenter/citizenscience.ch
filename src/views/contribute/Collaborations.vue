@@ -51,10 +51,11 @@
       <div class="content-subsection">
         <div class="content-wrapper">
           <!-- Generic Content component for Our Community -->
-          <div class="row row-centered row-reverse-large row-middle">
+          <div class="row row-centered row-middle">
             <generic-content-block
               :visible="true"
               :vOrientation="false"
+              :hReverse="false"
               :content="content"
               :viewConfig="bottomLeftConfig"
             ></generic-content-block>

@@ -16,11 +16,14 @@
       </div>
     </div>
     <!-- Content Section -->
-    <div class="row row-centered">
+    <div
+      class="row row-centered"
+      :class="{ 'row-reverse-large': this.hReverse }"
+    >
       <!-- Image sub-section Content  -->
       <div
         class="col-6 scroll-effect"
-        :class="validateOrientation('img-content')"
+        :class="checkVerticalOrientation('img-content')"
         v-if="contentData.image && br.image.visible"
       >
         <div class="row row-centered img-section">
@@ -35,10 +38,13 @@
       <!-- Text sub-section Content  -->
       <div
         class="col-10 scroll-effect text-section"
-        :class="validateOrientation('text-content')"
+        :class="checkVerticalOrientation('text-content')"
       >
         <div class="row" v-if="br.description.visible">
-          <p>{{ this.localTranslation(contentData.description) }}</p>
+          <div
+            class="text-description"
+            v-html="this.localTranslation(contentData.description)"
+          ></div>
         </div>
         <div
           class="row button-section"
@@ -72,6 +78,7 @@ export default {
     content: Object,
     visible: Boolean,
     vOrientation: Boolean,
+    hReverse: Boolean,
     viewConfig: Object,
   },
   computed: {
@@ -93,7 +100,7 @@ export default {
     openUrlTab: function(url) {
       openUrl(url, true);
     },
-    validateOrientation: function(e) {
+    checkVerticalOrientation: function(e) {
       const sizes = ["sm", "md", "lg"];
       // This validation is only for large and bigger resolution screens
       const horizontal = {
@@ -155,7 +162,7 @@ export default {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
-  p {
+  .text-description {
     font-size: $font-size-tiny;
     padding: 0 $spacing-2 $spacing-2 $spacing-1;
   }
@@ -181,7 +188,7 @@ export default {
     }
   }
   .text-section {
-    p {
+    .text-description {
       font-size: $font-size-mini;
     }
   }
@@ -194,14 +201,14 @@ export default {
     }
   }
   .text-section {
-    p {
+    .text-description {
       font-size: $font-size-small;
     }
   }
 }
 @media only screen and (min-width: $viewport-large) {
   .text-section {
-    p {
+    .text-section {
       padding: 0 $spacing-3 $spacing-2 $spacing-2;
     }
     .button-section {
@@ -235,7 +242,7 @@ export default {
     }
   }
   .text-section {
-    p {
+    .text-description {
       font-size: $font-size-normal;
     }
     .button-section {
@@ -245,7 +252,7 @@ export default {
       }
     }
     &.vertical {
-      p,
+      .text-description,
       .button-section {
         padding-left: $spacing-2;
         font-size: $font-size-small;

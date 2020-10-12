@@ -4,6 +4,10 @@
       "en": "Our Community",
       "de": "Unsere Gemeinschaft"
     },
+    "subheading": {
+      "en": "Lorem ipsum",
+      "de": "Ipsum lorem"
+    },
     "description": {
       "en": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
     },
@@ -23,9 +27,13 @@
       "en": "Our Mission",
       "de": "Unsere Gemeinschaft"
     },
+    "subheading": {
+      "en": "Lorem ipsum",
+      "de": "Ipsum lorem"
+    },
     "description": {
-      "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis congue nulla. Vestibulum rhoncus molestie ornare. Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus. Proin cursus justo sed arcu convallis pulvinar. Suspendisse cursus condimentum nisi, id sagittis quam bibendum at. Aliquam vehicula neque vitae maximus nulla.",
-      "de": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis odio tristique nunc gravida tempus. Proin finibus, lacus vitae scelerisque porta, turpis lacus pulvinar magna, sit amet mattis arcu ipsum id mauris. Praesent ipsum ligula, auctor sed fermentum nec, rhoncus quis tortor. Integer mi orci, molestie ac mi at, varius facilisis ipsum. Praesent ac bibendum tortor. Pellentesque vestibulum."
+      "en": "Dolor sit amet, consectetur adipiscing elit. Maecenas convallis congue nulla. Vestibulum rhoncus molestie ornare. Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus. Proin cursus justo sed arcu convallis pulvinar. Suspendisse cursus condimentum nisi, id sagittis quam bibendum at. Aliquam vehicula neque vitae maximus nulla.",
+      "de": "Dolor sit amet, consectetur adipiscing elit. Donec quis odio tristique nunc gravida tempus. Proin finibus, lacus vitae scelerisque porta, turpis lacus pulvinar magna, sit amet mattis arcu ipsum id mauris. Praesent ipsum ligula, auctor sed fermentum nec, rhoncus quis tortor. Integer mi orci, molestie ac mi at, varius facilisis ipsum. Praesent ac bibendum tortor. Pellentesque vestibulum."
     },
     "button": {
       "link": "/about/mission",

@@ -36,7 +36,7 @@
 </i18n>
 
 <template>
-  <div>
+  <div id="top">
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
@@ -51,16 +51,24 @@
       <div class="content-subsection">
         <div class="content-wrapper">
           <!-- Generic Content component for Our Community -->
-          <div class="row row-centered row-middle">
+          <div
+            class="row row-centered row-middle"
+            v-for="item in content"
+            v-bind:key="item.id"
+          >
             <generic-content-block
               :visible="true"
               :vOrientation="false"
-              :hReverse="false"
-              :content="content"
+              :hReverse="item.reverse"
+              :content="item"
               :viewConfig="bottomLeftConfig"
             ></generic-content-block>
           </div>
+        </div>
+      </div>
 
+      <!-- <div class="content-subsection">
+        <div class="content-wrapper">
           <div class="row row-centered row-reverse-large row-middle">
             <div
               class="col col-10 col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1"
@@ -96,9 +104,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="content-subsection">
+      <!-- <div class="content-subsection">
         <div class="content-wrapper">
           <div class="row row-centered row-middle">
             <div
@@ -145,7 +153,6 @@
             >
               <h3 class="subheading centered left-aligned-large">
                 {{ $t("section-collaborations-snapp-heading") }}
-                <!-- <p class="lead" v-html="$t('section-collaborations-snapp-lead')"></p> -->
               </h3>
               <p v-html="$t('section-collaborations-snapp-text')"></p>
               <p v-html="$t('section-collaborations-snapp-text-2')"></p>
@@ -159,7 +166,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </app-content-section>
 
     <section-newsletter-signup></section-newsletter-signup>
@@ -178,11 +185,13 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      content:{},
+      content: {},
+      isReverse: false,
       bottomLeftConfig: {
         visible: true,
         vOrientation: false,
         heading: { visible: false },
+        subheading: { visible: true },
         description: { visible: true },
         image: { visible: true, size: "md" },
         img_description: { visible: false },
@@ -222,9 +231,16 @@ export default {
       var win = window.open(url, "_blank");
       win.focus();
     },
-    loadContent(){
-      this.content = this.getGContent('whyContribute');
-    }
+    loadContent() {
+      this.content = this.getGContent("whyContribute").map((x) =>
+        this.toggleReverse(x)
+      );
+    },
+    toggleReverse(contentItem) {
+      contentItem.reverse = this.isReverse;
+      this.isReverse = !this.isReverse;
+      return contentItem;
+    },
   },
   created() {
     this.loadContent();

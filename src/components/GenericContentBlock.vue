@@ -40,12 +40,21 @@
         class="col-10 scroll-effect text-section"
         :class="checkVerticalOrientation('text-content')"
       >
+        <!-- Subheading section -->
+        <div class="row" v-if="br.subheading.visible">
+          <div
+            class="subheading"
+            v-html="this.localTranslation(contentData.subheading)"
+          ></div>
+        </div>
+        <!-- Description section -->
         <div class="row" v-if="br.description.visible">
           <div
             class="text-description"
             v-html="this.localTranslation(contentData.description)"
           ></div>
         </div>
+        <!-- Button section -->
         <div
           class="row button-section"
           v-if="br.button.visible && contentData.button.link"
@@ -162,6 +171,11 @@ export default {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
+  .subheading {
+    padding-left: $spacing-1;
+    margin-bottom: $spacing-1;
+    font-size: $font-size-small;
+  }
   .text-description {
     font-size: $font-size-tiny;
     padding: 0 $spacing-2 $spacing-2 $spacing-1;
@@ -201,6 +215,9 @@ export default {
     }
   }
   .text-section {
+    .subheading {
+      font-size: $font-size-normal;
+    }
     .text-description {
       font-size: $font-size-small;
     }
@@ -208,7 +225,10 @@ export default {
 }
 @media only screen and (min-width: $viewport-large) {
   .text-section {
-    .text-section {
+    .subheading {
+      padding-left: $spacing-2;
+    }
+    .text-description {
       padding: 0 $spacing-3 $spacing-2 $spacing-2;
     }
     .button-section {
@@ -242,7 +262,7 @@ export default {
     }
   }
   .text-section {
-    .text-description {
+    .text-description {      
       font-size: $font-size-normal;
     }
     .button-section {
@@ -262,6 +282,7 @@ export default {
 }
 @media only screen and (min-width: $viewport-xxlarge) {
   .text-section {
+    padding-left: $spacing-2;
     &.vertical {
       p,
       .button-section {

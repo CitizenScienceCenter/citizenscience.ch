@@ -56,6 +56,9 @@ const actions = {
     } catch (error) {
       console.error(error);
     } finally {
+      // TODO: remove, is only for testing
+      // res = require("@/assets/contribute-generic_content")
+      // res = require("@/assets/home-generic_content")
       commit("setGenericContent", res);
       return res;
     }

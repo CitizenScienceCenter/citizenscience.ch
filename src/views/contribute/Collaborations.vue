@@ -1,9 +1,9 @@
 <i18n>
   {
   "en": {
-  "page-title": "Collaborations",
+  "page-title": "Why_Contribute",
 
-  "section-collaborations-heading": "Why Contribute",
+  "section-collaborations-heading": "Why Contribute?",
   "section-collaborations-openseventeen-subheading": "The Open Seventeen Challenge",
   "section-collaborations-openseventeen-lead": "Coaching for Citizen Science Innovation",
   "section-collaborations-openseventeen-text": "O17 is a challenged-based, online interactive coaching programme to help young global innovators connect and shape good ideas into viable social innovation projects for the 17 UN Sustainable Development Goals (SDGs). O17 supports projects that encourage grassroots public participation and citizen science through the use of open data and crowdsourcing.<br>The Challenge is a joint initiative with the Citizen Cyberlab at University of Geneva, and the Governance Lab at New York University.",
@@ -17,9 +17,9 @@
 
   },
   "de": {
-  "page-title": "Kollaborationen",
+  "page-title": "Warum_beitragen",
 
-  "section-collaborations-heading": "Kollaborationen",
+  "section-collaborations-heading": "Warum beitragen?",
   "section-collaborations-openseventeen-subheading": "Die Open Seventeen Challenge",
   "section-collaborations-openseventeen-lead": "Coaching für innovative Citizen Science",
   "section-collaborations-openseventeen-text": "Der O17-Wettbewerb ist ein interaktives Online-Coaching-Programm, das jungen Innovatoren weltweit helfen soll, sich zu vernetzen und gute Ideen zu tragfähigen sozialen Innovationsprojekten weiterzuentwickeln. O17 unterstützt Projekte, die im engen Bezug zu den 17 UN-Nachhaltigkeitszielen (SDGs) stehen und die mit Hilfe von Open Data und Crowdsourcing Bürgerbeteiligung und Citizen Science fördern.<br>Der Wettbewerb ist eine gemeinsame Initiative des Citizen Cyberlab der Universität Genf und des Governance Lab der New York University.",
@@ -67,7 +67,7 @@
         </div>
       </div>
 
-      <!-- <div class="content-subsection">
+      <!--<div class="content-subsection">
         <div class="content-wrapper">
           <div class="row row-centered row-reverse-large row-middle">
             <div
@@ -104,9 +104,9 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
-      <!-- <div class="content-subsection">
+       <div class="content-subsection">
         <div class="content-wrapper">
           <div class="row row-centered row-middle">
             <div

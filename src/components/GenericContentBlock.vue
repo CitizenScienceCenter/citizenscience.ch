@@ -189,7 +189,7 @@ export default {
   }
   &.vertical {
     padding-left: 0;
-    p,
+    .text-description,
     .button-section {
       padding-left: $spacing-1;
     }
@@ -219,14 +219,19 @@ export default {
       font-size: $font-size-normal;
     }
     .text-description {
-      font-size: $font-size-small;
+      font-size: $font-size-normal;
+    }
+    &.vertical {
+      .text-description {
+        font-size: $font-size-small;
+      }
     }
   }
 }
 @media only screen and (min-width: $viewport-large) {
   .text-section {
     .subheading {
-      padding-left: $spacing-2;
+      padding-left: $spacing-1;
     }
     .text-description {
       padding: 0 $spacing-3 $spacing-2 $spacing-2;
@@ -238,8 +243,9 @@ export default {
       }
     }
     &.vertical {
-      p,
+      .text-description,
       .button-section {
+        padding-left: $spacing-1;
         .button {
           height: 30px;
           font-size: $font-size-mini;
@@ -284,7 +290,7 @@ export default {
   .text-section {
     padding-left: $spacing-2;
     &.vertical {
-      p,
+      .text-description,
       .button-section {
       }
     }

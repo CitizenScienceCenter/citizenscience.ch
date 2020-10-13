@@ -3,7 +3,7 @@
   "en": {
   "page-title": "Projects",
 
-  "section-projects-heading": "Our Projects",
+  "section-projects-heading": "Projects",
 
   "section-partner-projects-heading": "Partner's Projects",
   "section-partner-projects-crowdwater-text": "CrowdWater at the university of Zurich aims to examine the potential of crowdsourcing in the field of hydrology. The focus lies on water level, streamflow and soil moisture data. The aim of the project is to collect a large amount of data and to improve the forecast of hydrological events, such as droughts or floods.",

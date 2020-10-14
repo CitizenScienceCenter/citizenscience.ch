@@ -120,9 +120,9 @@ export const routes = [
           // The cover component is required even data is not retrieved
           const cover = await store.dispatch("content/getCoverRemote");
           // generic conten data retrieving
-          await store.dispatch("content/getGenericContentRemote",
-            { view: "home" }
-          );
+          await store.dispatch("content/getGenericContentRemote", {
+            view: "home",
+          });
           if (res && cover) next();
         },
       },
@@ -150,10 +150,9 @@ export const routes = [
             meta: { i18n: "navigation-contribute-collaborations", nav: true },
             beforeEnter: async (to, from, next) => {
               // load content from remote server
-              await store.dispatch(
-                "content/getGenericContentRemote",
-                { view: "contribute" }
-              );
+              await store.dispatch("content/getGenericContentRemote", {
+                view: "contribute",
+              });
               next();
             },
           },
@@ -164,6 +163,13 @@ export const routes = [
         path: "start",
         component: ChildView,
         meta: { i18n: "navigation-startproject", nav: true },
+        beforeEnter: async (to, from, next) => {
+          // load content from remote server
+          await store.dispatch("content/getGenericContentRemote", {
+            view: "create",
+          });
+          next();
+        },
         redirect: "start/startproject",
         children: [
           // {
@@ -185,7 +191,10 @@ export const routes = [
             path: "builder",
             meta: { i18n: "navigation-startproject-builder", nav: true },
             beforeEnter(to, from) {
-              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`);
+              openUrl(
+                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`,
+                true
+              );
             },
           },
           {
@@ -193,7 +202,8 @@ export const routes = [
             meta: { i18n: "navigation-createproject-builder", nav: true },
             beforeEnter(to, from) {
               openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`
+                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`,
+                true
               );
             },
           },

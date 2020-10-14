@@ -26,22 +26,26 @@
   "bottom_left": {
     "visible": true,
     "vOrientation": false,
+    "hReverse":false,
     "heading": { "visible": true },
     "subheading": { "visible": false },
     "description": { "visible": true },
-    "image": { "visible": true, "size": "sm" },
+    "image": { "visible": true, "size": "sm", "rounded":true  },
     "img_description": { "visible": true },
-    "button": { "disabled": true, "visible": false }
+    "button": { "disabled": true, "visible": false },
+    "second_button":{"disabled":true, "visible":false}
   },
   "top_right": {
     "visible": true,
     "vOrientation": true,
+    "hReverse":false,
     "heading": { "visible": true },
     "subheading": { "visible": true },
     "description": { "visible": true },
-    "image": { "visible": false },
+    "image": { "visible": false, "rounded":true },
     "img_description": { "visible": false },
-    "button": { "disabled": false, "visible": true }
+    "button": { "disabled": false, "visible": true },
+    "second_button":{"disabled":true, "visible":false}
   },
   "events": {
     "visible": true,

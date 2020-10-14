@@ -52,16 +52,16 @@
         <div class="content-wrapper">
           <!-- Generic Content component for Our Community -->
           <div
-            class="row row-centered row-middle"
+            class="row row-centered row-middle content-item"
             v-for="item in content"
             v-bind:key="item.id"
           >
             <generic-content-block
-              :visible="true"
-              :vOrientation="false"
+              :visible="viewConfig.visible"
+              :vOrientation="viewConfig.vOrientation"
               :hReverse="item.reverse"
               :content="item"
-              :viewConfig="bottomLeftConfig"
+              :viewConfig="viewConfig"
             ></generic-content-block>
           </div>
         </div>
@@ -187,15 +187,16 @@ export default {
     return {
       content: {},
       isReverse: false,
-      bottomLeftConfig: {
+      viewConfig: {
         visible: true,
         vOrientation: false,
         heading: { visible: false },
         subheading: { visible: true },
         description: { visible: true },
-        image: { visible: true, size: "md" },
+        image: { visible: true, size: "md", rounded: true },
         img_description: { visible: false },
-        button: { disabled: true, visible: false },
+        button: { disabled: false, visible: false },
+        second_button: { disabled: false, visible: false },
       },
     };
   },
@@ -248,4 +249,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+@import "@/styles/theme.scss";
+@import "@/styles/shared/variables.scss";
+.content-item {
+  padding: $spacing-3 0;
+}
+</style>

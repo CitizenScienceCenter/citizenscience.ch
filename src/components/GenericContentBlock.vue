@@ -178,7 +178,7 @@ export default {
 }
 .img-section {
   .col-image {
-    transform: scale(0.75) translateY(-10%);
+    transform: scale(0.75) translateY(-5%);
     border-radius: 20%;
     margin-bottom: -$spacing-3;
     position: relative;
@@ -233,7 +233,7 @@ export default {
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .img-section {
     .col-image {
-      transform: scale(0.8) translateY(-5%);
+      transform: scale(0.8) translateY(-5%) translateX(-5%);
       margin-bottom: -$spacing-2;
     }
   }
@@ -280,7 +280,7 @@ export default {
 @media only screen and (min-width: $viewport-xlarge) {
   .img-section {
     .col-image {
-      transform: scale(1) translateY(0%);
+      transform: scale(1) translateY(0%) translateX(-5%);
       margin-bottom: $spacing-1;
       width: 90%;
       height: auto;

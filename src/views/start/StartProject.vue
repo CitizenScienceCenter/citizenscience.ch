@@ -4,6 +4,7 @@
   "page-title": "Start a Project",
 
   "section-projects-heading": "Conducting Citizen Science Projects",
+  "section-startProject-heading": "Before You Start",
   "section-projects-text": "Traditional Citizen Science projects involve members of the public in gathering data (often geo-located) via mobile or sensing technologies, or in analysing existing data via interactive and highly visual web interfaces. In an increasing number of cases the public is also involved in other phases of the research process, including the definition of the research questions, the interpretation of results, and the final dissemination of conclusions.<br>In the past two decades, citizen science has gained tremendous popularity both with scientists and the public, and citizen science projects span today a wide range of research topics.",
   "section-projects-text-2": "We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project.",
   "section-projects-button": "Discover our Projects",
@@ -30,6 +31,7 @@
   "page-title": "Ein Projekt starten",
 
   "section-projects-heading": "Durchführen von Citizen Science Projekten",
+  "section-startProject-heading": "Bevor Sie anfangen",
   "section-projects-text": "In den meisten Citizen Science Projekten beteiligen sich Bürgerinnen und Bürger durch das Sammeln und Auswerten von Daten. Dies geschieht häufig mithilfe von Smartphones, Apps und anderen mobilen Geräten oder interaktiven Websites. Immer häufiger sind Citizen Scientists auch in anderen Phasen des Forschungsprozesses aktiv: Sie definieren Forschungsfragen, interpretieren Ergebnisse und veröffentlichen Schlussfolgerungen.<br>In den letzten 20 Jahren erfreut sich Citizen Science immer grösserer Beliebtheit bei Wissenschaftlern und in der Öffentlichkeit; und auch das Themenspektrum wird immer breiter.",
   "section-projects-text-2": "Wir sind jederzeit offen für Austausch und Gespräch. Gerne überlegen wir mit Ihnen gemeinsam, wie man die Welt mit Citizen Science ein kleines Stück besser machen könnte. Treten Sie mit uns in Kontakt, wenn Sie eine Projektidee haben. Wir können Ihnen bei der Weiterentwicklung der Idee helfen und Ihnen bei positiver Evaluation unsere Tools und Expertise zur Verfügung stellen, um das Projekt realisieren.",
   "section-projects-button": "Entdecke unsere Projekte",
@@ -56,9 +58,18 @@
 </i18n>
 
 <template>
-  <div>
-    <app-content-section v-if="isGCLoaded">
-      <div class="row row-middle">
+  <div>    
+    <app-content-section>
+      <div class="content-wrapper">
+      <div class="row row-centered scroll-effect">
+        <div class="col col-large-10">
+          <h2 class="heading centered" id="partnerships">
+            {{ $t("section-startProject-heading") }}
+          </h2>
+        </div>
+      </div>
+    </div>
+      <div class="row row-centered row-middle" v-if="isGCLoaded">
         <div class="col col-11">
           <generic-content-block
             :visible="viewConfig.visible"

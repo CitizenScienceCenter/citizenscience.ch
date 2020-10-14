@@ -192,8 +192,7 @@ export const routes = [
             meta: { i18n: "navigation-startproject-builder", nav: true },
             beforeEnter(to, from) {
               openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`,
-                true
+                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`
               );
             },
           },
@@ -202,8 +201,7 @@ export const routes = [
             meta: { i18n: "navigation-createproject-builder", nav: true },
             beforeEnter(to, from) {
               openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`,
-                true
+                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`
               );
             },
           },

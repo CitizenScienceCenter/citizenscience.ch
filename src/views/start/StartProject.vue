@@ -57,7 +57,7 @@
 
 <template>
   <div>
-    <app-content-section>
+    <app-content-section v-if="isGCLoaded">
       <div class="row row-middle">
         <div class="col col-11">
           <generic-content-block
@@ -70,7 +70,7 @@
         </div>
       </div>
     </app-content-section>
-    <app-content-section class="overflow-hidden">
+    <!-- <app-content-section class="overflow-hidden">
       <div
         class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1"
       >
@@ -289,7 +289,7 @@
           </div>
         </div>
       </div>
-    </app-content-section>
+    </app-content-section> -->
 
     <section-newsletter-signup></section-newsletter-signup>
 
@@ -302,7 +302,7 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   data() {
@@ -347,6 +347,7 @@ export default {
   },
   computed: {
     ...mapGetters({ getGContent: "content/getGenericContent" }),
+    ...mapState({ isGCLoaded: (state) => state.content.isGCLoaded }),
   },
   methods: {
     openInNewTab: function(url) {

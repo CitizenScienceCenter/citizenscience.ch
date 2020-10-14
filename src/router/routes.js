@@ -162,14 +162,7 @@ export const routes = [
       {
         path: "start",
         component: ChildView,
-        meta: { i18n: "navigation-startproject", nav: true },
-        beforeEnter: async (to, from, next) => {
-          // load content from remote server
-          await store.dispatch("content/getGenericContentRemote", {
-            view: "create",
-          });
-          next();
-        },
+        meta: { i18n: "navigation-startproject", nav: true },        
         redirect: "start/startproject",
         children: [
           // {
@@ -181,6 +174,13 @@ export const routes = [
             path: "startproject",
             component: StartProject,
             meta: { i18n: "navigation-startproject-overview", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // load content from remote server
+              await store.dispatch("content/getGenericContentRemote", {
+                view: "create",
+              });
+              next();
+            },
           },
           {
             path: "criteria",

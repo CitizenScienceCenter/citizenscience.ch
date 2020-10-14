@@ -52,7 +52,7 @@
     "rules": {
       "no-console": "off",
       "no-mixed-spaces-and-tabs": 0,
-      "no-unused-vars": "off" 
+      "no-unused-vars": "off"
     },
     "parserOptions": {
       "parser": "babel-eslint"

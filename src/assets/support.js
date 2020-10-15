@@ -17,5 +17,5 @@ export function openUrl(url, self) {
 }
 // Function to find the value of nested parameter
 export function getNested(obj, ...args) {
-  return args.reduce((obj, level) => obj && obj[level], obj)
+  return args.reduce((obj, level) => obj && obj[level], obj);
 }

@@ -59,6 +59,10 @@ const actions = {
       //Multiple call to 2 different projects endpoints
       const [flagship, regular] = await Promise.all(projectCalls);  
       // TODO: validate flagship.ok
+      // if (flagship && flagship.ok) {
+      //   const info_flag = await flagship.json();
+      //   projects = projects.concat(info_flag.projects);
+      // }
       if (flagship) {
         const info_flag = await flagship;
         projects = projects.concat(info_flag);

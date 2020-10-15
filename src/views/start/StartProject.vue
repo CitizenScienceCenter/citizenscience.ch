@@ -50,7 +50,7 @@
   "section-projects-checklist-button": "Kriterien für Projektevorschläge",
 
   "section-projects-phases-heading": "Phasen eines Citizen Science Projekts",
-  "section-projects-phases-text": "Mit dieser Anleitung wollen wir unserer Vorgehensweise bei der Entwicklung von Projekten nachvollziehbar machen. Anhand von Meilensteinen ​​wird gezeigt, wie ein Citizen Science-Projekt in Zusammenarbeit mit dem Zentrum entstehen kann.",
+  "section-projects-phases-text": "Mit dieser Anleitung wollen wir unserer Vorgehensweise bei der Entwicklung von Projekten nachvollziehbar machen. Anhand von Meilensteinen wird gezeigt, wie ein Citizen Science-Projekt in Zusammenarbeit mit dem Zentrum entstehen kann.",
   "section-projects-phases-button": "Projektphasen"
 
   }
@@ -58,18 +58,18 @@
 </i18n>
 
 <template>
-  <div>    
+  <div>
     <app-content-section>
       <div class="content-wrapper">
-      <div class="row row-centered scroll-effect">
-        <div class="col col-large-10">
-          <h2 class="heading centered" id="partnerships">
-            {{ $t("section-startProject-heading") }}
-          </h2>
+        <div class="row row-centered scroll-effect">
+          <div class="col col-large-10">
+            <h2 class="heading centered" id="partnerships">
+              {{ $t("section-startProject-heading") }}
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
-      <div class="row row-centered row-middle" v-if="isGCLoaded">
+      <div class="row row-centered row-middle">
         <div class="col col-11">
           <generic-content-block
             :visible="viewConfig.visible"
@@ -159,7 +159,7 @@
           </div>
         </div>
       </div>
-    </app-content-section>
+    </app-content-section>-->
 
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
@@ -224,7 +224,7 @@
             <p class="centered extra-margin-top">
               <router-link
                 tag="button"
-                to="/start/offer"
+                to="/about/offer"
                 class="button button-secondary"
                 >{{ $t("section-offer-button") }}</router-link
               >
@@ -300,7 +300,7 @@
           </div>
         </div>
       </div>
-    </app-content-section> -->
+    </app-content-section>
 
     <section-newsletter-signup></section-newsletter-signup>
 
@@ -313,7 +313,7 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-import { mapGetters, mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   data() {
@@ -358,7 +358,6 @@ export default {
   },
   computed: {
     ...mapGetters({ getGContent: "content/getGenericContent" }),
-    ...mapState({ isGCLoaded: (state) => state.content.isGCLoaded }),
   },
   methods: {
     openInNewTab: function(url) {

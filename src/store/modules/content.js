@@ -28,12 +28,14 @@ const actions = {
     let res = null;
     try {
       res = await getRemoteFile("data/cover_list.json");
+      return res;
     } catch (error) {
       console.error(error);
       res = coverListDefault;
+      return res;
     } finally {
       commit("setCoverList", res);
-      return res;
+      
     }
   },
   async getNewsRemote({ commit }) {
@@ -41,11 +43,11 @@ const actions = {
     let res = null;
     try {
       res = await getRemoteFile("data/news.json");
+      return res;
     } catch (error) {
       console.error(error);
     } finally {
-      commit("setNewsList", res);
-      return res;
+      commit("setNewsList", res);      
     }
   },
   async getGenericContentRemote({ commit }, { view }) {
@@ -53,12 +55,13 @@ const actions = {
     let res = null;
     try {
       res = await getRemoteFile(`data/${view}-generic_content.json`);
+      return res;
     } catch (error) {
       // This content is local whether the remote content is not retrieved
-      res = require(`@/assets/${view}-generic_content.json`)
+      res = require(`@/assets/${view}-generic_content.json`);
+      return res;
     } finally {
       commit("setGenericContent", res);
-      return res;
     }
   },
   async getEventsRemote({ commit }) {
@@ -70,7 +73,6 @@ const actions = {
       console.error(error);
     } finally {
       commit("setEvents", res);
-      return res;
     }
   },
 };
@@ -107,6 +109,8 @@ const mutations = {
     }
   },
 };
+
+
 
 export default {
   namespaced: true,

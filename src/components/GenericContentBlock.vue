@@ -35,7 +35,7 @@
             />
           </div>
           <div class="col col-12 centered" v-if="br.img_description.visible">
-            <p>{{ this.localTranslation(contentData.img_description) }}</p>
+            <p>{{ localTranslation(contentData.img_description) }}</p>
           </div>
         </div>
       </div>
@@ -48,15 +48,16 @@
         <div class="row" v-if="br.subheading.visible">
           <div
             class="subheading"
-            v-html="this.localTranslation(contentData.subheading)"
+            v-html="localTranslation(contentData.subheading)"
           ></div>
         </div>
         <!-- Description section -->
         <div class="row" v-if="br.description.visible">
-          <div
+          <!-- <div
             class="text-description"
-            v-html="this.localTranslation(contentData.description)"
-          ></div>
+            v-html="localTranslation(contentData.description)"
+          ></div> -->
+          <component :is="getDynamicData" class="text-description"></component>
         </div>
         <!-- Buttons section -->
         <div class="row">
@@ -72,7 +73,7 @@
               :disabled="br.button.disabled"
             >
               <i :class="contentData.button.icon"></i>
-              {{ this.localTranslation(contentData.button) }}
+              {{ localTranslation(contentData.button) }}
             </button>
           </div>
           <div
@@ -89,7 +90,7 @@
               :disabled="br.second_button.disabled"
             >
               <i :class="contentData.second_button.icon"></i>
-              {{ this.localTranslation(contentData.second_button) }}
+              {{ localTranslation(contentData.second_button) }}
             </button>
           </div>
         </div>
@@ -99,7 +100,7 @@
 </template>
 <script>
 import { getTranslation, openUrl, getNested } from "@/assets/support.js";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   name: "GenericContentBlock",
@@ -117,15 +118,15 @@ export default {
     viewConfig: Object,
   },
   computed: {
-    getdata() {
-      try {
-        if (this.content) {
-          return this.content;
-        }
-        return null;
-      } catch (error) {
-        return null;
-      }
+    ...mapState({
+      language: (state) => state.settings.language,
+    }),
+    getDynamicData: function() {
+      return {
+        template: `<div>${this.localTranslation(
+          this.contentData.description
+        )}</div>`,
+      };
     },
   },
   methods: {
@@ -166,7 +167,7 @@ export default {
     },
   },
   created() {
-    this.contentData = this.getdata;
+    this.contentData = this.content;
   },
 };
 </script>

@@ -76,7 +76,7 @@
           >{{ $t("section-projects-button") }}</router-link
         >
         <button
-          @click="openUrl(`https://lab.citizenscience.ch/${$i18n.locale}`)"
+          @click="openUrl(`${process.env.VUE_APP_LAB_BASE_URL}/${$i18n.locale}`)"
           class="button button-secondary-main"
         >
           {{ $t("new-project-button") }}

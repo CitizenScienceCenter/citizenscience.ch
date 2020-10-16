@@ -162,7 +162,7 @@ export const routes = [
       {
         path: "start",
         component: ChildView,
-        meta: { i18n: "navigation-startproject", nav: true },        
+        meta: { i18n: "navigation-startproject", nav: true },
         redirect: "start/startproject",
         children: [
           // {
@@ -190,16 +190,16 @@ export const routes = [
           {
             path: "builder",
             meta: { i18n: "navigation-startproject-builder", nav: true },
-            beforeEnter(to, from) {
-              openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`
-              );
+            beforeEnter(to, from, next) {
+              next(from);
+              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`);
             },
           },
           {
             path: "create",
             meta: { i18n: "navigation-createproject-builder", nav: true },
-            beforeEnter(to, from) {
+            beforeEnter(to, from, next) {
+              next(from);
               openUrl(
                 `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`
               );
@@ -366,11 +366,16 @@ export const routes = [
         component: Reset,
         meta: { requiresAuth: true, i18n: "navigation-reset", nav: false },
       },
-
       {
         path: "terms",
         component: Terms,
         meta: { i18n: "navigation-terms", nav: false },
+      },
+      {
+        // TODO: pending to generate view
+        // catch all 404
+        path: "*",
+        component: () => import("@/views/404.vue"),
       },
     ],
   },

@@ -4,7 +4,7 @@
       "description": {
         "en": "<strong>Citizen Scientists</strong> are active in many disciplines of <em>natural science</em> (such as astronomy, physics, biochemistry, neuroscience, and more), but also in the <em>social sciences</em> as well as in the arts and humanities (such as linguistics, history, archaeology, and more). Projects exist in various forms, catering to people of diverse ages and backgrounds, and are accessible for individuals without a scientific background, as long as they have the time and the tools (often a computer with internet connection or a smartphone, sometimes a data collection kit)."
       },
-      "image": "https://placeimg.com/500/500/nature"
+      "image": "https://placeimg.com/350/350/nature"
     },
     {
       "subheading": {
@@ -13,13 +13,13 @@
       "description": {
         "en": "The reasons why professional scientists choose to use CS are often related to the optimization of resources. Citizen Science allows projects to cover wide geographical areas and to run on an ongoing basis, thus providing scientists with large and diverse data sets that might be otherwise impossible to collect. Similarly, scientists often find it unfeasible to analyse large data sets on their own, due to time and resource constraints."
       },
-      "image": "https://placeimg.com/500/500/animals"
+      "image": "https://placeimg.com/350/350/animals"
     },
     {
       "description": {
         "en": "<p>As for participants, they often report the satisfaction of <em>“doing something useful for science”</em> as the main reason to engage with CS project. Here some others potential reasons to engage:</p> <small> <ul> <li>You may have a particular interest or curiosity in the field of research in question. Participation in the CS project will help increase your knowledge and understanding of the topic.</li> <li>Via open communication channels such as forums, blogs and social media, you will have the opportunity to interact with scientists and experts, and with a community of peers sharing your same interest and passion.</li> <li>As projects increasingly offer the opportunity to engage in multiple phases of the research process (defining research questions, collecting data, analysing data, disseminating results and evaluating a project’s success) you may get a greater appreciation and understanding of the scientific research process and in turn of science in general.</li> <li>If you are interested in societal impact and civic engagement, you should also know that Citizen Science can benefit society and communities at large, as some projects tackle <strong>global challenges</strong> (for example climate change) and help increase interest and understanding of such challenges. The results of research gained through citizen science projects have influenced policy and decision-making at a range of scales, including, for example, natural resources conservation efforts.</li> <li>Lastly, if you are a teacher, you may consider engaging students in CS projects, as it can complement in an exciting and instructive way the theoretical treatment of topics in the classroom.</li> </ul> </small>"
       },
-      "image": "https://placeimg.com/500/500/arch"
+      "image": "https://placeimg.com/350/350/arch"
     }
   ]
 }

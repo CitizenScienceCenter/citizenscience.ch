@@ -5,7 +5,7 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin');
 // Renders headlessly in a downloaded version of Chromium through puppeteer
 const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer;
 */
-module.exports = {
+module.exports = {  
   chainWebpack: (config) => {
     config.module
       .rule("i18n")
@@ -14,7 +14,8 @@ module.exports = {
       .use("i18n")
       .loader("@kazupon/vue-i18n-loader")
       .end();
-  },
+    },
+    runtimeCompiler: true
   /*
     configureWebpack: {
         plugins: [

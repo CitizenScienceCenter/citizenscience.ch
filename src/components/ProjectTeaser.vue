@@ -124,7 +124,7 @@ export default {
         },
         horizontal: {
           "img-content": "col-large-4",
-          "text-content": "col-large-6 col-large-after-2",
+          "text-content": "col-large-7 col-large-after-1",
         },
       };
       let selectedView = vc.horizontal;

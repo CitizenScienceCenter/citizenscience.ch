@@ -200,10 +200,10 @@ export default {
   padding: 0 $spacing-5 0 $spacing-2 !important;
   .subheading {
     margin-bottom: $spacing-1;
-    font-size: $font-size-small;
+    font-size: $font-size-mini;
   }
   .text-description {
-    font-size: $font-size-tiny;
+    font-size: $font-size-mini;
   }
   .button-section {
     padding: $spacing-2 0;
@@ -226,8 +226,11 @@ export default {
     }
   }
   .text-section {
+    .subheading {
+      font-size: $font-size-small;
+    }
     .text-description {
-      font-size: $font-size-mini;
+      font-size: $font-size-small;
     }
   }
 }
@@ -293,8 +296,9 @@ export default {
   }
   .text-section {
     padding: 0 $spacing-3 0 $spacing-5 !important;
+    .subheading {      
+    }
     .text-description {
-      font-size: $font-size-normal;
     }
     .button-section {
       .button {

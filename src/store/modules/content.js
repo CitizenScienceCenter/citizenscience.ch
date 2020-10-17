@@ -35,7 +35,6 @@ const actions = {
       return res;
     } finally {
       commit("setCoverList", res);
-      
     }
   },
   async getNewsRemote({ commit }) {
@@ -47,7 +46,7 @@ const actions = {
     } catch (error) {
       console.error(error);
     } finally {
-      commit("setNewsList", res);      
+      commit("setNewsList", res);
     }
   },
   async getGenericContentRemote({ commit }, { view }) {
@@ -69,6 +68,7 @@ const actions = {
     let res = null;
     try {
       res = await getRemoteFile("data/events.json");
+      return res;
     } catch (error) {
       console.error(error);
     } finally {
@@ -109,8 +109,6 @@ const mutations = {
     }
   },
 };
-
-
 
 export default {
   namespaced: true,

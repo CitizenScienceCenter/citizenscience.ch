@@ -29,22 +29,22 @@ const actions = {
     try {
       // Retrieve style from remote
       res = await getRemoteFile("styles/home_style.json");
+      return res;
     } catch (error) {
       console.error(error);
     } finally {
       await commit("setHomeConfig", res);
-      return res;
     }
   },
   async getProjectsRemoteConfig({ commit }) {
     let resp = projectsPageConfig;
     try {
       resp = await getRemoteFile("styles/projects_style.json");
+      return resp;
     } catch (error) {
       console.error(error);
     } finally {
       await commit("setProjectsConfig", resp);
-      return resp;
     }
   },
 };

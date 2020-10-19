@@ -1,18 +1,42 @@
 <i18n>
 {
   "en": {
-    "page-title": "Criteria"
+    "page-title": "Criteria",
+    "section-checklist-heading": "Criteria for Project Proposals"
   },
   "de": {
-    "page-title": "Kriterien"
+    "page-title": "Kriterien",
+    "section-checklist-heading": "Kriterien für Projektanträge"
   }
 }
 </i18n>
 
 <template>
   <div>
-
     <app-content-section class="overflow-hidden">
+      <div class="content-wrapper">
+        <div class="row row-centered scroll-effect">
+          <div class="col col-large-10">
+            <h2 class="heading centered" id="partnerships">
+              {{ $t("section-checklist-heading") }}
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="row row-centered row-large-left-aligned row-middle">
+        <div class="col col-11">
+          <generic-content-block
+            :visible="viewConfig.visible"
+            :vOrientation="viewConfig.vOrientation"
+            :hReverse="viewConfig.hReverse"
+            :content="content"
+            :viewConfig="viewConfig"
+          ></generic-content-block>
+        </div>
+      </div>
+    </app-content-section>
+    <!-- TODO: verify before removing -->
+    <!-- <app-content-section class="overflow-hidden">
       <div class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1">
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
@@ -43,7 +67,7 @@
               <li>The project’s goals (quantity of necessary data, coverage, required number of participants) are reasonable and achievable within a defined timeframe.</li>
               <li>The project demonstrates the availability of sufficient resources to achieve the desired goals.</li>
               <li>The project demonstrates a long-term commitment to fully engage with volunteers.</li>
-              <li>The project management has considered ethical aspects (e.g. diversity, inclusion, gender equality, reflection on in- or exclusion of specific groups) from the early stage of the process design. </li>
+              <li>The project management has considered ethical aspects (e.g. diversity, inclusion, gender equality, reflection on in- or exclusion of specific groups) from the early stage of the process design.</li>
               <li>The projects’ data and metadata are made publicly available, provided there are no legal or ethical arguments against doing so.</li>
               <li>The project has a data management plan which conforms to the European General Data Protection Regulation.</li>
               <li>The project management has evaluated and reduced all risks related to participation.</li>
@@ -67,57 +91,75 @@
           </div>
         </div>
       </div>
-    </app-content-section>
-
+    </app-content-section> -->
 
     <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
-
   </div>
 </template>
 
 <script>
-
-import ContentSection from '@/components/shared/ContentSection.vue'
-import Footer from '@/components/shared/Footer.vue'
+import ContentSection from "@/components/shared/ContentSection.vue";
+import GenericContentBlock from "@/components/GenericContentBlock.vue";
+import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'What',
-  components: {
-      SectionNewsletterSignup,
-    'app-content-section': ContentSection,
-    'app-footer': Footer
+  name: "Checklist",
+  data() {
+    return {
+      content: {},
+      viewConfig: {
+        visible: true,
+        vOrientation: false,
+        heading: { visible: false },
+        subheading: { visible: false },
+        description: { visible: true },
+        image: { visible: true, size: "md", rounded: false },
+        img_description: { visible: false },
+        button: { disabled: false, visible: true },
+        second_button: { disabled: false, visible: false },
+      },
+    };
   },
-    props: {
-        platform: {
-            type: Boolean,
-            default: false
-        }
+  components: {
+    SectionNewsletterSignup,
+    GenericContentBlock,
+    "app-content-section": ContentSection,
+    "app-footer": Footer,
+  },
+  props: {
+    platform: {
+      type: Boolean,
+      default: false,
     },
-    metaInfo: function() {
-        return {
-            title: this.$t('page-title'),
-            meta: [
-                {
-                    property: 'og:title',
-                    content: this.$t('page-title'),
-                    template: '%s | '+this.$t('site-title')
-                }
-            ]
-        }
+  },
+  metaInfo: function() {
+    return {
+      title: this.$t("page-title"),
+      meta: [
+        {
+          property: "og:title",
+          content: this.$t("page-title"),
+          template: "%s | " + this.$t("site-title"),
+        },
+      ],
+    };
+  },
+  computed: {
+    ...mapGetters({ getGContent: "content/getGenericContent" }),
+  },
+  methods: {
+    loadContent() {
+      this.content = this.getGContent("criteria");
     },
-    methods: {
-        openInNewTab: function(url) {
-            var win = window.open(url, '_blank');
-            win.focus();
-        }
-    }
-}
-
+  },
+  created() {
+    this.loadContent();
+  },
+};
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

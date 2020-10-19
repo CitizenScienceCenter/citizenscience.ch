@@ -164,6 +164,13 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-startproject", nav: true },
         redirect: "start/startproject",
+        beforeEnter: async (to, from, next) => {
+          // load content from remote server
+          await store.dispatch("content/getGenericContentRemote", {
+            view: "create",
+          });
+          next();
+        },
         children: [
           // {
           //   path: "phases",
@@ -174,13 +181,6 @@ export const routes = [
             path: "startproject",
             component: StartProject,
             meta: { i18n: "navigation-startproject-overview", nav: true },
-            beforeEnter: async (to, from, next) => {
-              // load content from remote server
-              await store.dispatch("content/getGenericContentRemote", {
-                view: "create",
-              });
-              next();
-            },
           },
           {
             path: "criteria",
@@ -244,11 +244,11 @@ export const routes = [
           },
         ],
       },
-      {
-        path: "pwa",
-        meta: { i18n: "navigation-pwa", nav: true },
-        component: PWA,
-      },
+      // {
+      //   path: "pwa",
+      //   meta: { i18n: "navigation-pwa", nav: true },
+      //   component: PWA,
+      // },
       {
         path: "about",
         component: ChildView,
@@ -372,7 +372,6 @@ export const routes = [
         meta: { i18n: "navigation-terms", nav: false },
       },
       {
-        // TODO: pending to generate view
         // catch all 404
         path: "*",
         component: () => import("@/views/404.vue"),

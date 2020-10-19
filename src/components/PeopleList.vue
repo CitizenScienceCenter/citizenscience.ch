@@ -8,7 +8,7 @@
     "subheading-guest-researchers": "Researchers in Residence",
     "subheading-members": "Members",
 
-    "people-abraham-position": "Department of Informatics – University of Zurich",
+    "people-abraham-position": "Department of Informatics – University of Zurich",
     "people-ernst-position": "Department of Biology - ETH Zurich",
     "people-mike-position": "Department of Psychology Gerontopsychology - University of Zurich",
     "people-michael-position": "Department of Health Sciences and Technology - ETH Zurich",
@@ -42,7 +42,7 @@
     "subheading-guest-researchers": "Gastforscher",
     "subheading-members": "Mitglieder",
 
-    "people-abraham-position": "Department of Informatics – University of Zurich",
+    "people-abraham-position": "Department of Informatics – University of Zurich",
     "people-ernst-position": "Department of Biology - ETH Zurich",
     "people-mike-position": "Department of Psychology Gerontopsychology - University of Zurich",
     "people-michael-position": "Department of Health Sciences and Technology - ETH Zurich",

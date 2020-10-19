@@ -140,7 +140,7 @@ export default {
           .every((term) => this.getProjectName(x).includes(term))
       );
       this.updateProjectList(projects);
-      return;
+      return projects;
     },
   },
   methods: {

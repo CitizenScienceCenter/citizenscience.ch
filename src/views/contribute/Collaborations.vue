@@ -67,6 +67,7 @@
         </div>
       </div>
 
+      <!-- TODO: verify before removing -->
       <!--<div class="content-subsection">
         <div class="content-wrapper">
           <div class="row row-centered row-reverse-large row-middle">

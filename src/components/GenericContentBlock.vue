@@ -53,10 +53,6 @@
         </div>
         <!-- Description section -->
         <div class="row" v-if="br.description.visible">
-          <!-- <div
-            class="text-description"
-            v-html="localTranslation(contentData.description)"
-          ></div> -->
           <component :is="getDynamicData" class="text-description"></component>
         </div>
         <!-- Buttons section -->
@@ -64,12 +60,20 @@
           <div
             class="button-section"
             v-if="
-              br.button.visible && contentData.button && contentData.button.link
+              br.button.visible &&
+                contentData.button &&
+                (contentData.button.link || contentData.button.route)
             "
           >
             <button
               class="button button-secondary"
-              @click="openUrlTab(contentData.button.link)"
+              @click="
+                buttonTrigger(
+                  contentData.button.route,
+                  contentData.button.link,
+                  contentData.button.selfWindow
+                )
+              "
               :disabled="br.button.disabled"
             >
               <i :class="contentData.button.icon"></i>
@@ -81,12 +85,19 @@
             v-if="
               br.second_button.visible &&
                 contentData.second_button &&
-                contentData.second_button.link
+                (contentData.second_button.link ||
+                  contentData.second_button.route)
             "
           >
             <button
               class="button button-secondary"
-              @click="openUrlTab(contentData.second_button.link)"
+              @click="
+                buttonTrigger(
+                  contentData.second_button.route,
+                  contentData.second_button.link,
+                  contentData.button.selfWindow
+                )
+              "
               :disabled="br.second_button.disabled"
             >
               <i :class="contentData.second_button.icon"></i>
@@ -133,8 +144,14 @@ export default {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
-    openUrlTab: function(url) {
-      openUrl(url, true);
+    buttonTrigger: function(route, url, selfWindow) {
+      // open internal routes
+      if(route){
+        this.$router.push(route)
+        return
+      }
+      // open external links
+      openUrl(url, selfWindow);
     },
     checkVerticalOrientation: function(e) {
       const sizes = ["sm", "md", "lg"];
@@ -296,7 +313,7 @@ export default {
   }
   .text-section {
     padding: 0 $spacing-3 0 $spacing-5 !important;
-    .subheading {      
+    .subheading {
     }
     .text-description {
     }

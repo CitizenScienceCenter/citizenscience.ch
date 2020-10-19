@@ -20,6 +20,13 @@
           <div class="col col-12">
             <h2 class="heading centered">{{ $t("page-title") }}</h2>
             <h2 class="subheading centered">{{ $t("notfound-label") }}</h2>
+            <input
+              type="file"
+              id="file"
+              ref="file"
+              v-on:change="handleFileUpload()"
+            />
+            <button v-on:click="submitFile()">Submit</button>
             <div class="button-group centered">
               <router-link
                 tag="button"
@@ -43,9 +50,15 @@
 import ContentSection from "@/components/shared/ContentSection.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
+import { updateStringFile } from "@/minio.js";
 
 export default {
   name: "404",
+  data() {
+    return {
+      file: "",
+    };
+  },
   components: {
     SectionNewsletterSignup,
     "app-content-section": ContentSection,
@@ -62,6 +75,26 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    // *******************************************
+    // TODO: methods for update json files in minion
+    getContent(file) {
+      const promise = new Promise(function(resolve, reject) {
+        const reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = (error) => reject(error);
+      });
+      return promise;
+    },
+    async handleFileUpload() {
+      this.file = await this.getContent(this.$refs.file.files[0]);
+    },
+    submitFile() {
+      updateStringFile("data/testname.json", this.file);
+    },
+    // *******************************************
   },
 };
 </script>

@@ -8,10 +8,13 @@ const minio = new Minio.Client({
   secretKey: process.env.VUE_APP_MINIO_SECRET_KEY,
 });
 
-export const getRemoteFile = function (fname) {
+export const getRemoteFile = function(fname) {
   let data;
   const promise = new Promise(function(resolve, reject) {
-    minio.getObject(process.env.VUE_APP_BUCKET_NAME, fname, function(err, dataStream) {
+    minio.getObject(process.env.VUE_APP_BUCKET_NAME, fname, function(
+      err,
+      dataStream
+    ) {
       if (err) {
         reject(`Error reteiving object: ${err}`);
       }
@@ -28,4 +31,22 @@ export const getRemoteFile = function (fname) {
     });
   });
   return promise;
+};
+
+export const updateStringFile = function(fname, fileContent) {
+  var metaData = {
+    "Content-Type": "application/json",
+  };
+  minio.putObject(
+    process.env.VUE_APP_BUCKET_NAME,
+    fname,
+    fileContent,
+    metaData,
+    function(err, etag) {
+      if (err) {
+        return console.log(err);
+      }
+      alert("File successfully uploaded");
+    }
+  );
 };

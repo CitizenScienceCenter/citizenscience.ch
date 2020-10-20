@@ -4,7 +4,7 @@
     "submit-button": "Submit"
     },
     "de": {
-    "submit-button": "Inhaltsdateien aktualisieren"
+    "submit-button": "Aktualisieren"
     }
     }
 </i18n>
@@ -32,7 +32,7 @@
     <div class="col col-10 col-tablet-portrait-4">
       <div class="button-group centered" v-show="file && selected">
         <button class="button button-primary-main" @click="submitFile()">
-          Submit
+          {{$t("submit-button")}}
         </button>
       </div>
     </div>
@@ -70,7 +70,7 @@ export default {
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;");
       json = json.replace(
-        /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+        /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
         function(match) {
           var cls = "color: darkorange;";
           if (/^"/.test(match)) {

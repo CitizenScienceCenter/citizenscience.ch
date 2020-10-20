@@ -89,9 +89,6 @@
       </div>
     </div>
 
-    <!-- indicators -->
-    <div class="indicator"></div>
-
     <!-- UZH and ETH logos -->
     <div class="uzh-eth" v-if="br.uzh_eth_logo.visible">
       <span>{{ $t("joint-initiative-UZH_ETH") }}</span>

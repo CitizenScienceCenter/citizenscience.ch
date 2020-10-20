@@ -41,10 +41,10 @@
         <transition name="slide-fade" mode="out-in">
           <p :key="index">
             {{ localTranslation(newslist[index].description) }}
-            <a
-              @click="openUrlTab(newslist[index].link)"
-              v-show="newslist[index].link"
-              >...{{ $t("more-button") }}</a
+            <router-link
+              tag="a"
+              :to="'/news/' + newslist[index].path"
+              >...{{ $t("more-button") }}</router-link
             >
           </p>
         </transition>
@@ -98,9 +98,6 @@ export default {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
-    openUrlTab: function(url) {
-      openUrl(url);
-    },
     validateNewsContent(n, i) {
       // This variable avoid undefined or null errors
       const keys = ["title", "date", "description"];
@@ -118,7 +115,7 @@ export default {
         item[key] = element[key];
       });
       item["index"] = i;
-      item["link"] = element.link || null;
+      item["path"] = element.path || null;
       item["description"] = this.validateDescriptionLength(element.description);
       return item;
     },

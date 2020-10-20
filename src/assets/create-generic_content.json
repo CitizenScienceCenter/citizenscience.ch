@@ -10,14 +10,14 @@
     "image": "/img/graphic-question.png",
     "button": {
       "link": "mailto:info@citizenscience.ch",
-      "route": "",
+      "route": null,
       "icon": "fas fa-envelope",
       "selfWindow": true,
       "en": "info@citizenscience.ch"
     },
     "second_button": {
       "link": "tel:+41446342197",
-      "route": "",
+      "route": null,
       "icon": "fas fa-phone",
       "selfWindow": true,
       "en": "+41 44 634 21 97"
@@ -31,7 +31,7 @@
     "image": "/img/graphic-checklist.png",
     "button": {
       "link": "/files/CS Center Zurich - CriteriaProjects.pdf",
-      "route": "",
+      "route": null,
       "icon": "fas fa-file-pdf",
       "selfWindow": false,
       "en": "See document",

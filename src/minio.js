@@ -44,6 +44,7 @@ export const updateStringFile = function(fname, fileContent) {
     metaData,
     function(err, etag) {
       if (err) {
+        alert("Error uploading file");
         return console.log(err);
       }
       alert("File successfully uploaded");

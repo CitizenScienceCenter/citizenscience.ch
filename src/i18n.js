@@ -141,6 +141,10 @@ export const i18n = new VueI18n({
       "navigation-terms": {
         link: "Privacy Policy & Terms of Use",
       },
+
+      "navigation-updatefile": {
+        link: "Admin",
+      },      
     },
     de: {
       "site-title": "Citizen Science Center Zürich",
@@ -224,7 +228,7 @@ export const i18n = new VueI18n({
       },
 
       "navigation-events": {
-        link: "Events",
+        link: "Veranstaltungen",
       },
       "navigation-events-upcoming": {
         link: "Bevorstehende",

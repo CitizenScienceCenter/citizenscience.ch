@@ -17,9 +17,9 @@
       "de": "Bildbeschreibung"
     },
     "button": {
-      "link": "",
-      "route": "",
-      "icon": "",
+      "link": null,
+      "route": null,
+      "icon": null,
       "selfWindow": false,
       "en": "Learn More",
       "de": "mehr erfahren"
@@ -37,12 +37,12 @@
     },
     "description": {
       "en": "Dolor sit amet, consectetur adipiscing elit. Maecenas convallis congue nulla. Vestibulum rhoncus molestie ornare. Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus. Proin cursus justo sed arcu convallis pulvinar. Suspendisse cursus condimentum nisi, id sagittis quam bibendum at. Aliquam vehicula neque vitae maximus nulla.",
-      "de": "Dolor sit amet, consectetur adipiscing elit. Donec quis odio tristique nunc gravida tempus. Proin finibus, lacus vitae scelerisque porta, turpis lacus pulvinar magna, sit amet mattis arcu ipsum id mauris. Praesent ipsum ligula, auctor sed fermentum nec, rhoncus quis tortor. Integer mi orci, molestie ac mi at, varius facilisis ipsum. Praesent ac bibendum tortor. Pellentesque vestibulum."
+      "de": "Vestibulum rhoncus molestie ornare. Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus. Proin cursus justo sed arcu convallis pulvinar. Suspendisse cursus condimentum nisi, id sagittis quam bibendum at. Aliquam vehicula neque vitae maximus nulla."
     },
     "button": {
-      "link": "",
+      "link": null,
       "route": "/about/mission",
-      "icon": "",
+      "icon": null,
       "selfWindow": true,
       "en": "Learn More",
       "de": "mehr erfahren"

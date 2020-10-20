@@ -29,15 +29,21 @@ router.beforeEach((to, from, next) => {
     i18n.locale = language;
 
     // --- auth / account
-
+    if (to.matched.some((record) => record.meta.requiresAdmin)) {
+      if (store.state.user.isLogged && store.state.user.userInfo.admin) {
+        next();
+      } else {
+        next("/");
+      }
+    }
     // Here is validated if route requires authentication
-    if (to.matched.some((record) => record.meta.requiresAuth)) {
+    else if (to.matched.some((record) => record.meta.requiresAuth)) {
       // if (store.state.c3s.user.currentUser) {
       if (store.state.user.isLogged) {
         // store.dispatch("c3s/user/validate").then((v) => {
-          //console.log('validation success');
-          // if (v) {
-          next();
+        //console.log('validation success');
+        // if (v) {
+        next();
         // } else {
         //   router.push("/login");
         // }

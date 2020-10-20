@@ -8,6 +8,8 @@ import Profile from "@/views/shared/user/Profile";
 import RequestReset from "@/views/shared/user/RequestReset";
 import Reset from "@/views/shared/user/Reset";
 
+import UpdateFile from "@/views/UpdateFile";
+
 import store from "@/store/store";
 import { i18n } from "@/i18n.js";
 
@@ -370,6 +372,11 @@ export const routes = [
         path: "terms",
         component: Terms,
         meta: { i18n: "navigation-terms", nav: false },
+      },
+      {
+        path: "update_file",
+        component: UpdateFile,
+        meta: {requiresAuth: true, requiresAdmin:true, i18n: "navigation-updatefile", nav: true },
       },
       {
         // catch all 404

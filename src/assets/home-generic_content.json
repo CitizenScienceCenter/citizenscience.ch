@@ -21,8 +21,8 @@
       "route": null,
       "icon": null,
       "selfWindow": false,
-      "en": "Learn More",
-      "de": "mehr erfahren"
+      "en": "",
+      "de": ""
     },
     "second_button": {}
   },
@@ -45,7 +45,7 @@
       "icon": null,
       "selfWindow": true,
       "en": "Learn More",
-      "de": "mehr erfahren"
+      "de": "Mehr erfahren"
     },
     "second_button": {}
   }

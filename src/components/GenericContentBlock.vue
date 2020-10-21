@@ -146,9 +146,9 @@ export default {
     },
     buttonTrigger: function(route, url, selfWindow) {
       // open internal routes
-      if(route){
-        this.$router.push(route)
-        return
+      if (route) {
+        this.$router.push(route);
+        return;
       }
       // open external links
       openUrl(url, selfWindow);
@@ -157,6 +157,7 @@ export default {
       const sizes = ["sm", "md", "lg"];
       // This validation is only for large and bigger resolution screens
       const horizontal = {
+        no_img: { "text-content": "col-large-10" },
         sm: { "img-content": "col-large-3", "text-content": "col-large-9" },
         md: { "img-content": "col-large-5", "text-content": "col-large-7" },
         lg: { "img-content": "col-large-7", "text-content": "col-large-5" },
@@ -168,14 +169,16 @@ export default {
         },
         horizontal: horizontal.sm, // by default horizontal asumes small image
       };
+      if (!this.contentData.image) {
+        viewStyle.horizontal = horizontal.no_img;        
+      }
       //validate the image size from remote config
-      if (
+      else if (
         getNested(this.br, "image", "size") != "sm" &&
         sizes.includes(getNested(this.br, "image", "size"))
       ) {
         viewStyle.horizontal = horizontal[getNested(this.br, "image", "size")];
       }
-
       let selectedView = viewStyle.horizontal;
       if (this.vOrientation) {
         selectedView = viewStyle.vertical;

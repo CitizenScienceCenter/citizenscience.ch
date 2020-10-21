@@ -40,22 +40,22 @@ const Checklist = (resolve) => {
     resolve(require("../views/start/Checklist.vue"));
   });
 };
-const Phases = (resolve) => {
-  require.ensure(["../views/start/Phases.vue"], () => {
-    resolve(require("../views/start/Phases.vue"));
-  });
-};
+// const Phases = (resolve) => {
+//   require.ensure(["../views/start/Phases.vue"], () => {
+//     resolve(require("../views/start/Phases.vue"));
+//   });
+// };
 
-const SDG = (resolve) => {
-  require.ensure(["../views/citizenscience/SDG.vue"], () => {
-    resolve(require("../views/citizenscience/SDG.vue"));
-  });
-};
-const PWA = (resolve) => {
-  require.ensure(["../views/PWA.vue"], () => {
-    resolve(require("../views/PWA.vue"));
-  });
-};
+// const SDG = (resolve) => {
+//   require.ensure(["../views/citizenscience/SDG.vue"], () => {
+//     resolve(require("../views/citizenscience/SDG.vue"));
+//   });
+// };
+// const PWA = (resolve) => {
+//   require.ensure(["../views/PWA.vue"], () => {
+//     resolve(require("../views/PWA.vue"));
+//   });
+// };
 const Mission = (resolve) => {
   require.ensure(["../views/about/Mission.vue"], () => {
     resolve(require("../views/about/Mission.vue"));
@@ -241,7 +241,7 @@ export const routes = [
           },
           {
             path: "members",
-            component: SDG,
+            component: People,
             meta: { i18n: "navigation-community-members", nav: true },
           },
         ],

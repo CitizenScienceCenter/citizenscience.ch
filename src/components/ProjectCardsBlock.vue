@@ -1,8 +1,8 @@
 <i18n>
 {
   "en": {
-    "section-projects-heading": "Get involved",
-    "section-projects-button": "See all Projects",
+    "section-projects-heading": "Get Involved",
+    "section-projects-button": "See All Projects",
     "new-project-button": "Create Project",
     "search-project-placeholder": "Search",
     "noresult-project-label": "No projects found, for your search"

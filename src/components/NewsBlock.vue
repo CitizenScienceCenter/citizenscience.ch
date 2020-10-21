@@ -57,8 +57,6 @@ import { getTranslation, openUrl } from "@/assets/support.js";
 import { mapState, mapGetters } from "vuex";
 import moment from "moment";
 
-// import news_src from "@/assets/news.json";
-
 export default {
   name: "GenericContentBlock",
   data() {

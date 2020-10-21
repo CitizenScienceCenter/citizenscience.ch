@@ -45,7 +45,7 @@
         :class="checkVerticalOrientation('text-content')"
       >
         <!-- Subheading section -->
-        <div class="row" v-if="br.subheading.visible">
+        <div class="row row-full-width" v-if="br.subheading.visible">
           <div
             class="subheading"
             v-html="localTranslation(contentData.subheading)"
@@ -56,7 +56,7 @@
           <component :is="getDynamicData" class="text-description"></component>
         </div>
         <!-- Buttons section -->
-        <div class="row">
+        <div class="row row-full-width">
           <div
             class="button-section"
             v-if="
@@ -158,8 +158,8 @@ export default {
       // This validation is only for large and bigger resolution screens
       const horizontal = {
         no_img: { "text-content": "col-large-10" },
-        sm: { "img-content": "col-large-3", "text-content": "col-large-9" },
-        md: { "img-content": "col-large-5", "text-content": "col-large-7" },
+        sm: { "img-content": "col-large-3", "text-content": "col-large-8" },
+        md: { "img-content": "col-large-5", "text-content": "col-large-6" },
         lg: { "img-content": "col-large-7", "text-content": "col-large-5" },
       };
       const viewStyle = {

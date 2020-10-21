@@ -40,6 +40,12 @@ const Checklist = (resolve) => {
     resolve(require("../views/start/Checklist.vue"));
   });
 };
+
+const Community = (resolve) => {
+  require.ensure(["../views/community/Community.vue"], () => {
+    resolve(require("../views/community/Community.vue"));
+  });
+};
 // const Phases = (resolve) => {
 //   require.ensure(["../views/start/Phases.vue"], () => {
 //     resolve(require("../views/start/Phases.vue"));
@@ -232,11 +238,18 @@ export const routes = [
         path: "community",
         component: ChildView,
         meta: { i18n: "navigation-community", nav: true },
-        redirect: "community/our",
+        redirect: "community/csc_community",
+        beforeEnter: async (to, from, next) => {
+          // load content from remote server
+          await store.dispatch("content/getGenericContentRemote", {
+            view: "community",
+          });
+          next();
+        },
         children: [
           {
-            path: "our",
-            component: ZurichStyle,
+            path: "csc_community",
+            component: Community,
             meta: { i18n: "navigation-community-ourcommunity", nav: true },
           },
           {
@@ -379,9 +392,9 @@ export const routes = [
         meta: {requiresAuth: true, requiresAdmin:true, i18n: "navigation-updatefile", nav: true },
       },
       {
-        // catch all 404
+        // catch all NotFound
         path: "*",
-        component: () => import("@/views/404.vue"),
+        component: () => import("@/views/NotFound.vue"),
       },
     ],
   },

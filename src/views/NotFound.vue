@@ -47,7 +47,7 @@ import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignu
 import { updateStringFile } from "@/minio.js";
 
 export default {
-  name: "404",
+  name: "NotFound",
   components: {
     SectionNewsletterSignup,
     "app-content-section": ContentSection,

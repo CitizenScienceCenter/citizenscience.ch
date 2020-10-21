@@ -51,12 +51,13 @@ export default {
     return {
       file: "",
       items: [
-        { name: "Home GC", file_name: "home-generic_content.json" },
-        { name: "Contribute GC", file_name: "contribute-generic_content.json" },
-        { name: "Create GC", file_name: "create-generic_content.json" },
+        { name: "Home - GC", file_name: "home-generic_content.json" },
+        { name: "Contribute - GC", file_name: "contribute-generic_content.json" },
+        { name: "Create - GC", file_name: "create-generic_content.json" },
         { name: "Cover List", file_name: "cover_list.json" },
         { name: "Events List", file_name: "events.json" },
         { name: "News List", file_name: "news.json" },
+        { name: "Community - GC", file_name: "community-generic_content.json" },
       ],
       selected: "",
     };
@@ -111,6 +112,9 @@ export default {
         return;
       }
     },
+  },
+  created() {
+    this.items = this.items.sort((a, b) => (a.name > b.name) ? 1 : -1)
   },
 };
 </script>

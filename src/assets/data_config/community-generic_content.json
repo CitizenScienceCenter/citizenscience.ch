@@ -1,0 +1,54 @@
+{
+  "community": {
+    "contentList": [
+      {
+        "description": {
+          "en": "<p>The <strong>Citizen Science Center Zurich</strong> is  providing a platform for people interested in Citizen Science, including academia and the wider public, to exchange ideas and knowledge, and collaborate in projects. Community building at the Center means facilitating the growth of an active group of academic researchers, citizen scientists and partner organizations through various types of interaction. In-person and online, we create opportunities for them to connect, interact, share, and grow. Our ambition is for all to ultimately engage in highly participatory Citizen Science activities, be it as organizers, contributors or other roles.</p>",
+          "de": ""
+        },
+        "image": "/img/graphic-community.png"
+      },
+      {
+        "subheading": {
+          "en": "Why a community?",
+          "de": ""
+        },
+        "description": {
+          "en": "<p>Citizen Science is characterized by the collaboration of members of the general public and academic scientists with the purpose of together pursuing new knowledge and insights. A community of engaged volunteers and organizers is an essential element of  any Citizen Science project, and often a strong motivator for people to join.</p> <p>By actively involving people with different backgrounds and expertise in the research process, Citizen Science expands the way of doing excellent science. Engaging the public to participate in scientific research as well as engaging academic scientists to open up their work for the collaboration with citizens adds creativity, capacity and impact to the process of generating knowledge, and brings in innovative ideas and solutions to problems from different perspectives. It can for instance add local knowledge, new or other forms of expertise as well as more diversity to scientific research, so that the whole society can profit from it.</p> <p>All this can not work without a community of engaged people who contribute their time and energy in doing research together. Strong communities in Citizen Science lead to:</p> <ul> <li>Unlocking of resources to help solving real world problems.</li> <li>Trust in science.</li> <li>Flow of ideas and creativity to find sustainable solutions.</li> <li>Exchange of knowledge & experience between people of different backgrounds.</li> <li>Learning from and acknowledging each other’s expertise.</li> <li>… and more.</li> </ul>",
+          "de": ""
+        },
+        "image": ""
+      },
+      {
+        "subheading": {
+          "en": "Who is our community?",
+          "de": ""
+        },
+        "description": {
+          "en": "<p>Our Citizen Science Community is growing and spans Zurich and beyond by meeting online and offline. It consists of local communities of professional scientists and citizen scientists, including members of <strong>UZH</strong> and <strong>ETH Zurich</strong>, the Zurich senior university and persons listed in the universities research participant pools, as well as a wider network of contributors,  <router-link to='/about/partnerships'> <strong>partners</strong> </router-link> and <router-link to='/community/members'> <strong>members</strong> </router-link>.</p> <p>Our community activities include online and offline interactions and local events in an open, creative and interdisciplinary way.</p>",
+          "de": ""
+        },
+        "image": "/img/uzh-eth.jpg"
+      }
+    ],
+    "socialNetworks": {
+      "subheading": {
+        "en": "How can you join our community?",
+        "de": ""
+      },
+      "description": {
+        "en": "<p>Join our Citizen Science Zürich community and always be up to date:</p> <p> <span>Follow us on Twitter </span> <a href='https://twitter.com/CitSciZurich' target='_blank'> <i class='fab fa-twitter twttr'> </i> </a> </br> <span>Visit us on Facebook </span> <a href='https://www.facebook.com/CitSciZurich/' target='_blank'> <i class='fab fa-facebook fcbk'> </i> </a> </p>",
+        "de": ""
+      },
+      "image": "/img/graphic-participation.png",
+      "button": {
+        "link": null,
+        "route": "/events",
+        "icon": "far fa-calendar-alt",
+        "selfWindow": true,
+        "en": "Our Events",
+        "de": "Unsere Events"
+      }
+    }
+  }
+}

@@ -76,7 +76,7 @@
         to="/events"
         class="button button-secondary scroll-effect"
         :disabled="br.button.disabled"
-        >{{ $t(localTranslation(pl.eventsButton)) }}</router-link
+        > <i class="far fa-calendar-alt"></i> {{ $t(localTranslation(pl.eventsButton)) }}</router-link
       >
     </div>
   </div>

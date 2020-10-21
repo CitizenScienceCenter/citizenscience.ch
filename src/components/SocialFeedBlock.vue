@@ -117,12 +117,6 @@ export default {
       font-size: $font-size-small;
       margin: 0 0.2em;
       cursor: pointer;
-      &.fcbk {
-        color: #3b5998;
-      }
-      &.twttr {
-        color: #00acee;
-      }
       &.disabled {
         cursor: default;
       }

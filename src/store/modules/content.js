@@ -57,7 +57,7 @@ const actions = {
       return res;
     } catch (error) {
       // This content is local whether the remote content is not retrieved
-      res = require(`@/assets/${view}-generic_content.json`);
+      res = require(`@/assets/data_config/${view}-generic_content.json`);
       return res;
     } finally {
       commit("setGenericContent", res);

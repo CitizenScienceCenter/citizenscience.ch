@@ -229,10 +229,10 @@ export default {
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
-    openInNewTab: function(url) {
-      var win = window.open(url, "_blank");
-      win.focus();
-    },
+    // openInNewTab: function(url) {
+    //   var win = window.open(url, "_blank");
+    //   win.focus();
+    // },
     loadContent() {
       this.content = this.getGContent("whyContribute").map((x) =>
         this.toggleReverse(x)

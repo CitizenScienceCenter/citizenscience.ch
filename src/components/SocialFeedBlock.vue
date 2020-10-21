@@ -108,13 +108,13 @@ export default {
   }
   .footer-section {
     padding-left: $spacing-3;
-    font-size: $font-size-mini;
+    font-size: $font-size-small;
     span {
       margin-right: $spacing-1;
       font-weight: 700;
     }
     .icon {
-      font-size: $font-size-small;
+      font-size: $font-size-medium;
       margin: 0 0.2em;
       cursor: pointer;
       &.disabled {
@@ -135,14 +135,18 @@ export default {
     .content-section {
       max-height: 70vh;
     }
+    .footer-section {
+      .icon {
+        font-size: $font-size-normal;
+      }
+    }
   }
 }
 @media only screen and (min-width: $viewport-large) {
   .social {
     .footer-section {
-      font-size: $font-size-small;
       .icon {
-        font-size: $font-size-normal;
+        font-size: $font-size-medium;
       }
     }
   }

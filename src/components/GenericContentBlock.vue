@@ -170,7 +170,7 @@ export default {
         horizontal: horizontal.sm, // by default horizontal asumes small image
       };
       if (!this.contentData.image) {
-        viewStyle.horizontal = horizontal.no_img;        
+        viewStyle.horizontal = horizontal.no_img;
       }
       //validate the image size from remote config
       else if (

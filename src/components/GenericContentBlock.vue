@@ -22,7 +22,7 @@
     >
       <!-- Image sub-section Content  -->
       <div
-        class="col col-6 scroll-effect"
+        class="col col-8 scroll-effect"
         :class="checkVerticalOrientation('img-content')"
         v-if="contentData.image && br.image.visible"
       >

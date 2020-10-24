@@ -1,3 +1,4 @@
+import { router } from "@/router/router.js";
 import axios from "axios";
 axios.defaults.headers["Content-Type"] = "application/json";
 
@@ -53,6 +54,7 @@ const actions = {
       if (info.hasOwnProperty("status") && info.status === "success") {
         commit("setUserInfo", null);
         commit("setLogged", false);
+        router.push("/");
       }
     } catch (error) {
       console.error(error);
@@ -105,7 +107,7 @@ const actions = {
       //     })
       //   }
       // );
-      // console.log(await log_res.json());      
+      // console.log(await log_res.json());
     } catch (error) {
       console.log(error);
     }

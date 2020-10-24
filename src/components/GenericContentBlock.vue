@@ -68,7 +68,7 @@
             <button
               class="button button-secondary"
               @click="
-                buttonTrigger(
+                triggerButton(
                   contentData.button.route,
                   contentData.button.link,
                   contentData.button.selfWindow
@@ -92,7 +92,7 @@
             <button
               class="button button-secondary"
               @click="
-                buttonTrigger(
+                triggerButton(
                   contentData.second_button.route,
                   contentData.second_button.link,
                   contentData.button.selfWindow
@@ -144,7 +144,7 @@ export default {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
-    buttonTrigger: function(route, url, selfWindow) {
+    triggerButton: function(route, url, selfWindow) {
       // open internal routes
       if (route) {
         this.$router.push(route);

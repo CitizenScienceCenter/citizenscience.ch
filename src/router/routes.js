@@ -46,6 +46,11 @@ const Community = (resolve) => {
     resolve(require("../views/community/Community.vue"));
   });
 };
+const Members = (resolve) => {
+  require.ensure(["../views/community/Members.vue"], () => {
+    resolve(require("../views/community/Members.vue"));
+  });
+};
 // const Phases = (resolve) => {
 //   require.ensure(["../views/start/Phases.vue"], () => {
 //     resolve(require("../views/start/Phases.vue"));
@@ -254,7 +259,7 @@ export const routes = [
           },
           {
             path: "members",
-            component: People,
+            component: Members,
             meta: { i18n: "navigation-community-members", nav: true },
           },
         ],

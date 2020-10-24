@@ -40,13 +40,15 @@
         </div>
       </div>
     </app-content-section>
-    <app-content-section class="content-section-flat light-greyish scroll-effect">
-      <!-- How to join section -->
+    <!-- How to join section -->
+    <app-content-section
+      class="content-section-flat light-greyish scroll-effect"
+    >
       <generic-content-block
         :visible="viewConfig.visible"
         :vOrientation="viewConfig.vOrientation"
         :hReverse="viewConfig.isReverse"
-        :content="socialNetworkContent"
+        :content="howJoinContent"
         :viewConfig="modifyViewConfig('social')"
       ></generic-content-block>
     </app-content-section>
@@ -68,7 +70,7 @@ export default {
   data() {
     return {
       content: {},
-      socialNetworkContent: {},
+      howJoinContent: {},
       isReverse: true,
       viewConfig: {
         visible: true,
@@ -115,7 +117,7 @@ export default {
       this.content = this.getGContent("community").contentList.map((x) =>
         this.toggleReverse(x)
       );
-      this.socialNetworkContent = this.getGContent("community").socialNetworks;
+      this.howJoinContent = this.getGContent("community").howJoin;
     },
     toggleReverse(contentItem) {
       contentItem.reverse = this.isReverse;

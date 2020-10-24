@@ -114,6 +114,7 @@ export default {
     },
   },
   created() {
+    // sorting file names alphabetically
     this.items = this.items.sort((a, b) => (a.name > b.name) ? 1 : -1)
   },
 };

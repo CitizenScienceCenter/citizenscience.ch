@@ -71,115 +71,119 @@
 }
 </i18n>
 
-
 <template>
-
   <div class="people-list">
-
-    <h3 class="subheading centered">{{ $t('subheading-directors-chair') }}</h3>
+    <h3 class="subheading centered">{{ $t("subheading-directors-chair") }}</h3>
 
     <div class="people-section">
       <div class="row row-centered row-wrapping">
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/mike.jpg" class="photo"/>
+            <img src="/img/people/mike.jpg" class="photo" />
             <span class="name">Mike Martin</span>
-            <span class="position">{{ $t('people-mike-position') }}</span>
-            <a href="mailto:m.martin@psychologie.uzh.ch">m.martin@psychologie.uzh.ch</a>
+            <span class="position">{{ $t("people-mike-position") }}</span>
+            <a href="mailto:m.martin@psychologie.uzh.ch"
+              >m.martin@psychologie.uzh.ch</a
+            >
           </div>
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/michael.jpg" class="photo"/>
+            <img src="/img/people/michael.jpg" class="photo" />
             <span class="name">Michael Ristow</span>
-            <span class="position">{{ $t('people-michael-position') }}</span>
+            <span class="position">{{ $t("people-michael-position") }}</span>
             <a href="mailto:michael-ristow@ethz.ch">michael-ristow@ethz.ch</a>
           </div>
         </div>
       </div>
     </div>
 
-    <h3 class="subheading centered">{{ $t('subheading-directors') }}</h3>
+    <h3 class="subheading centered">{{ $t("subheading-directors") }}</h3>
 
     <div class="people-section">
       <div class="row row-centered row-wrapping">
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/abraham.jpg" class="photo"/>
+            <img src="/img/people/abraham.jpg" class="photo" />
             <span class="name">Abraham Bernstein</span>
-            <span class="position">{{ $t('people-abraham-position') }}</span>
+            <span class="position">{{ $t("people-abraham-position") }}</span>
             <a href="mailto:bernstein@ifi.uzh.ch">bernstein@ifi.uzh.ch</a>
           </div>
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/ernst.jpg" class="photo"/>
+            <img src="/img/people/ernst.jpg" class="photo" />
             <span class="name">Ernst Hafen</span>
-            <span class="position">{{ $t('people-ernst-position') }}</span>
+            <span class="position">{{ $t("people-ernst-position") }}</span>
             <a href="mailto:hafen@imsb.biol.ethz.ch">hafen@imsb.biol.ethz.ch</a>
           </div>
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/effy.jpg" class="photo"/>
+            <img src="/img/people/effy.jpg" class="photo" />
             <span class="name">Effy Vayena</span>
-            <span class="position">{{ $t('people-effy-position') }}</span>
-            <a href="mailto:effy.vayena@hest.ethz.ch">effy.vayena@hest.ethz.ch</a>
+            <span class="position">{{ $t("people-effy-position") }}</span>
+            <a href="mailto:effy.vayena@hest.ethz.ch"
+              >effy.vayena@hest.ethz.ch</a
+            >
           </div>
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/claudia.jpg" class="photo"/>
+            <img src="/img/people/claudia.jpg" class="photo" />
             <span class="name">Claudia Witt</span>
-            <span class="position">{{ $t('people-claudia-position') }}</span>
+            <span class="position">{{ $t("people-claudia-position") }}</span>
             <a href="mailto:claudia.witt@uzh.ch">claudia.witt@uzh.ch</a>
           </div>
         </div>
       </div>
     </div>
 
-    <h3 class="subheading centered">{{ $t('subheading-advisors') }}</h3>
+    <h3 class="subheading centered">{{ $t("subheading-advisors") }}</h3>
 
     <div class="people-section">
       <div class="row row-centered row-wrapping">
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/dirk.jpg" class="photo"/>
+            <img src="/img/people/dirk.jpg" class="photo" />
             <span class="name">Dirk Helbing</span>
-            <span class="position">{{ $t('people-dirk-position') }}</span>
-            <a href="mailto:dirk.helbing@gess.ethz.ch">dirk.helbing@gess.ethz.ch</a>
+            <span class="position">{{ $t("people-dirk-position") }}</span>
+            <a href="mailto:dirk.helbing@gess.ethz.ch"
+              >dirk.helbing@gess.ethz.ch</a
+            >
           </div>
         </div>
       </div>
     </div>
 
-    <h3 class="subheading centered">{{ $t('subheading-team') }}</h3>
+    <h3 class="subheading centered">{{ $t("subheading-team") }}</h3>
 
     <div class="people-section">
-
       <div class="row row-centered">
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/rosy.jpg" class="photo"/>
+            <img src="/img/people/rosy.jpg" class="photo" />
             <span class="name">Rosy Mondardini</span>
-            <span class="position">{{ $t('people-rosy-position') }}</span>
+            <span class="position">{{ $t("people-rosy-position") }}</span>
             <a href="mailto:maria.mondardini@uzh.ch">maria.mondardini@uzh.ch</a>
           </div>
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/fanny.jpg" class="photo"/>
+            <img src="/img/people/fanny.jpg" class="photo" />
             <span class="name">Fanny Gutsche Jones</span>
-            <span class="position">{{ $t('people-fanny-position') }}</span>
+            <span class="position">{{ $t("people-fanny-position") }}</span>
             <a href="mailto:fanny.jones@uzh.ch">fanny.gutsche-jones@uzh.ch</a>
           </div>
         </div>
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/nikos.jpg" class="photo"/>
+            <img src="/img/people/nikos.jpg" class="photo" />
             <span class="name">Nikos Georgomanolis</span>
-            <span class="position">{{ $t('people-nikos-position') }}</span>
-            <a href="mailto:nikolaos.georgomanolis@uzh.chf">nikolaos.georgomanolis@uzh.ch</a>
+            <span class="position">{{ $t("people-nikos-position") }}</span>
+            <a href="mailto:nikolaos.georgomanolis@uzh.chf"
+              >nikolaos.georgomanolis@uzh.ch</a
+            >
           </div>
         </div>
         <!--
@@ -194,10 +198,12 @@
         -->
         <div class="col col-tablet-portrait-6 col-large-3 col-wrapping">
           <div class="person centered">
-            <img src="/img/people/marina.jpg" class="photo"/>
+            <img src="/img/people/marina.jpg" class="photo" />
             <span class="name">Marina Gagetti</span>
-            <span class="position">{{ $t('people-marina-position') }}</span>
-            <a href="mailto:marina.gagetti@zfg.uzh.ch">marina.gagetti@zfg.uzh.ch</a>
+            <span class="position">{{ $t("people-marina-position") }}</span>
+            <a href="mailto:marina.gagetti@zfg.uzh.ch"
+              >marina.gagetti@zfg.uzh.ch</a
+            >
           </div>
         </div>
         <!--
@@ -211,9 +217,7 @@
         </div>
         -->
       </div>
-
     </div>
-
 
     <!--
 
@@ -252,93 +256,165 @@
     -->
 
     <div class="row row-centered">
-      <div class="col col-large-6">
-        <h3 class="subheading centered">{{ $t('subheading-members') }}</h3>
+      <div class="col col-large-10">
+        <h3 class="subheading centered">{{ $t("subheading-members") }}</h3>
         <p v-html="$t('members-text')"></p>
         <div class="margin-bottom">
           <div class="button-group centered">
-            <button class="button button-secondary button-icon" @click="showMembers = !showMembers">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                 <path d="M127.3,192h257.3c17.8,0,26.7,21.5,14.1,34.1L270.1,354.8c-7.8,7.8-20.5,7.8-28.3,0L113.2,226.1 C100.6,213.5,109.5,192,127.3,192z"/>
+            <button
+              v-if="!showMembers"
+              class="button button-secondary button-icon"
+              @click="showMembers = !showMembers"
+            >
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                style="enable-background:new 0 0 512 512;"
+                xml:space="preserve"
+              >
+                <path
+                  d="M127.3,192h257.3c17.8,0,26.7,21.5,14.1,34.1L270.1,354.8c-7.8,7.8-20.5,7.8-28.3,0L113.2,226.1 C100.6,213.5,109.5,192,127.3,192z"
+                />
               </svg>
-              <template v-if="!showMembers">{{ $t('members-button-show') }}</template>
-              <template v-else>{{ $t('members-button-hide') }}</template>
+              <template v-if="!showMembers">{{
+                $t("members-button-show")
+              }}</template>
+              <template v-else>{{ $t("members-button-hide") }}</template>
             </button>
           </div>
         </div>
-        <div v-show="showMembers">
+        <div v-show="showMembers" class="row">
+          <div class="col col-large-6">
             <ul>
-                <li>Prof. Norman Backhaus, UZH, Geographisches Institut</li>
-                <li>Prof. Abraham Bernstein, UZH, Institut für Informatik</li>
-                <li>Prof. Balthasar Bickel ,UZH, Institut für Vergleichende Sprachwissenschaft, Zürcher Kompetenzzentrum Linguistik (ZüKL)</li>
-                <li>Prof. Nikola Biller-Andorno, UZH, Institut für Biomedizinische Ethik und Medizingeschichte</li>
-                <li>Dr. Christine Bratrich, ETH, Sustainability</li>
-                <li>Claudia Canella, UniversitätsSpital Zürich</li>
-                <li>Dr. Markus Christen, UZH, Digital Society Initiative</li>
-                <li>Prof. Volker Dellwo, UZH, Institut für Computerlinguistik</li>
-                <li>Prof. Andreas Diekmann, ETH, Departement Geistes-, Sozial- und Staatswissenschaften, Forschungsgruppe Umwelt</li>
-                <li>Eliane Escher, UZH, Institut für Molekulare Biologie</li>
-                <li>Simon Etter, UZH, Geographisches Institut</li>
-                <li>Prof. Mareile Flitsch, UZH, Völkerkundemuseum</li>
-                <li>Prof. Barbara Flückiger, UZH, Seminar für Filmwissenschaft</li>
-                <li>Michael Gasser, ETH Bibliothek</li>
-                <li>Prof. Elvira Glaser, UZH, Deutsches Seminar, UFSP Sprache und Raum</li>
-                <li>Marc Gruenig, ETH, Departement Umweltsystemwissenschaften</li>
-                <li>Prof. Ernst Hafen, ETH, Institut für Molekulare Systembiologie</li>
-                <li>Prof. Richard Hahnloser, ETH, Institut für Neuroinformatik</li>
-                <li>Prof. Dirk Helbing, ETH, Computational Social Science</li>
-                <li>Prof. Marianne Hundt, UZH, Englisches Seminar, Zürcher Kompetenzzentrum Linguistik (ZüKL)</li>
-                <li>Dr. Matthias Huss, ETH, Departement Geistes-, Sozial- und Staatswissenschaften</li>
-                <li>Dr. Ulrike Kastrup, ETH, focus-Terra</li>
-                <li>Prof. Hubert Klumpner, ETH, Departement Architektur</li>
-                <li>Prof. Andreas Krause, ETH, Departement Informatik</li>
-                <li>Dr. Bregt Lameris, UZH, Seminar für Filmwissenschaft</li>
-                <li>Prof. Nicolas Langer, UZH, Psychologisches Institut</li>
-                <li>Prof. Mike Martin, UZH, Psychologisches Institut</li>
-                <li>Dr. Rebecca Mörgen, UZH, Institut für Erziehungswissenschaft</li>
-                <li>Dr. Corine Mouton Dorey, UZH, Institut für Biomedizinische Ethik und Medizingeschichte</li>
-                <li>Robin Müller, Climate-KIC</li>
-                <li>Maximiliane Okonnek, ETH, Library Lab</li>
-                <li>Prof. Milo Puhan, UZH, Institut für Epidemiologie, Biostatistik und Prävention</li>
-                <li>Prof. Ross Purves, UZH, Geographisches Institut</li>
-                <li>Prof. Michael Ristow, ETH, Departement Gesundheitswissenschaften und Technologie</li>
-                <li>Dr. Carmenza Robledo Abad Althaus, ETH, TdLab</li>
-                <li>PD Dr. Prasenjit Saha, UZH, Zentrum für Theoretische Astrophysik und Kosmologie</li>
-                <li>Dr. Juanita Schläaepfer-Miller, ETH, Zurich-Basel Plant Science Center</li>
-                <li>Prof. Thomas Schlag, UZH, Theologische Fakultät</li>
-                <li>Prof. Jan SeibertUZH, Geographisches Institut</li>
-                <li>Prof. Uwe Serdult, UZH, Rechtswissenschaftliche Fakultät, Zentrum für Demokratie Aarau</li>
-                <li>Prof. Elisabeth Stark, UZH, Romanisches Seminar, Zürcher Kompetenzzentrum LLinguistik (ZüKL)</li>
-                <li>Barbara Strobl, UZH, Geographisches Institut</li>
-                <li>Prof. Effy Vayena, ETH, Departement Gesundheitswissenschaften und Technologie</li>
-                <li>Prof. Martin Volk, UZH, Institut für Computerlinguistik, ZüKL</li>
-                <li>Zürcher Kompetenzzentrum Linguistik (ZüKL)</li>
-                <li>Prof. Claudia Witt, UZH, UniversitätsSpital Zürich, Institut für Komplementäre und Integrative Medizin</li>
+              <li>Prof. Norman Backhaus, UZH, Geographisches Institut</li>
+              <li>Prof. Abraham Bernstein, UZH, Institut für Informatik</li>
+              <li>
+                Prof. Balthasar Bickel ,UZH, Institut für Vergleichende
+                Sprachwissenschaft, Zürcher Kompetenzzentrum Linguistik (ZüKL)
+              </li>
+              <li>
+                Prof. Nikola Biller-Andorno, UZH, Institut für Biomedizinische
+                Ethik und Medizingeschichte
+              </li>
+              <li>Dr. Christine Bratrich, ETH, Sustainability</li>
+              <li>Claudia Canella, UniversitätsSpital Zürich</li>
+              <li>Dr. Markus Christen, UZH, Digital Society Initiative</li>
+              <li>Prof. Volker Dellwo, UZH, Institut für Computerlinguistik</li>
+              <li>
+                Prof. Andreas Diekmann, ETH, Departement Geistes-, Sozial- und
+                Staatswissenschaften, Forschungsgruppe Umwelt
+              </li>
+              <li>Eliane Escher, UZH, Institut für Molekulare Biologie</li>
+              <li>Simon Etter, UZH, Geographisches Institut</li>
+              <li>Prof. Mareile Flitsch, UZH, Völkerkundemuseum</li>
+              <li>
+                Prof. Barbara Flückiger, UZH, Seminar für Filmwissenschaft
+              </li>
+              <li>Michael Gasser, ETH Bibliothek</li>
+              <li>
+                Prof. Elvira Glaser, UZH, Deutsches Seminar, UFSP Sprache und
+                Raum
+              </li>
+              <li>Marc Gruenig, ETH, Departement Umweltsystemwissenschaften</li>
+              <li>
+                Prof. Ernst Hafen, ETH, Institut für Molekulare Systembiologie
+              </li>
+              <li>
+                Prof. Richard Hahnloser, ETH, Institut für Neuroinformatik
+              </li>
+              <li>Prof. Dirk Helbing, ETH, Computational Social Science</li>
+              <li>
+                Prof. Marianne Hundt, UZH, Englisches Seminar, Zürcher
+                Kompetenzzentrum Linguistik (ZüKL)
+              </li>
+              <li>
+                Dr. Matthias Huss, ETH, Departement Geistes-, Sozial- und
+                Staatswissenschaften
+              </li>
+              <li>Dr. Ulrike Kastrup, ETH, focus-Terra</li>
+              <li>Prof. Hubert Klumpner, ETH, Departement Architektur</li>
+              <li>Prof. Andreas Krause, ETH, Departement Informatik</li>              
             </ul>
+          </div>
+          <div class="col col-large-6">
+            <ul>
+              <li>Dr. Bregt Lameris, UZH, Seminar für Filmwissenschaft</li>
+              <li>Prof. Nicolas Langer, UZH, Psychologisches Institut</li>
+              <li>Prof. Mike Martin, UZH, Psychologisches Institut</li>
+              <li>
+                Dr. Rebecca Mörgen, UZH, Institut für Erziehungswissenschaft
+              </li>
+              <li>
+                Dr. Corine Mouton Dorey, UZH, Institut für Biomedizinische Ethik
+                und Medizingeschichte
+              </li>
+              <li>Robin Müller, Climate-KIC</li>
+              <li>Maximiliane Okonnek, ETH, Library Lab</li>
+              <li>
+                Prof. Milo Puhan, UZH, Institut für Epidemiologie, Biostatistik
+                und Prävention
+              </li>
+              <li>Prof. Ross Purves, UZH, Geographisches Institut</li>
+              <li>
+                Prof. Michael Ristow, ETH, Departement Gesundheitswissenschaften
+                und Technologie
+              </li>
+              <li>Dr. Carmenza Robledo Abad Althaus, ETH, TdLab</li>
+              <li>
+                PD Dr. Prasenjit Saha, UZH, Zentrum für Theoretische Astrophysik
+                und Kosmologie
+              </li>
+              <li>
+                Dr. Juanita Schläaepfer-Miller, ETH, Zurich-Basel Plant Science
+                Center
+              </li>
+              <li>Prof. Thomas Schlag, UZH, Theologische Fakultät</li>
+              <li>Prof. Jan SeibertUZH, Geographisches Institut</li>
+              <li>
+                Prof. Uwe Serdult, UZH, Rechtswissenschaftliche Fakultät,
+                Zentrum für Demokratie Aarau
+              </li>
+              <li>
+                Prof. Elisabeth Stark, UZH, Romanisches Seminar, Zürcher
+                Kompetenzzentrum LLinguistik (ZüKL)
+              </li>
+              <li>Barbara Strobl, UZH, Geographisches Institut</li>
+              <li>
+                Prof. Effy Vayena, ETH, Departement Gesundheitswissenschaften
+                und Technologie
+              </li>
+              <li>
+                Prof. Martin Volk, UZH, Institut für Computerlinguistik, ZüKL
+              </li>
+              <li>Zürcher Kompetenzzentrum Linguistik (ZüKL)</li>
+              <li>
+                Prof. Claudia Witt, UZH, UniversitätsSpital Zürich, Institut für
+                Komplementäre und Integrative Medizin
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
   </div>
-
 </template>
 
 <script>
 export default {
-  name: 'PeopleList',
-    data: function() {
-        return {
-            showMembers: false
-        }
-    },
-}
+  name: "PeopleList",
+  data: function() {
+    return {
+      showMembers: false,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
-
-@import '@/styles/theme.scss';
-@import '@/styles/shared/variables.scss';
-
+@import "@/styles/theme.scss";
+@import "@/styles/shared/variables.scss";
 
 .people-list {
   margin-bottom: $spacing-4;
@@ -361,10 +437,13 @@ export default {
         margin-bottom: $spacing-2;
       }
 
-      .name, .position, a {
+      .name,
+      .position,
+      a {
         display: block;
       }
-      .position, a {
+      .position,
+      a {
         font-size: $font-size-small;
       }
 
@@ -391,7 +470,6 @@ export default {
       }
     }
   }
-
 }
 
 @media only screen and (min-width: $viewport-tablet-portrait) {
@@ -425,5 +503,4 @@ export default {
     }
   }
 }
-
 </style>

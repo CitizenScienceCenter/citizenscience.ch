@@ -24,18 +24,22 @@
         </div>
       </div>
     </app-content-section>
+
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
 import UploadFile from "@/components/UploadFile.vue";
+import Footer from "@/components/shared/Footer.vue";
 
 export default {
   name: "UpdateFileView",
   components: {
     UploadFile,
     "app-content-section": ContentSection,
+    "app-footer": Footer,
   },
   metaInfo: function() {
     return {

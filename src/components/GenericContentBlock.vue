@@ -29,9 +29,11 @@
         <div class="row row-centered img-section">
           <div class="col col-12 centered">
             <img
+              rel="preload"
               :src="contentData.image"
               class="col-image"
               :class="{ rounded: br.image.rounded }"
+              :alt="contentData.image"
             />
           </div>
           <div class="col col-12 centered" v-if="br.img_description.visible">

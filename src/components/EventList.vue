@@ -269,7 +269,7 @@ export default {
     }
   }
   .event {
-    padding: $spacing-2 $spacing-3;
+    padding: $spacing-2 $spacing-1;
     cursor: pointer;
     .event-image {
       margin-bottom: $spacing-1;

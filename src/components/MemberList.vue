@@ -70,21 +70,30 @@
         class="col col-11 col-large-5"
       >
         <ul>
-          <li v-for="member in column" :key="member.index">
+          <li v-for="member in column" :key="member.index" class="member">
             <span v-if="member.name">{{ member.name }} - </span>
             <span v-if="member.organization">{{ member.organization }}</span>
             <div class="contact">
-              <span v-if="member.email" class="item"
+              <a
+                v-if="member.email"
+                class="item"
+                @click="triggerButton(null, 'mailto:' + member.email, true)"
                 ><i class="fas fa-envelope"></i
                 ><span class="label">{{ member.email }}</span>
-              </span>
-              <span v-if="member.tel" class="item"
+              </a>
+              <a
+                v-if="member.tel"
+                class="item"
+                @click="triggerButton(null, 'tel:' + member.tel, true)"
                 ><i class="fas fa-phone"></i>
-                <span class="label">{{ member.tel }}</span></span
+                <span class="label">{{ member.tel }}</span></a
               >
-              <span v-if="member.web" class="item"
+              <a
+                v-if="member.web"
+                class="item"
+                @click="triggerButton(null, member.web, false)"
                 ><i class="fas fa-globe"></i>
-                <span class="label">{{ member.web }}</span></span
+                <span class="label">{{ member.web }}</span></a
               >
             </div>
           </li>
@@ -156,19 +165,35 @@ export default {
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
 .member-list {
+  .subheading,
+  .text-description,
+  .member {
+    font-size: $font-size-small;
+  }
   .contact {
     font-size: $font-size-small;
     padding-top: $spacing-1;
     .item {
       padding-right: $spacing-4;
+      display: inline-block;
     }
     i {
-      color: $color-primary;
       padding-right: $spacing-1;
       font-size: $font-size-medium;
+      cursor: pointer;
     }
     .label {
       display: none;
+      color: $color-black;
+    }
+  }
+}
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .member-list {
+    .subheading,
+    .text-description,
+    .member {
+      font-size: $font-size-normal;
     }
   }
 }

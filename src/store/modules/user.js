@@ -79,11 +79,11 @@ const actions = {
   },
   async signIn({ state }, { email, password }) {
     try {
-      // const res = await dispatch("getLoginOptions");
+      // const csrfRes = await dispatch("getLoginOptions");
       const csrf = state.loginOptions.form.csrf;
       const log_res = await axios.post(
         process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
-        { email, password, csrf },
+        { email: email, password: password, csrf: csrf },
         {
           withCredentials: true,
           headers: {
@@ -91,6 +91,7 @@ const actions = {
           },
         }
       );
+      console.log(await log_res.data);
       // const log_res = await fetch(
       //   process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
       //   {

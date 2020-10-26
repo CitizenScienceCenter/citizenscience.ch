@@ -26,7 +26,10 @@
             </h2>
           </div>
           <div class="col scroll-effect">
-            <member-list :content="content"></member-list>
+            <member-list
+              :content="content"
+              :viewConfig="viewConfig"
+            ></member-list>
           </div>
         </div>
       </div>
@@ -55,6 +58,15 @@ export default {
   data() {
     return {
       content: {},
+      viewConfig: {
+        visible: true,
+        title: { visible: false },
+        description: { visible: true },
+        button: { disabled: false, visible: false },
+        memberList: {
+          visible: true,
+        },
+      },
     };
   },
   props: {

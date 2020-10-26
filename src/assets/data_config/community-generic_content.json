@@ -69,9 +69,175 @@
       "de": ""
     },
     "memberList": [
-      { "name": "Prof. Norman Backhaus", "organization": "UZH, Geographisches Institut", "email": "", "tel": "", "web":"" },
-      { "name": "Prof. Abraham Bernstein", "organization": "UZH, Institut für Informatik", "email": "", "tel": "", "web":""  },
-      { "name": "Prof. Balthasar Bickel", "organization": "UZH, Institut für Vergleichende Sprachwissenschaft, Zürcher Kompetenzzentrum Linguistik (ZüKL)", "email": "", "tel": "", "web":""  }
+      {
+        "name": "Prof. Norman Backhaus",
+        "organization": "UZH, Geographisches Institut",
+        "email": "mail@mail.com",
+        "tel": "+4112345678",
+        "web": "http://uzh.ch"
+      },
+      {
+        "name": "Prof. Abraham Bernstein",
+        "organization": "UZH, Institut für Informatik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Balthasar Bickel",
+        "organization": "UZH, Institut für Vergleichende Sprachwissenschaft, Zürcher Kompetenzzentrum Linguistik (ZüKL)",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Nikola Biller-Andorno",
+        "organization": "UZH, Institut für Biomedizinische Ethik und Medizingeschichte",
+        "email": "",
+        "tel": "",
+        "web": ""
+      }
+      ,
+      {
+        "name": "Dr. Christine Bratrich",
+        "organization": "ETH, Sustainability",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Claudia Canella",
+        "organization": "UniversitätsSpital Zürich",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Markus Christen",
+        "organization": "UZH, Digital Society Initiative",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Volker Dellwo",
+        "organization": "UZH, Institut für Computerlinguistik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Andreas Diekmann",
+        "organization": "ETH, Departement Geistes-, Sozial- und Staatswissenschaften, Forschungsgruppe Umwelt",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Eliane Escher",
+        "organization": "UZH, Institut für Molekulare Biologie",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Simon Etter",
+        "organization": "UZH, Geographisches Institut",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Mareile Flitsch",
+        "organization": "UZH, Völkerkundemuseum",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Barbara Flückiger",
+        "organization": "UZH, Seminar für Filmwissenschaft",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Michael Gasser",
+        "organization": "ETH Bibliothek",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Elvira Glaser",
+        "organization": "UZH, Deutsches Seminar, UFSP Sprache und Raum",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Marc Gruenig",
+        "organization": "ETH, Departement Umweltsystemwissenschaften",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Ernst Hafen",
+        "organization": "ETH, Institut für Molekulare Systembiologie",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Richard Hahnloser",
+        "organization": "ETH, Institut für Neuroinformatik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Dirk Helbing",
+        "organization": "ETH, Computational Social Science",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Marianne Hundt",
+        "organization": "UZH, Englisches Seminar, Zürcher Kompetenzzentrum Linguistik (ZüKL)",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Matthias Huss",
+        "organization": "ETH, Departement Geistes-, Sozial- und Staatswissenschaften",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Ulrike Kastrup",
+        "organization": "ETH, focus-Terra",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Hubert Klumpner",
+        "organization": "ETH, Departement Architektur",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Andreas Krause",
+        "organization": "ETH, Departement Informatik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      }
     ]
   }
 }

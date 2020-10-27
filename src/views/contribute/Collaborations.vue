@@ -37,7 +37,7 @@
 
 <template>
   <div id="top">
-    <app-content-section>
+    <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
@@ -50,7 +50,7 @@
 
       <div class="content-subsection">
         <div class="content-wrapper">
-          <!-- Generic Content component for Our Community -->
+          <!-- Generic Content component for Collaborations -->
           <div
             class="row row-centered row-middle content-item"
             v-for="item in content"

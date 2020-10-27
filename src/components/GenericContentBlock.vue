@@ -1,5 +1,6 @@
 <template>
   <div
+    class="generic-content"
     v-if="
       visible &&
         contentData &&
@@ -155,7 +156,7 @@ export default {
       // open external links
       openUrl(url, selfWindow);
     },
-    checkVerticalOrientation: function(e) {
+    checkVerticalOrientation: function(element) {
       const sizes = ["sm", "md", "lg"];
       // This validation is only for large and bigger resolution screens
       const horizontal = {
@@ -185,7 +186,7 @@ export default {
       if (this.vOrientation) {
         selectedView = viewStyle.vertical;
       }
-      return selectedView[e];
+      return selectedView[element];
     },
   },
   created() {
@@ -196,155 +197,168 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
-.heading-section {
-  padding-left: $spacing-3;
-}
-.img-section {
-  .col-image {
-    transform: scale(0.75) translateY(-5%);
-    border-radius: 20%;
-    margin-bottom: -$spacing-3;
-    position: relative;
+.generic-content {
+  padding-top: $spacing-2;
+  .heading-section {
+    padding-left: $spacing-3;
   }
-  .rounded {
-    border-radius: 50%;
-  }
-  p {
-    font-size: $font-size-mini;
-    padding-bottom: $spacing-1;
-    display: none;
-  }
-}
-.text-section {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  padding: 0 $spacing-2 !important;
-  .subheading {
-    margin-bottom: $spacing-1;
-    font-size: $font-size-small;
-  }
-  .text-description {
-    font-size: $font-size-small;
-  }
-  .button-section {
-    padding: $spacing-2 0;
-    padding-right: $spacing-2;
-    .button {
-      height: 30px;
+  .img-section {
+    .col-image {
+      transform: scale(0.75) translateY(-5%);
+      border-radius: 20%;
+      margin-bottom: -$spacing-3;
+      position: relative;
+    }
+    .rounded {
+      border-radius: 50%;
+    }
+    p {
       font-size: $font-size-mini;
+      padding-bottom: $spacing-1;
+      display: none;
     }
   }
-  &.vertical {
-    .subheading,
-    .text-description,
+  .text-section {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    padding: 0 $spacing-2 !important;
+    .subheading {
+      margin-bottom: $spacing-1;
+      font-size: $font-size-small;
+    }
+    .text-description{
+      font-size: $font-size-small;
+    }
     .button-section {
-      padding-left: $spacing-1;
+      padding: $spacing-2 0;
+      padding-right: $spacing-2;
+      .button {
+        height: 30px;
+        font-size: $font-size-mini;
+      }
+    }
+    &.vertical {
+      .subheading,
+      .text-description,
+      .button-section {
+        padding-left: $spacing-1;
+      }
     }
   }
 }
 @media only screen and (min-width: $viewport-mobile-large) {
-  .img-section {
-    p {
-      display: block;
+  .generic-content {
+    .img-section {
+      p {
+        display: block;
+      }
     }
-  }
-  .text-section {
-    .subheading {
-    }
-    .text-description {
+    .text-section {
+      .subheading {
+      }
+      .text-description {
+      }
     }
   }
 }
 @media only screen and (min-width: $viewport-tablet-portrait) {
-  .img-section {
-    .col-image {
-      transform: scale(0.8) translateY(-5%) translateX(-5%);
-      margin-bottom: -$spacing-2;
-    }
-  }
-  .text-section {
-    padding: 0 $spacing-3 0 $spacing-1 !important;
-    .subheading {
-      font-size: $font-size-normal;
-    }
-    .text-description {
-      font-size: $font-size-normal;
-    }
-    &.vertical {
-      .text-description {
-        font-size: $font-size-small;
+  .generic-content {
+    .img-section {
+      .col-image {
+        transform: scale(0.8) translateY(-5%);
+        margin-bottom: -$spacing-2;
       }
-      .subheading,
-      .text-description,
-      .button-section {
-        padding-left: $spacing-2;
+    }
+    .text-section {
+      padding: 0 $spacing-3 0 $spacing-1 !important;
+      .subheading {
+        font-size: $font-size-normal;
+      }
+      .text-description {
+        font-size: $font-size-normal;
+      }
+      &.vertical {
+        .text-description {
+          font-size: $font-size-small;
+        }
+        .subheading,
+        .text-description,
+        .button-section {
+          padding-left: $spacing-2;
+        }
       }
     }
   }
 }
 @media only screen and (min-width: $viewport-large) {
-  .text-section {
-    padding: 0 $spacing-3 0 $spacing-4 !important;
-    .subheading {
-    }
-    .text-description {
-    }
-    .button-section {
-      .button {
-        height: 35px;
-        font-size: $font-size-small;
+  .generic-content {
+    .text-section {
+      padding: 0 $spacing-3 0 $spacing-4 !important;
+      .subheading {
       }
-    }
-    &.vertical {
-      padding: 0 $spacing-3 0 $spacing-1 !important;
-      .text-description,
+      .text-description {
+      }
       .button-section {
         .button {
-          height: 30px;
-          font-size: $font-size-mini;
+          height: 35px;
+          font-size: $font-size-small;
+        }
+      }
+      &.vertical {
+        padding: 0 $spacing-3 0 $spacing-1 !important;
+        .text-description,
+        .button-section {
+          .button {
+            height: 30px;
+            font-size: $font-size-mini;
+          }
         }
       }
     }
   }
 }
 @media only screen and (min-width: $viewport-xlarge) {
-  .img-section {
-    .col-image {
-      transform: scale(1) translateY(0%) translateX(-5%);
-      margin-bottom: $spacing-1;
-      width: 90%;
-      height: auto;
-    }
-    p {
-      font-size: $font-size-small;
-      padding-bottom: $spacing-1;
-    }
-  }
-  .text-section {
-    padding: 0 $spacing-3 0 $spacing-5 !important;
-    .subheading {
-    }
-    .text-description {
-    }
-    .button-section {
-      .button {
-        height: 40px;
+  .generic-content {
+    .img-section {
+      .col-image {
+        transform: scale(1) translateY(0%);
+        margin-bottom: $spacing-1;
+        width: 90%;
+        height: auto;
+      }
+      p {
+        font-size: $font-size-small;
+        padding-bottom: $spacing-1;
       }
     }
-    &.vertical {
-      padding: 0 $spacing-3 0 $spacing-2 !important;
-      .text-description,
+    .text-section {
+      padding: 0 $spacing-3 0 $spacing-5 !important;
+      .subheading {
+      }
+      .text-description {
+      }
       .button-section {
-        font-size: $font-size-small;
+        .button {
+          height: 40px;
+        }
+      }
+      &.vertical {
+        padding: 0 $spacing-3 0 $spacing-2 !important;
+        .text-description,
+        .button-section {
+          font-size: $font-size-small;
+        }
       }
     }
   }
 }
 @media only screen and (min-width: $viewport-xxxlarge) {
-  .text-section {
-    &.vertical {
-      padding: 0 $spacing-3 0 $spacing-1 !important;
+  .generic-content {
+    .text-section {
+      &.vertical {
+        padding: 0 $spacing-3 0 $spacing-1 !important;
+      }
     }
   }
 }

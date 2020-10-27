@@ -4,20 +4,18 @@
   "page-title": "Members",
 
   "section-members-heading": "Members"
-
   },
   "de": {
   "page-title": "Mitglieder",
 
   "section-members-heading": "Mitglieder"
-
   }
   }
 </i18n>
 
 <template>
   <div>
-    <app-content-section>
+    <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 scroll-effect">

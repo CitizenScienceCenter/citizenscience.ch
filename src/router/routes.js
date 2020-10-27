@@ -274,6 +274,13 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-about", nav: true },
         redirect: "about/mission",
+        beforeEnter: async (to, from, next) => {
+          // load content from remote server
+          await store.dispatch("content/getGenericContentRemote", {
+            view: "about",
+          });
+          next();
+        },
         children: [
           {
             path: "mission",
@@ -394,7 +401,12 @@ export const routes = [
       {
         path: "update_file",
         component: UpdateFile,
-        meta: {requiresAuth: true, requiresAdmin:true, i18n: "navigation-updatefile", nav: true },
+        meta: {
+          requiresAuth: true,
+          requiresAdmin: true,
+          i18n: "navigation-updatefile",
+          nav: true,
+        },
       },
       {
         // catch all NotFound

@@ -1,0 +1,28 @@
+{
+  "mission": {
+    "contentList": [
+      {
+        "subheading": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p>The Citizen Science Center Zurich is run jointly by the <a href='https://www.uzh.ch' target='_blank'>University of Zurich</a> and the <a href='https://www.ethz.ch' target='_blank'>ETH Zurich</a>. The activities of the Center focus on exploring, supporting, and promoting Citizen Science. </p> <p> They are based on the following values:</p> <ul></ul>",
+          "de": ""
+        },
+        "image": "/img/graphic-roadmap.png"
+      },
+      {
+        "subheading": {
+          "en": "Why a community?",
+          "de": ""
+        },
+        "description": {
+          "en": "<p>Citizen Science is characterized by the collaboration of members of the general public and academic scientists with the purpose of together pursuing new knowledge and insights. A community of engaged volunteers and organizers is an essential element of  any Citizen Science project, and often a strong motivator for people to join.</p> <p>By actively involving people with different backgrounds and expertise in the research process, Citizen Science expands the way of doing excellent science. Engaging the public to participate in scientific research as well as engaging academic scientists to open up their work for the collaboration with citizens adds creativity, capacity and impact to the process of generating knowledge, and brings in innovative ideas and solutions to problems from different perspectives. It can for instance add local knowledge, new or other forms of expertise as well as more diversity to scientific research, so that the whole society can profit from it.</p> <p>All this can not work without a community of engaged people who contribute their time and energy in doing research together. Strong communities in Citizen Science lead to:</p> <ul> <li>Unlocking of resources to help solving real world problems.</li> <li>Trust in science.</li> <li>Flow of ideas and creativity to find sustainable solutions.</li> <li>Exchange of knowledge & experience between people of different backgrounds.</li> <li>Learning from and acknowledging each other’s expertise.</li> <li>… and more.</li> </ul>",
+          "de": ""
+        },
+        "image": ""
+      }
+    ]
+  }
+}

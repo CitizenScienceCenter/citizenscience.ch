@@ -13,7 +13,7 @@
 
 <template>
   <div id="top">
-    <app-content-section class="content-section-condensed">
+    <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">

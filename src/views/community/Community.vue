@@ -40,6 +40,17 @@
         </div>
       </div>
     </app-content-section>
+
+    <!-- TODO: verify the style config -->
+    <!-- Our Community section -->
+    <app-content-section class="overflow-hidden">
+      <generic-content-width-block
+        :content="ourCommunityContent"
+        :visible="true"
+        :hReverse="false"
+      ></generic-content-width-block>
+    </app-content-section>
+
     <!-- How to join section -->
     <app-content-section
       class="content-section-flat light-greyish scroll-effect"
@@ -62,6 +73,7 @@
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
+import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 import { mapGetters } from "vuex";
@@ -71,6 +83,7 @@ export default {
     return {
       content: {},
       howJoinContent: {},
+      ourCommunityContent: {},
       isReverse: true,
       viewConfig: {
         visible: true,
@@ -88,6 +101,7 @@ export default {
   components: {
     SectionNewsletterSignup,
     GenericContentBlock,
+    GenericContentWidthBlock,
     "app-content-section": ContentSection,
     "app-footer": Footer,
   },
@@ -118,6 +132,7 @@ export default {
         this.toggleReverse(x)
       );
       this.howJoinContent = this.getGContent("community").howJoin;
+      this.ourCommunityContent = this.getGContent("community").ourCommunity;
     },
     toggleReverse(contentItem) {
       contentItem.reverse = this.isReverse;

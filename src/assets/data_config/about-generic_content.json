@@ -7,22 +7,50 @@
           "de": ""
         },
         "description": {
-          "en": "<p>The Citizen Science Center Zurich is run jointly by the <a href='https://www.uzh.ch' target='_blank'>University of Zurich</a> and the <a href='https://www.ethz.ch' target='_blank'>ETH Zurich</a>. The activities of the Center focus on exploring, supporting, and promoting Citizen Science. </p> <p> They are based on the following values:</p> <ul></ul>",
+          "en": "<p>The Citizen Science Center Zurich is run jointly by the <a href='https://www.uzh.ch' target='_blank'>University of Zurich</a> and the <a href='https://www.ethz.ch' target='_blank'>ETH Zurich</a>. The activities of the Center focus on exploring, supporting, and promoting Citizen Science. </p> <p> They are based on the following values:</p> <ul><li><strong>Excellence</strong><br/>The Citizen Science Center wants to develop and implement projects that reflect the highest standards possible in terms of scientific rigor, data security, and ethics. </li> <li><strong>Participation</strong><br/>The Center aims at developing an active and productive participation of Citizen scientists and professional researchers at the different phases of the scientific research project, from funding allocation, topic selection, and research design, to execution, interpretation, and dissemination of results. </li><li><strong>Openness</strong><br/>The Center adheres to the principles of open science (open access to data and publications) and operates in a fully transparent manner, ensuring that the public benefits from our work. </li></ul>",
           "de": ""
         },
         "image": "/img/graphic-roadmap.png"
       },
       {
         "subheading": {
-          "en": "Why a community?",
+          "en": "The Goals of the Center include:",
           "de": ""
         },
         "description": {
-          "en": "<p>Citizen Science is characterized by the collaboration of members of the general public and academic scientists with the purpose of together pursuing new knowledge and insights. A community of engaged volunteers and organizers is an essential element of  any Citizen Science project, and often a strong motivator for people to join.</p> <p>By actively involving people with different backgrounds and expertise in the research process, Citizen Science expands the way of doing excellent science. Engaging the public to participate in scientific research as well as engaging academic scientists to open up their work for the collaboration with citizens adds creativity, capacity and impact to the process of generating knowledge, and brings in innovative ideas and solutions to problems from different perspectives. It can for instance add local knowledge, new or other forms of expertise as well as more diversity to scientific research, so that the whole society can profit from it.</p> <p>All this can not work without a community of engaged people who contribute their time and energy in doing research together. Strong communities in Citizen Science lead to:</p> <ul> <li>Unlocking of resources to help solving real world problems.</li> <li>Trust in science.</li> <li>Flow of ideas and creativity to find sustainable solutions.</li> <li>Exchange of knowledge & experience between people of different backgrounds.</li> <li>Learning from and acknowledging each other’s expertise.</li> <li>… and more.</li> </ul>",
+          "en": "<ul> <li> Engaging academic scientists and the public in next-generation citizen science projects, tackling problems in different fields of science and society, across all academic disciplines. </li> <li> Providing the resources, expertise and technical know-how to develop, set up, and run citizen science projects. </li> <li> Maintaining the highest standards of excellence in research methodology, including scientific results, quality of data, and research ethics. </li> <li> Contributing to the global effort toward sustainable development, by creating actionable knowledge and data that can help tackle the UN SDGs at the local, regional and global level. </li> </ul> <p> You can find here the Center’s Statute, including organizational structure here: </p>",
           "de": ""
         },
-        "image": ""
+        "image": "",
+        "button": {
+          "link": "/files/geschaeftsordnung_cccs.pdf",
+          "route": null,
+          "icon": "fas fa-file-pdf",
+          "selfWindow": false,
+          "en": "Center's Statue",
+          "de": "Center's Statue"
+        },
+        "second_button": {}
       }
-    ]
+    ],
+    "joinInitiative": {
+      "heading": {
+        "en": "A Joint Initiative",
+        "de": "Eine gemeinsame Initiative"
+      },
+      "subheading": {
+        "en": "",
+        "de": ""
+      },
+      "description": {
+        "en": "<p>The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.</p> <p> Switzerland has a deep tradition of direct democracy and participatory decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.<br /> Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy. </p>",
+        "de": "<p>Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt.</p> <p> Die Schweiz ist bekannt für ihre lange Tradition in direkter Demokratie und politischer Mitbestimmung. Citizen Science könnte als Übertragung dieser Idee von der Politik in die Wissenschaft angesehen werden.<br /> Auch Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Diese Kombination an Wissen und Kompetenzen am Standort Zürich ermöglicht vielfältige Synergien. </p>"
+      },
+      "image": "/img/uzh-eth.jpg",
+      "logo": {
+        "en": "/img/svg/uzh_eth_logo_e_pos.svg",
+        "de": "/img/svg/uzh_eth_logo_d_pos.svg"
+      }
+    }
   }
 }

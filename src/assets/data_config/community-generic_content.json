@@ -18,19 +18,19 @@
           "de": ""
         },
         "image": ""
-      },
-      {
-        "subheading": {
-          "en": "Who is our community?",
-          "de": ""
-        },
-        "description": {
-          "en": "<p>Our Citizen Science Community is growing and spans Zurich and beyond by meeting online and offline. It consists of local communities of professional scientists and citizen scientists, including members of <strong>UZH</strong> and <strong>ETH Zurich</strong>, the Zurich senior university and persons listed in the universities research participant pools, as well as a wider network of contributors,  <router-link to='/about/partnerships'> <strong>partners</strong> </router-link> and <router-link to='/community/members'> <strong>members</strong> </router-link>.</p> <p>Our community activities include online and offline interactions and local events in an open, creative and interdisciplinary way.</p>",
-          "de": ""
-        },
-        "image": "/img/uzh-eth.jpg"
       }
     ],
+    "ourCommunity":{
+      "subheading": {
+        "en": "Who is our community?",
+        "de": ""
+      },
+      "description": {
+        "en": "<p>Our Citizen Science Community is growing and spans Zurich and beyond by meeting online and offline. It consists of local communities of professional scientists and citizen scientists, including members of <strong>UZH</strong> and <strong>ETH Zurich</strong>, the Zurich senior university and persons listed in the universities research participant pools, as well as a wider network of contributors,  <router-link to='/about/partnerships'> <strong>partners</strong> </router-link> and <router-link to='/community/members'> <strong>members</strong> </router-link>.</p> <p>Our community activities include online and offline interactions and local events in an open, creative and interdisciplinary way.</p>",
+        "de": ""
+      },
+      "image": "/img/uzh-eth.jpg"
+    },
     "howJoin": {
       "subheading": {
         "en": "How can you join our community?",

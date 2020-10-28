@@ -11,14 +11,7 @@
   "section-mission-listitem-4": "Contributing to the global effort toward sustainable development, by creating actionable knowledge and data that can help tackle the UN SDGs at the local, regional and global level.",
   "section-mission-text-2": "The Citizen Science Center Zurich adheres to the principles of <b>Open Science</b> and operates in a fully <b>transparent</b> manner.",
   "section-mission-download-text": "Here You can find the Center’s Statute, including organizational structure:",
-  "section-mission-download-button": "Center’s Statute",
-
-  "section-about-heading": "A Joint Initiative",
-  "section-about-text": "The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.",
-  "section-about-text-2": "Switzerland has a deep tradition of direct democracy and participatory decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.",
-  "section-about-text-3": "Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy.",
-  "section-about-button": "Learn more about us"
-
+  "section-mission-download-button": "Center’s Statute"
   },
   "de": {
   "page-title": "Mission & Ziele",
@@ -31,14 +24,7 @@
   "section-mission-listitem-4": "Uns an den weltweiten Bestrebungen für eine nachhaltige Entwicklung zu beteiligen, indem wir anwendbares Wissen und Daten generieren, um die SDGs auf lokaler, regionaler und globaler Ebene zu erreichen.",
   "section-mission-text-2": "Das Citizen Science Center Zürich sieht sich den Prinzipien von <b>Open Science</b> und <b>Transparenz</b> verpflichtet.",
   "section-mission-download-text": "Hier finden Sie die Geschäftsordnung des Centers mit Informationen zu Organisation und Struktur:",
-  "section-mission-download-button": "Geschäftsordnung",
-
-  "section-about-heading": "Eine gemeinsame Initiative",
-  "section-about-text": "Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt.",
-  "section-about-text-2": "Die Schweiz ist bekannt für ihre lange Tradition in direkter Demokratie und politischer Mitbestimmung. Citizen Science könnte als Übertragung dieser Idee von der Politik in die Wissenschaft angesehen werden.",
-  "section-about-text-3": "Auch Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Diese Kombination an Wissen und Kompetenzen am Standort Zürich ermöglicht vielfältige Synergien.",
-  "section-about-button": "Mehr über uns"
-
+  "section-mission-download-button": "Geschäftsordnung"
   }
   }
 </i18n>
@@ -64,6 +50,7 @@
           v-bind:key="item.id"
         >
           <generic-content-block
+            class="extra-margin-bottom"
             :visible="viewConfig.visible"
             :vOrientation="viewConfig.vOrientation"
             :hReverse="item.reverse"
@@ -74,6 +61,7 @@
       </div>
     </app-content-section>
 
+    <!-- TODO: verify before removing -->
     <!-- <app-content-section class="overflow-hidden">
       <div
         class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1"
@@ -165,20 +153,26 @@
       </div>
     </app-content-section> -->
 
-    <app-content-section class="overflow-hidden">
+    <!-- Special section joit initiative -->
+    <!-- <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-reverse-large">
           <div
-            class="col col-tablet-portrait-7 col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect"
+            class="col col-tablet-portrait-11 col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect"
           >
-            <h2 class="heading centered left-aligned-large">
-              {{ $t("section-about-heading") }}
-            </h2>
-            <p>{{ $t("section-about-text") }}</p>
-            <p>
-              {{ $t("section-about-text-2") }}<br />
-              {{ $t("section-about-text-3") }}
-            </p>
+            <div class="row">
+              <h2 class="heading centered left-aligned-large">
+                {{ localTranslation(joinInitiativeContent.heading) }}
+              </h2>
+            </div>
+
+            <div class="row row-centered">
+              <component
+                :is="getDynamicData"
+                class="text-description"
+              ></component>
+            </div>
+            <br />
             <p class="centered left-aligned-large">
               <img
                 v-if="this.$i18n.locale === 'en'"
@@ -204,11 +198,24 @@
             <div
               class="col col-tablet-portrait-10 col-large-7 col-large-after-1"
             >
-              <img src="/img/uzh-eth.jpg" style="border-radius:50%" />
+              <img
+                :src="joinInitiativeContent.image"
+                style="border-radius:50%"
+              />
             </div>
           </div>
         </div>
       </div>
+    </app-content-section> -->
+
+    <!-- TODO: verify the style config -->
+    <!-- Join Initiative section -->
+    <app-content-section class="overflow-hidden content-section-compact">
+      <generic-content-width-block
+        :content="joinInitiativeContent"
+        :visible="true"
+        :hReverse="true"
+      ></generic-content-width-block>
     </app-content-section>
 
     <section-newsletter-signup></section-newsletter-signup>
@@ -220,13 +227,17 @@
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
+import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
+
+import { getTranslation } from "@/assets/support.js";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
     GenericContentBlock,
+    GenericContentWidthBlock,
     SectionNewsletterSignup,
     "app-content-section": ContentSection,
     "app-footer": Footer,
@@ -234,7 +245,8 @@ export default {
   data() {
     return {
       content: {},
-      isReverse: true,
+      joinInitiativeContent: {},
+      isReverse: false,
       viewConfig: {
         visible: true,
         vOrientation: false,
@@ -268,16 +280,27 @@ export default {
   },
   computed: {
     ...mapGetters({ getGContent: "content/getGenericContent" }),
+    getDynamicData: function() {
+      return {
+        template: `<div>${this.localTranslation(
+          this.joinInitiativeContent.description
+        )}</div>`,
+      };
+    },
   },
   methods: {
     // openInNewTab: function(url) {
     //   var win = window.open(url, "_blank");
     //   win.focus();
     // },
+    localTranslation(textContent) {
+      return getTranslation(textContent, this.$i18n.locale);
+    },
     loadContent() {
       this.content = this.getGContent("mission").contentList.map((x) =>
         this.toggleReverse(x)
       );
+      this.joinInitiativeContent = this.getGContent("mission").joinInitiative;
     },
     toggleReverse(contentItem) {
       contentItem.reverse = this.isReverse;

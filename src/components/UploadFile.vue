@@ -58,6 +58,7 @@ export default {
         { name: "Events List", file_name: "events.json" },
         { name: "News List", file_name: "news.json" },
         { name: "Community - GC", file_name: "community-generic_content.json" },
+        { name: "About - GC", file_name: "about-generic_content.json" },
       ],
       selected: "",
     };

@@ -198,7 +198,7 @@ export default {
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
 .generic-content {
-  padding-top: $spacing-2;
+  padding-top: 0;
   .heading-section {
     padding-left: $spacing-3;
   }
@@ -227,15 +227,15 @@ export default {
       margin-bottom: $spacing-1;
       font-size: $font-size-small;
     }
-    .text-description{
+    .text-description {
       font-size: $font-size-small;
     }
     .button-section {
       padding: $spacing-2 0;
       padding-right: $spacing-2;
       .button {
-        height: 30px;
-        font-size: $font-size-mini;
+        height: 35px;
+        font-size: $font-size-small;
       }
     }
     &.vertical {
@@ -243,6 +243,10 @@ export default {
       .text-description,
       .button-section {
         padding-left: $spacing-1;
+        .button {
+          height: 30px;
+          font-size: $font-size-mini;
+        }
       }
     }
   }
@@ -286,6 +290,10 @@ export default {
         .text-description,
         .button-section {
           padding-left: $spacing-2;
+          .button {
+            height: 35px;
+            font-size: $font-size-small;
+          }
         }
       }
     }
@@ -293,6 +301,7 @@ export default {
 }
 @media only screen and (min-width: $viewport-large) {
   .generic-content {
+    padding-top: $spacing-2;
     .text-section {
       padding: 0 $spacing-3 0 $spacing-4 !important;
       .subheading {
@@ -301,8 +310,7 @@ export default {
       }
       .button-section {
         .button {
-          height: 35px;
-          font-size: $font-size-small;
+          height: 40px;
         }
       }
       &.vertical {
@@ -310,8 +318,6 @@ export default {
         .text-description,
         .button-section {
           .button {
-            height: 30px;
-            font-size: $font-size-mini;
           }
         }
       }

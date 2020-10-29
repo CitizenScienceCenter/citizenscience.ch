@@ -206,8 +206,8 @@ export default {
       this.bottomLeftConfig = this.view("bottom_left");
       this.topRightConfig = this.view("top_right");
       //Load generic content data 
-      this.ourCommunity = this.getGContent('home_ourCommunity');
-      this.ourMision = this.getGContent('home_ourMission');
+      this.ourCommunity = this.getGContent('home_our_community');
+      this.ourMision = this.getGContent('home_our_mission');
     },
   },
   created() {

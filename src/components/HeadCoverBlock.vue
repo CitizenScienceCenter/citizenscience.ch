@@ -129,7 +129,6 @@
 import { mapGetters, mapState } from "vuex";
 import { getTranslation, openUrl } from "@/assets/support.js";
 import color from "@/styles/theme.scss";
-// import news from "@/assets/cover_list.json";
 
 export default {
   name: "Cover",

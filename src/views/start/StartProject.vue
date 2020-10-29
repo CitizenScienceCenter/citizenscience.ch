@@ -160,9 +160,9 @@
           </div>
         </div>
       </div>
-    </app-content-section>-->
+    </app-content-section>
 
-    <!-- <app-content-section color="light-greyish">
+    <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10">
@@ -363,7 +363,7 @@ export default {
   },
   methods: {
     loadContent() {
-      this.content = this.getGContent("beforeYouStart");
+      this.content = this.getGContent("before_you_start");
     },
   },
   created() {

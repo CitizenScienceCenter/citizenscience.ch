@@ -135,14 +135,13 @@ export default {
     },
     loadData() {
       this.contentData = this.content;
-      console.log(this.contentData.memberList.length);
       if (
-        this.contentData.memberList &&
-        this.contentData.memberList.length > 0
+        this.contentData.member_list &&
+        this.contentData.member_list.length > 0
       ) {
-        const half = Math.ceil(this.contentData.memberList.length / 2);
-        this.members_lef = this.contentData.memberList.slice(0, half);
-        this.members_right = this.contentData.memberList.slice(half);
+        const half = Math.ceil(this.contentData.member_list.length / 2);
+        this.members_lef = this.contentData.member_list.slice(0, half);
+        this.members_right = this.contentData.member_list.slice(half);
       }
     },
     triggerButton: function(route, url, selfWindow) {

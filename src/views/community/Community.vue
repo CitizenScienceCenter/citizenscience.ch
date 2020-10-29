@@ -53,7 +53,7 @@
 
     <!-- How to join section -->
     <app-content-section
-      class="content-section-flat light-greyish scroll-effect"
+      class="content-section content-section-compact light-greyish scroll-effect"
     >
       <generic-content-block
         :visible="viewConfig.visible"
@@ -128,11 +128,11 @@ export default {
   },
   methods: {
     loadContent() {
-      this.content = this.getGContent("community").contentList.map((x) =>
+      this.content = this.getGContent("community").main_content.map((x) =>
         this.toggleReverse(x)
       );
-      this.howJoinContent = this.getGContent("community").howJoin;
-      this.ourCommunityContent = this.getGContent("community").ourCommunity;
+      this.howJoinContent = this.getGContent("community").how_join;
+      this.ourCommunityContent = this.getGContent("community").our_community;
     },
     toggleReverse(contentItem) {
       contentItem.reverse = this.isReverse;

@@ -1,6 +1,6 @@
 {
   "mission": {
-    "contentList": [
+    "main_content": [
       {
         "subheading": {
           "en": "",
@@ -33,7 +33,7 @@
         "second_button": {}
       }
     ],
-    "joinInitiative": {
+    "join_initiative": {
       "heading": {
         "en": "A Joint Initiative",
         "de": "Eine gemeinsame Initiative"
@@ -52,5 +52,49 @@
         "de": "/img/svg/uzh_eth_logo_d_pos.svg"
       }
     }
+  },
+  "zurich_style": {
+    "main_content": [
+      {
+        "subheading": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p>Citizen Science refers to the involvement of members of the general public (\"<em>citizens</em>\") in the scientific research process. It is a form of public participation that works across many disciplines and that comes with different flavours and names, including community based research, crowd-sourced data collection, civic science, and more. </p> <p> Zurich has a long tradition in many forms of participatory research. You can see some of the projects from the past <a href='https://www.grc.uzh.ch/en/focus/exhibition/CitizenScience.html' target='_blank' > here </a>. </p> <p> If you want to learn more about Citizen Science, here some useful links: </p> <ul><li> <a href='https://en.wikipedia.org/wiki/Citizen_science' target='_blank'> Citizen Science entry in Wikipedia </a> </li> <li> <a target='_blank'> A new dawn for citizen science </a> </li> <li> <a target='_blank'> Citizen science: a developing tool for expanding science knowledge and scientific literacy </a> </li> <li> <a target='_blank'> Citizen science: Can volunteers do real research? </a> </li> <li> <a href='https://ecsa.citizen-science.net/documents/' target='_blank'> ECSA: 10 Principles of Citizen Science </a> </li> </ul>",
+          "de": ""
+        },
+        "image": "/img/graphic-citizen-science.png",
+        "button": {
+          "link": null,
+          "route": null,
+          "icon": null,
+          "selfWindow": false,
+          "en": "",
+          "de": ""
+        },
+        "second_button": {}
+      },
+      {
+        "subheading": {
+          "en": "Next Generation Citizen Science",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> The characteristics of Citizen Science in Zurich today – which we refer to also as \"<em>Next-generation</em>\" Citizen Science -  include: </p> <ul> <li> The importance of an active collaboration between professional scientists and citizens, and the ambition to support projects that engage citizens in potentially all phases of the research process (or at least give citizens the choice). These kinds of projects are often referred to in the literature as \"co-created\". </li> <li> The use of the latest collaborative technologies to allow projects to strive for the highest quality standards, with the aim to produce excellent science and quality open data. </li> <li> The engagement toward the UN SDGs, ie. the ambition to empower society with knowledge (data) that can help citizens, communities and governments to move toward a more sustainable world. </li> </ul>",
+          "de": ""
+        },
+        "image": "",
+        "button": {
+          "link": null,
+          "route": null,
+          "icon": null,
+          "selfWindow": false,
+          "en": "",
+          "de": ""
+        },
+        "second_button": {}
+      }
+    ]
   }
 }

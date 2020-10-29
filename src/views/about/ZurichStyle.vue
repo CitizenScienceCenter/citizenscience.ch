@@ -4,7 +4,7 @@
 
   "page-title": "«Zurich Style»",
 
-  "section-citizenscience-heading": "Citizen Science «Zurich Style»",
+  "section-zurichstyle-heading": "Citizen Science «Zurich Style»",
   "section-citizenscience-text": "The activities of the Citizen Science Center Zurich focus on exploring, supporting, and promoting Citizen Science. Citizen Science is a form of public participation in scientific research (where “citizen” denotes a member of the general public, independent from citizenship) that has been around for more than a century.",
   "section-citizenscience-example": "<b>Example:</b> In the Galaxy Zoo project, hundreds of thousands of citizens have helped astronomers classify millions of images of galaxies coming from international telescopes (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
   "section-citizenscience-text-2": "Public participation in science is a practice that works across many disciplines and that comes in different flavours and with different names, including community based research, crowd-sourced data collection, community-based monitoring, civic science, and more. What characterizes Citizen Science is the <b>collaboration of professional scientists and citizens</b>, the active involvement of both, and the engagement of citizens in potentially all phases of the research process.",
@@ -38,7 +38,7 @@
 
   "page-title": "«Züri Style»",
 
-  "section-citizenscience-heading": "Citizen Science «Züri Style»",
+  "section-zurichstyle-heading": "Citizen Science «Züri Style»",
   "section-citizenscience-text": "Am Citizen Science Center Zürich sehen wir unsere Aufgabe im Erkunden, Unterstützen und Verbreiten von Citizen Science, zu deutsch Bürgerwissenschaft. Citizen Science hat sich in den letzten 100 Jahren immer mehr etabliert; man versteht darunter die Beteiligung der breiten Öffentlichkeit an wissenschaftlicher Forschung. Ein Citizen Scientist kann jede und jeder werden, unabhängig von Herkunft und Staatsangehörigkeit.",
   "section-citizenscience-example": "<b>Beispiel:</b> Im Projekt Galaxy Zoo haben hunderttausende Citizen Scientists anhand von Teleskopaufnahmen Millionen von Galaxien klassifiziert. (2007 – 2017) <a href='https://galaxyzoo.org/' target='_blank'>galaxyzoo.org</a>",
   "section-citizenscience-text-2": "Die Beteiligung von nicht professionell wissenschaftlich tätigen Personen in der Forschung ist eine Praxis, die viele Formen annehmen kann: Community based research, Crowdsourcing, community-based monitoring, civic science und mehr. Was Citizen Science dabei besonders ausmacht, ist die <b>Zusammenarbeit von professionellen Wissenschaftlern mit Bürgerinnen</b>, die aktive Beteiligung von beiden Seiten und die Mitwirkung der forschenden Bürger potenziell in allen Phasen des Forschungsprozesses.",
@@ -73,17 +73,49 @@
 </i18n>
 
 <template>
-  <div>
-
-
+  <div id="top">
     <app-content-section class="overflow-hidden">
+      <div class="content-wrapper">
+        <div class="row row-centered scroll-effect">
+          <div class="col col-large-10">
+            <h2 class="heading centered">
+              {{ $t("section-zurichstyle-heading") }}
+            </h2>
+          </div>
+        </div>
+      </div>
 
-      <div class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1">
+      <div class="content-wrapper">
+        <!-- Generic Content component for Zurich Style -->
+        <div
+          class="row row-centered row-middle content-item"
+          v-for="item in content"
+          v-bind:key="item.id"
+        >
+          <generic-content-block
+            class="extra-margin-bottom"
+            :visible="viewConfig.visible"
+            :vOrientation="viewConfig.vOrientation"
+            :hReverse="item.reverse"
+            :content="item"
+            :viewConfig="viewConfig"
+          ></generic-content-block>
+        </div>
+      </div>
+    </app-content-section>
+
+    <!-- TODO: verify before removing -->
+    <!-- <app-content-section class="overflow-hidden">
+      <div
+        class="background-wrapper background-wrapper-move-right scroll-effect scroll-effect-delayed-1"
+      >
         <div class="content-wrapper">
           <div class="row row-centered">
-            <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin">
+            <div
+              class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin"
+            >
               <div class="extra-padding">
-                <img src="/img/graphic-citizen-science.png"/>
+                <img src="/img/graphic-citizen-science.png" />
               </div>
             </div>
           </div>
@@ -91,19 +123,31 @@
       </div>
 
       <div class="content-wrapper scroll-effect">
-
         <div class="content-subsection">
           <div class="row">
-            <div class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-no-bottom-margin">
-              <h2 class="heading centered left-aligned-large" id="citizen-science">{{ $t('section-citizenscience-heading') }}</h2>
+            <div
+              class="col col-tablet-portrait-7 col-large-6 col-large-before-1 col-wrapping col-no-bottom-margin"
+            >
+              <h2
+                class="heading centered left-aligned-large"
+                id="citizen-science"
+              >
+                {{ $t("section-citizenscience-heading") }}
+              </h2>
               <p v-html="$t('section-citizenscience-text')"></p>
               <div class="margin-bottom">
                 <div class="row row-middle">
                   <div class="col col-3">
-                    <img src="/img/projects/galaxyzoo.jpg" style="display: block; width:100%; border-radius:50%"/>
+                    <img
+                      src="/img/projects/galaxyzoo.jpg"
+                      style="display: block; width:100%; border-radius:50%"
+                    />
                   </div>
                   <div class="col col-9" style="padding-left: 0">
-                    <p v-html="$t('section-citizenscience-example')" class="small"></p>
+                    <p
+                      v-html="$t('section-citizenscience-example')"
+                      class="small"
+                    ></p>
                   </div>
                 </div>
               </div>
@@ -111,161 +155,226 @@
               <p v-html="$t('section-citizenscience-text-3')"></p>
               <p v-html="$t('section-citizenscience-text-4')"></p>
             </div>
-
           </div>
         </div>
 
         <div class="content-subsection">
           <div class="row row-centered row-wrapping">
-
-            <div class="col col-10 col-tablet-portrait-8 col-large-4 col-large-before-1 col-wrapping">
+            <div
+              class="col col-10 col-tablet-portrait-8 col-large-4 col-large-before-1 col-wrapping"
+            >
               <div class="extra-padding-h">
                 <img src="/img/graphic-level.png" />
               </div>
             </div>
 
             <div class="col col-large-6 col-large-after-1 col-wrapping">
-              <h3 class="subheading">{{ $t('section-next-gen-citizenscience-subheading') }}</h3>
+              <h3 class="subheading">
+                {{ $t("section-next-gen-citizenscience-subheading") }}
+              </h3>
               <p v-html="$t('section-next-gen-citizenscience-text')"></p>
               <p v-html="$t('section-next-gen-citizenscience-text-2')"></p>
             </div>
-
           </div>
         </div>
-
       </div>
-
-    </app-content-section>
-
-
-
+    </app-content-section>     
     <app-content-section color="light-greyish">
       <div class="content-wrapper">
         <div class="row row-centered">
-
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered" id="principles">{{ $t('section-principles-heading') }}</h2>
+            <h2 class="heading centered" id="principles">
+              {{ $t("section-principles-heading") }}
+            </h2>
           </div>
 
-          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping scroll-effect">
+          <div
+            class="col col-tablet-portrait-10 col-large-6 col-wrapping scroll-effect"
+          >
             <div class="row row-centered">
-              <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
+              <div
+                class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom"
+              >
                 <div class="extra-padding-h">
-                  <img src="/img/graphic-excellence.png"/>
+                  <img src="/img/graphic-excellence.png" />
                 </div>
               </div>
             </div>
-            <h3 class="subheading centered">{{ $t('section-principles-excellence-subheading') }}</h3>
+            <h3 class="subheading centered">
+              {{ $t("section-principles-excellence-subheading") }}
+            </h3>
             <p v-html="$t('section-principles-excellence-text')"></p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping scroll-effect scroll-effect-delayed-1">
+          <div
+            class="col col-tablet-portrait-10 col-large-6 col-wrapping scroll-effect scroll-effect-delayed-1"
+          >
             <div class="row row-centered">
-              <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
+              <div
+                class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom"
+              >
                 <div class="extra-padding-h">
-                  <img src="/img/graphic-participation.png"/>
+                  <img src="/img/graphic-participation.png" />
                 </div>
               </div>
             </div>
-            <h3 class="subheading centered">{{ $t('section-principles-participation-subheading') }}</h3>
+            <h3 class="subheading centered">
+              {{ $t("section-principles-participation-subheading") }}
+            </h3>
             <p v-html="$t('section-principles-participation-text')"></p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
+          <div
+            class="col col-tablet-portrait-10 col-large-6 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2"
+          >
             <div class="row row-centered">
-              <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
+              <div
+                class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom"
+              >
                 <div class="extra-padding-h">
-                  <img src="/img/graphic-openness.png"/>
+                  <img src="/img/graphic-openness.png" />
                 </div>
               </div>
             </div>
-            <h3 class="subheading centered">{{ $t('section-principles-openness-subheading') }}</h3>
+            <h3 class="subheading centered">
+              {{ $t("section-principles-openness-subheading") }}
+            </h3>
             <p v-html="$t('section-principles-openness-text')"></p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-6 col-wrapping col-bottom-margin scroll-effect scroll-effect-delayed-3">
+          <div
+            class="col col-tablet-portrait-10 col-large-6 col-wrapping col-bottom-margin scroll-effect scroll-effect-delayed-3"
+          >
             <div class="row row-centered">
-              <div class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom">
+              <div
+                class="col col-6 col-tablet-portrait-4 col-large-6 extra-margin-bottom"
+              >
                 <div class="extra-padding-h">
-                  <img src="/img/graphic-sustainability.png"/>
+                  <img src="/img/graphic-sustainability.png" />
                 </div>
               </div>
             </div>
-            <h3 class="subheading centered">{{ $t('section-principles-sustainability-subheading') }}</h3>
+            <h3 class="subheading centered">
+              {{ $t("section-principles-sustainability-subheading") }}
+            </h3>
             <p v-html="$t('section-principles-sustainability-text')"></p>
           </div>
-
         </div>
       </div>
-    </app-content-section>
-
-
-
+    </app-content-section>     
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered">
-
           <div class="col col-large-10 scroll-effect">
-            <h2 class="heading centered" id="benefits">{{ $t('section-benefits-heading') }}</h2>
+            <h2 class="heading centered" id="benefits">
+              {{ $t("section-benefits-heading") }}
+            </h2>
           </div>
 
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping  col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1">
-            <h3 class="subheading centered">{{ $t('section-benefits-subheading-1') }}</h3>
+          <div
+            class="col col-tablet-portrait-10 col-large-4 col-wrapping  col-large-no-bottom-margin scroll-effect scroll-effect-delayed-1"
+          >
+            <h3 class="subheading centered">
+              {{ $t("section-benefits-subheading-1") }}
+            </h3>
             <p v-html="$t('section-benefits-text-1')"></p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2">
-            <h3 class="subheading centered">{{ $t('section-benefits-subheading-2') }}</h3>
+          <div
+            class="col col-tablet-portrait-10 col-large-4 col-wrapping col-large-no-bottom-margin scroll-effect scroll-effect-delayed-2"
+          >
+            <h3 class="subheading centered">
+              {{ $t("section-benefits-subheading-2") }}
+            </h3>
             <p v-html="$t('section-benefits-text-2')"></p>
           </div>
-          <div class="col col-tablet-portrait-10 col-large-4 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-3">
-            <h3 class="subheading centered">{{ $t('section-benefits-subheading-3') }}</h3>
+          <div
+            class="col col-tablet-portrait-10 col-large-4 col-wrapping col-no-bottom-margin scroll-effect scroll-effect-delayed-3"
+          >
+            <h3 class="subheading centered">
+              {{ $t("section-benefits-subheading-3") }}
+            </h3>
             <p v-html="$t('section-benefits-text-3')"></p>
           </div>
-
         </div>
       </div>
-    </app-content-section>
-
-
+    </app-content-section> -->
 
     <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
-
   </div>
 </template>
 
 <script>
+import ContentSection from "@/components/shared/ContentSection.vue";
+import GenericContentBlock from "@/components/GenericContentBlock.vue";
+import Footer from "@/components/shared/Footer.vue";
+import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-    import ContentSection from '@/components/shared/ContentSection.vue'
-    import Footer from '@/components/shared/Footer.vue'
-    import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
+import { getTranslation } from "@/assets/support.js";
+import { mapGetters } from "vuex";
 
-    export default {
-        components: {
-            SectionNewsletterSignup,
-            'app-content-section': ContentSection,
-            'app-footer': Footer
+export default {
+  components: {
+    GenericContentBlock,
+    SectionNewsletterSignup,
+    "app-content-section": ContentSection,
+    "app-footer": Footer,
+  },
+  data() {
+    return {
+      content: {},
+      isReverse: false,
+      viewConfig: {
+        visible: true,
+        vOrientation: false,
+        heading: { visible: false },
+        subheading: { visible: true },
+        description: { visible: true },
+        image: { visible: true, size: "lg", rounded: false },
+        img_description: { visible: false },
+        button: { disabled: false, visible: true },
+        second_button: { disabled: false, visible: false },
+      },
+    };
+  },
+  props: {
+    platform: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  metaInfo: function() {
+    return {
+      title: this.$t("page-title"),
+      meta: [
+        {
+          property: "og:title",
+          content: this.$t("page-title"),
+          template: "%s | " + this.$t("site-title"),
         },
-        props: {
-            platform: {
-                type: Boolean,
-                default: false
-            }
-        },
-        metaInfo: function() {
-            return {
-                title: this.$t('page-title'),
-                meta: [
-                    {
-                        property: 'og:title',
-                        content: this.$t('page-title'),
-                        template: '%s | '+this.$t('site-title')
-                    }
-                ]
-            }
-        }
-    }
-
+      ],
+    };
+  },
+  computed: {
+    ...mapGetters({ getGContent: "content/getGenericContent" }),
+  },
+  methods: {
+    localTranslation(textContent) {
+      return getTranslation(textContent, this.$i18n.locale);
+    },
+    loadContent() {
+      this.content = this.getGContent("zurich_style").main_content.map((x) =>
+        this.toggleReverse(x)
+      );
+    },
+    toggleReverse(contentItem) {
+      contentItem.reverse = this.isReverse;
+      this.isReverse = !this.isReverse;
+      return contentItem;
+    },
+  },
+  created() {
+    this.loadContent();
+  },
+};
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

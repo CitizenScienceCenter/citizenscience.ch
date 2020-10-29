@@ -68,7 +68,7 @@
       </div>
 
       <!-- TODO: verify before removing -->
-      <!--<div class="content-subsection">
+      <!-- <div class="content-subsection">
         <div class="content-wrapper">
           <div class="row row-centered row-reverse-large row-middle">
             <div
@@ -234,7 +234,7 @@ export default {
     //   win.focus();
     // },
     loadContent() {
-      this.content = this.getGContent("whyContribute").map((x) =>
+      this.content = this.getGContent("why_contribute").map((x) =>
         this.toggleReverse(x)
       );
     },

@@ -1,6 +1,6 @@
 {
   "community": {
-    "contentList": [
+    "main_content": [
       {
         "description": {
           "en": "<p>The <strong>Citizen Science Center Zurich</strong> is  providing a platform for people interested in Citizen Science, including academia and the wider public, to exchange ideas and knowledge, and collaborate in projects. Community building at the Center means facilitating the growth of an active group of academic researchers, citizen scientists and partner organizations through various types of interaction. In-person and online, we create opportunities for them to connect, interact, share, and grow. Our ambition is for all to ultimately engage in highly participatory Citizen Science activities, be it as organizers, contributors or other roles.</p>",
@@ -20,7 +20,7 @@
         "image": ""
       }
     ],
-    "ourCommunity":{
+    "our_community":{
       "subheading": {
         "en": "Who is our community?",
         "de": ""
@@ -31,7 +31,7 @@
       },
       "image": "/img/uzh-eth.jpg"
     },
-    "howJoin": {
+    "how_join": {
       "subheading": {
         "en": "How can you join our community?",
         "de": ""
@@ -68,7 +68,7 @@
       "en": "",
       "de": ""
     },
-    "memberList": [
+    "member_list": [
       {
         "name": "Prof. Norman Backhaus",
         "organization": "UZH, Geographisches Institut",

@@ -82,7 +82,7 @@
 
 <script>
 
-import news from "@/assets/cover_list.json";
+import news from "@/assets/data_config/cover_list.json";
 import Cover from "./shared/Cover";
 import ContentSection from "./shared/ContentSection";
 

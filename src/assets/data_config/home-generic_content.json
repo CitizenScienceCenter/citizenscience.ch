@@ -1,5 +1,5 @@
 {
-  "home_ourCommunity": {
+  "home_our_community": {
     "heading": {
       "en": "Our Community",
       "de": "Unsere Gemeinschaft"
@@ -27,7 +27,7 @@
     },
     "second_button": {}
   },
-  "home_ourMission": {
+  "home_our_mission": {
     "heading": {
       "en": "Our Mission",
       "de": "Unsere Gemeinschaft"

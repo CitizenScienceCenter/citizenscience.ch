@@ -1,4 +1,4 @@
-import coverListDefault from "@/assets/cover_list.json";
+import coverListDefault from "@/assets/data_config/cover_list.json";
 import { getRemoteFile } from "@/minio.js";
 
 const state = {

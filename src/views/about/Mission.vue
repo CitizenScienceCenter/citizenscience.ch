@@ -153,61 +153,6 @@
       </div>
     </app-content-section> -->
 
-    <!-- Special section joit initiative -->
-    <!-- <app-content-section class="overflow-hidden">
-      <div class="content-wrapper">
-        <div class="row row-reverse-large">
-          <div
-            class="col col-tablet-portrait-11 col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect"
-          >
-            <div class="row">
-              <h2 class="heading centered left-aligned-large">
-                {{ localTranslation(joinInitiativeContent.heading) }}
-              </h2>
-            </div>
-
-            <div class="row row-centered">
-              <component
-                :is="getDynamicData"
-                class="text-description"
-              ></component>
-            </div>
-            <br />
-            <p class="centered left-aligned-large">
-              <img
-                v-if="this.$i18n.locale === 'en'"
-                class="uzh-eth-logo"
-                alt="University of Zurich / ETH Zurich"
-                src="@/assets/shared/uzh_eth_logo_e_pos.svg"
-              />
-              <img
-                v-else
-                alt="Universität Zürich / ETH Zürich"
-                class="uzh-eth-logo"
-                src="@/assets/shared/uzh_eth_logo_d_pos.svg"
-              />
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="background-wrapper background-wrapper-move-left scroll-effect scroll-effect-delayed-1"
-      >
-        <div class="content-wrapper">
-          <div class="row row-centered">
-            <div
-              class="col col-tablet-portrait-10 col-large-7 col-large-after-1"
-            >
-              <img
-                :src="joinInitiativeContent.image"
-                style="border-radius:50%"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </app-content-section> -->
-
     <!-- TODO: verify the style config -->
     <!-- Join Initiative section -->
     <app-content-section class="overflow-hidden content-section-compact">
@@ -280,27 +225,16 @@ export default {
   },
   computed: {
     ...mapGetters({ getGContent: "content/getGenericContent" }),
-    getDynamicData: function() {
-      return {
-        template: `<div>${this.localTranslation(
-          this.joinInitiativeContent.description
-        )}</div>`,
-      };
-    },
   },
   methods: {
-    // openInNewTab: function(url) {
-    //   var win = window.open(url, "_blank");
-    //   win.focus();
-    // },
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
     loadContent() {
-      this.content = this.getGContent("mission").contentList.map((x) =>
+      this.content = this.getGContent("mission").main_content.map((x) =>
         this.toggleReverse(x)
       );
-      this.joinInitiativeContent = this.getGContent("mission").joinInitiative;
+      this.joinInitiativeContent = this.getGContent("mission").join_initiative;
     },
     toggleReverse(contentItem) {
       contentItem.reverse = this.isReverse;

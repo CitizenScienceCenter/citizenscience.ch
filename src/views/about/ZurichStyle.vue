@@ -104,6 +104,16 @@
       </div>
     </app-content-section>
 
+    <!-- TODO: verify the style config -->
+    <!-- SDGs section -->
+    <app-content-section class="overflow-hidden">
+      <generic-content-width-block
+        :content="sdgContent"
+        :visible="true"
+        :hReverse="false"
+      ></generic-content-width-block>
+    </app-content-section>
+
     <!-- TODO: verify before removing -->
     <!-- <app-content-section class="overflow-hidden">
       <div
@@ -305,6 +315,7 @@
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
+import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
@@ -314,6 +325,7 @@ import { mapGetters } from "vuex";
 export default {
   components: {
     GenericContentBlock,
+    GenericContentWidthBlock,
     SectionNewsletterSignup,
     "app-content-section": ContentSection,
     "app-footer": Footer,
@@ -321,7 +333,8 @@ export default {
   data() {
     return {
       content: {},
-      isReverse: false,
+      sdgContent: {},
+      isReverse: false, // this is used for orientation control when loop is implemented
       viewConfig: {
         visible: true,
         vOrientation: false,
@@ -364,6 +377,7 @@ export default {
       this.content = this.getGContent("zurich_style").main_content.map((x) =>
         this.toggleReverse(x)
       );
+      this.sdgContent = this.getGContent("zurich_style").sdg;
     },
     toggleReverse(contentItem) {
       contentItem.reverse = this.isReverse;

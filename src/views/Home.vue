@@ -16,7 +16,7 @@
     <app-cover></app-cover>
 
     <!-- Content Section -->
-    <app-content-section class="small-padding">
+    <app-content-section class="small-padding overflow-hidden">
       <div class="row row-centered">
         <!-- Left Column -->
         <div

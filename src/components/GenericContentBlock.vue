@@ -161,7 +161,7 @@ export default {
       // This validation is only for large and bigger resolution screens
       const horizontal = {
         no_img: { "text-content": "col-large-10" },
-        sm: { "img-content": "col-4 col-large-3", "text-content": "col-large-8" },
+        sm: { "img-content": "col-6 col-large-4", "text-content": "col-large-8" },
         md: { "img-content": "col-6 col-large-5", "text-content": "col-large-6" },
         lg: { "img-content": "col-8 col-large-7", "text-content": "col-large-5" },
       };

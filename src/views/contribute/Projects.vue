@@ -28,7 +28,7 @@
 </i18n>
 
 <template>
-  <div id="top">
+  <div >
     <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">

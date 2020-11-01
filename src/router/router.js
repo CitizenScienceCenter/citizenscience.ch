@@ -13,7 +13,6 @@ export const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   console.log("navigate to: " + to.path);
-  console.log("split:");
 
   // Get the account profile
   store.dispatch("user/getAccountProfile");

@@ -319,7 +319,6 @@ import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue"
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { getTranslation } from "@/assets/support.js";
 import { mapGetters } from "vuex";
 
 export default {
@@ -339,12 +338,13 @@ export default {
         visible: true,
         vOrientation: false,
         heading: { visible: false },
-        subheading: { visible: true },
+        title: { visible: true },
+        subtitle: { visible: true },
         description: { visible: true },
         image: { visible: true, size: "lg", rounded: false },
         img_description: { visible: false },
         button: { disabled: false, visible: true },
-        second_button: { disabled: false, visible: false },
+        second_button: { disabled: false, visible: true },
       },
     };
   },
@@ -370,9 +370,6 @@ export default {
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
-    localTranslation(textContent) {
-      return getTranslation(textContent, this.$i18n.locale);
-    },
     loadContent() {
       this.content = this.getGContent("zurich_style").main_content.map((x) =>
         this.toggleReverse(x)

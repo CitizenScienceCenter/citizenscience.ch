@@ -192,7 +192,8 @@ export default {
         visible: true,
         vOrientation: false,
         heading: { visible: false },
-        subheading: { visible: true },
+        title: { visible: false },
+        subtitle: { visible: true },
         description: { visible: true },
         image: { visible: true, size: "md", rounded: true },
         img_description: { visible: false },
@@ -234,7 +235,7 @@ export default {
     //   win.focus();
     // },
     loadContent() {
-      this.content = this.getGContent("why_contribute").map((x) =>
+      this.content = this.getGContent("why_contribute").main_content.map((x) =>
         this.toggleReverse(x)
       );
     },

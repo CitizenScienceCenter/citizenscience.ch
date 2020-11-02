@@ -2,7 +2,7 @@
   "mission": {
     "main_content": [
       {
-        "subheading": {
+        "subtitle": {
           "en": "",
           "de": ""
         },
@@ -13,7 +13,7 @@
         "image": "/img/graphic-roadmap.png"
       },
       {
-        "subheading": {
+        "subtitle": {
           "en": "The Goals of the Center include:",
           "de": ""
         },
@@ -38,7 +38,7 @@
         "en": "A Joint Initiative",
         "de": "Eine gemeinsame Initiative"
       },
-      "subheading": {
+      "subtitle": {
         "en": "",
         "de": ""
       },
@@ -56,7 +56,7 @@
   "zurich_style": {
     "main_content": [
       {
-        "subheading": {
+        "subtitle": {
           "en": "",
           "de": ""
         },
@@ -76,7 +76,7 @@
         "second_button": {}
       },
       {
-        "subheading": {
+        "subtitle": {
           "en": "Next Generation Citizen Science",
           "de": ""
         },
@@ -96,12 +96,12 @@
         "second_button": {}
       }
     ],
-    "sdg":{
+    "sdg": {
       "heading": {
         "en": "Citizen Science for the SDGs",
         "de": "Citizen Science für die SDGs"
       },
-      "subheading": {
+      "subtitle": {
         "en": "",
         "de": ""
       },
@@ -115,5 +115,108 @@
         "de": ""
       }
     }
+  },
+  "offer": {
+    "main_content": [
+      {
+        "heading": {
+          "en": "",
+          "de": ""
+        },
+        "title": {
+          "en": "Tools",
+          "de": "Tools"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> The Citizen Science Center Zürich is developing a set of tools that make it easy for scientists and citizens to contribute to existing Citizens Science projects, or create new ones. The Web platform is used mainly where contributors perform <strong> complex data classification tasks </strong> such as image recognition, tagging, mapping, transcription of digitized text, etc. These are tasks that can usually be best completed on a computer screen. The mobile component (smartphone App, currently under development) will allow contributors to collect data in the form of  geo-located images, survey answers, and other types of media, such as video and sound </p> <p> Our tools are developed as open source software (see our <a href='https://github.com/CitizenScienceCenter' target='_blank'>GitHub repository</a>) which means that it takes advantage of existing and similar developments, and its code is also publicly available for similar implementations. The platforms (web and mobile) are developed in full cooperation with the department S3IT (Service and Support for Science IT) of the University of Zurich. </p>",
+          "de": ""
+        },
+        "image": "/img/graphic-toolkit.png"
+      },
+      {
+        "heading": {
+          "en": "",
+          "de": ""
+        },
+        "title": {
+          "en": "Community",
+          "de": "Gemeinschaft"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond. Our activities are shaped around our members, and include online and offline interactions and local events, in an open, creative and interdisciplinary way. </p>",
+          "de": ""
+        },
+        "image": "/img/graphic-community.png",
+        "button": {
+          "link": null,
+          "route": "/community",
+          "icon": null,
+          "selfWindow": true,
+          "en": "Our Community",
+          "de": ""
+        },
+        "second_button": {}
+      },
+      {
+        "heading": {
+          "en": "",
+          "de": ""
+        },
+        "title": {
+          "en": "Methodology",
+          "de": "Methodologie"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> Designing, planning and implementing Citizen Science projects may be challenging for researchers (professional and not) approaching the methodology for the first time. The team at the CS Center is there to help with theoretical, practical, and ethical guidelines and standards. For aspects of ethics, the Center is partnering with the <a href='https://bioethics.ethz.ch/' target='_blank'> Health Ethics and Policy Lab at ETH </a>. </p>",
+          "de": ""
+        },
+        "image": "/img/graphic-knowledge.png"
+      },
+      {
+        "heading": {
+          "en": "",
+          "de": ""
+        },
+        "title": {
+          "en": "Networking",
+          "de":""
+        },
+        "subtitle": {
+          "en": "",
+          "de":""
+        },
+        "description": {
+          "en": "<p> The CS Center encourages practitioners to share knowledge, expertise and experiences, and join forces across research groups, institutions, and research domains. The CS Center Zurich works in collaboration with all major CS national and international networks, and is keen to build bridges between practitioners in Switzerland and beyond. </p> <p> We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project. </p>",
+          "de": ""
+        },
+        "image": "/img/graphic-platform.png",
+        "button": {
+          "link": "mailto:info@citizenscience.ch",
+          "route": null,
+          "icon": "fas fa-envelope",
+          "selfWindow": true,
+          "en": "info@citizenscience.ch"
+        },
+        "second_button": {
+          "link": "tel:+41446342197",
+          "route": null,
+          "icon": "fas fa-phone",
+          "selfWindow": true,
+          "en": "+41 44 634 21 97"
+        }
+      }
+    ]
   }
 }

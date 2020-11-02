@@ -18,22 +18,22 @@
           <!-- Heading section -->
           <div
             class="row row-full-width row-centered row-large-left-aligned"
-            v-if="content.heading"
+            v-if="localTranslation(content.heading)"
           >
             <h2 class="heading centered left-aligned-large">
-              {{ localTranslation(content.heading) }}
+              {{ localTranslation(contentData.heading) }}
             </h2>
           </div>
 
           <!-- Subheading section -->
-          <div class="row row-full-width" v-if="content.subheading">
+          <div class="row row-full-width" v-if="localTranslation(contentData.subtitle)">
             <div
               class="subheading"
-              v-html="localTranslation(contentData.subheading)"
+              v-html="localTranslation(contentData.subtitle)"
             ></div>
           </div>
           <!-- Description section -->
-          <div class="row row-centered" v-if="content.description">
+          <div class="row row-centered" v-if="localTranslation(content.description)">
             <component
               :is="getDynamicData"
               class="text-description"

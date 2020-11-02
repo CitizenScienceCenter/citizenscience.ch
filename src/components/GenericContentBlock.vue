@@ -9,7 +9,10 @@
     "
   >
     <!-- Heading Section -->
-    <div class="row row-centered " v-if="br.heading.visible">
+    <div
+      class="row row-centered "
+      v-if="br.heading.visible && localTranslation(contentData.heading)"
+    >
       <div class="col col-12 scroll-effect heading-section">
         <h2 class="heading small">
           {{ localTranslation(contentData.heading) }}
@@ -47,11 +50,19 @@
         class="col col-11 scroll-effect text-section"
         :class="checkVerticalOrientation('text-content')"
       >
-        <!-- Subheading section -->
-        <div class="row row-full-width" v-if="br.subheading.visible">
+        <div
+          class="row row-full-width row-centered row-large-left-aligned"
+          v-if="br.title.visible && localTranslation(contentData.title)"
+        >
+          <h2 class="heading small centered left-aligned-large">
+            {{ localTranslation(contentData.title) }}
+          </h2>
+        </div>
+        <!-- Subtitle section -->
+        <div class="row row-full-width" v-if="br.subtitle.visible">
           <div
             class="subheading"
-            v-html="localTranslation(contentData.subheading)"
+            v-html="localTranslation(contentData.subtitle)"
           ></div>
         </div>
         <!-- Description section -->
@@ -120,7 +131,18 @@ export default {
   name: "GenericContentBlock",
   data() {
     return {
-      br: this.viewConfig,
+      br: {
+        visible: false,
+        vOrientation: false,
+        heading: { visible: false },
+        title: { visible: false },
+        subtitle: { visible: false },
+        description: { visible: false },
+        image: { visible: false, size: "md", rounded: true },
+        img_description: { visible: false },
+        button: { disabled: true, visible: false },
+        second_button: { disabled: true, visible: false },
+      },
       contentData: {},
     };
   },
@@ -161,9 +183,18 @@ export default {
       // This validation is only for large and bigger resolution screens
       const horizontal = {
         no_img: { "text-content": "col-large-10" },
-        sm: { "img-content": "col-6 col-large-4", "text-content": "col-large-8" },
-        md: { "img-content": "col-6 col-large-5", "text-content": "col-large-6" },
-        lg: { "img-content": "col-8 col-large-7", "text-content": "col-large-5" },
+        sm: {
+          "img-content": "col-6 col-large-4",
+          "text-content": "col-large-8",
+        },
+        md: {
+          "img-content": "col-6 col-large-5",
+          "text-content": "col-large-6",
+        },
+        lg: {
+          "img-content": "col-8 col-large-7",
+          "text-content": "col-large-5",
+        },
       };
       const viewStyle = {
         vertical: {
@@ -188,8 +219,16 @@ export default {
       }
       return selectedView[element];
     },
+    validateStyle() {
+      for (const key in this.viewConfig) {
+        if (Object.keys(this.br).includes(key)) {
+          this.br[key] = this.viewConfig[key];
+        }
+      }
+    },
   },
   created() {
+    this.validateStyle();
     this.contentData = this.content;
   },
 };

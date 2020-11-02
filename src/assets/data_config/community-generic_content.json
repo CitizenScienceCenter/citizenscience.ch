@@ -9,7 +9,7 @@
         "image": "/img/graphic-community.png"
       },
       {
-        "subheading": {
+        "subtitle": {
           "en": "Why a community?",
           "de": ""
         },
@@ -21,7 +21,7 @@
       }
     ],
     "our_community":{
-      "subheading": {
+      "subtitle": {
         "en": "Who is our community?",
         "de": ""
       },
@@ -32,8 +32,12 @@
       "image": "/img/uzh-eth.jpg"
     },
     "how_join": {
-      "subheading": {
+      "title": {
         "en": "How can you join our community?",
+        "de": ""
+      },
+      "subtitle": {
+        "en": "",
         "de": ""
       },
       "description": {

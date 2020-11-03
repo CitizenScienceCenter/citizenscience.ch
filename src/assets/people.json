@@ -1,0 +1,28 @@
+[
+  {
+    "category": {
+      "en": "Chair of the Board of Directors",
+      "de": "Vorsitzende"
+    },
+    "people_list": [
+      {
+        "name": "Mike Martin",
+        "position": {
+            "en": "Department of Psychology Gerontopsychology - University of Zurich",
+            "de": "Department of Psychology Gerontopsychology - University of Zurich"
+          },
+        "email": "m.martin@psychologie.uzh.ch",
+        "photo": "/img/people/mike.jpg"
+      },
+      {
+        "name": "Michael Ristow",
+        "position": {
+            "en": "Department of Health Sciences and Technology - ETH Zurich",
+            "de": "Department of Health Sciences and Technology - ETH Zurich"
+          },
+        "email": "michael-ristow@ethz.ch",
+        "photo": "/img/people/michael.jpg"
+      }
+    ]
+  }
+]

@@ -19,7 +19,7 @@
           v-on:change="handleFileUpload()"
         />
       </div>
-      <small v-show="!file">Please browse the file to submit</small>
+      <small v-show="!file">1. Please browse the file to submit</small>
     </div>
     <div class="col col-10 col-tablet-portrait-4">
       <select class="form-control" v-model="selected">
@@ -27,14 +27,17 @@
           {{ item.name }}
         </option>
       </select>
-      <small v-show="!selected">Please select file type</small>
+      <small v-show="!selected">2. Please select file type</small>
     </div>
     <div class="col col-10 col-tablet-portrait-4">
       <div class="button-group centered" v-show="file && selected">
         <button class="button button-primary-main" @click="submitFile()">
-          {{$t("submit-button")}}
+          {{ $t("submit-button") }}
         </button>
       </div>
+    </div>
+    <div class="col col-12 col-tablet-portrait-10 centered" v-if="error">
+      <small>{{ error }}</small>
     </div>
     <div class="col col-12" v-if="file">
       <pre v-html="getPrettyJson"></pre>
@@ -49,16 +52,21 @@ export default {
   name: "UploadFile",
   data() {
     return {
-      file: "",
+      file: null,
+      error: "",
       items: [
         { name: "Home - GC", file_name: "home-generic_content.json" },
-        { name: "Contribute - GC", file_name: "contribute-generic_content.json" },
+        {
+          name: "Contribute - GC",
+          file_name: "contribute-generic_content.json",
+        },
         { name: "Create - GC", file_name: "create-generic_content.json" },
         { name: "Cover List", file_name: "cover_list.json" },
         { name: "Events List", file_name: "events.json" },
         { name: "News List", file_name: "news.json" },
         { name: "Community - GC", file_name: "community-generic_content.json" },
         { name: "About - GC", file_name: "about-generic_content.json" },
+        { name: "People List", file_name: "people.json" },
       ],
       selected: "",
     };
@@ -66,30 +74,36 @@ export default {
   computed: {
     // Beautify the json code for better lecture
     getPrettyJson() {
-      let json = JSON.stringify(JSON.parse(this.file), undefined, 2);
-      json = json
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
-      json = json.replace(
-        /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
-        function(match) {
-          var cls = "color: darkorange;";
-          if (/^"/.test(match)) {
-            if (/:$/.test(match)) {
-              cls = "color: blue;";
-            } else {
-              cls = "color: green;";
+      try {
+        let json = JSON.stringify(JSON.parse(this.file), undefined, 2);
+        json = json
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+        json = json.replace(
+          /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
+          function(match) {
+            var cls = "color: darkorange;";
+            if (/^"/.test(match)) {
+              if (/:$/.test(match)) {
+                cls = "color: blue;";
+              } else {
+                cls = "color: green;";
+              }
+            } else if (/true|false/.test(match)) {
+              cls = "color: red;";
+            } else if (/null/.test(match)) {
+              cls = "color: magenta;";
             }
-          } else if (/true|false/.test(match)) {
-            cls = "color: red;";
-          } else if (/null/.test(match)) {
-            cls = "color: magenta;";
+            return '<span style="' + cls + '">' + match + "</span>";
           }
-          return '<span style="' + cls + '">' + match + "</span>";
-        }
-      );
-      return json;
+        );
+        return json;
+      } catch (error) {
+        this.error =
+          "JSON file contains following error. Please fix it before to submit";
+        return error;
+      }
     },
   },
   methods: {
@@ -103,8 +117,16 @@ export default {
       return promise;
     },
     async handleFileUpload() {
+      this.error = null;
+      this.selected = null;
+      if (
+        this.$refs.file.files[0] &&
+        this.$refs.file.files[0].type !== "application/json"
+      ) {
+        this.error = "File is not a JSON type. Please select a valid JSON file";
+        return;
+      }
       this.file = await this.getContent(this.$refs.file.files[0]);
-      this.getPrettyJson;
     },
     submitFile() {
       if (confirm("Are you sure to submit the file?")) {
@@ -116,7 +138,7 @@ export default {
   },
   created() {
     // sorting file names alphabetically
-    this.items = this.items.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    this.items = this.items.sort((a, b) => (a.name > b.name ? 1 : -1));
   },
 };
 </script>

@@ -301,6 +301,11 @@ export const routes = [
             path: "people",
             component: People,
             meta: { i18n: "navigation-about-people", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // load content from remote server
+              await store.dispatch("content/getPeopleRemote");
+              next();
+            },
           },
           {
             path: "partnerships",

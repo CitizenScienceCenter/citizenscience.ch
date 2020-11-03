@@ -297,12 +297,6 @@ export default {
         display: block;
       }
     }
-    .text-section {
-      .subheading {
-      }
-      .text-description {
-      }
-    }
   }
 }
 @media only screen and (min-width: $viewport-tablet-portrait) {
@@ -343,10 +337,6 @@ export default {
     padding-top: $spacing-2;
     .text-section {
       padding: 0 $spacing-3 0 $spacing-4 !important;
-      .subheading {
-      }
-      .text-description {
-      }
       .button-section {
         .button {
           height: 40px;
@@ -354,11 +344,6 @@ export default {
       }
       &.vertical {
         padding: 0 $spacing-3 0 $spacing-1 !important;
-        .text-description,
-        .button-section {
-          .button {
-          }
-        }
       }
     }
   }
@@ -379,10 +364,6 @@ export default {
     }
     .text-section {
       padding: 0 $spacing-3 0 $spacing-5 !important;
-      .subheading {
-      }
-      .text-description {
-      }
       .button-section {
         .button {
           height: 40px;

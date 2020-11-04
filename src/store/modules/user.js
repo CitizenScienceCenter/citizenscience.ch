@@ -91,7 +91,6 @@ const actions = {
           },
         }
       );
-      console.log(await log_res.data);
       // const log_res = await fetch(
       //   process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
       //   {

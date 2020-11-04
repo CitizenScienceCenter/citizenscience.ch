@@ -32,7 +32,7 @@
             {{ localTranslation(cover.title) }}
           </h2>
           <p
-            class="cover-subheading scroll-effect scroll-effect-delayed-5"
+            class="cover-subheading scroll-effect scroll-effect-delayed-3"
             v-if="br.subheading.visible"
           >
             {{ localTranslation(cover.lead) }}

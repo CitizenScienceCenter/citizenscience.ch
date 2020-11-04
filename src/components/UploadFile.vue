@@ -40,7 +40,7 @@
       <small>{{ error }}</small>
     </div>
     <div class="col col-12" v-if="file">
-      <pre v-html="getPrettyJson"></pre>
+      <pre ref="code" v-html="getPrettyJson"></pre>
     </div>
   </div>
 </template>
@@ -99,10 +99,11 @@ export default {
           }
         );
         return json;
-      } catch (error) {
-        this.error =
-          "JSON file contains following error. Please fix it before to submit";
-        return error;
+      } catch (e) {
+        this.setErrorMessage(
+          "JSON file contains following error. Please fix it before to submit"
+        );
+        return e;
       }
     },
   },
@@ -119,11 +120,16 @@ export default {
     async handleFileUpload() {
       this.error = null;
       this.selected = null;
+      if (this.$refs.code) {
+        this.$refs.code.innerHTML = null;
+      }
       if (
         this.$refs.file.files[0] &&
         this.$refs.file.files[0].type !== "application/json"
       ) {
-        this.error = "File is not a JSON type. Please select a valid JSON file";
+        this.setErrorMessage(
+          "File is not a JSON type. Please select a valid JSON file"
+        );
         return;
       }
       this.file = await this.getContent(this.$refs.file.files[0]);
@@ -134,6 +140,9 @@ export default {
       } else {
         return;
       }
+    },
+    setErrorMessage(message) {
+      this.error = message;
     },
   },
   created() {

@@ -12,7 +12,7 @@
             "de": "Department of Psychology Gerontopsychology - University of Zurich"
           },
         "email": "m.martin@psychologie.uzh.ch",
-        "photo": "/img/people/mike.jpg"
+        "photo": "/img/people/mike.jpeg"
       },
       {
         "name": "Michael Ristow",
@@ -21,7 +21,147 @@
             "de": "Department of Health Sciences and Technology - ETH Zurich"
           },
         "email": "michael-ristow@ethz.ch",
-        "photo": "/img/people/michael.jpg"
+        "photo": "/img/people/michael.jpeg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Directors",
+      "de": "Direktorium"
+    },
+    "people_list": [
+      {
+        "name": "Abraham Bernstein",
+        "position": {
+            "en": "Department of Informatics – University of Zurich",
+            "de": "Department of Informatics – University of Zurich"
+          },
+        "email": "bernstein@ifi.uzh.ch",
+        "photo": "/img/people/abraham.jpeg"
+      },
+      {
+        "name": "Ernst Hafen",
+        "position": {
+            "en": "Department of Biology - ETH Zurich",
+            "de": "Department of Biology - ETH Zurich"
+          },
+        "email": "hafen@imsb.biol.ethz.ch",
+        "photo": "/img/people/ernst.jpeg"
+      },
+      {
+        "name": "Effy Vayena",
+        "position": {
+            "en": "Department of Health Sciences and Technology - ETH Zurich",
+            "de": "Department of Health Sciences and Technology - ETH Zurich"
+          },
+        "email": "effy.vayena@hest.ethz.ch",
+        "photo": "/img/people/effy.jpeg"
+      },
+      {
+        "name": "Claudia Witt",
+        "position": {
+            "en": "USZ, Institut für Komplementäre und Integrative Medizin",
+            "de": "USZ, Institut für Komplementäre und Integrative Medizin"
+          },
+        "email": "claudia.witt@uzh.ch",
+        "photo": "/img/people/claudia.jpeg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Advisors",
+      "de": "Beraterinnen und Berater"
+    },
+    "people_list": [
+      {
+        "name": "Dirk Helbing",
+        "position": {
+            "en": "Department of Humanities, Social and Political Sciences - ETH Zurich",
+            "de": "Department of Humanities, Social and Political Sciences - ETH Zurich"
+          },
+        "email": "dirk.helbing@gess.ethz.ch",
+        "photo": "/img/people/dirk.jpeg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Team Citizen Science Center Zurich",
+      "de": "Team Citizen Science Center Zürich"
+    },
+    "people_list": [
+      {
+        "name": "Rosy Mondardini",
+        "position": {
+            "en": "Managing Director",
+            "de": "Geschäftsführung"
+          },
+        "email": "maria.mondardini@uzh.ch",
+        "photo": "/img/people/rosy.jpeg"
+      },
+      {
+        "name": "Fanny Gutsche Jones",
+        "position": {
+            "en": "Community Manager",
+            "de": "Community Manager"
+          },
+        "email": "fanny.jones@uzh.ch",
+        "photo": "/img/people/fanny.jpeg"
+      },
+      {
+        "name": "Nikos Georgomanolis",
+        "position": {
+            "en": "Developer",
+            "de": "Entwickler"
+          },
+        "email": "nikolaos.georgomanolis@uzh.ch",
+        "photo": "/img/people/nikos.jpg"
+      },
+      {
+        "name": "Andres Dorado",
+        "position": {
+            "en": "Front-End Developer",
+            "de": "Front-End Entwickler"
+          },
+        "email": "andres.doradodorado@uzh.ch",
+        "photo": "/img/people/andres.jpeg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Team Participatory Science Academy",
+      "de": "Partizipative Wissenschaftsakademie"
+    },
+    "people_list": [
+      {
+        "name": "Susanne Tönsmann",
+        "position": {
+            "en": "Managing Director",
+            "de": "Geschäftsführung"
+          },
+        "email": "susanne.toensmann@uzh.ch",
+        "photo": "/img/people/susanne.jpeg"
+      },
+      {
+        "name": "Petra Biberhofer",
+        "position": {
+            "en": "Development and Coordination of Services",
+            "de": "Angebotsentwicklung und Koordination"
+          },
+        "email": "petra.biberhofer@uzh.ch",
+        "photo": "/img/people/petra.jpeg"
+      },
+      {
+        "name": "Alessandro Rearte",
+        "position": {
+            "en": "Student Assistant",
+            "de": "Studentische Hilfskraft"
+          },
+        "email": "alessandro.rearte@uzh.ch",
+        "photo": "/img/people/alessandro.jpeg"
       }
     ]
   }

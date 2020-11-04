@@ -73,9 +73,11 @@
 
 <template>
   <div class="people-list">
-    <h3 class="subheading centered">{{ $t("subheading-directors-chair") }}</h3>
+    <h3 class="subheading centered scroll-effect">
+      {{ localTranslation(content.category) }}
+    </h3>
 
-    <div class="people-section">
+    <div class="people-section scroll-effect scroll-effect-delayed-1">
       <div class="row row-centered row-wrapping">
         <div
           class="col col-tablet-portrait-6 col-large-3 col-wrapping"
@@ -83,7 +85,12 @@
           :key="person.item"
         >
           <div class="person centered">
-            <img :src="validatePhoto(person.photo)" class="photo" />
+            <img
+              :src="person.photo"
+              :alt="person.name"
+              class="photo"
+              onerror="this.src='/img/people/default.png';"
+            />
             <span class="name">{{ person.name }}</span>
             <span class="position">{{
               localTranslation(person.position)
@@ -133,9 +140,6 @@ export default {
       }
       return person_schema;
     },
-    validatePhoto: function (image) {
-      return image || "/img/people/default.png";
-    }
   },
   created() {
     this.loadData();
@@ -149,10 +153,6 @@ export default {
 
 .people-list {
   margin-bottom: $spacing-4;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   .people-section {
     margin-bottom: $spacing-4;

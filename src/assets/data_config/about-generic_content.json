@@ -48,8 +48,9 @@
       },
       "image": "/img/uzh-eth.jpg",
       "logo": {
-        "en": "/img/svg/uzh_eth_logo_e_pos.svg",
-        "de": "/img/svg/uzh_eth_logo_d_pos.svg"
+        "alt": "University of Zurich / ETH Zurich",
+        "en": "/img/logos/uzh_eth_logo_e_pos.png",
+        "de": "/img/logos/uzh_eth_logo_d_pos.png"
       }
     }
   },
@@ -191,11 +192,11 @@
         },
         "title": {
           "en": "Networking",
-          "de":""
+          "de": ""
         },
         "subtitle": {
           "en": "",
-          "de":""
+          "de": ""
         },
         "description": {
           "en": "<p> The CS Center encourages practitioners to share knowledge, expertise and experiences, and join forces across research groups, institutions, and research domains. The CS Center Zurich works in collaboration with all major CS national and international networks, and is keen to build bridges between practitioners in Switzerland and beyond. </p> <p> We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project. </p>",

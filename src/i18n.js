@@ -256,6 +256,9 @@ export const i18n = new VueI18n({
       "navigation-terms": {
         link: "Privacy Policy & Terms of Use",
       },
+      "navigation-updatefile": {
+        link: "Admin",
+      }, 
     },
   },
 });

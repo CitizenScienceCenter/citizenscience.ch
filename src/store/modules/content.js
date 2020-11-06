@@ -7,10 +7,10 @@ const state = {
   genericContent: undefined,
   events: undefined,
   people: undefined,
+  partnerships: undefined,
   isNewsLoaded: false,
   isGCLoaded: false,
   isEventsLoaded: false,
-  isPeopleLoaded: false,
 };
 
 const getters = {
@@ -25,6 +25,9 @@ const getters = {
   },
   getPeople(state) {
     return state.people;
+  },
+  getPartnerships(state) {
+    return state.partnerships;
   },
 };
 
@@ -81,17 +84,29 @@ const actions = {
     }
   },
   async getPeopleRemote({ commit }) {
-    commit("removeIsLoaded", "people");
     let res = null;
     try {
       res = await getRemoteFile("data/people.json");
       return res;
     } catch (error) {
       // This content is local if the remote content is not retrieved
-      res = require("@/assets/people.json");
+      res = require("@/assets/data_config/people.json");
       return res;
     } finally {
       commit("setPeople", res);
+    }
+  },
+  async getPartnershipsRemote({ commit }) {
+    let res = null;
+    try {
+      res = await getRemoteFile("data/partnerships.json");
+      return res;
+    } catch (error) {
+      // This content is local if the remote content is not retrieved
+      res = require("@/assets/data_config/partnerships.json");
+      return res;
+    } finally {
+      commit("setPartnerships", res);
     }
   },
 };
@@ -114,7 +129,9 @@ const mutations = {
   },
   setPeople(state, payload) {
     state.people = payload;
-    state.isPeopleLoaded = true;
+  },
+  setPartnerships(state, payload) {
+    state.partnerships = payload;
   },
   removeIsLoaded(state, value) {
     switch (value) {
@@ -123,9 +140,6 @@ const mutations = {
         break;
       case "news":
         state.isNewsLoaded = false;
-        break;
-      case "people":
-        state.isPeopleLoaded = false;
         break;
       case "generic":
         state.isGCLoaded = false;

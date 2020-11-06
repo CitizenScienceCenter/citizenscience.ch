@@ -80,7 +80,7 @@
             "
           >
             <button
-              class="button button-secondary"
+              class="button button-secondary button-icon"
               @click="
                 triggerButton(
                   contentData.button.route,
@@ -104,7 +104,7 @@
             "
           >
             <button
-              class="button button-secondary"
+              class="button button-secondary button-icon"
               @click="
                 triggerButton(
                   contentData.second_button.route,

@@ -13,7 +13,8 @@
       <!-- TODO: verify the styles for this component -->
       <div class="row" :class="{ 'row-reverse-large': hReverse }">
         <div
-          class="col col-tablet-portrait-11 col-large-6 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect text-section"
+          class="col col-tablet-portrait-11 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect text-section"
+          :class="[content.image ? 'col-large-6' : 'col-large-12']"
         >
           <!-- Heading section -->
           <div
@@ -26,30 +27,35 @@
           </div>
 
           <!-- Subheading section -->
-          <div class="row row-full-width" v-if="localTranslation(contentData.subtitle)">
+          <div
+            class="row row-full-width"
+            v-if="localTranslation(contentData.subtitle)"
+          >
             <div
               class="subheading"
               v-html="localTranslation(contentData.subtitle)"
             ></div>
           </div>
           <!-- Description section -->
-          <div class="row row-centered" v-if="localTranslation(content.description)">
+          <div
+            class="row row-centered"
+            v-if="localTranslation(content.description)"
+          >
             <component
               :is="getDynamicData"
               class="text-description"
             ></component>
           </div>
-          <br />
-          <p
-            class="centered left-aligned-large"
+          <div
+            class="row row-centered"
             v-if="contentData.logo && contentData.logo.en"
           >
             <img
               class="uzh-eth-logo"
-              alt="University of Zurich / ETH Zurich"
+              :alt="contentData.logo.alt"
               :src="localTranslation(contentData.logo)"
             />
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -125,6 +131,11 @@ export default {
     }
     .text-description {
       font-size: $font-size-small;
+    }
+    .uzh-eth-logo {
+      padding: $spacing-2 0;
+      height: 100%;
+      max-height: 150px;
     }
   }
 }

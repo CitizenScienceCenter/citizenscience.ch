@@ -311,6 +311,11 @@ export const routes = [
             path: "partnerships",
             component: Partnerships,
             meta: { i18n: "navigation-about-partnerships", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // load content from remote server
+              await store.dispatch("content/getPartnershipsRemote");
+              next();
+            },
           },
           {
             path: "contact",

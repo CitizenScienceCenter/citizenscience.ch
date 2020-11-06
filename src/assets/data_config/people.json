@@ -12,7 +12,7 @@
             "de": "Department of Psychology Gerontopsychology - University of Zurich"
           },
         "email": "m.martin@psychologie.uzh.ch",
-        "photo": "/img/people/mike.jpeg"
+        "photo": "/img/people/mike.jpg"
       },
       {
         "name": "Michael Ristow",
@@ -21,7 +21,7 @@
             "de": "Department of Health Sciences and Technology - ETH Zurich"
           },
         "email": "michael-ristow@ethz.ch",
-        "photo": "/img/people/michael.jpeg"
+        "photo": "/img/people/michael.jpg"
       }
     ]
   },
@@ -38,7 +38,7 @@
             "de": "Department of Informatics – University of Zurich"
           },
         "email": "bernstein@ifi.uzh.ch",
-        "photo": "/img/people/abraham.jpeg"
+        "photo": "/img/people/abraham.jpg"
       },
       {
         "name": "Ernst Hafen",
@@ -47,7 +47,7 @@
             "de": "Department of Biology - ETH Zurich"
           },
         "email": "hafen@imsb.biol.ethz.ch",
-        "photo": "/img/people/ernst.jpeg"
+        "photo": "/img/people/ernst.jpg"
       },
       {
         "name": "Effy Vayena",
@@ -56,7 +56,7 @@
             "de": "Department of Health Sciences and Technology - ETH Zurich"
           },
         "email": "effy.vayena@hest.ethz.ch",
-        "photo": "/img/people/effy.jpeg"
+        "photo": "/img/people/effy.jpg"
       },
       {
         "name": "Claudia Witt",
@@ -65,7 +65,7 @@
             "de": "USZ, Institut für Komplementäre und Integrative Medizin"
           },
         "email": "claudia.witt@uzh.ch",
-        "photo": "/img/people/claudia.jpeg"
+        "photo": "/img/people/claudia.jpg"
       }
     ]
   },
@@ -82,7 +82,7 @@
             "de": "Department of Humanities, Social and Political Sciences - ETH Zurich"
           },
         "email": "dirk.helbing@gess.ethz.ch",
-        "photo": "/img/people/dirk.jpeg"
+        "photo": "/img/people/dirk.jpg"
       }
     ]
   },
@@ -99,7 +99,7 @@
             "de": "Geschäftsführung"
           },
         "email": "maria.mondardini@uzh.ch",
-        "photo": "/img/people/rosy.jpeg"
+        "photo": "/img/people/rosy.jpg"
       },
       {
         "name": "Fanny Gutsche Jones",
@@ -108,7 +108,7 @@
             "de": "Community Manager"
           },
         "email": "fanny.jones@uzh.ch",
-        "photo": "/img/people/fanny.jpeg"
+        "photo": "/img/people/fanny.jpg"
       },
       {
         "name": "Nikos Georgomanolis",
@@ -126,7 +126,7 @@
             "de": "Front-End Entwickler"
           },
         "email": "andres.doradodorado@uzh.ch",
-        "photo": "/img/people/andres.jpeg"
+        "photo": "/img/people/andres.jpg"
       }
     ]
   },
@@ -143,7 +143,7 @@
             "de": "Geschäftsführung"
           },
         "email": "susanne.toensmann@uzh.ch",
-        "photo": "/img/people/susanne.jpeg"
+        "photo": "/img/people/susanne.jpg"
       },
       {
         "name": "Petra Biberhofer",
@@ -152,7 +152,7 @@
             "de": "Angebotsentwicklung und Koordination"
           },
         "email": "petra.biberhofer@uzh.ch",
-        "photo": "/img/people/petra.jpeg"
+        "photo": "/img/people/petra.jpg"
       },
       {
         "name": "Alessandro Rearte",
@@ -161,7 +161,7 @@
             "de": "Studentische Hilfskraft"
           },
         "email": "alessandro.rearte@uzh.ch",
-        "photo": "/img/people/alessandro.jpeg"
+        "photo": "/img/people/alessandro.jpg"
       }
     ]
   }

@@ -1,0 +1,209 @@
+[
+  {
+    "name": {
+      "en": "Citizen Cyberlab",
+      "de": ""
+    },
+    "description": {
+      "en": "<p>The Citizen Cyberlab is a partnership between the European Particle Physics Laboratory, CERN, the UN Institute for Training and Research, UNITAR, and the University of Geneva. IN the lab, researchers from many disciplines develop methods and study motivations for new forms of public participation in research. </p>",
+      "de": "<p>Das Citizen Cyberlab in Genf entwickelt Methoden und untersucht die Motivation für innovative Formen von öffentlicher Beteiligung in der Wissenschaft. </p>"
+    },
+    "logos": ["/img/logos/ccl-logo.png"],
+    "button": {
+      "link": "http://citizencyberlab.org",
+      "icon": "fas fa-external-link-alt",
+      "en": "citizencyberlab.org",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "URPP Dynamics of Healthy Aging, UZH",
+      "de": ""
+    },
+    "description": {
+      "en": "<p>At the University Research Priority Program (URPP) Dynamics of Healthy Aging, researchers examine the stabilization of psychological health and quality of life at low, intermediate and high levels of functioning from middle adulthood to advanced old age. </p>",
+      "de": ""
+    },
+    "logos": null,
+    "button": {
+      "link": "http://dynage.uzh.ch",
+      "icon": "fas fa-external-link-alt",
+      "en": "dynage.uzh.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "People and Computing Lab, Department of Informatics, UZH",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> People and Computing Lab is part of the Human-Computer Interaction group at the University of Zurich. The group takes an approach to research that goes beyond interface design and usability, and focuses on gaining a deep, contextualized understanding of the relationship between people and computing technologies. </p>",
+      "de": ""
+    },
+    "logos": null,
+    "button": {
+      "link": "https://www.ifi.uzh.ch/en/zpac/casalendar.html",
+      "icon": "fas fa-external-link-alt",
+      "en": "Website",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Citizen Science Network Austria (CSNA)",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The Citizen Science Network Austria is coordinated by the University of Natural Resources and Life Sciences in Vienna, and includes partner institutions in Austria and beyond. The network aims at promoting quality Citizen Science and strengthen the dialogue between science and society. </p>",
+      "de": ""
+    },
+    "logos": ["/img/logos/oesterreich-forscht.png"],
+    "button": {
+      "link": "https://www.citizen-science.at",
+      "icon": "fas fa-external-link-alt",
+      "en": "citizen-science.at",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Science et Cité – Schweiz forscht ",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The Citizen Science Network Switzerland is coordinated by Science et Cité, an independent foundation committed to the «Dialogue between Science and Society». Science et Cité provides a central point of contact and network for citizens, researchers and media professionals interested in Citizen Science. In addition, it operates «Switzerland forscht» - the platform for Citizen Science projects in Switzerland. </p>",
+      "de": ""
+    },
+    "logos": [
+      "/img/logos/science-et-cite.jpg",
+      "/img/logos/schweiz-forscht.png"
+    ],
+    "button": {
+      "link": "https://www.science-et-cite.ch/",
+      "icon": "fas fa-external-link-alt",
+      "en": "science-et-cite.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "MIDATA",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The MIDATA non-profit cooperative operates a data platform, acts as a trustee for data collection, and guarantees the sovereignty of citizens over the use of their data. Owners of a data account may actively contribute to medical research and clinical studies by granting selective access to their personal data. At present, MIDATA focuses on health data and smartphone app based services. </p>",
+      "de": ""
+    },
+    "logos": ["/img/logos/midata-logo.png"],
+    "button": {
+      "link": "https://www.midata.coop/en/cooperative/",
+      "icon": "fas fa-external-link-alt",
+      "en": "midata.coop",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "CrowdWater",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The MIDATA non-profit cooperative operates a data platform, acts as a trustee for data collection, and guarantees the sovereignty of citizens over the use of their data. Owners of a data account may actively contribute to medical research and clinical studies by granting selective access to their personal data. At present, MIDATA focuses on health data and smartphone app based services. </p>",
+      "de": ""
+    },
+    "logos": ["/img/logos/crowdwater-logo.png"],
+    "button": {
+      "link": "https://crowdwater.ch",
+      "icon": "fas fa-external-link-alt",
+      "en": "crowdwater.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Seminar for Film Studies, UZ",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> \"Bridging the Gap Between Technology and Aesthetics\", part of the project \"Film Colors\" funded by the European Research Council (ERC), examines the relationship between the technical processes and the aesthetics of films. </p>",
+      "de": ""
+    },
+    "logos": null,
+    "button": {
+      "link": "https://www.film.uzh.ch/de/research/projects/verbund/ercfilmcolors.html",
+      "icon": "fas fa-external-link-alt",
+      "en": "Website",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "SeniorWeb",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> SeniorWeb is a platform for senior citizens created in 1998, that provides age-appropriate forms of communication for generations 50+ in Switzerland. The website serves a community of more than 50K senior citizens and offers cross-media content aimed at active and interested users, covering issue related in particular to health and preventive care, and providing help and advice on topics of digital technology. </p>",
+      "de": ""
+    },
+    "logos": ["/img/logos/logo_senior.png"],
+    "button": {
+      "link": "https://seniorweb.ch/",
+      "icon": "fas fa-external-link-alt",
+      "en": "seniorweb.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "ZHAW Digital Health Lab",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The ZHAW Digital Health Lab brings together experts from the fields of biomedicine, health, technology and business, who together create innovations for digitisation in healthcare. In particular, the lab aims at making healthcare more accurate, personalized, and preventive, by focusing on the individual. </p>",
+      "de": ""
+    },
+    "logos": ["/img/logos/logo-zhaw.png"],
+    "button": {
+      "link": "https://www.zhaw.ch/en/research/inter-school-cooperation/digital-health-lab/",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.zhaw.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Woman’s Brain Project",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> Women’s Brain Project is an international organization advocating for & carrying out research on women’s brain and mental health. It advocates also for a scientific discussion on sex and gender aspects of ongoing research and its results. WBP addresses these issues through scientific research, debate, public engagement and advocacy. </p>",
+      "de": ""
+    },
+    "logos": ["/img/logos/women-brain-project-logo.png"],
+    "button": {
+      "link": "http://www.womensbrainproject.com/",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.womensbrainproject.com",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Senioren-Universität Zürich",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> Die Senioren-Universität UZH3 mit ihren 3000 Mitgliedern 60+ bietet regelmässige Forschungsvorträge von Dozierenden von UZH und ETH, Sonderveranstaltungen und Sportangebote des Partners ASVZ. Ko-kreative Citizen Science wird mit über 35 Mitgliedern im Rahmen einer «Partizipativen UZH3 Arbeitsgruppe» mit Projekten im Bereich Forschung oder Angebotsentwicklung betrieben. Die Mitarbeit steht allen Mitgliedern offen und wird von der Partizipativen Wissenschaftsakademie am Citizen Science Center professionell unterstützt. </p>",
+      "de": "<p> Die Senioren-Universität UZH3 mit ihren 3000 Mitgliedern 60+ bietet regelmässige Forschungsvorträge von Dozierenden von UZH und ETH, Sonderveranstaltungen und Sportangebote des Partners ASVZ. Ko-kreative Citizen Science wird mit über 35 Mitgliedern im Rahmen einer «Partizipativen UZH3 Arbeitsgruppe» mit Projekten im Bereich Forschung oder Angebotsentwicklung betrieben. Die Mitarbeit steht allen Mitgliedern offen und wird von der Partizipativen Wissenschaftsakademie am Citizen Science Center professionell unterstützt. </p>"
+    },
+    "logos": null,
+    "button": {
+      "link": "www.seniorenuni.uzh.ch",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.seniorenuni.uzh.ch",
+      "de": null
+    }
+  }
+]

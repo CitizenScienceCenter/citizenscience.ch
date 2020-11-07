@@ -76,7 +76,7 @@
           >{{ $t("section-projects-button") }}</router-link
         >
         <button
-          @click="openUrl(`${process.env.VUE_APP_LAB_BASE_URL}/${$i18n.locale}`)"
+          @click="openUrl(getUrl)"
           class="button button-secondary-main"
         >
           {{ $t("new-project-button") }}
@@ -142,6 +142,9 @@ export default {
       this.updateProjectList(projects);
       return projects;
     },
+    getUrl(){
+      return `${process.env.VUE_APP_LAB_BASE_URL}${this.$i18n.locale}`
+    }
   },
   methods: {
     ...mapMutations({ updateProjectList: "project/updateProjectList" }),

@@ -32,6 +32,7 @@ const actions = {
       return res;
     } catch (error) {
       console.error(error);
+      return res;
     } finally {
       await commit("setHomeConfig", res);
     }
@@ -43,8 +44,21 @@ const actions = {
       return resp;
     } catch (error) {
       console.error(error);
+      return resp;
     } finally {
       await commit("setProjectsConfig", resp);
+    }
+  },
+  async getEventsRemoteConfig({ commit }) {
+    let resp = eventsPageConfig;
+    try {
+      resp = await getRemoteFile("styles/events_style.json");
+      return resp;
+    } catch (error) {
+      console.error(error);
+      return resp;
+    } finally {
+      await commit("setEventsConfig", resp);
     }
   },
 };
@@ -54,8 +68,8 @@ const mutations = {
     state.home_view = payload;
     state.isLoaded = true;
   },
-  setEventsConfig(state) {
-    state.events_view = eventsPageConfig;
+  setEventsConfig(state, payload) {
+    state.events_view = payload;
   },
   setProjectsConfig(state, payload) {
     state.projects_view = payload;

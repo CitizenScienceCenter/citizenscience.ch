@@ -4,6 +4,6 @@
     "hideImage": false,
     "limit": null,
     "heading": { "visible": false },
-    "button": { "disabled": false, "visible": false }
+    "button": { "disabled": true, "visible": false }
   }
 }

@@ -75,10 +75,7 @@
           class="button button-primary-main"
           >{{ $t("section-projects-button") }}</router-link
         >
-        <button
-          @click="openUrl(getUrl)"
-          class="button button-secondary-main"
-        >
+        <button @click="openUrl(getUrl)" class="button button-secondary-main">
           {{ $t("new-project-button") }}
         </button>
       </div>
@@ -101,6 +98,7 @@ const keys = [
   "url",
   "button",
   "color_gradient",
+  "limit",
 ];
 
 export default {
@@ -117,6 +115,7 @@ export default {
     visible: Boolean,
     viewConfig: Object,
     projectType: String,
+    limit: { type: Number, default: 0 },
   },
   components: {
     ProjectTeaser,
@@ -127,9 +126,10 @@ export default {
     }),
     ...mapGetters({ getProjectList: "project/getProjectList" }),
     getProjects() {
-      const projects = this.getProjectList(this.projectType).map((p) =>
-        this.validateProjectContent(p)
-      );
+      const all = this.getProjectList(this.projectType);
+      const projects = all
+        .slice(0, this.limit > 0 ? this.limit : all.length)
+        .map((p) => this.validateProjectContent(p));
       return projects;
     },
     searchProject() {
@@ -142,9 +142,9 @@ export default {
       this.updateProjectList(projects);
       return projects;
     },
-    getUrl(){
-      return `${process.env.VUE_APP_LAB_BASE_URL}${this.$i18n.locale}`
-    }
+    getUrl() {
+      return `${process.env.VUE_APP_LAB_BASE_URL}${this.$i18n.locale}`;
+    },
   },
   methods: {
     ...mapMutations({ updateProjectList: "project/updateProjectList" }),

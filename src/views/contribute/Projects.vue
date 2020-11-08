@@ -44,6 +44,7 @@
             <project-cards-block
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"
+              :limit="projectCardConfig.limit"
               :viewConfig="projectCardConfig"
             ></project-cards-block>
           </app-content-section>

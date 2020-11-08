@@ -98,14 +98,19 @@ const Contact = (resolve) => {
   });
 };
 
-const Events = (resolve) => {
-  require.ensure(["../views/Events.vue"], () => {
-    resolve(require("../views/Events.vue"));
+const UpcomingEvents = (resolve) => {
+  require.ensure(["../views/csc_events/Upcoming.vue"], () => {
+    resolve(require("../views/csc_events/Upcoming.vue"));
+  });
+};
+const PastEvents = (resolve) => {
+  require.ensure(["../views/csc_events/Past.vue"], () => {
+    resolve(require("../views/csc_events/Past.vue"));
   });
 };
 const EventDetail = (resolve) => {
-  require.ensure(["../views/EventDetail.vue"], () => {
-    resolve(require("../views/EventDetail.vue"));
+  require.ensure(["../views/csc_events/EventDetail.vue"], () => {
+    resolve(require("../views/csc_events/EventDetail.vue"));
   });
 };
 const Terms = (resolve) => {
@@ -331,26 +336,25 @@ export const routes = [
         component: ChildView,
         redirect: "events/upcoming",
         beforeEnter: async (to, from, next) => {
-          const res = await store.dispatch("content/getEventsRemote");
-          if (res) next();
+          const res = await store.dispatch("viewconfig/getEventsRemoteConfig");
+          const events = await store.dispatch("content/getEventsRemote");
+          if (res && events) next();
         },
         children: [
           {
             path: "upcoming",
-            component: Events,
+            component: UpcomingEvents,
             meta: {
               i18n: "navigation-events-upcoming",
               nav: true,
-              anchor: "#upcoming-events",
             },
           },
           {
             path: "past",
-            component: Events,
+            component: PastEvents,
             meta: {
               i18n: "navigation-events-past",
               nav: true,
-              anchor: "#past-events",
             },
           },
         ],

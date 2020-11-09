@@ -19,7 +19,7 @@
   "de": {
   "page-title": "Warum_beitragen",
 
-  "section-collaborations-heading": "Warum beitragen?",
+  "section-collaborations-heading": "Warum mitmachen?",
   "section-collaborations-openseventeen-subheading": "Die Open Seventeen Challenge",
   "section-collaborations-openseventeen-lead": "Coaching für innovative Citizen Science",
   "section-collaborations-openseventeen-text": "Der O17-Wettbewerb ist ein interaktives Online-Coaching-Programm, das jungen Innovatoren weltweit helfen soll, sich zu vernetzen und gute Ideen zu tragfähigen sozialen Innovationsprojekten weiterzuentwickeln. O17 unterstützt Projekte, die im engen Bezug zu den 17 UN-Nachhaltigkeitszielen (SDGs) stehen und die mit Hilfe von Open Data und Crowdsourcing Bürgerbeteiligung und Citizen Science fördern.<br>Der Wettbewerb ist eine gemeinsame Initiative des Citizen Cyberlab der Universität Genf und des Governance Lab der New York University.",

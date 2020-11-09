@@ -58,7 +58,7 @@ export const i18n = new VueI18n({
       },
 
       "navigation-startproject": {
-        link: "Create",
+        link: "Your Project",
       },
       "navigation-startproject-overview": {
         link: "Before You Start",
@@ -173,10 +173,10 @@ export const i18n = new VueI18n({
       },
 
       "navigation-startproject": {
-        link: "Erstellen",
+        link: "Ihr Projekt",
       },
       "navigation-startproject-overview": {
-        link: "Bevor Sie anfangen",
+        link: "Bevor Sie loslegen",
       },
       "navigation-startproject-builder": {
         link: "Project Builder",
@@ -192,13 +192,13 @@ export const i18n = new VueI18n({
       },
 
       "navigation-community": {
-        link: "Gemeinschaft",
+        link: "Community",
       },
       "navigation-community-ourcommunity": {
-        link: "Unsere Gemeinschaft",
+        link: "Unsere Community",
       },
       "navigation-community-members": {
-        link: "Mitglieder",
+        link: "Mitgliedern",
       },
 
       "navigation-pwa": {
@@ -221,7 +221,7 @@ export const i18n = new VueI18n({
         link: "Personen",
       },
       "navigation-about-partnerships": {
-        link: "Partnerschaften",
+        link: "Partnern",
       },      
       "navigation-about-contact": {
         link: "Kontakt",

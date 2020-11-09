@@ -8,8 +8,8 @@
     },
   "de": {
 
-    "page-title": "Vergangene Events",
-    "past-events-heading": "Vergangene Events"
+    "page-title": "Vergangene Veranstaltungen",
+    "past-events-heading": "Vergangene Veranstaltungen"
 
     }
 }

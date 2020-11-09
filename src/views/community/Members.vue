@@ -6,9 +6,9 @@
   "section-members-heading": "Members"
   },
   "de": {
-  "page-title": "Mitglieder",
+  "page-title": "Mitgliedern",
 
-  "section-members-heading": "Mitglieder"
+  "section-members-heading": "Mitgliedern"
   }
   }
 </i18n>

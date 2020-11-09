@@ -15,7 +15,7 @@
   "de": {
   "page-title": "Projekte",
 
-  "section-projects-heading": "Unsere Projekte",
+  "section-projects-heading": "Projekte",
 
   "section-partner-projects-heading": "Partnerprojekte",
   "section-partner-projects-crowdwater-text": "CrowdWater ist ein Projekt der Universität Zürich und untersucht das Potential von crowdsourcing im Bereich Hydrologie. Konkret geht es um Wasserstand, Abfluss und Bodenfeuchte. Das Ziel ist es, möglichst viele Beobachtungen zu erheben und damit die Vorhersage hydrologischer Ereignisse wie zum Beispiel Trockenheit oder Überschwemmung zu verbessern.",

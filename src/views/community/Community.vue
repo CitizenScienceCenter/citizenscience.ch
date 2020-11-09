@@ -1,12 +1,12 @@
 <i18n>
   {
   "en": {
-  "page-title": "Our_Community",
+  "page-title": "Community",
   "section-collaborations-heading": "Citizen Science Zurich Community"
   },
   "de": {
-  "page-title": "Unsere_Gemeinschaft",
-  "section-collaborations-heading": "Citizen Science Zürich Gemeinschaft"
+  "page-title": "Community",
+  "section-collaborations-heading": "Citizen Science Zürich Community"
   }
   }
 </i18n>

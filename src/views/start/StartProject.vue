@@ -29,7 +29,7 @@
   },
   "de": {
   "page-title": "Ein Projekt starten",
-  "section-startProject-heading": "Bevor Sie anfangen",
+  "section-startProject-heading": "Bevor Sie loslegen",
 
   "section-projects-heading": "Durchführen von Citizen Science Projekten",  
   "section-projects-text": "In den meisten Citizen Science Projekten beteiligen sich Bürgerinnen und Bürger durch das Sammeln und Auswerten von Daten. Dies geschieht häufig mithilfe von Smartphones, Apps und anderen mobilen Geräten oder interaktiven Websites. Immer häufiger sind Citizen Scientists auch in anderen Phasen des Forschungsprozesses aktiv: Sie definieren Forschungsfragen, interpretieren Ergebnisse und veröffentlichen Schlussfolgerungen.<br>In den letzten 20 Jahren erfreut sich Citizen Science immer grösserer Beliebtheit bei Wissenschaftlern und in der Öffentlichkeit; und auch das Themenspektrum wird immer breiter.",

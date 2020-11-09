@@ -8,8 +8,8 @@
     },
   "de": {
 
-    "page-title": "Bevorstehende Ereignisse",
-    "upcoming-events-heading": "Bevorstehende Events"
+    "page-title": "Bevorstehende Veranstaltungen",
+    "upcoming-events-heading": "Bevorstehende Veranstaltungen"
 
     }
 }

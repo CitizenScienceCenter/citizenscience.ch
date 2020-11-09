@@ -6,9 +6,9 @@
   "section-partnership-heading": "Partnerships"
   },
   "de": {
-  "page-title": "Partnerships",
+  "page-title": "Partnern",
 
-  "section-partnership-heading": "Partnerschaften"
+  "section-partnership-heading": "Partnern"
   }
   }
 </i18n>

@@ -7,19 +7,19 @@
           "de": ""
         },
         "description": {
-          "en": "<p>The Citizen Science Center Zurich is run jointly by the <a href='https://www.uzh.ch' target='_blank'>University of Zurich</a> and the <a href='https://www.ethz.ch' target='_blank'>ETH Zurich</a>. The activities of the Center focus on exploring, supporting, and promoting Citizen Science. </p> <p> They are based on the following values:</p> <ul><li><strong>Excellence</strong><br/>The Citizen Science Center wants to develop and implement projects that reflect the highest standards possible in terms of scientific rigor, data security, and ethics. </li> <li><strong>Participation</strong><br/>The Center aims at developing an active and productive participation of Citizen scientists and professional researchers at the different phases of the scientific research project, from funding allocation, topic selection, and research design, to execution, interpretation, and dissemination of results. </li><li><strong>Openness</strong><br/>The Center adheres to the principles of open science (open access to data and publications) and operates in a fully transparent manner, ensuring that the public benefits from our work. </li></ul>",
-          "de": ""
+          "en": "<p> The <strong> Citizen Science Center Zurich </strong> is run jointly by the <a href='https://www.uzh.ch' target='_blank'> University of Zurich </a> and the <a href='https://www.ethz.ch' target='_blank'> ETH Zurich </a>. The activities of the Center focus on exploring, supporting, and promoting Citizen Science. They are based on the following values: </p> <ul> <li> <strong> Excellence </strong> <br/> The Citizen Science Center wants to develop and implement projects that reflect the highest standards possible in terms of scientific rigor, data security, and ethics. </li> <li> <strong> Participation </strong> <br/> The Center aims at developing an active and productive participation of Citizen scientists and professional researchers at the different phases of the scientific research project, from funding allocation, topic selection, and research design, to execution, interpretation, and dissemination of results. </li> <li> <strong> Openness </strong> <br/> The Center adheres to the principles of open science (open access to data and publications) and operates in a fully transparent manner, ensuring that the public benefits from our work. </li> </ul>",
+          "de": "<p> Das <strong> Citizen Science Center Zürich </strong> wird gemeinsam von der <a href='https://www.uzh.ch' target='_blank'> Universität Zürich </a> and the <a href='https://www.ethz.ch' target='_blank'> ETH Zürich </a> geführt. Die Aktivitäten des Centers konzentrieren sich auf die Erkundung, Unterstützung und Förderung von Citizen Science und basieren auf folgenden Werten: </p> <ul> <li> <strong> Exzellenz </strong> <br/> Das Zentrum entwickelt Projekte unter Einhaltung der höchsten Standards in Bezug auf wissenschaftliche Exzellenz, Datensicherheit und Ethik. </li> <li> <strong> Teilhabe und Teilnahme </strong> <br/> Bürgerinnen und Bürger sollen aktiv an den verschiedenen Phasen des Forschungsprozesses teilhaben können: Von der Art der Förderung und der Wahl des Themas, über das Forschungsdesign bis hin zu Ausführung, Auswertung und Veröffentlichung der Ergebnisse. </li> <li> <strong> Offenheit </strong> <br/> Das Center richtet sich nach den Grundsätzen von Open Science (offener Zugang zu Daten und Veröffentlichungen) und agiert völlig transparent, um sicherzustellen, dass unsere Arbeit der Allgemeinheit zugute kommt. </li> </ul>"
         },
         "image": "/img/graphic-roadmap.png"
       },
       {
         "subtitle": {
           "en": "The Goals of the Center include:",
-          "de": ""
+          "de": "Die Ziele des Centers sind folgende:"
         },
         "description": {
           "en": "<ul> <li> Engaging academic scientists and the public in next-generation citizen science projects, tackling problems in different fields of science and society, across all academic disciplines. </li> <li> Providing the resources, expertise and technical know-how to develop, set up, and run citizen science projects. </li> <li> Maintaining the highest standards of excellence in research methodology, including scientific results, quality of data, and research ethics. </li> <li> Contributing to the global effort toward sustainable development, by creating actionable knowledge and data that can help tackle the UN SDGs at the local, regional and global level. </li> </ul> <p> You can find here the Center’s Statute, including organizational structure here: </p>",
-          "de": ""
+          "de": "<ul> <li> Forscherinnen und Forschern sowie Bürgerinnen und Bürgern die Möglichkeit zu geben, gemeinsame Forschungsprojekte in verschiedenen Bereichen von Wissenschaft und Gesellschaft durchzuführen. </li> <li> Die Ressourcen, das Fachwissen und das technische Know-how zur Verfügung zu stellen um Citizen Science Projekt zu planen, zu entwickeln und durchzuführen. </li> <li> Exzellente Standards in der Forschungsmethodologie, einschliesslich der Ergebnisfindung, Datengewinnung und -qualität und der Forschungsethik einzuhalten. </li> <li> Uns an den weltweiten Bestrebungen für eine nachhaltige Entwicklung zu beteiligen, indem wir anwendbares Wissen und Daten generieren, um die Sustainable Development Goals auf lokaler, regionaler und globaler Ebene zu unterstützen. </li> </ul> <p> Hier finden Sie die Geschäftsordnung des Centers mit Informationen zu Organisation und Struktur: </p>"
         },
         "image": "",
         "button": {
@@ -28,7 +28,7 @@
           "icon": "fas fa-file-pdf",
           "selfWindow": false,
           "en": "Center's Statue",
-          "de": "Center's Statue"
+          "de": "GESCHÄFTSORDNUNG"
         },
         "second_button": {}
       }
@@ -43,8 +43,8 @@
         "de": ""
       },
       "description": {
-        "en": "<p>The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich.</p> <p> Switzerland has a deep tradition of direct democracy and participatory decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.<br /> Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy. </p>",
-        "de": "<p>Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt.</p> <p> Die Schweiz ist bekannt für ihre lange Tradition in direkter Demokratie und politischer Mitbestimmung. Citizen Science könnte als Übertragung dieser Idee von der Politik in die Wissenschaft angesehen werden.<br /> Auch Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Diese Kombination an Wissen und Kompetenzen am Standort Zürich ermöglicht vielfältige Synergien. </p>"
+        "en": "<p> The Citizen Science Center is run jointly by the University of Zurich and the ETH Zurich. </p> <p> Switzerland has a deep tradition of direct democracy and participatory decision-making, and Citizen Science can be viewed in many ways as the application of direct democracy to the scientific process.<br /> Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. Combining these researchers’ expertise represents a unique opportunity for synergy. </p>",
+        "de": "<p> Das Citizen Science Center wird gemeinsam von der Universität Zürich und der ETH Zürich geführt. </p> <p> Die Schweiz ist bekannt für ihre lange Tradition in direkter Demokratie und politischer Mitbestimmung. Citizen Science könnte als Übertragung dieser Idee von der Politik in die Wissenschaft angesehen werden.<br /> Auch Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Diese Kombination an Wissen und Kompetenzen am Standort Zürich ermöglicht vielfältige Synergien. </p>"
       },
       "image": "/img/uzh-eth.jpg",
       "logo": {
@@ -62,8 +62,8 @@
           "de": ""
         },
         "description": {
-          "en": "<p>Citizen Science refers to the involvement of members of the general public (\"<em>citizens</em>\") in the scientific research process. It is a form of public participation that works across many disciplines and that comes with different flavours and names, including community based research, crowd-sourced data collection, civic science, and more. </p> <p> Zurich has a long tradition in many forms of participatory research. You can see some of the projects from the past <a href='https://www.grc.uzh.ch/en/focus/exhibition/CitizenScience.html' target='_blank' > here </a>. </p> <p> If you want to learn more about Citizen Science, here some useful links: </p> <ul><li> <a href='https://en.wikipedia.org/wiki/Citizen_science' target='_blank'> Citizen Science entry in Wikipedia </a> </li> <li> <a target='_blank'> A new dawn for citizen science </a> </li> <li> <a target='_blank'> Citizen science: a developing tool for expanding science knowledge and scientific literacy </a> </li> <li> <a target='_blank'> Citizen science: Can volunteers do real research? </a> </li> <li> <a href='https://ecsa.citizen-science.net/documents/' target='_blank'> ECSA: 10 Principles of Citizen Science </a> </li> </ul>",
-          "de": ""
+          "en": "<p> Citizen Science refers to the involvement of members of the general public (\"<em>citizens</em>\") in the scientific research process. It is a form of public participation that works across many disciplines and that comes with different flavours and names, including community based research, crowd-sourced data collection, civic science, and more. </p> <p> Zurich has a long tradition in many forms of participatory research. You can see some of the projects from the past <a href='https://www.grc.uzh.ch/en/focus/exhibition/CitizenScience.html' target='_blank' > here </a>. </p> <p> If you want to learn more about Citizen Science, here some useful links: </p> <ul> <li> <a href='https://en.wikipedia.org/wiki/Citizen_science' target='_blank'> Citizen Science entry in Wikipedia </a> </li> <li> <a target='_blank'> A new dawn for citizen science </a> </li> <li> <a target='_blank'> Citizen science: a developing tool for expanding science knowledge and scientific literacy </a> </li> <li> <a target='_blank'> Citizen science: Can volunteers do real research? </a> </li> <li> <a href='https://mfr.de-1.osf.io/render?url=https://osf.io/3hpvu/?direct%26mode=render%26action=download%26mode=render' target='_blank'> ECSA: 10 Principles of Citizen Science </a> </li> </ul>",
+          "de": "<p> Der Begriff Citizen Science bezieht sich auf die Einbeziehung von Mitgliedern der allgemeinen Öffentlichkeit (\"<em>Bürger*innen</em>\")  in den wissenschaftlichen Forschungsprozess. Es handelt sich dabei um eine Form der gesellschaftlichen Beteiligung, die in vielen Fachbereichen zu finden ist und verschiedene Schwerpunktsetzungen und Namen hat, darunter community based research, crowdsourcing, Bürgerwissenschaft und mehr. </p> <p> Zürich hat eine lange Tradition in partizipativer Forschung. Einige der Projekte aus der Vergangenheit können Sie <a href='https://www.grc.uzh.ch/de/focus/exhibition/CitizenScience.html' target='_blank' > hier </a> sehen. </p> <p> Wenn Sie mehr über Citizen Science erfahren möchten, finden Sie hier einige nützliche Links: </p> <ul> <li> <a href='https://de.wikipedia.org/wiki/Citizen_science' target='_blank'> Citizen Science Eintrag in Wikipedia </a> </li> <li> <a target='_blank'> A new dawn for citizen science </a> </li> <li> <a target='_blank'> Citizen science: a developing tool for expanding science knowledge and scientific literacy </a> </li> <li> <a target='_blank'> Citizen science: Can volunteers do real research? </a> </li> <li> <a href='https://mfr.de-1.osf.io/render?url=https://osf.io/3hpvu/?direct%26mode=render%26action=download%26mode=render' target='_blank'> ECSA: 10 Prinzipien von Citizen Science </a> </li> </ul>"
         },
         "image": "/img/graphic-citizen-science.png",
         "button": {
@@ -82,8 +82,8 @@
           "de": ""
         },
         "description": {
-          "en": "<p> The characteristics of Citizen Science in Zurich today – which we refer to also as \"<em>Next-generation</em>\" Citizen Science -  include: </p> <ul> <li> The importance of an active collaboration between professional scientists and citizens, and the ambition to support projects that engage citizens in potentially all phases of the research process (or at least give citizens the choice). These kinds of projects are often referred to in the literature as \"co-created\". </li> <li> The use of the latest collaborative technologies to allow projects to strive for the highest quality standards, with the aim to produce excellent science and quality open data. </li> <li> The engagement toward the UN SDGs, ie. the ambition to empower society with knowledge (data) that can help citizens, communities and governments to move toward a more sustainable world. </li> </ul>",
-          "de": ""
+          "en": "<p> The characteristics of Citizen Science in Zurich today – which we refer to also as \"<em>Next-generation Citizen Science</em>\" -  include: </p> <ul> <li> The importance of an active collaboration between professional scientists and citizens, and the ambition to support projects that engage citizens in potentially all phases of the research process (or at least give citizens the choice). These kinds of projects are often referred to in the literature as \"co-created\". </li> <li> The use of the latest collaborative technologies to allow projects to strive for the highest quality standards, with the aim to produce excellent science and quality open data. </li> <li> The engagement toward the UN SDGs, ie. the ambition to empower society with knowledge (data) that can help citizens, communities and governments to move toward a more sustainable world. </li> </ul>",
+          "de": "<p> Zu den typischen Merkmalen von Citizen Science in Zürich - die wir auch als \"<em>Next-generation Citizen Science</em>\" bezeichnen - gehören: </p> <ul> <li> Ein Gewicht auf der aktiven Zusammenarbeit zwischen professionellen Wissenschaftler*innen und Bürgerinnen und Bürgern sowie das Bestreben, Projekte zu unterstützen, die die Bürgerinnen und Bürger in potenziell allen Phasen des Forschungsprozesses einbeziehen, wenn sie dies wünschen. Diese Art von Projekten wird in der Literatur oft als \"co-created\" bezeichnet. </li> <li> Die Verwendung der neuesten kollaborativen Technologien, damit die Projekte die höchsten Qualitätsstandards erfüllen - mit dem Ziel, exzellente Wissenschaft und qualitativ hochwertige, offene Daten zu produzieren. </li> <li> Das Engagement für die SDGs der UNO, d.h. das Bestreben, die Gesellschaft mit Wissen (Daten) auszustatten, das Bürgern, Gemeinschaften und Regierungen helfen kann, sich in Richtung einer nachhaltigeren Welt zu entwickeln. </li> </ul>"
         },
         "image": "",
         "button": {
@@ -107,8 +107,8 @@
         "de": ""
       },
       "description": {
-        "en": "<p>The <a href='https://sdgs.un.org/goals' target='_blank'> Sustainable Development Goals (SDGs) </a> are a set of global goals developed in 2015 by the 193 UN member states and representatives of civil society. They are part of the UN Agenda 2030, a comprehensive call for action to achieve a better and more sustainable future for all. </p> <p> High quality, timely and accessible data are required to monitor progress towards the goals, and there is a strong consensus that citizen engagement is critical. Through Citizen Science, people can directly engage with and monitor issues that affect them, bring new perspectives and knowledge into science and decision-making, and ultimately demand or drive change. </p> <ul> </ul>",
-        "de": "<p>Die <a href='https://sdgs.un.org/goals' target='_blank'> UN Ziele für nachhaltige Entwicklung </a> (engl. Sustainable Development Goals, kurz SDGs) sind eine Liste von globalen Zielen, die 2015 gemeinsam von den 193 UN-Mitgliedstaaten und Vertretern der Zivilgesellschaft erarbeitet wurden. Sie sind Teil der UN Agenda 2030, ein globaler Call for Action für eine bessere und nachhaltigere Zukunft auf unserem Planeten. </p> <p> Verlässliche, aktuelle und frei verfügbare Daten sind notwendig, um Fortschritte auf dem Weg zur Erreichung der UN-Ziele zu messen. Dafür ist eine aktive Beteiligung von Bürgerinnen und Bürgern absolut notwendig und erwünscht. Durch Citizen Science hat jeder die Möglichkeit, sich mit den Themen auseinanderzusetzen, die einen unmittelbar selbst betreffen; eigene, neue Sichtweisen und Wissensgebiete in die Wissenschaft einzubringen und möglicherweise sogar politische Entscheidungen zu beeinflussen. </p> <ul> </ul>"
+        "en": "<p> The <a href='https://sdgs.un.org/goals' target='_blank'> Sustainable Development Goals (SDGs) </a> are a set of global goals developed in 2015 by the 193 UN member states and representatives of civil society. They are part of the UN Agenda 2030, a comprehensive call for action to achieve a better and more sustainable future for all. </p> <p> High quality, timely and accessible data are required to monitor progress towards the goals, and there is a strong consensus that citizen engagement is critical. Through Citizen Science, people can directly engage with and monitor issues that affect them, bring new perspectives and knowledge into science and decision-making, and ultimately demand or drive change. </p> <ul> </ul>",
+        "de": "<p> Die <a href='https://sdgs.un.org/goals' target='_blank'> UN Ziele für nachhaltige Entwicklung </a> (engl. Sustainable Development Goals, kurz SDGs) sind eine Liste von globalen Zielen, die 2015 gemeinsam von den 193 UN-Mitgliedstaaten und Vertretern der Zivilgesellschaft erarbeitet wurden. Sie sind Teil der UN Agenda 2030, ein globaler Call for Action für eine bessere und nachhaltigere Zukunft auf unserem Planeten. </p> <p> Verlässliche, aktuelle und frei verfügbare Daten sind notwendig, um Fortschritte auf dem Weg zur Erreichung der UN-Ziele zu messen. Dafür ist eine aktive Beteiligung von Bürgerinnen und Bürgern absolut notwendig und erwünscht. Durch Citizen Science hat jeder die Möglichkeit, sich mit den Themen auseinanderzusetzen, die einen unmittelbar selbst betreffen; eigene, neue Sichtweisen und Wissensgebiete in die Wissenschaft einzubringen und möglicherweise sogar politische Entscheidungen zu beeinflussen. </p> <ul> </ul>"
       },
       "image": "/img/sdg-wheel.png",
       "logo": {
@@ -125,6 +125,25 @@
           "de": ""
         },
         "title": {
+          "en": "",
+          "de": ""
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> To encourage and support the implementation of \"<router-link to='/about/zurichstyle'>Zurich style</router-link>\" projects, the CS Center offers support in different areas, including: </p> <ul> <li> Tools </li> <li> Community </li> <li> Methodology </li> <li> Networking  </li> </ul>",
+          "de": "<p> Um Projekte nach \"<router-link to='/about/zurichstyle'>Zürcher Art</router-link>\" zu fördern, bietet das CS Center Unterstützung in verschiedenen Bereichen an, besonders: </p> <ul> <li> Tools </li> <li> Community </li> <li> Methodologie </li> <li> Netzwerke  </li> </ul>"
+        },
+        "image": "/img/graphic-create-project.png"
+      },
+      {
+        "heading": {
+          "en": "",
+          "de": ""
+        },
+        "title": {
           "en": "Tools",
           "de": "Tools"
         },
@@ -134,7 +153,7 @@
         },
         "description": {
           "en": "<p> The Citizen Science Center Zürich is developing a set of tools that make it easy for scientists and citizens to contribute to existing Citizens Science projects, or create new ones. The Web platform is used mainly where contributors perform <strong> complex data classification tasks </strong> such as image recognition, tagging, mapping, transcription of digitized text, etc. These are tasks that can usually be best completed on a computer screen. The mobile component (smartphone App, currently under development) will allow contributors to collect data in the form of  geo-located images, survey answers, and other types of media, such as video and sound </p> <p> Our tools are developed as open source software (see our <a href='https://github.com/CitizenScienceCenter' target='_blank'>GitHub repository</a>) which means that it takes advantage of existing and similar developments, and its code is also publicly available for similar implementations. The platforms (web and mobile) are developed in full cooperation with the department S3IT (Service and Support for Science IT) of the University of Zurich. </p>",
-          "de": ""
+          "de": "<p> Das Citizen Science Center Zürich entwickelt eine Web-Plattform, die es Wissenschaftlerinnen und Bürgern ermöglicht, sich an bestehenden Citizen Science Projekten zu beteiligen oder neue zu entwickeln. Die Web-Plattform ist vor allem für Projekte gedacht, in denen Teilnehmende <strong>komplexe Aufgaben der Daten-Klassifizierung</strong> ausüben sollen, wie zum Beispiel das Beschreiben oder Zuordnen von Bildern, das Kartieren, das Transkribieren von Text, etc. Diese Aufgaben lassen sich am besten an einem Computerbildschirm erledigen. Die mobile Komponente (Smartphone App, derzeit in Entwicklung) wird es den Beitragenden ermöglichen, Daten in Form von georeferenzierten Bildern, Umfrageantworten und anderen Arten von Medien wie Video und Ton zu sammeln. </p> <p> Unsere Tools werden als Open-Source-Software (siehe <a href='https://github.com/CitizenScienceCenter' target='_blank'>GitHub repository</a>) entwickelt, die bereits bestehende Formate nutzt und weiterentwickelt. Der Code ist frei öffentlich verfügbar. Das Framework der Plattformen (web und mobile) wird in enger Zusammenarbeit mit der Abteilung S3IT (Service und Support für Science IT) der UZH entwickelt. </p>"
         },
         "image": "/img/graphic-toolkit.png"
       },
@@ -145,15 +164,15 @@
         },
         "title": {
           "en": "Community",
-          "de": "Gemeinschaft"
+          "de": "Community"
         },
         "subtitle": {
           "en": "",
           "de": ""
         },
         "description": {
-          "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond. Our activities are shaped around our members, and include online and offline interactions and local events, in an open, creative and interdisciplinary way. </p>",
-          "de": ""
+          "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond. Our activities are shaped around our members, and include online and offline interactions and local events, in an open, creative and interdisciplinary way.",
+          "de": "<p>Unsere Citizen Science Community wächst in Zürich und darüber hinaus stetig. Sie lebt mit der Beteiligung und Aktivität ihrer Mitglieder und bietet Raum für online und offline Interaktionen und Veranstaltungen in einer offenen, kreativen und interdisziplinären Atmosphäre."
         },
         "image": "/img/graphic-community.png",
         "button": {
@@ -162,7 +181,7 @@
           "icon": null,
           "selfWindow": true,
           "en": "Our Community",
-          "de": ""
+          "de": "Unsere Community"
         },
         "second_button": {}
       },
@@ -181,7 +200,7 @@
         },
         "description": {
           "en": "<p> Designing, planning and implementing Citizen Science projects may be challenging for researchers (professional and not) approaching the methodology for the first time. The team at the CS Center is there to help with theoretical, practical, and ethical guidelines and standards. For aspects of ethics, the Center is partnering with the <a href='https://bioethics.ethz.ch/' target='_blank'> Health Ethics and Policy Lab at ETH </a>. </p>",
-          "de": ""
+          "de": "<p> Das Entwerfen, Planen und Umsetzen von Citizen Science Projekten kann für Forschende (professionelle und nicht professionelle), die sich zum ersten Mal damit befassen, eine Herausforderung darstellen. Das Team am CS Center steht mit theoretischen, praktischen und ethischen Richtlinien und Standards zur Seite. Für Aspekte der Ethik arbeitet das Zentrum mit dem <a href='https://bioethics.ethz.ch/' target='_blank'>Health Ethics and Policy Lab der ETH</a>. </p>"
         },
         "image": "/img/graphic-knowledge.png"
       },
@@ -192,7 +211,7 @@
         },
         "title": {
           "en": "Networking",
-          "de": ""
+          "de": "Netzwerke"
         },
         "subtitle": {
           "en": "",
@@ -200,7 +219,7 @@
         },
         "description": {
           "en": "<p> The CS Center encourages practitioners to share knowledge, expertise and experiences, and join forces across research groups, institutions, and research domains. The CS Center Zurich works in collaboration with all major CS national and international networks, and is keen to build bridges between practitioners in Switzerland and beyond. </p> <p> We are always happy to brainstorm and discuss how we can change the world with Citizen Science! If you have an idea for a project, get in touch with us. We can help you evaluate it and potentially provide you with expertise and tools to develop, set up, and run your project. </p>",
-          "de": ""
+          "de": "<p> Das CS Center Zürich ermutigt Praktiker*innen zum Austausch von Wissen, Expertise und Erfahrungen um ihre Kräfte über Forschungsgruppen, Institutionen und Forschungsbereiche hinweg zu bündeln. Das Center arbeitet mit allen wichtigen nationalen und internationalen CS-Netzwerken zusammen und ist bestrebt, Brücken zwischen den Akteurinnen und Akteuren in der Schweiz und im Ausland zu bauen. </p> <p> Wir sind jederzeit offen für gemeinsames Brainstormen oder Diskutieren darüber, wie wir mit Citizen Science die Welt verändern können! Wenn Sie eine Projektidee haben, setzen Sie sich bitte mit uns in Verbindung. Wir können Ihnen helfen, Ihre Idee zu schärfen und Ihnen möglicherweise mit Fachwissen und Werkzeugen bei der Entwicklung und Durchführung Ihres Projekts zur Seite stehen.</p>"
         },
         "image": "/img/graphic-platform.png",
         "button": {

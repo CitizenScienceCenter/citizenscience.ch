@@ -2,11 +2,11 @@
 {
   "en": {
     "page-title": "Criteria",
-    "section-checklist-heading": "Criteria for Project Proposals"
+    "section-checklist-heading": "Criteria"
   },
   "de": {
     "page-title": "Kriterien",
-    "section-checklist-heading": "Kriterien für Projektanträge"
+    "section-checklist-heading": "Kriterien"
   }
 }
 </i18n>

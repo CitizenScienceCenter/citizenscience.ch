@@ -3,6 +3,7 @@
   "en": {
 
   "page-title": "Our Offer",
+  "section-zurichstyle-heading": "Our Offer",
   
   "section-tools-heading": "Interactive Tools",
   "section-tools-text": "The Citizen Science Center Zürich is developing a platform that will make it easy for scientists and citizens to contribute to existing Citizens Science projects, or create new ones. The platform includes two components: a web interface and a mobile (smartphone) application.",
@@ -45,6 +46,7 @@
   "de": {
 
   "page-title": "Unser Angebot",
+  "section-zurichstyle-heading": "Unser Angebot",
   
   "section-tools-heading": "Interaktive Tools",
   "section-tools-text": "Das Citizen Science Center Zürich entwickelt eine Web-Plattform, die es Wissenschaftlerinnen und Bürgern ermöglicht, sich an bestehenden Citizen Science Projekten zu beteiligen oder neue zu entwickeln – über ein Web Interface und mobile Smartphone Apps.",
@@ -90,6 +92,15 @@
 <template>
   <div>
     <app-content-section class="overflow-hidden">
+      <div class="content-wrapper">
+        <div class="row row-centered scroll-effect">
+          <div class="col col-large-10">
+            <h2 class="heading centered">
+              {{ $t("section-zurichstyle-heading") }}
+            </h2>
+          </div>
+        </div>
+      </div>
 
       <div class="content-wrapper">
         <!-- Generic Content component for Mission -->
@@ -389,7 +400,7 @@ export default {
         title: { visible: true },
         subtitle: { visible: true },
         description: { visible: true },
-        image: { visible: true, size: "md", rounded: true },
+        image: { visible: true, size: "md", rounded: false },
         img_description: { visible: false },
         button: { disabled: false, visible: true },
         second_button: { disabled: false, visible: true },

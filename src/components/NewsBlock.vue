@@ -98,13 +98,12 @@ export default {
     },
     validateNewsContent(n, i) {
       // This variable avoid undefined or null errors
-      const keys = ["title", "date", "description"];
+      const keys = ["title", "date", "description", "path"];
       const item = {};
       const element = { ...n };
       // Due to is a dyamic component is required filter the complete information
       if (
-        keys.some((x) => typeof n[x] == "undefined") ||
-        Object.values(n).some((x) => x == null)
+        keys.some((x) => typeof n[x] == "undefined" || n[x] == null)
       ) {
         return;
       }

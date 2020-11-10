@@ -51,6 +51,8 @@ const Members = (resolve) => {
     resolve(require("../views/community/Members.vue"));
   });
 };
+
+// TODO: pending to remove
 // const Phases = (resolve) => {
 //   require.ensure(["../views/start/Phases.vue"], () => {
 //     resolve(require("../views/start/Phases.vue"));
@@ -113,6 +115,13 @@ const EventDetail = (resolve) => {
     resolve(require("../views/csc_events/EventDetail.vue"));
   });
 };
+
+const NewsDetail = (resolve) => {
+  require.ensure(["../views/NewsDetail.vue"], () => {
+    resolve(require("../views/NewsDetail.vue"));
+  });
+};
+
 const Terms = (resolve) => {
   require.ensure(["../views/shared/static/Terms.vue"], () => {
     resolve(require("../views/shared/static/Terms.vue"));
@@ -365,6 +374,12 @@ export const routes = [
         meta: { nav: false },
       },
 
+      {
+        path: "news/:new",
+        component: NewsDetail,
+        meta: { nav: false },
+      },
+
       /*
             { path: 'forum', component: Forum, meta: {requiresAuth: true, i18n: 'navigation-forum', nav: true} },
             */
@@ -391,10 +406,12 @@ export const routes = [
         component: Profile,
         meta: { requiresAuth: true, i18n: "navigation-profile", nav: false },
         beforeEnter(to, from) {
-          openUrl(
-            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
-            true
-          );
+          // TODO: replace by real profile when is implemented
+          // openUrl(
+          //   `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
+          //   true
+          // );
+
         },
       },
       {

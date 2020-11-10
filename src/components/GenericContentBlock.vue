@@ -10,7 +10,7 @@
   >
     <!-- Heading Section -->
     <div
-      class="row row-centered "
+      class="row row-centered"
       v-if="br.heading.visible && localTranslation(contentData.heading)"
     >
       <div class="col col-12 scroll-effect heading-section">
@@ -36,7 +36,10 @@
               rel="preload"
               :src="contentData.image"
               class="col-image"
-              :class="{ rounded: br.image.rounded }"
+              :class="{
+                rounded: br.image.rounded,
+                'vertical-img': br.vOrientation,
+              }"
               :alt="contentData.image"
             />
           </div>
@@ -80,7 +83,8 @@
             "
           >
             <button
-              class="button button-secondary button-icon"
+              class="button button-secondary"
+              :class="{ 'button-icon': contentData.button.icon }"
               @click="
                 triggerButton(
                   contentData.button.route,
@@ -104,7 +108,8 @@
             "
           >
             <button
-              class="button button-secondary button-icon"
+              class="button button-secondary"
+              :class="{ 'button-icon': contentData.second_button.icon }"
               @click="
                 triggerButton(
                   contentData.second_button.route,
@@ -244,9 +249,13 @@ export default {
   .img-section {
     .col-image {
       transform: scale(0.75) translateY(-5%);
-      border-radius: 20%;
+      border-radius: 10%;
       margin-bottom: -$spacing-3;
       position: relative;
+      &.vertical-img {
+        height: auto;
+        width: 100%;
+      }
     }
     .rounded {
       border-radius: 50%;
@@ -356,6 +365,10 @@ export default {
         margin-bottom: $spacing-1;
         width: 90%;
         height: auto;
+        &.vertical-img {
+          max-height: 450px;
+          width: 80%;
+        }
       }
       p {
         font-size: $font-size-small;
@@ -371,7 +384,9 @@ export default {
       }
       &.vertical {
         padding: 0 $spacing-3 0 $spacing-2 !important;
-        .text-description,
+        .text-description {
+          font-size: $font-size-normal;
+        }
         .button-section {
           font-size: $font-size-small;
         }

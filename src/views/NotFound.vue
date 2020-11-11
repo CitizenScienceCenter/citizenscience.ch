@@ -44,7 +44,6 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import UploadFile from "@/components/UploadFile.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
-import { updateStringFile } from "@/minio.js";
 
 export default {
   name: "NotFound",

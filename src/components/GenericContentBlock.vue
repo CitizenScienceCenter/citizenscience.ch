@@ -184,10 +184,14 @@ export default {
       openUrl(url, selfWindow);
     },
     checkVerticalOrientation: function(element) {
-      const sizes = ["sm", "md", "lg"];
+      const sizes = ["xsm", "sm", "md", "lg"];
       // This validation is only for large and bigger resolution screens
       const horizontal = {
         no_img: { "text-content": "col-large-10" },
+        xsm: {
+          "img-content": "col-6 col-large-2",
+          "text-content": "col-large-6",
+        },
         sm: {
           "img-content": "col-6 col-large-4",
           "text-content": "col-large-8",
@@ -363,7 +367,7 @@ export default {
       .col-image {
         transform: scale(1) translateY(0%);
         margin-bottom: $spacing-1;
-        width: 90%;
+        width: 85%;
         height: auto;
         &.vertical-img {
           max-height: 450px;
@@ -377,9 +381,12 @@ export default {
     }
     .text-section {
       padding: 0 $spacing-3 0 $spacing-5 !important;
+      .subheading {
+        font-size: $font-size-medium;
+      }
       .button-section {
         .button {
-          height: 40px;
+          height: 42px;
         }
       }
       &.vertical {

@@ -72,7 +72,7 @@ export const i18n = new VueI18n({
       "navigation-startproject-criteria": {
         link: "Criteria",
       },
-      "navigation-startproject-phases": {
+      "navigation-startproject-checklist": {
         link: "Checklist",
       },
 
@@ -187,7 +187,7 @@ export const i18n = new VueI18n({
       "navigation-startproject-criteria": {
         link: "Kriterien",
       },
-      "navigation-startproject-phases": {
+      "navigation-startproject-checklist": {
         link: "Checkliste",
       },
 

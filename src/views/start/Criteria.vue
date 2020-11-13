@@ -1,42 +1,39 @@
 <i18n>
-  {
+{
   "en": {
-  "page-title": "Checklist"
+    "page-title": "Criteria",
+    "section-checklist-heading": "Criteria"
   },
   "de": {
-  "page-title": "Checkliste"
+    "page-title": "Kriterien",
+    "section-checklist-heading": "Kriterien"
   }
-  }
+}
 </i18n>
 
 <template>
-  <div>
+  <div >
     <app-content-section class="overflow-hidden">
-      <generic-content-width-block
-        :content="intro"
-        :visible="true"
-        :hReverse="true"
-      ></generic-content-width-block>
-    </app-content-section>
-
-    <app-content-section>
       <div class="content-wrapper">
-        <!-- Generic Content component for Our Community -->
-        <div
-          class="row row-centered row-middle content-item"
-          v-for="item in checklist"
-          v-bind:key="item.id"
-        >
+        <div class="row row-centered scroll-effect">
+          <div class="col col-large-10">
+            <h2 class="heading centered" id="partnerships">
+              {{ $t("section-checklist-heading") }}
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="row row-centered row-large-left-aligned row-middle">
+        <div class="col col-11">
           <generic-content-block
             :visible="viewConfig.visible"
             :vOrientation="viewConfig.vOrientation"
-            :hReverse="isReverse"
-            :content="item"
+            :hReverse="viewConfig.hReverse"
+            :content="content"
             :viewConfig="viewConfig"
           ></generic-content-block>
         </div>
       </div>
-
     </app-content-section>
 
     <section-newsletter-signup></section-newsletter-signup>
@@ -48,39 +45,34 @@
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
-import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-
 import { mapGetters } from "vuex";
 
 export default {
-  name: "Checklist",
-  components: {
-    GenericContentWidthBlock,
-    GenericContentBlock,
-    SectionNewsletterSignup,
-    "app-content-section": ContentSection,
-    "app-footer": Footer,
-  },
+  name: "Criteria",
   data() {
     return {
-      intro: {},
-      checklist:{},
-      isReverse: false,
+      content: {},
       viewConfig: {
         visible: true,
         vOrientation: false,
         heading: { visible: false },
-        title: { visible: true },
-        subtitle: { visible: true },
+        title: { visible: false },
+        subtitle: { visible: false },
         description: { visible: true },
-        image: { visible: true, size: "xsm", rounded: true },
+        image: { visible: true, size: "md", rounded: false },
         img_description: { visible: false },
         button: { disabled: false, visible: true },
         second_button: { disabled: false, visible: false },
       },
     };
+  },
+  components: {
+    SectionNewsletterSignup,
+    GenericContentBlock,
+    "app-content-section": ContentSection,
+    "app-footer": Footer,
   },
   props: {
     platform: {
@@ -104,13 +96,8 @@ export default {
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
-    openInNewTab: function(url) {
-      var win = window.open(url, "_blank");
-      win.focus();
-    },
     loadContent() {
-      this.checklist = this.getGContent("checklist").main_content;
-      this.intro = this.getGContent("checklist").intro;
+      this.content = this.getGContent("criteria");
     },
   },
   created() {

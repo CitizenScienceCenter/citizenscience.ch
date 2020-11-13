@@ -35,6 +35,11 @@ const StartProject = (resolve) => {
     resolve(require("../views/start/StartProject.vue"));
   });
 };
+const Criteria = (resolve) => {
+  require.ensure(["../views/start/Criteria.vue"], () => {
+    resolve(require("../views/start/Criteria.vue"));
+  });
+};
 const Checklist = (resolve) => {
   require.ensure(["../views/start/Checklist.vue"], () => {
     resolve(require("../views/start/Checklist.vue"));
@@ -53,12 +58,6 @@ const Members = (resolve) => {
 };
 
 // TODO: pending to remove
-// const Phases = (resolve) => {
-//   require.ensure(["../views/start/Phases.vue"], () => {
-//     resolve(require("../views/start/Phases.vue"));
-//   });
-// };
-
 // const SDG = (resolve) => {
 //   require.ensure(["../views/citizenscience/SDG.vue"], () => {
 //     resolve(require("../views/citizenscience/SDG.vue"));
@@ -199,11 +198,6 @@ export const routes = [
           next();
         },
         children: [
-          // {
-          //   path: "phases",
-          //   component: Phases,
-          //   meta: { i18n: "navigation-startproject-phases", nav: true },
-          // },
           {
             path: "startproject",
             component: StartProject,
@@ -211,7 +205,7 @@ export const routes = [
           },
           {
             path: "criteria",
-            component: Checklist,
+            component: Criteria,
             meta: { i18n: "navigation-startproject-criteria", nav: true },
           },
           {
@@ -223,14 +217,9 @@ export const routes = [
             },
           },
           {
-            path: "create",
-            meta: { i18n: "navigation-createproject-builder", nav: true },
-            beforeEnter(to, from, next) {
-              next(from);
-              openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/project/builder/name`
-              );
-            },
+            path: "checklist",
+            meta: { i18n: "navigation-startproject-checklist", nav: true },
+            component: Checklist,
           },
         ],
       },
@@ -411,7 +400,6 @@ export const routes = [
           //   `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
           //   true
           // );
-
         },
       },
       {

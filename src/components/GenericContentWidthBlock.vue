@@ -56,6 +56,31 @@
               :src="localTranslation(contentData.logo)"
             />
           </div>
+          <!-- Buttons section -->
+          <div class="row row-full-width">
+            <div
+              class="button-section"
+              v-if="
+                contentData.button &&
+                  (contentData.button.link || contentData.button.route)
+              "
+            >
+              <button
+                class="button button-secondary"
+                :class="{ 'button-icon': contentData.button.icon }"
+                @click="
+                  triggerButton(
+                    contentData.button.route,
+                    contentData.button.link,
+                    contentData.button.selfWindow
+                  )
+                "
+              >
+                <i :class="contentData.button.icon"></i>
+                {{ localTranslation(contentData.button) }}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -111,6 +136,15 @@ export default {
     loadData() {
       this.contentData = this.content;
     },
+    triggerButton: function(route, url, selfWindow) {
+      // open internal routes
+      if (route) {
+        this.$router.push(route);
+        return;
+      }
+      // open external links
+      openUrl(url, selfWindow);
+    },
   },
   created() {
     this.loadData();
@@ -136,6 +170,14 @@ export default {
       padding: $spacing-2 0;
       height: 100%;
       max-height: 150px;
+    }
+  }
+  .button-section {
+    padding: $spacing-2 0;
+    padding-right: $spacing-2;
+    .button {
+      height: 35px;
+      font-size: $font-size-small;
     }
   }
 }
@@ -170,6 +212,11 @@ export default {
       .text-description {
       }
     }
+    .button-section {
+      .button {
+        height: 40px;
+      }
+    }
   }
 }
 @media only screen and (min-width: $viewport-xlarge) {
@@ -179,6 +226,11 @@ export default {
       .subheading {
       }
       .text-description {
+      }
+    }
+    .button-section {
+      .button {
+        height: 42px;
       }
     }
   }

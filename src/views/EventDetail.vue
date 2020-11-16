@@ -183,9 +183,6 @@ export default {
             win.focus();
         },
         eventDisplayDate( start, end ) {
-            if(!start){
-                return end
-            }
             let startDate = new Date(start);
             let endDate = new Date(end);
 

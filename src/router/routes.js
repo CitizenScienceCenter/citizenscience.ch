@@ -213,7 +213,8 @@ export const routes = [
             meta: { i18n: "navigation-startproject-builder", nav: true },
             beforeEnter(to, from, next) {
               next(from);
-              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`);
+              // this redirect to the project builder about route
+              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/about`);
             },
           },
           {

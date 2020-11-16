@@ -32,12 +32,14 @@
       >
         <div class="row row-centered img-section">
           <div class="col col-12 centered">
+            <!-- If toggle_img_style the global style is changed for other ie if img rounded,
+             then img is squared when this parameter is true -->
             <img
               rel="preload"
               :src="contentData.image"
               class="col-image"
-              :class="{
-                rounded: br.image.rounded,
+              :class="{                
+                rounded: contentData.toggle_img_style ? !br.image.rounded : br.image.rounded,
                 'vertical-img': br.vOrientation,
               }"
               :alt="contentData.image"

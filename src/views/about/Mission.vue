@@ -153,16 +153,6 @@
       </div>
     </app-content-section> -->
 
-    <!-- TODO: verify the style config -->
-    <!-- Join Initiative section -->
-    <app-content-section class="overflow-hidden content-section-compact">
-      <generic-content-width-block
-        :content="joinInitiativeContent"
-        :visible="true"
-        :hReverse="true"
-      ></generic-content-width-block>
-    </app-content-section>
-
     <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
@@ -172,7 +162,6 @@
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
-import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
@@ -181,7 +170,6 @@ import { mapGetters } from "vuex";
 export default {
   components: {
     GenericContentBlock,
-    GenericContentWidthBlock,
     SectionNewsletterSignup,
     "app-content-section": ContentSection,
     "app-footer": Footer,
@@ -189,7 +177,6 @@ export default {
   data() {
     return {
       content: {},
-      joinInitiativeContent: {},
       isReverse: false,
       viewConfig: {
         visible: true,
@@ -231,7 +218,6 @@ export default {
       this.content = this.getGContent("mission").main_content.map((x) =>
         this.toggleReverse(x)
       );
-      this.joinInitiativeContent = this.getGContent("mission").join_initiative;
     },
     toggleReverse(contentItem) {
       contentItem.reverse = this.isReverse;

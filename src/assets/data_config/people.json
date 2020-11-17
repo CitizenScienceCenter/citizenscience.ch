@@ -50,15 +50,6 @@
         "photo": "/img/people/ernst.jpg"
       },
       {
-        "name": "Effy Vayena",
-        "position": {
-            "en": "Department of Health Sciences and Technology - ETH Zurich",
-            "de": "Department of Health Sciences and Technology - ETH Zurich"
-          },
-        "email": "effy.vayena@hest.ethz.ch",
-        "photo": "/img/people/effy.jpg"
-      },
-      {
         "name": "Claudia Witt",
         "position": {
             "en": "USZ, Institut für Komplementäre und Integrative Medizin",
@@ -102,12 +93,12 @@
         "photo": "/img/people/rosy.jpg"
       },
       {
-        "name": "Fanny Gutsche Jones",
+        "name": "Fanny Gutsche-Jones",
         "position": {
             "en": "Community Manager",
             "de": "Community Manager"
           },
-        "email": "fanny.jones@uzh.ch",
+        "email": "fanny.gutsche-jones@uzh.ch",
         "photo": "/img/people/fanny.jpg"
       },
       {
@@ -144,15 +135,6 @@
           },
         "email": "susanne.toensmann@uzh.ch",
         "photo": "/img/people/susanne.jpg"
-      },
-      {
-        "name": "Petra Biberhofer",
-        "position": {
-            "en": "Development and Coordination of Services",
-            "de": "Angebotsentwicklung und Koordination"
-          },
-        "email": "petra.biberhofer@uzh.ch",
-        "photo": "/img/people/petra.jpg"
       },
       {
         "name": "Alessandro Rearte",

@@ -85,6 +85,9 @@ export const i18n = new VueI18n({
       "navigation-community-members": {
         link: "Members",
       },
+      "navigation-community-partnerships": {
+        link: "Partnerships",
+      },
 
       "navigation-pwa": {
         link: "PWA",
@@ -104,10 +107,7 @@ export const i18n = new VueI18n({
       },
       "navigation-about-people": {
         link: "People",
-      },
-      "navigation-about-partnerships": {
-        link: "Partnerships",
-      },      
+      },            
       "navigation-about-contact": {
         link: "Contact",
       },
@@ -200,6 +200,9 @@ export const i18n = new VueI18n({
       "navigation-community-members": {
         link: "Mitgliedern",
       },
+      "navigation-community-partnerships": {
+        link: "Partner",
+      }, 
 
       "navigation-pwa": {
         link: "PWA",
@@ -219,10 +222,7 @@ export const i18n = new VueI18n({
       },
       "navigation-about-people": {
         link: "Personen",
-      },
-      "navigation-about-partnerships": {
-        link: "Partnern",
-      },      
+      },     
       "navigation-about-contact": {
         link: "Kontakt",
       },

@@ -205,5 +205,124 @@
       "en": "www.seniorenuni.uzh.ch",
       "de": null
     }
+  },
+  {
+    "name": {
+      "en": "Bündner Kupfer",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> Bündner Kupfer is a blog which publishes archaeological and scientific data collected by archaeologists and laymen interested in archaeology, geology, ores, mining activities and local history in Grisons, Switzerland. The Blog works as communication channel for scientists and laymen like local (\"Verein Erzminen Hinterrhein\", \"Freunde des Bergbaus Graubünden\") and supra-regional associations (\"Schweizerische Gesellschaft für Historischen Bergbau\"). </p>",
+      "de": "<p> Bündner Kupfer ist ein Blog, der archäologische und wissenschaftliche Daten veröffentlicht, die von Archäolog*innen und Laien gesammelt wurden, die sich für Archäologie, Geologie, Erze, Bergbauaktivitäten und Lokalgeschichte in Graubünden interessieren. Der Blog dient als Kommunikationskanal für Wissenschaftler und Laien wie lokale (\"Verein Erzminen Hinterrhein\", \"Freunde des Bergbaus Graubünden\") und überregionale Vereine (\"Schweizerische Gesellschaft für Historischen Bergbau\"). </p>"
+    },
+    "logos": [],
+    "button": {
+      "link": "http://bergbauprojekt.blogspot.com",
+      "icon": "fas fa-external-link-alt",
+      "en": "Website",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Digital Society Initiative UZH",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The Digital Society Initiative (DSI) of the University of Zurich (UZH) aims to reflect on the digitisation of society, democracy, science, communication and business and to help shape it future oriented. It aims to position the UZH nationally and internationally as a centre of excellence for critical reflection on all aspects of the digital society. </p>",
+      "de": "<p> Die Digital Society Initiative (DSI) der Universität Zürich (UZH) hat zum Ziel, die Digitalisierung der Gesellschaft, Demokratie, Wissenschaft, Kommunikation und Wirtschaft zu reflektieren und zukunfts­orientiert mitzugestalten. Sie will die UZH national und international als Kompetenzzentrum für die kritische Reflexion aller Aspekte der digitalen Gesellschaft positionieren. </p>"
+    },
+    "logos": [],
+    "button": {
+      "link": "https://www.dsi.uzh.ch",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.dsi.uzh.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "ETH Library Lab",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The ETH Library Lab at ETH Zurich is an incubator aiming to strengthen open knowledge ecosystems. It facilitates and accelerates projects that are contributing to the advancement of scientific information infrastructure and services. With its <a href='https://www.librarylab.ethz.ch/fellowships/' target='_blank'>Innovator Fellowship Program</a>, it welcomes thinkers and doers, whose ideas have the power to reshape workflows and information environments for the future of science. The lab is an initiative of ETH Library. </p>",
+      "de": "<p> Das ETH Library Lab an der ETH Zürich setzt sich für die Stärkung offener Wissensökosysteme ein. Es ermöglicht und beschleunigt Projekte, die zur Weiterentwicklung wissenschaftlicher Informationsinfrastruktur und -services beitragen. Sein <a href='https://www.librarylab.ethz.ch/de/fellowships/' target='_blank'> «Innovator Fellowship Program»</a> steht Denkern und Machern offen, deren Ideen das Potenzial haben, neuartige Arbeitsprozesse und Informationsumgebungen für Wissenschaft und Forschung zu schaffen. Das Lab ist eine Initiative der ETH-Bibliothek. </p>"
+    },
+    "logos": ["/img/logos/eth-library-lab-logo.png"],
+    "button": {
+      "link": "https://www.librarylab.ethz.ch/",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.librarylab.ethz.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Matter Lab",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> MATTER Lab is a research lab within the Child Mind Institute that builds and applies technologies such as wearable devices, mobile apps, and analytics tools to help diagnose, assess, monitor, and improve mental health. </p>",
+      "de": "<p> MATTER Lab ist ein Forschungslabor innerhalb des Child Mind Institute, das Technologien wie tragbare Geräte, mobile Anwendungen und Analysetools entwickelt und anwendet, um die Diagnose, Beurteilung, Überwachung und Verbesserung der psychischen Gesundheit zu unterstützen. </p>"
+    },
+    "logos": [],
+    "button": {
+      "link": "https://childmind.org/our-research/matter-lab/",
+      "icon": "fas fa-external-link-alt",
+      "en": "Website",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Naturforschende Gesellschaft Zürich",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The aim of NGZH is to disseminate knowledge and way of thinking of natural scientists. NGZH mediates between natural sciences and the in natural sciences interested public and supports the dialog between the different scientific disciplins. NGZH reports about new scientific results, gives background knowledge and shows how science works and what science is able to perform. </p>",
+      "de": "<p> Die Naturforschende Gesellschaft Zürich (NGZH) setzt sich zum Ziel, naturwissenschaftliche Erkenntnisse und Denkweisen zu verbreiten. Sie sieht sich als Vermittlerin zwischen der Wissenschaft und der naturwissenschaftlich interessierten Öffentlichkeit und unterstützt den Dialog zwischen den einzelnen wissenschaftlichen Disziplinen. Die NGZH berichtet über neue wissenschaftliche Erkenntnisse, vermittelt Hintergrundwissen und zeigt auf, wie Wissenschaft funktioniert und was Wissenschaft zu leisten vermag. </p>"
+    },
+    "logos": ["/img/logos/naturforschende-logo.png"],
+    "button": {
+      "link": "https://www.ngzh.ch/",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.ngzh.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "UZH Science Lab",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> Science Lab UZH is a program of the Faculty of Science with the aim of fostering the interest of teenagers and young adults in natural sciences. Science Lab UZH provides a modern and future oriented impression of natural sciences and promotes interdisciplinary skills through interactive and cross-disciplinary workshops. </p>",
+      "de": "<p> Das Science Lab UZH ist ein Engagement der Mathematisch-naturwissenschaftlichen Fakultät und hat zum Ziel, das Interesse von Jugendlichen und jungen Erwachsenen für die Naturwissenschaften zu fördern. Durch interaktive und fachübergreifende Workshops vermittelt das Science Lab UZH ein modernes und zukunftsrelevantes Bild von Naturwissenschaften und fördert die Entwicklung von überfachlichen Kompetenzen. </p>"
+    },
+    "logos": ["/img/logos/science-lab-uzh-logo.png"],
+    "button": {
+      "link": "https://www.sciencelab.uzh.ch",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.sciencelab.uzh.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Open Mind Institute (OMI)",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> OMI aims to promote exchanges between the scientific community and the public. In the fields of education and research, it focuses on the communication and understanding of a scientific way of thinking and scientific knowledge as well as collaboration and co-creation. The Citizen Science Center Zürich and the OMI are open for exchange and cooperation in the fields of Citizen Science, Participatory Research and Open Science. </p>",
+      "de": "<p> Das OMI verfolgt das Ziel, den Austausch zwischen Wissenschaft und der Öffentlichkeit zu fördern. In den Bereichen Bildung und Forschung setzen sie dabei auf das Vermitteln und Verstehen einer wissenschaftlichen Denkweise und von wissenschaftlichen Erkenntnissen sowie Kollaboration und Ko-Kreation. Das Citizen Science Center Zürich und das OMI sind offen für Austausch und Kooperationen im Bereich Citizen Science, partizipative Forschung und Open Science. </p>"
+    },
+    "logos": ["/img/logos/omi-logo.png"],
+    "button": {
+      "link": "https://openmind.institute/aktuell",
+      "icon": "fas fa-external-link-alt",
+      "en": "Website",
+      "de": null
+    }
   }
 ]

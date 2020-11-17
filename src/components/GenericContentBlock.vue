@@ -1,6 +1,6 @@
 <template>
   <div
-    class="generic-content"
+    class="generic-content content-wrapper"
     v-if="
       visible &&
         contentData &&
@@ -189,7 +189,7 @@ export default {
       const sizes = ["xsm", "sm", "md", "lg"];
       // This validation is only for large and bigger resolution screens
       const horizontal = {
-        no_img: { "text-content": "col-large-10" },
+        no_img: { "text-content": "col-large-12" },
         xsm: {
           "img-content": "col-6 col-large-2",
           "text-content": "col-large-6",
@@ -200,7 +200,7 @@ export default {
         },
         md: {
           "img-content": "col-6 col-large-5",
-          "text-content": "col-large-6",
+          "text-content": "col-large-7",
         },
         lg: {
           "img-content": "col-8 col-large-7",

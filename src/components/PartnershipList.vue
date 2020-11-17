@@ -84,7 +84,8 @@ export default {
 .logo {
   padding-right: $spacing-2;
   margin-bottom: $spacing-3;
-  height: 50px;
+  max-height: 70px;
+  width: auto;
 }
 
 @media only screen and (min-width: $viewport-large) {

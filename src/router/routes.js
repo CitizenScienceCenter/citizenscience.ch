@@ -56,6 +56,11 @@ const Members = (resolve) => {
     resolve(require("../views/community/Members.vue"));
   });
 };
+const Partnerships = (resolve) => {
+  require.ensure(["../views/community/Partnerships.vue"], () => {
+    resolve(require("../views/community/Partnerships.vue"));
+  });
+};
 
 // TODO: pending to remove
 // const SDG = (resolve) => {
@@ -86,11 +91,6 @@ const Offer = (resolve) => {
 const People = (resolve) => {
   require.ensure(["../views/about/People.vue"], () => {
     resolve(require("../views/about/People.vue"));
-  });
-};
-const Partnerships = (resolve) => {
-  require.ensure(["../views/about/Partnerships.vue"], () => {
-    resolve(require("../views/about/Partnerships.vue"));
   });
 };
 const Contact = (resolve) => {
@@ -214,7 +214,7 @@ export const routes = [
             beforeEnter(to, from, next) {
               next(from);
               // this redirect to the project builder about route
-              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/about`);
+              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`);
             },
           },
           {
@@ -266,6 +266,16 @@ export const routes = [
             component: Members,
             meta: { i18n: "navigation-community-members", nav: true },
           },
+          {
+            path: "partnerships",
+            component: Partnerships,
+            meta: { i18n: "navigation-community-partnerships", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // load content from remote server
+              await store.dispatch("content/getPartnershipsRemote");
+              next();
+            },
+          },
         ],
       },
       // {
@@ -310,17 +320,7 @@ export const routes = [
               await store.dispatch("content/getPeopleRemote");
               next();
             },
-          },
-          {
-            path: "partnerships",
-            component: Partnerships,
-            meta: { i18n: "navigation-about-partnerships", nav: true },
-            beforeEnter: async (to, from, next) => {
-              // load content from remote server
-              await store.dispatch("content/getPartnershipsRemote");
-              next();
-            },
-          },
+          },          
           {
             path: "contact",
             component: Contact,

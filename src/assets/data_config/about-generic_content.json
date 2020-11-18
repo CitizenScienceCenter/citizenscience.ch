@@ -140,7 +140,8 @@
           "en": "<p> To encourage and support the implementation of <router-link to='/about/zurichstyle' target='_blank'>\"Zurich style\"</router-link> projects, the CS Center offers support in different areas, including: </p> <ul> <li> Tools </li> <li> Community </li> <li> Methodology </li> <li> Networking  </li> </ul>",
           "de": "<p> Um Projekte nach <router-link to='/about/zurichstyle' target='_blank'>\"Zürcher Art\"</router-link> zu fördern, bietet das CS Center Unterstützung in verschiedenen Bereichen an, besonders: </p> <ul> <li> Tools </li> <li> Community </li> <li> Methodologie </li> <li> Netzwerke  </li> </ul>"
         },
-        "image": "/img/graphic-create-project.png"
+        "image": "/img/graphic-create-project.png",
+        "toggle_img_style": true
       },
       {
         "heading": {

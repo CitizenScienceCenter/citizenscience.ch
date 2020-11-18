@@ -76,7 +76,9 @@
         to="/events"
         class="button button-secondary scroll-effect"
         :disabled="br.button.disabled"
-        > <i class="far fa-calendar-alt"></i> {{ $t(localTranslation(pl.eventsButton)) }}</router-link
+      >
+        <i class="far fa-calendar-alt"></i>
+        {{ $t(localTranslation(pl.eventsButton)) }}</router-link
       >
     </div>
   </div>
@@ -277,6 +279,8 @@ export default {
         border-radius: 50%;
         transform: scale(0.9);
         max-height: 200px;
+        -webkit-box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.5);
       }
     }
     .event-date {

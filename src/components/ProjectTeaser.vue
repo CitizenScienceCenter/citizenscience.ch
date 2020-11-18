@@ -1,6 +1,6 @@
 <template>
   <div
-    class="project"
+    class="project shadow-bottom"
     @click.prevent="openInNewTab(project.link)"
     :class="{
       'not-allowed': br.button.visible && br.button.disabled,

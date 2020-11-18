@@ -61,7 +61,7 @@ export default {
         title: { visible: false },
         subtitle: { visible: false },
         description: { visible: true },
-        image: { visible: true, size: "md", rounded: false },
+        image: { visible: true, size: "md", rounded: true },
         img_description: { visible: false },
         button: { disabled: false, visible: true },
         second_button: { disabled: false, visible: false },

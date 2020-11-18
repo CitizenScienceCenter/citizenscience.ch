@@ -84,7 +84,7 @@ export default {
 .logo {
   padding-right: $spacing-2;
   margin-bottom: $spacing-3;
-  max-height: 70px;
+  max-height: 55px;
   width: auto;
 }
 

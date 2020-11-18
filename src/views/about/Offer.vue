@@ -400,7 +400,7 @@ export default {
         title: { visible: true },
         subtitle: { visible: true },
         description: { visible: true },
-        image: { visible: true, size: "md", rounded: false },
+        image: { visible: true, size: "md", rounded: true },
         img_description: { visible: false },
         button: { disabled: false, visible: true },
         second_button: { disabled: false, visible: true },

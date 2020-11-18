@@ -1,7 +1,7 @@
 <i18n>
   {
   "en": {
-  "page-title": "Why_Contribute",
+  "page-title": "Why Contribute",
 
   "section-collaborations-heading": "Why Contribute?",
   "section-collaborations-openseventeen-subheading": "The Open Seventeen Challenge",
@@ -17,7 +17,7 @@
 
   },
   "de": {
-  "page-title": "Warum_beitragen",
+  "page-title": "Warum mitmachen",
 
   "section-collaborations-heading": "Warum mitmachen?",
   "section-collaborations-openseventeen-subheading": "Die Open Seventeen Challenge",

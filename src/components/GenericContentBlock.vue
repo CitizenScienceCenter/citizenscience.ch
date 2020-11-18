@@ -26,7 +26,7 @@
     >
       <!-- Image sub-section Content  -->
       <div
-        class="col scroll-effect"
+        class="col scroll-effect scroll-effect-delayed-3"
         :class="checkVerticalOrientation('img-content')"
         v-if="contentData.image && br.image.visible"
       >
@@ -38,10 +38,7 @@
               rel="preload"
               :src="contentData.image"
               class="col-image"
-              :class="{                
-                rounded: contentData.toggle_img_style ? !br.image.rounded : br.image.rounded,
-                'vertical-img': br.vOrientation,
-              }"
+              :class="getImageStyle"
               :alt="contentData.image"
             />
           </div>
@@ -169,6 +166,15 @@ export default {
         template: `<div>${this.localTranslation(
           this.contentData.description
         )}</div>`,
+      };
+    },
+    getImageStyle() {
+      return {
+        rounded: this.contentData.toggle_img_style
+          ? !this.br.image.rounded
+          : this.br.image.rounded,
+        "vertical-img": this.br.vOrientation,
+        "shadow-bottom": this.br.image.rounded && !this.contentData.toggle_img_style,
       };
     },
   },

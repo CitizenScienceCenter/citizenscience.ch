@@ -15,7 +15,7 @@
             <img
               :src="person.photo"
               :alt="person.name"
-              class="photo"
+              class="photo shadow-bottom"
               onerror="this.src='/img/people/default.png';"
             />
             <span class="name">{{ person.name }}</span>

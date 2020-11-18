@@ -213,8 +213,11 @@ export const routes = [
             meta: { i18n: "navigation-startproject-builder", nav: true },
             beforeEnter(to, from, next) {
               next(from);
-              // this redirect to the project builder about route
-              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`);
+              // this redirect to a sub site in project builder
+              const site = to.query.site || "";
+              openUrl(
+                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/${site}`
+              );
             },
           },
           {
@@ -320,7 +323,7 @@ export const routes = [
               await store.dispatch("content/getPeopleRemote");
               next();
             },
-          },          
+          },
           {
             path: "contact",
             component: Contact,

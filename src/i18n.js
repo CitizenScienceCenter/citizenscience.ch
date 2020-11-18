@@ -198,7 +198,7 @@ export const i18n = new VueI18n({
         link: "Unsere Community",
       },
       "navigation-community-members": {
-        link: "Mitgliedern",
+        link: "Mitglieder",
       },
       "navigation-community-partnerships": {
         link: "Partner",

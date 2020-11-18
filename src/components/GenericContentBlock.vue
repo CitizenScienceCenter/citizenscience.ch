@@ -249,6 +249,7 @@ export default {
 @import "@/styles/shared/variables.scss";
 .generic-content {
   padding-top: 0;
+  padding-bottom: $spacing-3;
   .heading-section {
     padding-left: $spacing-3;
   }

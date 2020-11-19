@@ -26,28 +26,30 @@
   "bottom_left": {
     "visible": true,
     "vOrientation": false,
-    "hReverse":false,
+    "hReverse": false,
+    "compact_view": true,
     "heading": { "visible": true },
     "title": { "visible": false },
     "subtitle": { "visible": false },
     "description": { "visible": true },
-    "image": { "visible": true, "size": "sm", "rounded":true  },
+    "image": { "visible": true, "size": "sm", "rounded": true },
     "img_description": { "visible": true },
     "button": { "disabled": true, "visible": false },
-    "second_button":{"disabled":true, "visible":false}
+    "second_button": { "disabled": true, "visible": false }
   },
   "top_right": {
     "visible": true,
     "vOrientation": true,
-    "hReverse":false,
+    "hReverse": false,
+    "compact_view": true,
     "heading": { "visible": true },
     "title": { "visible": false },
     "subtitle": { "visible": true },
     "description": { "visible": true },
-    "image": { "visible": false, "rounded":true },
+    "image": { "visible": false, "rounded": true },
     "img_description": { "visible": false },
     "button": { "disabled": false, "visible": true },
-    "second_button":{"disabled":true, "visible":false}
+    "second_button": { "disabled": true, "visible": false }
   },
   "events": {
     "visible": true,

@@ -1,6 +1,7 @@
 <template>
   <div
-    class="generic-content content-wrapper"
+    class="generic-content"
+    :class="{ 'content-wrapper': !br.compact_view }"
     v-if="
       visible &&
         contentData &&
@@ -138,6 +139,8 @@ export default {
       br: {
         visible: false,
         vOrientation: false,
+        hReverse: false,
+        compact_view: false,
         heading: { visible: false },
         title: { visible: false },
         subtitle: { visible: false },
@@ -174,7 +177,8 @@ export default {
           ? !this.br.image.rounded
           : this.br.image.rounded,
         "vertical-img": this.br.vOrientation,
-        "shadow-bottom": this.br.image.rounded && !this.contentData.toggle_img_style,
+        "shadow-bottom":
+          this.br.image.rounded && !this.contentData.toggle_img_style,
       };
     },
   },

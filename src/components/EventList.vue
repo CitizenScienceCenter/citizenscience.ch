@@ -2,11 +2,16 @@
 {
   "en": {
     "section-heading": "Coming Up",
-    "all-events-button": "All Events"
+    "all-events-button": "All Events",
+    "event-cancel":"canceled",
+    "event-postpone":"postponed"
   },
   "de": {
     "section-heading": "Demnächst",
-    "all-events-button": "Alle Ereignisse"}
+    "all-events-button": "Alle Ereignisse",
+    "event-cancel":"abgesagt",
+    "event-postpone":"verschoben"
+  }
 }
 </i18n>
 <template>
@@ -29,19 +34,26 @@
     >
       <!-- Image Subsection -->
       <div
-        class="col-4 event-image"
+        class="col-6 event-image"
         :class="validateImage('img-content', event)"
         v-if="event.image && !br.hideImage"
       >
         <img :src="'/img/events/' + event.image" />
       </div>
-      <div class="col-8" :class="validateImage('text-content', event)">
+
+      <!-- Details Subsection -->
+      <div class="col-12" :class="validateImage('text-content', event)">
         <!-- Date Subsection -->
         <p class="event-date">
           {{ eventDisplayDate(event.start, event.end) }}
         </p>
         <!-- Title Subsection -->
-        <h3 class="subheading event-title" v-html="event.title"></h3>
+        <h3
+          class="subheading event-title"
+          :class="getStateStyle(event.state)"
+          v-html="event.title"
+        ></h3>
+        <h4 class="event-state">{{ localTranslation(event.state) }}</h4>
         <!-- Abstract Subsection -->
         <div class="event-abstract" v-if="event.abstract">
           <i class="fas fa-info-circle icon"></i>
@@ -139,8 +151,8 @@ export default {
     validateImage(item, event) {
       const viewConfig = {
         withImage: {
-          "img-content": " col-6 col-tablet-portrait-4",
-          "text-content": " col-tablet-portrait-8 ",
+          "img-content": "col-tablet-portrait-4",
+          "text-content": "col-tablet-portrait-8 ",
         },
         withoutImage: {
           "img-content": "col-large-4",
@@ -152,6 +164,19 @@ export default {
         selectedView = viewConfig.withImage;
       }
       return selectedView[item];
+    },
+    getStateStyle(eventState) {
+      const state = this.localTranslation(eventState);
+      try {
+        if (state.toLowerCase() == this.$i18n.t("event-cancel")) {
+          return "canceled";
+        }
+        if (state.toLowerCase() == this.$i18n.t("event-postpone")) {
+          return "postponed";
+        }
+      } catch (error) {
+        return null;
+      }
     },
     setStyle() {
       this.pl["heading"] = this.content ? this.content.heading : null;
@@ -271,7 +296,7 @@ export default {
     }
   }
   .event {
-    padding: $spacing-2 $spacing-1;
+    padding: $spacing-2 $spacing-3;
     cursor: pointer;
     .event-image {
       margin-bottom: $spacing-1;
@@ -292,6 +317,19 @@ export default {
     .event-title {
       margin-bottom: $spacing-1;
       font-size: $font-size-normal;
+      &.canceled {
+        color: $color-primary;
+        text-decoration: line-through;
+      }
+      &.postponed {
+        text-decoration: line-through;
+      }
+    }
+    .event-state {
+      color: $color-primary;
+      font-size: $font-size-normal;
+      font-weight: bold;
+      text-transform: uppercase;
     }
     .event-abstract,
     .event-speakers,

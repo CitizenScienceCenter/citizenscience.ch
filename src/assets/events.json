@@ -1,19 +1,20 @@
 [
   {
     "path": "brownbag-2020-11-26",
-    "start": "2020-11-26T12:15+01:00",
-    "end": "2020-11-26T13:15+01:00",
+    "start": "2020-11-26T12:00+01:00",
+    "end": "2020-11-26T13:00+01:00",
     "location": "Weblink via Zoom. Register via Email to info@citizenscience.ch",
     "title": "Lunch Talk: Bergbau goes public: Entdecken von alten Spuren mit neuen Mitteln–Historischer Bergbau und moderne Fernerkundung",
     "abstract": "",
     "speakers": "Beat Meier, Privatforscher, Olten &amp; Rouven Turck, UZH",
-    "content": "",
-    "image": "brownbag.jpg"
+    "content": "Das hier vorgestellte Fallbeispiel befasst sich mit dem Sichtbarmachen von Spuren, welche die Erzgewinnung bei Balsthal im Dünnerntal zurückgelassen hat. Nach anfänglichen Schürfversuchen, womöglich bereits im 16. Jahrhundert, wird für die Erzmatt 1793 eine Bergwerkskonzession für zwei Hammerschmiede aus dem Schwarzwald erteilt. <br><br> Auf der Erzmatt wird bis 1850 Erz abgebaut. Noch heute, also nach mehr als 170 Jahren, sind im Gelände der inzwischen dicht bewaldeten Erzmatt Spuren dieser Bergbautätigkeit zu finden. Es lassen sich Abraumhalden und trichterförmige Vertiefungen, sogenannte «Pingen» erkennen, die durch das Einsinken der Grubendecke oberhalb der Abbaustellen entstanden sind. <br><br>LiDAR-Daten (Light Detection and Ranging) sind ein ausgezeichnetes optisches Fernerkundungsmittel zum Aufspüren dieser Spuren, die der historische Bergbau an der Oberfläche zurückgelassen hat. Die professionelle GIS-Anwendung QGIS, die auf der Grundlage von Open-Source-Software ständig weiterentwickelt wird, ermöglicht eine einfache und kostengünstige Auswertung der LiDAR-Daten. Die Auswertung der Daten besteht aus einer Interpretation von Merkmalen, die in den LiDAR-Daten wahrgenommen werden, ergänzt durch gezielte Beobachtungen im Gelände. <br><br> Beat Meier, Privatforscher, ist Initiator und Motivator des Projekts. Er koordiniert die laufenden Arbeiten im Feld und Archiv permanent vor Ort. Dabei stellt er mit Hilfe von Rouven Turck (UZH) Kontakt zu Ämtern (z. B. Kantonsarchäologie, Forstamt, Gemeinde) her, um die nötigen Bewilligungen für die lokale Forschung zu erhalten. <br><br>Während Herr Meier lokal Anwohner und Interessierte für Sondengänge und Feldbegehungen koordiniert und motiviert, stellt Herr Turck Kontakte zu Fachkollegen wie Geophysikern her. Es sind etliche Sondengänger und Laienforscher, die sich etwa im Rahmen der Schweizerischen Gesellschaft für historischen Bergbau (SGHB) mit Bergbaufunden befassen, in das Projekt involviert. Unsere Kollaboration erfolgt auf Augenhöhe im ständigen Austausch. Die Forschungsstrategie wird in der Regel von Beat Meier erarbeitet und von Rouven Turck auf Realisierbarkeit (z. B. Geophysik) überprüft. Gemeinsam erfolgt die Organisation von Vorträgen (z. B. 26.10.2019, GV SGHB) und Medienberichten (z. B. Solothurner Zeitung, Oktober 2020), um die Wissenschaft in die Öffentlichkeit zu transportieren. <br><br>Zukünftig anstehende Projekte sind etwa die Ausweitung der Feldarbeiten sowie erste wissenschaftliche Publikationen.",
+    "image": "brownbag.jpg",
+    "state": { "en": "postponed", "de": "verschoben" }
   },
   {
     "path": "taucher-2020-10-28",
-    "start": "2020-10-28T12:15+01:00",
-    "end": "2020-10-28T13:15+01:00",
+    "start": "2020-10-28T12:00+01:00",
+    "end": "2020-10-28T13:00+01:00",
     "location": "Weblink via Zoom. Register via Email to info@citizenscience.ch",
     "title": "Lunch Talk: StadtWildTiere (Urban Wildlife) and Wilde Nachbarn (Wild Neighbors): Monitoring wildlife at the intersection of public awareness, research, and nature conservation",
     "abstract": "",
@@ -158,11 +159,12 @@
     "start": "2020-04-02T15:30+02:00",
     "end": "2020-04-02T18:00+02:00",
     "location": "Partizipative Wissenschaftsakademie und Citizen Science Center Zürich, Kurvenstrasse 17, 8006 Zürich",
-    "title": "<strike>Open House Citizen Science</strike> ABGESAGT / CANCELED",
+    "title": "Open House Citizen Science",
     "abstract": "Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte.",
     "speakers": "",
     "content": "<label>DE</label><p>Open House in der Kurvenstrasse 17! Im März und April bietet die Partizipative Wissenschaftsakademie und das Citizen Science Center Zürich ein Open House an. Möchtet ihr euch austauschen über die Entwicklung eines Citizen Science-Projekts? Braucht ihr «sparring partner» um eine Idee zu testen? Kommt vorbei. Wir freuen uns auf neue Ideen, gute Bekannte und gute Unbekannte.</p><label>EN</label><p>Open House at Kurvenstrasse 17! In March the Participatory Science Academy and the Citizen Science Center Zurich offer an open house. Would you like to exchange ideas about developing a Citizen Science project? Do you need a sparring partner to test an idea? Come over. We look forward to new ideas, seeing good acquaintances and meeting new people!</p>",
-    "image": "open-house.jpg"
+    "image": "open-house.jpg",
+    "state": { "en": "canceled", "de": "abgesagt" }
   },
   {
     "path": "openhouse-2020-03-05",
@@ -213,22 +215,24 @@
     "start": "2020-04-21T09:00+02:00",
     "end": "2020-04-21T17:30+02:00",
     "location": "Universität Zürich, KO2-F-152 EV, Karl Schmid-Strasse 4, 8006 Zürich",
-    "title": "<strike>Vertiefungskurs Citizen Science- Workshop für Doktorierende, Postdocs und PraktikerInnen</strike> ABGESAGT / CANCELED",
+    "title": "Vertiefungskurs Citizen Science- Workshop für Doktorierende, Postdocs und PraktikerInnen",
     "abstract": "",
     "speakers": "Petra Biberhofer, PhD, Partizipative Wissenschaftsakademie<br>Ruth Förster, Dr. sc. ETHZ, dr. ruth förster training & beratung, Leitung saguf Arbeitsgruppe Bildung für Nachhaltige Entwicklung",
     "content": "<p>Wie können partizipative Methoden in der Forschung angewendet werden und welche Kenntnisse und Fähigkeiten sind für eine gute Prozessgestaltung und -begleitung nötig? Der Einbezug von Bürgerinnen und Bürgern in partizipativer Forschung ist für die Lösung unterschiedlicher Problemstellungen wichtig – z.B. im Hinblick auf die Erreichung der globalen Nachhaltigkeitsziele und gleichzeitig herausfordernd. Eine professionelle Prozessgestaltung und –begleitung (Facilitation) ermöglicht das richtige Arbeitsumfeld zu schaffen und kann alle Beteiligten bei der Erreichung von verfolgten Zielen unterstützen.<br>Dieser Workshop ermöglicht die Entwicklung von Basis-Kompetenzen zur Prozessgestaltung und -begleitung für die Wissenskoproduktion und Beteiligung von Bürgerinnen und Bürgern in unterschiedlichen Forschungskontexten. Im Mittelpunkt steht dabei das Sammeln von Erfahrungen für die Planung und Umsetzung von partizipativen Designprinzipien, sowie adäquate Anwendung von ausgewählten Methoden und Tools in der eigenen Forschungspraxis.</p><p>Der Kurs wird von der <a href='https://www.pwa.uzh.ch/de/F%C3%BCr-Forschende-an-UZH-und-ETHZ/doctoralstudents.html' target='_blank'>Partizipativen Wissenschaftsakademie</a> in Zusammenarbeit mit dem Graduate Campus der UZH angeboten. Die Teilnahme ist offen für Interessierte aller Universitäten und PraktikerInnen.</p><p>Weitere Infos zum Kurs <a href='https://www.ueberfachliche-kompetenzen.uzh.ch/de/phd-courses/FS20/VCS.html' target='_blank'>«Vertiefung Citizen Science: Partizipative Forschungsprozesse kompetent gestalten und begleiten»</a>.</p>",
-    "image": "graduate-campus.jpg"
+    "image": "graduate-campus.jpg",
+    "state": { "en": "canceled", "de": "abgesagt" }
   },
   {
     "path": "vcs-2020-04-07",
     "start": "2020-04-07T09:00+02:00",
     "end": "2020-04-07T17:30+02:00",
     "location": "Universität Zürich, RAA-E-30, Rämistrasse 59, 8006 Zürich",
-    "title": "<strike>Vertiefungskurs Citizen Science- Workshop für Doktorierende, Postdocs und PraktikerInnen</strike> ABGESAGT / CANCELED",
+    "title": "Vertiefungskurs Citizen Science- Workshop für Doktorierende, Postdocs und PraktikerInnen",
     "abstract": "",
     "speakers": "Petra Biberhofer, PhD, Partizipative Wissenschaftsakademie<br>Ruth Förster, Dr. sc. ETHZ, dr. ruth förster training & beratung, Leitung saguf Arbeitsgruppe Bildung für Nachhaltige Entwicklung",
     "content": "<p>Wie können partizipative Methoden in der Forschung angewendet werden und welche Kenntnisse und Fähigkeiten sind für eine gute Prozessgestaltung und -begleitung nötig? Der Einbezug von Bürgerinnen und Bürgern in partizipativer Forschung ist für die Lösung unterschiedlicher Problemstellungen wichtig – z.B. im Hinblick auf die Erreichung der globalen Nachhaltigkeitsziele und gleichzeitig herausfordernd. Eine professionelle Prozessgestaltung und –begleitung (Facilitation) ermöglicht das richtige Arbeitsumfeld zu schaffen und kann alle Beteiligten bei der Erreichung von verfolgten Zielen unterstützen.<br>Dieser Workshop ermöglicht die Entwicklung von Basis-Kompetenzen zur Prozessgestaltung und -begleitung für die Wissenskoproduktion und Beteiligung von Bürgerinnen und Bürgern in unterschiedlichen Forschungskontexten. Im Mittelpunkt steht dabei das Sammeln von Erfahrungen für die Planung und Umsetzung von partizipativen Designprinzipien, sowie adäquate Anwendung von ausgewählten Methoden und Tools in der eigenen Forschungspraxis.</p><p>Der Kurs wird von der <a href='https://www.pwa.uzh.ch/de/F%C3%BCr-Forschende-an-UZH-und-ETHZ/doctoralstudents.html' target='_blank'>Partizipativen Wissenschaftsakademie</a> in Zusammenarbeit mit dem Graduate Campus der UZH angeboten. Die Teilnahme ist offen für Interessierte aller Universitäten und PraktikerInnen.</p><p>Weitere Infos zum Kurs <a href='https://www.ueberfachliche-kompetenzen.uzh.ch/de/phd-courses/FS20/VCS.html' target='_blank'>«Vertiefung Citizen Science: Partizipative Forschungsprozesse kompetent gestalten und begleiten»</a>.</p>",
-    "image": "graduate-campus.jpg"
+    "image": "graduate-campus.jpg",
+    "state": { "en": "canceled", "de": "abgesagt" }
   },
   {
     "path": "ecs-2020-03-24",
@@ -279,11 +283,12 @@
     "start": "2020-04-01T12:15+02:00",
     "end": "2020-04-01T13:15+02:00",
     "location": "ETH Zürich, Main Building, Room HG F 33.4, Rämistrasse 101, 8092 Zürich",
-    "title": "<strike>Brown Bag Lunch: StadtWildTiere (Urban Wildlife) and Wilde Nachbarn (Wild Neighbors) – Monitoring Wildlife at the Intersection of Public Awareness, Research, and Nature Conservation</strike> ABGESAGT / CANCELED",
+    "title": "Brown Bag Lunch: StadtWildTiere (Urban Wildlife) and Wilde Nachbarn (Wild Neighbors) – Monitoring Wildlife at the Intersection of Public Awareness, Research, and Nature Conservation",
     "abstract": "",
     "speakers": "Anouk-Lisa Taucher, SWILD – Urban Ecology & Wildlife Research",
     "content": "<p>Most urban dwellers are unaware of the vast diversity of wild neighbors they share their habitat with. In the citizen science projects StadtWildTiere and Wilde Nachbarn we want to raise awareness of the nature right in front of people’s doorsteps. While awareness is a crucial step towards conservation, taking action requires evidence-based knowledge. Anouk Taucher will present the two platforms, which focus on urban and suburban mammals, and will provide examples of completed projects which have successfully addressed wildlife research questions with the help of the public.</p>",
-    "image": "brownbag.jpg"
+    "image": "brownbag.jpg",
+    "state": { "en": "canceled", "de": "abgesagt" }
   },
   {
     "path": "brownbag-2020-03-04",

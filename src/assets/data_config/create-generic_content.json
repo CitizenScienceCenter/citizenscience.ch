@@ -134,8 +134,8 @@
           "de": "Punkt 5 – Sie benötigen weitere Ressourcen? Partnerschaften lohnen sich"
         },
         "description": {
-          "en": "<p> Once the resources required for your project are clear, you may decide that you need additional skills, people, or financial resources. If so, it may be interesting to explore more formal and longer-term <router-link to='/about/partnerships'>partnerships</router-link> with the Center or its network. </p>",
-          "de": "<p> Sobald klar ist, welche Mittel für Ihr Projekt erforderlich sind, entscheiden Sie vielleicht, dass zusätzliche Kompetenzen, Mitarbeitende oder finanzielle Mittel gebraucht werden. In dem Fall könnte es interessant sein, weitere offizielle und längerfristige <router-link to='/about/partnerships'>Partnerschaften</router-link> mit dem Center oder dessen Netzwerk zu prüfen.</p>"
+          "en": "<p> Once the resources required for your project are clear, you may decide that you need additional skills, people, or financial resources. If so, it may be interesting to explore more formal and longer-term <router-link to='/community/partnerships'>partnerships</router-link> with the Center or its network. </p>",
+          "de": "<p> Sobald klar ist, welche Mittel für Ihr Projekt erforderlich sind, entscheiden Sie vielleicht, dass zusätzliche Kompetenzen, Mitarbeitende oder finanzielle Mittel gebraucht werden. In dem Fall könnte es interessant sein, weitere offizielle und längerfristige <router-link to='/community/partnerships'>Partnerschaften</router-link> mit dem Center oder dessen Netzwerk zu prüfen.</p>"
         },
         "image": "/img/graphic-steps-5.png",
         "button": {

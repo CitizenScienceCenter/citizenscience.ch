@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://www.citizenscience.ch/de</loc>
         <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de" />
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en" />
     </url>
+    <!-- contribute section -->
     <url>
         <loc>https://www.citizenscience.ch/de/contribute/projects</loc>
         <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/contribute/projects" />
@@ -17,40 +18,53 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/contribute/collaborations" />
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/contribute/collaborations" />
     </url>
+    <!-- your project section -->
     <url>
         <loc>https://www.citizenscience.ch/de/start/startproject</loc>
         <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/startproject" />
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/startproject" />
     </url>
     <url>
-        <loc>https://www.citizenscience.ch/de/start/offer</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/offer" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/offer" />
+        <loc>https://www.citizenscience.ch/de/start/criteria</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/criteria" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/criteria" />
     </url>
     <url>
         <loc>https://www.citizenscience.ch/de/start/checklist</loc>
         <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/checklist" />
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/checklist" />
     </url>
+    <!-- community section -->
     <url>
-        <loc>https://www.citizenscience.ch/de/start/phases</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/phases" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/phases" />
+        <loc>https://www.citizenscience.ch/de/community/csc_community</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/community/csc_community" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/community/csc_community" />
     </url>
     <url>
-        <loc>https://www.citizenscience.ch/de/citizenscience/zurichstyle</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/citizenscience/zurichstyle" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/citizenscience/zurichstyle" />
+        <loc>https://www.citizenscience.ch/de/community/members</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/community/members" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/community/members" />
     </url>
     <url>
-        <loc>https://www.citizenscience.ch/de/citizenscience/sdg</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/citizenscience/sdg" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/citizenscience/sdg" />
+        <loc>https://www.citizenscience.ch/de/community/partnerships</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/community/partnerships" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/community/partnerships" />
     </url>
+    <!-- about us section -->
     <url>
         <loc>https://www.citizenscience.ch/de/about/mission</loc>
         <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/mission" />
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/mission" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/about/zurichstyle</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/zurichstyle" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/zurichstyle" />
+    </url>
+    <url>
+        <loc>https://www.citizenscience.ch/de/about/offer</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/offer" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/offer" />
     </url>
     <url>
         <loc>https://www.citizenscience.ch/de/about/people</loc>
@@ -58,24 +72,19 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/people" />
     </url>
     <url>
-        <loc>https://www.citizenscience.ch/de/about/partnerships</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/partnerships" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/partnerships" />
-    </url>
-    <url>
-        <loc>https://www.citizenscience.ch/de/about/pwa</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/pwa" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/pwa" />
-    </url>
-    <url>
         <loc>https://www.citizenscience.ch/de/about/contact</loc>
         <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/about/contact" />
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/about/contact" />
     </url>
+    <!-- events section -->
     <url>
-        <loc>https://www.citizenscience.ch/de/events</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/events" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/events" />
+        <loc>https://www.citizenscience.ch/de/events/upcoming</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/events/upcoming" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/events/upcoming" />
     </url>
-
+    <url>
+        <loc>https://www.citizenscience.ch/de/events/past</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/events/past" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/events/past" />
+    </url>
 </urlset>

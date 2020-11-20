@@ -98,7 +98,8 @@
 
 <script>
 import { getTranslation } from "@/assets/support.js";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
+import moment from "moment";
 
 export default {
   name: "EventList",
@@ -107,15 +108,6 @@ export default {
       br: this.viewConfig,
       pl: {},
       events: [],
-      i18nWeekdays: [
-        "weekday-sunday",
-        "weekday-monday",
-        "weekday-tuesday",
-        "weekday-wednesday",
-        "weekday-thursday",
-        "weekday-friday",
-        "weekday-saturday",
-      ],
     };
   },
   props: {
@@ -132,6 +124,9 @@ export default {
     viewConfig: Object,
   },
   computed: {
+    ...mapState({
+      language: (state) => state.settings.language,
+    }),
     ...mapGetters({ getEvents: "content/getEvents" }),
     getdata() {
       try {
@@ -185,65 +180,24 @@ export default {
     eventDisplayDate(start, end) {
       let startDate = new Date(start);
       let endDate = new Date(end);
-
       if (
-        startDate.getDate() === endDate.getDate() &&
-        startDate.getMonth() === endDate.getMonth() &&
-        startDate.getFullYear() === endDate.getFullYear()
+        startDate.getDate() == endDate.getDate() &&
+        startDate.getMonth() == endDate.getMonth() &&
+        startDate.getFullYear() == endDate.getFullYear()
       ) {
-        // same day
-        return (
-          this.$t(this.i18nWeekdays[startDate.getDay()]) +
-          ", " +
-          startDate.getDate() +
-          "." +
-          (startDate.getMonth() + 1) +
-          "." +
-          startDate.getFullYear() +
-          ", " +
-          startDate.getHours() +
-          ":" +
-          (startDate.getMinutes() < 10 ? "0" : "") +
-          startDate.getMinutes() +
-          "–" +
-          endDate.getHours() +
-          ":" +
-          (endDate.getMinutes() < 10 ? "0" : "") +
-          endDate.getMinutes()
-        );
-      } else {
-        // different day
-        return (
-          this.$t(this.i18nWeekdays[startDate.getDay()]) +
-          ", " +
-          startDate.getDate() +
-          "." +
-          (startDate.getMonth() + 1) +
-          "." +
-          startDate.getFullYear() +
-          ", " +
-          startDate.getHours() +
-          ":" +
-          (startDate.getMinutes() < 10 ? "0" : "") +
-          startDate.getMinutes() +
-          " – " +
-          this.$t(this.i18nWeekdays[endDate.getDay()]) +
-          ", " +
-          endDate.getDate() +
-          "." +
-          (endDate.getMonth() + 1) +
-          "." +
-          endDate.getFullYear() +
-          ", " +
-          endDate.getHours() +
-          ":" +
-          (endDate.getMinutes() < 10 ? "0" : "") +
-          endDate.getMinutes()
-        );
+        return `${moment(startDate).format("llll")} - ${moment(endDate).format(
+          "LT"
+        )}`;
       }
+      return `${moment(startDate).format("llll")} - ${moment(endDate).format(
+        "llll"
+      )}`;
     },
   },
   created() {
+    // Define the locale for moment datetime
+    moment.locale(this.$i18n.locale);
+
     this.setStyle();
     this.events = this.getdata;
     if (!this.past) {
@@ -269,6 +223,12 @@ export default {
     if (this.limit) {
       this.events = this.events.slice(0, this.limit);
     }
+  },
+  watch: {
+    // validate when laguage change, to change the format date
+    language: function(lan) {
+      moment.locale(lan);
+    },
   },
 };
 </script>
@@ -311,7 +271,7 @@ export default {
     .event-date {
       display: block;
       margin-bottom: $spacing-1;
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-size: $font-size-mini;
     }
     .event-title {

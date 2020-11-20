@@ -15,7 +15,7 @@
       <generic-content-width-block
         :content="intro"
         :visible="true"
-        :hReverse="true"
+        :hReverse="false"
       ></generic-content-width-block>
     </app-content-section>
 

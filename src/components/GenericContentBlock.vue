@@ -201,19 +201,19 @@ export default {
       const horizontal = {
         no_img: { "text-content": "col-large-12" },
         xsm: {
-          "img-content": "col-6 col-large-2",
+          "img-content": "col-8 col-tablet-portrait-6 col-large-2",
           "text-content": "col-large-6",
         },
         sm: {
-          "img-content": "col-6 col-large-4",
+          "img-content": "col-8 col-tablet-portrait-6 col-large-4",
           "text-content": "col-large-8",
         },
         md: {
-          "img-content": "col-6 col-large-5",
+          "img-content": "col-10 col-tablet-portrait-6 col-large-5",
           "text-content": "col-large-7",
         },
         lg: {
-          "img-content": "col-8 col-large-7",
+          "img-content": "col-12 col-tablet-portrait-8 col-large-7",
           "text-content": "col-large-5",
         },
       };
@@ -267,7 +267,7 @@ export default {
     .col-image {
       transform: scale(0.75) translateY(-5%);
       border-radius: 10%;
-      margin-bottom: -$spacing-3;
+      margin-bottom: -$spacing-2;
       position: relative;
       &.vertical-img {
         height: auto;
@@ -330,7 +330,7 @@ export default {
     .img-section {
       .col-image {
         transform: scale(0.8) translateY(-5%);
-        margin-bottom: -$spacing-2;
+        margin-bottom: -$spacing-1;
       }
     }
     .text-section {

@@ -12,7 +12,8 @@
     "section-projects-button": "Alle Projekte",
     "new-project-button": "Projekt erstellen",
     "search-project-placeholder": "Suchen",
-    "noresult-project-label": "Keine Projekte gefunden, für Ihre Suche"}
+    "noresult-project-label": "Keine Projekte gefunden, für Ihre Suche"
+  }
 }
 </i18n>
 <template>

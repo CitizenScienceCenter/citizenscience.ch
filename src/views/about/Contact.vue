@@ -25,12 +25,13 @@
 
 <template>
   <div>
-
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-6 scroll-effect">
-            <h2 class="heading centered" id="contact">{{ $t('section-contact-heading') }}</h2>
+            <h2 class="heading centered" id="contact">
+              {{ $t("section-contact-heading") }}
+            </h2>
             <p v-html="$t('section-contact-text')"></p>
             <ul>
               <li v-html="$t('section-contact-listitem-1')"></li>
@@ -45,44 +46,39 @@
     <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
-
   </div>
 </template>
 
 <script>
+import ContentSection from "@/components/shared/ContentSection.vue";
+import Footer from "@/components/shared/Footer.vue";
+import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-    import ContentSection from '@/components/shared/ContentSection.vue'
-    import Footer from '@/components/shared/Footer.vue'
-    import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-
-    export default {
-        components: {
-            SectionNewsletterSignup,
-            'app-content-section': ContentSection,
-            'app-footer': Footer
+export default {
+  components: {
+    SectionNewsletterSignup,
+    "app-content-section": ContentSection,
+    "app-footer": Footer,
+  },
+  props: {
+    platform: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  metaInfo: function() {
+    return {
+      title: this.$t("page-title"),
+      meta: [
+        {
+          property: "og:title",
+          content: this.$t("page-title"),
+          template: "%s | " + this.$t("site-title"),
         },
-        props: {
-            platform: {
-                type: Boolean,
-                default: false
-            }
-        },
-        metaInfo: function() {
-            return {
-                title: this.$t('page-title'),
-                meta: [
-                    {
-                        property: 'og:title',
-                        content: this.$t('page-title'),
-                        template: '%s | '+this.$t('site-title')
-                    }
-                ]
-            }
-        }
-    }
-
+      ],
+    };
+  },
+};
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

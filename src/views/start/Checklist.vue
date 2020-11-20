@@ -36,7 +36,6 @@
           ></generic-content-block>
         </div>
       </div>
-
     </app-content-section>
 
     <section-newsletter-signup></section-newsletter-signup>
@@ -66,7 +65,7 @@ export default {
   data() {
     return {
       intro: {},
-      checklist:{},
+      checklist: {},
       isReverse: false,
       viewConfig: {
         visible: true,

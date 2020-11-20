@@ -17,7 +17,6 @@
   "de": {
 
     "button-overview": " Zur Übersicht",
-
     "brownbag-info-heading": "Brown Bag Lunches",
     "brownbag-info-text": "The Brown Bag Lunches series has become a regular occasion to meet the research community, and a good setting to discuss and learn about the various approaches to Citizen Science and related projects and activities. Our agenda includes updates on the Center, presenters from the local Citizen Science community, and international guests.",
     "brownbag-register-text": "<b>Please register via E-Mail:</b>",
@@ -60,33 +59,23 @@
               <p class="lead centered event-date">
                 {{ eventDisplayDate(event.start, event.end) }}
               </p>
+              <div class="event-speakers" v-if="event.speakers !== ''">
+                <i class="fas fa-user icon"></i>
+                <p v-html="event.speakers"></p>
+              </div>
 
-              <div class="margin-bottom">
-                <div class="event-speakers" v-if="event.speakers !== ''">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path
-                      d="M256,256A128,128,0,1,0,128,128,128,128,0,0,0,256,256Zm89.6,32H328.9a174.08,174.08,0,0,1-145.8,0H166.4A134.43,134.43,0,0,0,32,422.4V464a48,48,0,0,0,48,48H432a48,48,0,0,0,48-48V422.4A134.43,134.43,0,0,0,345.6,288Z"
-                    />
-                  </svg>
-                  <p v-html="event.speakers"></p>
-                </div>
-
-                <div class="event-location">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path
-                      d="M236.27,501.67C91,291,64,269.41,64,192,64,86,150,0,256,0S448,86,448,192c0,77.41-27,99-172.27,309.67a24,24,0,0,1-39.46,0ZM256,272a80,80,0,1,0-80-80A80,80,0,0,0,256,272Z"
-                    />
-                  </svg>
-                  <p v-html="event.location"></p>
-                </div>
+              <div class="event-location">
+                <i class="fas fa-map-marker-alt icon"></i>
+                <p v-html="event.location"></p>
               </div>
 
               <div
                 v-if="event.content !== ''"
                 v-html="event.content"
-                class="margin-bottom"
+                class="event-description"
               ></div>
 
+              <!-- TODO: verify this content to remove it -->
               <div v-if="event.path.indexOf('brownbag') !== -1">
                 <p
                   class="reduced-bottom-margin centered"
@@ -173,7 +162,8 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
+import moment from "moment";
 
 export default {
   components: {
@@ -217,15 +207,6 @@ export default {
   data() {
     return {
       event: undefined,
-      i18nWeekdays: [
-        "weekday-sunday",
-        "weekday-monday",
-        "weekday-tuesday",
-        "weekday-wednesday",
-        "weekday-thursday",
-        "weekday-friday",
-        "weekday-saturday",
-      ],
       ogImage: undefined,
       pageTitle: undefined,
       startDate: undefined,
@@ -233,6 +214,9 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      language: (state) => state.settings.language,
+    }),
     ...mapGetters({ getEvents: "content/getEvents" }),
   },
   methods: {
@@ -243,66 +227,23 @@ export default {
     eventDisplayDate(start, end) {
       let startDate = new Date(start);
       let endDate = new Date(end);
-
       if (
-        startDate.getDate() === endDate.getDate() &&
-        startDate.getMonth() === endDate.getMonth() &&
-        startDate.getFullYear() === endDate.getFullYear()
+        startDate.getDate() == endDate.getDate() &&
+        startDate.getMonth() == endDate.getMonth() &&
+        startDate.getFullYear() == endDate.getFullYear()
       ) {
-        // same day
-        return (
-          this.$t(this.i18nWeekdays[startDate.getDay()]) +
-          ", " +
-          startDate.getDate() +
-          "." +
-          (startDate.getMonth() + 1) +
-          "." +
-          startDate.getFullYear() +
-          ", " +
-          startDate.getHours() +
-          ":" +
-          (startDate.getMinutes() < 10 ? "0" : "") +
-          startDate.getMinutes() +
-          "–" +
-          endDate.getHours() +
-          ":" +
-          (endDate.getMinutes() < 10 ? "0" : "") +
-          endDate.getMinutes()
-        );
-      } else {
-        // different day
-        //console.log('different day');
-        return (
-          this.$t(this.i18nWeekdays[startDate.getDay()]) +
-          ", " +
-          startDate.getDate() +
-          "." +
-          (startDate.getMonth() + 1) +
-          "." +
-          startDate.getFullYear() +
-          ", " +
-          startDate.getHours() +
-          ":" +
-          (startDate.getMinutes() < 10 ? "0" : "") +
-          startDate.getMinutes() +
-          " – " +
-          this.$t(this.i18nWeekdays[endDate.getDay()]) +
-          ", " +
-          endDate.getDate() +
-          "." +
-          (endDate.getMonth() + 1) +
-          "." +
-          endDate.getFullYear() +
-          ", " +
-          endDate.getHours() +
-          ":" +
-          (endDate.getMinutes() < 10 ? "0" : "") +
-          endDate.getMinutes()
-        );
+        return `${moment(startDate).format("llll")} - ${moment(endDate).format(
+          "LT"
+        )}`;
       }
+      return `${moment(startDate).format("llll")} - ${moment(endDate).format(
+        "llll"
+      )}`;
     },
   },
   created() {
+    // Define the locale for moment datetime
+    moment.locale(this.$i18n.locale);
     const self = this;
     this.event = this.getEvents.find(function(element) {
       return element.path === self.$route.params.event;
@@ -318,6 +259,12 @@ export default {
     this.startDate = this.event.start;
     this.endDate = this.event.end;
   },
+  watch: {
+    // validate when laguage change, to change the format date
+    language: function(lan) {
+      moment.locale(lan);
+    },
+  },
 };
 </script>
 
@@ -328,21 +275,23 @@ export default {
 .event-details {
   .event-speakers,
   .event-location {
-    position: relative;
-    svg {
-      position: absolute;
-      top: calc((#{$font-size-normal}* 1.5 - 16px) / 2);
-      left: 0;
-      width: 16px;
-      height: 16px;
-      fill: $color-secondary;
+    display: inline-flex;
+    width: 100%;
+    padding-left: $spacing-1;
+    margin-bottom: $spacing-1;
+    .icon {
+      font-size: $font-size-medium;
+      color: $color-secondary;
+      transform: translateY(5%);
+      padding-right: $spacing-1;
     }
     p {
-      padding-left: calc(16px + #{$spacing-2});
+      padding-left: $spacing-1;
+      font-size: $font-size-normal;
     }
   }
-  .event-speakers {
-    margin-bottom: $spacing-2;
+  .event-description{
+    padding: $spacing-2 0;
   }
 
   .event-info {

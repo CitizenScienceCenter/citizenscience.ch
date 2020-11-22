@@ -1,10 +1,10 @@
 <i18n>
   {
   "en": {
-  "page-title": "Checklist"
+    "page-title": "Checklist"
   },
   "de": {
-  "page-title": "Checkliste"
+    "page-title": "Checkliste"
   }
   }
 </i18n>

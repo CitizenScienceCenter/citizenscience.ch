@@ -7,6 +7,11 @@ export const router = new VueRouter({
   routes: routes,
   mode: "history",
   scrollBehavior(to, from, savedPosition) {
+    const top = window.pageYOffset || document.documentElement.scrollTop;
+    const [to_path, from_path] = [to.path.split("/"), from.path.split("/")];
+    if (to_path.pop() === from_path.pop()) {
+      return { x: 0, y: top };
+    }
     return { x: 0, y: 0 };
   },
 });

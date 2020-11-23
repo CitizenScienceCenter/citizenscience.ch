@@ -46,14 +46,13 @@
         </div>
       </div>
     </app-content-section>
-
-    <!-- TODO: verify the style config -->
+    
     <!-- SDGs section -->
     <app-content-section class="overflow-hidden">
       <generic-content-width-block
         :content="sdgContent"
-        :visible="true"
-        :hReverse="false"
+        :visible="sdgView.visible"
+        :hReverse="sdgView.hReverse"
       ></generic-content-width-block>
     </app-content-section>
 
@@ -70,7 +69,7 @@ import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue"
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   components: {
@@ -87,15 +86,9 @@ export default {
       isReverse: false, // this is used for orientation control when loop is implemented
       viewConfig: {
         visible: true,
-        vOrientation: false,
-        heading: { visible: false },
-        title: { visible: true },
-        subtitle: { visible: true },
-        description: { visible: true },
-        image: { visible: true, size: "lg", rounded: false },
-        img_description: { visible: false },
-        button: { disabled: false, visible: true },
-        second_button: { disabled: false, visible: true },
+      },
+      sdgView: {
+        visible: true,
       },
     };
   },
@@ -118,9 +111,14 @@ export default {
     };
   },
   computed: {
+    ...mapState({ style: (state) => state.viewconfig.zurichstyle_view }),
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
+    getStyle() {
+      this.viewConfig = this.style["zurich-style"];
+      this.sdgView = this.style["sdg"];
+    },
     loadContent() {
       this.content = this.getGContent("zurich_style").main_content.map((x) =>
         this.toggleReverse(x)
@@ -134,6 +132,7 @@ export default {
     },
   },
   created() {
+    this.getStyle();
     this.loadContent();
   },
 };

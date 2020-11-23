@@ -48,16 +48,9 @@
       >
         <project-teaser
           v-bind:key="p.id"
-          :projectTitle="p.name"
-          :projectTopic="p.topic"
-          :projectDescription="p.description"
-          :button="p.button"
-          :projectBgImage="p.img_background"
-          :projectTbImage="p.img_project"
-          :url="p.url"
+          :dataProject="p"
           :colorGradient="p.color_gradient"
           :vOrientation="vOrientation"
-          :projectId="p.id"
           :viewConfig="br"
         ></project-teaser>
       </div>

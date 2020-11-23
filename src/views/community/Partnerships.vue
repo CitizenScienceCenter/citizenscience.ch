@@ -17,6 +17,7 @@
   <div>
     <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
+        <!-- Heading section -->
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
             <h2 class="heading centered">
@@ -30,12 +31,16 @@
         <div class="row row-centered">
           <div class="col col-large-10">
             <div class="row row-wrapping scroll-effect">
+              <!-- Partnerships section -->
               <div
                 v-for="item in content"
                 :key="item.id"
                 class="col col-large-6 col-wrapping"
               >
-                <partnership-list :content="item" class="scroll-effect"></partnership-list>
+                <partnership-list
+                  :content="item"
+                  class="scroll-effect"
+                ></partnership-list>
               </div>
             </div>
           </div>
@@ -95,14 +100,7 @@ export default {
       win.focus();
     },
     loadContent() {
-      this.content = this.getPartnershipsContent.map((x) =>
-        this.toggleReverse(x)
-      );
-    },
-    toggleReverse(contentItem) {
-      contentItem.reverse = this.isReverse;
-      this.isReverse = !this.isReverse;
-      return contentItem;
+      this.content = this.getPartnershipsContent;
     },
   },
   created() {

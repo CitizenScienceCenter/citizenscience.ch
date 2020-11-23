@@ -17,7 +17,7 @@
 <template>
   <div>
     <app-content-section id="upcoming-events">
-      <div class="content-wrapper" >
+      <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-large-10 col-xlarge-8">
             <h2 class="heading centered scroll-effect">
@@ -43,7 +43,7 @@ import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup
 import Expandable from "@/components/shared/Expandable";
 import EventList from "@/components/EventList";
 
-import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 
 export default {
   data() {
@@ -65,11 +65,11 @@ export default {
     },
   },
   computed: {
-    ...mapGetters({ view: "viewconfig/getEventsConfig" }),
+    ...mapState({ style: (state) => state.viewconfig.events_view }),
   },
   created() {
     // Load the view configuration in vuex state
-    this.eventsConfig = this.view("events");
+    this.eventsConfig = this.style["events"];
   },
   metaInfo: function() {
     return {

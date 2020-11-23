@@ -62,17 +62,6 @@ const Partnerships = (resolve) => {
   });
 };
 
-// TODO: pending to remove
-// const SDG = (resolve) => {
-//   require.ensure(["../views/citizenscience/SDG.vue"], () => {
-//     resolve(require("../views/citizenscience/SDG.vue"));
-//   });
-// };
-// const PWA = (resolve) => {
-//   require.ensure(["../views/PWA.vue"], () => {
-//     resolve(require("../views/PWA.vue"));
-//   });
-// };
 const Mission = (resolve) => {
   require.ensure(["../views/about/Mission.vue"], () => {
     resolve(require("../views/about/Mission.vue"));
@@ -227,25 +216,6 @@ export const routes = [
           },
         ],
       },
-      // {
-      //   path: "citizenscience",
-      //   component: ChildView,
-      //   meta: { i18n: "navigation-citizenscience", nav: true },
-      //   redirect: "citizenscience/zurichstyle",
-      //   children: [
-      //     {
-      //       path: "zurichstyle",
-      //       component: ZurichStyle,
-      //       meta: { i18n: "navigation-citizenscience-zurichstyle", nav: true },
-      //     },
-      //     {
-      //       path: "sdg",
-      //       component: SDG,
-      //       meta: { i18n: "navigation-citizenscience-sdg", nav: true },
-      //     },
-      //   ],
-      // },
-      // TODO: The components for community section are pending
       {
         path: "community",
         component: ChildView,
@@ -281,11 +251,6 @@ export const routes = [
           },
         ],
       },
-      // {
-      //   path: "pwa",
-      //   meta: { i18n: "navigation-pwa", nav: true },
-      //   component: PWA,
-      // },
       {
         path: "about",
         component: ChildView,
@@ -308,6 +273,13 @@ export const routes = [
             path: "zurichstyle",
             component: ZurichStyle,
             meta: { i18n: "navigation-about-zurichstyle", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // This preload the page style
+              const res = await store.dispatch(
+                "viewconfig/getZurichStyleRemoteConfig"
+              );
+              if (res) next();
+            },
           },
           {
             path: "offer",

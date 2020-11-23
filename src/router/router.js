@@ -7,12 +7,16 @@ export const router = new VueRouter({
   routes: routes,
   mode: "history",
   scrollBehavior(to, from, savedPosition) {
-    const top = window.pageYOffset || document.documentElement.scrollTop;
-    const [to_path, from_path] = [to.path.split("/"), from.path.split("/")];
-    if (to_path.pop() === from_path.pop()) {
-      return { x: 0, y: top };
+    try {
+      const top = window.pageYOffset || document.documentElement.scrollTop;
+      const [to_path, from_path] = [to.path.split("/"), from.path.split("/")];
+      if (to_path.pop() === from_path.pop()) {
+        return { x: 0, y: top };
+      }
+      return { x: 0, y: 0 };
+    } catch (error) {
+      return { x: 0, y: 0 };
     }
-    return { x: 0, y: 0 };
   },
 });
 
@@ -23,11 +27,9 @@ router.beforeEach((to, from, next) => {
   store.dispatch("user/getAccountProfile");
 
   let filteredPath = to.path.split("/").filter((element) => element.length > 0);
-  console.log(filteredPath);
 
   //if( to.params.lang && to.params.lang.split('/')[0].length === 2 ) {
   if (filteredPath.length > 0 && filteredPath[0].length === 2) {
-    console.log("url has language: " + to.params.lang);
     let language = to.params.lang;
     store.dispatch("settings/setLanguage", language);
     i18n.locale = language;
@@ -70,8 +72,6 @@ router.beforeEach((to, from, next) => {
 
     // ----
   } else {
-    console.log("redirect to");
-    console.log("/" + i18n.locale + to.path);
     next("/" + i18n.locale + to.path);
   }
 });

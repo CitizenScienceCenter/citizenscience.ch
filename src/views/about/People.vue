@@ -20,11 +20,13 @@
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered">
+          <!-- Heading section -->
           <div class="col col-large-10 scroll-effect">
             <h2 class="heading centered" id="people">
               {{ $t("section-people-heading") }}
             </h2>
           </div>
+          <!-- People component section -->
           <div class="col scroll-effect">
             <div v-for="people in contentData" :key="people.id">
               <people-list :content="people"></people-list>

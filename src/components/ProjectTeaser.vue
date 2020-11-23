@@ -1,7 +1,7 @@
 <template>
   <div
     class="project shadow-bottom"
-    @click.prevent="openInNewTab(project.link)"
+    @click.prevent="openInNewTab(localTranslation(project.link))"
     :class="{
       'not-allowed': br.button.visible && br.button.disabled,
     }"
@@ -14,7 +14,7 @@
           :class="validateOrientation('img-content')"
           v-if="br.img_project.visible"
         >
-          <img :src="project.img_project" :class="{ round: !projectTbImage }" />
+          <img :src="projectImage" :class="{ round: !project.img_project }" />
         </div>
         <!-- Text Content section  -->
         <div class="col col-8" :class="validateOrientation('text-content')">
@@ -50,7 +50,7 @@
     <div
       class="project-bg-image"
       :style="{
-        backgroundImage: 'url(' + project.img_background + ')',
+        backgroundImage: 'url(' + backgroundImage + ')',
       }"
     ></div>
 
@@ -84,14 +84,7 @@ export default {
     };
   },
   props: {
-    projectBgImage: String,
-    projectTbImage: String,
-    projectId: String,
-    projectTitle: [String, Object],
-    projectTopic: [String, Object],
-    projectDescription: [String, Object],
-    button: Object,
-    url: String,
+    dataProject: Object,
     colorGradient: Object,
     infoText: String,
     infoSign: String,
@@ -100,10 +93,10 @@ export default {
   },
   computed: {
     backgroundImage() {
-      return this.projectBgImage || "/img/cover.jpg";
+      return this.project.img_background || "/img/cover.jpg";
     },
     projectImage() {
-      return this.projectTbImage || this.projectBgImage || "/img/cover.jpg";
+      return this.project.img_project || this.project.img_background || "/img/cover.jpg";
     },
   },
   methods: {
@@ -141,14 +134,14 @@ export default {
           }
         : { start: variable.primary, end: variable.secondary };
       this.project = {
-        id: this.projectId,
-        name: this.projectTitle,
-        topic: this.projectTopic,
-        description: this.projectDescription,
-        img_background: this.backgroundImage,
-        img_project: this.projectImage,
-        link: this.url,
-        button: this.button,
+        id: this.dataProject.id,
+        name: this.dataProject.name,
+        topic: this.dataProject.topic,
+        description: this.dataProject.description,
+        img_background: this.dataProject.img_background,
+        img_project: this.dataProject.img_project,
+        link: this.dataProject.url,
+        button: this.dataProject.button,
         gradient: gradient,
       };
     },

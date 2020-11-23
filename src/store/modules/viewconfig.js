@@ -1,11 +1,13 @@
 import homePageConfig from "@/assets/view_config/Home.json";
 import eventsPageConfig from "@/assets/view_config/Events.json";
+import zurich_stylePageConfig from "@/assets/view_config/ZurichStyle.json";
 import projectsPageConfig from "@/assets/view_config/Projects.json";
 import { getRemoteFile } from "@/minio.js";
 
 const state = {
   home_view: undefined,
   events_view: undefined,
+  zurichstyle_view: undefined,
   projects_view: undefined,
   isLoaded: false,
 };
@@ -13,9 +15,6 @@ const state = {
 const getters = {
   getHomeConfig: (state) => (comp) => {
     return state.home_view[comp];
-  },
-  getEventsConfig: (state) => (comp) => {
-    return state.events_view[comp];
   },
   getProjectsConfig: (state) => (comp) => {
     return state.projects_view[comp];
@@ -49,6 +48,18 @@ const actions = {
       await commit("setProjectsConfig", resp);
     }
   },
+  async getZurichStyleRemoteConfig({ commit }) {
+    let resp = zurich_stylePageConfig;
+    try {
+      resp = await getRemoteFile("styles/zurichstyle_style.json");
+      return resp;
+    } catch (error) {
+      console.error(error);
+      return resp;
+    } finally {
+      await commit("setZurichStyleConfig", resp);
+    }
+  },
   async getEventsRemoteConfig({ commit }) {
     let resp = eventsPageConfig;
     try {
@@ -67,6 +78,9 @@ const mutations = {
   setHomeConfig(state, payload) {
     state.home_view = payload;
     state.isLoaded = true;
+  },
+  setZurichStyleConfig(state, payload) {
+    state.zurichstyle_view = payload;
   },
   setEventsConfig(state, payload) {
     state.events_view = payload;

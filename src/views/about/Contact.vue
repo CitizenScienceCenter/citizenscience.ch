@@ -8,7 +8,6 @@
   "section-contact-listitem-1": "For generic inquiry, to share your ideas about projects, for suggestions about platform and tools, please use <a href='mailto:info@citizenscience.ch' target='_blank'>info@citizenscience.ch</a>.",
   "section-contact-listitem-2": "To inquire about membership, including benefits of members and how to become one, please contact <a href='mailto:maria.mondardini@uzh.ch' target='_blank'>maria.mondardini@uzh.ch</a>.",
   "section-contact-listitem-3": "To inquire about potential partnerships, please contact <a href='mailto:maria.mondardini@uzh.ch' target='_blank'>maria.mondardini@uzh.ch</a>."
-
   },
   "de": {
   "page-title": "Kontakt",
@@ -18,7 +17,6 @@
   "section-contact-listitem-1": "Für allgemeine Fragen, Vorschläge für Projekte oder Anregungen zu unserer Plattform, wenden Sie sich bitte an <a href='mailto:info@citizenscience.ch' target='_blank'>info@citizenscience.ch</a>",
   "section-contact-listitem-2": "Falls Sie ein Anliegen zum Thema Mitgliedschaft haben und wissen möchten, was die Vorteile und Vorgehensweise sind, kontaktieren Sie bitte <a href='mailto:maria.mondardini@uzh.ch' target='_blank'>maria.mondardini@uzh.ch</a>.",
   "section-contact-listitem-3": "Fragen betreffend Partnerschaften beantwortet ebenfalls Rosy Mondardini unter <a href='mailto:maria.mondardini@uzh.ch' target='_blank'>maria.mondardini@uzh.ch</a>."
-
   }
   }
 </i18n>

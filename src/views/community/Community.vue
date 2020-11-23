@@ -12,9 +12,10 @@
 </i18n>
 
 <template>
-  <div >
+  <div>
     <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
+        <!-- Heading section -->
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
             <h2 class="heading centered" id="partnerships">

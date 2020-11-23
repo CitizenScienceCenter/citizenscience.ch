@@ -18,11 +18,13 @@
     <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <div class="row row-centered">
+          <!-- Heading section -->
           <div class="col col-large-10 scroll-effect">
             <h2 class="heading centered" id="members">
               {{ $t("section-members-heading") }}
             </h2>
           </div>
+          <!-- Member list component -->
           <div class="col scroll-effect">
             <member-list
               :content="content"

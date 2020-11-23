@@ -8,7 +8,7 @@
         contentData.constructor === Object
     "
   >
-    <!-- text section -->
+    <!-- Text section -->
     <div class="content-wrapper">
       <!-- TODO: verify the styles for this component -->
       <div class="row" :class="{ 'row-reverse-large': hReverse }">

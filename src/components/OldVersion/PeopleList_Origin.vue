@@ -254,7 +254,6 @@
     </div>
 
     -->
-    <!-- TODO: validate if removing -->
     <!-- <div class="row row-centered">
       <div class="col col-large-10">
         <h3 class="subheading centered">{{ $t("subheading-members") }}</h3>

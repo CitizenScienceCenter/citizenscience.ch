@@ -14,8 +14,8 @@
     <app-content-section class="overflow-hidden">
       <generic-content-width-block
         :content="intro"
-        :visible="true"
-        :hReverse="false"
+        :visible="intro_view.visible"
+        :hReverse="intro_view.hReverse"
       ></generic-content-width-block>
     </app-content-section>
 
@@ -28,11 +28,11 @@
           v-bind:key="item.id"
         >
           <generic-content-block
-            :visible="viewConfig.visible"
-            :vOrientation="viewConfig.vOrientation"
+            :visible="checklist_view.visible"
+            :vOrientation="checklist_view.vOrientation"
             :hReverse="isReverse"
             :content="item"
-            :viewConfig="viewConfig"
+            :viewConfig="checklist_view"
           ></generic-content-block>
         </div>
       </div>
@@ -51,7 +51,7 @@ import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue"
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   name: "Checklist",
@@ -67,18 +67,8 @@ export default {
       intro: {},
       checklist: {},
       isReverse: false,
-      viewConfig: {
-        visible: true,
-        vOrientation: false,
-        heading: { visible: false },
-        title: { visible: true },
-        subtitle: { visible: true },
-        description: { visible: true },
-        image: { visible: true, size: "xsm", rounded: true },
-        img_description: { visible: false },
-        button: { disabled: false, visible: true },
-        second_button: { disabled: false, visible: false },
-      },
+      intro_view: { visible: false },
+      checklist_view: { visible: false },
     };
   },
   props: {
@@ -100,12 +90,13 @@ export default {
     };
   },
   computed: {
+    ...mapState({ style: (state) => state.viewconfig.checklist_view }),
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
-    openInNewTab: function(url) {
-      var win = window.open(url, "_blank");
-      win.focus();
+    getStyle() {
+      this.intro_view = this.style["description"];
+      this.checklist_view = this.style["list"];
     },
     loadContent() {
       this.checklist = this.getGContent("checklist").main_content;
@@ -113,6 +104,7 @@ export default {
     },
   },
   created() {
+    this.getStyle();
     this.loadContent();
   },
 };

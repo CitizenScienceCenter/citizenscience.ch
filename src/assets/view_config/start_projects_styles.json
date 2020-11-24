@@ -1,0 +1,20 @@
+{
+  "checklist": {
+    "list": {
+      "visible": true,
+      "vOrientation": false,
+      "heading": { "visible": false },
+      "title": { "visible": true },
+      "subtitle": { "visible": true },
+      "description": { "visible": true },
+      "image": { "visible": true, "size": "xsm", "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": false, "visible": false }
+    },
+    "description": {
+      "visible": true,
+      "hReverse": false
+    }
+  }
+}

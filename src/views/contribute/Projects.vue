@@ -130,7 +130,7 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 import ProjectCardsBlock from "@/components/ProjectCardsBlock";
 import ProjectTeaser from "@/components/ProjectTeaser";
-import { mapActions, mapState, mapGetters } from "vuex";
+import { mapActions, mapState } from "vuex";
 
 export default {
   data() {
@@ -167,8 +167,8 @@ export default {
     ...mapState({
       isProjectsLoaded: (state) => state.project.is_data_fetched,
       isViewLoaded: (state) => state.viewconfig.isLoaded,
+      style: (state) => state.viewconfig.projects_view,
     }),
-    ...mapGetters({ view: "viewconfig/getProjectsConfig" }),
   },
   methods: {
     ...mapActions({
@@ -179,7 +179,7 @@ export default {
       win.focus();
     },
     setViewConfig() {
-      this.projectCardConfig = this.view("projectCards");
+      this.projectCardConfig = this.style;
     },
     setProjectList: function() {
       this.getAllProjectsRemote();

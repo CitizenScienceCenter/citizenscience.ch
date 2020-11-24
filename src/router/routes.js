@@ -131,7 +131,9 @@ export const routes = [
         component: Home,
         beforeEnter: async (to, from, next) => {
           // This preload the page style
-          const res = await store.dispatch("viewconfig/getHomeRemoteConfig");
+          const res = await store.dispatch("viewconfig/getRemoteView", {
+            view: "home",
+          });
           // The cover component is required even data is not retrieved
           const cover = await store.dispatch("content/getCoverRemote");
           // generic conten data retrieving
@@ -153,10 +155,12 @@ export const routes = [
             meta: { i18n: "navigation-contribute-projects", nav: true },
             beforeEnter: async (to, from, next) => {
               // This preload the page style
-              const res = await store.dispatch(
-                "viewconfig/getProjectsRemoteConfig"
-              );
-              if (res) next();
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "projects",
+              });
+              if (res) {
+                next();
+              }
             },
           },
           {
@@ -164,11 +168,16 @@ export const routes = [
             component: Collaborations,
             meta: { i18n: "navigation-contribute-collaborations", nav: true },
             beforeEnter: async (to, from, next) => {
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "contribute",
+              });
               // load content from remote server
               await store.dispatch("content/getGenericContentRemote", {
                 view: "contribute",
               });
-              next();
+              if (res) {
+                next();
+              }
             },
           },
         ],
@@ -213,6 +222,15 @@ export const routes = [
             path: "checklist",
             meta: { i18n: "navigation-startproject-checklist", nav: true },
             component: Checklist,
+            beforeEnter: async (to, from, next) => {
+              // load content from remote server
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "checklist",
+              });
+              if (res) {
+                next();
+              }
+            },
           },
         ],
       },

@@ -58,25 +58,14 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   data() {
     return {
       content: {},
       isReverse: false,
-      viewConfig: {
-        visible: true,
-        vOrientation: false,
-        heading: { visible: false },
-        title: { visible: false },
-        subtitle: { visible: true },
-        description: { visible: true },
-        image: { visible: true, size: "md", rounded: true },
-        img_description: { visible: false },
-        button: { disabled: false, visible: false },
-        second_button: { disabled: false, visible: false },
-      },
+      viewConfig: { visible: false },
     };
   },
   components: {
@@ -104,9 +93,15 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      style: (state) => state.viewconfig.contribute_view,
+    }),
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
+    setViewConfig() {
+      this.viewConfig = this.style;
+    },
     loadContent() {
       this.content = this.getGContent("why_contribute").main_content.map((x) =>
         this.toggleReverse(x)
@@ -119,6 +114,7 @@ export default {
     },
   },
   created() {
+    this.setViewConfig();
     this.loadContent();
   },
 };

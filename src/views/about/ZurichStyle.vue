@@ -37,11 +37,11 @@
         >
           <generic-content-block
             class="extra-margin-bottom"
-            :visible="viewConfig.visible"
-            :vOrientation="viewConfig.vOrientation"
+            :visible="zuriView.visible"
+            :vOrientation="zuriView.vOrientation"
             :hReverse="item.reverse"
             :content="item"
-            :viewConfig="viewConfig"
+            :viewConfig="zuriView"
           ></generic-content-block>
         </div>
       </div>
@@ -84,7 +84,7 @@ export default {
       content: {},
       sdgContent: {},
       isReverse: false, // this is used for orientation control when loop is implemented
-      viewConfig: {
+      zuriView: {
         visible: true,
       },
       sdgView: {
@@ -116,7 +116,7 @@ export default {
   },
   methods: {
     getStyle() {
-      this.viewConfig = this.style["zurich-style"];
+      this.zuriView = this.style["zurich-style"];
       this.sdgView = this.style["sdg"];
     },
     loadContent() {

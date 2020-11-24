@@ -178,11 +178,7 @@ export default {
       getNewsRemote: "content/getNewsRemote",
       getEventsRemote: "content/getEventsRemote",
     }),
-    openInNewTab: function(url) {
-      var win = window.open(url, "_blank");
-      win.focus();
-    },
-    setProjectList: function() {
+    setProjectList() {
       this.projectCardConfig = this.view("projectCards");
       this.getFeaturedProjectsRemote({ limit: this.projectCardConfig.limit });
     },

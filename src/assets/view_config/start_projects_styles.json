@@ -1,4 +1,28 @@
 {
+  "start": {
+    "visible": true,
+    "vOrientation": false,
+    "heading": { "visible": false },
+    "title": { "visible": false },
+    "subtitle": { "visible": true },
+    "description": { "visible": true },
+    "image": { "visible": true, "size": "lg", "rounded": false },
+    "img_description": { "visible": false },
+    "button": { "disabled": false, "visible": true },
+    "second_button": { "disabled": false, "visible": true }
+  },
+  "criteria": {
+    "visible": true,
+    "vOrientation": false,
+    "heading": { "visible": false },
+    "title": { "visible": false },
+    "subtitle": { "visible": false },
+    "description": { "visible": true },
+    "image": { "visible": true, "size": "md", "rounded": true },
+    "img_description": { "visible": false },
+    "button": { "disabled": false, "visible": true },
+    "second_button": { "disabled": false, "visible": false }
+  },
   "checklist": {
     "list": {
       "visible": true,

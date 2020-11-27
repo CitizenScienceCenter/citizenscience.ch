@@ -47,25 +47,14 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   name: "Startproject",
   data() {
     return {
       content: {},
-      viewConfig: {
-        visible: true,
-        vOrientation: false,
-        heading: { visible: false },
-        title: { visible: false },
-        subtitle: { visible: true },
-        description: { visible: true },
-        image: { visible: true, size: "lg", rounded: false },
-        img_description: { visible: false },
-        button: { disabled: false, visible: true },
-        second_button: { disabled: false, visible: true },
-      },
+      viewConfig: { visible: false },
     };
   },
   components: {
@@ -93,14 +82,21 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      style: (state) => state.viewconfig.start_view,
+    }),
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
+    setViewConfig() {
+      this.viewConfig = this.style;
+    },
     loadContent() {
       this.content = this.getGContent("before_you_start");
     },
   },
   created() {
+    this.setViewConfig();
     this.loadContent();
   },
 };

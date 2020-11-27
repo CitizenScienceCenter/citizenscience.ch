@@ -12,6 +12,7 @@ const VIEW_FILES = {
     local: homePageConfig,
     mutation: "setHomeConfig",
   },
+  // Contribute section
   projects: {
     remote: "contribute_styles.json",
     local: contributeViewsConfig,
@@ -22,7 +23,17 @@ const VIEW_FILES = {
     local: contributeViewsConfig,
     mutation: "setContributeConfig",
   },
-
+  // Before you start section
+  start: {
+    remote: "start_projects_styles.json",
+    local: startProjectsViewsConfig,
+    mutation: "setStartConfig",
+  },
+  criteria: {
+    remote: "start_projects_styles.json",
+    local: startProjectsViewsConfig,
+    mutation: "setCriteriaConfig",
+  },
   checklist: {
     remote: "start_projects_styles.json",
     local: startProjectsViewsConfig,
@@ -32,10 +43,14 @@ const VIEW_FILES = {
 
 const state = {
   home_view: undefined,
+  // Contribute Section states
   projects_view: undefined,
   contribute_view: undefined,
-
+  // Before you Start Section states
+  start_view: undefined,
+  criteria_view: undefined,
   checklist_view: undefined,
+
   events_view: undefined,
   zurichstyle_view: undefined,
 
@@ -51,13 +66,18 @@ const getters = {
 const actions = {
   async getRemoteView({ commit }, { view }) {
     commit("setIsLoaded", false);
-    let res = VIEW_FILES[view].local;
+    let res;
     try {
       // Retrieve style from remote
       res = await getRemoteFile(`styles/${VIEW_FILES[view].remote}`);
-      return res[view];
+      if (res[view] === undefined) {
+        throw new Error("Remote undefined");
+      } else {
+        return res[view];
+      }
     } catch (error) {
       console.error(error);
+      res = VIEW_FILES[view].local
       return res[view];
     } finally {
       await commit(VIEW_FILES[view].mutation, res[view]);
@@ -102,9 +122,16 @@ const mutations = {
     state.contribute_view = payload;
   },
 
+  setStartConfig(state, payload) {
+    state.start_view = payload;
+  },
+  setCriteriaConfig(state, payload) {
+    state.criteria_view = payload;
+  },
   setChecklistConfig(state, payload) {
     state.checklist_view = payload;
   },
+
   setZurichStyleConfig(state, payload) {
     state.zurichstyle_view = payload;
   },

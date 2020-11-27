@@ -200,11 +200,27 @@ export const routes = [
             path: "startproject",
             component: StartProject,
             meta: { i18n: "navigation-startproject-overview", nav: true },
+            beforeEnter: async (to, from, next) => {
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "start",
+              });
+              if (res) {
+                next();
+              }
+            },
           },
           {
             path: "criteria",
             component: Criteria,
             meta: { i18n: "navigation-startproject-criteria", nav: true },
+            beforeEnter: async (to, from, next) => {
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "criteria",
+              });
+              if (res) {
+                next();
+              }
+            },
           },
           {
             path: "builder",

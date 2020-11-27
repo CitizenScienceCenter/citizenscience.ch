@@ -36,7 +36,11 @@ const actions = {
     let res = null;
     try {
       res = await getRemoteFile("data/cover_list.json");
-      return res;
+      if (res === undefined) {
+        throw new Error("Remote undefined");
+      } else {
+        return res;
+      }
     } catch (error) {
       console.error(error);
       res = coverListDefault;
@@ -62,7 +66,11 @@ const actions = {
     let res = null;
     try {
       res = await getRemoteFile(`data/${view}-generic_content.json`);
-      return res;
+      if (res === undefined) {
+        throw new Error("Remote undefined");
+      } else {
+        return res;
+      }
     } catch (error) {
       // This content is local whether the remote content is not retrieved
       res = require(`@/assets/data_config/${view}-generic_content.json`);
@@ -87,7 +95,11 @@ const actions = {
     let res = null;
     try {
       res = await getRemoteFile("data/people.json");
-      return res;
+      if (res === undefined) {
+        throw new Error("Remote undefined");
+      } else {
+        return res;
+      }
     } catch (error) {
       // This content is local if the remote content is not retrieved
       res = require("@/assets/data_config/people.json");
@@ -100,7 +112,11 @@ const actions = {
     let res = null;
     try {
       res = await getRemoteFile("data/partnerships.json");
-      return res;
+      if (res === undefined) {
+        throw new Error("Remote undefined");
+      } else {
+        return res;
+      }
     } catch (error) {
       // This content is local if the remote content is not retrieved
       res = require("@/assets/data_config/partnerships.json");

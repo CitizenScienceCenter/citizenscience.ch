@@ -13,13 +13,13 @@
       "de": ""
     },
     "description": {
-      "en": "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "en": "Community building at the Center means facilitating the growth of an active group of academic researchers, citizen scientists and partner organizations through various types of interaction. In-person and online, we create opportunities for them to connect, interact, share, and grow. By actively involving people with different backgrounds and expertise, Citizen Science expands the way of doing excellent science. Engaging the public to participate in scientific research, as well as engaging academic scientists to open up their work for the collaboration with citizens, adds creativity, ability, capacity, speed and impact to the process of generating knowledge. Our Citizen Science Community is growing and spans Zurich and beyond. It consists of local communities of professional scientists and citizen scientists, including members of UZH, ETH Zurich, local communities in Zurich and Switzerland, Zurich community, as well as a wider network of contributors including our partners and members.",
       "de":""
     },
     "image": "/img/uzh-eth.jpg",
     "img_description": {
-      "en": "Image Description",
-      "de": "Bildbeschreibung"
+      "en": "",
+      "de": ""
     },
     "button": {
       "link": null,
@@ -41,11 +41,11 @@
       "de": ""
     },
     "subtitle": {
-      "en": "Lorem ipsum",
+      "en": "Citizen Science, Co-creation & SDGs",
       "de": "Ipsum lorem"
     },
     "description": {
-      "en": "Dolor sit amet, consectetur adipiscing elit. Maecenas convallis congue nulla. Vestibulum rhoncus molestie ornare. Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus. Proin cursus justo sed arcu convallis pulvinar. Suspendisse cursus condimentum nisi, id sagittis quam bibendum at. Aliquam vehicula neque vitae maximus nulla.",
+      "en": "The Citizen Science Center Zurich is run jointly by the University of Zurich and ETH Zurich . The mission of the Center is to support and promote the collaboration of academic scientists and the general public to implement co-created Citizen Science projects. The Center provides support with digital tools, methodology, processes, and community management. The Center is keen to support projects that contribute to the implementation of the UN Sustainable Development Goals.",
       "de": "Vestibulum rhoncus molestie ornare. Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus. Proin cursus justo sed arcu convallis pulvinar. Suspendisse cursus condimentum nisi, id sagittis quam bibendum at. Aliquam vehicula neque vitae maximus nulla."
     },
     "button": {

@@ -23,7 +23,7 @@
         "button": { "disabled": false, "visible": true }
       }
     },
-    "news": { "visible": true, "timeToRefresh": 15, "limit": 5 },
+    "news": { "visible": true, "timeToRefresh": 15, "limit": 5, "max_chars": 500 },
     "bottom_left": {
       "visible": true,
       "vOrientation": false,

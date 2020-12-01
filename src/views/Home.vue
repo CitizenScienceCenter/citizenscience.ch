@@ -41,9 +41,9 @@
               :visible="newsConfig.visible"
               :timeToRefresh="newsConfig.timeToRefresh"
               :limit="newsConfig.limit"
+              :max_chars="newsConfig.max_chars"
             >
-              ></news-block
-            >
+            </news-block>
           </app-content-section>
           <!-- Generic Content component for Our Community -->
           <app-content-section class="row ph-mv" v-if="isGCLoaded">

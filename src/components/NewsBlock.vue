@@ -39,14 +39,7 @@
       <!-- Text sub-section Content  -->
       <div class="col col-12 scroll-effect ">
         <transition name="slide-fade" mode="out-in">
-          <p :key="index">
-            {{ localTranslation(newslist[index].description) }}
-            <router-link
-              tag="a"
-              :to="'/news/' + newslist[index].path"
-              >...{{ $t("more-button") }}</router-link
-            >
-          </p>
+          <component :is="getDynamicData" :key="index"></component>
         </transition>
       </div>
     </div>
@@ -71,6 +64,7 @@ export default {
     visible: Boolean,
     timeToRefresh: { type: Number, default: 20 },
     limit: { type: Number, default: 3 },
+    max_chars: { type: Number, default: 350 },
   },
   computed: {
     ...mapState({
@@ -91,6 +85,19 @@ export default {
         return null;
       }
     },
+    getDynamicData: function() {
+      return {
+        template: `<p>${this.localTranslation(
+          this.newslist[this.index].description
+        )}
+          <a href=${
+            this.newslist[this.index].link
+          } target='_blank' style="font-weight: bold;">
+          ...${this.$t("more-button")}
+          </a>
+        </p>`,
+      };
+    },
   },
   methods: {
     localTranslation(textContent) {
@@ -98,13 +105,11 @@ export default {
     },
     validateNewsContent(n, i) {
       // This variable avoid undefined or null errors
-      const keys = ["title", "date", "description", "path"];
+      const keys = ["title", "date", "description", "path", "link"];
       const item = {};
       const element = { ...n };
       // Due to is a dyamic component is required filter the complete information
-      if (
-        keys.some((x) => typeof n[x] == "undefined" || n[x] == null)
-      ) {
+      if (keys.some((x) => typeof n[x] == "undefined" || n[x] == null)) {
         return;
       }
       // This section looking the required keys
@@ -118,7 +123,7 @@ export default {
     },
     validateDescriptionLength(description) {
       // Here is fixed the maximun number of words and characters for news description
-      const MAX = 350;
+      const MAX = this.max_chars;
       // any character that is not a word character or whitespace
       const endChars = [".", ",", " ", "!", "?", ";", ")", "]", "}"];
       let newDescription = {};
@@ -194,10 +199,6 @@ export default {
     }
     p {
       font-size: $font-size-tiny;
-      a {
-        cursor: pointer;
-        font-weight: bold;
-      }
     }
     .date {
       font-size: $font-size-tiny;

@@ -40,6 +40,8 @@
                 <partnership-list
                   :content="item"
                   class="scroll-effect"
+                  :visible="viewConfig.visible"
+                  :viewConfig="viewConfig"
                 ></partnership-list>
               </div>
             </div>
@@ -59,7 +61,7 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import PartnershipList from "@/components/PartnershipList.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   components: {
@@ -71,6 +73,7 @@ export default {
   data() {
     return {
       content: {},
+      viewConfig: {},
     };
   },
   props: {
@@ -92,18 +95,21 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      style: (state) => state.viewconfig.partnerships_view,
+    }),
     ...mapGetters({ getPartnershipsContent: "content/getPartnerships" }),
   },
   methods: {
-    openInNewTab: function(url) {
-      var win = window.open(url, "_blank");
-      win.focus();
+    setViewConfig() {
+      this.viewConfig = this.style;
     },
     loadContent() {
       this.content = this.getPartnershipsContent;
     },
   },
   created() {
+    this.setViewConfig();
     this.loadContent();
   },
 };

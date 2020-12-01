@@ -46,7 +46,7 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 import MemberList from "@/components/MemberList";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   components: {
@@ -58,15 +58,7 @@ export default {
   data() {
     return {
       content: {},
-      viewConfig: {
-        visible: true,
-        title: { visible: false },
-        description: { visible: true },
-        button: { disabled: false, visible: false },
-        memberList: {
-          visible: true,
-        },
-      },
+      viewConfig: { visible: false },
     };
   },
   props: {
@@ -88,14 +80,19 @@ export default {
     };
   },
   computed: {
+    ...mapState({ style: (state) => state.viewconfig.members_view }),
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
+    setViewConfig() {
+      this.viewConfig = this.style;
+    },
     loadContent() {
       this.content = this.getGContent("members");
     },
   },
   created() {
+    this.setViewConfig();
     this.loadContent();
   },
 };

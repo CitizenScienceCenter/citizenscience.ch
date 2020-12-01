@@ -267,11 +267,29 @@ export const routes = [
             path: "csc_community",
             component: Community,
             meta: { i18n: "navigation-community-ourcommunity", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // This preload the page style
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "community",
+              });
+              if (res) {
+                next();
+              }
+            },
           },
           {
             path: "members",
             component: Members,
             meta: { i18n: "navigation-community-members", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // This preload the page style
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "members",
+              });
+              if (res) {
+                next();
+              }
+            },
           },
           {
             path: "partnerships",
@@ -280,7 +298,13 @@ export const routes = [
             beforeEnter: async (to, from, next) => {
               // load content from remote server
               await store.dispatch("content/getPartnershipsRemote");
-              next();
+              // This preload the page style
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "partnerships",
+              });
+              if (res) {
+                next();
+              }
             },
           },
         ],

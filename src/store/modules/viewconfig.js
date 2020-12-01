@@ -1,6 +1,7 @@
 import homePageConfig from "@/assets/view_config/home_styles.json";
 import contributeViewsConfig from "@/assets/view_config/contribute_styles.json";
 import startProjectsViewsConfig from "@/assets/view_config/start_projects_styles.json";
+import communityViewsConfig from "@/assets/view_config/community_styles.json";
 import eventsPageConfig from "@/assets/view_config/Events.json";
 import zurich_stylePageConfig from "@/assets/view_config/ZurichStyle.json";
 
@@ -10,34 +11,50 @@ const VIEW_FILES = {
   home: {
     remote: "home_styles.json",
     local: homePageConfig,
-    mutation: "setHomeConfig",
+    state: "home_view",
   },
   // Contribute section
   projects: {
     remote: "contribute_styles.json",
     local: contributeViewsConfig,
-    mutation: "setProjectsConfig",
+    state: "projects_view",
   },
   contribute: {
     remote: "contribute_styles.json",
     local: contributeViewsConfig,
-    mutation: "setContributeConfig",
+    state: "contribute_view",
   },
   // Before you start section
   start: {
     remote: "start_projects_styles.json",
     local: startProjectsViewsConfig,
-    mutation: "setStartConfig",
+    state: "start_view",
   },
   criteria: {
     remote: "start_projects_styles.json",
     local: startProjectsViewsConfig,
-    mutation: "setCriteriaConfig",
+    state: "criteria_view",
   },
   checklist: {
     remote: "start_projects_styles.json",
     local: startProjectsViewsConfig,
-    mutation: "setChecklistConfig",
+    state: "checklist_view",
+  },
+  // Community section
+  community: {
+    remote: "community_styles.json",
+    local: communityViewsConfig,
+    state: "community_view",
+  },
+  members: {
+    remote: "community_styles.json",
+    local: communityViewsConfig,
+    state: "members_view",
+  },
+  partnerships: {
+    remote: "community_styles.json",
+    local: communityViewsConfig,
+    state: "partnerships_view",
   },
 };
 
@@ -50,6 +67,10 @@ const state = {
   start_view: undefined,
   criteria_view: undefined,
   checklist_view: undefined,
+  // Community Section states
+  community_view: undefined,
+  members_view: undefined,
+  partnerships_view: undefined,
 
   events_view: undefined,
   zurichstyle_view: undefined,
@@ -80,7 +101,8 @@ const actions = {
       res = VIEW_FILES[view].local
       return res[view];
     } finally {
-      await commit(VIEW_FILES[view].mutation, res[view]);
+      const payload = {view: VIEW_FILES[view].state, content: res[view]}
+      await commit("setViewState", payload);
     }
   },
   async getZurichStyleRemoteConfig({ commit }) {
@@ -110,26 +132,9 @@ const actions = {
 };
 
 const mutations = {
-  setHomeConfig(state, payload) {
-    state.home_view = payload;
+  setViewState(state, payload) {
+    state[payload.view] = payload.content
     state.isLoaded = true;
-  },
-  setProjectsConfig(state, payload) {
-    state.projects_view = payload;
-    state.isLoaded = true;
-  },
-  setContributeConfig(state, payload) {
-    state.contribute_view = payload;
-  },
-
-  setStartConfig(state, payload) {
-    state.start_view = payload;
-  },
-  setCriteriaConfig(state, payload) {
-    state.criteria_view = payload;
-  },
-  setChecklistConfig(state, payload) {
-    state.checklist_view = payload;
   },
 
   setZurichStyleConfig(state, payload) {

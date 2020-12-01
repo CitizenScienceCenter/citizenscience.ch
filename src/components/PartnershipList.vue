@@ -1,27 +1,34 @@
 <template>
-  <div>
-    <h3 class="subheading reduced-bottom-margin" v-if="contentData.name">
+  <div v-if="visible">
+    <h3
+      class="subheading reduced-bottom-margin"
+      v-if="br.title.visible && contentData.name"
+    >
       {{ localTranslation(contentData.name) }}
     </h3>
     <!-- Description section -->
-    <component :is="getDynamicData" class="reduced-bottom-margin"></component>
+    <component
+      :is="getDynamicData"
+      class="reduced-bottom-margin"
+      v-if="br.description.visible"
+    ></component>
 
     <!-- Logos section -->
-    <span
-      v-for="logo in contentData.logos"
-      :key="logo.id"
-    >
-      <img :src="logo" class="logo" />
-    </span>
+    <div v-if="br.logos.visible">
+      <span v-for="logo in contentData.logos" :key="logo.id">
+        <img :src="logo" class="logo" />
+      </span>
+    </div>
 
     <!-- Button section -->
     <div
       class="button-section margin-bottom"
-      v-if="contentData.button && contentData.button.link"
+      v-if="br.button.visible && contentData.button && contentData.button.link"
     >
       <button
         class="button button-secondary button-icon"
         @click="openInNewTab(contentData.button.link)"
+        :disabled="br.button.disabled"
       >
         <i :class="contentData.button.icon"></i>
         {{ localTranslation(contentData.button) }}
@@ -37,12 +44,21 @@ export default {
   name: "PeopleList",
   data: function() {
     return {
+      br: {
+        visible: false,
+        title: { visible: false },
+        description: { visible: false },
+        button: { disabled: false, visible: false },
+        logos: { visible: false },
+      },
       contentData: {},
       showMembers: false,
     };
   },
   props: {
     content: Object,
+    viewConfig: Object,
+    visible: Boolean,
   },
   computed: {
     getDynamicData: function() {
@@ -64,8 +80,16 @@ export default {
     loadData() {
       this.contentData = this.content;
     },
+    validateStyle() {
+      for (const key in this.viewConfig) {
+        if (Object.keys(this.br).includes(key)) {
+          this.br[key] = this.viewConfig[key];
+        }
+      }
+    },
   },
   created() {
+    this.validateStyle();
     this.loadData();
   },
 };

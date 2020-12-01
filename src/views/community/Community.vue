@@ -32,11 +32,11 @@
           v-bind:key="item.id"
         >
           <generic-content-block
-            :visible="viewConfig.visible"
-            :vOrientation="viewConfig.vOrientation"
+            :visible="mainViewConfig.visible"
+            :vOrientation="mainViewConfig.vOrientation"
             :hReverse="item.reverse"
             :content="item"
-            :viewConfig="viewConfig"
+            :viewConfig="mainViewConfig"
           ></generic-content-block>
         </div>
       </div>
@@ -47,8 +47,8 @@
     <app-content-section class="overflow-hidden">
       <generic-content-width-block
         :content="ourCommunityContent"
-        :visible="true"
-        :hReverse="false"
+        :visible="ourCommunityViewConfig.visible"
+        :hReverse="ourCommunityViewConfig.hReverse"
       ></generic-content-width-block>
     </app-content-section>
 
@@ -57,11 +57,11 @@
       class="content-section content-section-compact light-greyish scroll-effect"
     >
       <generic-content-block
-        :visible="viewConfig.visible"
-        :vOrientation="viewConfig.vOrientation"
-        :hReverse="viewConfig.isReverse"
+        :visible="howJoinViewConfig.visible"
+        :vOrientation="howJoinViewConfig.vOrientation"
+        :hReverse="howJoinViewConfig.isReverse"
         :content="howJoinContent"
-        :viewConfig="modifyViewConfig('social')"
+        :viewConfig="howJoinViewConfig"
       ></generic-content-block>
     </app-content-section>
 
@@ -77,7 +77,7 @@ import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   data() {
@@ -86,18 +86,9 @@ export default {
       howJoinContent: {},
       ourCommunityContent: {},
       isReverse: true,
-      viewConfig: {
-        visible: true,
-        vOrientation: false,
-        heading: { visible: false },
-        title: { visible: true },
-        subtitle: { visible: true },
-        description: { visible: true },
-        image: { visible: true, size: "md", rounded: true },
-        img_description: { visible: false },
-        button: { disabled: false, visible: true },
-        second_button: { disabled: false, visible: false },
-      },
+      mainViewConfig: { visible: false },
+      ourCommunityViewConfig: { visible: false },
+      howJoinViewConfig: { visible: false },
     };
   },
   components: {
@@ -126,9 +117,17 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      style: (state) => state.viewconfig.community_view,
+    }),
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
+    setViewConfig() {
+      this.mainViewConfig = this.style.main;
+      this.ourCommunityViewConfig = this.style.our_community;
+      this.howJoinViewConfig = this.style.how_join;
+    },
     loadContent() {
       this.content = this.getGContent("community").main_content.map((x) =>
         this.toggleReverse(x)
@@ -141,16 +140,9 @@ export default {
       this.isReverse = !this.isReverse;
       return contentItem;
     },
-    // Method for special mdifications in view
-    modifyViewConfig(block) {
-      let custom = JSON.parse(JSON.stringify(this.viewConfig));
-      if (block == "social") {
-        custom.image.size = "sm"; // just require to change the image size
-      }
-      return custom;
-    },
   },
   created() {
+    this.setViewConfig();
     this.loadContent();
   },
 };

@@ -29,7 +29,10 @@
           <!-- People component section -->
           <div class="col scroll-effect">
             <div v-for="people in contentData" :key="people.id">
-              <people-list :content="people"></people-list>
+              <people-list
+                :content="people"
+                :viewConfig="viewConfig"
+              ></people-list>
             </div>
           </div>
         </div>
@@ -48,7 +51,7 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 import PeopleList from "@/components/PeopleList";
 
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   components: {
@@ -60,6 +63,7 @@ export default {
   data() {
     return {
       contentData: [],
+      viewConfig: { visible: false },
     };
   },
   props: {
@@ -81,9 +85,16 @@ export default {
     };
   },
   computed: {
+    ...mapState({ style: (state) => state.viewconfig.people_view }),
     ...mapGetters({ getPeople: "content/getPeople" }),
   },
+  methods: {
+    setViewConfig() {
+      this.viewConfig = this.style;
+    },
+  },
   created() {
+    this.setViewConfig();
     this.contentData = this.getPeople;
   },
 };

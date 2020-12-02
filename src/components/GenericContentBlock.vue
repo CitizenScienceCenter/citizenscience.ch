@@ -393,7 +393,7 @@ export default {
       }
     }
     .text-section {
-      padding: 0 $spacing-4 0 $spacing-4 !important;
+      padding: 0 $spacing-5 0 $spacing-4 !important;
       .subheading {
         font-size: $font-size-medium;
       }

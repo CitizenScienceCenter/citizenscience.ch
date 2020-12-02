@@ -105,7 +105,13 @@ export default {
   name: "EventList",
   data() {
     return {
-      br: this.viewConfig,
+      br: {
+        visible: false,
+        hideImage: false,
+        limit: null,
+        heading: { visible: false },
+        button: { disabled: true, visible: false },
+      },
       pl: {},
       events: [],
     };
@@ -144,7 +150,7 @@ export default {
       return getTranslation(textContent, this.$i18n.locale);
     },
     validateImage(item, event) {
-      const viewConfig = {
+      const imageConfig = {
         withImage: {
           "img-content": "col-tablet-portrait-4",
           "text-content": "col-tablet-portrait-8 ",
@@ -154,9 +160,9 @@ export default {
           "text-content": "col-tablet-portrait-12",
         },
       };
-      let selectedView = viewConfig.withoutImage;
+      let selectedView = imageConfig.withoutImage;
       if (event.image && !this.br.hideImage) {
-        selectedView = viewConfig.withImage;
+        selectedView = imageConfig.withImage;
       }
       return selectedView[item];
     },
@@ -174,6 +180,11 @@ export default {
       }
     },
     setStyle() {
+      for (const key in this.viewConfig) {
+        if (Object.keys(this.br).includes(key)) {
+          this.br[key] = this.viewConfig[key];
+        }
+      }
       this.pl["heading"] = this.content ? this.content.heading : null;
       this.pl["eventsButton"] = this.content ? this.content.eventsButton : null;
     },

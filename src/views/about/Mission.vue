@@ -58,7 +58,7 @@ import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   components: {
@@ -71,18 +71,7 @@ export default {
     return {
       content: {},
       isReverse: false,
-      viewConfig: {
-        visible: true,
-        vOrientation: false,
-        heading: { visible: false },
-        title: { visible: true },
-        subtitle: { visible: true },
-        description: { visible: true },
-        image: { visible: true, size: "md", rounded: true },
-        img_description: { visible: false },
-        button: { disabled: false, visible: true },
-        second_button: { disabled: false, visible: true },
-      },
+      viewConfig: { visible: false },
     };
   },
   props: {
@@ -104,9 +93,13 @@ export default {
     };
   },
   computed: {
+    ...mapState({ style: (state) => state.viewconfig.mission_view }),
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
+    setViewConfig() {
+      this.viewConfig = this.style;
+    },
     loadContent() {
       this.content = this.getGContent("mission").main_content.map((x) =>
         this.toggleReverse(x)
@@ -119,6 +112,7 @@ export default {
     },
   },
   created() {
+    this.setViewConfig();
     this.loadContent();
   },
 };

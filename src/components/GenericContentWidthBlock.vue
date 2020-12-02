@@ -10,7 +10,6 @@
   >
     <!-- Text section -->
     <div class="content-wrapper">
-      <!-- TODO: verify the styles for this component -->
       <div class="row" :class="{ 'row-reverse-large': hReverse }">
         <div
           class="col col-tablet-portrait-11 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect text-section"

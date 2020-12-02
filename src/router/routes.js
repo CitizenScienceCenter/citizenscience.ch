@@ -326,6 +326,15 @@ export const routes = [
             path: "mission",
             component: Mission,
             meta: { i18n: "navigation-about-mission", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // This preload the page style
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "mission",
+              });
+              if (res) {
+                next();
+              }
+            },
           },
           {
             path: "zurichstyle",
@@ -333,9 +342,9 @@ export const routes = [
             meta: { i18n: "navigation-about-zurichstyle", nav: true },
             beforeEnter: async (to, from, next) => {
               // This preload the page style
-              const res = await store.dispatch(
-                "viewconfig/getZurichStyleRemoteConfig"
-              );
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "zurich_style",
+              });
               if (res) next();
             },
           },
@@ -343,6 +352,13 @@ export const routes = [
             path: "offer",
             component: Offer,
             meta: { i18n: "navigation-about-offer", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // This preload the page style
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "offer",
+              });
+              if (res) next();
+            },
           },
           {
             path: "people",
@@ -351,13 +367,23 @@ export const routes = [
             beforeEnter: async (to, from, next) => {
               // load content from remote server
               await store.dispatch("content/getPeopleRemote");
-              next();
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "people",
+              });
+              if (res) next();
             },
           },
           {
             path: "contact",
             component: Contact,
             meta: { i18n: "navigation-about-contact", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // This preload the page style
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "contact",
+              });
+              if (res) next();
+            },
           },
         ],
       },
@@ -368,7 +394,9 @@ export const routes = [
         component: ChildView,
         redirect: "events/upcoming",
         beforeEnter: async (to, from, next) => {
-          const res = await store.dispatch("viewconfig/getEventsRemoteConfig");
+          const res = await store.dispatch("viewconfig/getRemoteView", {
+            view: "events",
+          });
           const events = await store.dispatch("content/getEventsRemote");
           if (res && events) next();
         },

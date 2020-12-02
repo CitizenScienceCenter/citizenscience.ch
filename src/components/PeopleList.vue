@@ -1,6 +1,9 @@
 <template>
-  <div class="people-list" v-if="people_list.length > 0">
-    <h3 class="subheading centered scroll-effect">
+  <div class="people-list" v-if="br.visible && people_list.length > 0">
+    <h3
+      class="subheading centered scroll-effect"
+      v-if="br.category.visible && content.category"
+    >
       {{ localTranslation(content.category) }}
     </h3>
 
@@ -37,12 +40,17 @@ export default {
   name: "PeopleList",
   data: function() {
     return {
+      br: {
+        visible: false,
+        category: { visible: false },
+      },
       showMembers: false,
       people_list: [],
     };
   },
   props: {
     content: Object,
+    viewConfig: Object,
   },
   methods: {
     localTranslation(textContent) {
@@ -67,8 +75,16 @@ export default {
       }
       return person_schema;
     },
+    validateStyle() {
+      for (const key in this.viewConfig) {
+        if (Object.keys(this.br).includes(key)) {
+          this.br[key] = this.viewConfig[key];
+        }
+      }
+    },
   },
   created() {
+    this.validateStyle();
     this.loadData();
   },
 };

@@ -176,8 +176,8 @@
           "de": ""
         },
         "description": {
-          "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond. Our activities are shaped around our members, and include online and offline interactions and local events, in an open, creative and interdisciplinary way.",
-          "de": "<p>Unsere Citizen Science Community wächst in Zürich und darüber hinaus stetig. Sie lebt mit der Beteiligung und Aktivität ihrer Mitglieder und bietet Raum für online und offline Interaktionen und Veranstaltungen in einer offenen, kreativen und interdisziplinären Atmosphäre."
+          "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond. Our activities are shaped around our members, and include online and offline interactions and local events, in an open, creative and interdisciplinary way. </p>",
+          "de": "<p>Unsere Citizen Science Community wächst in Zürich und darüber hinaus stetig. Sie lebt mit der Beteiligung und Aktivität ihrer Mitglieder und bietet Raum für online und offline Interaktionen und Veranstaltungen in einer offenen, kreativen und interdisziplinären Atmosphäre. </p>"
         },
         "image": "/img/graphic-community.png",
         "button": {
@@ -243,5 +243,30 @@
         }
       }
     ]
+  },
+  "contact": {
+    "main_content": {
+      "title": {
+        "en": "",
+        "de": ""
+      },
+      "subtitle": {
+        "en": "",
+        "de": ""
+      },
+      "description": {
+        "en": "<p> Feel free to reachout to the Center’s Team, we would love to hear from you! </p> <ul> <li>For generic inquiry, to share your ideas about projects, for suggestions about platform and tools, please use <a href='mailto:info@citizenscience.ch' target='_blank'>info@citizenscience.ch</a>. </li> <li>To inquire about membership, including benefits of members and how to become one, please contact <a href='mailto:maria.mondardini@uzh.ch' target='_blank'>maria.mondardini@uzh.ch</a>. </li> <li>To inquire about potential partnerships, please contact <a href='mailto:maria.mondardini@uzh.ch' target='_blank'>maria.mondardini@uzh.ch</a>. </li> </ul>",
+        "de": "<p> Treten Sie mit uns in Kontakt, wir würden uns freuen, von Ihnen zu hören! </p> <ul> <li>Für allgemeine Fragen, Vorschläge für Projekte oder Anregungen zu unserer Plattform, wenden Sie sich bitte an <a href='mailto:info@citizenscience.ch' target='_blank'>info@citizenscience.ch</a> </li> <li>Falls Sie ein Anliegen zum Thema Mitgliedschaft haben und wissen möchten, was die Vorteile und Vorgehensweise sind, kontaktieren Sie bitte <a href='mailto:maria.mondardini@uzh.ch' target='_blank'>maria.mondardini@uzh.ch</a>.</li> <li>Fragen betreffend Partnerschaften beantwortet ebenfalls Rosy Mondardini unter <a href='mailto:maria.mondardini@uzh.ch' target='_blank'>maria.mondardini@uzh.ch</a>. </li> </ul>"
+      },
+      "image": "",
+      "button": {
+        "link": null,
+        "route": null,
+        "icon": null,
+        "selfWindow": true,
+        "en": "",
+        "de": ""
+      }
+    }
   }
 }

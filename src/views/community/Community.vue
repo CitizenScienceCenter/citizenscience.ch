@@ -42,7 +42,6 @@
       </div>
     </app-content-section>
 
-    <!-- TODO: verify the style config -->
     <!-- Our Community section -->
     <app-content-section class="overflow-hidden">
       <generic-content-width-block

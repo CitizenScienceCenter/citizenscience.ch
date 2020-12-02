@@ -116,7 +116,7 @@ export default {
   },
   methods: {
     getStyle() {
-      this.zuriView = this.style["zurich-style"];
+      this.zuriView = this.style["main"];
       this.sdgView = this.style["sdg"];
     },
     loadContent() {

@@ -1,0 +1,60 @@
+{
+  "mission": {
+    "visible": true,
+    "vOrientation": false,
+    "heading": { "visible": false },
+    "title": { "visible": true },
+    "subtitle": { "visible": true },
+    "description": { "visible": true },
+    "image": { "visible": true, "size": "md", "rounded": true },
+    "img_description": { "visible": false },
+    "button": { "disabled": false, "visible": true },
+    "second_button": { "disabled": false, "visible": true }
+  },
+  "zurich_style": {
+    "main": {
+      "visible": true,
+      "vOrientation": false,
+      "heading": { "visible": false },
+      "title": { "visible": true },
+      "subtitle": { "visible": true },
+      "description": { "visible": true },
+      "image": { "visible": true, "size": "lg", "rounded": false },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": false, "visible": true }
+    },
+    "sdg": {
+      "visible": true,
+      "hReverse": false
+    }
+  },
+  "offer": {
+    "visible": true,
+    "vOrientation": false,
+    "heading": { "visible": false },
+    "title": { "visible": true },
+    "subtitle": { "visible": true },
+    "description": { "visible": true },
+    "image": { "visible": true, "size": "md", "rounded": true },
+    "img_description": { "visible": false },
+    "button": { "disabled": false, "visible": true },
+    "second_button": { "disabled": false, "visible": true }
+  },
+  "people": {
+    "visible": true,
+    "category": { "visible": true }
+  },
+  "contact": {
+    "visible": true,
+    "vOrientation": false,
+    "heading": { "visible": false },
+    "title": { "visible": false },
+    "subtitle": { "visible": false },
+    "description": { "visible": true },
+    "image": { "visible": false, "size": "md", "rounded": true },
+    "img_description": { "visible": false },
+    "button": { "disabled": false, "visible": false },
+    "second_button": { "disabled": false, "visible": false }
+  }
+}

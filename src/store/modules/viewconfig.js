@@ -2,8 +2,8 @@ import homePageConfig from "@/assets/view_config/home_styles.json";
 import contributeViewsConfig from "@/assets/view_config/contribute_styles.json";
 import startProjectsViewsConfig from "@/assets/view_config/start_projects_styles.json";
 import communityViewsConfig from "@/assets/view_config/community_styles.json";
-import eventsPageConfig from "@/assets/view_config/Events.json";
-import zurich_stylePageConfig from "@/assets/view_config/ZurichStyle.json";
+import aboutViewsConfig from "@/assets/view_config/about_styles.json";
+import eventsPageConfig from "@/assets/view_config/events_styles.json";
 
 import { getRemoteFile } from "@/minio.js";
 
@@ -56,6 +56,38 @@ const VIEW_FILES = {
     local: communityViewsConfig,
     state: "partnerships_view",
   },
+  // About us section
+  mission: {
+    remote: "about_styles.json",
+    local: aboutViewsConfig,
+    state: "mission_view",
+  },
+  zurich_style: {
+    remote: "about_styles.json",
+    local: aboutViewsConfig,
+    state: "zurichstyle_view",
+  },
+  offer: {
+    remote: "about_styles.json",
+    local: aboutViewsConfig,
+    state: "offer_view",
+  },
+  people: {
+    remote: "about_styles.json",
+    local: aboutViewsConfig,
+    state: "people_view",
+  },
+  contact: {
+    remote: "about_styles.json",
+    local: aboutViewsConfig,
+    state: "contact_view",
+  },
+  // Events section
+  events: {
+    remote: "events_styles.json",
+    local: eventsPageConfig,
+    state: "events_view",
+  },
 };
 
 const state = {
@@ -71,9 +103,14 @@ const state = {
   community_view: undefined,
   members_view: undefined,
   partnerships_view: undefined,
-
-  events_view: undefined,
+  // About us Section states
+  mission_view: undefined,
   zurichstyle_view: undefined,
+  offer_view: undefined,
+  people_view: undefined,
+  contact_view: undefined,
+  // Events Section states
+  events_view: undefined,
 
   isLoaded: false,
 };
@@ -98,50 +135,19 @@ const actions = {
       }
     } catch (error) {
       console.error(error);
-      res = VIEW_FILES[view].local
+      res = VIEW_FILES[view].local;
       return res[view];
     } finally {
-      const payload = {view: VIEW_FILES[view].state, content: res[view]}
+      const payload = { view: VIEW_FILES[view].state, content: res[view] };
       await commit("setViewState", payload);
-    }
-  },
-  async getZurichStyleRemoteConfig({ commit }) {
-    let resp = zurich_stylePageConfig;
-    try {
-      resp = await getRemoteFile("styles/zurichstyle_style.json");
-      return resp;
-    } catch (error) {
-      console.error(error);
-      return resp;
-    } finally {
-      await commit("setZurichStyleConfig", resp);
-    }
-  },
-  async getEventsRemoteConfig({ commit }) {
-    let resp = eventsPageConfig;
-    try {
-      resp = await getRemoteFile("styles/events_style.json");
-      return resp;
-    } catch (error) {
-      console.error(error);
-      return resp;
-    } finally {
-      await commit("setEventsConfig", resp);
     }
   },
 };
 
 const mutations = {
   setViewState(state, payload) {
-    state[payload.view] = payload.content
+    state[payload.view] = payload.content;
     state.isLoaded = true;
-  },
-
-  setZurichStyleConfig(state, payload) {
-    state.zurichstyle_view = payload;
-  },
-  setEventsConfig(state, payload) {
-    state.events_view = payload;
   },
   setIsLoaded(state, value) {
     state.isLoaded = value;

@@ -104,12 +104,6 @@ const EventDetail = (resolve) => {
   });
 };
 
-const NewsDetail = (resolve) => {
-  require.ensure(["../views/NewsDetail.vue"], () => {
-    resolve(require("../views/NewsDetail.vue"));
-  });
-};
-
 const Terms = (resolve) => {
   require.ensure(["../views/shared/static/Terms.vue"], () => {
     resolve(require("../views/shared/static/Terms.vue"));
@@ -422,12 +416,6 @@ export const routes = [
       {
         path: "events/:event",
         component: EventDetail,
-        meta: { nav: false },
-      },
-
-      {
-        path: "news/:new",
-        component: NewsDetail,
         meta: { nav: false },
       },
 

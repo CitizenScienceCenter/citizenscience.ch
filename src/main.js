@@ -7,6 +7,7 @@ import store from "./store/store.js";
 import Vuex from "vuex";
 import { i18n } from "./i18n.js";
 import Meta from "vue-meta";
+// FIXME: c3s
 import c3s from "vuex-c3s";
 //import SimpleAnalytics from "simple-analytics-vue";
 import VueGtag from "vue-gtag";
@@ -21,6 +22,7 @@ let swaggerURL = "https://api.citizenscience.ch/api/v2/swagger.json";
 
 //const swaggerURL = 'https://api.citizenscience.ch/api/v3/openapi.json'
 //const server = 'https://staging.citizenscience.ch/api/v3/'
+// FIXME: c3s
 Vue.use(c3s.plugin, { store, swaggerURL });
 Vue.use(VueRouter);
 Vue.use(Meta);
@@ -40,6 +42,7 @@ Vue.use(
 );
 
 store.watch(
+  // FIXME: c3s
   (state) => state.c3s && state.c3s.client,
   (value) => {
     if (value !== null) {

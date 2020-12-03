@@ -90,11 +90,6 @@ export default {
         template: `<p>${this.localTranslation(
           this.newslist[this.index].description
         )}
-          <a href=${
-            this.newslist[this.index].link
-          } target='_blank' style="font-weight: bold;">
-          ...${this.$t("more-button")}
-          </a>
         </p>`,
       };
     },
@@ -105,7 +100,7 @@ export default {
     },
     validateNewsContent(n, i) {
       // This variable avoid undefined or null errors
-      const keys = ["title", "date", "description", "path", "link"];
+      const keys = ["title", "date", "description"];
       const item = {};
       const element = { ...n };
       // Due to is a dyamic component is required filter the complete information

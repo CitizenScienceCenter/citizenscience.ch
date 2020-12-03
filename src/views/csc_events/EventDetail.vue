@@ -34,7 +34,7 @@
     <app-content-section>
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
-          <div class="col col-large-8 col-xlarge-6" v-if="event">
+          <div class="col col-large-8" v-if="event">
             <div class="row centered margin-bottom">
               <router-link
                 to="/events"
@@ -290,7 +290,7 @@ export default {
       font-size: $font-size-normal;
     }
   }
-  .event-description{
+  .event-description {
     padding: $spacing-2 0;
   }
 

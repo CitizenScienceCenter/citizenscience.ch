@@ -261,7 +261,7 @@ export default {
   padding-top: 0;
   padding-bottom: $spacing-3;
   .heading-section {
-    padding-left: $spacing-3;
+    padding-left: $spacing-4;
   }
   .img-section {
     .col-image {
@@ -287,7 +287,7 @@ export default {
     display: flex;
     flex-flow: row wrap;
     align-content: center;
-    padding: 0 $spacing-2 !important;
+    padding: 0 $spacing-4;
     .subheading {
       margin-bottom: $spacing-1;
       font-size: $font-size-small;
@@ -307,7 +307,6 @@ export default {
       .subheading,
       .text-description,
       .button-section {
-        padding-left: $spacing-1;
         .button {
           height: 30px;
           font-size: $font-size-mini;
@@ -361,6 +360,9 @@ export default {
 @media only screen and (min-width: $viewport-large) {
   .generic-content {
     padding-top: $spacing-2;
+    .heading-section {
+      padding-left: $spacing-3;
+    }
     .text-section {
       padding: 0 $spacing-3 0 $spacing-4 !important;
       .button-section {

@@ -32,6 +32,7 @@
             width: 600,
             lang: $i18n.locale,
             dnt: true,
+            omit_script: true
           }"
           ><i class="fas fa-spinner fa-spin spinner"></i
         ></Timeline>

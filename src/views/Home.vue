@@ -11,7 +11,7 @@
 </i18n>
 
 <template>
-  <div v-if="isViewLoaded">
+  <div>
     <!-- Cover component -->
     <app-cover></app-cover>
 
@@ -166,7 +166,6 @@ export default {
     }),
     ...mapState({
       isProjectsLoaded: (state) => state.project.is_data_fetched,
-      isViewLoaded: (state) => state.viewconfig.isLoaded,
       isNewsLoaded: (state) => state.content.isNewsLoaded,
       isGCLoaded: (state) => state.content.isGCLoaded,
       isEventsLoaded: (state) => state.content.isEventsLoaded,

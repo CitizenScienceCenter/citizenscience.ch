@@ -111,8 +111,6 @@ const state = {
   contact_view: undefined,
   // Events Section states
   events_view: undefined,
-
-  isLoaded: false,
 };
 
 const getters = {
@@ -123,7 +121,6 @@ const getters = {
 
 const actions = {
   async getRemoteView({ commit }, { view }) {
-    commit("setIsLoaded", false);
     let res;
     try {
       // Retrieve style from remote
@@ -147,10 +144,6 @@ const actions = {
 const mutations = {
   setViewState(state, payload) {
     state[payload.view] = payload.content;
-    state.isLoaded = true;
-  },
-  setIsLoaded(state, value) {
-    state.isLoaded = value;
   },
 };
 

@@ -166,7 +166,6 @@ export default {
   computed: {
     ...mapState({
       isProjectsLoaded: (state) => state.project.is_data_fetched,
-      isViewLoaded: (state) => state.viewconfig.isLoaded,
       style: (state) => state.viewconfig.projects_view,
     }),
   },

@@ -27,6 +27,8 @@
                 class="button button-primary-main"
                 >{{ $t("notfound-button") }}</router-link
               >
+              <!-- TODO: remove this is only for login testing  -->
+              <button @click="sendInfo()" v-if="!false"> AJA </button>
             </div>
           </div>
         </div>
@@ -44,6 +46,8 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import UploadFile from "@/components/UploadFile.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "../components/shared/SectionNewsletterSignup";
+
+import { mapActions } from "vuex";
 
 export default {
   name: "NotFound",
@@ -63,6 +67,16 @@ export default {
         },
       ],
     };
+  },
+  // TODO: remove when signing part is working
+  methods: {
+    ...mapActions({ signIn: "user/signIn" }),
+    sendInfo() {
+      this.signIn({
+        email: "...",
+        password: "...",
+      });
+    },
   },
 };
 </script>

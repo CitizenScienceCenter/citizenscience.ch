@@ -1,6 +1,5 @@
 import { router } from "@/router/router.js";
 import axios from "axios";
-axios.defaults.headers["Content-Type"] = "application/json";
 
 const state = {
   userInfo: null,
@@ -63,15 +62,16 @@ const actions = {
   async getLoginOptions({ commit }) {
     try {
       const res = await fetch(
-        process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
+        `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/signin`,
         {
           method: "GET",
           headers: { "Content-Type": "application/json" },
+          credentials: "include",
         }
       );
       const info = await res.json();
       commit("setLoginOptions", info);
-      return info;
+      return res.data;
     } catch (error) {
       console.error(error);
       return;
@@ -79,20 +79,22 @@ const actions = {
   },
   async signIn({ state }, { email, password }) {
     try {
-      // const csrfRes = await dispatch("getLoginOptions");
       const csrf = state.loginOptions.form.csrf;
       const log_res = await axios.post(
-        process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
+        `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/signin`,
         { email: email, password: password, csrf: csrf },
         {
           withCredentials: true,
           headers: {
+            "Content-Type": "application/json",
             "X-CSRFToken": csrf,
           },
         }
       );
+      alert(JSON.stringify(log_res.data, null, 2));
+      // const csrf = state.loginOptions.form.csrf;
       // const log_res = await fetch(
-      //   process.env.VUE_APP_BASE_ENDPOINT_URL + "account/signin",
+      //   `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/signin`,
       //   {
       //     method: "POST",
       //     credentials: "include",
@@ -104,7 +106,7 @@ const actions = {
       //       email: email,
       //       password: password,
       //       csrf: csrf,
-      //     })
+      //     }),
       //   }
       // );
       // console.log(await log_res.json());

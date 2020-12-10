@@ -427,17 +427,25 @@ export const routes = [
         path: "login",
         component: Login,
         meta: { i18n: "navigation-login", nav: false },
-        beforeEnter(to, from) {
-          openUrl(
-            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/login`,
-            true
-          );
+        beforeEnter(to, from, next) {
+          if (store.state.user.isLogged) {
+            next(from.path);
+          } else {
+            next();
+          }
         },
       },
       {
         path: "register",
         component: Register,
         meta: { i18n: "navigation-register", nav: false },
+        // TODO: pending to remove after implemented
+        beforeEnter(to, from) {
+          openUrl(
+            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/register`,
+            false
+          );
+        },
       },
       {
         path: "profile",
@@ -455,7 +463,14 @@ export const routes = [
       {
         path: "reset",
         component: RequestReset,
-        meta: { requiresAuth: true, i18n: "navigation-reset", nav: false },
+        meta: { i18n: "navigation-reset", nav: false },  
+        // TODO: pending to remove after implemented
+        beforeEnter(to, from) {
+          openUrl(
+            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/reset-password`,
+            false
+          );
+        },
       },
       {
         path: "reset/:token",

@@ -5,6 +5,7 @@ const state = {
   userInfo: null,
   isLogged: false,
   loginOptions: {},
+  error: null,
 };
 
 const getters = {
@@ -77,10 +78,10 @@ const actions = {
       return;
     }
   },
-  async signIn({ state }, { email, password }) {
+  async signIn({ state, commit }, { email, password }) {
     try {
       const csrf = state.loginOptions.form.csrf;
-      const log_res = await axios.post(
+      const res = await axios.post(
         `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/signin`,
         { email: email, password: password, csrf: csrf },
         {
@@ -91,25 +92,13 @@ const actions = {
           },
         }
       );
-      alert(JSON.stringify(log_res.data, null, 2));
-      // const csrf = state.loginOptions.form.csrf;
-      // const log_res = await fetch(
-      //   `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/signin`,
-      //   {
-      //     method: "POST",
-      //     credentials: "include",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //       "X-CSRFToken": csrf,
-      //     },
-      //     body: JSON.stringify({
-      //       email: email,
-      //       password: password,
-      //       csrf: csrf,
-      //     }),
-      //   }
-      // );
-      // console.log(await log_res.json());
+      const info = await res.data;
+      if (info.hasOwnProperty("status")) {
+        commit("setError", { msg: info.flash, type: info.status });
+        info.status === "success"
+          ? router.push("/")
+          : router.push("/login");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -125,6 +114,17 @@ const mutations = {
   },
   setLogged(state, value) {
     state.isLogged = value;
+  },
+  setError(state, payload) {
+    state.error = null; // clear previous error
+    const TYPES = ["info", "error", "success"];    
+    if (payload) {
+      const pl_type = payload.type.toLowerCase();
+      state.error = {
+        msg: payload.msg,
+        type: TYPES.some((x) => x == pl_type) ? pl_type : TYPES[0],
+      };
+    }
   },
 };
 

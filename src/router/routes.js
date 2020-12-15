@@ -420,8 +420,8 @@ export const routes = [
       },
 
       /*
-            { path: 'forum', component: Forum, meta: {requiresAuth: true, i18n: 'navigation-forum', nav: true} },
-            */
+        { path: 'forum', component: Forum, meta: {requiresAuth: true, i18n: 'navigation-forum', nav: true} },
+      */
 
       {
         path: "login",
@@ -435,18 +435,17 @@ export const routes = [
           }
         },
       },
-      {
-        path: "register",
-        component: Register,
-        meta: { i18n: "navigation-register", nav: false },
-        // TODO: pending to remove after implemented
-        beforeEnter(to, from) {
-          openUrl(
-            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/register`,
-            false
-          );
-        },
-      },
+      // {
+      //   path: "register",
+      //   component: Register,
+      //   meta: { i18n: "navigation-register", nav: false },
+      //   beforeEnter(to, from, next) {
+      //     // openUrl(
+      //     //   `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/register`,
+      //     //   false
+      //     // );
+      //   },
+      // },
       {
         path: "profile",
         name: "profile",
@@ -463,7 +462,7 @@ export const routes = [
       {
         path: "reset",
         component: RequestReset,
-        meta: { i18n: "navigation-reset", nav: false },  
+        meta: { i18n: "navigation-reset", nav: false },
         // TODO: pending to remove after implemented
         beforeEnter(to, from) {
           openUrl(

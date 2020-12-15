@@ -5,7 +5,8 @@ const state = {
   userInfo: null,
   isLogged: false,
   loginOptions: {},
-  error: null,
+  registerOptions: {},
+  error: cleanError(),
 };
 
 const getters = {
@@ -40,6 +41,8 @@ const actions = {
       commit("setLogged", false);
     }
   },
+
+  // sign out section
   async signOut({ commit }) {
     try {
       const res = await fetch(
@@ -60,6 +63,52 @@ const actions = {
       console.error(error);
     }
   },
+
+  // register section
+  async getRegisterOptions({ commit }) {
+    try {
+      const res = await fetch(
+        `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/register`,
+        {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+        }
+      );
+      const info = await res.json();
+      commit("setRegisterOptions", info);
+      return res.data;
+    } catch (error) {
+      console.error(error);
+      return;
+    }
+  },
+  async register({ state, commit, dispatch }, payload) {
+    cleanError();
+    try {
+      await dispatch("getRegisterOptions");
+      const csrf = await state.registerOptions.form.csrf;
+      const res = await axios.post(
+        `${process.env.VUE_APP_BASE_ENDPOINT_URL}account/register`,
+        payload,
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": csrf,
+          },
+        }
+      );
+      console.log(res.data);
+      if (res.data.hasOwnProperty("status") && res.data.status === "error") {
+        commit("setRegisterError", res.data.form.errors);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  // login section
   async getLoginOptions({ commit }) {
     try {
       const res = await fetch(
@@ -94,10 +143,11 @@ const actions = {
       );
       const info = await res.data;
       if (info.hasOwnProperty("status")) {
-        commit("setError", { msg: info.flash, type: info.status });
-        info.status === "success"
-          ? router.push("/")
-          : router.push("/login");
+        commit("setLoginError", {
+          msg: info.flash,
+          type: info.status,
+        });
+        info.status === "success" ? router.push("/") : router.push("/login");
       }
     } catch (error) {
       console.log(error);
@@ -106,6 +156,9 @@ const actions = {
 };
 
 const mutations = {
+  setRegisterOptions(state, options) {
+    state.registerOptions = options;
+  },
   setLoginOptions(state, options) {
     state.loginOptions = options;
   },
@@ -115,18 +168,33 @@ const mutations = {
   setLogged(state, value) {
     state.isLogged = value;
   },
-  setError(state, payload) {
-    state.error = null; // clear previous error
-    const TYPES = ["info", "error", "success"];    
+  setLoginError(state, payload) {
+    state.error = cleanError(); // clear previous error
+    const TYPES = ["info", "error", "success"];
     if (payload) {
       const pl_type = payload.type.toLowerCase();
-      state.error = {
+      state.error.login = {
         msg: payload.msg,
         type: TYPES.some((x) => x == pl_type) ? pl_type : TYPES[0],
       };
     }
   },
+  setRegisterError(state, payload) {
+    state.error = cleanError(); // clear previous error
+    if (payload) {
+      state.error.register = payload;
+    }
+  },
 };
+
+// Internal functions
+function cleanError() {
+  const clean_error = {
+    login: null,
+    register: null,
+  };
+  return clean_error;
+}
 
 export default {
   namespaced: true,

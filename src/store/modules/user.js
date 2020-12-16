@@ -1,4 +1,5 @@
 import { router } from "@/router/router.js";
+import { throwAlert } from "@/assets/support";
 import axios from "axios";
 
 const state = {
@@ -58,6 +59,10 @@ const actions = {
         commit("setUserInfo", null);
         commit("setLogged", false);
         router.push("/");
+        throwAlert({
+          type: "info",
+          message: info.flash,
+        });
       }
     } catch (error) {
       console.error(error);
@@ -99,12 +104,30 @@ const actions = {
           },
         }
       );
-      console.log(res.data);
-      if (res.data.hasOwnProperty("status") && res.data.status === "error") {
-        commit("setRegisterError", res.data.form.errors);
+      if (res.data.hasOwnProperty("status")) {
+        switch (res.data.status) {
+          case "error":
+            commit("setRegisterError", res.data.form.errors);
+            break;
+          case "sent":
+            router.push("/");
+            throwAlert({
+              type: "info",
+              message: res.data.flash,
+              time: 5000,
+              okButton: true,
+            });
+            break;
+          default:
+            break;
+        }
       }
     } catch (error) {
       console.log(error);
+      throwAlert({
+        type: "error",
+        message: "Server error ocurred",
+      });
     }
   },
 
@@ -143,14 +166,28 @@ const actions = {
       );
       const info = await res.data;
       if (info.hasOwnProperty("status")) {
-        commit("setLoginError", {
-          msg: info.flash,
-          type: info.status,
-        });
-        info.status === "success" ? router.push("/") : router.push("/login");
+        switch (res.data.status) {
+          case "success":
+            router.push("/");
+            throwAlert({
+              type: info.status,
+              message: info.flash,
+            });
+            break;
+          default:
+            commit("setLoginError", {
+              msg: info.flash,
+              type: info.status,
+            });
+            break;
+        }
       }
     } catch (error) {
       console.log(error);
+      throwAlert({
+        type: "error",
+        message: "Server error ocurred",
+      });
     }
   },
 };

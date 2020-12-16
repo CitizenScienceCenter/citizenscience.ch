@@ -435,17 +435,6 @@ export const routes = [
           }
         },
       },
-      // {
-      //   path: "register",
-      //   component: Register,
-      //   meta: { i18n: "navigation-register", nav: false },
-      //   beforeEnter(to, from, next) {
-      //     // openUrl(
-      //     //   `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/register`,
-      //     //   false
-      //     // );
-      //   },
-      // },
       {
         path: "profile",
         name: "profile",

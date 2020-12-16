@@ -13,6 +13,10 @@ import VueGtag from "vue-gtag";
 // FontAwesomeIcon section
 import "@fortawesome/fontawesome-free/css/all.css"; // Ensure you are using css-loader
 
+// vue sweetalert2 resources
+import VueSweetalert2 from "vue-sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
+
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(Meta);
@@ -30,6 +34,8 @@ Vue.use(
   },
   router
 );
+
+Vue.use(VueSweetalert2);
 
 new Vue({
   router,

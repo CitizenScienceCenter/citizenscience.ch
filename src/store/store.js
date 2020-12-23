@@ -8,6 +8,8 @@ import project from "./modules/project";
 import content from "./modules/content";
 import user from "./modules/user";
 import createPersistedState from "vuex-persistedstate";
+import SecureLS from "secure-ls";
+var ls = new SecureLS({ isCompression: false });
 
 Vue.use(Vuex);
 
@@ -26,7 +28,15 @@ if (window.localStorage) {
       user,
     },
     strict: debug,
-    plugins: [createPersistedState({ storage: window.localStorage })],
+    plugins: [
+      createPersistedState({
+        storage: {
+          getItem: (key) => ls.get(key),
+          setItem: (key, value) => ls.set(key, value),
+          removeItem: (key) => ls.remove(key),
+        },
+      }),
+    ],
   });
 } else {
   store = new Vuex.Store({

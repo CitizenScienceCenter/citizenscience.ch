@@ -297,7 +297,7 @@ export default {
     }
     .button-section {
       padding: $spacing-2 0;
-      padding-right: $spacing-2;
+      padding-right: $spacing-1;
       .button {
         height: 35px;
         font-size: $font-size-small;

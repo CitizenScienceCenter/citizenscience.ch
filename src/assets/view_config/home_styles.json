@@ -50,7 +50,7 @@
       "image": { "visible": false, "rounded": true },
       "img_description": { "visible": false },
       "button": { "disabled": false, "visible": true },
-      "second_button": { "disabled": true, "visible": false }
+      "second_button": { "disabled": false, "visible": true }
     },
     "events": {
       "visible": true,

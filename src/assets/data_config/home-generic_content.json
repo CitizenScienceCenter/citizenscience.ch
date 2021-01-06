@@ -56,6 +56,13 @@
       "en": "Learn More",
       "de": "Mehr erfahren"
     },
-    "second_button": {}
+    "second_button": {
+      "link": null,
+      "route": "/about/zurichstyle",
+      "icon": null,
+      "selfWindow": true,
+      "en": "More About CS",
+      "de": "Mehr über CS"
+    }
   }
 }

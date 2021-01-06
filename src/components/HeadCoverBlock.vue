@@ -263,6 +263,7 @@ export default {
   max-height: 440px;
   overflow: hidden;
   position: relative;
+  word-break: break-word !important;
   z-index: 1;
   -webkit-box-shadow: 0px 1px 2px #333, 0px 10px 15px -6px #777;
   -moz-box-shadow: 0px 1px 2px #333, 0px 10px 15px -6px #777;
@@ -299,7 +300,7 @@ export default {
         margin-bottom: $spacing-1;
       }
       .cover-subheading {
-        font-size: $font-size-mini;
+        font-size: $font-size-small;
         font-weight: 400;
         color: white;
         text-align: center;

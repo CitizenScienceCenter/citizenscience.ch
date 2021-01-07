@@ -52,6 +52,20 @@
       "button": { "disabled": false, "visible": true },
       "second_button": { "disabled": false, "visible": true }
     },
+    "center_right": {
+      "visible": true,
+      "vOrientation": true,
+      "hReverse": false,
+      "compact_view": true,
+      "heading": { "visible": true },
+      "title": { "visible": false },
+      "subtitle": { "visible": true },
+      "description": { "visible": true },
+      "image": { "visible": false, "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": true, "visible": false }
+    },
     "events": {
       "visible": true,
       "hideImage": true,

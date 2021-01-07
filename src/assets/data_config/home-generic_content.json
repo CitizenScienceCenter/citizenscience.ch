@@ -64,5 +64,39 @@
       "en": "More About CS",
       "de": "Mehr über CS"
     }
+  },
+  "home_what_offer": {
+    "heading": {
+      "en": "What We Offer",
+      "de": ""
+    },
+    "title": {
+      "en": "",
+      "de": ""
+    },
+    "subtitle": {
+      "en": "Ipsum lorem",
+      "de": "Ipsum lorem"
+    },
+    "description": {
+      "en": "Vestibulum rhoncus molestie ornare. Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus. Proin cursus justo sed arcu convallis pulvinar. Suspendisse cursus condimentum nisi, id sagittis quam bibendum at. Aliquam vehicula neque vitae maximus nulla.",
+      "de": "Vestibulum rhoncus molestie ornare. Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus. Proin cursus justo sed arcu convallis pulvinar. Suspendisse cursus condimentum nisi, id sagittis quam bibendum at. Aliquam vehicula neque vitae maximus nulla."
+    },
+    "button": {
+      "link": null,
+      "route": "/about/offer",
+      "icon": null,
+      "selfWindow": true,
+      "en": "Learn More",
+      "de": "Mehr erfahren"
+    },
+    "second_button": {
+      "link": null,
+      "route": null,
+      "icon": null,
+      "selfWindow": true,
+      "en": "",
+      "de": ""
+    }
   }
 }

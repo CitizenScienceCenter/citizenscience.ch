@@ -71,6 +71,20 @@
               :viewConfig="topRightConfig"
             ></generic-content-block>
           </app-content-section>
+
+          <!--What we offer-->
+          <app-content-section
+            class="row ph-mv sm-margin-left"
+            v-if="isGCLoaded"
+          >
+            <generic-content-block
+              :visible="centerRightConfig.visible"
+              :vOrientation="centerRightConfig.vOrientation"
+              :content="whatOffer"
+              :viewConfig="topRightConfig"
+            ></generic-content-block>
+          </app-content-section>
+
           <!-- Our next Event -->
           <app-content-section
             class="row ph-mv sm-margin-left"
@@ -124,6 +138,8 @@ export default {
       bottomLeftConfig: { vOrientation: false, visible: false },
       ourMision: {},
       topRightConfig: { vOrientation: true, visible: false },
+      whatOffer: {},
+      centerRightConfig: { vOrientation: true, visible: false },
       newsConfig: { visible: false },
       eventsContent: {},
       eventsConfig: { visible: false, limit: 1, hideImg: true },
@@ -200,9 +216,11 @@ export default {
       //Load generic content view configuration
       this.bottomLeftConfig = this.view("bottom_left");
       this.topRightConfig = this.view("top_right");
+      this.centerRightConfig = this.view("center_right");
       //Load generic content data
       this.ourCommunity = this.getGContent("home_our_community");
       this.ourMision = this.getGContent("home_our_mission");
+      this.whatOffer = this.getGContent("home_what_offer");
     },
   },
   created() {

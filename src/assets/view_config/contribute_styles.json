@@ -4,8 +4,9 @@
     "vOrientation": false,
     "title": { "visible": false },
     "buttons": { "visible": false },
-    "search": { "visible": true },
+    "search": { "visible": true },    
     "limit": null,
+    "description": { "visible": false },
     "project": {
       "img_project": { "visible": true },
       "topic": { "visible": true },

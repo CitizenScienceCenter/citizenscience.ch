@@ -40,11 +40,16 @@ const Criteria = (resolve) => {
     resolve(require("../views/start/Criteria.vue"));
   });
 };
-const Checklist = (resolve) => {
-  require.ensure(["../views/start/Checklist.vue"], () => {
-    resolve(require("../views/start/Checklist.vue"));
+const SeedGrants = (resolve) => {
+  require.ensure(["../views/start/SeedGrants.vue"], () => {
+    resolve(require("../views/start/SeedGrants.vue"));
   });
 };
+// const Checklist = (resolve) => {
+//   require.ensure(["../views/start/Checklist.vue"], () => {
+//     resolve(require("../views/start/Checklist.vue"));
+//   });
+// };
 
 const Community = (resolve) => {
   require.ensure(["../views/community/Community.vue"], () => {
@@ -160,7 +165,10 @@ export const routes = [
           {
             path: "collaborations",
             component: Collaborations,
-            meta: { i18n: "navigation-contribute-collaborations", nav: true },
+            meta: {
+              i18n: "navigation-contribute-collaborations",
+              nav: true,
+            },
             beforeEnter: async (to, from, next) => {
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "contribute",
@@ -193,7 +201,10 @@ export const routes = [
           {
             path: "startproject",
             component: StartProject,
-            meta: { i18n: "navigation-startproject-overview", nav: true },
+            meta: {
+              i18n: "navigation-startproject-overview",
+              nav: true,
+            },
             beforeEnter: async (to, from, next) => {
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "start",
@@ -206,7 +217,10 @@ export const routes = [
           {
             path: "criteria",
             component: Criteria,
-            meta: { i18n: "navigation-startproject-criteria", nav: true },
+            meta: {
+              i18n: "navigation-startproject-criteria",
+              nav: true,
+            },
             beforeEnter: async (to, from, next) => {
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "criteria",
@@ -229,19 +243,35 @@ export const routes = [
             },
           },
           {
-            path: "checklist",
-            meta: { i18n: "navigation-startproject-checklist", nav: true },
-            component: Checklist,
+            path: "seed",
+            component: SeedGrants,
+            meta: {
+              i18n: "navigation-startproject-seed_grants",
+              nav: true,
+            },
             beforeEnter: async (to, from, next) => {
-              // load content from remote server
               const res = await store.dispatch("viewconfig/getRemoteView", {
-                view: "checklist",
+                view: "seed_grants",
               });
               if (res) {
                 next();
               }
             },
           },
+          // {
+          //   path: "checklist",
+          //   meta: { i18n: "navigation-startproject-checklist", nav: true },
+          //   component: Checklist,
+          //   beforeEnter: async (to, from, next) => {
+          //     // load content from remote server
+          //     const res = await store.dispatch("viewconfig/getRemoteView", {
+          //       view: "checklist",
+          //     });
+          //     if (res) {
+          //       next();
+          //     }
+          //   },
+          // },
         ],
       },
       {
@@ -260,7 +290,10 @@ export const routes = [
           {
             path: "csc_community",
             component: Community,
-            meta: { i18n: "navigation-community-ourcommunity", nav: true },
+            meta: {
+              i18n: "navigation-community-ourcommunity",
+              nav: true,
+            },
             beforeEnter: async (to, from, next) => {
               // This preload the page style
               const res = await store.dispatch("viewconfig/getRemoteView", {
@@ -288,7 +321,10 @@ export const routes = [
           {
             path: "partnerships",
             component: Partnerships,
-            meta: { i18n: "navigation-community-partnerships", nav: true },
+            meta: {
+              i18n: "navigation-community-partnerships",
+              nav: true,
+            },
             beforeEnter: async (to, from, next) => {
               // load content from remote server
               await store.dispatch("content/getPartnershipsRemote");
@@ -439,7 +475,11 @@ export const routes = [
         path: "profile",
         name: "profile",
         component: Profile,
-        meta: { requiresAuth: true, i18n: "navigation-profile", nav: false },
+        meta: {
+          requiresAuth: true,
+          i18n: "navigation-profile",
+          nav: false,
+        },
         beforeEnter(to, from) {
           // TODO: replace by real profile when is implemented
           // openUrl(
@@ -463,7 +503,11 @@ export const routes = [
       {
         path: "reset/:token",
         component: Reset,
-        meta: { requiresAuth: true, i18n: "navigation-reset", nav: false },
+        meta: {
+          requiresAuth: true,
+          i18n: "navigation-reset",
+          nav: false,
+        },
       },
       {
         path: "terms",

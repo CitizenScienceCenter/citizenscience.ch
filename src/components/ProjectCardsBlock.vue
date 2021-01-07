@@ -5,14 +5,16 @@
     "section-projects-button": "See All Projects",
     "new-project-button": "Create Project",
     "search-project-placeholder": "Search",
-    "noresult-project-label": "No projects found, for your search"
+    "noresult-project-label": "No projects found, for your search",
+    "section-projects-description": "Vestibulum rhoncus molestie ornare. <br/> Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus."
   },
   "de": {
     "section-projects-heading": "Machen Sie mit",
     "section-projects-button": "Alle Projekte",
     "new-project-button": "Projekt erstellen",
     "search-project-placeholder": "Suchen",
-    "noresult-project-label": "Keine Projekte gefunden, für Ihre Suche"
+    "noresult-project-label": "Keine Projekte gefunden, für Ihre Suche",
+    "section-projects-description": "Vestibulum rhoncus molestie ornare. <br/> Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus."
   }
 }
 </i18n>
@@ -26,6 +28,17 @@
         <h2 class="heading small">
           {{ $t("section-projects-heading") }}
         </h2>
+      </div>
+    </div>
+    <div
+      class="row row-centered extra-margin-bottom"
+      v-if="viewConfig.description.visible"
+    >
+      <div class="col col-12 scroll-effect">
+        <div
+          class="description"
+          v-html="$t('section-projects-description')"
+        ></div>
       </div>
     </div>
     <div class="row row-centered search " v-if="viewConfig.search.visible">
@@ -211,11 +224,21 @@ export default {
 @import "@/styles/shared/variables.scss";
 .project-cards {
   width: 100% !important;
+  .description {
+    font-size: $font-size-small;
+  }
   .search {
     margin-bottom: $spacing-3;
   }
   .no-result {
     color: $color-primary-shade-20;
+  }
+}
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .project-cards {
+    .description {
+      font-size: $font-size-normal;
+    }
   }
 }
 </style>

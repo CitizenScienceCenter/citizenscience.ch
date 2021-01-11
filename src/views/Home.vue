@@ -28,6 +28,7 @@
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"
               :viewConfig="projectCardConfig"
+              :content = "projectCard"
               projectType="featured"
             ></project-cards-block>
           </app-content-section>
@@ -133,6 +134,7 @@ export default {
   name: "Home",
   data() {
     return {
+      projectCard:{},
       projectCardConfig: { vOrientation: true, visible: false },
       ourCommunity: {},
       bottomLeftConfig: { vOrientation: false, visible: false },
@@ -196,6 +198,7 @@ export default {
     setProjectList() {
       this.projectCardConfig = this.view("projectCards");
       this.getFeaturedProjectsRemote({ limit: this.projectCardConfig.limit });
+      this.projectCard = this.whatOffer = this.getGContent("home_get_involve");
     },
     setEventsConfig() {
       this.eventsConfig = this.view("events");

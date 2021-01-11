@@ -22,14 +22,14 @@
   "covers": [
     {
       "image": "events/CitSci.JPG",
-      "expiration": "2021-10-30T13:15+01:00",
+      "expiration": "2021-01-30T13:15+01:00",
       "title": {
-        "en": "Submit to CitSci Helvetia 2021",
-        "de": "Mach mit bei der CitSci Helvetia 2021"
+        "en": "CitSci Helvetia 2021",
+        "de": "CitSci Helvetia 2021"
       },
       "lead": {
-        "en": "The first Swiss Citizen Science Conference (January 14-15, 2021 *ONLINE*) is now open!",
-        "de": "Die erste Schweizer Citizen Science Konferenz (14.-15. Januar 2021 *ONLINE*) ist jetzt offen!"
+        "en": "The first Swiss Citizen Science Conference (January 14-15, 2021)",
+        "de": "Die erste Schweizer Citizen Science Konferenz (14.-15. Januar 2021)"
       },
       "path": {
         "en": "http://citscihelvetia.ch/",
@@ -39,7 +39,7 @@
     },
     {
       "image": "events/image-launch.jpg",
-      "expiration": "2021-09-30T13:15+01:00",
+      "expiration": "2020-09-30T13:15+01:00",
       "title": {
         "en": "Explore the Citizen Science PROJECT BUILDER",
         "de": "Entdecke den Citizen Science PROJECT BUILDER"
@@ -56,7 +56,7 @@
     },
     {
       "image": "events/cdc.jpg",
-      "expiration": "2021-09-22T13:15+01:00",
+      "expiration": "2020-09-22T13:15+01:00",
       "title": {
         "en": "CROWD vs COVID-19",
         "de":""

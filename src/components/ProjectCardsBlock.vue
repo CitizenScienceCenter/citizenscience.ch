@@ -1,20 +1,16 @@
 <i18n>
 {
   "en": {
-    "section-projects-heading": "Get Involved",
-    "section-projects-button": "See All Projects",
     "new-project-button": "Create Project",
+    "section-projects-button": "See All Projects",
     "search-project-placeholder": "Search",
-    "noresult-project-label": "No projects found, for your search",
-    "section-projects-description": "Vestibulum rhoncus molestie ornare. <br/> Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus."
+    "noresult-project-label": "No projects found, for your search"
   },
   "de": {
-    "section-projects-heading": "Machen Sie mit",
-    "section-projects-button": "Alle Projekte",
     "new-project-button": "Projekt erstellen",
+    "section-projects-button": "Alle Projekte",
     "search-project-placeholder": "Suchen",
-    "noresult-project-label": "Keine Projekte gefunden, für Ihre Suche",
-    "section-projects-description": "Vestibulum rhoncus molestie ornare. <br/> Integer lobortis lacus sed enim gravida, a faucibus nisl dapibus."
+    "noresult-project-label": "Keine Projekte gefunden, für Ihre Suche"
   }
 }
 </i18n>
@@ -26,7 +22,7 @@
     <div class="row row-centered" v-if="viewConfig.title.visible">
       <div class="col col-12 scroll-effect">
         <h2 class="heading small">
-          {{ $t("section-projects-heading") }}
+          {{ localTranslation(content.heading) }}
         </h2>
       </div>
     </div>
@@ -37,7 +33,7 @@
       <div class="col col-12 scroll-effect">
         <div
           class="description"
-          v-html="$t('section-projects-description')"
+          v-html="localTranslation(content.description)"
         ></div>
       </div>
     </div>
@@ -92,7 +88,7 @@
 <script>
 import ProjectTeaser from "@/components/ProjectTeaser";
 import { mapGetters, mapMutations, mapState } from "vuex";
-import { getNested } from "@/assets/support.js";
+import { getTranslation, getNested } from "@/assets/support.js";
 
 // This variable avoid undefined or null errors
 const keys = [
@@ -122,6 +118,7 @@ export default {
     visible: Boolean,
     viewConfig: Object,
     projectType: String,
+    content: Object,
     limit: { type: Number, default: 0 },
   },
   components: {
@@ -160,6 +157,9 @@ export default {
       keys.forEach((key) => {
         this.br[key] = this.viewConfig.project[key] || {};
       });
+    },
+    localTranslation(textContent) {
+      return getTranslation(textContent, this.$i18n.locale);
     },
     openUrl: function(url, disabled = false) {
       if (disabled) {

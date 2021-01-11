@@ -102,13 +102,22 @@
         "photo": "/img/people/fanny.jpg"
       },
       {
-        "name": "Nikos Georgomanolis",
+        "name": "Ursina Roffler",
+        "position": {
+            "en": "Community Manager",
+            "de": "Community Manager"
+          },
+        "email": "ursina.roffler@uzh.ch",
+        "photo": "/img/people/ursina.jpg"
+      },
+      {
+        "name": "Jan Clemens",
         "position": {
             "en": "Developer",
             "de": "Entwickler"
           },
-        "email": "nikolaos.georgomanolis@uzh.ch",
-        "photo": "/img/people/nikos.jpg"
+        "email": "jan.clemens@uzh.ch",
+        "photo": ""
       },
       {
         "name": "Andres Dorado",

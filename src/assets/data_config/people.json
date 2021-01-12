@@ -113,11 +113,11 @@
       {
         "name": "Jan Clemens",
         "position": {
-            "en": "Developer",
-            "de": "Entwickler"
+            "en": "Software Engineer",
+            "de": "Software Ingenieur"
           },
         "email": "jan.clemens@uzh.ch",
-        "photo": ""
+        "photo": "/img/people/jan.jpg"
       },
       {
         "name": "Andres Dorado",

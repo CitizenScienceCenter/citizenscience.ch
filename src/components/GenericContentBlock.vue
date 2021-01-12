@@ -1,6 +1,6 @@
 <template>
   <div
-    class="generic-content"
+    class="generic-content scroll-effect"
     :class="{ 'content-wrapper': !br.compact_view }"
     v-if="
       visible &&
@@ -14,7 +14,7 @@
       class="row row-centered"
       v-if="br.heading.visible && localTranslation(contentData.heading)"
     >
-      <div class="col col-12 scroll-effect heading-section">
+      <div class="col col-12 heading-section">
         <h2 class="heading small">
           {{ localTranslation(contentData.heading) }}
         </h2>
@@ -27,7 +27,7 @@
     >
       <!-- Image sub-section Content  -->
       <div
-        class="col scroll-effect scroll-effect-delayed-3"
+        class="col"
         :class="checkVerticalOrientation('img-content')"
         v-if="contentData.image && br.image.visible"
       >
@@ -50,7 +50,7 @@
       </div>
       <!-- Text sub-section Content  -->
       <div
-        class="col col-11 scroll-effect text-section"
+        class="col col-11 text-section"
         :class="checkVerticalOrientation('text-content')"
       >
         <div

@@ -20,7 +20,7 @@
       <div class="row row-centered">
         <!-- Left Column -->
         <div
-          class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12 scroll-effect"
+          class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12"
         >
           <!-- Project Cards component -->
           <app-content-section class="row ph-mv" v-if="isProjectsLoaded">
@@ -58,7 +58,7 @@
         </div>
         <!-- Right Column -->
         <div
-          class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12 scroll-effect"
+          class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12"
         >
           <!-- Generic Content component for Our Mission -->
           <app-content-section

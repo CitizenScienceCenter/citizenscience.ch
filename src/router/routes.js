@@ -190,6 +190,15 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-startproject", nav: true },
         redirect: "start/startproject",
+        beforeEnter: async (to, from, next) => {
+          // This preload the page style
+          const con = await store.dispatch("content/getGenericContentRemote", {
+            view: "create",
+          });
+          if (con) {
+            next();
+          }
+        },
         children: [
           {
             path: "startproject",
@@ -203,9 +212,6 @@ export const routes = [
                 view: "start",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "create",
-                });
                 next();
               }
             },
@@ -222,9 +228,6 @@ export const routes = [
                 view: "criteria",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "create",
-                });
                 next();
               }
             },
@@ -253,9 +256,6 @@ export const routes = [
                 view: "seed_grants",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "create",
-                });
                 next();
               }
             },
@@ -281,6 +281,15 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-community", nav: true },
         redirect: "community/csc_community",
+        beforeEnter: async (to, from, next) => {
+          // This preload the page style
+          const con = await store.dispatch("content/getGenericContentRemote", {
+            view: "community",
+          });
+          if (con) {
+            next();
+          }
+        },
         children: [
           {
             path: "csc_community",
@@ -295,9 +304,6 @@ export const routes = [
                 view: "community",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "community",
-                });
                 next();
               }
             },
@@ -312,9 +318,6 @@ export const routes = [
                 view: "members",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "community",
-                });
                 next();
               }
             },
@@ -334,9 +337,6 @@ export const routes = [
                 view: "partnerships",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "community",
-                });
                 next();
               }
             },
@@ -348,6 +348,15 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-about", nav: true },
         redirect: "about/mission",
+        beforeEnter: async (to, from, next) => {
+          // This preload the page style
+          const con = await store.dispatch("content/getGenericContentRemote", {
+            view: "about",
+          });
+          if (con) {
+            next();
+          }
+        },
         children: [
           {
             path: "mission",
@@ -359,9 +368,6 @@ export const routes = [
                 view: "mission",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "about",
-                });
                 next();
               }
             },
@@ -376,9 +382,6 @@ export const routes = [
                 view: "zurich_style",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "about",
-                });
                 next();
               }
             },
@@ -393,9 +396,6 @@ export const routes = [
                 view: "offer",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "about",
-                });
                 next();
               }
             },
@@ -411,9 +411,6 @@ export const routes = [
                 view: "people",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "about",
-                });
                 next();
               }
             },
@@ -428,9 +425,6 @@ export const routes = [
                 view: "contact",
               });
               if (res) {
-                await store.dispatch("content/getGenericContentRemote", {
-                  view: "about",
-                });
                 next();
               }
             },

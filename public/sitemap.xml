@@ -30,9 +30,9 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/criteria" />
     </url>
     <url>
-        <loc>https://www.citizenscience.ch/de/start/checklist</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/checklist" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/checklist" />
+        <loc>https://www.citizenscience.ch/de/start/seed</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/start/seed" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/start/seed" />
     </url>
     <!-- community section -->
     <url>

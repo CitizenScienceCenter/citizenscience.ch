@@ -190,13 +190,6 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-startproject", nav: true },
         redirect: "start/startproject",
-        beforeEnter: async (to, from, next) => {
-          // load content from remote server
-          await store.dispatch("content/getGenericContentRemote", {
-            view: "create",
-          });
-          next();
-        },
         children: [
           {
             path: "startproject",
@@ -210,6 +203,9 @@ export const routes = [
                 view: "start",
               });
               if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "create",
+                });
                 next();
               }
             },
@@ -226,6 +222,9 @@ export const routes = [
                 view: "criteria",
               });
               if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "create",
+                });
                 next();
               }
             },
@@ -254,6 +253,9 @@ export const routes = [
                 view: "seed_grants",
               });
               if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "create",
+                });
                 next();
               }
             },
@@ -279,13 +281,6 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-community", nav: true },
         redirect: "community/csc_community",
-        beforeEnter: async (to, from, next) => {
-          // load content from remote server
-          await store.dispatch("content/getGenericContentRemote", {
-            view: "community",
-          });
-          next();
-        },
         children: [
           {
             path: "csc_community",
@@ -300,6 +295,9 @@ export const routes = [
                 view: "community",
               });
               if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "community",
+                });
                 next();
               }
             },
@@ -314,6 +312,9 @@ export const routes = [
                 view: "members",
               });
               if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "community",
+                });
                 next();
               }
             },
@@ -333,6 +334,9 @@ export const routes = [
                 view: "partnerships",
               });
               if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "community",
+                });
                 next();
               }
             },
@@ -344,13 +348,6 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-about", nav: true },
         redirect: "about/mission",
-        beforeEnter: async (to, from, next) => {
-          // load content from remote server
-          await store.dispatch("content/getGenericContentRemote", {
-            view: "about",
-          });
-          next();
-        },
         children: [
           {
             path: "mission",
@@ -362,6 +359,9 @@ export const routes = [
                 view: "mission",
               });
               if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "about",
+                });
                 next();
               }
             },
@@ -375,7 +375,12 @@ export const routes = [
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "zurich_style",
               });
-              if (res) next();
+              if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "about",
+                });
+                next();
+              }
             },
           },
           {
@@ -387,7 +392,12 @@ export const routes = [
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "offer",
               });
-              if (res) next();
+              if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "about",
+                });
+                next();
+              }
             },
           },
           {
@@ -400,7 +410,12 @@ export const routes = [
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "people",
               });
-              if (res) next();
+              if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "about",
+                });
+                next();
+              }
             },
           },
           {
@@ -412,7 +427,12 @@ export const routes = [
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "contact",
               });
-              if (res) next();
+              if (res) {
+                await store.dispatch("content/getGenericContentRemote", {
+                  view: "about",
+                });
+                next();
+              }
             },
           },
         ],

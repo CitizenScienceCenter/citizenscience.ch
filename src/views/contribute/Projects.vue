@@ -129,6 +129,8 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 import ProjectCardsBlock from "@/components/ProjectCardsBlock";
 import ProjectTeaser from "@/components/ProjectTeaser";
+
+import { openUrl } from "@/assets/support.js";
 import { mapActions, mapState } from "vuex";
 
 export default {
@@ -173,8 +175,7 @@ export default {
       getAllProjectsRemote: "project/getAllProjectsRemote",
     }),
     openInNewTab: function(url) {
-      var win = window.open(url, "_blank");
-      win.focus();
+      openUrl(url);
     },
     setViewConfig() {
       this.projectCardConfig = this.style;

@@ -41,8 +41,8 @@
         "de": ""
       },
       "description": {
-        "en": "<p> Join our Citizen Science Zurich community and always be up to date: </p> <span> Follow us on Twitter </span> <a href='https://twitter.com/CitSciZurich' target='_blank' style='font-size: 25px'> <i class='fab fa-twitter twttr'> </i> </a> </br> <span> Visit us on Facebook </span> <a href='https://www.facebook.com/CitSciZurich/' target='_blank'> <i class='fab fa-facebook fcbk' style='font-size: 25px'> </i> </a>",
-        "de": "<p> Werden Sie Mitglied unserer Citizen Science Zürich Community und bleiben Sie immer auf dem Laufenden: </p> <span> Folgen Sie uns auf Twitter </span> <a href='https://twitter.com/CitSciZurich' target='_blank' style='font-size: 25px'> <i class='fab fa-twitter twttr'> </i> </a> </br> <span> Besuchen Sie uns auf Facebook </span> <a href='https://www.facebook.com/CitSciZurich/' target='_blank'> <i class='fab fa-facebook fcbk' style='font-size: 25px'> </i> </a>"
+        "en": "<p> Join our Citizen Science Zurich community and always be up to date: </p> <span> Follow us on Twitter </span> <a href='https://twitter.com/CitSciZurich' target='_blank' rel='noopener' style='font-size: 25px'> <i class='fab fa-twitter twttr'> </i> </a> </br> <span> Visit us on Facebook </span> <a href='https://www.facebook.com/CitSciZurich/' target='_blank' rel='noopener'> <i class='fab fa-facebook fcbk' style='font-size: 25px'> </i> </a>",
+        "de": "<p> Werden Sie Mitglied unserer Citizen Science Zürich Community und bleiben Sie immer auf dem Laufenden: </p> <span> Folgen Sie uns auf Twitter </span> <a href='https://twitter.com/CitSciZurich' target='_blank' rel='noopener' style='font-size: 25px'> <i class='fab fa-twitter twttr'> </i> </a> </br> <span> Besuchen Sie uns auf Facebook </span> <a href='https://www.facebook.com/CitSciZurich/' target='_blank' rel='noopener'> <i class='fab fa-facebook fcbk' style='font-size: 25px'> </i> </a>"
       },
       "image": "/img/graphic-participation.png",
       "button": {

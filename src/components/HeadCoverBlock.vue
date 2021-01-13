@@ -46,6 +46,7 @@
               v-if="localTranslation(cover.path).startsWith('http')"
               :href="localTranslation(cover.path)"
               target="_blank"
+              rel='noopener'
               class="button button-primary-main"
               >{{
                 localTranslation(cover.button) || $t("default-button-name")
@@ -117,6 +118,7 @@
       <img v-if="goal" class="goal" :src="goalImage" :alt="goalImage" />
       <img
         id="sdg_logo"
+        alt="sdg_logo"
         src="@/assets/shared/sdg-logo-white.svg"
         @click="openInNewTab('https://sdgs.un.org/goals', br.sdg_logo.disabled)"
         :class="{ disabled: br.sdg_logo.disabled }"

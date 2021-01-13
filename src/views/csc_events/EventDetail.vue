@@ -162,6 +162,7 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
+import { openUrl } from "@/assets/support.js";
 import { mapGetters, mapState } from "vuex";
 import moment from "moment";
 
@@ -221,8 +222,7 @@ export default {
   },
   methods: {
     openInNewTab: function(url) {
-      var win = window.open(url, "_blank");
-      win.focus();
+      openUrl(url);
     },
     eventDisplayDate(start, end) {
       let startDate = new Date(start);

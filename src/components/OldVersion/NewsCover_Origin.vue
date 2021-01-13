@@ -19,31 +19,58 @@
   <section v-if="hasNews" class="news-cover">
     <!-- shows first upcoming news -->
     <div class="news-container">
-      <div class="news-entry" :style="'background-image: url(/img/'+news[0].image+')'">
+      <div
+        class="news-entry"
+        :style="'background-image: url(/img/' + news[0].image + ')'"
+      >
         <div class="news-content-wrapper">
           <div class="news-content">
-            <content-section class="content-section-flat content-section-image" color="transparent">
+            <content-section
+              class="content-section-flat content-section-image"
+              color="transparent"
+            >
               <div class="content-wrapper">
                 <div class="row row-centered">
                   <div class="col col-large-6 col-large-before-6 scroll-effect">
                     <div class="news-image-wrapper">
-                      <img :src="'/img/'+news[0].image" />
-                      <img :src="'/img/'+news[0].image" />
+                      <img :src="'/img/' + news[0].image" />
+                      <img :src="'/img/' + news[0].image" />
                     </div>
                   </div>
                 </div>
               </div>
             </content-section>
-            <content-section class="content-section-flat content-section-text" color="transparent">
+            <content-section
+              class="content-section-flat content-section-text"
+              color="transparent"
+            >
               <div class="content-wrapper">
                 <div class="row row-middle">
-                  <div class="col col-large-6 col-large-before-0_5 col-xlarge-5 col-xlarge-before-1 scroll-effect">
-                    <h2 class="heading centered left-aligned-large">{{ news[0][$i18n.locale].title }}</h2>
-                    <p class="centered left-aligned-large">{{ news[0][$i18n.locale].lead }}</p>
+                  <div
+                    class="col col-large-6 col-large-before-0_5 col-xlarge-5 col-xlarge-before-1 scroll-effect"
+                  >
+                    <h2 class="heading centered left-aligned-large">
+                      {{ news[0][$i18n.locale].title }}
+                    </h2>
+                    <p class="centered left-aligned-large">
+                      {{ news[0][$i18n.locale].lead }}
+                    </p>
                     <div class="button-group centered left-aligned-large">
                       <!-- simple external link handler, with target _blank -->
-                      <a v-if="news[0][$i18n.locale].path.startsWith('http')" :href="news[0][$i18n.locale].path" target="_blank" class="button button-primary-main">{{ news[0][$i18n.locale].button }}</a>
-                      <router-link v-else :to="news[0][$i18n.locale].path" class="button button-primary-main">{{ news[0][$i18n.locale].button }}</router-link>
+                      <a
+                        v-if="news[0][$i18n.locale].path.startsWith('http')"
+                        :href="news[0][$i18n.locale].path"
+                        target="_blank"
+                        rel="noopener"
+                        class="button button-primary-main"
+                        >{{ news[0][$i18n.locale].button }}</a
+                      >
+                      <router-link
+                        v-else
+                        :to="news[0][$i18n.locale].path"
+                        class="button button-primary-main"
+                        >{{ news[0][$i18n.locale].button }}</router-link
+                      >
                     </div>
                   </div>
                 </div>
@@ -58,51 +85,69 @@
     <div class="uzh-eth">
       <span v-if="this.$i18n.locale === 'en'">A joint initiative by</span>
       <span v-else>Ein gemeinsamer Effort von</span>
-      <img v-if="this.$i18n.locale === 'en'" alt="University of Zurich / ETH Zurich" src="@/assets/shared/uzh_eth_logo_e_neg.svg" @click="logoClick($event)"/>
-      <img v-else alt="Universität Zürich / ETH Zürich" src="@/assets/shared/uzh_eth_logo_d_neg.svg" @click="logoClick($event)"/>
+      <img
+        v-if="this.$i18n.locale === 'en'"
+        alt="University of Zurich / ETH Zurich"
+        src="@/assets/shared/uzh_eth_logo_e_neg.svg"
+        @click="logoClick($event)"
+      />
+      <img
+        v-else
+        alt="Universität Zürich / ETH Zürich"
+        src="@/assets/shared/uzh_eth_logo_d_neg.svg"
+        @click="logoClick($event)"
+      />
     </div>
 
     <div class="bottom-right-logo">
       <img src="@/assets/shared/sdg-logo-white.svg" />
     </div>
-
   </section>
-
 
   <!-- no news > default cover -->
   <cover v-else imageUrl="/img/cover.jpg">
-    <h2 class="cover-heading scroll-effect">{{ $t('cover-heading') }}</h2>
-    <p class="cover-subheading scroll-effect scroll-effect-delayed-1">{{ $t('cover-subheading') }}</p>
+    <h2 class="cover-heading scroll-effect">{{ $t("cover-heading") }}</h2>
+    <p class="cover-subheading scroll-effect scroll-effect-delayed-1">
+      {{ $t("cover-subheading") }}
+    </p>
     <p class="button-group centered scroll-effect scroll-effect-delayed-2">
-      <router-link tag="button" to="/contribute" class="button button-primary-main">{{ $t('cover-button-projects') }}</router-link>
-      <router-link tag="button" to="/start" class="button button-secondary button-secondary-inverted">{{ $t('cover-button-your-project') }}</router-link>
+      <router-link
+        tag="button"
+        to="/contribute"
+        class="button button-primary-main"
+        >{{ $t("cover-button-projects") }}</router-link
+      >
+      <router-link
+        tag="button"
+        to="/start"
+        class="button button-secondary button-secondary-inverted"
+        >{{ $t("cover-button-your-project") }}</router-link
+      >
     </p>
   </cover>
 </template>
 
 <script>
-
 import news from "@/assets/data_config/cover_list.json";
 import Cover from "./shared/Cover";
 import ContentSection from "./shared/ContentSection";
 
 export default {
-  name: 'NewsCover',
-  components: {ContentSection, Cover},
+  name: "NewsCover",
+  components: { ContentSection, Cover },
   data() {
     return {
-      news: news
-    }
+      news: news,
+    };
   },
   computed: {
     hasNews() {
-      if( this.news.length > 0 ) {
+      if (this.news.length > 0) {
         return true;
-      }
-      else {
+      } else {
         return false;
       }
-    }
+    },
   },
   methods: {
     logoClick: function(e) {
@@ -110,31 +155,31 @@ export default {
       var x = e.clientX - rect.left;
       var width = rect.width;
       if (x < width / 2) {
-        this.openInNewTab('https://www.uzh.ch');
+        this.openInNewTab("https://www.uzh.ch");
+      } else {
+        this.openInNewTab("https://www.ethz.ch");
       }
-      else {
-        this.openInNewTab('https://www.ethz.ch');
-      }
-    }
+    },
   },
   created() {
-    this.news = this.news.filter(slide => Date.parse(slide.expiration) >= Date.now() );
-    console.log('filtered');
-    console.log( this.news );
+    this.news = this.news.filter(
+      (slide) => Date.parse(slide.expiration) >= Date.now()
+    );
+    console.log("filtered");
+    console.log(this.news);
     // sort by date
-    this.news.sort(function(a, b){
+    this.news.sort(function(a, b) {
       return Date.parse(a.expiration) - Date.parse(b.expiration);
     });
-    console.log('sorted');
-    console.log( this.news );
+    console.log("sorted");
+    console.log(this.news);
   },
-}
+};
 </script>
 
 <style lang="scss">
-
-@import '@/styles/theme.scss';
-@import '@/styles/shared/variables.scss';
+@import "@/styles/theme.scss";
+@import "@/styles/shared/variables.scss";
 
 .news-cover {
   height: 440px;
@@ -148,7 +193,6 @@ export default {
       background-position: 50% 50%;
 
       .news-content-wrapper {
-
         position: relative;
         overflow: visible;
         z-index: 1;
@@ -156,7 +200,6 @@ export default {
         height: calc(100% - 88px);
 
         .news-content {
-
           height: 100%;
           display: flex;
           flex-direction: column;
@@ -212,9 +255,7 @@ export default {
               margin-bottom: $spacing-2;
             }
           }
-
         }
-
       }
 
       .slide-overlay {
@@ -225,7 +266,11 @@ export default {
         width: 100%;
         height: 100%;
         //background: linear-gradient(to bottom right, $color-secondary, $color-primary-secondary-mix );
-        background: linear-gradient(120deg, $color-gradient-start, $color-gradient-end );
+        background: linear-gradient(
+          120deg,
+          $color-gradient-start,
+          $color-gradient-end
+        );
         opacity: 0.8;
       }
     }
@@ -276,10 +321,13 @@ export default {
     width: 100%;
     height: 100%;
     //background: linear-gradient(to bottom right, $color-secondary, $color-primary-secondary-mix );
-    background: linear-gradient(120deg, $color-gradient-start, $color-gradient-end );
+    background: linear-gradient(
+      120deg,
+      $color-gradient-start,
+      $color-gradient-end
+    );
     opacity: 0.8;
   }
-
 }
 
 @media only screen and (min-width: $viewport-mobile-large) {
@@ -289,7 +337,6 @@ export default {
     .news-container {
       .news-entry {
         .news-content-wrapper {
-
           .news-content {
             .content-section-image {
               .content-wrapper {
@@ -339,8 +386,6 @@ export default {
 }
 
 @media only screen and (min-width: $viewport-large) {
-
-
   .col-large-before-0_5 {
     margin-left: 4.166%;
   }
@@ -360,7 +405,7 @@ export default {
               position: absolute;
               top: 0;
               //right: -25%;
-              height: calc( 100% + 104px );
+              height: calc(100% + 104px);
               .content-wrapper {
                 padding: 0;
                 max-width: none;
@@ -442,16 +487,14 @@ export default {
       bottom: $spacing-3;
       right: $spacing-3;
       img {
-        filter: drop-shadow( 0px 2px 8px rgba( $color-black, 0.2 ) );
+        filter: drop-shadow(0px 2px 8px rgba($color-black, 0.2));
       }
     }
-
   }
 }
 
 @media only screen and (min-width: $viewport-xlarge) {
   .news-cover {
-
     height: 80vh;
     max-height: 600px;
 
@@ -461,7 +504,6 @@ export default {
           height: calc(100% - 104px);
 
           .news-content {
-
             // heading / paragraph change
             .content-section {
               .heading {
@@ -479,8 +521,6 @@ export default {
         }
       }
     }
-
   }
 }
-
 </style>

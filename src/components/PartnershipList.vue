@@ -16,7 +16,7 @@
     <!-- Logos section -->
     <div v-if="br.logos.visible">
       <span v-for="logo in contentData.logos" :key="logo.id">
-        <img :src="logo" class="logo" />
+        <img :src="logo" class="logo" :alt="logo" />
       </span>
     </div>
 

@@ -94,7 +94,11 @@
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-tablet-portrait-8 col-large-6 col-large-after-1">
-            <img :src="content.image" style="border-radius:50%" />
+            <img
+              :src="content.image"
+              style="border-radius:50%"
+              :alt="content.image"
+            />
           </div>
         </div>
       </div>

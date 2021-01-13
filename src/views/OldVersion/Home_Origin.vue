@@ -290,7 +290,7 @@
 
           <div class="col col-10 col-tablet-portrait-8 col-large-6 col-wrapping scroll-effect">
             <div class="extra-padding-h">
-              <img src="/img/graphic-question.png" />
+              <img src="/img/graphic-question.png" alt="graphic-question"/>
             </div>
           </div>
 
@@ -321,7 +321,7 @@
           <div class="col col-10 col-large-6 col-wrapping">
             <div>
               <div class="extra-padding-large-h">
-                <img src="/img/graphic-citizen-science.png"/>
+                <img src="/img/graphic-citizen-science.png" alt="graphic-citizen-science"/>
               </div>
             </div>
           </div>

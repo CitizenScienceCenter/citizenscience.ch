@@ -114,7 +114,7 @@
       v-scroll-to="'#sdg'"
       v-if="br.sdg_logo.visible"
     >
-      <img v-if="goal" class="goal" :src="goalImage" />
+      <img v-if="goal" class="goal" :src="goalImage" :alt="goalImage" />
       <img
         id="sdg_logo"
         src="@/assets/shared/sdg-logo-white.svg"
@@ -631,7 +631,7 @@ export default {
   }
 }
 @media only screen and (min-width: $viewport-xxxlarge) {
-  .cover{
+  .cover {
     .uzh-eth {
       img {
         height: 40px;

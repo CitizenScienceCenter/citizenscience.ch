@@ -35,7 +35,7 @@
         <div class="content-wrapper">
           <div class="row row-centered">
             <div class="col col-8 col-large-6 col-wrapping col-large-no-bottom-margin">
-              <img src="/img/sdg-wheel.png"/>
+              <img src="/img/sdg-wheel.png" alt="sdg-wheel"/>
             </div>
           </div>
         </div>

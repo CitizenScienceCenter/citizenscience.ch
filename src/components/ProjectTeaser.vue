@@ -14,7 +14,11 @@
           :class="validateOrientation('img-content')"
           v-if="br.img_project.visible"
         >
-          <img :src="projectImage" :class="{ round: !project.img_project }" />
+          <img
+            :src="projectImage"
+            :class="{ round: !project.img_project }"
+            :alt="projectImage"
+          />
         </div>
         <!-- Text Content section  -->
         <div class="col col-8" :class="validateOrientation('text-content')">
@@ -96,7 +100,11 @@ export default {
       return this.project.img_background || "/img/cover.jpg";
     },
     projectImage() {
-      return this.project.img_project || this.project.img_background || "/img/cover.jpg";
+      return (
+        this.project.img_project ||
+        this.project.img_background ||
+        "/img/cover.jpg"
+      );
     },
   },
   methods: {

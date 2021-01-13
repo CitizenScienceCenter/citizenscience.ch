@@ -71,7 +71,7 @@
           <div
             class="col col-6 col-tablet-portrait-6 col-large-3 col-large-before-2 col-wrapping"
           >
-            <img src="/img/projects/crowdwater.png" />
+            <img src="/img/projects/crowdwater.png" alt="crowdwater" />
           </div>
           <div
             class="col col-tablet-portrait-10 col-large-5 col-large-after-2 col-wrapping"
@@ -95,7 +95,7 @@
           <div
             class="col col-6 col-tablet-portrait-6 col-large-3 col-large-before-2 col-wrapping"
           >
-            <img src="/img/projects/stophatespeech.png" />
+            <img src="/img/projects/stophatespeech.png" alt="stophatespeech" />
           </div>
           <div
             class="col col-tablet-portrait-10 col-large-5 col-large-after-2 col-wrapping"

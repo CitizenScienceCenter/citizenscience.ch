@@ -38,7 +38,7 @@
         :class="validateImage('img-content', event)"
         v-if="event.image && !br.hideImage"
       >
-        <img :src="'/img/events/' + event.image" />
+        <img :src="'/img/events/' + event.image" :alt="event.image"/>
       </div>
 
       <!-- Details Subsection -->

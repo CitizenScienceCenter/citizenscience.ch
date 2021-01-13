@@ -42,7 +42,7 @@
         <div class="content-wrapper">
           <div class="row row-centered row-in-background">
             <div class="col col-6">
-              <img src="/img/pwa.png"/>
+              <img src="/img/pwa.png" alt="pwa"/>
             </div>
           </div>
         </div>

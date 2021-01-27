@@ -95,8 +95,8 @@
       {
         "name": "Fanny Gutsche-Jones",
         "position": {
-            "en": "Community Manager",
-            "de": "Community Manager"
+            "en": "Community Manager (on maternity leave)",
+            "de": "Community Manager (im Mutterschaftsurlaub)"
           },
         "email": "fanny.gutsche-jones@uzh.ch",
         "photo": "/img/people/fanny.jpg"
@@ -153,6 +153,41 @@
           },
         "email": "alessandro.rearte@uzh.ch",
         "photo": "/img/people/alessandro.jpg"
+      },
+      {
+        "name": "Julienne Karzig",
+        "position": {
+          "en": "Student Assistant",
+          "de": "Studentische Hilfskraft"
+        },
+        "email": "julienne.karzig@uzh.ch",
+        "photo": "/img/people/julienne.jpg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Support",
+      "de": "Support"
+    },
+    "people_list": [
+      {
+        "name": "Tobias Hoffmann",
+        "position": {
+            "en": "IT-Support",
+            "de": "IT-Support"
+          },
+        "email": "",
+        "photo": "/img/people/tobias.jpg"
+      },
+      {
+        "name": "Marina Gagetti",
+        "position": {
+            "en": "Administration",
+            "de": "Administration"
+          },
+        "email": "marina.gagetti@uzh.ch",
+        "photo": "/img/people/marina.jpg"
       }
     ]
   }

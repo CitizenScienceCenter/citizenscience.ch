@@ -55,18 +55,6 @@
     "image": "brownbag.jpg"
   },
   {
-    "path": "brownbag-2020-11-26",
-    "start": "2020-11-26T12:00+01:00",
-    "end": "2020-11-26T13:00+01:00",
-    "location": "Weblink via Zoom. Register via Email to info@citizenscience.ch",
-    "title": "Lunch Talk: Bergbau goes public: Entdecken von alten Spuren mit neuen Mitteln–Historischer Bergbau und moderne Fernerkundung",
-    "abstract": "",
-    "speakers": "Beat Meier, Privatforscher, Olten &amp; Rouven Turck, UZH",
-    "content": "Das hier vorgestellte Fallbeispiel befasst sich mit dem Sichtbarmachen von Spuren, welche die Erzgewinnung bei Balsthal im Dünnerntal zurückgelassen hat. Nach anfänglichen Schürfversuchen, womöglich bereits im 16. Jahrhundert, wird für die Erzmatt 1793 eine Bergwerkskonzession für zwei Hammerschmiede aus dem Schwarzwald erteilt. <br><br> Auf der Erzmatt wird bis 1850 Erz abgebaut. Noch heute, also nach mehr als 170 Jahren, sind im Gelände der inzwischen dicht bewaldeten Erzmatt Spuren dieser Bergbautätigkeit zu finden. Es lassen sich Abraumhalden und trichterförmige Vertiefungen, sogenannte «Pingen» erkennen, die durch das Einsinken der Grubendecke oberhalb der Abbaustellen entstanden sind. <br><br>LiDAR-Daten (Light Detection and Ranging) sind ein ausgezeichnetes optisches Fernerkundungsmittel zum Aufspüren dieser Spuren, die der historische Bergbau an der Oberfläche zurückgelassen hat. Die professionelle GIS-Anwendung QGIS, die auf der Grundlage von Open-Source-Software ständig weiterentwickelt wird, ermöglicht eine einfache und kostengünstige Auswertung der LiDAR-Daten. Die Auswertung der Daten besteht aus einer Interpretation von Merkmalen, die in den LiDAR-Daten wahrgenommen werden, ergänzt durch gezielte Beobachtungen im Gelände. <br><br> Beat Meier, Privatforscher, ist Initiator und Motivator des Projekts. Er koordiniert die laufenden Arbeiten im Feld und Archiv permanent vor Ort. Dabei stellt er mit Hilfe von Rouven Turck (UZH) Kontakt zu Ämtern (z. B. Kantonsarchäologie, Forstamt, Gemeinde) her, um die nötigen Bewilligungen für die lokale Forschung zu erhalten. <br><br>Während Herr Meier lokal Anwohner und Interessierte für Sondengänge und Feldbegehungen koordiniert und motiviert, stellt Herr Turck Kontakte zu Fachkollegen wie Geophysikern her. Es sind etliche Sondengänger und Laienforscher, die sich etwa im Rahmen der Schweizerischen Gesellschaft für historischen Bergbau (SGHB) mit Bergbaufunden befassen, in das Projekt involviert. Unsere Kollaboration erfolgt auf Augenhöhe im ständigen Austausch. Die Forschungsstrategie wird in der Regel von Beat Meier erarbeitet und von Rouven Turck auf Realisierbarkeit (z. B. Geophysik) überprüft. Gemeinsam erfolgt die Organisation von Vorträgen (z. B. 26.10.2019, GV SGHB) und Medienberichten (z. B. Solothurner Zeitung, Oktober 2020), um die Wissenschaft in die Öffentlichkeit zu transportieren. <br><br>Zukünftig anstehende Projekte sind etwa die Ausweitung der Feldarbeiten sowie erste wissenschaftliche Publikationen.",
-    "image": "brownbag.jpg",
-    "state": { "en": "postponed", "de": "verschoben" }
-  },
-  {
     "path": "taucher-2020-10-28",
     "start": "2020-10-28T12:00+01:00",
     "end": "2020-10-28T13:00+01:00",

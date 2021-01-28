@@ -1,4 +1,36 @@
 {
+  "partners_projects": [
+    {
+      "description": {
+        "en": "CrowdWater at the university of Zurich aims to examine the potential of crowdsourcing in the field of hydrology. The focus lies on water level, streamflow and soil moisture data. The aim of the project is to collect a large amount of data and to improve the forecast of hydrological events, such as droughts or floods.",
+        "de": "CrowdWater ist ein Projekt der Universität Zürich und untersucht das Potential von crowdsourcing im Bereich Hydrologie. Konkret geht es um Wasserstand, Abfluss und Bodenfeuchte. Das Ziel ist es, möglichst viele Beobachtungen zu erheben und damit die Vorhersage hydrologischer Ereignisse wie zum Beispiel Trockenheit oder Überschwemmung zu verbessern."
+      },
+      "image": "/img/projects/crowdwater.png",
+      "button": {
+        "link": "https://www.crowdwater.ch",
+        "route": null,
+        "icon": null,
+        "selfWindow": false,
+        "en": "Visit Project",
+        "de": "Zum Projekt"
+      }
+    },
+    {
+      "description": {
+        "en": "The Stop Hate Speech project works against hostility and discrimination on the Internet. Using an algorithm that learns from an active community, Hate Speech is tracked down in the net and rejected by the community. Thus, an acute and global problem is tackled locally and innovatively.",
+        "de": "Das Projekt Stop Hate Speech geht gegen Anfeindungen und Diskriminierung im Internet vor. Mithilfe eines Algorithmus, welcher von einer aktiven Community lernt, wird Hate Speech im Netz aufgespürt und von der Community zurückgewiesen. So wird ein akutes und globales Problem lokal und innovativ bekämpft."
+      },
+      "image": "/img/projects/stophatespeech.png",
+      "button": {
+        "link": "http://www.stophatespeech.ch",
+        "route": null,
+        "icon": null,
+        "selfWindow": false,
+        "en": "Visit Project",
+        "de": "Zum Projekt"
+      }
+    }
+  ],
   "why_contribute": {
     "main_content": [
       {
@@ -15,7 +47,7 @@
           "de": "Was ist Ihr Grund - als Wissenschaftler*in und/oder Bürger*in - sich zu beteiligen?"
         },
         "description": {
-         "en": "<p> The reasons why <strong> professional scientists </strong> choose to use Citizen Science (CS) are often related to the optimization of resources. Citizen Science allows projects to cover wide geographical areas and to run on an ongoing basis, thus providing scientists with large and diverse data sets that might be otherwise impossible to collect. Similarly, scientists often find it unfeasible to analyze large data sets on their own, due to time and resource constraints. </p>  <p>Together with such great opportunities to accelerate scientific research and data acquisition, CS has been shown to improve science literacy and support science communication and public engagement with science, potentially addressing public distrust in science. </p>",
+          "en": "<p> The reasons why <strong> professional scientists </strong> choose to use Citizen Science (CS) are often related to the optimization of resources. Citizen Science allows projects to cover wide geographical areas and to run on an ongoing basis, thus providing scientists with large and diverse data sets that might be otherwise impossible to collect. Similarly, scientists often find it unfeasible to analyze large data sets on their own, due to time and resource constraints. </p>  <p>Together with such great opportunities to accelerate scientific research and data acquisition, CS has been shown to improve science literacy and support science communication and public engagement with science, potentially addressing public distrust in science. </p>",
           "de": "<p> Die Gründe, warum sich <strong> Wissenschaftler*innen </strong> oder forschende Bürger*innen für Citizen Science (CS) entscheiden, hängen oft mit der Optimierung von Ressourcen zusammen. Citizen Science ermöglicht es zum Beispiel, kontinuierlich grosse und vielfältige Datenmengen zu sammeln und damit in relativ kurzer Zeit weite geografische oder inhaltliche Gebiete abzudecken, die sonst möglicherweise nicht erfasst werden könnten. Oft ist es für Forschende auch aus Zeit- und Ressourcengründen nicht möglich, grosse Datensätze allein auszuwerten. </p> <p> Darüber hinaus hat sich gezeigt, dass Citizen Science die wissenschaftliche Kompetenz der Teilnehmenden verbessert und durch transparente Wissenschaftskommunikation und öffentliche Teilhabe an Forschung auch das Vertrauen in die Wissenschaft gestärkt werden kann. </p>"
         },
         "image": "/img/WhyContribute_2.png",

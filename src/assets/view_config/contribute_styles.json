@@ -15,6 +15,18 @@
       "button": { "disabled": false, "visible": true }
     }
   },
+  "partners": {
+    "visible": true,
+    "vOrientation": false,
+    "heading": { "visible": false },
+    "title": { "visible": false },
+    "subtitle": { "visible": true },
+    "description": { "visible": true },
+    "image": { "visible": true, "size": "md", "rounded": false },
+    "img_description": { "visible": false },
+    "button": { "disabled": false, "visible": true },
+    "second_button": { "disabled": false, "visible": false }
+  },
   "contribute": {
     "visible": true,
     "vOrientation": false,

@@ -19,6 +19,11 @@ const VIEW_FILES = {
     local: contributeViewsConfig,
     state: "projects_view",
   },
+  partners: {
+    remote: "contribute_styles.json",
+    local: contributeViewsConfig,
+    state: "partners_projects_view",
+  },
   contribute: {
     remote: "contribute_styles.json",
     local: contributeViewsConfig,
@@ -99,12 +104,13 @@ const state = {
   home_view: undefined,
   // Contribute Section states
   projects_view: undefined,
+  partners_projects_view: undefined,
   contribute_view: undefined,
   // Before you Start Section states
   start_view: undefined,
   criteria_view: undefined,
   checklist_view: undefined,
-  seed_grants_view:undefined,
+  seed_grants_view: undefined,
   // Community Section states
   community_view: undefined,
   members_view: undefined,

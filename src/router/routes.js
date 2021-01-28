@@ -24,6 +24,11 @@ const Projects = (resolve) => {
     resolve(require("../views/contribute/Projects.vue"));
   });
 };
+const PartnersProjects = (resolve) => {
+  require.ensure(["../views/contribute/PartnersProjects.vue"], () => {
+    resolve(require("../views/contribute/PartnersProjects.vue"));
+  });
+};
 const Collaborations = (resolve) => {
   require.ensure(["../views/contribute/Collaborations.vue"], () => {
     resolve(require("../views/contribute/Collaborations.vue"));
@@ -147,6 +152,15 @@ export const routes = [
         component: ChildView,
         meta: { i18n: "navigation-contribute", nav: true },
         redirect: "contribute/projects",
+        beforeEnter: async (to, from, next) => {
+          // This preload the page style
+          const con = await store.dispatch("content/getGenericContentRemote", {
+            view: "contribute",
+          });
+          if (con) {
+            next();
+          }
+        },
         children: [
           {
             path: "projects",
@@ -163,6 +177,22 @@ export const routes = [
             },
           },
           {
+            path: "partners_projects",
+            component: PartnersProjects,
+            meta: {
+              i18n: "navigation-contribute-partners",
+              nav: true,
+            },
+            beforeEnter: async (to, from, next) => {
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "partners",
+              });
+              if (res) {
+                next();
+              }
+            },
+          },
+          {
             path: "collaborations",
             component: Collaborations,
             meta: {
@@ -171,10 +201,6 @@ export const routes = [
             },
             beforeEnter: async (to, from, next) => {
               const res = await store.dispatch("viewconfig/getRemoteView", {
-                view: "contribute",
-              });
-              // load content from remote server
-              await store.dispatch("content/getGenericContentRemote", {
                 view: "contribute",
               });
               if (res) {

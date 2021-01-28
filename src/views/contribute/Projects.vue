@@ -3,25 +3,13 @@
   "en": {
   "page-title": "Projects",
 
-  "section-projects-heading": "Projects",
-
-  "section-partner-projects-heading": "Partner's Projects",
-  "section-partner-projects-crowdwater-text": "CrowdWater at the university of Zurich aims to examine the potential of crowdsourcing in the field of hydrology. The focus lies on water level, streamflow and soil moisture data. The aim of the project is to collect a large amount of data and to improve the forecast of hydrological events, such as droughts or floods.",
-  "section-partner-projects-crowdwater-button": "Visit Project",
-  "section-partner-projects-hatespeech-text": "The Stop Hate Speech project works against hostility and discrimination on the Internet. Using an algorithm that learns from an active community, Hate Speech is tracked down in the net and rejected by the community. Thus, an acute and global problem is tackled locally and innovatively.",
-  "section-partner-projects-hatespeech-button": "Visit Project"
+  "section-projects-heading": "Projects"
 
   },
   "de": {
   "page-title": "Projekte",
 
-  "section-projects-heading": "Projekte",
-
-  "section-partner-projects-heading": "Partnerprojekte",
-  "section-partner-projects-crowdwater-text": "CrowdWater ist ein Projekt der Universität Zürich und untersucht das Potential von crowdsourcing im Bereich Hydrologie. Konkret geht es um Wasserstand, Abfluss und Bodenfeuchte. Das Ziel ist es, möglichst viele Beobachtungen zu erheben und damit die Vorhersage hydrologischer Ereignisse wie zum Beispiel Trockenheit oder Überschwemmung zu verbessern.",
-  "section-partner-projects-crowdwater-button": "Zum Projekt",
-  "section-partner-projects-hatespeech-text": "Das Projekt Stop Hate Speech geht gegen Anfeindungen und Diskriminierung im Internet vor. Mithilfe eines Algorithmus, welcher von einer aktiven Community lernt, wird Hate Speech im Netz aufgespürt und von der Community zurückgewiesen. So wird ein akutes und globales Problem lokal und innovativ bekämpft.",
-  "section-partner-projects-hatespeech-button": "Zum Projekt"
+  "section-projects-heading": "Projekte"
 
   }
   }
@@ -52,66 +40,6 @@
           <!-- Loading spiner -->
           <div class="row row-centered" v-if="!isProjectsLoaded">
             <i class="fas fa-spinner fa-pulse spinner"></i>
-          </div>
-        </div>
-      </div>
-    </app-content-section>
-
-    <app-content-section color="light-greyish">
-      <div class="content-wrapper">
-        <div class="row row-centered scroll-effect">
-          <div class="col col-large-10">
-            <h2 class="heading centered" id="projects">
-              {{ $t("section-partner-projects-heading") }}
-            </h2>
-          </div>
-        </div>
-
-        <div class="row row-centered scroll-effect row-wrapping margin-bottom">
-          <div
-            class="col col-6 col-tablet-portrait-6 col-large-3 col-large-before-2 col-wrapping"
-          >
-            <img src="/img/projects/crowdwater.png" alt="crowdwater" />
-          </div>
-          <div
-            class="col col-tablet-portrait-10 col-large-5 col-large-after-2 col-wrapping"
-          >
-            <p
-              class="reduced-bottom-margin"
-              v-html="$t('section-partner-projects-crowdwater-text')"
-            ></p>
-            <div class="centered left-aligned-large">
-              <button
-                class="button button-secondary"
-                @click="openInNewTab('https://www.crowdwater.ch')"
-              >
-                {{ $t("section-partner-projects-crowdwater-button") }}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="row row-centered scroll-effect row-wrapping">
-          <div
-            class="col col-6 col-tablet-portrait-6 col-large-3 col-large-before-2 col-wrapping"
-          >
-            <img src="/img/projects/stophatespeech.png" alt="stophatespeech" />
-          </div>
-          <div
-            class="col col-tablet-portrait-10 col-large-5 col-large-after-2 col-wrapping"
-          >
-            <p
-              class="reduced-bottom-margin"
-              v-html="$t('section-partner-projects-hatespeech-text')"
-            ></p>
-            <div class="centered left-aligned-large">
-              <button
-                class="button button-secondary"
-                @click="openInNewTab('http://www.stophatespeech.ch')"
-              >
-                {{ $t("section-partner-projects-hatespeech-button") }}
-              </button>
-            </div>
           </div>
         </div>
       </div>

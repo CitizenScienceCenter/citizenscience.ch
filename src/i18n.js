@@ -53,6 +53,9 @@ export const i18n = new VueI18n({
       "navigation-contribute-projects": {
         link: "Projects",
       },
+      "navigation-contribute-partners": {
+        link: "Partners",
+      },
       "navigation-contribute-collaborations": {
         link: "Why Contribute?",
       },
@@ -68,12 +71,12 @@ export const i18n = new VueI18n({
       },
       "navigation-createproject-builder": {
         link: "Create",
-      },      
+      },
       "navigation-startproject-criteria": {
         link: "Criteria",
       },
-      "navigation-startproject-seed_grants":{
-        link:"Seed Grants"
+      "navigation-startproject-seed_grants": {
+        link: "Seed Grants",
       },
       "navigation-startproject-checklist": {
         link: "Checklist",
@@ -110,7 +113,7 @@ export const i18n = new VueI18n({
       },
       "navigation-about-people": {
         link: "People",
-      },            
+      },
       "navigation-about-contact": {
         link: "Contact",
       },
@@ -147,7 +150,7 @@ export const i18n = new VueI18n({
 
       "navigation-updatefile": {
         link: "Admin",
-      },      
+      },
     },
     de: {
       "site-title": "Citizen Science Center Zürich",
@@ -171,6 +174,9 @@ export const i18n = new VueI18n({
       "navigation-contribute-projects": {
         link: "Projekte",
       },
+      "navigation-contribute-partners": {
+        link: "Projekte",
+      },
       "navigation-contribute-collaborations": {
         link: "Warum mitmachen?",
       },
@@ -186,12 +192,12 @@ export const i18n = new VueI18n({
       },
       "navigation-createproject-builder": {
         link: "Erstellen",
-      },      
+      },
       "navigation-startproject-criteria": {
         link: "Kriterien",
       },
-      "navigation-startproject-seed_grants":{
-        link:"Seed Grants"
+      "navigation-startproject-seed_grants": {
+        link: "Seed Grants",
       },
       "navigation-startproject-checklist": {
         link: "Checkliste",
@@ -208,7 +214,7 @@ export const i18n = new VueI18n({
       },
       "navigation-community-partnerships": {
         link: "Partner",
-      }, 
+      },
 
       "navigation-pwa": {
         link: "PWA",
@@ -228,7 +234,7 @@ export const i18n = new VueI18n({
       },
       "navigation-about-people": {
         link: "Personen",
-      },     
+      },
       "navigation-about-contact": {
         link: "Kontakt",
       },
@@ -264,7 +270,7 @@ export const i18n = new VueI18n({
       },
       "navigation-updatefile": {
         link: "Admin",
-      }, 
+      },
     },
   },
 });

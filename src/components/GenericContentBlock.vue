@@ -259,14 +259,14 @@ export default {
 @import "@/styles/shared/variables.scss";
 .generic-content {
   padding-top: 0;
-  padding-bottom: $spacing-3;
+  padding-bottom: $spacing-5;
   .heading-section {
     padding-left: $spacing-4;
   }
   .img-section {
     .col-image {
       transform: scale(0.75) translateY(-5%);
-      border-radius: 10%;
+      border-radius: 5%;
       margin-bottom: -$spacing-2;
       position: relative;
       &.vertical-img {

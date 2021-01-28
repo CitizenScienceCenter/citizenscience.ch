@@ -14,6 +14,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/contribute/projects" />
     </url>
     <url>
+        <loc>https://www.citizenscience.ch/de/contribute/partners_projects</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/contribute/partners_projects" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/contribute/partners_projects" />
+    </url>
+    <url>
         <loc>https://www.citizenscience.ch/de/contribute/collaborations</loc>
         <xhtml:link rel="alternate" hreflang="de" href="https://www.citizenscience.ch/de/contribute/collaborations" />
         <xhtml:link rel="alternate" hreflang="en" href="https://www.citizenscience.ch/en/contribute/collaborations" />

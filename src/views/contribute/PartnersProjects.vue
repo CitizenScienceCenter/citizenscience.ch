@@ -37,7 +37,7 @@
             <generic-content-block
               :visible="viewConfig.visible"
               :vOrientation="viewConfig.vOrientation"
-              :hReverse="partner.reverse"
+              :hReverse="false"
               :content="partner"
               :viewConfig="viewConfig"
             ></generic-content-block>
@@ -103,15 +103,8 @@ export default {
       this.viewConfig = this.style;
     },
     loadContent() {
-      this.content = this.getGContent("partners_projects").map((x) =>
-        this.toggleReverse(x)
-      );
-    },
-    toggleReverse(contentItem) {
-      contentItem.reverse = this.isReverse;
-      this.isReverse = !this.isReverse;
-      return contentItem;
-    },
+      this.content = this.getGContent("partners_projects")
+    }
   },
   created() {
     this.setViewConfig();

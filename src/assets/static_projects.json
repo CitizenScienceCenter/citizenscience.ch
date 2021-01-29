@@ -1,0 +1,108 @@
+[
+  {
+    "id": "fs1",
+    "name": { "en": "Weasel Wanted", "de": "Wiesel gesucht" },
+    "topic": { "en": "Wild Life Research", "de": "Wildtierforschung" },
+    "description": {
+      "en": "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
+      "de": "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box."
+    },
+    "button": { "en": "Contribute", "de": "Beitragen" },
+    "img_background": "/img/projects/wiesel.jpg",
+    "img_project": "/img/projects/wiesel-intro.png",
+    "url": {
+      "en": "https://wiesel-gesucht.citizenscience.ch/en",
+      "de": "https://wiesel-gesucht.citizenscience.ch/de"
+    },
+    "color_gradient": { "start": "#99695c", "end": "#3f6fa0" }
+  },
+  {
+    "id": "fs2",
+    "name": { "en": "Mitrends Study", "de": "MITRENDS STUDIE" },
+    "topic": { "en": "Health", "de": "Gesundheit" },
+    "description": {
+      "en": "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
+      "de": "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome von MS zu erlangen."
+    },
+    "button": { "en": "Contribute", "de": "Beitragen" },
+    "img_background": "/img/projects/mitrends.jpg",
+    "img_project": "/img/projects/mitrends-graphic.png",
+    "url": {
+      "en": "https://mitrends.citizenscience.ch/en",
+      "de": "https://mitrends.citizenscience.ch/de"
+    },
+    "color_gradient": { "start": "#fc5c4a", "end": "#7284cd" }
+  },
+  {
+    "id": "fs3",
+    "name": { "en": "Project Wenker", "de": "Projekt Wenker" },
+    "topic": { "en": "Linguistics", "de": "Sprachwissenschaften" },
+    "description": {
+      "en": "Our first Citizen Science Project is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
+      "de": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben."
+    },
+    "button": { "en": "Contribute", "de": "Beitragen" },
+    "img_background": "/img/projects/wenker.jpg",
+    "img_project": "/img/projects/wenker-intro.png",
+    "url": {
+      "en": "https://wenker.citizenscience.ch/en",
+      "de": "https://wenker.citizenscience.ch/de"
+    },
+    "color_gradient": { "start": "#3e6189", "end": "#766b51" }
+  },
+  {
+    "id": "fs4",
+    "name": {
+      "en": "Geschlechtsspezifische Hassausdrücke (german only)",
+      "de": "Geschlechtsspezifische Hassausdrücke"
+    },
+    "topic": { "en": "Linguistics", "de": "Sprachwissenschaften" },
+    "description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
+    "button": { "en": "Contribute", "de": "Beitragen" },
+    "img_background": "/img/projects/hatespeech.jpg",
+    "img_project": "/img/projects/hatespeech-intro.png",
+    "url": {
+      "en": "https://hatespeech.citizenscience/en",
+      "de": "https://hatespeech.citizenscience/de"
+    },
+    "color_gradient": { "start": "#6e4f9e", "end": "#478161" }
+  },
+  {
+    "id": "fs5",
+    "name": {
+      "en": "Snake ID Challenge"
+    },
+    "topic": { "en": "Herpetology", "de": "Herpetologie" },
+    "description": {
+      "en": "Fall is here! You can take advantage of the cooler weather to test and refine your identification skills with the second phase of the SnakeID challenge.",
+      "de": "Der Herbst ist da! Nutzt das kühlere Wetter, um eure Identifikationsfähigkeiten in der zweiten Phase der SnakeID-Challenge zu testen und zu verfeinern."
+    },
+    "button": { "en": "Contribute", "de": "Beitragen" },
+    "img_background": "/img/projects/snakechallenge.jpg",
+    "img_project": "/img/projects/snakechallenge-intro.png",
+    "url": {
+      "en": "https://snakes.citizenscience.ch/en",
+      "de": "https://snakes.citizenscience.ch/de"
+    },
+    "color_gradient": { "start": "#A35026", "end": "#448D7D" }
+  },
+  {
+    "id": "fs6",
+    "name": {
+      "en": "Cause of Health"
+    },
+    "topic": { "en": "Health", "de": "Gesundheit" },
+    "description": {
+      "en": "Health and wellbeing are different in each individual and depend on the genome, the environment and behavior of each individual (Health Triangle). In order to understand the causes of health we need large sets of health-relevant data from a large number of people.",
+      "de": "Gesundheit und Wohlbefinden sind individuell verschieden und werden durch das “Gesundheitsdreieck” bestimmt: Dem Zusammenhang zwischen Genom, Umwelt und Verhalten. Zur Erforschung von Gesundheit und Wohlbefinden braucht die Wissenschaft gesundheitsrelevante Daten von möglichst vielen Menschen."
+    },
+    "button": { "en": "Contribute", "de": "Beitragen" },
+    "img_background": "/img/projects/cohcoh.jpg",
+    "img_project": "/img/projects/cohcoh-graphic.png",
+    "url": {
+      "en": "https://cause-of-health.citizenscience.ch/en",
+      "de": "https://cause-of-health.citizenscience.ch/de"
+    },
+    "color_gradient": { "start": "#4ca942", "end": "#4697cb" }
+  }
+]

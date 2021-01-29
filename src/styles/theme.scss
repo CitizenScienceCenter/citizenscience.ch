@@ -3,7 +3,14 @@ $color-secondary: #16496b;
 $color-black: #231f20;
 
 $color-gradient-start: $color-secondary;
-$color-gradient-end: mix( $color-primary, $color-secondary, 75%);
+$color-gradient-end: mix($color-primary, $color-secondary, 75%);
 
-$color-error: #B11D29;
-$color-success: #109B16;
+$color-error: #b11d29;
+$color-success: #109b16;
+
+:export {
+  primary: $color-primary;
+  secondary: $color-secondary;
+  gradient_start: $color-gradient-start;
+  gradient_end: $color-gradient-end;
+}

@@ -1,0 +1,91 @@
+{
+  "home": {
+    "cover": {
+      "visible": true,
+      "heading": { "visible": true },
+      "subheading": { "visible": true },
+      "uzh_eth_logo": { "disabled": false, "visible": true },
+      "sdg_logo": { "disabled": false, "visible": true },
+      "refresh_time": 10000
+    },
+    "projectCards": {
+      "visible": true,
+      "vOrientation": true,
+      "title": { "visible": true },
+      "buttons": { "visible": true },
+      "search": { "visible": false },
+      "limit": 3,
+      "description": { "visible": true },
+      "project": {
+        "img_project": { "visible": true },
+        "topic": { "visible": true },
+        "name": { "visible": true },
+        "description": { "visible": true },
+        "button": { "disabled": false, "visible": true }
+      }
+    },
+    "news": {
+      "visible": true,
+      "timeToRefresh": 15,
+      "limit": 5,
+      "max_chars": 500
+    },
+    "bottom_left": {
+      "visible": true,
+      "vOrientation": false,
+      "hReverse": false,
+      "compact_view": true,
+      "heading": { "visible": true },
+      "title": { "visible": false },
+      "subtitle": { "visible": false },
+      "description": { "visible": true },
+      "image": { "visible": true, "size": "sm", "rounded": true },
+      "img_description": { "visible": true },
+      "button": { "disabled": true, "visible": false },
+      "second_button": { "disabled": true, "visible": false }
+    },
+    "top_right": {
+      "visible": true,
+      "vOrientation": true,
+      "hReverse": false,
+      "compact_view": true,
+      "heading": { "visible": true },
+      "title": { "visible": false },
+      "subtitle": { "visible": true },
+      "description": { "visible": true },
+      "image": { "visible": false, "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": false, "visible": true }
+    },
+    "center_right": {
+      "visible": true,
+      "vOrientation": true,
+      "hReverse": false,
+      "compact_view": true,
+      "heading": { "visible": true },
+      "title": { "visible": false },
+      "subtitle": { "visible": true },
+      "description": { "visible": true },
+      "image": { "visible": false, "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": true, "visible": false }
+    },
+    "events": {
+      "visible": true,
+      "hideImage": true,
+      "limit": 1,
+      "heading": { "visible": true },
+      "button": { "disabled": false, "visible": true }
+    },
+    "social_feed": {
+      "visible": true,
+      "limit": 1,
+      "heading": { "visible": true },
+      "footer": { "visible": true },
+      "tw_button": { "disabled": false, "visible": true },
+      "fb_button": { "disabled": false, "visible": true }
+    }
+  }
+}

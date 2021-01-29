@@ -1,0 +1,48 @@
+{
+  "community": {
+    "main": {
+      "visible": true,
+      "vOrientation": false,
+      "heading": { "visible": false },
+      "title": { "visible": true },
+      "subtitle": { "visible": true },
+      "description": { "visible": true },
+      "image": { "visible": true, "size": "md", "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": false, "visible": false }
+    },
+    "our_community": {
+      "visible": true,
+      "hReverse": false
+    },
+    "how_join": {
+      "visible": true,
+      "vOrientation": false,
+      "heading": { "visible": false },
+      "title": { "visible": true },
+      "subtitle": { "visible": true },
+      "description": { "visible": true },
+      "image": { "visible": true, "size": "sm", "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": false, "visible": false }
+    }
+  },
+  "members": {
+    "visible": true,
+    "title": { "visible": false },
+    "description": { "visible": true },
+    "button": { "disabled": false, "visible": false },
+    "memberList": {
+      "visible": true
+    }
+  },
+  "partnerships": {
+    "visible": true,
+    "title": { "visible": true },
+    "description": { "visible": true },
+    "button": { "disabled": false, "visible": true },
+    "logos": { "visible": true }
+  }
+}

@@ -7,21 +7,28 @@
     "build": "vue-cli-service build && react-snap",
     "lint": "vue-cli-service lint",
     "now-build": "vue-cli-service build",
-    "deploy": "now --prod"
+    "deploy": "now --prod",
+    "ci-build": "vue-cli-service build && react-snap && vercel --prod"
   },
   "dependencies": {
-    "crypto-js": "^3.1.9-1",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "axios": "^0.21.0",
+    "minio": "^7.0.16",
     "sass-loader": "^7.1.0",
+    "secure-ls": "^1.2.6",
     "simple-analytics-vue": "^1.1.0",
     "swagger-client": "^3.8.22",
+    "vercel": "^21.0.1",
     "vue": "^2.5.17",
     "vue-gtag": "^1.6.2",
     "vue-i18n": "^8.2.1",
     "vue-meta": "^1.5.8",
+    "vue-moment": "^4.1.0",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.13.0",
+    "vue-sweetalert2": "^4.1.1",
+    "vue-tweet-embed": "^2.4.0",
     "vuex": "^3.0.1",
-    "vuex-c3s": "^1.1.0",
     "vuex-persist": "^1.8.0",
     "vuex-persistedstate": "^2.5.4"
   },
@@ -30,7 +37,7 @@
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.12.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "react-snap": "^1.23.0",
     "vue-template-compiler": "^2.5.17"
   },
@@ -43,7 +50,11 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off",
+      "no-mixed-spaces-and-tabs": 0,
+      "no-unused-vars": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -58,14 +69,7 @@
     "minifyHtml": {
       "collapseWhitespace": false,
       "removeComments": false
-    },
-    "puppeteerArgs": [
-      "--disable-setuid-sandbox",
-      "--no-sandbox"
-    ],
-    "concurrency": 1,
-    "inlineCss": false,
-    "puppeteerExecutablePath": "/usr/bin/google-chrome"
+    }
   },
   "browserslist": [
     "> 1%",

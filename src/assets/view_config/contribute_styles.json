@@ -1,0 +1,42 @@
+{
+  "projects": {
+    "visible": true,
+    "vOrientation": false,
+    "title": { "visible": false },
+    "buttons": { "visible": false },
+    "search": { "visible": true },    
+    "limit": null,
+    "description": { "visible": false },
+    "project": {
+      "img_project": { "visible": true },
+      "topic": { "visible": true },
+      "name": { "visible": true },
+      "description": { "visible": true },
+      "button": { "disabled": false, "visible": true }
+    }
+  },
+  "partners": {
+    "visible": true,
+    "vOrientation": false,
+    "heading": { "visible": false },
+    "title": { "visible": false },
+    "subtitle": { "visible": true },
+    "description": { "visible": true },
+    "image": { "visible": true, "size": "md", "rounded": false },
+    "img_description": { "visible": false },
+    "button": { "disabled": false, "visible": true },
+    "second_button": { "disabled": false, "visible": false }
+  },
+  "contribute": {
+    "visible": true,
+    "vOrientation": false,
+    "heading": { "visible": false },
+    "title": { "visible": false },
+    "subtitle": { "visible": true },
+    "description": { "visible": true },
+    "image": { "visible": true, "size": "md", "rounded": true },
+    "img_description": { "visible": false },
+    "button": { "disabled": false, "visible": false },
+    "second_button": { "disabled": false, "visible": false }
+  }
+}

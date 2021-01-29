@@ -6,15 +6,16 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer;
 */
 module.exports = {
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.module
       .rule("i18n")
       .resourceQuery(/blockType=i18n/)
-      .type('javascript/auto')
+      .type("javascript/auto")
       .use("i18n")
-        .loader("@kazupon/vue-i18n-loader")
-        .end();
-  }
+      .loader("@kazupon/vue-i18n-loader")
+      .end();
+  },
+  runtimeCompiler: true,
   /*
     configureWebpack: {
         plugins: [
@@ -25,8 +26,7 @@ module.exports = {
                     '/',
                     '/contribute','/contribute/projects','/contribute/collaborations',
                     '/start','/start/startproject','/start/offer','/start/checklist','/start/phases',
-                    '/citizenscience','/citizenscience/zurichstyle','/citizenscience/sdg',
-                    '/about','/about/mission','/about/people','/about/partnerships','/about/pwa','/about/contact',
+                    '/about','/about/mission','/about/people','/about/partnerships','/about/pwa','/about/contact', '/about/zurichstyle'
                     '/events',
                     '/forum',
                     '/login',
@@ -39,4 +39,4 @@ module.exports = {
         ]
     }
     */
-}
+};

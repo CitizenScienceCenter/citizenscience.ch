@@ -1,0 +1,442 @@
+{
+  "community": {
+    "main_content": [
+      {
+        "description": {
+          "en": "<p> The <strong> Citizen Science Center Zurich </strong> is  providing a platform for people interested in Citizen Science, including academia and the wider public, to exchange ideas and knowledge, and collaborate in projects. </p> <p> Community building at the Center means facilitating the growth of an active group of academic researchers, citizen scientists and partner organizations through various types of interaction. In-person and online, we create opportunities for them to connect, interact, share, and grow. Our ambition is for all to ultimately engage in highly participatory Citizen Science activities, be it as organizers, contributors or other roles.</p>",
+          "de": "<p> Das <strong> Citizen Science Center Zürich </strong> möchte allen Menschen, die sich für die Citizen Science interessieren, eine Plattform für den Austausch von Ideen und Wissen sowie für die Zusammenarbeit in Projekten bieten. </p> <p> Unter Community Building verstehen wir die Förderung des Gemeinschaftsgefühls zwischen akademisch Forschenden, Bürgerwissenschaftler*innen und Partnerorganisationen durch die aktive Unterstützung von Interaktion und Kollaboration. Sowohl vor Ort als auch online schaffen wir Gelegenheiten, sich kennenzulernen, Wissen zu teilen und gemeinsam zu wachsen. Gemeinsames Ziel ist dabei die Unterstützung, Entwicklung und Durchführung von partizipativen Citizen Science Projekten. </p>"
+        },
+        "image": "/img/graphic-community.png"
+      },
+      {
+        "subtitle": {
+          "en": "Why a community?",
+          "de": "Warum eine Community?"
+        },
+        "description": {
+          "en": "<p> Citizen Science is characterized by the collaboration of members of the general public and academic scientists with the purpose of together pursuing new knowledge and insights. A community of engaged volunteers and organizers is an essential element of  any Citizen Science project, and often a strong motivator for people to join. </p> <p> By actively involving people with different backgrounds and expertise in the research process, Citizen Science expands the way of doing excellent science. Engaging the public to participate in scientific research as well as engaging academic scientists to open up their work for the collaboration with citizens adds creativity, capacity and impact to the process of generating knowledge, and brings in innovative ideas and solutions to problems from different perspectives. It can for instance add local knowledge, new or other forms of expertise as well as more diversity to scientific research, so that the whole society can profit from it. </p> <p> All this can not work without a community of engaged people who contribute their time and energy in doing research together. Strong communities in Citizen Science lead to: </p> <ul> <li> Unlocking of resources to help solving real world problems. </li> <li> Trust in science. </li> <li> Flow of ideas and creativity to find sustainable solutions. </li> <li> Exchange of knowledge & experience between people of different backgrounds. </li> <li> Learning from and acknowledging each other’s expertise. </li> <li> … and more. </li> </ul>",
+          "de": "<p> Citizen Science zeichnet sich durch die Zusammenarbeit von Angehörigen der allgemeinen Öffentlichkeit und Wissenschaftler*innen aus, mit dem Ziel, gemeinsam neue Erkenntnisse und Einsichten zu erlangen. Eine Community engagierter Freiwilliger und Organisator*innen ist ein wesentliches Element eines jeden CS Projekts und oft ein starker Motivator für die Teilnehmenden. </p> <p> Durch das aktive Einbeziehen von Menschen mit unterschiedlichen Hintergründen und Fachkenntnissen in den Forschungsprozess erweitert Citizen Science die Möglichkeiten exzellenter Wissenschaft. Die Beteiligung der Öffentlichkeit an der wissenschaftlichen Forschung sowie die Bereitschaft von Wissenschaftler*innen, sich für die Zusammenarbeit mit Bürger*innen auf Augenhöhe zu öffnen, erhöht die Kreativität, die Kapazität und die Reichweite der Wissensgenerierung und bringt innovative Ideen und Lösungen aus verschiedenen Perspektiven ein. Von der Offenheit für lokales Wissen, andere Formen von Expertise und mehr Vielfalt profitiert nicht nur die wissenschaftliche Forschung, sondern die gesamte Gesellschaft. </p> <p> Dies kann jedoch nur mithilfe einer Gemeinschaft engagierter Menschen, die ihre Zeit und Energie in die gemeinsame Forschung einbringen, geschehen. Starke Gemeinschaften in Citizen Science führen zu: </p> <ul> <li> Freisetzung und Bündelung von Ressourcen, um bei der Lösung von realen Problemen zu helfen. </li> <li> mehr Vertrauen in die Wissenschaft. </li> <li> Kreativität und Austausch von Ideen, um nachhaltige Lösungen zu finden. </li> <li> Austausch von Wissen & Erfahrung zwischen Menschen mit unterschiedlichen Hintergründen. </li> <li> Anerkennung der verschiedene Arten von Expertise einer und eines jeden und das voneinander Lernen. </li> <li> ... und vieles mehr. </li> </ul>"
+        },
+        "image": ""
+      }
+    ],
+    "our_community": {
+      "subtitle": {
+        "en": "Who is our community?",
+        "de": "Wer ist unsere Community?"
+      },
+      "description": {
+        "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond by meeting online and offline. It consists of local communities of professional scientists and citizen scientists, including members of <strong> UZH </strong> and <strong> ETH Zurich </strong>, the Zurich senior university and persons listed in the universities research participant pools, as well as a wider network of contributors,  <router-link to='/community/partnerships'> partners </router-link> and <router-link to='/community/members'> members </router-link>. </p> <p> Our community activities include online and offline interactions and local events in an open, creative and interdisciplinary way.</p>",
+        "de": "<p> Unsere Citizen Science Community wächst in Zürich und darüber hinaus und trifft sich online und offline. Sie besteht aus Wissenschaftler*innen aus <strong>UZH</strong> und <strong>ETH Zürich</strong> sowie <strong>Citizen Scientists</strong>, wie zum Beispiel den Mitgliedern der Zürcher Seniorenuniversität sowie einem breiten Netzwerk von Unterstützer*innen, <router-link to='/community/partnerships'>Partnern</router-link> und <router-link to='/community/members'>Mitgliedern</router-link>. </p> <p> Die Aktivitäten unserer Community umfassen Online- und Offline-Veranstaltungen und Interaktionen, die in einer offenen, kreativen und interdisziplinären Art und Weise stattfinden. </p>"
+      },
+      "image": "/img/uzh-eth.jpg"
+    },
+    "how_join": {
+      "title": {
+        "en": "How can you join our community?",
+        "de": "Wie können Sie Teil von unserer Community werden?"
+      },
+      "subtitle": {
+        "en": "",
+        "de": ""
+      },
+      "description": {
+        "en": "<p> Join our Citizen Science Zurich community and always be up to date: </p> <span> Follow us on Twitter </span> <a href='https://twitter.com/CitSciZurich' target='_blank' rel='noopener' style='font-size: 25px'> <i class='fab fa-twitter twttr'> </i> </a> </br> <span> Visit us on Facebook </span> <a href='https://www.facebook.com/CitSciZurich/' target='_blank' rel='noopener'> <i class='fab fa-facebook fcbk' style='font-size: 25px'> </i> </a>",
+        "de": "<p> Werden Sie Mitglied unserer Citizen Science Zürich Community und bleiben Sie immer auf dem Laufenden: </p> <span> Folgen Sie uns auf Twitter </span> <a href='https://twitter.com/CitSciZurich' target='_blank' rel='noopener' style='font-size: 25px'> <i class='fab fa-twitter twttr'> </i> </a> </br> <span> Besuchen Sie uns auf Facebook </span> <a href='https://www.facebook.com/CitSciZurich/' target='_blank' rel='noopener'> <i class='fab fa-facebook fcbk' style='font-size: 25px'> </i> </a>"
+      },
+      "image": "/img/graphic-participation.png",
+      "button": {
+        "link": null,
+        "route": "/events",
+        "icon": "far fa-calendar-alt",
+        "selfWindow": true,
+        "en": "Our Events",
+        "de": "Unsere Veranstaltungen"
+      }
+    }
+  },
+  "members": {
+    "title": {
+      "en": "",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> Membership at the <strong> Citizen Science Center Zurich </strong> is open to professors with research groups at the two founding Institutions, leaders of research groups from other universities or public-legal institutions, and individual researchers and students. Researchers at both UZH and ETHZ have a strong track record in citizen science, participatory research, and citizen science-related fields such as artificial intelligence, social science and the law. The Center’s academic members represent a community of >1000 researchers. </p>",
+      "de": "<p> Die Mitgliedschaft am <strong> Citizen Science Center Zürich </strong>  steht Professor*innen mit ihren Forschungsgruppen an den beiden Gründungsuniversitäten, Forschungsgruppenleiter*innen von anderen Universitäten oder öffentlich-rechtlichen Institutionen, sowie auch einzelnen Forschenden und Studierenden offen. Forschende an UZH und ETH haben umfangreiche Erfahrungen in Citizen Science, partizipativer Forschung und verwandten Bereichen, wie künstlicher Intelligenz, den Sozialwissenschaften und der Rechtswissenschaft. Die akademischen Mitglieder des Centers repräsentieren eine Community von >1000 Forschenden. </p>"
+    },
+    "button": {
+      "link": null,
+      "route": null,
+      "icon": null,
+      "selfWindow": false,
+      "en": "",
+      "de": ""
+    },
+    "member_list": [
+      {
+        "name": "Prof. Norman Backhaus",
+        "organization": "UZH, Geographisches Institut",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Franz Bender",
+        "organization": "Agroscope",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Abraham Bernstein",
+        "organization": "UZH, Institut für Informatik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Balthasar Bickel",
+        "organization": "UZH, Institut für Vergleichende Sprachwissenschaft, Zürcher Kompetenzzentrum Linguistik (ZüKL)",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Nikola Biller-Andorno",
+        "organization": "UZH, Institut für Biomedizinische Ethik und Medizingeschichte",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Christine Bratrich",
+        "organization": "ETH, Sustainability",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Claudia Canella",
+        "organization": "UniversitätsSpital Zürich",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Markus Christen",
+        "organization": "UZH, Digital Society Initiative",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Volker Dellwo",
+        "organization": "UZH, Institut für Computerlinguistik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Andreas Diekmann",
+        "organization": "ETH, Departement Geistes-, Sozial- und Staatswissenschaften, Forschungsgruppe Umwelt",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Stephan Egger",
+        "organization": "Psychiatrische Universitätsklinik Zürich",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Eliane Escher",
+        "organization": "UZH, Institut für Molekulare Biologie",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Mareile Flitsch",
+        "organization": "UZH, Völkerkundemuseum",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Barbara Flückiger",
+        "organization": "UZH, Seminar für Filmwissenschaft",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+      "name": "Prof. Thomas Friemel",
+        "organization": "UZH, Department of Communication and Media Research",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {  
+        "name": "Michael Gasser",
+        "organization": "ETH Bibliothek",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Andrea Glässel ",
+        "organization": "ZHAW Zurich University of Applied Sciences",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Elvira Glaser",
+        "organization": "UZH, Deutsches Seminar, UFSP Sprache und Raum",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Michael Greeff",
+        "organization": "ETH, Departement Umweltsystemwissenschaften",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Marc Gruenig",
+        "organization": "ETH, Departement Umweltsystemwissenschaften",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Ernst Hafen",
+        "organization": "ETH, Institut für Molekulare Systembiologie",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Richard Hahnloser",
+        "organization": "ETH, Institut für Neuroinformatik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Dirk Helbing",
+        "organization": "ETH, Computational Social Science",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Marianne Hundt",
+        "organization": "UZH, Englisches Seminar, Zürcher Kompetenzzentrum Linguistik (ZüKL)",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Matthias Huss",
+        "organization": "ETH, Departement Geistes-, Sozial- und Staatswissenschaften",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Yvonne Ilg",
+        "organization": " UZH, Deutsches Seminar",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Ulrike Kastrup",
+        "organization": "ETH, focus-Terra",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Hubert Klumpner",
+        "organization": "ETH, Departement Architektur",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Andreas Krause",
+        "organization": "ETH, Departement Informatik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Bregt Lameris",
+        "organization": "UZH, Seminar für Filmwissenschaft",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Nicolas Langer",
+        "organization": "UZH, Psychologisches Institut",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Mike Martin",
+        "organization": "UZH, Psychologisches Institut",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Rebecca Mörgen",
+        "organization": "UZH, Institut für Erziehungswissenschaft",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Corine Mouton Dorey",
+        "organization": "UZH, Institut für Biomedizinische Ethik und Medizingeschichte",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Robin Muller",
+        "organization": "ETH, Climate-KIC",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Maximiliane Okonnek",
+        "organization": " ETH, ETH Library Lab",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Bin Bin Pearce",
+        "organization": " ETH, USYS TdLab",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Milo Puhan",
+        "organization": "UZH, Epidemiology, Biostatistics and Prevention Institute",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Ross Purves",
+        "organization": "UZH, Geographisches Institut",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Michael Ristow",
+        "organization": "ETH, Departement Gesundheitswissenschaften und Technologie",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Carmenza Robledo Abad Althaus",
+        "organization": "ETH, USYS TdLab",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Prasenjit Saha",
+        "organization": "UZH, Physik-Institut",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Dr. Juanita Clare Schlaepfer-Miller",
+        "organization": "ETH, Departement Umweltsystemwissenschaften",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Thomas Schlag",
+        "organization": "UZH, Theologische Fakultät",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Jan Seibert",
+        "organization": "UZH, Geographisches Institut",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Uwe Serdult",
+        "organization": "UZH/ZDA, Zentrum für Demokratie Aarau",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Giovanni Spitale",
+        "organization": "UZH, Institut für Biomedizinische Ethik",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Elisabeth Stark",
+        "organization": "UZH, Romanisches Seminar, ZüKL",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Barbara Strobl",
+        "organization": "UZH, Geographisches Institut",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Effy Vayena",
+        "organization": "ETH, Departement Gesundheitswissenschaften und Technologie",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Martin Volk",
+        "organization": "UZH, Institut für Computerlinguistik, ZüKL",
+        "email": "",
+        "tel": "",
+        "web": ""
+      },
+      {
+        "name": "Prof. Claudia Witt",
+        "organization": "USZ, Institut für Komplementäre und Integrative Medizin",
+        "email": "",
+        "tel": "",
+        "web": ""
+      }
+    ]
+  }
+}

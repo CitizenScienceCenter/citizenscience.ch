@@ -1,237 +1,276 @@
-import Vue from 'vue';
-import VueI18n from 'vue-i18n';
-import store from './store/store.js';
+import Vue from "vue";
+import VueI18n from "vue-i18n";
+import store from "./store/store.js";
 
 Vue.use(VueI18n);
 
 var language;
-if( !store.state.settings.language ) {
-    // no language in store
+if (!store.state.settings.language) {
+  // no language in store
 
-    // check browser
-    language = window.navigator.userLanguage || window.navigator.language;
+  // check browser
+  language = window.navigator.userLanguage || window.navigator.language;
 
-    // trim
-    language = language.substr(0,2);
+  // trim
+  language = language.substr(0, 2);
 
-    // check if valid
-    if( language !== 'en' && language !== 'de') {
-        language = "de";
-    }
+  // check if valid
+  if (language !== "en" && language !== "de") {
+    language = "de";
+  }
 
-    // language for prerendering default routes
-    if( navigator.userAgent === 'ReactSnap' ) {
-        language = "de";
-    }
+  // language for prerendering default routes
+  if (navigator.userAgent === "ReactSnap") {
+    language = "de";
+  }
 
-    store.dispatch("settings/setLanguage", language );
+  store.dispatch("settings/setLanguage", language);
 }
 
 export const i18n = new VueI18n({
-    silentTranslationWarn: true,
-    locale: store.state.settings.language,
-    messages: {
+  silentTranslationWarn: true,
+  locale: store.state.settings.language,
+  messages: {
+    en: {
+      "site-title": "Citizen Science Center Zurich",
+      "site-description": "Next Level Citizen Science",
 
-    'en': {
+      "weekday-monday": "Mon",
+      "weekday-tuesday": "Tue",
+      "weekday-wednesday": "Wed",
+      "weekday-thursday": "Thu",
+      "weekday-friday": "Fri",
+      "weekday-saturday": "Sat",
+      "weekday-sunday": "Sun",
 
-    'site-title': 'Citizen Science Center Zurich',
-    'site-description': 'Next Level Citizen Science',
+      "navigation-homepage": {
+        link: "Home",
+      },
 
-    'weekday-monday': 'Mon',
-    'weekday-tuesday': 'Tue',
-    'weekday-wednesday': 'Wed',
-    'weekday-thursday': 'Thu',
-    'weekday-friday': 'Fri',
-    'weekday-saturday': 'Sat',
-    'weekday-sunday': 'Sun',
+      "navigation-contribute": {
+        link: "Contribute",
+      },
+      "navigation-contribute-projects": {
+        link: "Projects",
+      },
+      "navigation-contribute-partners": {
+        link: "Partners",
+      },
+      "navigation-contribute-collaborations": {
+        link: "Why Contribute?",
+      },
 
-    'navigation-homepage': {
-        'link': 'Home'
-    },
+      "navigation-startproject": {
+        link: "Your Project",
+      },
+      "navigation-startproject-overview": {
+        link: "Before You Start",
+      },
+      "navigation-startproject-builder": {
+        link: "Project Builder",
+      },
+      "navigation-createproject-builder": {
+        link: "Create",
+      },
+      "navigation-startproject-criteria": {
+        link: "Criteria",
+      },
+      "navigation-startproject-seed_grants": {
+        link: "Seed Grants",
+      },
+      "navigation-startproject-checklist": {
+        link: "Checklist",
+      },
 
-    'navigation-contribute': {
-        'link': 'Contribute'
-    },
-    'navigation-contribute-projects': {
-        'link': 'Projects'
-    },
-    'navigation-contribute-collaborations': {
-        'link': 'Collaborations'
-    },
+      "navigation-community": {
+        link: "Community",
+      },
+      "navigation-community-ourcommunity": {
+        link: "Our Community",
+      },
+      "navigation-community-members": {
+        link: "Members",
+      },
+      "navigation-community-partnerships": {
+        link: "Partnerships",
+      },
 
-    'navigation-startproject': {
-        'link': 'Your Project'
-    },
-    'navigation-startproject-overview': {
-        'link': 'Overview'
-    },
-    'navigation-startproject-builder': {
-        'link': 'Project Builder'
-    },
-    'navigation-startproject-offer': {
-        'link': 'Our Offer'
-    },
-    'navigation-startproject-checklist': {
-        'link': 'Criteria'
-    },
-    'navigation-startproject-phases': {
-        'link': 'Checklist'
-    },
+      "navigation-pwa": {
+        link: "PWA",
+      },
 
-    'navigation-citizenscience': {
-        'link': 'Citizen Science'
-    },
-    'navigation-citizenscience-zurichstyle': {
-        'link': '«Zurich Style»'
-    },
-    'navigation-citizenscience-sdg': {
-        'link': 'Sustainable Development Goals'
-    },
+      "navigation-about": {
+        link: "About us",
+      },
+      "navigation-about-mission": {
+        link: "Mission & Goals",
+      },
+      "navigation-about-zurichstyle": {
+        link: "CS «Zurich Style»",
+      },
+      "navigation-about-offer": {
+        link: "What We Offer",
+      },
+      "navigation-about-people": {
+        link: "People",
+      },
+      "navigation-about-contact": {
+        link: "Contact",
+      },
 
-    'navigation-about': {
-        'link': 'About us'
-    },
-    'navigation-about-mission': {
-        'link': 'Mission & Goals'
-    },
-    'navigation-about-people': {
-        'link': 'People'
-    },
-    'navigation-about-partnerships': {
-        'link': 'Partnerships'
-    },
-    'navigation-about-pwa': {
-        'link': 'PWA'
-    },
-    'navigation-about-contact': {
-        'link': 'Contact'
-    },
+      "navigation-events": {
+        link: "Events",
+      },
+      "navigation-events-upcoming": {
+        link: "Upcoming",
+      },
+      "navigation-events-past": {
+        link: "Past",
+      },
+      "navigation-forum": {
+        link: "Forum",
+      },
 
-    'navigation-events': {
-      'link': 'Events'
-    },
-    'navigation-forum': {
-        'link': 'Forum'
-    },
+      "navigation-login": {
+        link: "Login",
+      },
+      "navigation-register": {
+        link: "Register",
+      },
+      "navigation-profile": {
+        link: "Profile",
+      },
+      "navigation-reset": {
+        link: "Reset",
+      },
 
-    'navigation-login': {
-        'link': 'Login'
-    },
-    'navigation-register': {
-        'link': 'Register'
-    },
-    'navigation-profile': {
-        'link': 'Profile'
-    },
-    'navigation-reset': {
-        'link': 'Reset'
-    },
+      "navigation-terms": {
+        link: "Privacy Policy & Terms of Use",
+      },
 
-    'navigation-terms': {
-        'link': 'Privacy Policy & Terms of Use'
-    }
+      "navigation-updatefile": {
+        link: "Admin",
+      },
+    },
+    de: {
+      "site-title": "Citizen Science Center Zürich",
+      "site-description": "Next Level Citizen Science",
 
-    },
-    'de': {
+      "weekday-monday": "Mo",
+      "weekday-tuesday": "Di",
+      "weekday-wednesday": "Mi",
+      "weekday-thursday": "Do",
+      "weekday-friday": "Fr",
+      "weekday-saturday": "Sa",
+      "weekday-sunday": "So",
 
-    'site-title': 'Citizen Science Center Zürich',
-    'site-description': 'Next Level Citizen Science',
+      "navigation-homepage": {
+        link: "Home",
+      },
 
-    'weekday-monday': 'Mo',
-    'weekday-tuesday': 'Di',
-    'weekday-wednesday': 'Mi',
-    'weekday-thursday': 'Do',
-    'weekday-friday': 'Fr',
-    'weekday-saturday': 'Sa',
-    'weekday-sunday': 'So',
+      "navigation-contribute": {
+        link: "Mitmachen",
+      },
+      "navigation-contribute-projects": {
+        link: "Projekte",
+      },
+      "navigation-contribute-partners": {
+        link: "Projekte",
+      },
+      "navigation-contribute-collaborations": {
+        link: "Warum mitmachen?",
+      },
 
-    'navigation-homepage': {
-        'link': 'Home'
-    },
+      "navigation-startproject": {
+        link: "Ihr Projekt",
+      },
+      "navigation-startproject-overview": {
+        link: "Bevor Sie loslegen",
+      },
+      "navigation-startproject-builder": {
+        link: "Project Builder",
+      },
+      "navigation-createproject-builder": {
+        link: "Erstellen",
+      },
+      "navigation-startproject-criteria": {
+        link: "Kriterien",
+      },
+      "navigation-startproject-seed_grants": {
+        link: "Seed Grants",
+      },
+      "navigation-startproject-checklist": {
+        link: "Checkliste",
+      },
 
-    'navigation-contribute': {
-        'link': 'Mitmachen'
-    },
-    'navigation-contribute-projects': {
-        'link': 'Projekte'
-    },
-    'navigation-contribute-collaborations': {
-        'link': 'Kollaborationen'
-    },
+      "navigation-community": {
+        link: "Community",
+      },
+      "navigation-community-ourcommunity": {
+        link: "Unsere Community",
+      },
+      "navigation-community-members": {
+        link: "Mitglieder",
+      },
+      "navigation-community-partnerships": {
+        link: "Partner",
+      },
 
-    'navigation-startproject': {
-        'link': 'Ihr Projekt'
-    },
-    'navigation-startproject-overview': {
-        'link': 'Übersicht'
-    },
-    'navigation-startproject-builder': {
-        'link': 'Project Builder'
-    },
-    'navigation-startproject-offer': {
-        'link': 'Unser Angebot'
-    },
-    'navigation-startproject-checklist': {
-        'link': 'Kriterien'
-    },
-    'navigation-startproject-phases': {
-        'link': 'Checkliste'
-    },
+      "navigation-pwa": {
+        link: "PWA",
+      },
 
-    'navigation-citizenscience': {
-        'link': 'Citizen Science'
-    },
-    'navigation-citizenscience-zurichstyle': {
-        'link': '«Züri Style»'
-    },
-    'navigation-citizenscience-sdg': {
-        'link': 'Sustainable Development Goals'
-    },
+      "navigation-about": {
+        link: "Über uns",
+      },
+      "navigation-about-mission": {
+        link: "Mission & Ziele",
+      },
+      "navigation-about-zurichstyle": {
+        link: "CS «Züri Style»",
+      },
+      "navigation-about-offer": {
+        link: "Unser Angebot",
+      },
+      "navigation-about-people": {
+        link: "Personen",
+      },
+      "navigation-about-contact": {
+        link: "Kontakt",
+      },
 
-    'navigation-about': {
-        'link': 'Über uns'
-    },
-    'navigation-about-mission': {
-        'link': 'Mission & Ziele'
-    },
-    'navigation-about-people': {
-        'link': 'Personen'
-    },
-    'navigation-about-partnerships': {
-        'link': 'Partnerschaften'
-    },
-    'navigation-about-pwa': {
-        'link': 'PWA'
-    },
-    'navigation-about-contact': {
-        'link': 'Kontakt'
-    },
+      "navigation-events": {
+        link: "Veranstaltungen",
+      },
+      "navigation-events-upcoming": {
+        link: "Bevorstehende",
+      },
+      "navigation-events-past": {
+        link: "Vergangene",
+      },
+      "navigation-forum": {
+        link: "Forum",
+      },
 
-    'navigation-events': {
-        'link': 'Events'
-    },
-    'navigation-forum': {
-        'link': 'Forum'
-    },
+      "navigation-login": {
+        link: "Login",
+      },
+      "navigation-register": {
+        link: "Registrieren",
+      },
+      "navigation-profile": {
+        link: "Profil",
+      },
+      "navigation-reset": {
+        link: "Zurücksetzen",
+      },
 
-    'navigation-login': {
-        'link': 'Login'
+      "navigation-terms": {
+        link: "Privacy Policy & Terms of Use",
+      },
+      "navigation-updatefile": {
+        link: "Admin",
+      },
     },
-    'navigation-register': {
-        'link': 'Registrieren'
-    },
-    'navigation-profile': {
-        'link': 'Profil'
-    },
-    'navigation-reset': {
-        'link': 'Zurücksetzen'
-    },
-
-    'navigation-terms': {
-        'link': 'Privacy Policy & Terms of Use'
-    }
-
-    }
-
-    }
-})
+  },
+});

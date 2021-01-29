@@ -1,165 +1,362 @@
+<i18n>
+{
+  "en": {
+    "section-heading": "Coming Up",
+    "all-events-button": "All Events",
+    "event-cancel":"canceled",
+    "event-postpone":"postponed"
+  },
+  "de": {
+    "section-heading": "Demnächst",
+    "all-events-button": "Alle Ereignisse",
+    "event-cancel":"abgesagt",
+    "event-postpone":"verschoben"
+  }
+}
+</i18n>
 <template>
-    <div class="event-list">
-        <div class="margin-bottom" v-for="event in events" :key="event.path">
-            <div class="scroll-effect">
-                <router-link :to="'/events/'+event.path" style="display:none">link</router-link>
-                <router-link tag="div" class="event" :to="'/events/'+event.path">
-                    <div class="row row-wrapping row-centered">
-                        <div class="col col-wrapping col-6 col-tablet-portrait-4">
-                            <img :src="'/img/events/'+event.image" style="border-radius:50%"/>
-                        </div>
-                        <div class="col col-wrapping col-tablet-portrait-8">
-
-                            <p class="event-date">{{eventDisplayDate(event.start,event.end)}}</p>
-
-                            <h3 class="subheading event-title" v-html="event.title"></h3>
-
-                            <p v-if="event.abstract !== ''" v-html="event.abstract" class="event-abstract"></p>
-
-                            <div class="event-speakers" v-if="event.speakers !== ''">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256,256A128,128,0,1,0,128,128,128,128,0,0,0,256,256Zm89.6,32H328.9a174.08,174.08,0,0,1-145.8,0H166.4A134.43,134.43,0,0,0,32,422.4V464a48,48,0,0,0,48,48H432a48,48,0,0,0,48-48V422.4A134.43,134.43,0,0,0,345.6,288Z"/></svg>
-                                <p v-html="event.speakers"></p>
-                            </div>
-
-                            <div class="event-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M236.27,501.67C91,291,64,269.41,64,192,64,86,150,0,256,0S448,86,448,192c0,77.41-27,99-172.27,309.67a24,24,0,0,1-39.46,0ZM256,272a80,80,0,1,0-80-80A80,80,0,0,0,256,272Z"/></svg>
-                                <p v-html="event.location"></p>
-                            </div>
-
-                            <div class="button-group">
-                                <router-link tag="button" class="button button-secondary button-secondary-naked" :to="'/events/'+event.path">Details</router-link>
-                            </div>
-                        </div>
-                    </div>
-                </router-link>
-            </div>
-        </div>
+  <div class="event-list" v-if="events && events.length != 0 && visible">
+    <!-- Heading Section -->
+    <div class="row row-centered extra-margin-top-2" v-if="br.heading.visible">
+      <div class="col col-12 scroll-effect heading-section">
+        <h2 class="heading small">
+          {{ $t(localTranslation(pl.heading)) }}
+        </h2>
+      </div>
     </div>
+    <!-- Event section -->
+    <router-link
+      tag="div"
+      class="row row-centered event scroll-effect"
+      v-for="event in events"
+      :key="event.path"
+      :to="'/events/' + event.path"
+    >
+      <!-- Image Subsection -->
+      <div
+        class="col-6 event-image"
+        :class="validateImage('img-content', event)"
+        v-if="event.image && !br.hideImage"
+      >
+        <img :src="'/img/events/' + event.image" :alt="event.image"/>
+      </div>
+
+      <!-- Details Subsection -->
+      <div class="col-12" :class="validateImage('text-content', event)">
+        <!-- Date Subsection -->
+        <p class="event-date">
+          {{ eventDisplayDate(event.start, event.end) }}
+        </p>
+        <!-- Title Subsection -->
+        <h3
+          class="subheading event-title"
+          :class="getStateStyle(event.state)"
+          v-html="event.title"
+        ></h3>
+        <h4 class="event-state">{{ localTranslation(event.state) }}</h4>
+        <!-- Abstract Subsection -->
+        <div class="event-abstract" v-if="event.abstract">
+          <i class="fas fa-info-circle icon"></i>
+          <p v-if="event.abstract !== ''" v-html="event.abstract"></p>
+        </div>
+        <!-- Speakers Subsection -->
+        <div class="event-speakers" v-if="event.speakers !== ''">
+          <i class="fas fa-user icon"></i>
+          <p v-html="event.speakers"></p>
+        </div>
+        <!-- Location Subsection -->
+        <div class="event-location">
+          <i class="fas fa-map-marker-alt icon"></i>
+          <p v-html="event.location"></p>
+        </div>
+        <!-- Details button Subsection -->
+        <div class="button-group" v-if="false">
+          <router-link
+            tag="button"
+            class="button button-secondary button-secondary-naked"
+            :to="'/events/' + event.path"
+            >Details</router-link
+          >
+        </div>
+      </div>
+    </router-link>
+
+    <!-- All events button -->
+    <div class="row button-section" v-if="br.button.visible">
+      <router-link
+        tag="button"
+        to="/events"
+        class="button button-secondary scroll-effect"
+        :disabled="br.button.disabled"
+      >
+        <i class="far fa-calendar-alt"></i>
+        {{ $t(localTranslation(pl.eventsButton)) }}</router-link
+      >
+    </div>
+  </div>
 </template>
 
 <script>
+import { getTranslation } from "@/assets/support.js";
+import { mapGetters, mapState } from "vuex";
+import moment from "moment";
 
-    import events from "@/assets/events.json";
-
-    export default {
-        name: "EventList",
-        data() {
-            return {
-                events: events,
-                i18nWeekdays: [
-                    'weekday-sunday',
-                    'weekday-monday',
-                    'weekday-tuesday',
-                    'weekday-wednesday',
-                    'weekday-thursday',
-                    'weekday-friday',
-                    'weekday-saturday',
-                ]
-            }
-        },
-        props: {
-            past: {
-                type: Boolean,
-                default: false
-            },
-            limit: {
-                type: Number,
-                default: 0
-            }
-        },
-        methods: {
-            eventDisplayDate( start, end ) {
-                let startDate = new Date(start);
-                let endDate = new Date(end);
-
-                if( startDate.getDate() === endDate.getDate()
-                    && startDate.getMonth() === endDate.getMonth()
-                    && startDate.getFullYear() === endDate.getFullYear() ) {
-                    // same day
-                    return this.$t(this.i18nWeekdays[startDate.getDay()]) +', '+ startDate.getDate()+'.'+(startDate.getMonth()+1)+'.'+startDate.getFullYear()+', '+startDate.getHours()+':'+(startDate.getMinutes()<10?'0':'') + startDate.getMinutes()+'–'+endDate.getHours()+':'+(endDate.getMinutes()<10?'0':'') + endDate.getMinutes();
-                }
-                else {
-                    // different day
-                    //console.log('different day');
-                    return this.$t(this.i18nWeekdays[startDate.getDay()]) +', '+ startDate.getDate()+'.'+(startDate.getMonth()+1)+'.'+startDate.getFullYear()+', '+startDate.getHours()+':'+(startDate.getMinutes()<10?'0':'') + startDate.getMinutes()+' – '+this.$t(this.i18nWeekdays[endDate.getDay()]) +', '+ endDate.getDate()+'.'+(endDate.getMonth()+1)+'.'+endDate.getFullYear()+', '+endDate.getHours()+':'+(endDate.getMinutes()<10?'0':'') + endDate.getMinutes();
-                }
-            }
-        },
-        created() {
-
-            if( !this.past ) {
-                // filter for future events
-                this.events = this.events.filter(event => Date.parse(event.end) >= Date.now() );
-                // sort by date
-                this.events.sort(function(a, b){
-                    return Date.parse(a.start) - Date.parse(b.start);
-                });
-            }
-            else {
-                // filter for past events
-                this.events = this.events.filter(event => Date.parse(event.end) < Date.now() );
-                // sort by date
-                this.events.sort(function(a, b){
-                    return Date.parse(b.start) - Date.parse(a.start);
-                });
-            }
-
-            if( this.limit ) {
-                this.events = this.events.slice(0,this.limit);
-            }
-
+export default {
+  name: "EventList",
+  data() {
+    return {
+      br: {
+        visible: false,
+        hideImage: false,
+        limit: null,
+        heading: { visible: false },
+        button: { disabled: true, visible: false },
+      },
+      pl: {},
+      events: [],
+    };
+  },
+  props: {
+    past: {
+      type: Boolean,
+      default: false,
+    },
+    limit: {
+      type: Number,
+      default: 0,
+    },
+    content: Object,
+    visible: Boolean,
+    viewConfig: Object,
+  },
+  computed: {
+    ...mapState({
+      language: (state) => state.settings.language,
+    }),
+    ...mapGetters({ getEvents: "content/getEvents" }),
+    getdata() {
+      try {
+        if (this.getEvents) {
+          return this.getEvents;
         }
+        return null;
+      } catch (error) {
+        return null;
+      }
+    },
+  },
+  methods: {
+    localTranslation(textContent) {
+      return getTranslation(textContent, this.$i18n.locale);
+    },
+    validateImage(item, event) {
+      const imageConfig = {
+        withImage: {
+          "img-content": "col-tablet-portrait-4",
+          "text-content": "col-tablet-portrait-8 ",
+        },
+        withoutImage: {
+          "img-content": "col-large-4",
+          "text-content": "col-tablet-portrait-12",
+        },
+      };
+      let selectedView = imageConfig.withoutImage;
+      if (event.image && !this.br.hideImage) {
+        selectedView = imageConfig.withImage;
+      }
+      return selectedView[item];
+    },
+    getStateStyle(eventState) {
+      const state = this.localTranslation(eventState);
+      try {
+        if (state.toLowerCase() == this.$i18n.t("event-cancel")) {
+          return "canceled";
+        }
+        if (state.toLowerCase() == this.$i18n.t("event-postpone")) {
+          return "postponed";
+        }
+      } catch (error) {
+        return null;
+      }
+    },
+    setStyle() {
+      for (const key in this.viewConfig) {
+        if (Object.keys(this.br).includes(key)) {
+          this.br[key] = this.viewConfig[key];
+        }
+      }
+      this.pl["heading"] = this.content ? this.content.heading : null;
+      this.pl["eventsButton"] = this.content ? this.content.eventsButton : null;
+    },
+    eventDisplayDate(start, end) {
+      let startDate = new Date(start);
+      let endDate = new Date(end);
+      if (
+        startDate.getDate() == endDate.getDate() &&
+        startDate.getMonth() == endDate.getMonth() &&
+        startDate.getFullYear() == endDate.getFullYear()
+      ) {
+        return `${moment(startDate).format("llll")} - ${moment(endDate).format(
+          "LT"
+        )}`;
+      }
+      return `${moment(startDate).format("llll")} - ${moment(endDate).format(
+        "llll"
+      )}`;
+    },
+  },
+  created() {
+    // Define the locale for moment datetime
+    moment.locale(this.$i18n.locale);
+
+    this.setStyle();
+    this.events = this.getdata;
+    if (!this.past) {
+      // filter for future events
+      this.events = this.events.filter(
+        (event) => Date.parse(event.end) >= Date.now()
+      );
+      // sort by date
+      this.events.sort(function(a, b) {
+        return Date.parse(a.start) - Date.parse(b.start);
+      });
+    } else {
+      // filter for past events
+      this.events = this.events.filter(
+        (event) => Date.parse(event.end) < Date.now()
+      );
+      // sort by date
+      this.events.sort(function(a, b) {
+        return Date.parse(b.start) - Date.parse(a.start);
+      });
     }
 
+    if (this.limit) {
+      this.events = this.events.slice(0, this.limit);
+    }
+  },
+  watch: {
+    // validate when laguage change, to change the format date
+    language: function(lan) {
+      moment.locale(lan);
+    },
+  },
+};
 </script>
 
 <style lang="scss">
+@import "@/styles/theme.scss";
+@import "@/styles/shared/variables.scss";
 
-    @import '@/styles/theme.scss';
-    @import '@/styles/shared/variables.scss';
-
-    .event-list {
-        .event {
-            cursor: pointer;
-
-            .event-date {
-                display: block;
-                margin-bottom: $spacing-1;
-                text-transform: uppercase;
-            }
-            .event-title {
-                margin-bottom: $spacing-1;
-            }
-            .event-abstract {
-                margin-bottom: $spacing-1;
-            }
-            .event-speakers, .event-location {
-                position: relative;
-                svg {
-                    position: absolute;
-                    top: calc(( #{$font-size-normal}*1.5 - 16px ) /2);
-                    left: 0;
-                    width: 16px;
-                    height: 16px;
-                    fill: $color-secondary;
-                }
-                p {
-                    padding-left: calc( 16px + #{$spacing-2} );
-                }
-            }
-            .event-speakers {
-                margin-bottom: $spacing-1;
-            }
-            .event-location {
-                margin-bottom: $spacing-1;
-            }
-
-            button {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
+.event-list {
+  .heading-section {
+    padding-left: $spacing-3;
+    .heading {
+      margin-bottom: 0;
     }
-
-
+  }
+  .button-section {
+    padding: $spacing-2 $spacing-3;
+    .button {
+      height: 30px;
+      font-size: $font-size-mini;
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .event {
+    padding: $spacing-2 $spacing-3;
+    cursor: pointer;
+    .event-image {
+      margin-bottom: $spacing-1;
+      img {
+        border-radius: 50%;
+        transform: scale(0.9);
+        max-height: 200px;
+        -webkit-box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .event-date {
+      display: block;
+      margin-bottom: $spacing-1;
+      text-transform: capitalize;
+      font-size: $font-size-mini;
+    }
+    .event-title {
+      margin-bottom: $spacing-1;
+      font-size: $font-size-normal;
+      &.canceled {
+        color: $color-primary;
+        text-decoration: line-through;
+      }
+      &.postponed {
+        text-decoration: line-through;
+      }
+    }
+    .event-state {
+      color: $color-primary;
+      font-size: $font-size-normal;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .event-abstract,
+    .event-speakers,
+    .event-location {
+      display: inline-flex;
+      width: 100%;
+      padding-left: $spacing-1;
+      .icon {
+        font-size: $font-size-small;
+        color: $color-secondary;
+        transform: translateY(5%);
+      }
+      p {
+        padding-left: $spacing-1;
+        font-size: $font-size-mini;
+      }
+    }
+    button {
+      padding: 0;
+    }
+  }
+}
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .event-list {
+    .event {
+      .event-title {
+        font-size: $font-size-small;
+      }
+      .event-abstract,
+      .event-speakers,
+      .event-location {
+        .icon {
+          font-size: $font-size-mini;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: $viewport-large) {
+  .event-list {
+    .event {
+      .event-title {
+        font-size: $font-size-normal;
+      }
+      .event-abstract,
+      .event-speakers,
+      .event-location {
+        .icon {
+          font-size: $font-size-small;
+        }
+        p {
+          padding-left: $spacing-1;
+          font-size: $font-size-small;
+        }
+      }
+    }
+  }
+}
 </style>

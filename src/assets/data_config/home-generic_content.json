@@ -1,0 +1,112 @@
+{
+  "home_get_involve": {
+    "heading": {
+      "en": "Get Involved",
+      "de": "Machen Sie mit"
+    },
+    "description": {
+      "en": "There are two ways to engage with Citizen Science on this platform: you can either contribute to the existing projects, or create your own!",
+      "de": "Auf dieser Plattform gibt es zwei Möglichkeiten sich für Citizen Science zu engagieren: Sie können entweder an bestehenden Projekten mitwirken, oder aber Ihr eigenes Projekt erstellen."
+    }
+  },
+  "home_our_community": {
+    "heading": {
+      "en": "Our Community",
+      "de": "Unsere Community"
+    },
+    "title": {
+      "en": "",
+      "de": ""
+    },
+    "subtitle": {
+      "en": "",
+      "de": ""
+    },
+    "description": {
+      "en": "<p>Community building at the Center means facilitating the growth of an active group of academic researchers, citizen scientists and partner organizations through various types of interaction. In-person and online, we create opportunities for them to connect, interact, share, and grow. By actively involving people with different backgrounds and expertise, Citizen Science expands the way of doing excellent science. Engaging the public to participate in scientific research, as well as engaging academic scientists to open up their work for the collaboration with citizens, adds creativity, ability, capacity, speed and impact to the process of generating knowledge.</p><p> <router-link to='/en/community/csc_community'> Our Citizen Science Community </router-link> is growing and spans Zurich and beyond. It consists of local communities of professional scientists and citizen scientists, including members of <strong>UZH</strong>, <strong>ETH Zurich</strong>, local communities in Zurich and Switzerland, Zurich community, as well as a wider network of contributors including our partners and members.</p>",
+      "de": "<p>Unter Community Building verstehen wir die Förderung des Gemeinschaftsgefühls zwischen akademisch Forschenden, Bürger*innen und Partnerorganisationen durch die aktive Unterstützung von Interaktion und Kollaboration. Sowohl vor Ort als auch online schaffen wir Gelegenheiten, sich kennenzulernen, Wissen zu teilen und gemeinsam zu wachsen. Durch das aktive Einbeziehen von Menschen mit unterschiedlichen Hintergründen und Fachkenntnissen in den Forschungsprozess erweitert Citizen Science die Möglichkeiten exzellenter Wissenschaft. Die Beteiligung der Öffentlichkeit an der wissenschaftlichen Forschung sowie die Bereitschaft von Wissenschaftler*innen, sich für die Zusammenarbeit mit Bürger*innen auf Augenhöhe zu öffnen, erhöht die Kreativität, die Kapazität und die Reichweite der Wissensgenerierung und bringt innovative Ideen und Lösungen aus verschiedenen Perspektiven ein.</p><p> <router-link to='/de/community/csc_community'> Unsere Citizen Science Community </router-link> wächst in Zürich und darüber hinaus. Sie besteht aus Wissenschaftler*innen der <strong>UZH</strong> und <strong>ETH Zürich</strong> sowie aus Citizen Scientists, wie zum Beispiel den Mitgliedern der Zürcher Seniorenuniversität sowie einem breiten Netzwerk von Unterstützer*innen, Partnern und Mitgliedern.</p>"
+    },
+    "image": "/img/uzh-eth.jpg",
+    "img_description": {
+      "en": "",
+      "de": ""
+    },
+    "button": {
+      "link": null,
+      "route": null,
+      "icon": null,
+      "selfWindow": false,
+      "en": "",
+      "de": ""
+    },
+    "second_button": {}
+  },
+  "home_our_mission": {
+    "heading": {
+      "en": "Our Mission",
+      "de": "Unsere Mission"
+    },
+    "title": {
+      "en": "",
+      "de": ""
+    },
+    "subtitle": {
+      "en": "Citizen Science, Co-creation & SDGs",
+      "de": "Citizen Science, Ko-Kreation & SDGs"
+    },
+    "description": {
+      "en": "The Citizen Science Center Zurich is run jointly by the University of Zurich and ETH Zurich . The mission of the Center is to support and promote the collaboration of academic scientists and the general public to implement co-created Citizen Science projects. The Center provides support with digital tools, methodology, processes, and community management. The Center is keen to support projects that contribute to the implementation of the UN Sustainable Development Goals.",
+      "de": "Das Citizen Science Center Zürich wird gemeinsam von der Universität Zürich und der ETH Zürich geführt. Unser Ziel ist es, die Zusammenarbeit von akademischen Wissenschaftler*innen und der Öffentlichkeit zu unterstützen und zu fördern, damit diese gemeinsam Citizen Science Projekte realisieren. Dabei bieten wir Unterstützung mit digitalen Tools, Methoden und Abläufen sowie Community Management an. Das Center legt einen speziellen Fokus auf Projekte, welche zur Umsetzung der UN-Nachhaltigkeitsziele (SDGs) beitragen."
+    },
+    "button": {
+      "link": null,
+      "route": "/about/mission",
+      "icon": null,
+      "selfWindow": true,
+      "en": "Learn More",
+      "de": "Mehr erfahren"
+    },
+    "second_button": {
+      "link": null,
+      "route": "/about/zurichstyle",
+      "icon": null,
+      "selfWindow": true,
+      "en": "More About CS",
+      "de": "Mehr über CS"
+    }
+  },
+  "home_what_offer": {
+    "heading": {
+      "en": "What We Offer",
+      "de": "Unser Angebot"
+    },
+    "title": {
+      "en": "",
+      "de": ""
+    },
+    "subtitle": {
+      "en": "Support with expertise and tools",
+      "de": "Unterstützung mit Know-how und Tools"
+    },
+    "description": {
+      "en": "The Center encourages and facilitates the implementation of Citizen Science projects by providing support in different areas, including digital tools, methodology, community management, and partnerships and networking with the local and global Citizen Science community.",
+      "de": "Wir fördern und erleichtern die Umsetzung von Citizen Science Projekten, von der Konzeption bis zur Umsetzung. Dies umfasst die Bereitstellung von digitalen Tools, die Beratung zu Methoden und Abläufen, ein aktives Community Management sowie Partnerschaften und Networking mit der lokalen und globalen Citizen Science Community."
+    },
+    "button": {
+      "link": null,
+      "route": "/about/offer",
+      "icon": null,
+      "selfWindow": true,
+      "en": "Learn More",
+      "de": "Mehr erfahren"
+    },
+    "second_button": {
+      "link": null,
+      "route": null,
+      "icon": null,
+      "selfWindow": true,
+      "en": "",
+      "de": ""
+    }
+  }
+}

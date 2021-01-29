@@ -1,4 +1,4 @@
 User-agent: *
-Allow: .js
-Allow: .css
+Allow: *.js
+Allow: *.css
 Sitemap: https://www.citizenscience.ch/sitemap.xml

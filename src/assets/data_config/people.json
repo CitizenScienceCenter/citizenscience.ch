@@ -1,0 +1,194 @@
+[
+  {
+    "category": {
+      "en": "Chair of the Board of Directors",
+      "de": "Vorsitzende"
+    },
+    "people_list": [
+      {
+        "name": "Mike Martin",
+        "position": {
+            "en": "Department of Psychology Gerontopsychology - University of Zurich",
+            "de": "Department of Psychology Gerontopsychology - University of Zurich"
+          },
+        "email": "m.martin@psychologie.uzh.ch",
+        "photo": "/img/people/mike.jpg"
+      },
+      {
+        "name": "Michael Ristow",
+        "position": {
+            "en": "Department of Health Sciences and Technology - ETH Zurich",
+            "de": "Department of Health Sciences and Technology - ETH Zurich"
+          },
+        "email": "michael-ristow@ethz.ch",
+        "photo": "/img/people/michael.jpg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Directors",
+      "de": "Direktorium"
+    },
+    "people_list": [
+      {
+        "name": "Abraham Bernstein",
+        "position": {
+            "en": "Department of Informatics – University of Zurich",
+            "de": "Department of Informatics – University of Zurich"
+          },
+        "email": "bernstein@ifi.uzh.ch",
+        "photo": "/img/people/abraham.jpg"
+      },
+      {
+        "name": "Ernst Hafen",
+        "position": {
+            "en": "Department of Biology - ETH Zurich",
+            "de": "Department of Biology - ETH Zurich"
+          },
+        "email": "hafen@imsb.biol.ethz.ch",
+        "photo": "/img/people/ernst.jpg"
+      },
+      {
+        "name": "Claudia Witt",
+        "position": {
+            "en": "USZ, Institut für Komplementäre und Integrative Medizin",
+            "de": "USZ, Institut für Komplementäre und Integrative Medizin"
+          },
+        "email": "claudia.witt@uzh.ch",
+        "photo": "/img/people/claudia.jpg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Advisors",
+      "de": "Beraterinnen und Berater"
+    },
+    "people_list": [
+      {
+        "name": "Dirk Helbing",
+        "position": {
+            "en": "Department of Humanities, Social and Political Sciences - ETH Zurich",
+            "de": "Department of Humanities, Social and Political Sciences - ETH Zurich"
+          },
+        "email": "dirk.helbing@gess.ethz.ch",
+        "photo": "/img/people/dirk.jpg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Team Citizen Science Center Zurich",
+      "de": "Team Citizen Science Center Zürich"
+    },
+    "people_list": [
+      {
+        "name": "Rosy Mondardini",
+        "position": {
+            "en": "Managing Director",
+            "de": "Geschäftsführung"
+          },
+        "email": "maria.mondardini@uzh.ch",
+        "photo": "/img/people/rosy.jpg"
+      },
+      {
+        "name": "Fanny Gutsche-Jones",
+        "position": {
+            "en": "Community Manager (on maternity leave)",
+            "de": "Community Manager (im Mutterschaftsurlaub)"
+          },
+        "email": "fanny.gutsche-jones@uzh.ch",
+        "photo": "/img/people/fanny.jpg"
+      },
+      {
+        "name": "Ursina Roffler",
+        "position": {
+            "en": "Community Manager",
+            "de": "Community Manager"
+          },
+        "email": "ursina.roffler@uzh.ch",
+        "photo": "/img/people/ursina.jpg"
+      },
+      {
+        "name": "Jan Clemens",
+        "position": {
+            "en": "Software Engineer",
+            "de": "Software Ingenieur"
+          },
+        "email": "jan.clemens@uzh.ch",
+        "photo": "/img/people/jan.jpg"
+      },
+      {
+        "name": "Andres Dorado",
+        "position": {
+            "en": "Front-End Developer",
+            "de": "Front-End Entwickler"
+          },
+        "email": "andres.doradodorado@uzh.ch",
+        "photo": "/img/people/andres.jpg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Team Participatory Science Academy",
+      "de": "Partizipative Wissenschaftsakademie"
+    },
+    "people_list": [
+      {
+        "name": "Susanne Tönsmann",
+        "position": {
+            "en": "Managing Director",
+            "de": "Geschäftsführung"
+          },
+        "email": "susanne.toensmann@uzh.ch",
+        "photo": "/img/people/susanne.jpg"
+      },
+      {
+        "name": "Alessandro Rearte",
+        "position": {
+            "en": "Student Assistant",
+            "de": "Studentische Hilfskraft"
+          },
+        "email": "alessandro.rearte@uzh.ch",
+        "photo": "/img/people/alessandro.jpg"
+      },
+      {
+        "name": "Julienne Karzig",
+        "position": {
+          "en": "Student Assistant",
+          "de": "Studentische Hilfskraft"
+        },
+        "email": "julienne.karzig@uzh.ch",
+        "photo": "/img/people/julienne.jpg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Support",
+      "de": "Support"
+    },
+    "people_list": [
+      {
+        "name": "Tobias Hoffmann",
+        "position": {
+            "en": "IT-Support",
+            "de": "IT-Support"
+          },
+        "email": "",
+        "photo": "/img/people/tobias.jpg"
+      },
+      {
+        "name": "Marina Gagetti",
+        "position": {
+            "en": "Administration",
+            "de": "Administration"
+          },
+        "email": "marina.gagetti@uzh.ch",
+        "photo": "/img/people/marina.jpg"
+      }
+    ]
+  }
+]

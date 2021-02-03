@@ -37,29 +37,50 @@
           >
             {{ localTranslation(cover.lead) }}
           </p>
-          <div
-            class="button-group centered"
-            v-if="localTranslation(cover.path)"
-          >
+          <div class="row row-centered button-group centered ">
             <!-- simple external link handler, with target _blank -->
-            <a
-              v-if="localTranslation(cover.path).startsWith('http')"
-              :href="localTranslation(cover.path)"
-              target="_blank"
-              rel='noopener'
-              class="button button-primary-main"
-              >{{
-                localTranslation(cover.button) || $t("default-button-name")
-              }}</a
-            >
-            <router-link
-              v-else
-              :to="localTranslation(cover.path)"
-              class="button button-primary-main"
-              >{{
-                localTranslation(cover.button) || $t("default-button-name")
-              }}</router-link
-            >
+            <div v-if="localTranslation(cover.path)">
+              <a
+                v-if="localTranslation(cover.path).startsWith('http')"
+                :href="localTranslation(cover.path)"
+                target="_blank"
+                rel="noopener"
+                class="button button-primary-main"
+                >{{
+                  localTranslation(cover.button) || $t("default-button-name")
+                }}
+              </a>
+              <router-link
+                v-else
+                :to="localTranslation(cover.path)"
+                class="button button-primary-main"
+                >{{
+                  localTranslation(cover.button) || $t("default-button-name")
+                }}
+              </router-link>
+            </div>
+
+            <!-- Extra button -->
+            <div v-if="localTranslation(cover.extra_path)">
+              <a
+                v-if="localTranslation(cover.extra_path).startsWith('http')"
+                :href="localTranslation(cover.extra_path)"
+                target="_blank"
+                rel="noopener"
+                class="button button-secondary button-secondary-inverted"
+                >{{
+                  localTranslation(cover.extra_button) || $t("default-button-name")
+                }}
+              </a>
+              <router-link
+                v-else
+                :to="localTranslation(cover.extra_path)"
+                class="button button-secondary button-secondary-inverted"
+                >{{
+                  localTranslation(cover.extra_button) || $t("default-button-name")
+                }}
+              </router-link>
+            </div>
           </div>
         </div>
         <!-- Extra top right logos -->

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "crowdwater",
+    "description": {
+      "en": "CrowdWater at the university of Zurich aims to examine the potential of crowdsourcing in the field of hydrology. The focus lies on water level, streamflow and soil moisture data. The aim of the project is to collect a large amount of data and to improve the forecast of hydrological events, such as droughts or floods.",
+      "de": "CrowdWater ist ein Projekt der Universität Zürich und untersucht das Potential von crowdsourcing im Bereich Hydrologie. Konkret geht es um Wasserstand, Abfluss und Bodenfeuchte. Das Ziel ist es, möglichst viele Beobachtungen zu erheben und damit die Vorhersage hydrologischer Ereignisse wie zum Beispiel Trockenheit oder Überschwemmung zu verbessern."
+    },
+    "image": "/img/projects/crowdwater.png",
+    "button": {
+      "link": null,
+      "route": "/contribute/partner_project/crowdwater",
+      "icon": null,
+      "selfWindow": true,
+      "en": "Visit Project",
+      "de": "Zum Projekt"
+    },
+    "details": {
+      "color": { "gradient_start": "#038A27", "gradient_end": "#FC5C4A" },
+      "covers": [
+        {
+          "image": "events/HumanReproductionReloaded.jpg",
+          "title": {
+            "en": "crowdwater",
+            "de": "crowdwater"
+          },
+          "lead": {
+            "en": "The Citizen Science project explores the decision to step into parenthood.",
+            "de": "Das Citizen Science Projekt geht der Frage nach, was es braucht um den Schritt in die Elternschaft zu wagen."
+          },
+          "path": {
+            "en": "https://www.crowdwater.ch",
+            "de": "https://www.crowdwater.ch"
+          },
+          "button": { "en": "Explore", "de": "Entdecke mehr" },
+          "extra_logos": {
+            "logo_right": "/img/logos/crowdwater-logo.png",
+            "logo_left": null
+          }
+        }
+      ],
+      "content": [
+        {
+          "description": {
+            "en": "<p> The <strong> Citizen Science Center Zurich </strong> is  providing a platform for people interested in Citizen Science, including academia and the wider public, to exchange ideas and knowledge, and collaborate in projects. </p> <p> Community building at the Center means facilitating the growth of an active group of academic researchers, citizen scientists and partner organizations through various types of interaction. In-person and online, we create opportunities for them to connect, interact, share, and grow. Our ambition is for all to ultimately engage in highly participatory Citizen Science activities, be it as organizers, contributors or other roles.</p>",
+            "de": "<p> Das <strong> Citizen Science Center Zürich </strong> möchte allen Menschen, die sich für die Citizen Science interessieren, eine Plattform für den Austausch von Ideen und Wissen sowie für die Zusammenarbeit in Projekten bieten. </p> <p> Unter Community Building verstehen wir die Förderung des Gemeinschaftsgefühls zwischen akademisch Forschenden, Bürgerwissenschaftler*innen und Partnerorganisationen durch die aktive Unterstützung von Interaktion und Kollaboration. Sowohl vor Ort als auch online schaffen wir Gelegenheiten, sich kennenzulernen, Wissen zu teilen und gemeinsam zu wachsen. Gemeinsames Ziel ist dabei die Unterstützung, Entwicklung und Durchführung von partizipativen Citizen Science Projekten. </p>"
+          },
+          "image": "/img/graphic-community.png"
+        },
+        {
+          "subtitle": {
+            "en": "Why a community?",
+            "de": "Warum eine Community?"
+          },
+          "description": {
+            "en": "<p> Citizen Science is characterized by the collaboration of members of the general public and academic scientists with the purpose of together pursuing new knowledge and insights. A community of engaged volunteers and organizers is an essential element of  any Citizen Science project, and often a strong motivator for people to join. </p> <p> By actively involving people with different backgrounds and expertise in the research process, Citizen Science expands the way of doing excellent science. Engaging the public to participate in scientific research as well as engaging academic scientists to open up their work for the collaboration with citizens adds creativity, capacity and impact to the process of generating knowledge, and brings in innovative ideas and solutions to problems from different perspectives. It can for instance add local knowledge, new or other forms of expertise as well as more diversity to scientific research, so that the whole society can profit from it. </p> <p> All this can not work without a community of engaged people who contribute their time and energy in doing research together. Strong communities in Citizen Science lead to: </p> <ul> <li> Unlocking of resources to help solving real world problems. </li> <li> Trust in science. </li> <li> Flow of ideas and creativity to find sustainable solutions. </li> <li> Exchange of knowledge & experience between people of different backgrounds. </li> <li> Learning from and acknowledging each other’s expertise. </li> <li> … and more. </li> </ul>",
+            "de": "<p> Citizen Science zeichnet sich durch die Zusammenarbeit von Angehörigen der allgemeinen Öffentlichkeit und Wissenschaftler*innen aus, mit dem Ziel, gemeinsam neue Erkenntnisse und Einsichten zu erlangen. Eine Community engagierter Freiwilliger und Organisator*innen ist ein wesentliches Element eines jeden CS Projekts und oft ein starker Motivator für die Teilnehmenden. </p> <p> Durch das aktive Einbeziehen von Menschen mit unterschiedlichen Hintergründen und Fachkenntnissen in den Forschungsprozess erweitert Citizen Science die Möglichkeiten exzellenter Wissenschaft. Die Beteiligung der Öffentlichkeit an der wissenschaftlichen Forschung sowie die Bereitschaft von Wissenschaftler*innen, sich für die Zusammenarbeit mit Bürger*innen auf Augenhöhe zu öffnen, erhöht die Kreativität, die Kapazität und die Reichweite der Wissensgenerierung und bringt innovative Ideen und Lösungen aus verschiedenen Perspektiven ein. Von der Offenheit für lokales Wissen, andere Formen von Expertise und mehr Vielfalt profitiert nicht nur die wissenschaftliche Forschung, sondern die gesamte Gesellschaft. </p> <p> Dies kann jedoch nur mithilfe einer Gemeinschaft engagierter Menschen, die ihre Zeit und Energie in die gemeinsame Forschung einbringen, geschehen. Starke Gemeinschaften in Citizen Science führen zu: </p> <ul> <li> Freisetzung und Bündelung von Ressourcen, um bei der Lösung von realen Problemen zu helfen. </li> <li> mehr Vertrauen in die Wissenschaft. </li> <li> Kreativität und Austausch von Ideen, um nachhaltige Lösungen zu finden. </li> <li> Austausch von Wissen & Erfahrung zwischen Menschen mit unterschiedlichen Hintergründen. </li> <li> Anerkennung der verschiedene Arten von Expertise einer und eines jeden und das voneinander Lernen. </li> <li> ... und vieles mehr. </li> </ul>"
+          },
+          "image": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "stophatespeech",
+    "description": {
+      "en": "The Stop Hate Speech project works against hostility and discrimination on the Internet. Using an algorithm that learns from an active community, Hate Speech is tracked down in the net and rejected by the community. Thus, an acute and global problem is tackled locally and innovatively.",
+      "de": "Das Projekt Stop Hate Speech geht gegen Anfeindungen und Diskriminierung im Internet vor. Mithilfe eines Algorithmus, welcher von einer aktiven Community lernt, wird Hate Speech im Netz aufgespürt und von der Community zurückgewiesen. So wird ein akutes und globales Problem lokal und innovativ bekämpft."
+    },
+    "image": "/img/projects/stophatespeech.png",
+    "button": {
+      "link": null,
+      "route": "/contribute/partner_project/stophatespeech",
+      "icon": null,
+      "selfWindow": false,
+      "en": "Visit Project",
+      "de": "Zum Projekt"
+    },
+    "details": {
+      "color": { "gradient_start": "#FC5C4A", "gradient_end": "#7284CD" },
+      "covers": [
+        {
+          "image": "events/citizen-science-in-academia.jpg",
+          "title": {
+            "en": "stophatespeech",
+            "de": "stophatespeech"
+          },
+          "lead": {
+            "en": "The Stop Hate Speech project works against hostility and discrimination on the Internet",
+            "de": "Das Projekt Stop Hate Speech geht gegen Anfeindungen und Diskriminierung im Internet vor"
+          },
+          "path": {
+            "en": "http://www.stophatespeech.ch",
+            "de": "http://www.stophatespeech.ch"
+          },
+          "button": { "en": "Explore", "de": "Entdecke mehr" },
+          "extra_path": {
+            "en": null,
+            "de": null
+          },
+          "extra_button": { "en": null, "de": null }
+        }
+      ],
+      "content": {}
+    }
+  }
+]

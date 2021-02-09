@@ -96,14 +96,14 @@ export default {
     ...mapState({
       style: (state) => state.viewconfig.partners_projects_view,
     }),
-    ...mapGetters({ getGContent: "content/getGenericContent" }),
+    ...mapGetters({ getPartnerProjects: "content/getPartnerProjects" }),
   },
   methods: {
     setViewConfig() {
       this.viewConfig = this.style;
     },
     loadContent() {
-      this.content = this.getGContent("partners_projects")
+      this.content = this.getPartnerProjects();
     }
   },
   created() {

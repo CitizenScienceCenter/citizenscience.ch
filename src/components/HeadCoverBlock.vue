@@ -69,7 +69,8 @@
                 rel="noopener"
                 class="button button-secondary button-secondary-inverted"
                 >{{
-                  localTranslation(cover.extra_button) || $t("default-button-name")
+                  localTranslation(cover.extra_button) ||
+                    $t("default-button-name")
                 }}
               </a>
               <router-link
@@ -77,7 +78,8 @@
                 :to="localTranslation(cover.extra_path)"
                 class="button button-secondary button-secondary-inverted"
                 >{{
-                  localTranslation(cover.extra_button) || $t("default-button-name")
+                  localTranslation(cover.extra_button) ||
+                    $t("default-button-name")
                 }}
               </router-link>
             </div>
@@ -151,7 +153,7 @@
 <script>
 import { mapGetters, mapState } from "vuex";
 import { getTranslation, openUrl } from "@/assets/support.js";
-import color from "@/styles/theme.scss";
+import defaultColor from "@/styles/theme.scss";
 
 export default {
   name: "Cover",
@@ -159,12 +161,13 @@ export default {
     return {
       br: {},
       coverInfo: [],
-      color: color,
+      color: defaultColor,
       currentCover: 0,
       timer: null,
     };
   },
   props: {
+    customCover: Object,
     logosMitrends: Boolean,
     goal: String,
   },
@@ -207,13 +210,24 @@ export default {
     setCoverInfo() {
       let covers = [];
       this.coverInfo = this.coverList.default;
-      if (this.coverList.hasOwnProperty("covers")) {
-        covers = this.coverList.covers
-          .filter((slide) => Date.parse(slide.expiration) >= Date.now())
-          .sort(function(a, b) {
-            return Date.parse(a.expiration) - Date.parse(b.expiration);
-          });
+      let cover_options;
+      // if covers content comes from props
+      if (this.customCover) {
+        cover_options = this.customCover.covers;
+        // color setting
+        this.color = this.customCover.color || defaultColor;
+      } // if covers content comes from vuex state
+      else if (this.coverList.hasOwnProperty("covers")) {
+        cover_options = this.coverList.covers;
       }
+      covers = cover_options
+        .filter(
+          (slide) =>
+            !slide.expiration || Date.parse(slide.expiration) >= Date.now()
+        )
+        .sort(function(a, b) {
+          return Date.parse(a.expiration) - Date.parse(b.expiration);
+        });
       // Only the three most upcoming covers in the list
       covers = covers.slice(0, 3);
       if (covers.length > 0) {

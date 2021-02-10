@@ -5,15 +5,12 @@
 <template>
   <div>
     <!-- Cover component -->
-    <app-cover
-      :customCover="project.details"
-      :customView="viewConfig.cover"
-    ></app-cover>
+    <app-cover :customCover="cover" :customView="viewConfig.cover"></app-cover>
 
     <!-- Content Section -->
     <app-content-section class="small-padding overflow-hidden">
       <div class="content-wrapper">
-        <!-- Generic Content component for Our Community -->
+        <!-- Generic Content component for partner project content -->
         <div
           class="row row-centered row-middle content-item"
           v-for="item in content"
@@ -51,7 +48,7 @@ export default {
   data() {
     return {
       pageTitle: undefined,
-      project: {},
+      cover: {},
       content: [],
       viewConfig: {
         cover: {
@@ -65,7 +62,6 @@ export default {
         content: {
           visible: true,
           vOrientation: false,
-          hReverse: false,
           compact_view: false,
           heading: { visible: true },
           title: { visible: true },
@@ -111,10 +107,12 @@ export default {
   },
   methods: {
     setGenericContent() {
-      this.project = this.getPartnerProject(this.$route.params.id);
+      // The partner project by id is retrieved
+      const project = this.getPartnerProject(this.$route.params.id);
+      this.cover = project.details;
       this.content =
-        "content" in this.project.details ? this.project.details.content : {};
-      this.pageTitle = this.project.name;
+        "content" in project.details ? project.details.content : {};
+      this.pageTitle = project.name;
     },
   },
   created() {

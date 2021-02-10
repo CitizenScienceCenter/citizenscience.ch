@@ -7,14 +7,6 @@
       "de": "CrowdWater ist ein Projekt der Universität Zürich und untersucht das Potential von crowdsourcing im Bereich Hydrologie. Konkret geht es um Wasserstand, Abfluss und Bodenfeuchte. Das Ziel ist es, möglichst viele Beobachtungen zu erheben und damit die Vorhersage hydrologischer Ereignisse wie zum Beispiel Trockenheit oder Überschwemmung zu verbessern."
     },
     "image": "/img/projects/crowdwater.png",
-    "button": {
-      "link": null,
-      "route": "/contribute/partner_project/crowdwater",
-      "icon": null,
-      "selfWindow": true,
-      "en": "Visit Project",
-      "de": "Zum Projekt"
-    },
     "details": {
       "color": { "gradient_start": "#038A27", "gradient_end": "#FC5C4A" },
       "covers": [
@@ -95,14 +87,6 @@
       "de": "Das Projekt Stop Hate Speech geht gegen Anfeindungen und Diskriminierung im Internet vor. Mithilfe eines Algorithmus, welcher von einer aktiven Community lernt, wird Hate Speech im Netz aufgespürt und von der Community zurückgewiesen. So wird ein akutes und globales Problem lokal und innovativ bekämpft."
     },
     "image": "/img/projects/stophatespeech.png",
-    "button": {
-      "link": null,
-      "route": "/contribute/partner_project/stophatespeech",
-      "icon": null,
-      "selfWindow": false,
-      "en": "Visit Project",
-      "de": "Zum Projekt"
-    },
     "details": {
       "color": { "gradient_start": "#FC5C4A", "gradient_end": "#7284CD" },
       "covers": [

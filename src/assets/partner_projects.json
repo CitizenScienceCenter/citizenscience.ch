@@ -130,6 +130,7 @@
             "en": "The Center encourages and facilitates the implementation of Citizen Science projects by providing support in different areas, including digital tools, methodology, community management, and partnerships and networking with the local and global Citizen Science community.",
             "de": "Wir fördern und erleichtern die Umsetzung von Citizen Science Projekten, von der Konzeption bis zur Umsetzung. Dies umfasst die Bereitstellung von digitalen Tools, die Beratung zu Methoden und Abläufen, ein aktives Community Management sowie Partnerschaften und Networking mit der lokalen und globalen Citizen Science Community."
           },
+          "image": "/img/graphic-steps.png",
           "button": {
             "link": null,
             "route": "/about/offer",

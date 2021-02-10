@@ -31,7 +31,7 @@ const getters = {
     return state.partnerships;
   },
   getPartnerProjects: (state) => (id) => {
-    if (id) {
+    if (state.partnerProjects && id) {
       // Only find the first ocurrence of element with id equal to id pass as parameter
       return state.partnerProjects.find((x) => x.id == id);
     }

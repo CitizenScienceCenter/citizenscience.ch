@@ -1,19 +1,14 @@
 <i18n>
-{
-  "en": {
-    "page-title": "Project"
-
-  },
-  "de": {
-    "page-title": "Projek"
-  }
-}
+{}
 </i18n>
 
 <template>
   <div>
     <!-- Cover component -->
-    <app-cover :customCover="project.details"></app-cover>
+    <app-cover
+      :customCover="project.details"
+      :customView="viewConfig.cover"
+    ></app-cover>
 
     <!-- Content Section -->
     <app-content-section class="small-padding overflow-hidden">
@@ -25,11 +20,11 @@
           v-bind:key="item.id"
         >
           <generic-content-block
-            :visible="true"
-            :vOrientation="false"
-            :hReverse="false"
+            :visible="viewConfig.content.visible"
+            :vOrientation="viewConfig.content.vOrientation"
+            :hReverse="item.reverse"
             :content="item"
-            :viewConfig="viewConfig"
+            :viewConfig="viewConfig.content"
           ></generic-content-block>
         </div>
       </div>
@@ -55,9 +50,33 @@ export default {
   name: "Home",
   data() {
     return {
+      pageTitle: undefined,
       project: {},
       content: [],
-      viewConfig: { vOrientation: false, visible: false },
+      viewConfig: {
+        cover: {
+          visible: true,
+          heading: { visible: true },
+          subheading: { visible: true },
+          uzh_eth_logo: { disabled: false, visible: true },
+          sdg_logo: { disabled: false, visible: true },
+          refresh_time: 10000,
+        },
+        content: {
+          visible: true,
+          vOrientation: false,
+          hReverse: false,
+          compact_view: false,
+          heading: { visible: true },
+          title: { visible: true },
+          subtitle: { visible: true },
+          description: { visible: true },
+          image: { visible: true, size: "sm", rounded: false },
+          img_description: { visible: false },
+          button: { disabled: false, visible: true },
+          second_button: { disabled: false, visible: true },
+        },
+      },
     };
   },
   components: {
@@ -75,32 +94,36 @@ export default {
   },
   metaInfo: function() {
     return {
-      title: this.$t("page-title"),
-      titleTemplate: null,
+      title: this.pageTitle,
       meta: [
         {
           property: "og:title",
-          content: this.$t("page-title"),
+          content: this.pageTitle,
+          template: "%s | " + this.$t("site-title"),
         },
       ],
     };
   },
   computed: {
     ...mapGetters({
-      view: "viewconfig/getHomeConfig",
       getPartnerProject: "content/getPartnerProjects",
     }),
   },
   methods: {
     setGenericContent() {
       this.project = this.getPartnerProject(this.$route.params.id);
-      //Load generic content view configuration
-      this.viewConfig = this.view("bottom_left");
       this.content =
         "content" in this.project.details ? this.project.details.content : {};
+      this.pageTitle = this.project.name;
     },
   },
   created() {
+    // If content for this project is not available the user is redirect to partners' projects
+    if (!this.getPartnerProject(this.$route.params.id)) {
+      this.$router.push("/contribute/partners_projects");
+    }
+  },
+  beforeMount() {
     this.setGenericContent();
   },
 };

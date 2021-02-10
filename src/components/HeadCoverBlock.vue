@@ -168,6 +168,7 @@ export default {
   },
   props: {
     customCover: Object,
+    customView: Object,
     logosMitrends: Boolean,
     goal: String,
   },
@@ -209,7 +210,6 @@ export default {
     },
     setCoverInfo() {
       let covers = [];
-      this.coverInfo = this.coverList.default;
       let cover_options;
       // if covers content comes from props
       if (this.customCover) {
@@ -232,6 +232,9 @@ export default {
       covers = covers.slice(0, 3);
       if (covers.length > 0) {
         this.coverInfo = covers;
+      } else {
+        // Set default cover whether the covers are not covers to show
+        this.coverInfo = this.coverList ? this.coverList.default : null;
       }
     },
 
@@ -274,7 +277,7 @@ export default {
     },
   },
   created() {
-    this.br = this.view("cover");
+    this.br = this.customView || this.view("cover");
     this.setCoverInfo();
     if (this.coverInfo && this.coverInfo.length > 1) {
       this.setRefreshTimer();

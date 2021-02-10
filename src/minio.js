@@ -53,22 +53,33 @@ export const updateStringFile = async function(fname, fileContent) {
     await copyRemoteFile(process.env.VUE_APP_BUCKET_NAME, backup, sourceObject);
 
     // after current file is copied, the new version file is submited
-    await minioClient.putObject(
-      process.env.VUE_APP_BUCKET_NAME,
-      fname,
-      fileContent,
-      metaData,
-      function(err) {
-        if (err) {
-          alert("Error updating file");
-          return console.log(err);
-        }
-        alert("File successfully updated");
-      }
-    );
+    await createObject(fname, fileContent, metaData);
   } catch (error) {
-    console.log(error);
+    console.log(`Error copying file: ${error.message}`);
+    // consider when file is created by first time
+    if (error.code === "NoSuchKey") {
+      await createObject(fname, fileContent, metaData);
+    }
   }
+};
+
+export const createObject = function(fname, fileContent, metaData) {
+  metaData = metaData || {
+    "Content-Type": "application/json",
+  };
+  minioClient.putObject(
+    process.env.VUE_APP_BUCKET_NAME,
+    fname,
+    fileContent,
+    metaData,
+    function(err) {
+      if (err) {
+        alert("Error creating file");
+        return console.log(err.message);
+      }
+      alert("Action successfully done!");
+    }
+  );
 };
 
 const copyRemoteFile = function(bucketName, objectName, sourceObject) {
@@ -81,7 +92,7 @@ const copyRemoteFile = function(bucketName, objectName, sourceObject) {
       conds,
       function(err, data) {
         if (err) {
-          reject(`Error copying file: ${err.message}`);
+          reject(err);
         } else {
           console.log(`File backup path on remote server: ${objectName}`);
           resolve(data);

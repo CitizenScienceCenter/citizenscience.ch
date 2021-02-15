@@ -1,5 +1,101 @@
 [
   {
+    "id": "bündnerkupfer",
+    "name": "Bündner Kupfer",
+    "description": {
+      "en": "Bündner Kupfer is a research project from the University of Zurich and the Archaeological Service of the Canton of Grisons. In their blog they publish archaeological and scientific data collected by archaeologists and laymen.",
+      "de": "Bündner Kupfer ist ein Forschungsprojekt der Universität Zürich und dem Archäologischen Dienst Graubünden, das den prähistorischen Kupferbergbau in Graubünden untersucht. In ihrem Blog veröffentlichen die Archäolog*innen archäologische und wissenschaftliche Daten, die von Archäolog*innen und Laienforschenden gesammelt wurden."
+    },
+    "image": "/img/logos/buendnerkupfer_logo.png",
+    "details": {
+      "color": { "gradient_start": "#038A27", "gradient_end": "#FC5C4A" },
+      "covers": [
+        {
+          "image": "projects/buenderkupfer.jpg",
+          "title": {
+            "en": "Research Project Bündner Kupfer",
+            "de": "Forschungsprojekt Bündner Kupfer"
+          },
+          "lead": {
+            "en": "Come with us on a journey through time.",
+            "de": "Kommen Sie mit uns auf Spurensuche."
+          },
+          "path": {
+            "en": "http://bergbauprojekt.blogspot.com",
+            "de": "http://bergbauprojekt.blogspot.com"
+          },
+          "button": { "en": "Blog", "de": "Blog" },
+          "extra_logos": {
+            "logo_right": null,
+            "logo_left": null
+          }
+        }
+      ],
+      "content": [
+        {
+          "title": {
+            "en": "The project in a nutshell",
+            "de": "Das Projekt kurz vorgestellt"
+          },
+          "description": {
+            "en": "<p>Since 2013, the Prehistoric Archaeology Division (<a href='http://www.archaeologie.uzh.ch/de/prehist/forschung/Projekte.html' target='_blank' rel='noopener'>UZH</a>) has been researching prehistoric copper mining in the Surses (Oberhalbstein, Grisons) in cooperation with the Archaeological Service of the Canton of Grisons (<a href='https://www.gr.ch/DE/institutionen/verwaltung/ekud/afk/adg/Seiten/start.aspx' target='_blank' rel='noopener'>ADG</a>).</p><p>The focus of this SNF project (Nr. 100011E-153668) is the investigation of the primary metallurgical chain - i.e. the processes of extraction and processing - of copper \"from ore to metal\".</p><p>Meanwhile, the project is in a second phase, in which the so-called \"human impact\" of prehistoric mining on the local environment is being investigated. Such as its impact on the tree population or the environmental pollution in the moors.</p><p>The cooperation of the numerous citizens, who are organized through museums, associations or privately, is an integral part of this archaeological project.</p>",
+            "de": "<p>Seit 2013 erforscht der Fachbereich Prähistorische Archäologie (<a href='http://www.archaeologie.uzh.ch/de/prehist/forschung/Projekte.html' target='_blank' rel='noopener'>UZH</a>) in Kooperation mit dem Archäologischen Dienst Graubünden (<a href='https://www.gr.ch/DE/institutionen/verwaltung/ekud/afk/adg/Seiten/start.aspx' target='_blank' rel='noopener'>ADG</a>)den prähistorischen Kupferbergbau im Surses (Oberhalbstein, Graubünden).</p><p>Im Fokus dieses SNF-Projekts (Nr. 100011E-153668) steht die Untersuchung zur primären Metallurgiekette - also die Verfahren zur Gewinnung und Verarbeitung - des Kupfers \"vom Erz zum Metall\".</p><p>Inzwischen befindet sich das Projekt in einer zweiten Phase, in welcher der sogenannte \"Human Impact\" des prähistorischen Bergbaus auf die lokale Umwelt untersucht wird. So wird beispielsweise analysiert, wie sich die Tätigkeiten auf den Baumbestand oder die Umweltbelastung in den Mooren auswirkten.</p><p>Die Zusammenarbeit mit den zahlreichen Bürger*innen, die über Museen, Vereine oder auch rein privat organisiert sind, ist fester Bestandteil dieses archäologischen Projekts.</p>"
+          },
+          "image": "/img/projects/buenderkupfer1.jpg",
+          "toggle_img_style": true,
+          "reverse": false
+        },
+        {
+          "title": {
+            "en": "Cooperation with associations",
+            "de": "Kooperation mit Vereinen"
+          },
+          "description": {
+            "en": "<p>For the research and the presentation of the research findings on site, close cooperation with local experts, lay researchers and volunteers is indispensable:</p><p>Numerous potential sites and finds have been communicated to us by active members of the local associations \"Freunde des Bergbaus Graubünden\" (<a href='https://bergbau-gr.ch/' target='_blank' rel='noopener'>FBG</a>)and the \"Verein Erzminen Hinterrhein\" (<a href='https://www.erzminen-hinterrhein.ch/' target='_blank' rel='noopener'>VEH</a>). Without this support, nearly 100 local mining and copper smelting sites would never have been found in the short research campaigns of a few weeks per year.</p><p>The fact that local amateur researchers also \"go underground\" themselves has also become known, for example, through the joint expiration of the \"Cotschens\" mining tunnel, which is always filled by meltwater at an altitude of just under 2400m: a cooperation that has been presented in detail through publications by the association in the journal <a href='https://www.bergbau-gr.ch/wordpress/wp-content/uploads/bk/bk_132.pdf' target='_blank' rel='noopener'>Bergknappen</a> and the researchers (<a href='https://www.researchgate.net/publication/346032334_Mining_at_the_Fringes_High-Altitude_Prehistoric_Copper_Mining_in_the_Oberhalbstein_Valley_Grisons_Switzerland' target='_blank' rel='noopener'>Reitmaier-Neaf et al. 2020</a>).</p><p>The project is so well received throughout Switzerland that a general assembly with workshops and excursions was held in 2018 with the supra-regional association Swiss Society for Historical Mining (<a href='http://www.sghb.ch/' target='_blank' rel='noopener'>SGHB</a>). Since then, the association and researchers have regularly published research results in the association's own journal <a href='http://www.sghb.ch/minaria/' target='_blank' rel='noopener'>Minaria Helvetica</a>. </p>",
+            "de": "<p>Für die Forschung und die Darstellung der Forschungsresultate vor Ort ist eine enge Kooperation mit Ortskundigen, Laienforschenden und Ehrenamtlichen unabdingbar:</p><p>Zahlreiche potentielle Fundstellen und Funde sind uns durch aktive Mitglieder der lokalen Vereine \"Freunde des Bergbaus Graubünden\" (<a href='https://bergbau-gr.ch/' target='_blank' rel='noopener'>FBG</a>)und den \"Verein Erzminen Hinterrhein\" (<a href='https://www.erzminen-hinterrhein.ch/' target='_blank' rel='noopener'>VEH</a>) mitgeteilt worden. Ohne diese Unterstützung wären in den kurzen Forschungskampagnen von wenigen Wochen pro Jahr niemals annähernd 100 Fundstellen zum lokalen Bergbau und dem Kupferschmelzen aufgefunden worden.</p><p>Dass die lokalen Laienforschenden auch selbst mit \"unter Tage gehen\", ist beispielsweise auch das gemeinsame Erforschen des durch Schmelzwasser stets gefüllten Bergbaustollen \"Cotschens\" auf knapp 2400m Höhe bekannt geworden: eine Kooperation, die durch Publikationen des Vereins in der Fachzeitschrift <a href='https://www.bergbau-gr.ch/wordpress/wp-content/uploads/bk/bk_132.pdf' target='_blank' rel='noopener'>Bergknappen</a> und die Forscher*innen (<a href='https://www.researchgate.net/publication/346032334_Mining_at_the_Fringes_High-Altitude_Prehistoric_Copper_Mining_in_the_Oberhalbstein_Valley_Grisons_Switzerland' target='_blank' rel='noopener'>Reitmaier-Neaf et al. 2020</a>) ausführlich vorgestellt wurde.</p><p>Schweizweit findet das Projekt derart grossen Anklang, dass mit dem überregional agierenden Verein \"Schweizerische Gesellschaft für Historischen Bergbau\" (<a href='http://www.sghb.ch/' target='_blank' rel='noopener'>SGHB</a>) 2018 eine Generalversammlung mit Workshops und Exkursionen angeboten wurde. Verein und Forscher*innen publizieren seitdem regelmässig Forschungsergebnisse in der vereinseigenen Zeitschrift <a href='http://www.sghb.ch/minaria/' target='_blank' rel='noopener'>Minaria Helvetica</a>. </p>"
+          },
+          "image": null,
+          "toggle_img_style": false,
+          "reverse": false
+        },
+        {
+          "title": {
+            "en": "Lectures & Public Relations",
+            "de": "Vorträge &  Öffentlichkeitsarbeit"
+          },
+          "description": {
+            "en": "<p>Repetedly <a href='https://www.parc-ela.ch/de/medienmitteilung/2019/07/gruben-pingen-und-oefen-neue-forschungsergebnisse-zur-kupfergewinnung-im' target='_blank' rel='noopener'>public lectures</a> were organized in cooperation with <a href='https://www.parc-ela.ch/de' target='_blank' rel='noopener'>Parc Ela</a> in 2014 and 2019 in Bivio and Cunter. With more than 100 participants these lectures met with great interest. Since 2013, the research team has also been regularly represented at the \"Felsenfest\" festival in Bivio in the Surses to inform locals and tourists about the research.</p><p>An exhibition on the history of copper mining is being planned with <a href='https://museumsavognin.ch/' target='_blank' rel='noopener'>local museum of local history in Savognin</a> for the coming years.</p>",
+            "de": "<p>Wiederholt wurden <a href='https://www.parc-ela.ch/de/medienmitteilung/2019/07/gruben-pingen-und-oefen-neue-forschungsergebnisse-zur-kupfergewinnung-im' target='_blank' rel='noopener'>öffentliche Vorträge</a> in Kooperation mit dem <a href='https://www.parc-ela.ch/de' target='_blank' rel='noopener'>Parc Ela</a> 2014 und 2019 in Bivio und Cunter organisiert, die mit über 100 Teilnehmer*innen auf grosses Interesse stiessen. Das Forscherteam ist zudem seit 2013 regelmässig auf dem Ortsfest \"Felsenfest\"  in Bivio im Surses vertreten, um Lokale und Touristen über die Forschung zu informieren.</p><p>Mit dem <a href='https://museumsavognin.ch/' target='_blank' rel='noopener'>lokalen Heimatmuseum Savognin</a> ist für die kommenden Jahre eine Ausstellung zur Geschichte des Kupferbergbaus in Planung.</p>"
+          },
+          "image": "/img/projects/buenderkupfer2.jpg",
+          "toggle_img_style": true,
+          "reverse": false
+        },
+        {
+          "title": {
+            "en": "Blog",
+            "de": "Blog"
+          },
+          "description": {
+            "en": "<p>The archaeological and scientific data collected is published in a blog and thus made accessible to all. The blog serves as a communication channel for scientists and lay researchers as well as local and national associations.</p>",
+            "de": "<p>Die gesammelten archäologischen und wissenschaftlichen Daten werden in einem Blog veröffentlicht und somit allen zugänglich gemacht. Der Blog dient als Kommunikationskanal für Wissenschaftler*innen und überregionale Vereine.</p>"
+          },
+          "image": "/img/projects/buenderkupfer3.jpg",
+          "button": {
+            "link": "http://bergbauprojekt.blogspot.com/",
+            "route": null,
+            "icon": null,
+            "selfWindow": false,
+            "en": "Discover more",
+            "de": "Mehr entdecken"
+          },
+          "toggle_img_style": false,
+          "reverse": true
+        }
+      ]
+    }
+  },
+  {
     "id": "crowdwater",
     "name": "Crowd Water",
     "description": {

@@ -103,24 +103,7 @@ export default {
       this.viewConfig = this.style;
     },
     loadContent() {
-      this.content = this.setPaths();
-    },
-    setPaths() {
-      const projects = this.getPartnerProjects();
-      if (projects) {
-        // Due to the project must redirect to internal screen here is created the path with project id
-        projects.map(function(project) {
-          project["button"] = {
-            route: `/contribute/partner_project/${project.id}`,
-            selfWindow: true,
-            en: "Visit Project",
-            de: "Zum Projekt",
-          };
-          return project;
-        });
-        return projects;
-      }
-      return null;
+      this.content = this.getPartnerProjects();
     },
   },
   created() {

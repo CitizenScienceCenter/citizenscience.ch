@@ -8,6 +8,7 @@ const state = {
   events: undefined,
   people: undefined,
   partnerships: undefined,
+  partnerProjects: undefined,
   isNewsLoaded: false,
   isGCLoaded: false,
   isEventsLoaded: false,
@@ -28,6 +29,13 @@ const getters = {
   },
   getPartnerships(state) {
     return state.partnerships;
+  },
+  getPartnerProjects: (state) => (id) => {
+    if (state.partnerProjects && id) {
+      // Only find the first ocurrence of element with id equal to id pass as parameter
+      return state.partnerProjects.find((x) => x.id == id);
+    }
+    return state.partnerProjects;
   },
 };
 
@@ -125,6 +133,23 @@ const actions = {
       commit("setPartnerships", res);
     }
   },
+  async getPartnerProjectsRemote({ commit }) {
+    let res = null;
+    try {
+      res = await getRemoteFile("data/partner_projects.json");
+      if (res === undefined) {
+        throw new Error("Remote undefined");
+      } else {
+        return res;
+      }
+    } catch (error) {
+      // This content is local if the remote content is not retrieved
+      res = require("@/assets/partner_projects.json");
+      return res;
+    } finally {
+      commit("setPartnerProjects", res);
+    }
+  },
 };
 
 const mutations = {
@@ -148,6 +173,9 @@ const mutations = {
   },
   setPartnerships(state, payload) {
     state.partnerships = payload;
+  },
+  setPartnerProjects(state, payload) {
+    state.partnerProjects = payload;
   },
   removeIsLoaded(state, value) {
     switch (value) {

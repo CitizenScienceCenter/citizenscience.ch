@@ -4,7 +4,7 @@
     "vOrientation": false,
     "title": { "visible": false },
     "buttons": { "visible": false },
-    "search": { "visible": true },    
+    "search": { "visible": true },
     "limit": null,
     "description": { "visible": false },
     "project": {
@@ -30,6 +30,8 @@
   "contribute": {
     "visible": true,
     "vOrientation": false,
+    "hReverse": false,
+    "compact_view": false,
     "heading": { "visible": false },
     "title": { "visible": false },
     "subtitle": { "visible": true },

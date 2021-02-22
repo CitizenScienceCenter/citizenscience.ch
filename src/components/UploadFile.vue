@@ -68,6 +68,7 @@ export default {
         { name: "About - GC", file_name: "about-generic_content" },
         { name: "People List", file_name: "people" },
         { name: "Partnership List", file_name: "partnerships" },
+        { name: "Partners Projects", file_name: "partner_projects" },
       ],
       selected: "",
     };

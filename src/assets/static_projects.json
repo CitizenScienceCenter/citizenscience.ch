@@ -62,8 +62,8 @@
     "img_background": "/img/projects/hatespeech.jpg",
     "img_project": "/img/projects/hatespeech-intro.png",
     "url": {
-      "en": "https://hatespeech.citizenscience/en",
-      "de": "https://hatespeech.citizenscience/de"
+      "en": "https://hatespeech.citizenscience.ch/de",
+      "de": "https://hatespeech.citizenscience.ch/de"
     },
     "color_gradient": { "start": "#6e4f9e", "end": "#478161" }
   },

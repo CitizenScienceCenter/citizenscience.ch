@@ -13,6 +13,8 @@
       },
       "path": { "en": null, "de": null },
       "button": { "en": null, "de": null },
+      "extra_path": { "en": null, "de": null },
+      "extra_button": { "en": null, "de": null },
       "extra_logos": {
         "logo_right": null,
         "logo_left": null
@@ -21,8 +23,30 @@
   ],
   "covers": [
     {
+      "image": "events/HumanReproductionReloaded.jpg",
+      "expiration": "2021-04-30T13:15+01:00",
+      "title": {
+        "en": "HUMAN REPRODUCTION RELOADED",
+        "de": "HUMAN REPRODUCTION RELOADED"
+      },
+      "lead": {
+        "en": "The Citizen Science project explores the decision to step into parenthood.",
+        "de": "Das Citizen Science Projekt geht der Frage nach, was es braucht, um den Schritt in die Elternschaft zu wagen."
+      },
+      "path": {
+        "en": "https://www.humanreproduction.uzh.ch/en.html",
+        "de": "https://www.humanreproduction.uzh.ch/en.html"
+      },
+      "button": { "en": "Explore", "de": "Entdecke mehr" },
+      "extra_path": {
+        "en": "https://citizenscience.ch/files/Flyer_Human_Reproduction_Reloaded.pdf",
+        "de": "https://citizenscience.ch/files/Flyer_Human_Reproduction_Reloaded.pdf"
+      },
+      "extra_button": { "en": "Flyer", "de": "Flyer" }
+    },   
+   {
       "image": "events/CitSci.JPG",
-      "expiration": "2021-01-30T13:15+01:00",
+      "expiration": "2021-01-25T13:15+01:00",
       "title": {
         "en": "CitSci Helvetia 2021",
         "de": "CitSci Helvetia 2021"

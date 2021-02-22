@@ -3,6 +3,8 @@
     "main": {
       "visible": true,
       "vOrientation": false,
+      "hReverse": false,
+      "compact_view": false,
       "heading": { "visible": false },
       "title": { "visible": true },
       "subtitle": { "visible": true },

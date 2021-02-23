@@ -23,8 +23,25 @@
   ],
   "covers": [
     {
-      "image": "events/HumanReproductionReloaded.jpg",
+      "image": "events/blogpost.jpg",
       "expiration": "2021-04-30T13:15+01:00",
+      "title": {
+        "en": "MINING GOES PUBLIC",
+        "de": "BERGBAU GOES PUBLIC"
+      },
+      "lead": {
+        "en": "Dive with us into the mysterious world of historic mining and learn more about a multifaceted Citizen Science project in our latest blog post!",
+        "de": "Tauchen Sie mit uns ein in die geheimnisvolle Welt des historischen Bergbaus und erfahren Sie mehr über ein vielfältiges Citizen Science Projekt in unserem neusten Blogeintrag."
+      },
+      "path": {
+        "en": "https://citizensciencezurich.blog/",
+        "de": "https://citizensciencezurich.blog/"
+      },
+      "button": { "en": "Explore", "de": "Entdecke mehr" }
+    },
+    {
+      "image": "events/HumanReproductionReloaded.jpg",
+      "expiration": "2021-02-23T09:00+01:00",
       "title": {
         "en": "HUMAN REPRODUCTION RELOADED",
         "de": "HUMAN REPRODUCTION RELOADED"
@@ -43,8 +60,8 @@
         "de": "https://citizenscience.ch/files/Flyer_Human_Reproduction_Reloaded.pdf"
       },
       "extra_button": { "en": "Flyer", "de": "Flyer" }
-    },   
-   {
+    },
+    {
       "image": "events/CitSci.JPG",
       "expiration": "2021-01-25T13:15+01:00",
       "title": {
@@ -83,15 +100,15 @@
       "expiration": "2020-09-22T13:15+01:00",
       "title": {
         "en": "CROWD vs COVID-19",
-        "de":""
+        "de": ""
       },
       "lead": {
         "en": "Read in our latest blog how to hack COVID-19 with AI and Citizen Science",
-        "de":""
+        "de": ""
       },
       "path": {
         "en": "https://citizensciencezurich.blog/2020/04/28/hacking-covid-19-with-ai-and-citizen-science/",
-        "de":""
+        "de": ""
       },
       "button": { "en": "More Information" },
       "extra_logos": {

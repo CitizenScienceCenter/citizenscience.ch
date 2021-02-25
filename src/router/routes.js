@@ -2,7 +2,6 @@ import { openUrl } from "@/assets/support.js";
 import Home from "@/views/Home";
 
 import Login from "@/views/shared/user/Login";
-import Register from "@/views/shared/user/Register";
 import Profile from "@/views/shared/user/Profile";
 
 import RequestReset from "@/views/shared/user/RequestReset";
@@ -294,7 +293,15 @@ export const routes = [
                  },
                  {
                    path: "builder",
-                   meta: { i18n: "navigation-startproject-builder", nav: true },
+                   meta: {
+                     i18n: "navigation-startproject-builder",
+                     nav: true,
+                     trackingInfo: {
+                       category: "view_pb",
+                       label: "View Project Builder from citizenscience.ch",
+                       action: "go_to_pb",
+                     },
+                   },
                    beforeEnter(to, from, next) {
                      next(from);
                      // this redirect to a sub site in project builder

@@ -76,8 +76,8 @@
           tag="button"
           to="/contribute/projects"
           class="button button-primary-main"
-          >{{ $t("section-projects-button") }}</router-link
-        >
+          >{{ $t("section-projects-button") }}
+        </router-link>
         <button @click="openUrl(getUrl)" class="button button-secondary-main">
           {{ $t("new-project-button") }}
         </button>
@@ -88,7 +88,12 @@
 <script>
 import ProjectTeaser from "@/components/ProjectTeaser";
 import { mapGetters, mapMutations, mapState } from "vuex";
-import { getTranslation, getNested } from "@/assets/support.js";
+import {
+  getTranslation,
+  getNested,
+  trackEvent,
+  openUrl,
+} from "@/assets/support.js";
 
 // This variable avoid undefined or null errors
 const keys = [
@@ -165,8 +170,8 @@ export default {
       if (disabled) {
         return;
       }
-      var win = window.open(url);
-      win.focus();
+      if (url.includes(process.env.VUE_APP_LAB_BASE_URL)) this.tracking();
+      openUrl(url);
     },
     validateOrientation: function() {
       // This function is used to set the columns per row acording vertical or horizontal orientation
@@ -204,6 +209,15 @@ export default {
         ? project.name.en
         : project.name;
       return name.toString().toLowerCase();
+    },
+    tracking() {
+      // Information for gtag event
+      const info = {
+        category: "view_pb",
+        label: "View Project Builder from citizenscience.ch",
+        action: "go_to_pb",
+      };
+      trackEvent(this, info);
     },
   },
   watch: {

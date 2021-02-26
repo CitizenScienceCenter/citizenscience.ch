@@ -47,3 +47,14 @@ export function throwAlert({
     title: message,
   });
 }
+
+// This function send event occurence to google analytics
+export function trackEvent(_this, info = undefined) {
+  if (info) {
+    _this.$gtag.event(info.action, {
+      event_category: info.category,
+      event_label: info.label,
+      event_value: 1,
+    });
+  }
+}

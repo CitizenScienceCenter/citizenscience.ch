@@ -30,7 +30,7 @@ Vue.use(Vuex);
 Vue.use(
   VueGtag,
   {
-    config: { id: "UA-162894944-2" },
+    config: { id: process.env.VUE_APP_GTAG_ID },
   },
   router
 );

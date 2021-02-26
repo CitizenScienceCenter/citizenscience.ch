@@ -4,7 +4,7 @@
     "name": "Bündner Kupfer",
     "description": {
       "en": "Bündner Kupfer is a research project from the University of Zurich and the Archaeological Service of the Canton of Grisons. In their blog they publish archaeological and scientific data collected by archaeologists and laymen.",
-      "de": "Bündner Kupfer ist ein Forschungsprojekt der Universität Zürich und dem Archäologischen Dienst Graubünden, das den prähistorischen Kupferbergbau in Graubünden untersucht. In ihrem Blog veröffentlichen die Archäolog*innen archäologische und wissenschaftliche Daten, die von Archäolog*innen und Laienforschenden gesammelt wurden."
+      "de": "Bündner Kupfer ist ein Forschungsprojekt der Universität Zürich und dem Archäologischen Dienst Graubünden, das den prähistorischen Kupferbergbau in Graubünden untersucht. In ihrem Blog veröffentlichen sie archäologische und wissenschaftliche Daten, die von Archäolog*innen und Laienforschenden gesammelt wurden."
     },
     "image": "/img/logos/buendnerkupfer_logo.png",
     "button": {
@@ -12,8 +12,8 @@
       "route": "/contribute/partner_project/bündnerkupfer",
       "icon": null,
       "selfWindow": true,
-      "en": "Discover more",
-      "de": "Mehr entdecken"
+      "en": "Explore",
+      "de": "Entdecke mehr"
     },
     "details": {
       "color": { "gradient_start": "#038A27", "gradient_end": "#FC5C4A" },
@@ -149,15 +149,15 @@
     "details": null
   },
   {
-    "id": "stophatespeech",
-    "name": "Stop Hate Speech",
+    "id": "humanreproductionreloaded",
+    "name": "Human Reproduction Reloaded",
     "description": {
-      "en": "The Stop Hate Speech project works against hostility and discrimination on the Internet. Using an algorithm that learns from an active community, Hate Speech is tracked down in the net and rejected by the community. Thus, an acute and global problem is tackled locally and innovatively.",
-      "de": "Das Projekt Stop Hate Speech geht gegen Anfeindungen und Diskriminierung im Internet vor. Mithilfe eines Algorithmus, welcher von einer aktiven Community lernt, wird Hate Speech im Netz aufgespürt und von der Community zurückgewiesen. So wird ein akutes und globales Problem lokal und innovativ bekämpft."
+      "en": "The Human Reproduction Reloaded project is one of the five new University Research Priority Programs (URPP) at University of Zurich. It explores the decision to step into parenthood: its legal, medical and social conditions as well as its consequences for the individual, the family, society and the economy. Following a co-designed citizen science approach, the project involves citizens in various steps in the research process.",
+      "de": "Das Human Reproduction Reloaded Projekt ist eines der fünf neuen Universitären Forschungsschwerpunkte (UFSP) der Universität Zürich. Es ergründet die Entscheidung zur Elternschaft: ihre rechtlichen, medizinischen und sozialen Voraussetzungen sowie ihre Folgen für das Individuum, die Familie, Gesellschaft und Wirtschaft. Das Projekt nutzt Citizen Science und bezieht Bürger*innen in verschiedene Schritte des Forschungsprozess ein."
     },
-    "image": "/img/projects/stophatespeech.png",
+    "image": "/img/logos/logo-uzh.svg",
     "button": {
-      "link": "http://www.stophatespeech.ch",
+      "link": "https://www.humanreproduction.uzh.ch/en.html",
       "route": null,
       "icon": null,
       "selfWindow": false,

@@ -17,6 +17,9 @@ import "@fortawesome/fontawesome-free/css/all.css"; // Ensure you are using css-
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 
+// normalize and reset css between browsers
+import "normalize.css";
+
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(Meta);

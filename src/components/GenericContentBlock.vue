@@ -276,8 +276,6 @@ export default {
     }
     .rounded {
       border-radius: 50%;
-      width: 20em !important;
-      height: 20em !important;
     }
     p {
       font-size: $font-size-mini;

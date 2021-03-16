@@ -1,5 +1,111 @@
 [
   {
+    "id": "toxischekommentare",
+    "name": "Toxische Kommentare",
+    "description": {
+      "en": "This project optimizes toxic speech detection algorithms using machine learning and sentiment analysis. Take part and directly contribute to research in the field of machine learning!",
+      "de": "Dieses Projekt optimiert mit Hilfe von Machine Learning und Sentiment Analysis Algorithmen zur Erkennung von toxischer Sprache. Mach mit und leiste einen direkten Beitrag zur Forschung auf dem Gebiet des Machine Learnings!"
+    },
+    "image": "/img/logos/toxic_comments_logo.png",
+    "button": {
+      "link": null,
+      "route": "/contribute/partner_project/toxischekommentare",
+      "icon": null,
+      "selfWindow": true,
+      "en": "Explore",
+      "de": "Entdecke mehr"
+    },
+    "details": {
+      "color": { "gradient_start": "#038A27", "gradient_end": "#FC5C4A" },
+      "covers": [
+        {
+          "image": "projects/toxischekommentare1.jpg",
+          "title": {
+            "en": "Toxic Comments",
+            "de": "Toxische Kommentare"
+          },
+          "lead": {
+            "en": "Help us optimize machine learning and sentiment analysis algorithms to detect toxic comments!",
+            "de": "Unterstützen Sie uns bei der Optimierung von Machine Learning und Sentiment Analysis Algorithmen zur Erkennung von toxischen Kommentaren!"
+          },
+          "path": {
+            "en": "https://lab.citizenscience.ch/en/",
+            "de": "https://lab.citizenscience.ch/de/"
+          },
+          "button": { "en": "Contribute", "de": "Mitmachen" },
+          "extra_logos": {
+            "logo_right": null,
+            "logo_left": null
+          }
+        }
+      ],
+      "content": [
+        {
+          "title": {
+            "en": "About the project",
+            "de": "Worum geht es?"
+          },
+          "description": {
+            "en": "<p>Over the past few months, we have been developing a classification system for toxic speech, especially Hate Speech. To optimize it, we need a lot of high-quality data. For this, we rely on your help!</p><p>We collected comments from online forums of various Swiss newspapers. Some of them contain toxic language, others do not. Since the assessment of toxic language is very subjective, our goal is to have each comment evaluated by several different people. With the help of these ratings, we can teach our model which comments contain toxic language and which do not.</p><p>The more comments are classified, the better the algorithmic recognition will work! Your support therefore directly contributes to research in the field of machine learning.</p>",
+            "de": "<p>In den letzten Monaten haben wir ein Klassifikationssystem für toxische Sprache, insbesondere Hate Speech, entwickelt. Um dieses zu optimieren, benötigen wir viele, qualitativ hochwertige Daten. Dafür sind wir auf Ihre Mithilfe angewiesen!</p><p>Wir haben Kommentare aus Online-Foren von verschiedenen Schweizer Zeitungen gesammelt. Einige davon enthalten toxische Sprache, andere nicht. Da die Einschätzung von toxischer Sprache sehr subjektiv ist, ist unser Ziel, dass jeder Kommentar von mehreren verschiedenen Personen bewertet wird. Mit Hilfe dieser Bewertungen können wir dem Modell beibringen, welche Kommentare toxische Sprache enthalten und welche nicht.</p><p>Je mehr Kommentare klassifiziert werden, desto besser wird die algorithmische Erkennung funktionieren! Ihre Unterstützung leistet daher einen direkten Beitrag zur Forschung auf dem Gebiet des Machine Learnings.</p>"
+          },
+          "image": "/img/projects/toxischekommentare1.jpg",
+          "toggle_img_style": true,
+          "reverse": false
+        },
+        {
+          "subtitle": {
+            "en": "How does it work?",
+            "de": "Wie funktioniert es?"
+          },
+          "description": {
+            "en": "<p>Help us improve our algorithm! Rate comments and optimize the algorithm to find hate speech faster.</p><p>You will read comments on articles from the internet and determine wehster or not it is Hate Speech. By \"Hate Speech\" we mean derogatory/insulting/vulgar language. If you are unsure, please judge the comment as Hate Speech.</p><p><b>Registration</b><br>To avoid seeing the same comment more than once, we ask you to register. If you have classified 50 or more comments and are registered, you will automatically be entered into the prize draw for one of three Digitec vouchers worth CHF 50.</p><p>Thank you very much for your support!</p>",
+            "de": "<p>Helfen Sie uns, unseren Algorithmus zu verbessern! Bewerten Sie Kommentare und optimieren Sie den Algorithmus, Hate Speech schneller zu finden.</p><p>Sie werden Kommentare zu Artikeln aus dem Internet lesen und bestimmen, ob es sich um Hate Speech handelt oder nicht. Unter \"Hate Speech\" verstehen wir abwertende/beleidigende/vulgäre Sprache. Sind Sie unsicher, beurteilen Sie den Kommentar bitte als Hate Speech.</p><p><b>Registrierung</b><br>Damit Sie den gleichen Kommentar nicht mehrmals sehen, bitten wir Sie, sich zu registrieren. Wenn Sie 50 oder mehr Kommentare klassifiziert haben und registriert sind, nehmen Sie automatisch an der Preisverlosung für einen von drei Digitec Gutscheinen über 50.- CHF teil.</p><p>Vielen Dank für Ihre Unterstützung!</p>"
+          },
+          "image": "/img/projects/toxischekommentare2.jpg",
+          "toggle_img_style": true,
+          "reverse": true
+        },
+        {
+          "subtitle": {
+            "en": "Event",
+            "de": "Event"
+          },
+          "description": {
+            "en": "<p>From <b>March 19 - 22</b> the <b>annotation event</b> will take place. After the kick-off on March 19, we will classify as many comments as possible. In between, we will be available for Q&As / activities.</p><p><b>Program</b><br>March 19: 10.00am – 11.00am: Interactive presentation: \"What is toxic language?\"<br>March 20: 10.00am – 11.00am: Sharing on the questions \"How can toxic language be automatically detected and what are the challenges involved?\"<br>March 21: 02.00pm – 03.00pm: Q&A on toxic language, algorithms, etc.<br>March 22: 07.00pm – 08.00pm: Closing</p><p>We look forward to having you join us!</p>",
+            "de": "<p>Vom <b>19. - 22. März</b> findet der <b>Annotations-Event</b> statt. Nach dem Kick-Off am 19. März, klassifizieren wir so viele Kommentare wie möglich. Dazwischen sind wir für Q&As / Aktivitäten verfügbar.</p><p><b>Programm</b><br>19. März: 10.00 – 11.00 Uhr: Interaktive Präsentation: \"Was ist toxische Sprache?\"<br>20. März: 10.00 – 11.00 Uhr: Austausch zu den Fragen \"Wie kann toxische Sprache automatisch erkannt werden und was sind die damit verbundenen Herausforderungen?\"<br>21. März: 14.00 – 15.00 Uhr: Q&A zu toxischer Sprache, Algorithmen etc.<br>22. März: 19.00 – 20.00 Uhr: Abschluss</p><p>Wir freuen uns, wenn ihr mit dabei seid!</p>"
+          },
+          "image": "/img/projects/toxischekommentare3.jpg",
+          "toggle_img_style": true,
+          "reverse": false
+        },
+        {
+          "subtitle": {
+            "en": "Team",
+            "de": "Team"
+          },
+          "description": {
+            "en": "<p>The <a href='https://digdemlab.io/' target='_blank' rel='noopener'>Digital Democracy Lab</a> explores the impact of digital technology on politics and democracy using computational social science methods. It provides a research infrastructure that enables efficient, scalable, and reproducible data collection and analysis. Key areas of research include political communication and public opinion, e-government and public administration, AI and governance, civic technology and political participation, regulation of technology platforms, and state repression and surveillance.</p>",
+            "de": "<p>Das <a href='https://digdemlab.io/' target='_blank' rel='noopener'>Digital Democracy Lab</a> erforscht die Auswirkungen der digitalen Technologie auf Politik und Demokratie mit Methoden der Computational Social Science. Es bietet eine Forschungsinfrastruktur, die eine effiziente, skalierbare und reproduzierbare Datenerfassung und -analyse ermöglicht. Schlüsselbereiche der Forschung sind politische Kommunikation und öffentliche Meinung, E-Government und öffentliche Verwaltung, KI und Governance, zivile Technologie und politische Beteiligung, die Regulierung von Technologieplattformen sowie staatliche Repression und Überwachung.</p>"
+          },
+          "image": "/img/logos/digitaldemocracylab.png",
+          "toggle_img_style": false,
+          "reverse": true
+        },
+        {
+          "subtitle": null,
+          "description": {
+            "en": "<p>The Immigration Policy Lab investigates the effects of migration and integration policies. The aim is to use empirical evidence to provide answers to the question of which policy instruments work and which do not, and to develop new approaches. Based on extensive data and the latest statistical methods, the research group provides scientific foundations for improving social coexistence.</p>",
+            "de": "<p>Das Immigration Policy Lab erforscht Wirkungen von Migrations- und Integrationspolitiken. Ziel ist es, anhand empirischer Evidenz Antworten darauf zu geben, welche Politikinstrumente funktionieren und welche nicht, und neue Lösungsansätze zu entwickeln. Basierend auf umfangreichen Daten und den neuesten statistischen Verfahren liefert die Forschungsgruppe wissenschaftliche Grundlagen um das gesellschaftliche Zusammenleben zu verbessern.</p>"
+          },
+          "image": "/img/logos/immigrationpolicylab.png",
+          "toggle_img_style": false,
+          "reverse": true
+        }
+      ]
+    }
+  },
+  {
     "id": "bündnerkupfer",
     "name": "Bündner Kupfer",
     "description": {

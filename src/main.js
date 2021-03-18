@@ -34,6 +34,7 @@ Vue.use(
   VueGtag,
   {
     config: { id: process.env.VUE_APP_GTAG_ID },
+    enabled: store.getters["gdpr/accepted"] // enable/disable analytics tracking
   },
   router
 );

@@ -18,6 +18,7 @@
             :src="projectImage"
             :class="{ round: !project.img_project }"
             :alt="projectImage"
+            loading="lazy"
           />
         </div>
         <!-- Text Content section  -->
@@ -51,12 +52,11 @@
       }"
     ></div>
 
-    <div
+    <img
       class="project-bg-image"
-      :style="{
-        backgroundImage: 'url(' + backgroundImage + ')',
-      }"
-    ></div>
+      :src="backgroundImage"
+      loading="lazy"
+    />
 
     <div v-if="infoSign" class="info-sign">
       {{ infoSign }}

@@ -19,16 +19,14 @@
     <app-content-section class="small-padding overflow-hidden">
       <div class="row row-centered">
         <!-- Left Column -->
-        <div
-          class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12"
-        >
+        <div class="col col-xlarge-9 col-tablet-portrait-8 col-mobile-large-12">
           <!-- Project Cards component -->
           <app-content-section class="row ph-mv" v-if="isProjectsLoaded">
             <project-cards-block
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"
               :viewConfig="projectCardConfig"
-              :content = "projectCard"
+              :content="projectCard"
               projectType="featured"
             ></project-cards-block>
           </app-content-section>
@@ -57,9 +55,7 @@
           </app-content-section>
         </div>
         <!-- Right Column -->
-        <div
-          class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12"
-        >
+        <div class="col col-xlarge-3 col-tablet-portrait-4 col-mobile-large-12">
           <!-- Generic Content component for Our Mission -->
           <app-content-section
             class="row ph-mv sm-margin-left"
@@ -134,7 +130,7 @@ export default {
   name: "Home",
   data() {
     return {
-      projectCard:{},
+      projectCard: {},
       projectCardConfig: { vOrientation: true, visible: false },
       ourCommunity: {},
       bottomLeftConfig: { vOrientation: false, visible: false },

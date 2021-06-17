@@ -21,20 +21,20 @@ const actions = {
   async getFeaturedProjectsRemote({ commit }, { limit }) {
     commit("setIsDataFetched", false);
     try {
-      // TODO: Static file, replace with dynamic one
-      // const featured = await fetch(
-      //   process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/",
-      //   {
-      //     method: "GET",
-      //     headers: { "Content-Type": "application/json" },
-      //   }
-      // );
-      // let info_feat = [];
-      // if (featured && featured.ok) {
-      //   info_feat = await featured.json();
-      // }
-      // await commit("setFeaturedProjects", info_feat.projects);
-      await commit("setFeaturedProjects", static_projects.slice(0, limit));
+      const featured = await fetch(
+        process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/featured/",
+        {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      let info_feat = [];
+      if (featured && featured.ok) {
+        info_feat = await featured.json();
+      }
+      await commit("setFeaturedProjects", info_feat.projects);
+      // FIXME: Uncomment if static projects in assets shall be visible again
+      // await commit("setFeaturedProjects", static_projects.slice(0, limit));
       return static_projects;
     } catch (error) {
       console.error(error);
@@ -62,14 +62,15 @@ const actions = {
       // if (flagship && flagship.ok) {
       //   const info_flag = await flagship.json();
       //   projects = projects.concat(info_flag.projects);
-      // }
-      if (flagship) {
-        const info_flag = await flagship;
-        projects = projects.concat(info_flag);
-      }
+      // }      
       if (regular && regular.ok) {
         const info_reg = await regular.json();
         projects = projects.concat(info_reg.projects);
+      }
+      // FIXME: Set at the beginning place after featured websites will be good again
+      if (flagship) {
+        const info_flag = await flagship;
+        projects = projects.concat(info_flag);
       }
       await commit("setAllProjectList", projects);
       return projects;

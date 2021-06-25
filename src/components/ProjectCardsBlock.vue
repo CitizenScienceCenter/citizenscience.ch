@@ -121,10 +121,9 @@ export default {
   props: {
     vOrientation: Boolean,
     visible: Boolean,
-    viewConfig: Object,
+    viewConfig: { type: Object, required: true },
     projectType: String,
     content: Object,
-    limit: { type: Number, default: 0 },
   },
   components: {
     ProjectTeaser,
@@ -137,7 +136,10 @@ export default {
     getProjects() {
       const all = this.getProjectList(this.projectType);
       const projects = all
-        .slice(0, this.limit > 0 ? this.limit : all.length)
+        .slice(
+          0,
+          this.viewConfig.limit > 0 ? this.viewConfig.limit : all.length
+        )
         .map((p) => this.validateProjectContent(p));
       return projects;
     },

@@ -14,8 +14,7 @@
     <app-content-section class="overflow-hidden">
       <generic-content-width-block
         :content="intro"
-        :visible="intro_view.visible"
-        :hReverse="intro_view.hReverse"
+        :viewConfig="intro_view"
       ></generic-content-width-block>
     </app-content-section>
 

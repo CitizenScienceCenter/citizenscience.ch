@@ -15,8 +15,12 @@
       "second_button": { "disabled": false, "visible": false }
     },
     "our_community": {
+      "title": { "visible": true },
+      "subtitle": { "visible": true },
       "visible": true,
-      "hReverse": false
+      "hReverse": false,
+      "description": { "visible": true },
+      "image": { "visible": true, "rounded": true }
     },
     "how_join": {
       "visible": true,

@@ -45,6 +45,11 @@ const VIEW_FILES = {
     local: startProjectsViewsConfig,
     state: "seed_grants_view",
   },
+  eu_research: {
+    remote: "start_projects_styles.json",
+    local: startProjectsViewsConfig,
+    state: "eu_research_view",
+  },
   checklist: {
     remote: "start_projects_styles.json",
     local: startProjectsViewsConfig,
@@ -111,6 +116,7 @@ const state = {
   criteria_view: undefined,
   checklist_view: undefined,
   seed_grants_view: undefined,
+  eu_research_view: undefined,
   // Community Section states
   community_view: undefined,
   members_view: undefined,

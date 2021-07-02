@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <div class="row row-centered scroll-effect">
           <div class="col col-large-10">
-            <h2 class="heading centered" id="partnerships">
+            <h2 class="heading centered">
               {{ $t("section-checklist-heading") }}
             </h2>
           </div>

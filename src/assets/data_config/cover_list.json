@@ -23,15 +23,15 @@
   ],
   "covers": [
     {
-      "image": "events/snakeID.jpg",
-      "expiration": "2021-04-30T13:15+01:00",
+      "image": "cover.jpg",
+      "expiration": "2021-07-31T08:00+02:00",
       "title": {
-        "en": "RESULTS OF THE SNAKE ID CHALLENGE",
-        "de": "RESULTATE DER SNAKE-ID CHALLENGE"
+        "en": "STENO-LAB",
+        "de": "DAS STENO-LABOR"
       },
       "lead": {
-        "en": "The results of the Snake ID Challenge we hosted in 2019 are now published!",
-        "de": "Die Forschungsresultate der Snake-ID Challenge, welche wir 2019 auf unserer Plattform durchführten, wurden veröffentlicht!"
+        "en": "Read more about this exciting Citizen Science project in dialect research in our latest blog post (in German only)!",
+        "de": "Erfahrt mehr über dieses spannende Citizen Science Projekt in der Mundartforschung in unserem neusten Blogeintrag!"
       },
       "path": {
         "en": "https://citizensciencezurich.blog/",
@@ -40,21 +40,97 @@
       "button": { "en": "Explore", "de": "Entdecke mehr" }
     },
     {
-      "image": "events/mininggoespublic.jpg",
+      "image": "events/fiume.jpg",
       "expiration": "2021-04-30T13:15+01:00",
       "title": {
-        "en": "MINING GOES PUBLIC",
-        "de": "BERGBAU GOES PUBLIC"
+        "en": "URBAN FLOODS",
+        "de": "STÄDTISCHE ÜBERSCHWEMMUNGEN"
       },
       "lead": {
-        "en": "Dive with us into the mysterious world of historic mining and learn more about a multifaceted Citizen Science project in our latest blog post!",
-        "de": "Tauchen Sie mit uns ein in die geheimnisvolle Welt des historischen Bergbaus und erfahren Sie mehr über ein vielfältiges Citizen Science Projekt in unserem neusten Blogeintrag."
+        "en": "Interview with Valerio Lorini: Learn more about the project FIUME and how social media and artificial intelligence can be used to assess urban floods.",
+        "de": "Interview mit Valerio Lorini: Erfahren Sie mehr über das Projekt FIUME und wie man mit Social Media und künstlicher Intelligenz urbane Überschwemmungen analysieren kann."
       },
       "path": {
-        "en": "https://citizensciencezurich.blog/",
-        "de": "https://citizensciencezurich.blog/"
+        "en": "https://citizensciencezurich.blog/2021/03/15/interview-with-valerio-lorini-detect-urban-floods-impacts-with-the-fiume-project/",
+        "de": "https://citizensciencezurich.blog/2021/03/15/interview-with-valerio-lorini-detect-urban-floods-impacts-with-the-fiume-project/"
       },
-      "button": { "en": "Explore", "de": "Entdecke mehr" }
+      "button": { "en": "Read more", "de": "Lesen Sie mehr" }
+    },
+    {
+      "image": "events/HumanReproductionReloaded.jpg",
+      "expiration": "2021-02-23T09:00+01:00",
+      "title": {
+        "en": "HUMAN REPRODUCTION RELOADED",
+        "de": "HUMAN REPRODUCTION RELOADED"
+      },
+      "lead": {
+        "en": "The Citizen Science project explores the decision to step into parenthood.",
+        "de": "Das Citizen Science Projekt geht der Frage nach, was es braucht, um den Schritt in die Elternschaft zu wagen."
+      },
+      "path": {
+        "en": "https://www.humanreproduction.uzh.ch/en.html",
+        "de": "https://www.humanreproduction.uzh.ch/en.html"
+      },
+      "button": { "en": "Explore", "de": "Entdecke mehr" },
+      "extra_path": {
+        "en": "https://citizenscience.ch/files/Flyer_Human_Reproduction_Reloaded.pdf",
+        "de": "https://citizenscience.ch/files/Flyer_Human_Reproduction_Reloaded.pdf"
+      },
+      "extra_button": { "en": "Flyer", "de": "Flyer" }
+    },
+    {
+      "image": "events/CitSci.JPG",
+      "expiration": "2021-01-25T13:15+01:00",
+      "title": {
+        "en": "CitSci Helvetia 2021",
+        "de": "CitSci Helvetia 2021"
+      },
+      "lead": {
+        "en": "The first Swiss Citizen Science Conference (January 14-15, 2021)",
+        "de": "Die erste Schweizer Citizen Science Konferenz (14.-15. Januar 2021)"
+      },
+      "path": {
+        "en": "http://citscihelvetia.ch/",
+        "de": "http://citscihelvetia.ch/"
+      },
+      "button": { "en": "Conference Website", "de": "Konferenz-Website" }
+    },
+    {
+      "image": "events/image-launch.jpg",
+      "expiration": "2020-09-30T13:15+01:00",
+      "title": {
+        "en": "Explore the Citizen Science PROJECT BUILDER",
+        "de": "Entdecke den Citizen Science PROJECT BUILDER"
+      },
+      "lead": {
+        "en": "The CS Center released the beta version of the CS Project Builder, an open, free and simple tool to create your own Citizen Science Data Analysis project.",
+        "de": "Das CS Center hat die Beta-Version des CS Project Builders veröffentlicht: Ein offenes, kostenloses und einfaches Tool zum Erstellen Deines eigenen Citizen Science Datenanalyse-Projekts."
+      },
+      "path": {
+        "en": "https://lab.citizenscience.ch/en/",
+        "de": "https://lab.citizenscience.ch/de/"
+      },
+      "button": { "en": "Explore", "de": "Entdecken" }
+    },
+    {
+      "image": "events/cdc.jpg",
+      "expiration": "2020-09-22T13:15+01:00",
+      "title": {
+        "en": "CROWD vs COVID-19",
+        "de": ""
+      },
+      "lead": {
+        "en": "Read in our latest blog how to hack COVID-19 with AI and Citizen Science",
+        "de": ""
+      },
+      "path": {
+        "en": "https://citizensciencezurich.blog/2020/04/28/hacking-covid-19-with-ai-and-citizen-science/",
+        "de": ""
+      },
+      "button": { "en": "More Information" },
+      "extra_logos": {
+        "logo_right": "/img/events/cdc_icon.png"
+      }
     }
   ]
 }

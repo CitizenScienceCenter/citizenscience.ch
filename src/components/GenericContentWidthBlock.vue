@@ -2,7 +2,7 @@
   <div
     class="generic-content_width"
     v-if="
-      visible &&
+      br.visible &&
         contentData &&
         Object.keys(contentData).length !== 0 &&
         contentData.constructor === Object
@@ -10,7 +10,7 @@
   >
     <!-- Text section -->
     <div class="content-wrapper">
-      <div class="row" :class="{ 'row-reverse-large': hReverse }">
+      <div class="row" :class="{ 'row-reverse-large': br.hReverse }">
         <div
           class="col col-tablet-portrait-11 col-large-after-1 col-wrapping col-large-no-bottom-margin scroll-effect text-section"
           :class="[content.image ? 'col-large-6' : 'col-large-12']"
@@ -18,7 +18,7 @@
           <!-- Heading section -->
           <div
             class="row row-full-width row-centered row-large-left-aligned"
-            v-if="localTranslation(content.heading)"
+            v-if="br.title.visible && localTranslation(content.heading)"
           >
             <h2 class="heading centered left-aligned-large">
               {{ localTranslation(contentData.heading) }}
@@ -28,7 +28,7 @@
           <!-- Subheading section -->
           <div
             class="row row-full-width"
-            v-if="localTranslation(contentData.subtitle)"
+            v-if="br.subtitle.visible && localTranslation(contentData.subtitle)"
           >
             <div
               class="subheading"
@@ -38,7 +38,7 @@
           <!-- Description section -->
           <div
             class="row row-centered"
-            v-if="localTranslation(content.description)"
+            v-if="br.description.visible && localTranslation(content.description)"
           >
             <component
               :is="getDynamicData"
@@ -87,16 +87,18 @@
     <div
       class="background-wrapper scroll-effect scroll-effect-delayed-1"
       :class="{
-        'background-wrapper-move-right': !hReverse,
-        'background-wrapper-move-left': hReverse,
+        'background-wrapper-move-right': !br.hReverse,
+        'background-wrapper-move-left': br.hReverse,
+        'no-text':!br.description.visible
       }"
+      v-if="br.image.visible"
     >
       <div class="content-wrapper">
         <div class="row row-centered">
           <div class="col col-tablet-portrait-8 col-large-6 col-large-after-1">
             <img
               :src="content.image"
-              style="border-radius:50%"
+              :class="{'rounded':br.image.rounded}"
               :alt="content.image"
             />
           </div>
@@ -119,8 +121,6 @@ export default {
   },
   props: {
     content: Object,
-    visible: Boolean,
-    hReverse: Boolean,
     viewConfig: Object,
   },
   computed: {

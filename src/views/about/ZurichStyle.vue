@@ -51,8 +51,7 @@
     <app-content-section class="overflow-hidden">
       <generic-content-width-block
         :content="sdgContent"
-        :visible="sdgView.visible"
-        :hReverse="sdgView.hReverse"
+        :viewConfig="sdgView"
       ></generic-content-width-block>
     </app-content-section>
 

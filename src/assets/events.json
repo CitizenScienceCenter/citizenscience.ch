@@ -1,5 +1,38 @@
 [
   {
+    "path": "brownbag-2021-05-26",
+    "start": "2021-05-26T12:00+02:00",
+    "end": "2021-05-26T13:00+02:00",
+    "location": "Online via Zoom. Registrieren Sie sich via E-Mail an info@citizenscience.ch",
+    "title": "Lunch Talk: Wer forscht mit und warum? Bereitschaft und Motivation zur Beteiligung an Forschung in der Schweiz",
+    "abstract": "",
+    "speakers": "Alexander Seifert, Dr., Fachhochschule Nordwestschweiz FHNW </br> Susanne Tönsmann, Dr., Partizipative Wissenschaftsakademie",
+    "content": "Durch partizipative Prozesse können Bürgerinnen und Bürger an einem wichtigen gesellschaftlichen Bereich, der Forschung, beteiligt werden. Um partizipative Prozesse zu initiieren und durchzuführen, braucht es nicht nur eine Öffnung der Forschungsseite, sondern auch eine Bereitschaft für eine solche Beteiligung von Seiten der Bürgerinnen und Bürger. Aber wie sieht diese Bereitschaft in der Schweiz überhaupt aus? Was ist die Motivation, sich an Forschung zu beteiligen, was sind Wünsche und Bedenken? Im Rahmen einer repräsentativen Befragung der Fachhochschule Nordwestschweiz FHNW wurden 1'394 Personen in allen Sprachregionen der Schweiz befragt. Im BrownBag Lunch werden die ersten Ergebnisse der Studie vorgestellt.",
+    "image": "brownbag.jpg"
+  },
+  {
+    "path": "brownbag-2021-05-05",
+    "start": "2021-05-05T12:00+02:00",
+    "end": "2021-05-05T13:00+02:00",
+    "location": "Online via zoom. Register via email to info@citizenscience.ch",
+    "title": "Lunch Talk: Co-creating a Citizen Science Handbook for Zurich",
+    "abstract": "",
+    "speakers": "Rosy Mondardini, Citizen Science Center Zurich </br> Ursina Roffler, Citizen Science Center Zurich",
+    "content": "Imagine you would like to set up a Citizen Science project in Zurich. What information do you need to start? What questions do you have? Or maybe you have already launched a Citizen Science project and in retrospect you know exactly what was important, what worked well and what didn’t, and have tips and tricks for others? Or you are an expert in Citizen Science, science communication or similar and can support us with your expertise?<br><br>In all cases, please help us building a \"Citizen Science handbook\" as a simple guide on how to best do Citizen Science in Zurich. As we have done in the past, we would like to co-create this important document with our community by integrating your feedback and suggestions. <br><br>At the upcoming Brown Bag Lunch we will introduce and discuss the current ideas and early draft, and agree with all interested people on a process to iterate the document till final release.",
+    "image": "brownbag.jpg"
+  },
+  {
+    "path": "brownbag-2021-03-24",
+    "start": "2021-03-24T12:00+01:00",
+    "end": "2021-03-24T13:00+01:00",
+    "location": "Online via zoom. Register via email to info@citizenscience.ch",
+    "title": "Lunch Talk: Assessing urban floods with Artificial Intelligence and Social Media",
+    "abstract": "",
+    "speakers": "Valerio Lorini, Joint Research Centre, European Commission",
+    "content": "Floods are a major threat to urban areas, affecting the life of millions of people and bringing untold damage to communities and infrastructures. Urban flooding is difficult to monitor because the data is complex, both to collect and process. However, real time information is important for crisis responders to manage the response and recovery after a flood. <br><br>Valerio Lorini wants to tackle this issue in combining social media, citizen science and artificial intelligence. In this Lunch Talk he presents his project FIUME (<u>F</u>lood risk and <u>I</u>mpact in <u>U</u>rban areas using social <u>Me</u>dia) that aims at extracting valuable information about damages during floods or storms in urban areas. To do so, the research team is building machine-learning models to classify tweets related to such events for the two pilot cities Barcelona and Sao Paulo.",
+    "image": "brownbag.jpg"
+  },
+  {
     "path": "summerschool-2021-06-14",
     "start": "2021-06-14T09:00+02:00",
     "end": "2021-06-25T16:00+02:00",
@@ -33,9 +66,9 @@
     "image": "cs_intro_2.jpg"
   },
   {
-    "path": "vhs-2021-04-23",
-    "start": "2021-04-23T09:00+02:00",
-    "end": "2021-04-23T17:30+02:00",
+    "path": "vhs-2021-04-20",
+    "start": "2021-04-20T09:00+02:00",
+    "end": "2021-04-20T17:30+02:00",
     "location": "Online course",
     "title": "Advanced Citizen Science: Designing and facilitating participatory research processes competently ",
     "abstract": "",

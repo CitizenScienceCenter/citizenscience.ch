@@ -3,7 +3,7 @@
     class="generic-content scroll-effect"
     :class="{ 'content-wrapper': !br.compact_view }"
     v-if="
-      visible &&
+      br.visible &&
         contentData &&
         Object.keys(contentData).length !== 0 &&
         contentData.constructor === Object
@@ -155,7 +155,6 @@ export default {
   },
   props: {
     content: Object,
-    visible: Boolean,
     vOrientation: Boolean,
     hReverse: Boolean,
     viewConfig: Object,

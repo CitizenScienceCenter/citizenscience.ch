@@ -25,6 +25,19 @@
           </div>
         </div>
       </div>
+      <div class="content-wrapper">
+        <div
+          class="row row-centered row-middle content-item"
+          v-for="item in content"
+          v-bind:key="item.id"
+        >
+          <component
+            :is="item.settings.component"
+            :content="item"
+            :viewConfig="mainViewConfig[item.settings.style]"
+          ></component>
+        </div>
+      </div>
     </app-content-section>
     <!-- TODO: Implement a for loop with dynamic component -->
     <section-newsletter-signup></section-newsletter-signup>
@@ -36,16 +49,18 @@
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
-import GenericContentWidthBlock from "@/components/GenericContentWidthBlock.vue";
+import ImgWidthBlock from "@/components/ImgWidthBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 import { mapGetters, mapState } from "vuex";
 
 export default {
-  data:function() {
+  data: function() {
     return {
       // TODO:This array contains the components structure
       content_structure: [],
+      mainViewConfig: { visible: false },
+      content: {},
     };
   },
   props: {
@@ -57,7 +72,7 @@ export default {
   components: {
     SectionNewsletterSignup,
     GenericContentBlock,
-    GenericContentWidthBlock,
+    ImgWidthBlock,
     "app-content-section": ContentSection,
     "app-footer": Footer,
   },
@@ -72,6 +87,24 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapState({
+      style: (state) => state.viewconfig.eu_research_view,
+    }),
+    ...mapGetters({ getGContent: "content/getGenericContent" }),
+  },
+  methods: {
+    setViewConfig() {
+      this.mainViewConfig = this.style;
+    },
+    loadContent() {
+      this.content = this.getGContent("eu_research").main_content;
+    },
+  },
+  created() {
+    this.setViewConfig();
+    this.loadContent();
   },
 };
 </script>

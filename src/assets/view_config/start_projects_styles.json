@@ -36,16 +36,38 @@
     "second_button": { "disabled": false, "visible": false }
   },
   "eu_research": {
-    "visible": true,
-    "vOrientation": false,
-    "heading": { "visible": false },
-    "title": { "visible": false },
-    "subtitle": { "visible": false },
-    "description": { "visible": true },
-    "image": { "visible": true, "size": "md", "rounded": true },
-    "img_description": { "visible": false },
-    "button": { "disabled": false, "visible": true },
-    "second_button": { "disabled": false, "visible": false }
+    "gc-intro": {
+      "visible": true,
+      "vOrientation": false,
+      "heading": { "visible": false },
+      "title": { "visible": false },
+      "subtitle": { "visible": false },
+      "description": { "visible": true },
+      "image": { "visible": false, "size": "md", "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": false },
+      "second_button": { "disabled": false, "visible": false }
+    },
+    "gc-right-img": {
+      "visible": true,
+      "vOrientation": false,
+      "hReverse": true,
+      "heading": { "visible": false },
+      "title": { "visible": true },
+      "subtitle": { "visible": false },
+      "description": { "visible": true },
+      "image": { "visible": true, "size": "sm", "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": false, "visible": false }
+    },
+    "gc-right-full-img": {      
+      "visible": true,
+      "position": "end",
+      "width":75,
+      "height": 75,
+      "rounded":false
+    }
   },
   "checklist": {
     "list": {

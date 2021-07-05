@@ -210,5 +210,116 @@
         "de": "Dokument ansehen (EN)"
       }
     }
+  },
+  "eu_research": {
+    "main_content": [
+      {
+        "settings": {
+          "component": "GenericContentBlock",
+          "style": "gc-intro"
+        },
+        "description": {
+          "en": "<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </ul>",
+          "de": "<p> Treten Sie mit uns in Kontakt, wir würden uns freuen, von Ihnen zu hören! </p> <ul> <li>Für allgemeine Fragen, Vorschläge für Projekte oder Anregungen zu unserer Plattform, wenden Sie sich bitte an <a href='mailto:info@citizenscience.ch' target='_blank' rel='noopener'>info@citizenscience.ch</a> </li> <li>Falls Sie ein Anliegen zum Thema Mitgliedschaft haben und wissen möchten, was die Vorteile und Vorgehensweise sind, kontaktieren Sie bitte <a href='mailto:maria.mondardini@uzh.ch' target='_blank' rel='noopener'>maria.mondardini@uzh.ch</a>.</li> <li>Fragen betreffend Partnerschaften beantwortet ebenfalls Rosy Mondardini unter <a href='mailto:maria.mondardini@uzh.ch' target='_blank' rel='noopener'>maria.mondardini@uzh.ch</a>. </li> </ul>"
+        }
+      },
+      {
+        "settings": {
+          "component": "GenericContentBlock",
+          "style": "gc-right-img"
+        },
+        "title": {
+          "en": "TIME4SDG - Supporting sustainable Institutional Changes to promote Citizen Science in Science and Technology.",
+          "de": "Wie können Sie Teil von unserer Community werden?"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond by meeting online and offline. It consists of local communities of professional scientists and citizen scientists, including members of <strong> UZH </strong> and <strong> ETH Zurich </strong>, the Zurich senior university and persons listed in the universities research participant pools, as well as a wider network of contributors,  <router-link to='/community/partnerships'> partners </router-link> and <router-link to='/community/members'> members </router-link>. </p> <p> Our community activities include online and offline interactions and local events in an open, creative and interdisciplinary way.</p>",
+          "de": "<p> Unsere Citizen Science Community wächst in Zürich und darüber hinaus und trifft sich online und offline. Sie besteht aus Wissenschaftler*innen aus <strong>UZH</strong> und <strong>ETH Zürich</strong> sowie <strong>Citizen Scientists</strong>, wie zum Beispiel den Mitgliedern der Zürcher Seniorenuniversität sowie einem breiten Netzwerk von Unterstützer*innen, <router-link to='/community/partnerships'>Partnern</router-link> und <router-link to='/community/members'>Mitgliedern</router-link>. </p> <p> Die Aktivitäten unserer Community umfassen Online- und Offline-Veranstaltungen und Interaktionen, die in einer offenen, kreativen und interdisziplinären Art und Weise stattfinden. </p>"
+        },
+        "image": "/img/uzh-eth.jpg",
+        "button": {
+          "link": null,
+          "route": "/events",
+          "icon": "",
+          "selfWindow": true,
+          "en": "Read more",
+          "de": "Unsere Veranstaltungen"
+        }
+      },
+      {
+        "settings": {
+          "component": "ImgWidthBlock",
+          "style": "gc-right-full-img"
+        },
+        "image": "http://placeimg.com/800/400/nature",
+        "alt": "description"
+      },
+      {
+        "settings": {
+          "component": "GenericContentBlock",
+          "style": "gc-right-img"
+        },
+        "title": {
+          "en": "INCENTIVE - Establishing citizen sceience hubs in European Research performing and funding organizations to drive institutional change and ground resposible research and innovation in society.",
+          "de": "Wie können Sie Teil von unserer Community werden?"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond by meeting online and offline. It consists of local communities of professional scientists and citizen scientists, including members of <strong> UZH </strong> and <strong> ETH Zurich </strong>, the Zurich senior university and persons listed in the universities research participant pools, as well as a wider network of contributors,  <router-link to='/community/partnerships'> partners </router-link> and <router-link to='/community/members'> members </router-link>. </p> <p> Our community activities include online and offline interactions and local events in an open, creative and interdisciplinary way.</p>",
+          "de": "<p> Unsere Citizen Science Community wächst in Zürich und darüber hinaus und trifft sich online und offline. Sie besteht aus Wissenschaftler*innen aus <strong>UZH</strong> und <strong>ETH Zürich</strong> sowie <strong>Citizen Scientists</strong>, wie zum Beispiel den Mitgliedern der Zürcher Seniorenuniversität sowie einem breiten Netzwerk von Unterstützer*innen, <router-link to='/community/partnerships'>Partnern</router-link> und <router-link to='/community/members'>Mitgliedern</router-link>. </p> <p> Die Aktivitäten unserer Community umfassen Online- und Offline-Veranstaltungen und Interaktionen, die in einer offenen, kreativen und interdisziplinären Art und Weise stattfinden. </p>"
+        },
+        "image": "/img/uzh-eth.jpg",
+        "button": {
+          "link": null,
+          "route": "/events",
+          "icon": "",
+          "selfWindow": true,
+          "en": "Read more",
+          "de": "Unsere Veranstaltungen"
+        }
+      },
+      {
+        "settings": {
+          "component": "ImgWidthBlock",
+          "style": "gc-right-full-img"
+        },
+        "image": "http://placeimg.com/800/400/nature",
+        "alt": "description"
+      },
+      {
+        "settings": {
+          "component": "GenericContentBlock",
+          "style": "gc-right-img"
+        },
+        "title": {
+          "en": "CROWD4SDG",
+          "de": "Wie können Sie Teil von unserer Community werden?"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> Our Citizen Science Community is growing and spans Zurich and beyond by meeting online and offline. It consists of local communities of professional scientists and citizen scientists, including members of <strong> UZH </strong> and <strong> ETH Zurich </strong>, the Zurich senior university and persons listed in the universities research participant pools, as well as a wider network of contributors,  <router-link to='/community/partnerships'> partners </router-link> and <router-link to='/community/members'> members </router-link>. </p> <p> Our community activities include online and offline interactions and local events in an open, creative and interdisciplinary way.</p>",
+          "de": "<p> Unsere Citizen Science Community wächst in Zürich und darüber hinaus und trifft sich online und offline. Sie besteht aus Wissenschaftler*innen aus <strong>UZH</strong> und <strong>ETH Zürich</strong> sowie <strong>Citizen Scientists</strong>, wie zum Beispiel den Mitgliedern der Zürcher Seniorenuniversität sowie einem breiten Netzwerk von Unterstützer*innen, <router-link to='/community/partnerships'>Partnern</router-link> und <router-link to='/community/members'>Mitgliedern</router-link>. </p> <p> Die Aktivitäten unserer Community umfassen Online- und Offline-Veranstaltungen und Interaktionen, die in einer offenen, kreativen und interdisziplinären Art und Weise stattfinden. </p>"
+        },
+        "image": "/img/uzh-eth.jpg",
+        "button": {
+          "link": null,
+          "route": "/events",
+          "icon": "",
+          "selfWindow": true,
+          "en": "Read more",
+          "de": "Unsere Veranstaltungen"
+        }
+      }
+    ]
   }
 }

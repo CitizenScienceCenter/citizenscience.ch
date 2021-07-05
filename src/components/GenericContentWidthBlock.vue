@@ -112,7 +112,7 @@ import { getTranslation, openUrl, getNested } from "@/assets/support.js";
 import { mapGetters } from "vuex";
 
 export default {
-  name: "GenericContentBlock",
+  name: "GenericContentWidthBlock",
   data() {
     return {
       br: this.viewConfig,

@@ -6,14 +6,14 @@
   "section-collaborations-heading": "EU Research Projects"
   },
   "de": {
-  "page-title": "EU Research Projects",
+  "page-title": "EU Forschungsprojekte",
 
-  "section-collaborations-heading": "Pending for translate"
+  "section-collaborations-heading": "EU Forschungsprojekte"
   }
   }
 </i18n>
 <template>
-  <div>
+  <div class="eu-research">
     <app-content-section class="overflow-hidden">
       <div class="content-wrapper">
         <!-- Heading section -->
@@ -35,11 +35,12 @@
             :is="item.settings.component"
             :content="item"
             :viewConfig="mainViewConfig[item.settings.style]"
+            :componentId="item.settings.id"
           ></component>
         </div>
       </div>
     </app-content-section>
-    <!-- TODO: Implement a for loop with dynamic component -->
+    
     <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>
@@ -109,10 +110,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/theme.scss";
 @import "@/styles/shared/variables.scss";
-.content-item {
-  padding: $spacing-3 0;
-}
 </style>

@@ -56,7 +56,7 @@
       "title": { "visible": true },
       "subtitle": { "visible": false },
       "description": { "visible": true },
-      "image": { "visible": true, "size": "sm", "rounded": true },
+      "image": { "visible": true, "size": "md", "rounded": false },
       "img_description": { "visible": false },
       "button": { "disabled": false, "visible": true },
       "second_button": { "disabled": false, "visible": false }
@@ -64,7 +64,7 @@
     "gc-right-full-img": {      
       "visible": true,
       "position": "end",
-      "width":75,
+      "width":81,
       "height": 75,
       "rounded":false
     }

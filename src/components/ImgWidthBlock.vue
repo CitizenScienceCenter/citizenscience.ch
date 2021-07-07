@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="br.visible"
-    class="only-img row row-full-width extra-margin-bottom scroll-effect scroll-effect-delayed-1 "
+    class="only-img row row-full-width extra-margin-bottom scroll-effect scroll-effect-delayed-3 "
     :class="img_position"
   >
     <div :class="[img_width]">
@@ -49,12 +49,16 @@ export default {
       if (this.br.width <= 25) this.img_width = "col-3";
       else if (this.br.width <= 50) this.img_width = "col-6";
       else if (this.br.width <= 75) this.img_width = "col-9";
+      else if (this.br.width <= 83) this.img_width = "col-10";
+      else if (this.br.width <= 91) this.img_width = "col-11";
       else if (this.br.width <= 100) this.img_width = "col-12";
 
       // image height standarization
       if (this.br.height <= 25) this.img_height = "img-25";
       else if (this.br.height <= 50) this.img_height = "img-50";
-      else if (this.br.height <= 75) this.img_height = "img-75";
+      else if (this.br.height <= 70) this.img_height = "img-70";
+      else if (this.br.height <= 80) this.img_height = "img-80";
+      else if (this.br.height <= 90) this.img_height = "img-90";
       else if (this.br.height <= 100) this.img_height = "img-100";
 
       if (this.br.position == "center") this.img_position = "row-centered";
@@ -75,9 +79,11 @@ export default {
 @import "@/styles/shared/variables.scss";
 
 .only-img {
+  padding-bottom: $spacing-5;
   img {
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
   }
   .img-25 {
     height: 25vh;
@@ -85,8 +91,14 @@ export default {
   .img-50 {
     height: 50vh;
   }
-  .img-75 {
-    height: 75vh;
+  .img-70 {
+    height: 70vh;
+  }
+  .img-80 {
+    height: 80vh;
+  }
+  .img-90 {
+    height: 90vh;
   }
   .img-100 {
     height: 100vh;

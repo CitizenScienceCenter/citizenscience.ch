@@ -64,8 +64,8 @@
     "gc-right-full-img": {      
       "visible": true,
       "position": "end",
-      "width":81,
-      "height": 75,
+      "width":90,
+      "height": 100,
       "rounded":false
     }
   },

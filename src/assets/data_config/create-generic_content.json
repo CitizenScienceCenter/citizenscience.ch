@@ -256,7 +256,7 @@
           "component": "ImgWidthBlock",
           "style": "gc-right-full-img"
         },
-        "image": "/img/time4cs_map.png",
+        "image": "/img/time4cs_map.svg",
         "alt": "time4cs_map"
       },
       {
@@ -274,8 +274,8 @@
           "de": ""
         },
         "description": {
-          "en": "<p> <strong>INCENTIVE</strong> is set on empowering European Research Performing and Funding Organizations (<a>RPFOs</a>) to establish sustainable transdisciplinary hubs for stimulating and supporting excellent Citizen Science.</p><p>Therefore, the project starts by establishing and demonstrating the potential of such Citizen Science Hubs in four <a>RPFOs</a> – University of Twente (the Netherlands), Autonomous University of Barcelona (Spain), Aristotle University of Thessaloniki (Greece), and Vilnius Gediminas Technical University (Lithuania).</p><p>The Center supports the project with its experience and knowledge in establishing and running a Citizen Science Hub.</p>",
-          "de": "<p> <strong>INCENTIVE</strong> möchte europäische Forschungs- und Förderorganisationen (Research Performing and Funding Organizations – <a>RPFOs</a>) unterstützen, nachhaltige transdisziplinäre Citizen Science Hubs zu etablieren.</p><p>Daher beginnt das Projekt mit dem Aufbau solcher Citizen Science Hubs in vier <a>RPFOs</a> – der Universität Twente (den Niederlanden), der Autonomen Universität Barcelona (Spanien), der Aristoteles Universität Thessaloniki (Griechenland) und der Technischen Universität Vilnius Gediminas (Litauen). </p><p>Wir unterstützen das Projekt mit unserer Erfahrung und unserem Wissen in den Bereichen Aufbau und Betrieb eines Citizen Science Hubs.</p>"
+          "en": "<p> <strong>INCENTIVE</strong> is set on empowering European Research Performing and Funding Organizations (RPFOs) to establish sustainable transdisciplinary hubs for stimulating and supporting excellent Citizen Science.</p><p>Therefore, the project starts by establishing and demonstrating the potential of such Citizen Science Hubs in four RPFOs – University of Twente (the Netherlands), Autonomous University of Barcelona (Spain), Aristotle University of Thessaloniki (Greece), and Vilnius Gediminas Technical University (Lithuania).</p><p>The Center supports the project with its experience and knowledge in establishing and running a Citizen Science Hub.</p>",
+          "de": "<p> <strong>INCENTIVE</strong> möchte europäische Forschungs- und Förderorganisationen (Research Performing and Funding Organizations – RPFOs) unterstützen, nachhaltige transdisziplinäre Citizen Science Hubs zu etablieren.</p><p>Daher beginnt das Projekt mit dem Aufbau solcher Citizen Science Hubs in vier RPFOs – der Universität Twente (den Niederlanden), der Autonomen Universität Barcelona (Spanien), der Aristoteles Universität Thessaloniki (Griechenland) und der Technischen Universität Vilnius Gediminas (Litauen). </p><p>Wir unterstützen das Projekt mit unserer Erfahrung und unserem Wissen in den Bereichen Aufbau und Betrieb eines Citizen Science Hubs.</p>"
         },
         "image": "/img/logos/incentive.png",
         "button": {
@@ -292,8 +292,8 @@
           "component": "ImgWidthBlock",
           "style": "gc-right-full-img"
         },
-        "image": "/img/incentive_map.png",
-        "alt": "description"
+        "image": "/img/incentive_map.svg",
+        "alt": "incentive_map"
       },
       {
         "settings": {

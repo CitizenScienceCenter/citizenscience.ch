@@ -6,6 +6,7 @@
   >
     <div :class="[img_width]">
       <img
+        fluid-grow
         :class="[{ rounded: br.rounded }, img_height]"
         :src="contentData.image"
         :alt="contentData.alt"
@@ -48,14 +49,16 @@ export default {
       // image width standarization
       if (this.br.width <= 25) this.img_width = "col-3";
       else if (this.br.width <= 50) this.img_width = "col-6";
+      else if (this.br.width <= 58) this.img_width = "col-7";
+      else if (this.br.width <= 66) this.img_width = "col-8";
       else if (this.br.width <= 75) this.img_width = "col-9";
       else if (this.br.width <= 83) this.img_width = "col-10";
       else if (this.br.width <= 91) this.img_width = "col-11";
       else if (this.br.width <= 100) this.img_width = "col-12";
 
       // image height standarization
-      if (this.br.height <= 25) this.img_height = "img-25";
-      else if (this.br.height <= 50) this.img_height = "img-50";
+      if (this.br.height <= 50) this.img_height = "img-50";
+      else if (this.br.height <= 60) this.img_height = "img-60";
       else if (this.br.height <= 70) this.img_height = "img-70";
       else if (this.br.height <= 80) this.img_height = "img-80";
       else if (this.br.height <= 90) this.img_height = "img-90";
@@ -64,6 +67,9 @@ export default {
       if (this.br.position == "center") this.img_position = "row-centered";
       else if (this.br.position == "end") this.img_position = "row-end";
       else this.img_position = null;
+    },
+    trigger(msg) {
+      alert(msg);
     },
   },
   created() {
@@ -80,31 +86,53 @@ export default {
 
 .only-img {
   padding-bottom: $spacing-5;
+  justify-content: flex-start;
   img {
     margin-left: auto;
     margin-right: auto;
+    height: auto;
     width: 100%;
-  }
-  .img-25 {
-    height: 25vh;
-  }
-  .img-50 {
-    height: 50vh;
-  }
-  .img-70 {
-    height: 70vh;
-  }
-  .img-80 {
-    height: 80vh;
-  }
-  .img-90 {
-    height: 90vh;
-  }
-  .img-100 {
-    height: 100vh;
+    transform: scale(1.3);
   }
   .rounded {
     border-radius: 5%;
+  }
+}
+@media only screen and (min-width: $viewport-mobile-large) {
+  .only-img {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+@media only screen and (min-width: $viewport-tablet-portrait) {
+  .only-img {
+    img {
+      transform: scale(1) !important;
+    }
+    .img-50 {
+      max-height: 50vh;
+      max-width: 50%;
+    }
+    .img-60 {
+      max-height: 60vh;
+      max-width: 60%;
+    }
+    .img-70 {
+      max-height: 70vh;
+      max-width: 70%;
+    }
+    .img-80 {
+      max-height: 80vh;
+      max-width: 80%;
+    }
+    .img-90 {
+      max-height: 90vh;
+      max-width: 90%;
+    }
+    .img-100 {
+      max-height: 100vh;
+    }
   }
 }
 </style>

@@ -54,11 +54,6 @@ const SeedGrants = (resolve) => {
     resolve(require("../views/start/SeedGrants.vue"));
   });
 };
-const EuropeanResearch = (resolve) => {
-  require.ensure(["../views/start/EuropeanResearch.vue"], () => {
-    resolve(require("../views/start/EuropeanResearch.vue"));
-  });
-};
 // const Checklist = (resolve) => {
 //   require.ensure(["../views/start/Checklist.vue"], () => {
 //     resolve(require("../views/start/Checklist.vue"));
@@ -89,6 +84,11 @@ const Mission = (resolve) => {
 const ZurichStyle = (resolve) => {
   require.ensure(["../views/about/ZurichStyle.vue"], () => {
     resolve(require("../views/about/ZurichStyle.vue"));
+  });
+};
+const EuropeanResearch = (resolve) => {
+  require.ensure(["../views/about/EuropeanResearch.vue"], () => {
+    resolve(require("../views/about/EuropeanResearch.vue"));
   });
 };
 const Offer = (resolve) => {
@@ -311,22 +311,6 @@ export const routes = [
               }
             },
           },
-          {
-            path: "eu_research",
-            component: EuropeanResearch,
-            meta: {
-              i18n: "navigation-startproject-eu-research",
-              nav: true,
-            },
-            beforeEnter: async (to, from, next) => {
-              const res = await store.dispatch("viewconfig/getRemoteView", {
-                view: "eu_research",
-              });
-              if (res) {
-                next();
-              }
-            },
-          },
           // {
           //   path: "checklist",
           //   meta: { i18n: "navigation-startproject-checklist", nav: true },
@@ -447,6 +431,22 @@ export const routes = [
               // This preload the page style
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "zurich_style",
+              });
+              if (res) {
+                next();
+              }
+            },
+          },
+          {
+            path: "eu_research",
+            component: EuropeanResearch,
+            meta: {
+              i18n: "navigation-startproject-eu-research",
+              nav: true,
+            },
+            beforeEnter: async (to, from, next) => {
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "eu_research",
               });
               if (res) {
                 next();

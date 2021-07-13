@@ -1,7 +1,7 @@
 <template>
-  <div
+  <content-section
     v-if="br.visible"
-    class="only-img row row-full-width extra-margin-bottom scroll-effect scroll-effect-delayed-3 "
+    class="only-img row row-full-width scroll-effect scroll-effect-delayed-3"
     :class="img_position"
   >
     <div :class="[img_width]">
@@ -12,12 +12,15 @@
         :alt="contentData.alt"
       />
     </div>
-  </div>
+  </content-section>
 </template>
 
 <script>
+import ContentSection from "@/components/shared/ContentSection.vue";
+
 export default {
   name: "ImgWidthBlock",
+  components: { ContentSection },
   data() {
     return {
       br: {
@@ -85,8 +88,7 @@ export default {
 @import "@/styles/shared/variables.scss";
 
 .only-img {
-  padding-bottom: $spacing-5;
-  justify-content: flex-start;
+  padding-top: $spacing-2;
   img {
     margin-left: auto;
     margin-right: auto;

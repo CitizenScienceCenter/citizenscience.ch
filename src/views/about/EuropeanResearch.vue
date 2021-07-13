@@ -15,32 +15,29 @@
 <template>
   <div class="eu-research">
     <app-content-section class="overflow-hidden">
-      <div class="content-wrapper">
-        <!-- Heading section -->
-        <div class="row row-centered scroll-effect">
-          <div class="col col-large-10">
-            <h2 class="heading centered">
-              {{ $t("section-collaborations-heading") }}
-            </h2>
-          </div>
+      <!-- Heading section -->
+      <div class="content-wrapper row row-centered scroll-effect">
+        <div class="col col-large-10">
+          <h2 class="heading centered">
+            {{ $t("section-collaborations-heading") }}
+          </h2>
         </div>
       </div>
-      <div class="content-wrapper">
-        <div
-          class="row row-centered row-middle content-item"
-          v-for="item in content"
-          v-bind:key="item.id"
-        >
-          <component
-            :is="item.settings.component"
-            :content="item"
-            :viewConfig="mainViewConfig[item.settings.style]"
-            :componentId="item.settings.id"
-          ></component>
-        </div>
+      <div
+        class="row row-centered row-middle content-item more-greyish"
+        v-for="item in content"
+        v-bind:key="item.id"
+        :class="{ 'content-wrapper': item.settings.component != 'ImgWidthBlock' }"
+      >
+        <component
+          :is="item.settings.component"
+          :content="item"
+          :viewConfig="mainViewConfig[item.settings.style]"
+          :componentId="item.settings.id"
+        ></component>
       </div>
     </app-content-section>
-    
+
     <section-newsletter-signup></section-newsletter-signup>
 
     <app-footer :platform="platform"></app-footer>

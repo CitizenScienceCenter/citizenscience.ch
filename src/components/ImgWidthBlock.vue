@@ -7,7 +7,10 @@
     <div :class="[img_width]">
       <img
         fluid-grow
-        :class="[{ rounded: br.rounded }, img_height]"
+        :class="[
+          { rounded: br.rounded, end: br.position == 'end', start: br.position == 'start' },
+          img_height,
+        ]"
         :src="contentData.image"
         :alt="contentData.alt"
       />
@@ -67,9 +70,9 @@ export default {
       else if (this.br.height <= 90) this.img_height = "img-90";
       else if (this.br.height <= 100) this.img_height = "img-100";
 
-      if (this.br.position == "center") this.img_position = "row-centered";
+      if (this.br.position == "start") this.img_position = "row-start";
       else if (this.br.position == "end") this.img_position = "row-end";
-      else this.img_position = null;
+      else this.img_position = "row-centered";
     },
     trigger(msg) {
       alert(msg);
@@ -95,9 +98,15 @@ export default {
     height: auto;
     width: 100%;
     transform: scale(1.3);
-  }
-  .rounded {
-    border-radius: 5%;
+    &.end {
+      transform: scale(1.3) translateX(-10%);
+    }
+    &.start {
+      transform: scale(1.3) translateX(10%);
+    }
+    &.rounded {
+      border-radius: 50%;
+    }
   }
 }
 @media only screen and (min-width: $viewport-mobile-large) {

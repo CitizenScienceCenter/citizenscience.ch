@@ -65,6 +65,8 @@ const actions = {
       return res;
     } catch (error) {
       console.error(error);
+      res = require(`@/assets/news.json`);
+      return res;
     } finally {
       commit("setNewsList", res);
     }
@@ -95,6 +97,8 @@ const actions = {
       return res;
     } catch (error) {
       console.error(error);
+      res = require(`@/assets/events.json`);
+      return res;
     } finally {
       commit("setEvents", res);
     }

@@ -23,6 +23,23 @@
   ],
   "covers": [
     {
+      "image": "events/mapontap.jpg",
+      "expiration": "2021-09-30T08:00+02:00",
+      "title": {
+        "en": "MapOnTap: Smartphone map app use study",
+        "de": "MapOnTap: Studie zur Kartennutzung"
+      },
+      "lead": {
+        "en": "Do you want to help to design future map apps that support your mobility better? Then take part in the MapOnTap Study!",
+        "de": "Wollt Ihr mithelfen, Karten-Apps so zu gestalten, dass Ihr noch besser von A nach B kommt? Dann nehmt an der MapOnTap Studie teil!"
+      },
+      "path": {
+        "en": "https://www.geo.uzh.ch/microsite/mapontap/#/",
+        "de": "https://www.geo.uzh.ch/microsite/mapontap/#/"
+      },
+      "button": { "en": "Explore", "de": "Entdecke mehr" }
+    },
+    {
       "image": "cover.jpg",
       "expiration": "2021-08-31T08:00+02:00",
       "title": {

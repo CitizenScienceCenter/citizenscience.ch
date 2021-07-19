@@ -324,5 +324,73 @@
       "en": "Website",
       "de": null
     }
+  },
+  {
+    "name": {
+      "en": "Goodwall",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> Goodwall is a next-generation community for students and young professionals to connect on shared interests, showcase themselves and discover learning and earning opportunities. With a community of more than 1 million members in 150+ countries, Goodwall is becoming the world leader in engaging and supporting Gen Z talents to reach their full potential and impact society positively. </p>",
+      "de": "<p> Goodwall ist eine Community für Studierende und junge Berufstätige, die sich über gemeinsame Interessen vernetzen, sich präsentieren und Lern- und Verdienstmöglichkeiten entdecken wollen. Mit einer Community von mehr als einer Million Mitgliedern in über 150 Ländern ist Goodwill weltweit führend bei der Einbindung und Unterstützung von Talenten der Generation Z, um ihr volles Potenzial zu erreichen und die Gesellschaft positiv zu beeinflussen.</p>"
+    },
+    "logos": [],
+    "button": {
+      "link": "https://www.goodwall.io/",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.goodwall.io",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Center for Research and Interdisciplinarity (CRI)",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> CRI is co-constructing and sharing new ways of learning, teaching, conducting research and mobilizing collective intelligence in the fields of life, learning and digital sciences, in order to address the UN's sustainable development goals (SDGs). </p>",
+      "de": "<p> Das CRI ko-konstruiert und teilt neue Wege des Lernens, Lehrens, Forschens und der Mobilisierung kollektiver Intelligenz in den Bereichen Lebens-, Lern- und Digitalwissenschaften, um die UN-Nachhaltigkeitsziele zu erreichen.</p>"
+    },
+    "logos": [],
+    "button": {
+      "link": "https://www.cri-paris.org/en",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.cri-paris.org",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Schweizerisches Idiotikon",
+      "de": ""
+    },
+    "description": {
+      "en": "<p> The Institute documents the German language in Switzerland from the late Middle Ages to the 21st century. Its main task is to compile the dictionary of the same name, which, with its 16 completed volumes, is considered the largest regional dictionary of German. The Institute is also home to other projects, such as the <a href='https://sprachatlas.ch/' target='_blank' rel='noopener'> Language Atlas of German-speaking Switzerland</a> (SDS) with its Citizen Science project \"SDS-Steno-Labor\".</p>",
+      "de": "<p> Das Institut dokumentiert die deutsche Sprache in der Schweiz vom Spätmittelalter bis ins 21. Jahrhundert. Die Hauptaufgabe liegt in der Erarbeitung des gleichnamigen Wörterbuchs, das mit seinen 16 abgeschlossenen Bänden als das grösste Regionalwörterbuch des Deutschen gilt. Am Institut sind auch weitere Projekte angesiedelt, wie beispielsweise der <a href='https://sprachatlas.ch/' target='_blank' rel='noopener'> Sprachatlas der deutschen Schweiz</a> (SDS) mit seinem Citizen Science Projekt \"SDS-Steno-Labor\".</p>"
+    },
+    "logos": ["/img/logos/schweizerischesidiotikon_logo.png"],
+    "button": {
+      "link": "https://www.idiotikon.ch/",
+      "icon": "fas fa-external-link-alt",
+      "en": "www.idiotikon.ch",
+      "de": null
+    }
+  },
+  {
+    "name": {
+      "en": "Theoretical Computer Science & Sensor Lab",
+      "de": ""
+    },
+    "description": {
+      "en": "<p>The TCS-Sensor Lab is mainly interested in theoretical computer science and algorithmic aspects of communication networks. It leads the experimental platform \"Competing Crowds\" that explores transparent and load reducing data collection in mobile crowdsensing and focuses on applications that involve people collecting information for the community. The <a href='https://crowd.unige.ch/e-smog' target='_blank' rel='noopener'>UNIGE E-Smog Project</a> is part of this platform. It aims at collecting anonymous non-ionizing radiation (\"e-smog\") by citizens using a simple to use smartphone app.</p>",
+      "de": "<p>Das TCS-Sensor Lab ist hauptsächlich an theoretischer Informatik und algorithmischen Aspekten von Kommunikationsnetzwerken interessiert. Es leitet die experimentelle Plattform \"Competing Crowds\", die transparente Datenerfassung im mobilen Crowdsensing erforscht und sich auf Anwendungen konzentriert, bei denen Menschen Daten für die Community sammeln. Teil dieser Plattform ist auch das <a href='https://crowd.unige.ch/e-smog' target='_blank' rel='noopener'> UNIGE E-Smog Projekt</a>, das anonyme nichtionisierende Strahlung (\"E-Smog\") durch Bürger*innen mithilfe einer einfach zu bedienenden Smartphone-App sammelt.</p>"
+    },
+    "logos": ["/img/logos/TCS-logo.png"],
+    "button": {
+      "link": "http://tcs.unige.ch/doku.php/",
+      "icon": "fas fa-external-link-alt",
+      "en": "Website",
+      "de": "Webseite"
+    }
   }
 ]

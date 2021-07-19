@@ -6,7 +6,8 @@
       "subheading": { "visible": true },
       "uzh_eth_logo": { "disabled": false, "visible": true },
       "sdg_logo": { "disabled": false, "visible": true },
-      "refresh_time": 10000
+      "refresh_time": 10000,
+      "number_of_img":5
     },
     "projectCards": {
       "visible": true,

@@ -46,17 +46,13 @@
                 target="_blank"
                 rel="noopener"
                 class="button button-primary-main"
-                >{{
-                  localTranslation(cover.button) || $t("default-button-name")
-                }}
+                >{{ localTranslation(cover.button) || $t("default-button-name") }}
               </a>
               <router-link
                 v-else
                 :to="localTranslation(cover.path)"
                 class="button button-primary-main"
-                >{{
-                  localTranslation(cover.button) || $t("default-button-name")
-                }}
+                >{{ localTranslation(cover.button) || $t("default-button-name") }}
               </router-link>
             </div>
 
@@ -68,38 +64,21 @@
                 target="_blank"
                 rel="noopener"
                 class="button button-secondary button-secondary-inverted"
-                >{{
-                  localTranslation(cover.extra_button) ||
-                    $t("default-button-name")
-                }}
+                >{{ localTranslation(cover.extra_button) || $t("default-button-name") }}
               </a>
               <router-link
                 v-else
                 :to="localTranslation(cover.extra_path)"
                 class="button button-secondary button-secondary-inverted"
-                >{{
-                  localTranslation(cover.extra_button) ||
-                    $t("default-button-name")
-                }}
+                >{{ localTranslation(cover.extra_button) || $t("default-button-name") }}
               </router-link>
             </div>
           </div>
         </div>
         <!-- Extra top right logos -->
-        <div
-          class="top-right-logo"
-          v-if="cover.extra_logos"
-          :class="{ mitrends: false }"
-        >
-          <img
-            v-if="cover.extra_logos.logo_right"
-            :src="cover.extra_logos.logo_right"
-          />
-          <img
-            class="left"
-            v-if="cover.extra_logos.logo_left"
-            :src="cover.extra_logos.logo_left"
-          />
+        <div class="top-right-logo" v-if="cover.extra_logos" :class="{ mitrends: false }">
+          <img v-if="cover.extra_logos.logo_right" :src="cover.extra_logos.logo_right" />
+          <img class="left" v-if="cover.extra_logos.logo_left" :src="cover.extra_logos.logo_left" />
         </div>
       </div>
     </div>
@@ -133,11 +112,7 @@
     </div>
 
     <!-- Goal logos -->
-    <div
-      class="bottom-right-logo"
-      v-scroll-to="'#sdg'"
-      v-if="br.sdg_logo.visible"
-    >
+    <div class="bottom-right-logo" v-scroll-to="'#sdg'" v-if="br.sdg_logo.visible">
       <img v-if="goal" class="goal" :src="goalImage" :alt="goalImage" />
       <img
         id="sdg_logo"
@@ -221,15 +196,12 @@ export default {
         cover_options = this.coverList.covers;
       }
       covers = cover_options
-        .filter(
-          (slide) =>
-            !slide.expiration || Date.parse(slide.expiration) >= Date.now()
-        )
+        .filter((slide) => !slide.expiration || Date.parse(slide.expiration) >= Date.now())
         .sort(function(a, b) {
           return Date.parse(a.expiration) - Date.parse(b.expiration);
         });
       // Only the three most upcoming covers in the list
-      covers = covers.slice(0, 3);
+      covers = covers.slice(0, this.br.number_of_img || 3);
       if (covers.length > 0) {
         this.coverInfo = covers;
       } else {
@@ -245,23 +217,16 @@ export default {
     setPrev() {
       this.resetTimer();
       this.currentCover =
-        this.currentCover == 0
-          ? this.coverInfo.length - 1
-          : this.currentCover - 1;
+        this.currentCover == 0 ? this.coverInfo.length - 1 : this.currentCover - 1;
     },
     setNext() {
       this.resetTimer();
-      this.currentCover =
-        this.currentCover < this.coverInfo.length - 1
-          ? this.currentCover + 1
-          : 0;
+      this.currentCover = this.currentCover < this.coverInfo.length - 1 ? this.currentCover + 1 : 0;
     },
     setRefreshTimer() {
       // validate refresh_time or set default in 10 seconds
       this.br.refresh_time =
-        this.br.refresh_time &&
-        this.br.refresh_time <= 30000 &&
-        this.br.refresh_time >= 3000
+        this.br.refresh_time && this.br.refresh_time <= 30000 && this.br.refresh_time >= 3000
           ? this.br.refresh_time
           : 10000;
       this.timer = setInterval(this.autoPlay, this.br.refresh_time);

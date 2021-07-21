@@ -146,6 +146,15 @@
         "photo": "/img/people/susanne.jpg"
       },
       {
+        "name": "Olivia Höhener",
+        "position": {
+          "en": "Development and Coordination of Services",
+          "de": "Angebotsentwicklung und Koordination"
+        },
+        "email": "olivia.hoehener@uzh.ch",
+        "photo": "/img/people/olivia.jpg"
+      },
+      {
         "name": "Alessandro Rearte",
         "position": {
           "en": "Student Assistant",

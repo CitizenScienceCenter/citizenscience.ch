@@ -74,9 +74,6 @@ export default {
       else if (this.br.position == "end") this.img_position = "row-end";
       else this.img_position = "row-centered";
     },
-    trigger(msg) {
-      alert(msg);
-    },
   },
   created() {
     this.loadStyle();

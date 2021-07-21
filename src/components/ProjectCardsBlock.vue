@@ -48,11 +48,18 @@
       </div>
     </div>
     <div class="row row-centered scroll-effect">
+      <project-pagination
+        :items="projectList"
+        @changePage="onChangePage"
+        :styles="paginationStyle"
+        :labels="paginationLabels"
+        class="col col-12 col-wrapping"
+      ></project-pagination>
       <!-- Project cards list -->
       <div
         class="col col-wrapping col-mobile-large-12 col-tablet-portrait-12"
         :class="validateOrientation()"
-        v-for="p in projectList"
+        v-for="p in currentProjectList"
         v-bind:key="p.id"
       >
         <project-teaser
@@ -87,6 +94,7 @@
 </template>
 <script>
 import ProjectTeaser from "@/components/ProjectTeaser";
+import JwPagination from "jw-vue-pagination";
 import { mapGetters, mapMutations, mapState } from "vuex";
 import {
   getTranslation,
@@ -115,7 +123,22 @@ export default {
     return {
       br: {},
       allProjectList: [],
+      currentProjectList: [],
       search: null,
+      paginationStyle: {
+        ul: {
+          display: "flex",
+          "justify-content": "center",
+          "margin-top": "1rem",
+          "margin-bottom": "1rem",
+        },
+      },
+      paginationLabels: {
+        first: "<<",
+        last: ">>",
+        previous: "<",
+        next: ">",
+      },
     };
   },
   props: {
@@ -127,6 +150,7 @@ export default {
   },
   components: {
     ProjectTeaser,
+    "project-pagination": JwPagination,
   },
   computed: {
     ...mapState({
@@ -212,6 +236,12 @@ export default {
         : project.name;
       return name.toString().toLowerCase();
     },
+
+    onChangePage(page) {
+      // update page with pagination
+      this.currentProjectList = page;
+    },
+
     tracking() {
       // Information for gtag event
       const info = {
@@ -250,6 +280,7 @@ export default {
     color: $color-primary-shade-20;
   }
 }
+
 @media only screen and (min-width: $viewport-tablet-portrait) {
   .project-cards {
     .description {

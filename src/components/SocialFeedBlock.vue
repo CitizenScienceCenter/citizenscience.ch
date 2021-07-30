@@ -22,20 +22,18 @@
     <!-- Content Section -->
     <div class="row row-centered">
       <div class="col col-12 scroll-effect content-section">
-        <Timeline
-          id="CitSciZurich"
-          sourceType="profile"
-          class="scroll-effect"
-          :options="{
-            tweetLimit: limit,
-            chrome: 'nofooter noheader noborders transparent',
-            width: 600,
-            lang: $i18n.locale,
-            dnt: true,
-            omit_script: true
-          }"
-          ><i class="fas fa-spinner fa-spin spinner"></i
-        ></Timeline>
+        <twitter class="scroll-effect">
+          <div slot="loading">
+            loading <i class="fas fa-spinner fa-spin spinner"></i>
+          </div>
+          <a
+            class="twitter-timeline"
+            data-width="600"
+            data-height="500"
+            href="https://twitter.com/CitSciZurich?ref_src=twsrc%5Etfw"
+            >Tweets by CitSciZurich
+          </a>
+        </twitter>
       </div>
     </div>
     <!-- Footer Section -->
@@ -60,12 +58,12 @@
 </template>
 <script>
 import { openUrl } from "@/assets/support.js";
-// Tweeter
-import { Tweet, Moment, Timeline } from "vue-tweet-embed";
+// Twitter
+import { twitter } from "vue-twitter";
 
 export default {
   name: "SocialFeedBlock",
-  components: { Timeline },
+  components: {twitter },
   data() {
     return {
       br: this.viewConfig,

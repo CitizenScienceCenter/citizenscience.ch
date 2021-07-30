@@ -23,6 +23,23 @@
   ],
   "covers": [
     {
+      "image": "cover.jpg",
+      "expiration": "2021-09-30T08:00+02:00",
+      "title": {
+        "en": "Survey about unstructured data",
+        "de": "Umfrage zu unstrukturierten Daten"
+      },
+      "lead": {
+        "en": "The Digital Society Initiative of UZH would like to learn more about researchers' experiences with unstructured data. Support them by completing their survey!",
+        "de": "Die Digital Society Initiative der UZH möchte mehr über die Erfahrung von Forschenden mit unstrukturierten Daten erfahren. Unterstützt sie dabei, indem Ihr an der Umfrage teilnehmt!"
+      },
+      "path": {
+        "en": "https://ufspezurich.eu.qualtrics.com/jfe/form/SV_b0Y6kjmSPHNnxnU",
+        "de": "https://ufspezurich.eu.qualtrics.com/jfe/form/SV_b0Y6kjmSPHNnxnU"
+      },
+      "button": { "en": "To the survey", "de": "Zur Umfrage" }
+    },
+    {
       "image": "events/mapontap.jpg",
       "expiration": "2021-09-30T08:00+02:00",
       "title": {

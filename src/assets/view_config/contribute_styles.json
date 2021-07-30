@@ -7,6 +7,7 @@
     "search": { "visible": true },
     "limit": null,
     "description": { "visible": false },
+    "pagination": { "visible": true, "pageSize": 20 },
     "project": {
       "img_project": { "visible": true },
       "topic": { "visible": true },

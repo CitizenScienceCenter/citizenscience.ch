@@ -50,10 +50,12 @@
     <div class="row row-centered scroll-effect">
       <project-pagination
         :items="projectList"
+        :pageSize = "viewConfig.pagination.pageSize"
         @changePage="onChangePage"
         :styles="paginationStyle"
         :labels="paginationLabels"
         class="col col-12 col-wrapping"
+        v-show="viewConfig.pagination.visible"
       ></project-pagination>
       <!-- Project cards list -->
       <div

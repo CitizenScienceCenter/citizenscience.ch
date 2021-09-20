@@ -3,16 +3,12 @@
   "en": {
 
     "page-title": "Upcoming Events",
-    "upcoming-events-heading": "Upcoming Events",
-    "upcoming-events-not-found": "No upcoming events found"
-
+    "upcoming-events-heading": "Upcoming Events"
     },
   "de": {
 
     "page-title": "Bevorstehende Veranstaltungen",
-    "upcoming-events-heading": "Bevorstehende Veranstaltungen",
-    "upcoming-events-not-found": "Keine bevorstehende Veranstaltungen gefunden"
-
+    "upcoming-events-heading": "Bevorstehende Veranstaltungen"
     }
 }
 </i18n>
@@ -27,9 +23,6 @@
             </h2>
 
             <event-list visible :viewConfig="eventsConfig"></event-list>
-            <h3 class="centered scroll-effect scroll-effect-delayed-2 ">
-              {{ $t("upcoming-events-not-found") }}
-            </h3>
           </div>
         </div>
       </div>

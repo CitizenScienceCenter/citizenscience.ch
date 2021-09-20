@@ -25,8 +25,46 @@
       "second_button": { "disabled": false, "visible": true }
     },
     "sdg": {
+      "title": { "visible": true },
+      "subtitle": { "visible": false },
       "visible": true,
-      "hReverse": false
+      "hReverse": false,
+      "description": { "visible": true },
+      "image": { "visible": true, "rounded": true }
+    }
+  },
+  "eu_research": {
+    "gc-intro": {
+      "visible": true,
+      "vOrientation": false,
+      "heading": { "visible": false },
+      "title": { "visible": false },
+      "subtitle": { "visible": false },
+      "description": { "visible": true },
+      "image": { "visible": false, "size": "md", "rounded": true },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": false },
+      "second_button": { "disabled": false, "visible": false }
+    },
+    "gc-right-img": {
+      "visible": true,
+      "vOrientation": false,
+      "hReverse": true,
+      "heading": { "visible": false },
+      "title": { "visible": true },
+      "subtitle": { "visible": false },
+      "description": { "visible": true },
+      "image": { "visible": true, "size": "md", "rounded": false },
+      "img_description": { "visible": false },
+      "button": { "disabled": false, "visible": true },
+      "second_button": { "disabled": false, "visible": false }
+    },
+    "gc-right-full-img": {      
+      "visible": true,
+      "position": "end",
+      "width":80,
+      "height": 100,
+      "rounded":false
     }
   },
   "offer": {

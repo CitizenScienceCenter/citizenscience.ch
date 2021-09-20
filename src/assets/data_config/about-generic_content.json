@@ -121,6 +121,120 @@
       }
     }
   },
+  "eu_research": {
+    "main_content": [
+      {
+        "settings": {
+          "component": "GenericContentBlock",
+          "style": "gc-intro"
+        },
+        "description": {
+          "en": "<p> The Citizen Science Center Zurich is involved in three projects that are funded by the European Union within the framework of the Horizon 2020 program. These projects are <a href='#' v-scroll-to=\"'#time4cs'\"><strong>TIME4CS</strong></a>, <a href='#' v-scroll-to=\"'#incentive'\"><strong>INCENTIVE</strong></a>, and <a href='#' v-scroll-to=\"'#crowd4sdg'\"><strong>Crowd4SDG</strong></a>.</p>",
+          "de": "<p> Das Citizen Science Center Zürich ist in drei Forschungsprojekten involviert, die durch die Europäische Union im Rahmen des Horizon 2020 Programms finanziert werden. Diese Projekte sind <a href='#' v-scroll-to=\"'#time4cs'\"><strong>TIME4CS</strong></a>, <a href='#' v-scroll-to=\"'#incentive'\"><strong>INCENTIVE</strong></a>, and <a href='#' v-scroll-to=\"'#crowd4sdg'\"><strong>Crowd4SDG</strong></a>.</p>"
+        }
+      },
+      {
+        "settings": {
+          "id": "time4sdg",
+          "component": "GenericContentBlock",
+          "style": "gc-right-img"
+        },
+        "title": {
+          "en": "TIME4SDG – supporting sustainable Institutional Changes to promote Citizen Science in Science and Technology",
+          "de": "TIME4SDG – unterstützt nachhaltigen institutionellen Wandel um Citizen Science in Wissenschaft und Technologie zu fördern"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> <strong>TIME4CS</strong> aims at establishing Citizen Science to be an integral part of Research Performing Organizations (RPOs) – such as universities, research centers etc. To achieve this, organizations need to undergo Institutional Change. </p> <p> Institutional Changes should be irreversible, comprehensive, inclusive and contextualized. Bearing this in mind, <strong>TIME4CS</strong> establishes a knowledge transfer and mutual learning program between Front-Runners and Implementers. The first are RPOs with a comprehensive expertise in Citizen Science and which have already undergone Institutional Changes. The latter are <strong>TIME4CS</strong> beneficiaries still in the early stages of the implementation of Institutional Changes to support Citizen Science. The mutual learning program will lead to the development of specific and tailored roadmaps for each implementing organization. </p> <p>The Center supports the project in its role as Front-Runner with its expertise and knowledge.</p>",
+          "de": "<p> <strong>TIME4CS</strong> hat das Ziel, Citizen Science als integralen Bestandteil von vier Forschungseinrichtungen (Research Performing Organizations – RPOs), wie bspw. Universitäten, Forschungszentren usw., zu etablieren. Um dies zu erreichen, müssen die Organisationen einen institutionellen Wandel durchlaufen. </p> <p> Institutioneller Wandel sollte dabei unumkehrbar, umfassend, inklusiv und kontextabhängig sein. Vor diesem Hintergrund etabliert <strong>TIME4CS</strong> ein Programm zum Wissenstransfer und gegenseitigen Lernen zwischen sogenannten Front-Runners und Implementers. Erstere sind RPOs mit umfassender Expertise in Citizen Science, die bereits institutionellen Wandel durchlaufen haben. Letztere sind <strong>TIME4CS</strong>-Begünstigte, die sich noch in der Anfangsphase der Implementierung von institutionellem Wandel befinden. Das gegenseitige Lernprogramm wird zu Entwicklung spezifischer und massgeschneiderter Roadmaps für jene implementierenden Organisationen führen.</p> <p>Wir vom Citizen Science Center Zürich unterstützen das Projekt in der Rolle als Front-Runner mit unserer Expertise, unserer Erfahrung und unserem Wissen.</p>"
+        },
+        "image": "/img/logos/time4cs.png",
+        "button": {
+          "link": "https://www.time4cs.eu/",
+          "route": null,
+          "icon": "",
+          "selfWindow": false,
+          "en": "Read more",
+          "de": "Mehr Informationen"
+        }
+      },
+      {
+        "settings": {
+          "component": "ImgWidthBlock",
+          "style": "gc-right-full-img"
+        },
+        "image": "/img/time4cs_map.svg",
+        "alt": "time4cs_map"
+      },
+      {
+        "settings": {
+          "id": "incentive",
+          "component": "GenericContentBlock",
+          "style": "gc-right-img"
+        },
+        "title": {
+          "en": "INCENTIVE – establishing Citizen Science Hubs in European Research Performing and Funding Organizations to drive institutional change and ground responsible research and innovation in society",
+          "de": "INCENTIVE – aufbauen von Citizen Science Hubs in europäischen Forschungs- und Förderorganisationen, um institutionellen Wandel voranzutreiben und verantwortungsvolle Forschung und Innovation in der Gesellschaft zu verankern"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> <strong>INCENTIVE</strong> is set on empowering European Research Performing and Funding Organizations (RPFOs) to establish sustainable transdisciplinary hubs for stimulating and supporting excellent Citizen Science.</p><p>The project starts by establishing and demonstrating the potential of such Citizen Science Hubs in four RPFOs – University of Twente (the Netherlands), Autonomous University of Barcelona (Spain), Aristotle University of Thessaloniki (Greece), and Vilnius Gediminas Technical University (Lithuania). By closely monitoring and evaluating the hubs’ performance and outcomes, the project aims at providing evidence of societal, democratic, economic and scientific impacts.</p><p>The Center supports the project with its experience and knowledge in establishing and running a Citizen Science Hub.</p>",
+          "de": "<p> <strong>INCENTIVE</strong> möchte europäische Forschungs- und Förderorganisationen (Research Performing and Funding Organizations – RPFOs) unterstützen, nachhaltige transdisziplinäre Citizen Science Hubs zu etablieren.</p><p>Das Projekt beginnt mit dem Aufbau solcher Citizen Science Hubs in vier RPFOs – der Universität Twente (den Niederlanden), der Autonomen Universität Barcelona (Spanien), der Aristoteles Universität Thessaloniki (Griechenland) und der Technischen Universität Vilnius Gediminas (Litauen). Durch die genaue Überprüfung und Bewertung der Leistungen dieser Hubs, möchte das Projekt die gesellschaftlichen, demokratischen, wirtschaftlichen und wissenschaftlichen Wirkungen aufzeigen.</p><p>Wir unterstützen das Projekt mit unserer Erfahrung und unserem Wissen in den Bereichen Aufbau und Betrieb eines Citizen Science Hubs.</p>"
+        },
+        "image": "/img/logos/incentive.png",
+        "button": {
+          "link": "https://incentive-project.eu",
+          "route": null,
+          "icon": "",
+          "selfWindow": false,
+          "en": "Read more",
+          "de": "Mehr Informationen"
+        }
+      },
+      {
+        "settings": {
+          "component": "ImgWidthBlock",
+          "style": "gc-right-full-img"
+        },
+        "image": "/img/incentive_map.svg",
+        "alt": "incentive_map"
+      },
+      {
+        "settings": {
+          "id": "crowd4sdg",
+          "component": "GenericContentBlock",
+          "style": "gc-right-img"
+        },
+        "title": {
+          "en": "CROWD4SDG",
+          "de": "CROWD4SDG"
+        },
+        "subtitle": {
+          "en": "",
+          "de": ""
+        },
+        "description": {
+          "en": "<p> The <a href='https://sdgs.un.org/goals' target='_blank' rel='noopener'>17 Sustainable Development Goals (SDGs)</a>, launched by the United Nations in 2015, are underpinned by 169 concrete targets and 232 measurable indicators. Some of these indicators have no established measurement methodology. For others, many countries do not have the data collection capacity. Measuring progress towards the SDGs is thus a challenge for most national statistical offices.</p> <p>The goal of the <strong>Crowd4SDG</strong> project is to research the extent to which Citizen Science can provide an essential source of non-traditional data for tracking progress towards the SDGs, as well as the ability of Citizen Science to generate social innovations that enable such progress. Based on shared expertise in crowdsourcing for disaster response, the transdisciplinary <strong>Crowd4SDG consortium</strong> of six partners focuses on SDG 13 – climate action – to explore new ways of applying Citizen Science for monitoring the impacts of extreme climate events and strengthening resilience of communities to climate-related disasters.</p> <p>The Center is supporting this project as a third party in collaboration with the University of Geneva.</p>",
+          "de": "<p> Die <a href='https://sdgs.un.org/goals' target='_blank' rel='noopener'>17 UN-Nachhaltigkeitsziele (Sustainable Development Goals – SDGs)</a>, die 2015 von den Vereinten Nationen ins Leben gerufen wurden, werden durch 169 konkrete Ziele und 232 messbare Indikatoren untermauert. Für einige dieser Indikatoren gibt es keine etablierte Messmethodik. Für andere haben viele Länder nicht die Kapazitäten, die Daten zu erheben. Die Messung des Fortschritts bei den SDGs ist daher für die meisten nationalen Statistikämter eine Herausforderung.</p> <p><strong>Crowd4SDG</strong> möchte einerseits erforschen, inwieweit Citizen Science ein wesentliches Mittel sein kann um nicht-traditionelle Daten zu sammeln, die für die Messung der SDGs wichtig sind. Andererseits möchte das Projekt untersuchen, ob Citizen Science soziale Innovationen zu generieren vermag, um die gesteckten Ziele der SDGs zu erreichen. Das transdisziplinäre <strong>Crowd4SDG-Konsortium</strong> besteht aus sechs Institutionen, die alle Expertise im Bereich Crowdsourcing für Katastrophenhilfe mitbringen. Daher konzentriert sich das Projekt auf das SDG 13 – den Klimaschutz – um neue Wege der Anwendung von Citizen Science für die Überwachung der Auswirkungen extremer Klimaereignisse und die Stärkung der Resilienz von Communities gegenüber klimabedingten Katastrophen zu erforschen.</p> <p>Das Zentrum unterstützt dieses Projekt als Drittpartei in Zusammenarbeit mit der Universität Genf.</p>"
+        },
+        "image": "/img/logos/crowd4sdg_logo.png",
+        "button": {
+          "link": "https://crowd4sdg.eu",
+          "route": null,
+          "icon": "",
+          "selfWindow": false,
+          "en": "Read more",
+          "de": "Mehr Informationen"
+        }
+      }
+    ]
+  },
   "offer": {
     "main_content": [
       {

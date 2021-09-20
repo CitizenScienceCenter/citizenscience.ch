@@ -78,6 +78,9 @@ export const i18n = new VueI18n({
       "navigation-startproject-seed_grants": {
         link: "Seed Grants",
       },
+      "navigation-startproject-eu-research": {
+        link: "EU Research Projects",
+      },
       "navigation-startproject-checklist": {
         link: "Checklist",
       },
@@ -198,6 +201,9 @@ export const i18n = new VueI18n({
       },
       "navigation-startproject-seed_grants": {
         link: "Seed Grants",
+      },
+      "navigation-startproject-eu-research": {
+        link: "EU Forschungsprojekte",
       },
       "navigation-startproject-checklist": {
         link: "Checkliste",

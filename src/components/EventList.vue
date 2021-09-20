@@ -4,95 +4,105 @@
     "section-heading": "Coming Up",
     "all-events-button": "All Events",
     "event-cancel":"canceled",
-    "event-postpone":"postponed"
+    "event-postpone":"postponed",
+    "upcoming-events-not-found": "No events found"
   },
   "de": {
     "section-heading": "Demnächst",
     "all-events-button": "Alle Ereignisse",
     "event-cancel":"abgesagt",
-    "event-postpone":"verschoben"
+    "event-postpone":"verschoben",
+    "upcoming-events-not-found": "Keine Veranstaltungen gefunden"
   }
 }
 </i18n>
 <template>
-  <div class="event-list" v-if="events && events.length != 0 && visible">
-    <!-- Heading Section -->
-    <div class="row row-centered extra-margin-top-2" v-if="br.heading.visible">
-      <div class="col col-12 scroll-effect heading-section">
-        <h2 class="heading small">
-          {{ $t(localTranslation(pl.heading)) }}
-        </h2>
-      </div>
-    </div>
-    <!-- Event section -->
-    <router-link
-      tag="div"
-      class="row row-centered event scroll-effect"
-      v-for="event in events"
-      :key="event.path"
-      :to="'/events/' + event.path"
-    >
-      <!-- Image Subsection -->
+  <div v-if="visible">
+    <div class="event-list" v-if="events && events.length != 0">
+      <!-- Heading Section -->
       <div
-        class="col-6 event-image"
-        :class="validateImage('img-content', event)"
-        v-if="event.image && !br.hideImage"
+        class="row row-centered extra-margin-top-2"
+        v-if="br.heading.visible"
       >
-        <img :src="'/img/events/' + event.image" :alt="event.image"/>
-      </div>
-
-      <!-- Details Subsection -->
-      <div class="col-12" :class="validateImage('text-content', event)">
-        <!-- Date Subsection -->
-        <p class="event-date">
-          {{ eventDisplayDate(event.start, event.end) }}
-        </p>
-        <!-- Title Subsection -->
-        <h3
-          class="subheading event-title"
-          :class="getStateStyle(event.state)"
-          v-html="event.title"
-        ></h3>
-        <h4 class="event-state">{{ localTranslation(event.state) }}</h4>
-        <!-- Abstract Subsection -->
-        <div class="event-abstract" v-if="event.abstract">
-          <i class="fas fa-info-circle icon"></i>
-          <p v-if="event.abstract !== ''" v-html="event.abstract"></p>
-        </div>
-        <!-- Speakers Subsection -->
-        <div class="event-speakers" v-if="event.speakers !== ''">
-          <i class="fas fa-user icon"></i>
-          <p v-html="event.speakers"></p>
-        </div>
-        <!-- Location Subsection -->
-        <div class="event-location">
-          <i class="fas fa-map-marker-alt icon"></i>
-          <p v-html="event.location"></p>
-        </div>
-        <!-- Details button Subsection -->
-        <div class="button-group" v-if="false">
-          <router-link
-            tag="button"
-            class="button button-secondary button-secondary-naked"
-            :to="'/events/' + event.path"
-            >Details</router-link
-          >
+        <div class="col col-12 scroll-effect heading-section">
+          <h2 class="heading small">
+            {{ $t(localTranslation(pl.heading)) }}
+          </h2>
         </div>
       </div>
-    </router-link>
-
-    <!-- All events button -->
-    <div class="row button-section" v-if="br.button.visible">
+      <!-- Event section -->
       <router-link
-        tag="button"
-        to="/events"
-        class="button button-secondary scroll-effect"
-        :disabled="br.button.disabled"
+        tag="div"
+        class="row row-centered event scroll-effect"
+        v-for="event in events"
+        :key="event.path"
+        :to="'/events/' + event.path"
       >
-        <i class="far fa-calendar-alt"></i>
-        {{ $t(localTranslation(pl.eventsButton)) }}</router-link
-      >
+        <!-- Image Subsection -->
+        <div
+          class="col-6 event-image"
+          :class="validateImage('img-content', event)"
+          v-if="event.image && !br.hideImage"
+        >
+          <img :src="'/img/events/' + event.image" :alt="event.image" />
+        </div>
+
+        <!-- Details Subsection -->
+        <div class="col-12" :class="validateImage('text-content', event)">
+          <!-- Date Subsection -->
+          <p class="event-date">
+            {{ eventDisplayDate(event.start, event.end) }}
+          </p>
+          <!-- Title Subsection -->
+          <h3
+            class="subheading event-title"
+            :class="getStateStyle(event.state)"
+            v-html="event.title"
+          ></h3>
+          <h4 class="event-state">{{ localTranslation(event.state) }}</h4>
+          <!-- Abstract Subsection -->
+          <div class="event-abstract" v-if="event.abstract">
+            <i class="fas fa-info-circle icon"></i>
+            <p v-if="event.abstract !== ''" v-html="event.abstract"></p>
+          </div>
+          <!-- Speakers Subsection -->
+          <div class="event-speakers" v-if="event.speakers !== ''">
+            <i class="fas fa-user icon"></i>
+            <p v-html="event.speakers"></p>
+          </div>
+          <!-- Location Subsection -->
+          <div class="event-location">
+            <i class="fas fa-map-marker-alt icon"></i>
+            <p v-html="event.location"></p>
+          </div>
+          <!-- Details button Subsection -->
+          <div class="button-group" v-if="false">
+            <router-link
+              tag="button"
+              class="button button-secondary button-secondary-naked"
+              :to="'/events/' + event.path"
+              >Details</router-link
+            >
+          </div>
+        </div>
+      </router-link>
+
+      <!-- All events button -->
+      <div class="row button-section" v-if="br.button.visible">
+        <router-link
+          tag="button"
+          to="/events"
+          class="button button-secondary scroll-effect"
+          :disabled="br.button.disabled"
+        >
+          <i class="far fa-calendar-alt"></i>
+          {{ $t(localTranslation(pl.eventsButton)) }}</router-link
+        >
+      </div>
     </div>
+    <h3 v-else class="centered scroll-effect scroll-effect-delayed-2 ">
+      {{ $t("upcoming-events-not-found") }}
+    </h3>
   </div>
 </template>
 

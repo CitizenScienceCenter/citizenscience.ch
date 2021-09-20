@@ -1,9 +1,10 @@
 <template>
   <div
+    :id="componentId"
     class="generic-content scroll-effect"
     :class="{ 'content-wrapper': !br.compact_view }"
     v-if="
-      visible &&
+      br.visible &&
         contentData &&
         Object.keys(contentData).length !== 0 &&
         contentData.constructor === Object
@@ -21,13 +22,10 @@
       </div>
     </div>
     <!-- Content Section -->
-    <div
-      class="row row-centered"
-      :class="{ 'row-reverse-large': br.hReverse || this.hReverse }"
-    >
+    <div class="row row-centered" :class="{ 'row-reverse-large': br.hReverse || this.hReverse }">
       <!-- Image sub-section Content  -->
       <div
-        class="col"
+        class="col scroll-effect scroll-effect-delayed-2"
         :class="checkVerticalOrientation('img-content')"
         v-if="contentData.image && br.image.visible"
       >
@@ -49,10 +47,7 @@
         </div>
       </div>
       <!-- Text sub-section Content  -->
-      <div
-        class="col col-11 text-section"
-        :class="checkVerticalOrientation('text-content')"
-      >
+      <div class="col col-11 text-section" :class="checkVerticalOrientation('text-content')">
         <div
           class="row row-full-width row-centered row-large-left-aligned"
           v-if="br.title.visible && localTranslation(contentData.title)"
@@ -63,10 +58,7 @@
         </div>
         <!-- Subtitle section -->
         <div class="row row-full-width" v-if="br.subtitle.visible">
-          <div
-            class="subheading"
-            v-html="localTranslation(contentData.subtitle)"
-          ></div>
+          <div class="subheading" v-html="localTranslation(contentData.subtitle)"></div>
         </div>
         <!-- Description section -->
         <div class="row" v-if="br.description.visible">
@@ -103,8 +95,7 @@
             v-if="
               br.second_button.visible &&
                 contentData.second_button &&
-                (contentData.second_button.link ||
-                  contentData.second_button.route)
+                (contentData.second_button.link || contentData.second_button.route)
             "
           >
             <button
@@ -155,10 +146,10 @@ export default {
   },
   props: {
     content: Object,
-    visible: Boolean,
     vOrientation: Boolean,
     hReverse: Boolean,
     viewConfig: Object,
+    componentId: String,
   },
   computed: {
     ...mapState({
@@ -166,19 +157,14 @@ export default {
     }),
     getDynamicData: function() {
       return {
-        template: `<div>${this.localTranslation(
-          this.contentData.description
-        )}</div>`,
+        template: `<div>${this.localTranslation(this.contentData.description)}</div>`,
       };
     },
     getImageStyle() {
       return {
-        rounded: this.contentData.toggle_img_style
-          ? !this.br.image.rounded
-          : this.br.image.rounded,
+        rounded: this.contentData.toggle_img_style ? !this.br.image.rounded : this.br.image.rounded,
         "vertical-img": this.br.vOrientation,
-        "shadow-bottom":
-          this.br.image.rounded && !this.contentData.toggle_img_style,
+        "shadow-bottom": this.br.image.rounded && !this.contentData.toggle_img_style,
       };
     },
   },

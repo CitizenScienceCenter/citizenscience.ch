@@ -46,8 +46,7 @@
     <app-content-section class="overflow-hidden">
       <generic-content-width-block
         :content="ourCommunityContent"
-        :visible="ourCommunityViewConfig.visible"
-        :hReverse="ourCommunityViewConfig.hReverse"
+        :viewConfig="ourCommunityViewConfig"
       ></generic-content-width-block>
     </app-content-section>
 

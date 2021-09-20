@@ -7,7 +7,7 @@
       "en": "At various locations we have set up boxes equipped with a wildlife camera. The pictures give us an insight into the visitors of the box.",
       "de": "An verschiedenen Standorten haben wir Boxen aufgestellt, die mit einer Wildtierkamera ausgestattet sind. Die Aufnahmen der Kameras geben uns einen Einblick in die Besucher der Box."
     },
-    "button": { "en": "Contribute", "de": "Beitragen" },
+    "button": { "en": "View", "de": "Anzeigen" },
     "img_background": "/img/projects/wiesel.jpg",
     "img_project": "/img/projects/wiesel-intro.png",
     "url": {
@@ -24,7 +24,7 @@
       "en": "The MitrendS study will help researchers to gain a deeper, more differentiated knowledge of the individual progression of the disease and symptoms of MS.",
       "de": "Durch Ihre Teilnahme an dieser Studie helfen Sie, ein tieferes, differenziertes Wissen über den individuellen Verlauf der Krankheit und die Symptome von MS zu erlangen."
     },
-    "button": { "en": "Contribute", "de": "Beitragen" },
+    "button": { "en": "View", "de": "Anzeigen" },
     "img_background": "/img/projects/mitrends.jpg",
     "img_project": "/img/projects/mitrends-graphic.png",
     "url": {
@@ -41,7 +41,7 @@
       "en": "Our first Citizen Science Project is in the field of linguistics. By transcribing and translating swiss sentences from the 1930s, you help researchers understand how Swiss German changed during the past 100 years.",
       "de": "Im Rahmen eines Forschungsprojekts wurden vor rund 100 Jahren 40 hochdeutsche Sätze in die Dialekte der Schweiz übersetzt. Hilf uns, diesen Schatz zu heben."
     },
-    "button": { "en": "Contribute", "de": "Beitragen" },
+    "button": { "en": "View", "de": "Anzeigen" },
     "img_background": "/img/projects/wenker.jpg",
     "img_project": "/img/projects/wenker-intro.png",
     "url": {
@@ -58,7 +58,7 @@
     },
     "topic": { "en": "Linguistics", "de": "Sprachwissenschaften" },
     "description": "Um unsere Ziele zu erreichen, bitten wir um Ihre Hilfe. In einem ersten Schritt (Identifikation) geht es darum, möglichst viele Texte anzuschauen und nach möglichen geschlechtsspezifischen Hassausdrücken zu suchen.",
-    "button": { "en": "Contribute", "de": "Beitragen" },
+    "button": { "en": "View", "de": "Anzeigen" },
     "img_background": "/img/projects/hatespeech.jpg",
     "img_project": "/img/projects/hatespeech-intro.png",
     "url": {
@@ -77,7 +77,7 @@
       "en": "Fall is here! You can take advantage of the cooler weather to test and refine your identification skills with the second phase of the SnakeID challenge.",
       "de": "Der Herbst ist da! Nutzt das kühlere Wetter, um eure Identifikationsfähigkeiten in der zweiten Phase der SnakeID-Challenge zu testen und zu verfeinern."
     },
-    "button": { "en": "Contribute", "de": "Beitragen" },
+    "button": { "en": "View", "de": "Anzeigen" },
     "img_background": "/img/projects/snakechallenge.jpg",
     "img_project": "/img/projects/snakechallenge-intro.png",
     "url": {
@@ -96,7 +96,7 @@
       "en": "Health and wellbeing are different in each individual and depend on the genome, the environment and behavior of each individual (Health Triangle). In order to understand the causes of health we need large sets of health-relevant data from a large number of people.",
       "de": "Gesundheit und Wohlbefinden sind individuell verschieden und werden durch das “Gesundheitsdreieck” bestimmt: Dem Zusammenhang zwischen Genom, Umwelt und Verhalten. Zur Erforschung von Gesundheit und Wohlbefinden braucht die Wissenschaft gesundheitsrelevante Daten von möglichst vielen Menschen."
     },
-    "button": { "en": "Contribute", "de": "Beitragen" },
+    "button": { "en": "View", "de": "Anzeigen" },
     "img_background": "/img/projects/cohcoh.jpg",
     "img_project": "/img/projects/cohcoh-graphic.png",
     "url": {

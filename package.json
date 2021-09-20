@@ -12,6 +12,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "axios": "^0.21.1",
+    "jw-vue-pagination": "^1.0.3",
     "minio": "^7.0.18",
     "normalize.css": "^8.0.1",
     "sass-loader": "^7.3.1",

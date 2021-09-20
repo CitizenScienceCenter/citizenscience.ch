@@ -86,6 +86,11 @@ const ZurichStyle = (resolve) => {
     resolve(require("../views/about/ZurichStyle.vue"));
   });
 };
+const EuropeanResearch = (resolve) => {
+  require.ensure(["../views/about/EuropeanResearch.vue"], () => {
+    resolve(require("../views/about/EuropeanResearch.vue"));
+  });
+};
 const Offer = (resolve) => {
   require.ensure(["../views/about/Offer.vue"], () => {
     resolve(require("../views/about/Offer.vue"));
@@ -433,6 +438,22 @@ export const routes = [
             },
           },
           {
+            path: "eu_research",
+            component: EuropeanResearch,
+            meta: {
+              i18n: "navigation-startproject-eu-research",
+              nav: true,
+            },
+            beforeEnter: async (to, from, next) => {
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "eu_research",
+              });
+              if (res) {
+                next();
+              }
+            },
+          },
+          {
             path: "offer",
             component: Offer,
             meta: { i18n: "navigation-about-offer", nav: true },
@@ -541,11 +562,11 @@ export const routes = [
           nav: false,
         },
         beforeEnter(to, from) {
-          // TODO: replace by real profile when is implemented
-          // openUrl(
-          //   `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
-          //   true
-          // );
+          // FIXME: Replace profile for the citizenscience one
+          openUrl(
+            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
+            true
+          );
         },
       },
       {

@@ -24,7 +24,7 @@
   "covers": [
     {
       "image": "cover.jpg",
-      "expiration": "2021-09-30T08:00+02:00",
+      "expiration": "2021-10-30T08:00+02:00",
       "title": {
         "en": "Survey about unstructured data",
         "de": "Umfrage zu unstrukturierten Daten"
@@ -41,7 +41,7 @@
     },
     {
       "image": "events/mapontap.jpg",
-      "expiration": "2021-09-30T08:00+02:00",
+      "expiration": "2021-10-30T08:00+02:00",
       "title": {
         "en": "MapOnTap: Smartphone map app use study",
         "de": "MapOnTap: Studie zur Kartennutzung"
@@ -57,53 +57,19 @@
       "button": { "en": "Explore", "de": "Entdecke mehr" }
     },
     {
-      "image": "cover.jpg",
-      "expiration": "2021-08-31T08:00+02:00",
-      "title": {
-        "en": "STENO-LAB",
-        "de": "DAS STENO-LABOR"
-      },
-      "lead": {
-        "en": "Read more about this exciting Citizen Science project in dialect research in our latest blog post (in German only)!",
-        "de": "Erfahrt mehr über dieses spannende Citizen Science Projekt in der Mundartforschung in unserem neusten Blogeintrag!"
-      },
-      "path": {
-        "en": "https://citizensciencezurich.blog/",
-        "de": "https://citizensciencezurich.blog/"
-      },
-      "button": { "en": "Explore", "de": "Entdecke mehr" }
-    },
-    {
-      "image": "logos/H2R_cover.png",
-      "expiration": "2021-08-31T08:00+02:00",
-      "title": {
-        "en": "HUMAN REPRODUCTION RELOADED | H2R",
-        "de": "HUMAN REPRODUCTION RELOADED | H2R"
-      },
-      "lead": {
-        "en": "17 Citizen Scientists participated at the kick-off event of the Citizen Advisory Panel on June 25.",
-        "de": "17 Bürgerwissenschaftler*innen nahmen an der Kick-off Veranstaltung des Citizen Advisory Panels am 25. Juni teil."
-      },
-      "path": {
-        "en": "https://www.humanreproduction.uzh.ch/en/News-and-Events/News/Kick-off-Citizen-Science.html",
-        "de": "https://www.humanreproduction.uzh.ch/en/News-and-Events/News/Kick-off-Citizen-Science.html"
-      },
-      "button": { "en": "Read more", "de": "Mehr Informationen" }
-    },
-    {
       "image": "events/newsletter_june.jpg",
-      "expiration": "2021-08-31T08:00+02:00",
+      "expiration": "2021-11-31T08:00+02:00",
       "title": {
-        "en": "JUNE NEWSLETTER",
-        "de": "JUNI-NEWSLETTER"
+        "en": "SEPTEMBER NEWSLETTER",
+        "de": "SEPTEMBER-NEWSLETTER"
       },
       "lead": {
         "en": "Read our latest newsletter!",
         "de": "Lest unseren neusten Newsletter!"
       },
       "path": {
-        "en": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=b01ab7d0ed",
-        "de": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=d0772d5524"
+        "en": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=c37a30abea",
+        "de": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=d62eb473d7"
       },
       "button": { "en": "Newsletter", "de": "Zum Newsletter" }
     },	  

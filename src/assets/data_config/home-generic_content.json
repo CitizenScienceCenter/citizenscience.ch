@@ -71,8 +71,8 @@
       "route": "/about/zurichstyle",
       "icon": null,
       "selfWindow": true,
-      "en": "More About CS",
-      "de": "Mehr über CS"
+      "en": "About CS",
+      "de": "Über CS"
     }
   },
   "home_what_offer": {

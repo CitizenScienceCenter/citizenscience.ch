@@ -29,7 +29,7 @@
         </div>
         <!-- Projects section -->
         <div class="scroll-effect">
-          <app-content-section class="row ph-mv" v-if="isProjectsLoaded">
+          <app-content-section class="row" v-if="isProjectsLoaded">
             <project-cards-block
               :vOrientation="projectCardConfig.vOrientation"
               :visible="projectCardConfig.visible"

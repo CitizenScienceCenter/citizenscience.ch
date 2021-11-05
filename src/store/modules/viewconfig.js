@@ -77,6 +77,11 @@ const VIEW_FILES = {
     local: aboutViewsConfig,
     state: "zurichstyle_view",
   },
+  resources: {
+    remote: "about_styles.json",
+    local: aboutViewsConfig,
+    state: "resources_view",
+  },
   eu_research: {
     remote: "about_styles.json",
     local: aboutViewsConfig,
@@ -123,6 +128,7 @@ const state = {
   // About us Section states
   mission_view: undefined,
   zurichstyle_view: undefined,
+  resources_view: undefined,
   eu_research_view: undefined,
   offer_view: undefined,
   people_view: undefined,

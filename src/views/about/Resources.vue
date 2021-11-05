@@ -1,45 +1,40 @@
 <i18n>
   {
   "en": {
-  "page-title": "EU Research Projects",
 
-  "section-eu-research-heading": "EU Research Projects"
+  "page-title": "Resources",
+  "section-resources-heading": "Resources"
   },
   "de": {
-  "page-title": "EU Forschungsprojekte",
 
-  "section-eu-research-heading": "EU Forschungsprojekte"
+  "page-title": "Publikationen",
+  "section-resources-heading": "Publikationen"
   }
   }
 </i18n>
 <template>
-  <div class="eu-research">
+  <div>
     <app-content-section class="overflow-hidden">
       <!-- Heading section -->
       <div class="content-wrapper row row-centered scroll-effect">
         <div class="col col-large-10">
           <h2 class="heading centered">
-            {{ $t("section-eu-research-heading") }}
+            {{ $t("section-resources-heading") }}
           </h2>
         </div>
       </div>
-      <div
-        class="row row-centered row-middle"
-        v-for="item in content"
-        v-bind:key="item.id"
-        :class="{ 'content-wrapper': item.settings.component != 'ImgWidthBlock' }"
-      >
-        <component
-          :is="item.settings.component"
-          :content="item"
-          :viewConfig="mainViewConfig[item.settings.style]"
-          :componentId="item.settings.id"
-        ></component>
-      </div>
+
+      <generic-content-block
+        v-for="(item, index) in content"
+        :key="index"
+        class="extra-margin-bottom"
+        :visible="style.main.visible"
+        :vOrientation="style.main.vOrientation"
+        :content="item"
+        :viewConfig="style.main"
+      ></generic-content-block>
     </app-content-section>
-
     <section-newsletter-signup></section-newsletter-signup>
-
     <app-footer :platform="platform"></app-footer>
   </div>
 </template>
@@ -47,32 +42,30 @@
 <script>
 import ContentSection from "@/components/shared/ContentSection.vue";
 import GenericContentBlock from "@/components/GenericContentBlock.vue";
-import ImgWidthBlock from "@/components/ImgWidthBlock.vue";
-import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
+import Footer from "@/components/shared/Footer.vue";
+
 import { mapGetters, mapState } from "vuex";
 
 export default {
-  data: function() {
-    return {
-      mainViewConfig: { visible: false },
-      content: {},
-    };
-  },
   props: {
     platform: {
       type: Boolean,
       default: false,
     },
   },
+  data() {
+    return {
+      content: [],
+    };
+  },
   components: {
-    SectionNewsletterSignup,
-    GenericContentBlock,
-    ImgWidthBlock,
     "app-content-section": ContentSection,
     "app-footer": Footer,
+    SectionNewsletterSignup,
+    GenericContentBlock,
   },
-  metaInfo: function() {
+  metaInfo: function () {
     return {
       title: this.$t("page-title"),
       meta: [
@@ -86,26 +79,19 @@ export default {
   },
   computed: {
     ...mapState({
-      style: (state) => state.viewconfig.eu_research_view,
+      style: (state) => state.viewconfig.resources_view,
     }),
     ...mapGetters({ getGContent: "content/getGenericContent" }),
   },
   methods: {
-    setViewConfig() {
-      this.mainViewConfig = this.style;
-    },
     loadContent() {
-      this.content = this.getGContent("eu_research").main_content;
+      this.content = this.getGContent("resources").main_content;
     },
   },
   created() {
-    this.setViewConfig();
     this.loadContent();
   },
 };
 </script>
 
-<style lang="scss">
-@import "@/styles/theme.scss";
-@import "@/styles/shared/variables.scss";
-</style>
+<style></style>

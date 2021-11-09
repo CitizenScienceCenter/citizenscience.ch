@@ -86,6 +86,11 @@ const ZurichStyle = (resolve) => {
     resolve(require("../views/about/ZurichStyle.vue"));
   });
 };
+const Resources = (resolve) => {
+  require.ensure(["../views/about/Resources.vue"], () => {
+    resolve(require("../views/about/Resources.vue"));
+  });
+};
 const EuropeanResearch = (resolve) => {
   require.ensure(["../views/about/EuropeanResearch.vue"], () => {
     resolve(require("../views/about/EuropeanResearch.vue"));
@@ -438,10 +443,24 @@ export const routes = [
             },
           },
           {
+            path: "resources",
+            component: Resources,
+            meta: { i18n: "navigation-about-resources", nav: true },
+            beforeEnter: async (to, from, next) => {
+              // This preload the page style
+              const res = await store.dispatch("viewconfig/getRemoteView", {
+                view: "resources",
+              });
+              if (res) {
+                next();
+              }
+            },
+          },
+          {
             path: "eu_research",
             component: EuropeanResearch,
             meta: {
-              i18n: "navigation-startproject-eu-research",
+              i18n: "navigation-about-eu-research",
               nav: true,
             },
             beforeEnter: async (to, from, next) => {

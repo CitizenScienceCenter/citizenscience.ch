@@ -62,6 +62,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://citizenscience.ch/en/about/mission" />
     </url>
     <url>
+        <loc>https://citizenscience.ch/de/about/resources</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://citizenscience.ch/de/about/resources" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://citizenscience.ch/en/about/resources" />
+    </url>
+    <url>
         <loc>https://citizenscience.ch/de/about/zurichstyle</loc>
         <xhtml:link rel="alternate" hreflang="de" href="https://citizenscience.ch/de/about/zurichstyle" />
         <xhtml:link rel="alternate" hreflang="en" href="https://citizenscience.ch/en/about/zurichstyle" />

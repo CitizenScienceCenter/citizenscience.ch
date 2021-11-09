@@ -121,6 +121,50 @@
       }
     }
   },
+  "resources": {
+    "main_content": [
+      {
+        "title": {
+          "en": "Practicing Citizen Science in Zurich – Handbook",
+          "de": "Citizen Science in Zürich praktizieren – Handbuch"
+        },
+        "description": {
+          "en": "<p> This handbook is a practical guide on how to successfully design and run co-created Citizen Science projects, with some specific tips for practitioners in Zurich. The handbook is organized in parts that can be seen as a sequence of consecutive steps, or can be accessed at one’s convenience for suggestions and recommendations on different aspects of designing, implementing, and running Citizen Science projects. The handbook is a joint effort of the community of Citizen Science practitioners in Zurich, including researchers at the University of Zurich and ETH Zurich, and citizens. The writing has been coordinated by the Citizen Science Center Zurich.</p> Persistent Link: <a href='https://www.zora.uzh.ch/id/eprint/207987/' target='_blank' rel='noopener'> https://www.zora.uzh.ch/id/eprint/207987/</a> <p>Published: November 2021 (regular updates will follow)</p>",
+          "de": "<p> Dieses Handbuch ist ein praktischer Leitfaden für die erfolgreiche Planung und Durchführung von Citizen Science Projekten, mit einigen spezifischen Tipps für Praktiker*innen in Zürich. Das Handbuch ist in Teile gegliedert, die als eine Abfolge von aufeinanderfolgenden Schritten betrachtet werden können, oder man kann nach Belieben auf Vorschläge und Empfehlungen zu verschiedenen Aspekten der Konzeption, Umsetzung und Durchführung von Citizen Science Projekten zugreifen. Das Handbuch ist ein Gemeinschaftswerk der Zürcher Citizen Science Community, daraunter Forschende der Universität Zürich und der ETH Zürich, und von Bürger*innen. Die Erstellung wurde vom Citizen Science Center Zürich koordiniert.</p> Dauerhafter Link: <a href='https://www.zora.uzh.ch/id/eprint/207987/' target='_blank' rel='noopener'>https://www.zora.uzh.ch/id/eprint/207987/</a><p>Veröffentlicht: November 2021 (wird regelmässig aktualisiert)</p>"
+        },
+        "image": "/img/resources/handbook.jpg",
+        "button": {
+          "link": "/files/handbook_november 2021.pdf",
+          "route": null,
+          "icon": "fas fa-book",
+          "selfWindow": false,
+          "en": "Download Handbook",
+          "de": "Handbuch herunterladen"
+        },
+        "second_button": {}
+      },
+      {
+        "title": {
+          "en": "Ethics Guidelines in Citizen Science",
+          "de": "Citizen Science in Zürich praktizieren – Handbuch"
+        },
+        "description": {
+          "en": "<p> The aim of this report is to support the Competence Center Citizen Science Zurich (CCCS). Starting out from the point of research oversight in the Swiss context, it gives an overview of existing ethics guidelines in citizen science as promoted by the Citizen Science Association (CSA), the European Citizen Science Association (ECSA) and similar organizations. It highlights the relative lack of attention to ethical governance and processes in current citizen science guidelines and recommends to set up an intra-institutional process to deal with ambiguities in the future.</p> Persistent Link: <a href='https://doi.org/10.3929/ethz-b-000428502' target='_blank' rel='noopener'> https://doi.org/10.3929/ethz-b-000428502</a><p>Published: 27.04.2020</p>",
+          "de": "<p> Ziel dieses Berichts ist es, das Kompetenzzentrum Citizen Science Zürich (CCCS) zu unterstützen. Ausgehend von der Forschungsaufsicht im Schweizerischen Kontext gibt der Bericht einen Überblick über bestehende Ethik-Richtlinien im Bereich Citizen Science, wie sie von der Citizen Science Association (CSA), der European Citizen Science Association (ECSA) und ähnlichen Organisationen gefördert werden. Er hebt den relativen Mangel an Aufmerksamkeit für ethische Governance und Prozesse in den aktuellen Citizen Science-Richtlinien hervor und empfiehlt die Einrichtung eines institutioneninternen Prozesses, um in Zukunft mit Unklarheiten umzugehen.</p> Dauerhafter Link: <a href='https://doi.org/10.3929/ethz-b-000428502' target='_blank' rel='noopener'>https://doi.org/10.3929/ethz-b-000428502</a><p>Veröffentlicht: 27.04.2020</p>"
+        },
+        "image": "/img/resources/ethics_guidelines.jpg",
+        "button": {
+          "link": "https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/428502/CS-report-final.pdf?sequence=1&isAllowed=y",
+          "route": null,
+          "icon": "fas fa-book",
+          "selfWindow": false,
+          "en": "Download Guidelines",
+          "de": "Leitlinien herunterladen (En)"
+        },
+        "second_button": {}
+      }
+    ]
+  },
   "eu_research": {
     "main_content": [
       {

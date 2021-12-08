@@ -23,38 +23,55 @@
   ],
   "covers": [
     {
-      "image": "cover.jpg",
-      "expiration": "2021-10-30T08:00+02:00",
+      "image": "events/handbook.jpg",
+      "expiration": "2022-01-31T08:00+02:00",
       "title": {
-        "en": "Survey about unstructured data",
-        "de": "Umfrage zu unstrukturierten Daten"
+        "en": "Citizen Science Handbook",
+        "de": "Citizen Science Handbook"
       },
       "lead": {
-        "en": "The Digital Society Initiative of UZH would like to learn more about researchers' experiences with unstructured data. Support them by completing their survey!",
-        "de": "Die Digital Society Initiative der UZH möchte mehr über die Erfahrung von Forschenden mit unstrukturierten Daten erfahren. Unterstützt sie dabei, indem Ihr an der Umfrage teilnehmt!"
+        "en": "Our Citizen Science Handbook is out! It is a practical guide on how to successfully design and run co-created Citizen Science projects, with specific tips for practitioners in Zurich.",
+        "de": "Unser Citizen Science Handbuch wurde soeben veröffentlicht! Es ist ein praktischer Leitfaden für die erfolgreiche Planung und Durchführung von Citizen Science Projekten, mit einigen spezifischen Tipps für Praktiker*innen in Zürich."
       },
       "path": {
-        "en": "https://ufspezurich.eu.qualtrics.com/jfe/form/SV_b0Y6kjmSPHNnxnU",
-        "de": "https://ufspezurich.eu.qualtrics.com/jfe/form/SV_b0Y6kjmSPHNnxnU"
+        "en": "https://citizenscience.ch/files/handbook_november%202021.pdf",
+        "de": "https://citizenscience.ch/files/handbook_november%202021.pdf"
       },
-      "button": { "en": "To the survey", "de": "Zur Umfrage" }
+      "button": { "en": "To the handbook", "de": "Zum Handbuch" }
+    },
+	  {
+      "image": "events/accomoji.jpg",
+      "expiration": "2021-12-01T08:00+02:00",
+      "title": {
+        "en": "Rate Emojis",
+        "de": "Emojis bewerten"
+      },
+      "lead": {
+        "en": "The ACCOMOJI project is looking for Citizen Scientists to evaluate emojis in Swiss-German WhatsApp conversations. Take part and with a little luck you'll win a Manor voucher!",
+        "de": "Das Projekt ACCOMOJI sucht Citizen Scientists, die Emojis in deutschschweizerischen WhatsApp-Konversationen bewerten. Macht mit, und mit etwas Glück gewinnt Ihr einen Manor-Gutschein!"
+      },
+      "path": {
+        "en": "https://lab.citizenscience.ch/en/project/336",
+        "de": "https://lab.citizenscience.ch/en/project/336"
+      },
+      "button": { "en": "To the project", "de": "Zum Projekt" }
     },
     {
-      "image": "events/mapontap.jpg",
-      "expiration": "2021-10-30T08:00+02:00",
+      "image": "cover.jpg",
+      "expiration": "2021-12-31T08:00+02:00",
       "title": {
-        "en": "MapOnTap: Smartphone map app use study",
-        "de": "MapOnTap: Studie zur Kartennutzung"
+        "en": "Citizen Science Project Builder 2.0",
+        "de": "Citizen Science Project Builder 2.0"
       },
       "lead": {
-        "en": "Do you want to help to design future map apps that support your mobility better? Then take part in the MapOnTap Study!",
-        "de": "Wollt Ihr mithelfen, Karten-Apps so zu gestalten, dass Ihr noch besser von A nach B kommt? Dann nehmt an der MapOnTap Studie teil!"
+        "en": "We released the new version of our powerful Project Builder. New features make it even more user-friendly!",
+        "de": "Wir haben die neuste Version des Project Builders veröffentlicht. Neue Funktionen machen das Tool noch benutzerfreundlicher!"
       },
       "path": {
-        "en": "https://www.geo.uzh.ch/microsite/mapontap/#/",
-        "de": "https://www.geo.uzh.ch/microsite/mapontap/#/"
+        "en": "https://lab.citizenscience.ch/en/",
+        "de": "https://lab.citizenscience.ch/de/"
       },
-      "button": { "en": "Explore", "de": "Entdecke mehr" }
+      "button": { "en": "Discover more", "de": "Mehr entdecken" }
     },
     {
       "image": "events/newsletter_june.jpg",

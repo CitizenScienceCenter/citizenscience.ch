@@ -40,21 +40,21 @@
       "button": { "en": "To the handbook", "de": "Zum Handbuch" }
     },
 	  {
-      "image": "events/accomoji.jpg",
-      "expiration": "2021-12-01T08:00+02:00",
+      "image": "events/csprinciples.jpg",
+      "expiration": "2021-12-16T08:00+02:00",
       "title": {
-        "en": "Rate Emojis",
-        "de": "Emojis bewerten"
+        "en": "Consultation – 12 Swiss Citizen Science Principles",
+        "de": "Konsultation – 12 Schweizer Citizen Science Prinzipien"
       },
       "lead": {
-        "en": "The ACCOMOJI project is looking for Citizen Scientists to evaluate emojis in Swiss-German WhatsApp conversations. Take part and with a little luck you'll win a Manor voucher!",
-        "de": "Das Projekt ACCOMOJI sucht Citizen Scientists, die Emojis in deutschschweizerischen WhatsApp-Konversationen bewerten. Macht mit, und mit etwas Glück gewinnt Ihr einen Manor-Gutschein!"
+        "en": "Your valuable opinions and inputs on the 12 CS Principles for Switzerland are needed! We very much appreciate your participation in the short online survey.",
+        "de": "Eure wertvollen Meinungen und Inputs zu den erarbeiteten 12 CS Prinzipien für die Schweiz sind gefragt! Wir freuen uns riesig über Eure Teilnahme in der kurzen Online-Umfrage."
       },
       "path": {
-        "en": "https://lab.citizenscience.ch/en/project/336",
-        "de": "https://lab.citizenscience.ch/en/project/336"
+        "en": "https://findmind.ch/c/hTuw-DJJB",
+        "de": "https://www.schweizforscht.ch/netzwerk/arbeitsgruppen/schweizer-citizen-science-prinzipien"
       },
-      "button": { "en": "To the project", "de": "Zum Projekt" }
+      "button": { "en": "To the survey", "de": "Zur Umfrage" }
     },
     {
       "image": "cover.jpg",
@@ -75,18 +75,18 @@
     },
     {
       "image": "events/newsletter_june.jpg",
-      "expiration": "2021-11-31T08:00+02:00",
+      "expiration": "2022-02-28T08:00+02:00",
       "title": {
-        "en": "SEPTEMBER NEWSLETTER",
-        "de": "SEPTEMBER-NEWSLETTER"
+        "en": "DECEMBER NEWSLETTER",
+        "de": "DEZEMBER-NEWSLETTER"
       },
       "lead": {
         "en": "Read our latest newsletter!",
         "de": "Lest unseren neusten Newsletter!"
       },
       "path": {
-        "en": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=c37a30abea",
-        "de": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=d62eb473d7"
+        "en": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=850293852f",
+        "de": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=631a830ab4"
       },
       "button": { "en": "Newsletter", "de": "Zum Newsletter" }
     },	  

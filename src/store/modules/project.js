@@ -2,6 +2,7 @@
 import static_projects from "@/assets/static_projects.json";
 
 const state = {
+  categories: [],
   projectList: [],
   allProjectList: [],
   featuredProjects: [],
@@ -31,6 +32,7 @@ const actions = {
       let info_feat = [];
       if (featured && featured.ok) {
         info_feat = await featured.json();
+        await commit("setCategories", info_feat.categories);
       }
       await commit("setFeaturedProjects", info_feat.projects);
       // FIXME: Uncomment if static projects in assets shall be visible again
@@ -41,37 +43,34 @@ const actions = {
       return;
     }
   },
-  async getAllProjectsRemote({ commit }) {
+  async getAllProjectsRemote({ state, commit }) {
     commit("setIsDataFetched", false);
     let projects = [];
     try {
-      const projectCalls = [
-        // TODO: Static file, replace with dynamic one
-        static_projects,
-        fetch(
-          process.env.VUE_APP_BASE_ENDPOINT_URL + "project/category/thinking/",
-          {
+      let projectCalls = [];
+      state.categories.forEach((x) => {
+        projectCalls.push(
+          fetch(process.env.VUE_APP_BASE_ENDPOINT_URL + `project/category/${x}/`, {
             method: "GET",
             headers: { "Content-Type": "application/json" },
-          }
-        ),
-      ];
+          })
+        );
+      });
       //Multiple call to 2 different projects endpoints
-      const [flagship, regular] = await Promise.all(projectCalls);  
+      const regular_projects = await Promise.all(projectCalls);
       // TODO: validate flagship.ok
       // if (flagship && flagship.ok) {
       //   const info_flag = await flagship.json();
       //   projects = projects.concat(info_flag.projects);
-      // }      
-      if (regular && regular.ok) {
-        const info_reg = await regular.json();
-        projects = projects.concat(info_reg.projects);
+      // }
+      projects = projects.concat(static_projects);
+      for (const regular of regular_projects) {
+        if (regular && regular.ok) {
+          const info_reg = await regular.json();
+          projects = projects.concat(info_reg.projects);
+        }
       }
-      // FIXME: Set at the beginning place after featured websites will be good again
-      if (flagship) {
-        const info_flag = await flagship;
-        projects = projects.concat(info_flag);
-      }
+    
       await commit("setAllProjectList", projects);
       return projects;
     } catch (error) {
@@ -82,6 +81,13 @@ const actions = {
 };
 
 const mutations = {
+  setCategories(state, payload) {
+    if (payload) {
+      state.categories = payload
+        .filter((cat) => cat.short_name != "featured")
+        .map((x) => x.short_name);
+    }
+  },
   setAllProjectList(state, payload) {
     state.allProjectList = payload;
     state.is_data_fetched = true;
@@ -91,7 +97,7 @@ const mutations = {
     state.is_data_fetched = true;
   },
   updateProjectList(state, payload) {
-    state.projectList = payload;    
+    state.projectList = payload;
   },
   setIsDataFetched(state, value) {
     state.is_data_fetched = value;

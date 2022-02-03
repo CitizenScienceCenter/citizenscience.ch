@@ -67,7 +67,7 @@ export const i18n = new VueI18n({
         link: "Before You Start",
       },
       "navigation-startproject-builder": {
-        link: "Project Builder",
+        link: "CitizenScience Tools",
       },
       "navigation-createproject-builder": {
         link: "Create",
@@ -194,7 +194,7 @@ export const i18n = new VueI18n({
         link: "Bevor Sie loslegen",
       },
       "navigation-startproject-builder": {
-        link: "Project Builder",
+        link: "CitizenScience Tools",
       },
       "navigation-createproject-builder": {
         link: "Erstellen",

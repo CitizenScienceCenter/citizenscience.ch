@@ -34,7 +34,8 @@ Vue.use(
   VueGtag,
   {
     config: { id: process.env.VUE_APP_GTAG_ID },
-    enabled: store.getters["gdpr/accepted"] // enable/disable analytics tracking
+    pageTrackerScreenviewEnabled: true,
+    bootstrap:false // GTAG is configured but launched when this parameter turns in true
   },
   router
 );

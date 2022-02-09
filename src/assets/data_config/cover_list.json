@@ -23,49 +23,15 @@
   ],
   "covers": [
     {
-      "image": "events/handbook.jpg",
-      "expiration": "2022-01-31T08:00+02:00",
-      "title": {
-        "en": "Citizen Science Handbook",
-        "de": "Citizen Science Handbook"
-      },
-      "lead": {
-        "en": "Our Citizen Science Handbook is out! It is a practical guide on how to successfully design and run co-created Citizen Science projects, with specific tips for practitioners in Zurich.",
-        "de": "Unser Citizen Science Handbuch wurde soeben veröffentlicht! Es ist ein praktischer Leitfaden für die erfolgreiche Planung und Durchführung von Citizen Science Projekten, mit einigen spezifischen Tipps für Praktiker*innen in Zürich."
-      },
-      "path": {
-        "en": "https://citizenscience.ch/files/handbook_november%202021.pdf",
-        "de": "https://citizenscience.ch/files/handbook_november%202021.pdf"
-      },
-      "button": { "en": "To the handbook", "de": "Zum Handbuch" }
-    },
-	  {
-      "image": "events/csprinciples.jpg",
-      "expiration": "2021-12-16T08:00+02:00",
-      "title": {
-        "en": "Consultation – 12 Swiss Citizen Science Principles",
-        "de": "Konsultation – 12 Schweizer Citizen Science Prinzipien"
-      },
-      "lead": {
-        "en": "Your valuable opinions and inputs on the 12 CS Principles for Switzerland are needed! We very much appreciate your participation in the short online survey.",
-        "de": "Eure wertvollen Meinungen und Inputs zu den erarbeiteten 12 CS Prinzipien für die Schweiz sind gefragt! Wir freuen uns riesig über Eure Teilnahme in der kurzen Online-Umfrage."
-      },
-      "path": {
-        "en": "https://findmind.ch/c/hTuw-DJJB",
-        "de": "https://www.schweizforscht.ch/netzwerk/arbeitsgruppen/schweizer-citizen-science-prinzipien"
-      },
-      "button": { "en": "To the survey", "de": "Zur Umfrage" }
-    },
-    {
       "image": "cover.jpg",
-      "expiration": "2021-12-31T08:00+02:00",
+      "expiration": "2022-03-31T08:00+02:00",
       "title": {
-        "en": "Citizen Science Project Builder 2.0",
-        "de": "Citizen Science Project Builder 2.0"
+        "en": "A new look for our \"Citizen Science Tools\" ",
+        "de": "Neuer Look für unsere \"Citizen Science Tools\" "
       },
       "lead": {
-        "en": "We released the new version of our powerful Project Builder. New features make it even more user-friendly!",
-        "de": "Wir haben die neuste Version des Project Builders veröffentlicht. Neue Funktionen machen das Tool noch benutzerfreundlicher!"
+        "en": "As the number of our digital tools is growing, we have updated the corresponding webpages and added detailed and visual tutorials. Also, check out the beta version of the CS Logger – a tool to create applets for data collection.",
+        "de": "Da unser Angebot an digitalen Tools wächst, haben wir die entsprechenden Webseiten aktualisiert und mit Tutorials ergänzt. Neu zu entdecken gibt es die Beta-Version des CS Loggers – ein Tool um Applets für die Datenerfassung zu erstellen."
       },
       "path": {
         "en": "https://lab.citizenscience.ch/en/",

@@ -96,11 +96,13 @@ export default {
     ...mapState({
       isProjectsLoaded: (state) => state.project.is_data_fetched,
       style: (state) => state.viewconfig.projects_view,
+      categories: (state) => state.project.categories,
     }),
   },
   methods: {
     ...mapActions({
       getAllProjectsRemote: "project/getAllProjectsRemote",
+      getFeaturedProjectsRemote: "project/getFeaturedProjectsRemote"
     }),
     openInNewTab: function(url) {
       openUrl(url);
@@ -108,8 +110,11 @@ export default {
     setViewConfig() {
       this.projectCardConfig = this.style;
     },
-    setProjectList: function() {
-      this.getAllProjectsRemote();
+    setProjectList: async function() {
+      if(this.categories.length === 0) {
+        await this.getFeaturedProjectsRemote({limit: 0})
+      }  
+      await this.getAllProjectsRemote();  
     },
   },
   created() {

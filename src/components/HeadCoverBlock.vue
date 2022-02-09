@@ -372,7 +372,7 @@ export default {
 
     span {
       display: block;
-      font-size: $font-size-mini / $font-scale;
+      font-size: calc($font-size-mini / $font-scale);
       line-height: 1;
       margin-bottom: $spacing-1;
       color: white;

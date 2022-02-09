@@ -23,49 +23,15 @@
   ],
   "covers": [
     {
-      "image": "events/handbook.jpg",
-      "expiration": "2022-01-31T08:00+02:00",
-      "title": {
-        "en": "Citizen Science Handbook",
-        "de": "Citizen Science Handbook"
-      },
-      "lead": {
-        "en": "Our Citizen Science Handbook is out! It is a practical guide on how to successfully design and run co-created Citizen Science projects, with specific tips for practitioners in Zurich.",
-        "de": "Unser Citizen Science Handbuch wurde soeben veröffentlicht! Es ist ein praktischer Leitfaden für die erfolgreiche Planung und Durchführung von Citizen Science Projekten, mit einigen spezifischen Tipps für Praktiker*innen in Zürich."
-      },
-      "path": {
-        "en": "https://citizenscience.ch/files/handbook_november%202021.pdf",
-        "de": "https://citizenscience.ch/files/handbook_november%202021.pdf"
-      },
-      "button": { "en": "To the handbook", "de": "Zum Handbuch" }
-    },
-	  {
-      "image": "events/accomoji.jpg",
-      "expiration": "2021-12-01T08:00+02:00",
-      "title": {
-        "en": "Rate Emojis",
-        "de": "Emojis bewerten"
-      },
-      "lead": {
-        "en": "The ACCOMOJI project is looking for Citizen Scientists to evaluate emojis in Swiss-German WhatsApp conversations. Take part and with a little luck you'll win a Manor voucher!",
-        "de": "Das Projekt ACCOMOJI sucht Citizen Scientists, die Emojis in deutschschweizerischen WhatsApp-Konversationen bewerten. Macht mit, und mit etwas Glück gewinnt Ihr einen Manor-Gutschein!"
-      },
-      "path": {
-        "en": "https://lab.citizenscience.ch/en/project/336",
-        "de": "https://lab.citizenscience.ch/en/project/336"
-      },
-      "button": { "en": "To the project", "de": "Zum Projekt" }
-    },
-    {
       "image": "cover.jpg",
-      "expiration": "2021-12-31T08:00+02:00",
+      "expiration": "2022-03-31T08:00+02:00",
       "title": {
-        "en": "Citizen Science Project Builder 2.0",
-        "de": "Citizen Science Project Builder 2.0"
+        "en": "A new look for our \"Citizen Science Tools\" ",
+        "de": "Neuer Look für unsere \"Citizen Science Tools\" "
       },
       "lead": {
-        "en": "We released the new version of our powerful Project Builder. New features make it even more user-friendly!",
-        "de": "Wir haben die neuste Version des Project Builders veröffentlicht. Neue Funktionen machen das Tool noch benutzerfreundlicher!"
+        "en": "As the number of our digital tools is growing, we have updated the corresponding webpages and added detailed and visual tutorials. Also, check out the beta version of the CS Logger – a tool to create applets for data collection.",
+        "de": "Da unser Angebot an digitalen Tools wächst, haben wir die entsprechenden Webseiten aktualisiert und mit Tutorials ergänzt. Neu zu entdecken gibt es die Beta-Version des CS Loggers – ein Tool um Applets für die Datenerfassung zu erstellen."
       },
       "path": {
         "en": "https://lab.citizenscience.ch/en/",
@@ -75,18 +41,18 @@
     },
     {
       "image": "events/newsletter_june.jpg",
-      "expiration": "2021-11-31T08:00+02:00",
+      "expiration": "2022-02-28T08:00+02:00",
       "title": {
-        "en": "SEPTEMBER NEWSLETTER",
-        "de": "SEPTEMBER-NEWSLETTER"
+        "en": "DECEMBER NEWSLETTER",
+        "de": "DEZEMBER-NEWSLETTER"
       },
       "lead": {
         "en": "Read our latest newsletter!",
         "de": "Lest unseren neusten Newsletter!"
       },
       "path": {
-        "en": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=c37a30abea",
-        "de": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=d62eb473d7"
+        "en": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=850293852f",
+        "de": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=631a830ab4"
       },
       "button": { "en": "Newsletter", "de": "Zum Newsletter" }
     },	  

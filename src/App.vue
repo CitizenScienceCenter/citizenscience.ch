@@ -10,9 +10,11 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 import Header from "./components/shared/Header.vue";
 import GDPR from "./components/shared/GDPR";
+// modules for managing gtag
+import { bootstrap } from "vue-gtag";
 
 export default {
   name: "app",
@@ -62,9 +64,18 @@ export default {
       },
     };
   },
-  computed: mapState({
-    language: (state) => state.settings.language,
-  }),
+  computed: {
+    ...mapState({
+      language: (state) => state.settings.language,
+    }),
+    ...mapGetters({ getGtag: "gdpr/accepted" }),
+  },
+  created() {
+    // Check if Gtag for Google Analytics is enabled in the settings
+    if (this.getGtag) {
+      bootstrap().then((gtag) => {});
+    }
+  },
   mounted: function() {
     // body fade
     var app = this.$el;
@@ -75,6 +86,13 @@ export default {
         app.classList.add("show");
       }
     };
+  },
+  watch: {
+    getGtag() {
+      if (this.getGtag) {
+        bootstrap().then((gtag) => {});
+      }
+    },
   },
 };
 </script>

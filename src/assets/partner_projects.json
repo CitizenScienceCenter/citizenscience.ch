@@ -1,5 +1,111 @@
 [
   {
+    "id": "toxischekommentare",
+    "name": "Toxische Kommentare",
+    "description": {
+      "en": "This project helps to optimise toxic speech detection algorithms which use machine learning and sentiment analysis. Take part in the project and contribute to research in the field of machine learning!",
+      "de": "Dieses Projekt trägt dazu bei, Machine Learning und Sentiment Analysis Algorithmen zur Erkennung von toxischem Sprachgebrauch zu optimieren. Machen Sie mit und leisten Sie einen direkten Beitrag zur Forschung auf diesen Gebieten!"
+    },
+    "image": "/img/logos/toxic_comments_logo.png",
+    "button": {
+      "link": null,
+      "route": "/contribute/partner_project/toxischekommentare",
+      "icon": null,
+      "selfWindow": true,
+      "en": "Explore",
+      "de": "Mehr entdecken"
+    },
+    "details": {
+      "color": { "gradient_start": "#6E519C", "gradient_end": "#3E9050" },
+      "covers": [
+        {
+          "image": "projects/toxischekommentare1.jpg",
+          "title": {
+            "en": "Toxic Comments",
+            "de": "Toxische Kommentare"
+          },
+          "lead": {
+            "en": "Help us optimize machine learning and sentiment analysis algorithms to detect toxic comments!",
+            "de": "Unterstützen Sie uns bei der Optimierung von Machine Learning und Sentiment Analysis Algorithmen zur Erkennung von toxischen Kommentaren!"
+          },
+          "path": {
+            "en": "https://lab.citizenscience.ch/en/",
+            "de": "https://lab.citizenscience.ch/de/"
+          },
+          "button": { "en": "Contribute from May 13", "de": "Mitmachen ab 13. Mai" },
+          "extra_logos": {
+            "logo_right": null,
+            "logo_left": null
+          }
+        }
+      ],
+      "content": [
+        {
+          "subtitle": {
+            "en": "About the project",
+            "de": "Worum geht es?"
+          },
+          "description": {
+            "en": "<p>We developed an automatic classification system for toxic language, particularly hate speech. We now need your help with creating a sufficiently large and qualitatively good data set to optimise the algorithm and detect hate speech more easily.</p><p>All comments have been collected from online fora of Swiss news outlets. Some of them feature toxic language, others do not. Since assessing whether or not a comment is toxic is subjective, we are aiming for each comment to be classified by multiple people. With the help of these classifications, we can then teach the model which comments contain toxic language and which ones do not.</p><p>The more comments we classify the better the algorithm will work. Your help, therefore, directly contributes to the research in the field of machine learning.</p>",
+            "de": "<p>In den letzten Monaten haben wir ein Klassifikationssystem für toxischen Sprachgebrauch, insbesondere Hate Speech, entwickelt. Um dieses zu optimieren, benötigen wir viele, qualitativ hochwertige Daten. Dafür sind wir auf Ihre Mithilfe angewiesen!</p><p>Wir haben Kommentare aus Online-Foren von verschiedenen Schweizer Zeitungen gesammelt. Einige davon enthalten toxischen Sprachgebrauch, andere nicht. Da die Einschätzung von toxischem Sprachgebrauch sehr subjektiv ist, ist unser Ziel, dass jeder Kommentar von mehreren verschiedenen Personen bewertet wird. Mit Hilfe dieser Bewertungen können wir dem Modell beibringen, welche Kommentare toxischen Sprachgebrauch enthalten und welche nicht.</p><p>Je mehr Kommentare klassifiziert werden, desto besser wird die algorithmische Erkennung funktionieren! Ihre Unterstützung leistet daher einen direkten Beitrag zur Forschung auf dem Gebiet des Machine Learnings.</p>"
+          },
+          "image": "/img/projects/toxischekommentare1.jpg",
+          "toggle_img_style": false,
+          "reverse": false
+        },
+        {
+          "subtitle": {
+            "en": "How it works",
+            "de": "Wie funktioniert es?"
+          },
+          "description": {
+            "en": "<p>Help us to improve our algorithm! Classify comments and optimise the algorithm more easily to detect hate speech.</p><p>You will read comments on online articles and determine whether or not they contain hate speech. We consider \"hate speech\" to be language use which is derogatory, insulting or vulgar. If you are unsure, please classify the comment as hate speech.</p><p>To participate in this project, you must be fluent in German.</p><p><b>Registration</b><br>To avoid being shown the same comment multiple times, we ask you to register on our Citizen Science Project Builder. If you classify 50 or more comments and are registered, you automatically enter a prize draw for one of three 50.- CHF Digitec vouchers.</p><p>Thank you very much for your participation!</p>",
+            "de": " <p> Helfen Sie uns, unseren Algorithmus zu verbessern! Bewerten Sie Kommentare und optimieren Sie den Algorithmus, um Hate Speech schneller zu finden. </p><p> Sie werden Kommentare zu Artikeln aus dem Internet lesen und bestimmen, ob es sich um Hate Speech handelt oder nicht. Unter \"Hate Speech\" verstehen wir abwertenden \/ beleidigenden \/ vulgären Sprachgebrauch. Sind Sie unsicher, beurteilen Sie den Kommentar bitte als Hate Speech. </p><p> <b>Anleitung</b><br/>Sie werden Kommentare zu Artikeln aus dem Internet lesen und bestimmen, ob es sich um Hate Speech handelt oder nicht. </p><p> Es gibt keine allgemeingültige Definition von Hate Speech. Eine weit verbreitete und auch von den Vereinten Nationen verwendete Definition versteht unter Hate Speech den Gebrauch von Sprache, durch den eine Person oder eine Gruppe aufgrund ihrer Identität – z.B. aufgrund ihres Geschlechts, Alters, ihrer Sexualität, Religion, Nationalität, Hautfarbe oder Herkunft, geistigen oder körperlichen Beeinträchtigung – angegriffen oder abgewertet wird. </p><p> Eine breitere Definition von Hate Speech kann auch abwertenden Sprachgebrauch gegen eine Person oder Gruppe aufgrund ihres sozialen Status (z.B. Bildung oder Einkommen) oder ihrer politischen Einstellung beinhalten. </p><p> Zusätzlich gibt es toxischen/hasserfüllten Sprachgebrauch, der zwar nicht unbedingt Hate Speech ist, aber trotzdem die Diskussionskultur beeinträchtigt und Feindseligkeit fördert. Dazu gehören allgemeine Beleidigungen, Drohungen oder vulgäre Aussagen, welche sich aber nicht gegen eine Person oder eine Gruppe aufgrund ihrer Identität richten. </p><p> Welche Definition von Hate Speech Sie für Ihre Annotationen verwenden, möchten wir Ihnen überlassen. Wichtig ist einfach, dass Sie bei den Annotationen nicht nur markieren, ob etwas Hate Speech ist (oder nicht), sondern auch gegen welche Gruppe(n) sich diese richtet oder ob es sich um toxische Sprache handelt. </p><p> <b>Schritte</b><br/>Schritt 1: Lesen Sie den Kommentar. Damit Sie den Kontext kennen, können Sie zu jedem Kommentar auch den Titel und den vollständigen Zeitungsartikel lesen, die unterhalb des Kommentars erscheinen. </p><p> Schritt 2: Wenn ein Kommentar <b>keine Hate Speech</b> enthält, beantworten Sie Frage 1 bitte mit \"nein\". Wenn ein Kommentar <b>Hate Speech</b> enthält, beantworten Sie Frage 1 bitte mit \"ja\". </p><p> Schritt 3: Wenn der Kommentar Hate Speech enthält, beantworten Sie bitte auch Frage 2, in der Sie angeben, gegen welche Personen-Gruppe(n) sich der Kommentar richtet. </p><div style=\"padding-bottom:0.5em;\"><strong>Beispiele</strong></div><div style=\"padding-bottom:0.75em;\"> Beispiel 1: \"Keine Hate Speech\" Kommentar: <b>Heute scheint nicht dein Tag zu sein.</b> <ul> <li>Enthält der Kommentar Hate Speech? <b>Nein</b></li></ul> </div><div style=\"padding-bottom:0.75em;\"> Beispiel 2: \"Hate Speech\" Kommentar: <b >Alle diese N**** taugen nix und sollen zurück nach Afrika gebracht werden.</b > <ul> <li>Enthält der Kommentar Hate Speech? <b>Ja</b></li><li> Wenn der Kommentar Hate Speech beinhaltet, richtet sich diese gegen... <b>Nationalität\/Hautfarbe\/Herkunft</b> </li></ul> </div><div style=\"padding-bottom:0.75em;\"> Beispiel 3: \"Hate Speech\" Kommentar: <b>Diese SVP Schweine sind alle alte Säcke, die man abschaffen sollte.</b> <ul> <li>Enthält der Kommentar Hate Speech? <b>Ja</b></li><li> Wenn der Kommentar Hate Speech beinhaltet, richtet sich diese gegen... <b>Politische Einstellung\/Alter</b> </li></ul> </div><div style=\"padding-bottom:1.5em;\"> Beispiel 4: \"Toxische Sprache\": <b>Sie minderbewerteter Idiot vom Lande!</b> <ul> <li>Enthält der Kommentar Hate Speech? <b>Ja</b></li><li> Wenn der Kommentar Hate Speech beinhaltet, richtet sich diese gegen... <b>Richtet sich gegen keine Gruppe, benutzt aber toxische Sprach</b> </li></ul> </div><p> <b>Registrierung</b><br/>Damit Sie den gleichen Kommentar nicht mehrmals sehen, bitten wir Sie, sich auf dem Citizen Science Project Builder zu registrieren. Wenn Sie 50 oder mehr Kommentare klassifiziert haben und registriert sind, nehmen Sie automatisch an der Preisverlosung für einen von drei Digitec Gutscheinen über 50.- CHF teil. </p><p>Vielen Dank für Ihre Unterstützung!</p>"
+          },
+          "image": "/img/projects/toxischekommentare2.jpg",
+          "toggle_img_style": true,
+          "reverse": true
+        },
+        {
+          "subtitle": {
+            "en": "Event",
+            "de": "Event"
+          },
+          "description": {
+            "en": "<p>The <b>classification event</b> will take place from the <b>13th-16th May 2022</b>. After the kick-off meeting on the 13th Mai, we are going to classify as many comments as possible. On each of the four days of the event, you will have the opportunity to ask questions and have conversations on toxic language and automatic classifications thereof. Please note that all conversations will take place in German.</p><p><b>Programme</b><br>13th May, 10-11am: interactive presentation: \"What is toxic language?\"<br>14th May, 10-11am: group discussion on \"How can toxic language be detected automatically and what are the challenges which are faced during this process?\"<br>15th May, 10-11am: Q&A on toxic language, algorithms, etc.<br>16th May, 7-8pm: round up event</p><p>The zoom link for the events from 13th-15th May, 10-11am: <a href='https://ethz.zoom.us/j/64554213621?pwd=S3N4OUE2OEFiSHo1czJOY0xnVnlhZz09' target='_blank' rel='noopener'>https://ethz.zoom.us/j/64554213621?pwd=S3N4OUE2OEFiSHo1czJOY0xnVnlhZz09</a> (meeting ID: 645 5421 3621, password: 019165).</p><p>The zoom link for the round up event on 16th May, 7-8pm: <a href='https://ethz.zoom.us/j/65903283942?pwd=R2hTaXpRdnlEc0pteFc4bjBob1VKZz09' target='_blank' rel='noopener'>https://ethz.zoom.us/j/65903283942?pwd=R2hTaXpRdnlEc0pteFc4bjBob1VKZz09</a> (meeting ID: 659 0328 3942, password: 430804).</p><p>We look forward to having you join us!</p>",
+            "de": "<p>Vom <b>13. - 16. Mai 2022</b> können Sie am <b>Annotations-Event</b> mitmachen. Nach dem Kick-Off am 13. Mai, klassifizieren wir so viele Kommentare wie möglich. Dazwischen sind wir für Q&As / Aktivitäten verfügbar.</p><p><b>Programm</b><br>13. Mai: 10.00 – 11.00 Uhr: Interaktive Präsentation: \"Was ist toxischer Sprachgebrauch?\"<br>14. Mai: 10.00 – 11.00 Uhr: Austausch zu den Fragen \"Wie kann toxischer Sprachgebrauch automatisch erkannt werden und was sind die damit verbundenen Herausforderungen?\"<br>15. Mai: 10.00 – 11.00 Uhr: Q&A zu toxischem Sprachgebrauch, Algorithmen etc.<br>16. Mai: 19.00 – 20.00 Uhr: Abschluss</p><p>Die Zoom-Links für die Events am 13.-15. Mai, 10.00 - 11.00 Uhr: <a href='https://ethz.zoom.us/j/64554213621?pwd=S3N4OUE2OEFiSHo1czJOY0xnVnlhZz09' target='_blank' rel='noopener'>https://ethz.zoom.us/j/64554213621?pwd=S3N4OUE2OEFiSHo1czJOY0xnVnlhZz09</a> (Meeting-ID: 645 5421 3621, Passwort: 019165).</p><p>Der Zoom-Link für die Abschlussveranstaltung am 16. Mai, 19:00-20:00 Uhr: <a href='https://ethz.zoom.us/j/65903283942?pwd=R2hTaXpRdnlEc0pteFc4bjBob1VKZz09' target='_blank' rel='noopener'>https://ethz.zoom.us/j/65903283942?pwd=R2hTaXpRdnlEc0pteFc4bjBob1VKZz09</a> (Meeting-ID: 659 0328 3942, Passwort: 430804).</p><p>Wir freuen uns, wenn Sie mit dabei sind!</p>"
+          },
+          "image": "/img/projects/toxischekommentare3.jpg",
+          "toggle_img_style": false,
+          "reverse": false
+        },
+        {
+          "subtitle": {
+            "en": "Team",
+            "de": "Team"
+          },
+          "description": {
+            "en": "<p>The <a href='https://digdemlab.io/' target='_blank' rel='noopener'>Digital Democracy Lab</a> researches the political implications of digital technology using computational social science methods. It focuses on topics such as political communication and public opinion, egovernment and public administration, AI and governance, civic tech and political participation, the regulation of tech platforms, and state repression and surveillance.</p>",
+            "de": "<p>Das <a href='https://digdemlab.io/' target='_blank' rel='noopener'>Digital Democracy Lab</a> erforscht die Auswirkungen der digitalen Technologie auf Politik und Demokratie mit Methoden der Computational Social Science. Es bietet eine Forschungsinfrastruktur, die eine effiziente, skalierbare und reproduzierbare Datenerfassung und -analyse ermöglicht. Schlüsselbereiche der Forschung sind politische Kommunikation und öffentliche Meinung, E-Government und öffentliche Verwaltung, KI und Governance, zivile Technologie und politische Beteiligung, die Regulierung von Technologieplattformen sowie staatliche Repression und Überwachung.</p>"
+          },
+          "image": "/img/logos/digitaldemocracylab.png",
+          "toggle_img_style": false,
+          "reverse": true
+        },
+        {
+          "subtitle": null,
+          "description": {
+            "en": "<p>The <a href='https://immigrationlab.org/' target='_blank' rel='noopener'>Immigration Policy Lab</a> (IPL) at ETH Zurich and Stanford University investigates the effects of immigration and integration policies. We aim to provide empirical answers to questions about what does – and does not – work in the realm of migration and integration policy, and to generate innovative solutions based on rigorous evidence. Using cutting-edge analytical tools, we provide policy-makers and practitioners insights that inspire policies and that benefit immigrants and host communities alike.</p>",
+            "de": "<p>Das <a href='https://immigrationlab.org/' target='_blank' rel='noopener'>Immigration Policy Lab</a> erforscht Wirkungen von Migrations- und Integrationspolitiken. Ziel ist es, anhand empirischer Evidenz Antworten darauf zu geben, welche Politikinstrumente funktionieren und welche nicht, und neue Lösungsansätze zu entwickeln. Basierend auf umfangreichen Daten und den neuesten statistischen Verfahren liefert die Forschungsgruppe wissenschaftliche Grundlagen um das gesellschaftliche Zusammenleben zu verbessern.</p>"
+          },
+          "image": "/img/logos/immigrationpolicylab.png",
+          "toggle_img_style": false,
+          "reverse": true
+        }
+      ]
+    }
+  },
+  {
     "id": "bündnerkupfer",
     "name": "Bündner Kupfer",
     "description": {

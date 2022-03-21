@@ -39,6 +39,23 @@
       },
       "button": { "en": "Discover more", "de": "Mehr entdecken" }
     },
+{
+      "image": "cover.jpg",
+      "expiration": "2022-03-31T08:00+02:00",
+      "title": {
+        "en": "MARIE",
+        "de": "MARIE"
+      },
+      "lead": {
+        "en": "This exciting Citizen Science project breaks taboos and researches vaginal health. To get started, they are looking for supporters.",
+        "de": "Das spannende Citizen Science Projekt bricht mit Tabus und forscht über die vaginale Gesundheit. Um durchzustarten sind sie auf der Suche nach Unterstützer*innen."
+      },
+      "path": {
+        "en": "https://wemakeit.com/projects/unveil-vagina-s-microworld?locale=en",
+        "de": "https://wemakeit.com/projects/unveil-vagina-s-microworld?locale=de"
+      },
+      "button": { "en": "Discover more", "de": "Mehr entdecken" }
+    },
     {
       "image": "events/newsletter_june.jpg",
       "expiration": "2022-02-28T08:00+02:00",

@@ -23,25 +23,25 @@
   ],
   "covers": [
     {
-      "image": "cover.jpg",
-      "expiration": "2022-03-31T08:00+02:00",
+      "image": "projects/toxischekommentare2.jpg",
+      "expiration": "2022-05-17T08:00+02:00",
       "title": {
-        "en": "A new look for our \"Citizen Science Tools\" ",
-        "de": "Neuer Look für unsere \"Citizen Science Tools\" "
+        "en": "Challenge: Toxic Comments ",
+        "de": "Challenge: Toxische Kommentare "
       },
       "lead": {
-        "en": "As the number of our digital tools is growing, we have updated the corresponding webpages and added detailed and visual tutorials. Also, check out the beta version of the CS Logger – a tool to create applets for data collection.",
-        "de": "Da unser Angebot an digitalen Tools wächst, haben wir die entsprechenden Webseiten aktualisiert und mit Tutorials ergänzt. Neu zu entdecken gibt es die Beta-Version des CS Loggers – ein Tool um Applets für die Datenerfassung zu erstellen."
+        "en": "From the 13th to 16th May 2022, we will jointly be tracking down toxic uses of language in 1500 comments. Help us and take the opportunity to learn more about toxic uses of language and hate speech by participating in various workshops throughout the event weekend!",
+        "de": "Vom 13. – 16. Mai 2022 spüren wir gemeinsam toxischen Sprachgebrauch in 1500 Kommentaren auf. Helft mit und nutzt die Chance in diversen Workshops mehr über toxischen Sprachgebrach und Hate Speech zu erfahren!"
       },
       "path": {
-        "en": "https://lab.citizenscience.ch/en/",
-        "de": "https://lab.citizenscience.ch/de/"
+        "en": "https://citizenscience.ch/en/contribute/partner_project/toxischekommentare",
+        "de": "https://citizenscience.ch/de/contribute/partner_project/toxischekommentare"
       },
-      "button": { "en": "Discover more", "de": "Mehr entdecken" }
+      "button": { "en": "to the challenge", "de": "zur Challenge" }
     },
 {
       "image": "cover.jpg",
-      "expiration": "2022-03-31T08:00+02:00",
+      "expiration": "2022-04-12T08:00+02:00",
       "title": {
         "en": "MARIE",
         "de": "MARIE"
@@ -58,18 +58,18 @@
     },
     {
       "image": "events/newsletter_june.jpg",
-      "expiration": "2022-02-28T08:00+02:00",
+      "expiration": "2022-05-31T08:00+02:00",
       "title": {
-        "en": "DECEMBER NEWSLETTER",
-        "de": "DEZEMBER-NEWSLETTER"
+        "en": "MARCH NEWSLETTER",
+        "de": "MÄRZ-NEWSLETTER"
       },
       "lead": {
         "en": "Read our latest newsletter!",
         "de": "Lest unseren neusten Newsletter!"
       },
       "path": {
-        "en": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=850293852f",
-        "de": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=631a830ab4"
+        "en": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=9c3f4ee29f",
+        "de": "https://us17.campaign-archive.com/?u=32303d2adcf28a2820c5f9165&id=e57277b728"
       },
       "button": { "en": "Newsletter", "de": "Zum Newsletter" }
     },	  

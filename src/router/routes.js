@@ -296,7 +296,7 @@ export const routes = [
               // this redirect to a sub site in project builder
               const site = to.query.site || "";
               openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/tools/projectbuilder/${site}`
+                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`
               );
             },
           },

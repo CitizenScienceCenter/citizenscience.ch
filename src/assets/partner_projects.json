@@ -46,8 +46,8 @@
             "de": "Worum geht es?"
           },
           "description": {
-            "en": "<p>We developed an automatic classification system for toxic language, particularly hate speech. We now need your help with creating a sufficiently large and qualitatively good data set to optimise the algorithm and detect hate speech more easily.</p><p>All comments have been collected from online fora of Swiss news outlets. Some of them feature toxic language, others do not. Since assessing whether or not a comment is toxic is subjective, we are aiming for each comment to be classified by multiple people. With the help of these classifications, we can then teach the model which comments contain toxic language and which ones do not.</p><p>The more comments we classify the better the algorithm will work. Your help, therefore, directly contributes to the research in the field of machine learning.</p>",
-            "de": "<p>In den letzten Monaten haben wir ein Klassifikationssystem für toxischen Sprachgebrauch, insbesondere Hate Speech, entwickelt. Um dieses zu optimieren, benötigen wir viele, qualitativ hochwertige Daten. Dafür sind wir auf Ihre Mithilfe angewiesen!</p><p>Wir haben Kommentare aus Online-Foren von verschiedenen Schweizer Zeitungen gesammelt. Einige davon enthalten toxischen Sprachgebrauch, andere nicht. Da die Einschätzung von toxischem Sprachgebrauch sehr subjektiv ist, ist unser Ziel, dass jeder Kommentar von mehreren verschiedenen Personen bewertet wird. Mit Hilfe dieser Bewertungen können wir dem Modell beibringen, welche Kommentare toxischen Sprachgebrauch enthalten und welche nicht.</p><p>Je mehr Kommentare klassifiziert werden, desto besser wird die algorithmische Erkennung funktionieren! Ihre Unterstützung leistet daher einen direkten Beitrag zur Forschung auf dem Gebiet des Machine Learnings.</p>"
+            "en": "<p>In cooperation with the <a href='https://stophatespeech.ch/' target='_blank' rel='noopener'>Stop Hate Speech</a> project led by <a href='https://de.alliancef.ch/' target='_blank' rel='noopener'>alliance F</a> we have developed an automatic classification system for toxic language, particularly hate speech. We now need your help with creating a sufficiently large and qualitatively good data set to optimise the algorithm and detect hate speech more easily.</p><p>All comments have been collected from online fora of Swiss news outlets. Some of them feature toxic language, others do not. Since assessing whether or not a comment is toxic is subjective, we are aiming for each comment to be classified by multiple people. With the help of these classifications, we can then teach the model which comments contain toxic language and which ones do not.</p><p>The more comments we classify the better the algorithm will work. Your help, therefore, directly contributes to the research in the field of machine learning.</p>",
+            "de": "<p>Im Rahmen des Projekts <a href='https://stophatespeech.ch/' target='_blank' rel='noopener'>Stop Hate Speech</a> haben wir in den letzten Monaten in Kooperation mit <a href='https://de.alliancef.ch/' target='_blank' rel='noopener'>alliance F</a> ein Klassifikationssystem für toxischen Sprachgebrauch, insbesondere Hate Speech, entwickelt. Um dieses zu optimieren, benötigen wir viele, qualitativ hochwertige Daten. Dafür sind wir auf Ihre Mithilfe angewiesen!</p><p>Wir haben Kommentare aus Online-Foren von verschiedenen Schweizer Zeitungen gesammelt. Einige davon enthalten toxischen Sprachgebrauch, andere nicht. Da die Einschätzung von toxischem Sprachgebrauch sehr subjektiv ist, ist unser Ziel, dass jeder Kommentar von mehreren verschiedenen Personen bewertet wird. Mit Hilfe dieser Bewertungen können wir dem Modell beibringen, welche Kommentare toxischen Sprachgebrauch enthalten und welche nicht.</p><p>Je mehr Kommentare klassifiziert werden, desto besser wird die algorithmische Erkennung funktionieren! Ihre Unterstützung leistet daher einen direkten Beitrag zur Forschung auf dem Gebiet des Machine Learnings.</p>"
           },
           "image": "/img/projects/toxischekommentare1.jpg",
           "toggle_img_style": false,
@@ -92,13 +92,23 @@
           "toggle_img_style": false,
           "reverse": true
         },
-        {
+		{
           "subtitle": null,
           "description": {
             "en": "<p>The <a href='https://immigrationlab.org/' target='_blank' rel='noopener'>Immigration Policy Lab</a> (IPL) at ETH Zurich and Stanford University investigates the effects of immigration and integration policies. We aim to provide empirical answers to questions about what does – and does not – work in the realm of migration and integration policy, and to generate innovative solutions based on rigorous evidence. Using cutting-edge analytical tools, we provide policy-makers and practitioners insights that inspire policies and that benefit immigrants and host communities alike.</p>",
             "de": "<p>Das <a href='https://immigrationlab.org/' target='_blank' rel='noopener'>Immigration Policy Lab</a> erforscht Wirkungen von Migrations- und Integrationspolitiken. Ziel ist es, anhand empirischer Evidenz Antworten darauf zu geben, welche Politikinstrumente funktionieren und welche nicht, und neue Lösungsansätze zu entwickeln. Basierend auf umfangreichen Daten und den neuesten statistischen Verfahren liefert die Forschungsgruppe wissenschaftliche Grundlagen um das gesellschaftliche Zusammenleben zu verbessern.</p>"
           },
           "image": "/img/logos/immigrationpolicylab.png",
+          "toggle_img_style": false,
+          "reverse": true
+        },
+        {
+          "subtitle": null,
+          "description": {
+            "en": "<p>\"Stop Hate Speech\" is a project initiated by alliance F, the umbrella organization of Swiss women's associations. In collaboration with the Digital Democracy Lab, the Immigration Policy Lab and further partners it aims to document the prevalence of hate speech and test the effectiveness of various counterspeech strategies in Switzerland. To this end, the project has developed a hate speech detection algorithm and designs randomized field experiments to measure the effects of counterspeech.</p>",
+            "de": "<p>\"Stop Hate Speech\" ist ein Projekt, welches von alliance F, der Dachorganisation der Schweizer Frauenorganisationen, initiiert wurde. Gemeinsam mit dem Digital Democracy Lab, dem Immigration Policy Lab und weiteren Partnern zielt es darauf ab, den Verbreitungsgrad von Hate Speech zu dokumentieren und die Effektivität verschiedener Gegenrede-Strategien in der Schweiz zu testen. Dazu hat das Projekt einen Algorithmus zur Erkennung von Hassrede entwickelt und entwirft randomisierte Feldexperimente, um die Effekte von Gegenrede zu messen.</p>"
+          },
+          "image": "/img/logos/stophatespeech.png",
           "toggle_img_style": false,
           "reverse": true
         }

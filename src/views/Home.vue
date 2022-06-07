@@ -183,6 +183,7 @@ export default {
       isNewsLoaded: (state) => state.content.isNewsLoaded,
       isGCLoaded: (state) => state.content.isGCLoaded,
       isEventsLoaded: (state) => state.content.isEventsLoaded,
+      coverList: (state) => state.content.coverList,
     }),
   },
   methods: {
@@ -190,6 +191,7 @@ export default {
       getFeaturedProjectsRemote: "project/getFeaturedProjectsRemote",
       getNewsRemote: "content/getNewsRemote",
       getEventsRemote: "content/getEventsRemote",
+      getCoverRemote: "content/getCoverRemote"      
     }),
     setProjectList() {
       this.projectCardConfig = this.view("projectCards");
@@ -221,10 +223,14 @@ export default {
       this.ourMision = this.getGContent("home_our_mission");
       this.whatOffer = this.getGContent("home_what_offer");
     },
+
+    async getFromPrismic() {
+      await this.getCoverRemote(this);
+    },
   },
   created() {
     // Load the view configuration in vuex state
-
+    this.getFromPrismic();
     this.setProjectList();
     this.setEventsConfig();
     this.setNews();

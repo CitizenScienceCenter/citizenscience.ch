@@ -40,21 +40,67 @@ const getters = {
 };
 
 const actions = {
-  async getCoverRemote({ commit }) {
+  async getCoverRemote({ commit }, context) {
     let res = null;
+    let content = [];
     try {
-      res = await getRemoteFile("data/cover_list.json");
+      if (context) {
+        res = await context.$prismic.client.getSingle("article");
+      }
+      // res = await getRemoteFile("data/cover_list.json");
       if (res === undefined) {
         throw new Error("Remote undefined");
-      } else {
-        return res;
+      }
+      const aux = res.data.body[0].items;
+
+      //TODO: model the data coming from remote
+      //TODO: remove default from here
+      content = {
+        default: [
+          {
+            image: "cover.jpg",
+            expiration: "",
+            title: {
+              en: "Citizen Science Center Zurich",
+              de: "Citizen Science Center Zürich",
+            },
+            lead: {
+              en: "Next Generation Citizen Science",
+              de: "Bürgerwissenschaft der nächsten Generation",
+            },
+            path: { en: null, de: null },
+            button: { en: null, de: null },
+            extra_path: { en: null, de: null },
+            extra_button: { en: null, de: null },
+            extra_logos: {
+              logo_right: null,
+              logo_left: null,
+            },
+          },
+        ],
+      };
+      if (aux.length) {
+        content = {
+          ...content,
+          ...{
+            covers: aux.map((x) => {
+              return {
+                image: x.image.url,
+                expiration: x.expiration,
+                title: x.title,
+                lead: x.lead,
+                path: x.path.url,
+                button: x.button,
+              };
+            }),
+          },
+        };
       }
     } catch (error) {
       console.error(error);
-      res = coverListDefault;
-      return res;
+      content = coverListDefault;
     } finally {
-      commit("setCoverList", res);
+      commit("setCoverList", content);
     }
   },
   async getNewsRemote({ commit }) {

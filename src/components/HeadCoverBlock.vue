@@ -28,11 +28,16 @@
         }"
       >
         <div class="col-12">
-          <h2 class="cover-heading scroll-effect" v-if="br.heading.visible">
+          <h2
+            class="cover-heading scroll-effect"
+            :class="scrolled ? 'scrolled' : ''"
+            v-if="br.heading.visible"
+          >
             {{ localTranslation(cover.title) }}
           </h2>
           <p
             class="cover-subheading scroll-effect scroll-effect-delayed-3"
+            :class="scrolled ? 'scrolled' : ''"
             v-if="br.subheading.visible"
           >
             {{ localTranslation(cover.lead) }}
@@ -46,13 +51,17 @@
                 target="_blank"
                 rel="noopener"
                 class="button button-primary-main"
-                >{{ localTranslation(cover.button) || $t("default-button-name") }}
+                >{{
+                  localTranslation(cover.button) || $t("default-button-name")
+                }}
               </a>
               <router-link
                 v-else
                 :to="localTranslation(cover.path)"
                 class="button button-primary-main"
-                >{{ localTranslation(cover.button) || $t("default-button-name") }}
+                >{{
+                  localTranslation(cover.button) || $t("default-button-name")
+                }}
               </router-link>
             </div>
 
@@ -64,21 +73,38 @@
                 target="_blank"
                 rel="noopener"
                 class="button button-secondary button-secondary-inverted"
-                >{{ localTranslation(cover.extra_button) || $t("default-button-name") }}
+                >{{
+                  localTranslation(cover.extra_button) ||
+                    $t("default-button-name")
+                }}
               </a>
               <router-link
                 v-else
                 :to="localTranslation(cover.extra_path)"
                 class="button button-secondary button-secondary-inverted"
-                >{{ localTranslation(cover.extra_button) || $t("default-button-name") }}
+                >{{
+                  localTranslation(cover.extra_button) ||
+                    $t("default-button-name")
+                }}
               </router-link>
             </div>
           </div>
         </div>
         <!-- Extra top right logos -->
-        <div class="top-right-logo" v-if="cover.extra_logos" :class="{ mitrends: false }">
-          <img v-if="cover.extra_logos.logo_right" :src="cover.extra_logos.logo_right" />
-          <img class="left" v-if="cover.extra_logos.logo_left" :src="cover.extra_logos.logo_left" />
+        <div
+          class="top-right-logo"
+          v-if="cover.extra_logos"
+          :class="{ mitrends: false }"
+        >
+          <img
+            v-if="cover.extra_logos.logo_right"
+            :src="cover.extra_logos.logo_right"
+          />
+          <img
+            class="left"
+            v-if="cover.extra_logos.logo_left"
+            :src="cover.extra_logos.logo_left"
+          />
         </div>
       </div>
     </div>
@@ -112,7 +138,11 @@
     </div>
 
     <!-- Goal logos -->
-    <div class="bottom-right-logo" v-scroll-to="'#sdg'" v-if="br.sdg_logo.visible">
+    <div
+      class="bottom-right-logo"
+      v-scroll-to="'#sdg'"
+      v-if="br.sdg_logo.visible"
+    >
       <img v-if="goal" class="goal" :src="goalImage" :alt="goalImage" />
       <img
         id="sdg_logo"
@@ -139,6 +169,7 @@ export default {
       color: defaultColor,
       currentCover: 0,
       timer: null,
+      scrolled: false,
     };
   },
   props: {
@@ -184,29 +215,38 @@ export default {
       }
     },
     setCoverInfo() {
-      let covers = [];
-      let cover_options;
+      this.triggerScroll(false);
       // if covers content comes from props
       if (this.customCover) {
-        cover_options = this.customCover.covers;
+        this.coverInfo = this.customCover.covers;
         // color setting
         this.color = this.customCover.color || defaultColor;
-      } // if covers content comes from vuex state
-      else if (this.coverList.hasOwnProperty("covers")) {
-        cover_options = this.coverList.covers;
+        this.triggerScroll(true);
+      } else if (!this.coverList) {
+        //TODO: put a skeleton when this.coverList is undefined
+        return;
+      } else if (this.coverList.hasOwnProperty("covers")) {
+        let covers  = this.coverList.covers
+          .filter(
+            (slide) =>
+              !slide.expiration || Date.parse(slide.expiration) >= Date.now()
+          )
+          .sort(function(a, b) {
+            return Date.parse(a.expiration) - Date.parse(b.expiration);
+          });
+        // Only the three most upcoming covers in the list
+        this.coverInfo = covers.slice(0, this.br.number_of_img || 3);
+      } else if (this.coverList.hasOwnProperty("default")) {
+        this.coverInfo  = this.coverList.default;
       }
-      covers = cover_options
-        .filter((slide) => !slide.expiration || Date.parse(slide.expiration) >= Date.now())
-        .sort(function(a, b) {
-          return Date.parse(a.expiration) - Date.parse(b.expiration);
-        });
-      // Only the three most upcoming covers in the list
-      covers = covers.slice(0, this.br.number_of_img || 3);
-      if (covers.length > 0) {
-        this.coverInfo = covers;
-      } else {
-        // Set default cover whether the covers are not covers to show
-        this.coverInfo = this.coverList ? this.coverList.default : null;
+      // if (covers.length > 0) {
+      //   this.coverInfo = covers;
+      // } else {
+      //   // Set default cover whether the covers are not covers to show
+      //   this.coverInfo = this.coverList ? this.coverList.default : null;
+      // }
+      if (this.coverInfo && this.coverInfo.length > 1) {
+        this.setRefreshTimer();
       }
     },
 
@@ -217,16 +257,23 @@ export default {
     setPrev() {
       this.resetTimer();
       this.currentCover =
-        this.currentCover == 0 ? this.coverInfo.length - 1 : this.currentCover - 1;
+        this.currentCover == 0
+          ? this.coverInfo.length - 1
+          : this.currentCover - 1;
     },
     setNext() {
       this.resetTimer();
-      this.currentCover = this.currentCover < this.coverInfo.length - 1 ? this.currentCover + 1 : 0;
+      this.currentCover =
+        this.currentCover < this.coverInfo.length - 1
+          ? this.currentCover + 1
+          : 0;
     },
     setRefreshTimer() {
       // validate refresh_time or set default in 10 seconds
       this.br.refresh_time =
-        this.br.refresh_time && this.br.refresh_time <= 30000 && this.br.refresh_time >= 3000
+        this.br.refresh_time &&
+        this.br.refresh_time <= 30000 &&
+        this.br.refresh_time >= 3000
           ? this.br.refresh_time
           : 10000;
       this.timer = setInterval(this.autoPlay, this.br.refresh_time);
@@ -240,21 +287,27 @@ export default {
     autoPlay() {
       this.setNext();
     },
+    triggerScroll(scrollValue = false) {
+      const _this = this;
+      setTimeout(function() {
+        _this.scrolled = scrollValue;
+      }, 1);
+    },
   },
   created() {
     this.br = this.customView || this.view("cover");
     this.setCoverInfo();
-    if (this.coverInfo && this.coverInfo.length > 1) {
-      this.setRefreshTimer();
-    }
   },
-  mounted: function() {
-    let matches = this.$el.querySelectorAll(".scroll-effect");
-    window.setTimeout(function() {
-      for (let i = 0; i < matches.length; i++) {
-        matches[i].classList.add("scrolled");
-      }
-    }, 1);
+  watch: {
+    coverList: {
+      handler(newData) {
+        this.setCoverInfo();
+        if (newData) {
+          this.triggerScroll(true);
+        }
+      },
+      deep: true,
+    },
   },
 };
 </script>

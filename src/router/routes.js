@@ -153,12 +153,13 @@ export const routes = [
             view: "home",
           });
           // The cover component is required even data is not retrieved
-          const cover = await store.dispatch("content/getCoverRemote");
+          // const cover = await store.dispatch("content/getCoverRemote", this);
           // generic conten data retrieving
           await store.dispatch("content/getGenericContentRemote", {
             view: "home",
           });
-          if (res && cover) next();
+          // if (res && cover) next();
+          if (res) next();
         },
       },
       {

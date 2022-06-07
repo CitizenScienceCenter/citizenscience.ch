@@ -1,5 +1,24 @@
 // TODO: this would be replaced for flagship projects
 import static_projects from "@/assets/static_projects.json";
+import { info } from "sass";
+
+/**
+ * Get projects by category and page
+ * @param category - the category of the project
+ * @param [page=1] - 1
+ * @returns An object with the following properties:
+ */
+const _getProjectsByCategory = async (category, page = 1) => {
+  const projects_by_category = await fetch(
+    process.env.VUE_APP_BASE_ENDPOINT_URL +
+      `project/category/${category}${page !== 1 ? "/page/" + page : ""}/`,
+    {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    }
+  );
+  return await projects_by_category.json();
+};
 
 const state = {
   categories: [],
@@ -35,8 +54,6 @@ const actions = {
         await commit("setCategories", info_feat.categories);
       }
       await commit("setFeaturedProjects", info_feat.projects);
-      // FIXME: Uncomment if static projects in assets shall be visible again
-      // await commit("setFeaturedProjects", static_projects.slice(0, limit));
       return static_projects;
     } catch (error) {
       console.error(error);
@@ -45,34 +62,39 @@ const actions = {
   },
   async getAllProjectsRemote({ state, commit }) {
     commit("setIsDataFetched", false);
-    let projects = [];
+    commit("clearAllProjectList");
+    const multiPagesCategories = {};
+    // add the static projects to the list
+    commit("setAllProjectList", static_projects);
     try {
-      let projectCalls = [];
-      state.categories.forEach((x) => {
-        projectCalls.push(
-          fetch(process.env.VUE_APP_BASE_ENDPOINT_URL + `project/category/${x}/`, {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-          })
-        );
-      });
-      //Multiple call to 2 different projects endpoints
-      const regular_projects = await Promise.all(projectCalls);
-      // TODO: validate flagship.ok
-      // if (flagship && flagship.ok) {
-      //   const info_flag = await flagship.json();
-      //   projects = projects.concat(info_flag.projects);
-      // }
-      projects = projects.concat(static_projects);
-      for (const regular of regular_projects) {
-        if (regular && regular.ok) {
-          const info_reg = await regular.json();
-          projects = projects.concat(info_reg.projects);
+      // get first page of project categories
+      await Promise.all(
+        state.categories.map(async (category) => {
+          const info_projects = await _getProjectsByCategory(category);
+          /* checking if the category has projects. */
+          await commit("setAllProjectList", info_projects.projects);
+          /* checking if the category has more than one page. */
+          if (
+            info_projects.pagination &&
+            Math.ceil(
+              info_projects.pagination.total / info_projects.pagination.per_page
+            ) > 1
+          ) {
+            multiPagesCategories[category] = await Math.ceil(
+              info_projects.pagination.total / info_projects.pagination.per_page
+            );
+          }
+        })
+      );      
+
+      // get projects from multi pages categories
+      for (const category in multiPagesCategories) {
+        for (let i = 2; i <= multiPagesCategories[category]; i++) {
+          const info_projects = await _getProjectsByCategory(category, i);
+          await commit("setAllProjectList", info_projects.projects);
         }
       }
-    
-      await commit("setAllProjectList", projects);
-      return projects;
+      await commit("setIsDataFetched", true);
     } catch (error) {
       console.error(error);
       return;
@@ -88,9 +110,11 @@ const mutations = {
         .map((x) => x.short_name);
     }
   },
+  clearAllProjectList(state) {
+    state.allProjectList = [];
+  },
   setAllProjectList(state, payload) {
-    state.allProjectList = payload;
-    state.is_data_fetched = true;
+    state.allProjectList.push(...payload);
   },
   setFeaturedProjects(state, payload) {
     state.featuredProjects = payload;

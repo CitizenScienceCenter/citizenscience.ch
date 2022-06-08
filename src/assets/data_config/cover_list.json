@@ -23,36 +23,36 @@
   ],
   "covers": [
     {
-      "image": "projects/toxischekommentare2.jpg",
-      "expiration": "2022-05-17T08:00+02:00",
+      "image": "events/call_for_volunteer_projects.jpg",
+      "expiration": "2022-07-31T08:00+02:00",
       "title": {
-        "en": "Challenge: Toxic Comments ",
-        "de": "Challenge: Toxische Kommentare "
+        "en": "Project Call for volunteer projects",
+        "de": "Projekt-Call für Freiwilligenprojekte"
       },
       "lead": {
-        "en": "From the 13th to 16th May 2022, we will jointly be tracking down toxic uses of language in 1500 comments. Help us and take the opportunity to learn more about toxic uses of language and hate speech by participating in various workshops throughout the event weekend!",
-        "de": "Vom 13. – 16. Mai 2022 spüren wir gemeinsam toxischen Sprachgebrauch in 1500 Kommentaren auf. Helft mit und nutzt die Chance in diversen Workshops mehr über toxischen Sprachgebrach und Hate Speech zu erfahren!"
+        "en": "Within the Ageing Strategy 2035, the city of Zurich supports innovative volunteer projects around old age. So that people can live self-determined for as long as possible. Deadline for project submission is July 31, 2022.",
+        "de": "Die Stadt Zürich unterstützt im Rahmen der Altersstrategie 2035 innovative Freiwilligenprojekte rund ums Alter. Damit Menschen so lange wie möglich selbstbestimmt leben können. Deadline zur Projekteinreichung ist der 31. Juli 2022."
       },
       "path": {
-        "en": "https://citizenscience.ch/en/contribute/partner_project/toxischekommentare",
-        "de": "https://citizenscience.ch/de/contribute/partner_project/toxischekommentare"
+        "en": "https://www.stadt-zuerich.ch/fwa-projektfinanzierung",
+        "de": "https://www.stadt-zuerich.ch/fwa-projektfinanzierung"
       },
-      "button": { "en": "to the challenge", "de": "zur Challenge" }
+      "button": { "en": "Further Information", "de": "Weitere Informationen" }
     },
 {
       "image": "cover.jpg",
-      "expiration": "2022-04-12T08:00+02:00",
+      "expiration": "2022-06-11T08:00+02:00",
       "title": {
-        "en": "MARIE",
-        "de": "MARIE"
+        "en": "Co-researchers wanted",
+        "de": "Co-Forschende gesucht"
       },
       "lead": {
-        "en": "This exciting Citizen Science project breaks taboos and researches vaginal health. To get started, they are looking for supporters.",
-        "de": "Das spannende Citizen Science Projekt bricht mit Tabus und forscht über die vaginale Gesundheit. Um durchzustarten sind sie auf der Suche nach Unterstützer*innen."
+        "en": "The project \"Was war bekannt?\" (What was known?) is researching the history of out-of-home placement in Switzerland. They are now looking for co-researchers to join the project. Interested?",
+        "de": "Das Projekt \"Was war bekannt?\" erforscht die Geschichte der Fremdplatzierung in der Schweiz. Sie suchen nun noch Co-Forschende, die im Projekt mitwirken. Interessiert?"
       },
       "path": {
-        "en": "https://wemakeit.com/projects/unveil-vagina-s-microworld?locale=en",
-        "de": "https://wemakeit.com/projects/unveil-vagina-s-microworld?locale=de"
+        "en": "https://waswarbekannt.ch/",
+        "de": "https://waswarbekannt.ch/"
       },
       "button": { "en": "Discover more", "de": "Mehr entdecken" }
     },

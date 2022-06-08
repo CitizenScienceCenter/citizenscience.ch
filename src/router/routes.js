@@ -153,13 +153,13 @@ export const routes = [
             view: "home",
           });
           // The cover component is required even data is not retrieved
-          // const cover = await store.dispatch("content/getCoverRemote", this);
-          // generic conten data retrieving
+          const cover = await store.dispatch("content/getCoverRemote");
+          // generic content data retrieving
           await store.dispatch("content/getGenericContentRemote", {
             view: "home",
           });
           // if (res && cover) next();
-          if (res) next();
+          if (cover && res) next();
         },
       },
       {
@@ -582,7 +582,6 @@ export const routes = [
           nav: false,
         },
         beforeEnter(to, from) {
-          // FIXME: Replace profile for the citizenscience one
           openUrl(
             `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
             true
@@ -593,7 +592,6 @@ export const routes = [
         path: "reset",
         component: RequestReset,
         meta: { i18n: "navigation-reset", nav: false },
-        // TODO: pending to remove after implemented
         beforeEnter(to, from) {
           openUrl(
             `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/reset-password`,

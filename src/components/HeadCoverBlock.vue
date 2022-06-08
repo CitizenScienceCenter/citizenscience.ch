@@ -156,7 +156,7 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from "vuex";
+import { mapGetters, mapState, mapActions } from "vuex";
 import { getTranslation, openUrl } from "@/assets/support.js";
 import defaultColor from "@/styles/theme.scss";
 
@@ -179,13 +179,17 @@ export default {
     goal: String,
   },
   computed: {
-    ...mapState({ coverList: (state) => state.content.coverList }),
+    ...mapState({
+      coverList: (state) => state.content.coverList,
+      language: (state) => state.settings.language,
+    }),
     ...mapGetters({ view: "viewconfig/getHomeConfig" }),
     goalImage() {
       return require("@/assets/shared/sdgs/neg/" + this.goal + ".svg");
     },
   },
   methods: {
+    ...mapActions({ getCoverRemote: "content/getCoverRemote" }),
     backgroundImage(image) {
       let img = image;
       if (image && !image.startsWith("http")) {
@@ -217,16 +221,13 @@ export default {
     setCoverInfo() {
       this.triggerScroll(false);
       // if covers content comes from props
+      //TODO: pending restructure the schema for custom cover
       if (this.customCover) {
         this.coverInfo = this.customCover.covers;
         // color setting
         this.color = this.customCover.color || defaultColor;
-        this.triggerScroll(true);
-      } else if (!this.coverList) {
-        //TODO: put a skeleton when this.coverList is undefined
-        return;
-      } else if (this.coverList.hasOwnProperty("covers")) {
-        let covers  = this.coverList.covers
+      } else if (this.coverList) {
+        let covers = this.coverList
           .filter(
             (slide) =>
               !slide.expiration || Date.parse(slide.expiration) >= Date.now()
@@ -236,18 +237,13 @@ export default {
           });
         // Only the three most upcoming covers in the list
         this.coverInfo = covers.slice(0, this.br.number_of_img || 3);
-      } else if (this.coverList.hasOwnProperty("default")) {
-        this.coverInfo  = this.coverList.default;
+      } else {
+        this.coverInfo = [];
       }
-      // if (covers.length > 0) {
-      //   this.coverInfo = covers;
-      // } else {
-      //   // Set default cover whether the covers are not covers to show
-      //   this.coverInfo = this.coverList ? this.coverList.default : null;
-      // }
       if (this.coverInfo && this.coverInfo.length > 1) {
         this.setRefreshTimer();
       }
+      this.triggerScroll(true);
     },
 
     // cover change section
@@ -295,18 +291,14 @@ export default {
     },
   },
   created() {
+    debugger;
     this.br = this.customView || this.view("cover");
     this.setCoverInfo();
   },
   watch: {
-    coverList: {
-      handler(newData) {
-        this.setCoverInfo();
-        if (newData) {
-          this.triggerScroll(true);
-        }
-      },
-      deep: true,
+    async language() {
+      await this.getCoverRemote();
+      this.setCoverInfo();
     },
   },
 };

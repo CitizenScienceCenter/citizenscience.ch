@@ -58,3 +58,19 @@ export function trackEvent(_this, info = undefined) {
     });
   }
 }
+
+// Class for manage the cms client
+class SingletonCMS {
+  constructor() {
+    this.cmsClient = null;
+  }
+  setClient(cmsClient) {
+    if (!this.cmsClient) {
+      this.cmsClient = cmsClient;
+    }
+  }
+  getClient() {
+    return this.cmsClient;
+  }
+}
+export const cmsClient = new SingletonCMS();

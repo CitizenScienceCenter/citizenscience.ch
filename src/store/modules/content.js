@@ -1,8 +1,9 @@
-import coverListDefault from "@/assets/data_config/cover_list.json";
+import { cover_list } from "@/schemas/content.js";
 import { getRemoteFile } from "@/minio.js";
+import { cmsClient } from "@/assets/support.js";
 
 const state = {
-  coverList: undefined,
+  coverList: [],
   news: undefined,
   genericContent: undefined,
   events: undefined,
@@ -40,65 +41,46 @@ const getters = {
 };
 
 const actions = {
-  async getCoverRemote({ commit }, context) {
+  async getCoverRemote({ commit, rootState }) {
     let res = null;
-    let content = [];
+    const lang = rootState.settings.language;
+    let content = [...cover_list[lang]];
     try {
-      if (context) {
-        res = await context.$prismic.client.getSingle("article");
-      }
+      const client = cmsClient.getClient();
+      //TODO: change the type of document from prismic
+      const args = [
+        "article",
+        lang !== "en" ? { lang: `${lang}-${lang}` } : null,
+      ].filter((x) => x);
+      res = await client.getSingle(...args);
+      // TODO: delete cover_list.json file
       // res = await getRemoteFile("data/cover_list.json");
       if (res === undefined) {
         throw new Error("Remote undefined");
       }
-      const aux = res.data.body[0].items;
-
-      //TODO: model the data coming from remote
-      //TODO: remove default from here
-      content = {
-        default: [
-          {
-            image: "cover.jpg",
-            expiration: "",
-            title: {
-              en: "Citizen Science Center Zurich",
-              de: "Citizen Science Center Zürich",
-            },
-            lead: {
-              en: "Next Generation Citizen Science",
-              de: "Bürgerwissenschaft der nächsten Generation",
-            },
-            path: { en: null, de: null },
-            button: { en: null, de: null },
-            extra_path: { en: null, de: null },
-            extra_button: { en: null, de: null },
-            extra_logos: {
-              logo_right: null,
-              logo_left: null,
-            },
-          },
-        ],
-      };
+      const aux =
+        "data" in res && "body" in res.data
+          ? res.data.body.length
+            ? res.data.body[0].items
+            : []
+          : [];
+      // const aux = []
       if (aux.length) {
-        content = {
-          ...content,
-          ...{
-            covers: aux.map((x) => {
-              return {
-                image: x.image.url,
-                expiration: x.expiration,
-                title: x.title,
-                lead: x.lead,
-                path: x.path.url,
-                button: x.button,
-              };
-            }),
-          },
-        };
+        content = aux.map((x) => {
+          return {
+            image: x.image.url || "cover.jpg",
+            expiration: x.expiration,
+            title: x.title,
+            lead: x.lead,
+            path: x.path.url,
+            button: x.button,
+          };
+        });
       }
+      return content;
     } catch (error) {
       console.error(error);
-      content = coverListDefault;
+      return content;
     } finally {
       commit("setCoverList", content);
     }

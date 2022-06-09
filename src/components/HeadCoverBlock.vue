@@ -291,7 +291,6 @@ export default {
     },
   },
   created() {
-    debugger;
     this.br = this.customView || this.view("cover");
     this.setCoverInfo();
   },

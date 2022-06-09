@@ -49,7 +49,7 @@ const actions = {
       const client = cmsClient.getClient();
       //TODO: change the type of document from prismic
       const args = [
-        "article",
+        "cover_list",
         lang !== "en" ? { lang: `${lang}-${lang}` } : null,
       ].filter((x) => x);
       res = await client.getSingle(...args);
@@ -89,7 +89,10 @@ const actions = {
     commit("removeIsLoaded", "news");
     let res = null;
     try {
+      const client = cmsClient.getClient();
       res = await getRemoteFile("data/news.json");
+      const response = await client.getSingle("news");
+      console.log(response.data);
       return res;
     } catch (error) {
       console.error(error);

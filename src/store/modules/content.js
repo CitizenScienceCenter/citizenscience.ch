@@ -1,12 +1,9 @@
-import { cover_list, coverListInterface } from "@/schemas/content.js";
 import { getRemoteFile } from "@/minio.js";
 import { cmsClient } from "@/assets/support.js";
+import { cover_list, coverListInterface } from "@/schemas/coverList.js";
+import { newsInterface } from "@/schemas/news.js";
 
-/**
- * @param document - The document name.
- * @param [lang=en] - The language of the document.
- * @returns An array of the document and the lang.
- */
+// Form the parameters for CMS query
 const getCMSParameters = (document, lang = "en") => {
   if (document)
     return [
@@ -14,6 +11,16 @@ const getCMSParameters = (document, lang = "en") => {
       lang !== "en" ? { lang: `${lang}-${lang}` } : null,
     ].filter((x) => x);
 };
+
+// Get slice content from CMS data retrieved
+const getCMSSlice = (res) => {
+  return "data" in res && "body" in res.data
+    ? res.data.body.length
+      ? res.data.body[0].items
+      : []
+    : [];
+};
+
 const state = {
   coverList: [],
   news: undefined,
@@ -58,18 +65,14 @@ const actions = {
     const lang = rootState.settings.language;
     let content = [...cover_list[lang]];
     try {
+      /* Client for CMS interactions. */
       const client = cmsClient.getClient();
       const args = getCMSParameters("cover_list", lang);
       let res = await client.getSingle(...args);
       if (res === undefined) {
         throw new Error("Remote undefined");
       }
-      res =
-        "data" in res && "body" in res.data
-          ? res.data.body.length
-            ? res.data.body[0].items
-            : []
-          : [];
+      res = getCMSSlice(res);
       if (res.length) {
         content = res.map((x) => coverListInterface(x));
       }
@@ -81,21 +84,26 @@ const actions = {
       commit("setCoverList", content);
     }
   },
-  async getNewsRemote({ commit }) {
-    commit("removeIsLoaded", "news");
-    let res = null;
+  // Get news from CMS
+  async getNewsRemote({ commit, rootState }) {
+    let content = [];
+    const lang = rootState.settings.language;
     try {
+      /* Client for CMS interactions. */
       const client = cmsClient.getClient();
-      res = await getRemoteFile("data/news.json");
-      const response = await client.getSingle("news");
-      console.log(response.data);
-      return res;
+      const args = getCMSParameters("news", lang);
+      let res = await client.getSingle(...args);
+      if (res === undefined) {
+        throw new Error("Remote undefined");
+      }
+      res = getCMSSlice(res);
+      if (res.length) {
+        content = res.map((x) => newsInterface(x));
+      }
     } catch (error) {
-      console.error(error);
-      res = require(`@/assets/news.json`);
-      return res;
+      console.log(error);
     } finally {
-      commit("setNewsList", res);
+      commit("setNewsList", content);
     }
   },
   async getGenericContentRemote({ commit }, { view }) {

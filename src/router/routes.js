@@ -154,6 +154,8 @@ export const routes = [
           });
           // The cover component is required even data is not retrieved
           const cover = await store.dispatch("content/getCoverRemote");
+
+          store.commit("content/removeIsLoaded", "news");
           // generic content data retrieving
           await store.dispatch("content/getGenericContentRemote", {
             view: "home",
@@ -296,9 +298,7 @@ export const routes = [
               next(from);
               // this redirect to a sub site in project builder
               const site = to.query.site || "";
-              openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`
-              );
+              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`);
             },
           },
           {

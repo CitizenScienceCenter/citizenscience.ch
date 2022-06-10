@@ -31,3 +31,19 @@ for (let lang in cover_list) {
     },
   };
 }
+
+export const coverListInterface = (payload) => {
+  return {
+    image:
+      payload.image && payload.image.hasOwnProperty("url")
+        ? payload.image.url
+        : "cover.jpg",
+    title: payload.title,
+    lead: payload.lead,
+    expiration: payload.expiration,
+    path: payload.path ? payload.path.url : null,
+    button: payload.button,
+    extra_path: payload.extra_path ? payload.extra_path.url : null,
+    extra_button: payload.extra_button,
+  };
+};

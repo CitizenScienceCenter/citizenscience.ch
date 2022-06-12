@@ -20,10 +20,7 @@
   <div v-if="visible">
     <div class="event-list" v-if="events && events.length != 0">
       <!-- Heading Section -->
-      <div
-        class="row row-centered extra-margin-top-2"
-        v-if="br.heading.visible"
-      >
+      <div class="row row-centered extra-margin-top-2" v-if="br.heading.visible">
         <div class="col col-12 scroll-effect heading-section">
           <h2 class="heading small">
             {{ $t(localTranslation(pl.heading)) }}
@@ -44,7 +41,7 @@
           :class="validateImage('img-content', event)"
           v-if="event.image && !br.hideImage"
         >
-          <img :src="'/img/events/' + event.image" :alt="event.image" />
+          <img :src="event.image" :alt="event.image + event.path" />
         </div>
 
         <!-- Details Subsection -->
@@ -54,12 +51,10 @@
             {{ eventDisplayDate(event.start, event.end) }}
           </p>
           <!-- Title Subsection -->
-          <h3
-            class="subheading event-title"
-            :class="getStateStyle(event.state)"
-            v-html="event.title"
-          ></h3>
-          <h4 class="event-state">{{ localTranslation(event.state) }}</h4>
+          <h3 class="subheading event-title" :class="event.state" v-html="event.title"></h3>
+          <h4 class="event-state" v-if="event.state !== 'normal'">
+            {{ localTranslation(event.state) }}
+          </h4>
           <!-- Abstract Subsection -->
           <div class="event-abstract" v-if="event.abstract">
             <i class="fas fa-info-circle icon"></i>
@@ -68,7 +63,7 @@
           <!-- Speakers Subsection -->
           <div class="event-speakers" v-if="event.speakers !== ''">
             <i class="fas fa-user icon"></i>
-            <p v-html="event.speakers"></p>
+            <small><prismic-rich-text :field="event.speakers"/></small>
           </div>
           <!-- Location Subsection -->
           <div class="event-location">
@@ -81,8 +76,9 @@
               tag="button"
               class="button button-secondary button-secondary-naked"
               :to="'/events/' + event.path"
-              >Details</router-link
             >
+              Details
+            </router-link>
           </div>
         </div>
       </router-link>
@@ -176,19 +172,6 @@ export default {
       }
       return selectedView[item];
     },
-    getStateStyle(eventState) {
-      const state = this.localTranslation(eventState);
-      try {
-        if (state.toLowerCase() == this.$i18n.t("event-cancel")) {
-          return "canceled";
-        }
-        if (state.toLowerCase() == this.$i18n.t("event-postpone")) {
-          return "postponed";
-        }
-      } catch (error) {
-        return null;
-      }
-    },
     setStyle() {
       for (const key in this.viewConfig) {
         if (Object.keys(this.br).includes(key)) {
@@ -206,13 +189,9 @@ export default {
         startDate.getMonth() == endDate.getMonth() &&
         startDate.getFullYear() == endDate.getFullYear()
       ) {
-        return `${moment(startDate).format("llll")} - ${moment(endDate).format(
-          "LT"
-        )}`;
+        return `${moment(startDate).format("llll")} - ${moment(endDate).format("LT")}`;
       }
-      return `${moment(startDate).format("llll")} - ${moment(endDate).format(
-        "llll"
-      )}`;
+      return `${moment(startDate).format("llll")} - ${moment(endDate).format("llll")}`;
     },
   },
   created() {
@@ -223,18 +202,14 @@ export default {
     this.events = this.getdata;
     if (!this.past) {
       // filter for future events
-      this.events = this.events.filter(
-        (event) => Date.parse(event.end) >= Date.now()
-      );
+      this.events = this.events.filter((event) => Date.parse(event.end) >= Date.now());
       // sort by date
       this.events.sort(function(a, b) {
         return Date.parse(a.start) - Date.parse(b.start);
       });
     } else {
       // filter for past events
-      this.events = this.events.filter(
-        (event) => Date.parse(event.end) < Date.now()
-      );
+      this.events = this.events.filter((event) => Date.parse(event.end) < Date.now());
       // sort by date
       this.events.sort(function(a, b) {
         return Date.parse(b.start) - Date.parse(a.start);
@@ -364,6 +339,7 @@ export default {
         p {
           padding-left: $spacing-1;
           font-size: $font-size-small;
+          margin-bottom: $spacing-1;
         }
       }
     }

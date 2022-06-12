@@ -2,14 +2,12 @@ import { getRemoteFile } from "@/minio.js";
 import { cmsClient } from "@/assets/support.js";
 import { cover_list, coverListInterface } from "@/schemas/coverList.js";
 import { newsInterface } from "@/schemas/news.js";
+import { eventsInterface } from "@/schemas/events.js";
 
 // Form the parameters for CMS query
 const getCMSParameters = (document, lang = "en") => {
   if (document)
-    return [
-      document,
-      lang !== "en" ? { lang: `${lang}-${lang}` } : null,
-    ].filter((x) => x);
+    return [document, lang !== "en" ? { lang: `${lang}-${lang}` } : null].filter((x) => x);
 };
 
 // Get slice content from CMS data retrieved
@@ -124,18 +122,27 @@ const actions = {
       commit("setGenericContent", res);
     }
   },
-  async getEventsRemote({ commit }) {
-    commit("removeIsLoaded", "events");
-    let res = null;
+  async getEventsRemote({ commit, rootState }) {
+    let content = [];
+    const lang = rootState.settings.language;
     try {
-      res = await getRemoteFile("data/events.json");
-      return res;
+      /* Client for CMS interactions. */
+      const client = cmsClient.getClient();
+      const args = getCMSParameters("events", lang);
+      let res = await client.getSingle(...args);
+      if (res === undefined) {
+        throw new Error("Remote undefined");
+      }
+      res = getCMSSlice(res);
+      if (res.length) {
+        content = res.map((x) => eventsInterface(x));
+      }
+      return content;
     } catch (error) {
       console.error(error);
-      res = require(`@/assets/events.json`);
-      return res;
+      return content;
     } finally {
-      commit("setEvents", res);
+      commit("setEvents", content);
     }
   },
   async getPeopleRemote({ commit }) {

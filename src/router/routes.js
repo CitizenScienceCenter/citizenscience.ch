@@ -154,8 +154,11 @@ export const routes = [
           });
           // The cover component is required even data is not retrieved
           const cover = await store.dispatch("content/getCoverRemote");
+          //Reset loading for content retrieving
+          ["news", "events"].forEach((x) => {
+            store.commit("content/removeIsLoaded", x);
+          });
 
-          store.commit("content/removeIsLoaded", "news");
           // generic content data retrieving
           await store.dispatch("content/getGenericContentRemote", {
             view: "home",
@@ -201,9 +204,7 @@ export const routes = [
               nav: true,
             },
             beforeEnter: async (to, from, next) => {
-              const content = await store.dispatch(
-                "content/getPartnerProjectsRemote"
-              );
+              const content = await store.dispatch("content/getPartnerProjectsRemote");
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "partners",
               });
@@ -582,10 +583,7 @@ export const routes = [
           nav: false,
         },
         beforeEnter(to, from) {
-          openUrl(
-            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
-            true
-          );
+          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`, true);
         },
       },
       {
@@ -593,10 +591,7 @@ export const routes = [
         component: RequestReset,
         meta: { i18n: "navigation-reset", nav: false },
         beforeEnter(to, from) {
-          openUrl(
-            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/reset-password`,
-            false
-          );
+          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/reset-password`, false);
         },
       },
       {

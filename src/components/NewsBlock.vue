@@ -46,7 +46,6 @@
       >
         <transition name="slide-fade" mode="out-in">
           <prismic-rich-text :field="newslist[index].description" />
-          <!-- <component :is="getDynamicData" :key="index"></component> -->
         </transition>
       </div>
     </div>
@@ -78,12 +77,6 @@ export default {
       language: (state) => state.settings.language,
     }),
     ...mapGetters({ getNewsList: "content/getNewsList" }),
-    getDynamicData: function() {
-      return {
-        template: `<pre>${this.newslist[this.index].description}
-        </pre>`,
-      };
-    },
   },
   methods: {
     ...mapActions({ getNewsRemote: "content/getNewsRemote" }),

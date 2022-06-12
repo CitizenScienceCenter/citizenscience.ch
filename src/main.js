@@ -47,7 +47,7 @@ Vue.use(
 // Prismic registration in Vue
 Vue.use(PrismicVue,{
   // endpoint: process.env.VUE_APP_PRISMIC_ENDPOINT,
-  endpoint: "https://dorado-test.prismic.io/api/v2",
+  endpoint: process.env.VUE_APP_CMS_REPOSITORY,
   linkResolver,
 })
 

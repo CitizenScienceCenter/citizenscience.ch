@@ -2,7 +2,7 @@ export const eventsInterface = (payload) => {
   return {
     path: payload.path,
     image:
-      payload.image && payload.image.hasOwnProperty("url") ? payload.image.url : "cs_intro_1.jpg",
+      payload.image && payload.image.hasOwnProperty("url") ? payload.image.url : "/img/cs_event_default.jpg",
     title: payload.title,
     content: payload.content,
     abstract: payload.abstract,

@@ -56,7 +56,7 @@
               <p class="lead centered event-date">
                 {{ eventDisplayDate(event.start, event.end) }}
               </p>
-              <div class="event-speakers" v-if="event.speakers !== ''">
+              <div class="event-speakers" v-if="event.speakers && event.speakers.length">
                 <i class="fas fa-user icon"></i>
                 <prismic-rich-text :field="event.speakers" />
               </div>

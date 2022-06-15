@@ -122,6 +122,7 @@ const actions = {
       commit("setGenericContent", res);
     }
   },
+  // Get events from CMS
   async getEventsRemote({ commit, rootState }) {
     let content = [];
     const lang = rootState.settings.language;
@@ -179,9 +180,19 @@ const actions = {
       commit("setPartnerships", res);
     }
   },
-  async getPartnerProjectsRemote({ commit }) {
+  
+  async getAllPartnerProjectsRemote({ commit, rootState }) {
     let res = null;
+    let content = [];
+    const lang = rootState.settings.language;
     try {
+      /* Client for CMS interactions. */
+      // const client = cmsClient.getClient();
+      // const args = getCMSParameters("partner_projects", lang);
+      // let response = await client.getSingle(...args);
+      // console.log(response.data.body);
+      // response = await client.getByID('YqmtQBEAACAAXAlZ')
+      // console.log(response.data);
       res = await getRemoteFile("data/partner_projects.json");
       if (res === undefined) {
         throw new Error("Remote undefined");

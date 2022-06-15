@@ -49,7 +49,7 @@
         "link": null,
         "route": "/events",
         "icon": "far fa-calendar-alt",
-        "selfWindow": true,
+        "selfwindow": true,
         "en": "Our Events",
         "de": "Unsere Veranstaltungen"
       }
@@ -68,7 +68,7 @@
       "link": null,
       "route": null,
       "icon": null,
-      "selfWindow": false,
+      "selfwindow": false,
       "en": "",
       "de": ""
     },

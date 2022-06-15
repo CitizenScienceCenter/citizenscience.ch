@@ -204,7 +204,7 @@ export const routes = [
               nav: true,
             },
             beforeEnter: async (to, from, next) => {
-              const content = await store.dispatch("content/getPartnerProjectsRemote");
+              const content = await store.dispatch("content/getAllPartnerProjectsRemote");
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "partners",
               });

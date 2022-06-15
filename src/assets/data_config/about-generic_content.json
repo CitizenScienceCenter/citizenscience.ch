@@ -50,7 +50,7 @@
           "link": "/files/geschaeftsordnung_cccs.pdf",
           "route": null,
           "icon": "fas fa-file-pdf",
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "Center's Statue (DE)",
           "de": "GESCHÄFTSORDNUNG"
         },
@@ -74,7 +74,7 @@
           "link": null,
           "route": null,
           "icon": null,
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "",
           "de": ""
         },
@@ -94,7 +94,7 @@
           "link": null,
           "route": null,
           "icon": null,
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "",
           "de": ""
         },
@@ -137,7 +137,7 @@
           "link": "/files/handbook_november 2021.pdf",
           "route": null,
           "icon": "fas fa-book",
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "Download Handbook",
           "de": "Handbuch herunterladen"
         },
@@ -157,7 +157,7 @@
           "link": "https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/428502/CS-report-final.pdf?sequence=1&isAllowed=y",
           "route": null,
           "icon": "fas fa-book",
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "Download Guidelines",
           "de": "Leitlinien herunterladen (En)"
         },
@@ -200,7 +200,7 @@
           "link": "https://www.time4cs.eu/",
           "route": null,
           "icon": "",
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "Read more",
           "de": "Mehr Informationen"
         }
@@ -236,7 +236,7 @@
           "link": "https://incentive-project.eu",
           "route": null,
           "icon": "",
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "Read more",
           "de": "Mehr Informationen"
         }
@@ -272,7 +272,7 @@
           "link": "https://crowd4sdg.eu",
           "route": null,
           "icon": "",
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "Read more",
           "de": "Mehr Informationen"
         }
@@ -342,7 +342,7 @@
           "link": null,
           "route": "/community",
           "icon": null,
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "Our Community",
           "de": "Unsere Community"
         },
@@ -389,14 +389,14 @@
           "link": "mailto:info@citizenscience.ch",
           "route": null,
           "icon": "fas fa-envelope",
-          "selfWindow": true,
+          "selfwindow": true,
           "en": "info@citizenscience.ch"
         },
         "second_button": {
           "link": "tel:+41446342197",
           "route": null,
           "icon": "fas fa-phone",
-          "selfWindow": true,
+          "selfwindow": true,
           "en": "+41 44 634 21 97"
         }
       }
@@ -421,7 +421,7 @@
         "link": null,
         "route": null,
         "icon": null,
-        "selfWindow": true,
+        "selfwindow": true,
         "en": "",
         "de": ""
       }

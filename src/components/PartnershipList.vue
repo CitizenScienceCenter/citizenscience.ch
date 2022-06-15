@@ -70,9 +70,9 @@ export default {
     },
   },
   methods: {
-    openInNewTab(url, selfWindow = false) {
+    openInNewTab(url, selfwindow = false) {
       // open external links
-      openUrl(url, selfWindow);
+      openUrl(url, selfwindow);
     },
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);

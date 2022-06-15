@@ -81,7 +81,7 @@
                 triggerButton(
                   contentData.button.route,
                   contentData.button.link,
-                  contentData.button.selfWindow
+                  contentData.button.selfwindow
                 )
               "
               :disabled="br.button.disabled"
@@ -105,7 +105,7 @@
                 triggerButton(
                   contentData.second_button.route,
                   contentData.second_button.link,
-                  contentData.button.selfWindow
+                  contentData.button.selfwindow
                 )
               "
               :disabled="br.second_button.disabled"
@@ -172,14 +172,14 @@ export default {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
-    triggerButton: function(route, url, selfWindow) {
+    triggerButton: function(route, url, selfwindow) {
       // open internal routes
       if (route) {
         this.$router.push(route);
         return;
       }
       // open external links
-      openUrl(url, selfWindow);
+      openUrl(url, selfwindow);
     },
     checkVerticalOrientation: function(element) {
       const sizes = ["xsm", "sm", "md", "lg"];

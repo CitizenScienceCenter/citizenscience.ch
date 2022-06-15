@@ -11,7 +11,7 @@
       "link": null,
       "route": "/contribute/partner_project/toxischekommentare",
       "icon": null,
-      "selfWindow": true,
+      "selfwindow": true,
       "en": "Explore",
       "de": "Mehr entdecken"
     },
@@ -116,7 +116,7 @@
     }
   },
   {
-    "id": "bündnerkupfer",
+    "id": "buendnerkupfer",
     "name": "Bündner Kupfer",
     "description": {
       "en": "Bündner Kupfer is a research project from the University of Zurich and the Archaeological Service of the Canton of Grisons. In their blog they publish archaeological and scientific data collected by archaeologists and laymen.",
@@ -125,9 +125,9 @@
     "image": "/img/logos/buendnerkupfer_logo.png",
     "button": {
       "link": null,
-      "route": "/contribute/partner_project/bündnerkupfer",
+      "route": "/contribute/partner_project/buendnerkupfer",
       "icon": null,
-      "selfWindow": true,
+      "selfwindow": true,
       "en": "Explore",
       "de": "Entdecke mehr"
     },
@@ -209,7 +209,7 @@
             "link": "http://bergbauprojekt.blogspot.com/",
             "route": null,
             "icon": null,
-            "selfWindow": false,
+            "selfwindow": false,
             "en": "Discover more",
             "de": "Mehr entdecken"
           },
@@ -230,14 +230,14 @@
             "link": "mailto:turck@archaeologie.uzh.ch",
             "route": null,
             "icon": "fas fa-envelope",
-            "selfWindow": true,
+            "selfwindow": true,
             "en": "turck@archaeologie.uzh.ch"
           },
           "second_button": {
             "link": "tel:+41446343834",
             "route": null,
             "icon": "fas fa-phone",
-            "selfWindow": true,
+            "selfwindow": true,
             "en": "+41 44 634 38 34"
           },
           "toggle_img_style": true,
@@ -258,7 +258,7 @@
       "link": "https://www.crowdwater.ch",
       "route": null,
       "icon": null,
-      "selfWindow": false,
+      "selfwindow": false,
       "en": "Explore",
       "de": "Entdecke mehr"
     },
@@ -276,7 +276,7 @@
       "link": "https://www.humanreproduction.uzh.ch/en.html",
       "route": null,
       "icon": null,
-      "selfWindow": false,
+      "selfwindow": false,
       "en": "Explore",
       "de": "Entdecke mehr"
     },

@@ -40,6 +40,7 @@
               :hReverse="false"
               :content="partner"
               :viewConfig="viewConfig"
+              :scrolled="scrolled"
             ></generic-content-block>
           </div>
         </div>
@@ -58,7 +59,7 @@ import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { mapGetters, mapState } from "vuex";
+import { mapGetters, mapState, mapActions } from "vuex";
 
 export default {
   data() {
@@ -66,6 +67,7 @@ export default {
       content: [],
       viewConfig: { visible: false },
       isReverse: false,
+      scrolled: false,
     };
   },
   components: {
@@ -95,20 +97,38 @@ export default {
   computed: {
     ...mapState({
       style: (state) => state.viewconfig.partners_projects_view,
+      language: (state) => state.settings.language,
     }),
     ...mapGetters({ getPartnerProjects: "content/getPartnerProjects" }),
   },
   methods: {
+    ...mapActions({
+      getAllPartnerProjectsRemote: "content/getAllPartnerProjectsRemote",
+    }),
     setViewConfig() {
       this.viewConfig = this.style;
     },
     loadContent() {
       this.content = this.getPartnerProjects();
     },
+    triggerScroll(scrollValue = false) {
+      const _this = this;
+      setTimeout(function() {
+        _this.scrolled = scrollValue;
+      }, 1);
+    },
   },
   created() {
     this.setViewConfig();
     this.loadContent();
+  },
+  watch: {
+    async language() {
+      this.triggerScroll(false);
+      await this.getAllPartnerProjectsRemote();
+      this.loadContent();
+      this.triggerScroll(true);
+    },
   },
 };
 </script>

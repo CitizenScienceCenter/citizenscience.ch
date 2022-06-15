@@ -2,7 +2,7 @@
   <div
     :id="componentId"
     class="generic-content scroll-effect"
-    :class="{ 'content-wrapper': !br.compact_view }"
+    :class="{ 'content-wrapper': !br.compact_view, scrolled: scrolled }"
     v-if="
       br.visible &&
         contentData &&
@@ -22,11 +22,18 @@
       </div>
     </div>
     <!-- Content Section -->
-    <div class="row row-centered" :class="{ 'row-reverse-large': br.hReverse || this.hReverse }">
+    <div
+      class="row row-centered"
+      :class="{ 'row-reverse-large': br.hReverse || this.hReverse }"
+    >
       <!-- Image sub-section Content  -->
       <div
         class="col scroll-effect scroll-effect-delayed-2"
-        :class="checkVerticalOrientation('img-content')"
+        :class="
+          `${checkVerticalOrientation('img-content')} ${
+            scrolled ? 'scrolled' : ''
+          }`
+        "
         v-if="contentData.image && br.image.visible"
       >
         <div class="row row-centered img-section">
@@ -47,7 +54,10 @@
         </div>
       </div>
       <!-- Text sub-section Content  -->
-      <div class="col col-11 text-section" :class="checkVerticalOrientation('text-content')">
+      <div
+        class="col col-11 text-section"
+        :class="checkVerticalOrientation('text-content')"
+      >
         <div
           class="row row-full-width row-centered row-large-left-aligned"
           v-if="br.title.visible && localTranslation(contentData.title)"
@@ -58,11 +68,22 @@
         </div>
         <!-- Subtitle section -->
         <div class="row row-full-width" v-if="br.subtitle.visible">
-          <div class="subheading" v-html="localTranslation(contentData.subtitle)"></div>
+          <div
+            class="subheading"
+            v-html="localTranslation(contentData.subtitle)"
+          ></div>
         </div>
         <!-- Description section -->
         <div class="row" v-if="br.description.visible">
-          <component :is="getDynamicData" class="text-description"></component>
+          <prismic-rich-text
+            :field="contentData.description"
+            v-if="Array.isArray(contentData.description)"
+          />
+          <component
+            v-else
+            :is="getDynamicData"
+            class="text-description"
+          ></component>
         </div>
         <!-- Buttons section -->
         <div class="row row-full-width">
@@ -87,7 +108,9 @@
               :disabled="br.button.disabled"
             >
               <i :class="contentData.button.icon"></i>
-              {{ localTranslation(contentData.button) }}
+              {{
+                localTranslation(contentData.button.text || contentData.button)
+              }}
             </button>
           </div>
           <div
@@ -95,7 +118,8 @@
             v-if="
               br.second_button.visible &&
                 contentData.second_button &&
-                (contentData.second_button.link || contentData.second_button.route)
+                (contentData.second_button.link ||
+                  contentData.second_button.route)
             "
           >
             <button
@@ -150,6 +174,7 @@ export default {
     hReverse: Boolean,
     viewConfig: Object,
     componentId: String,
+    scrolled: Boolean,
   },
   computed: {
     ...mapState({
@@ -157,14 +182,19 @@ export default {
     }),
     getDynamicData: function() {
       return {
-        template: `<div>${this.localTranslation(this.contentData.description)}</div>`,
+        template: `<div>${this.localTranslation(
+          this.contentData.description
+        )}</div>`,
       };
     },
     getImageStyle() {
       return {
-        rounded: this.contentData.toggle_img_style ? !this.br.image.rounded : this.br.image.rounded,
+        rounded: this.contentData.toggle_img_style
+          ? !this.br.image.rounded
+          : this.br.image.rounded,
         "vertical-img": this.br.vOrientation,
-        "shadow-bottom": this.br.image.rounded && !this.contentData.toggle_img_style,
+        "shadow-bottom":
+          this.br.image.rounded && !this.contentData.toggle_img_style,
       };
     },
   },
@@ -208,7 +238,7 @@ export default {
           "img-content": " col-12 ",
           "text-content": " col-12 vertical",
         },
-        horizontal: horizontal.sm, // by default horizontal asumes small image
+        horizontal: horizontal.sm, // by default horizontal assumes small image
       };
       if (!this.contentData.image) {
         viewStyle.horizontal = horizontal.no_img;
@@ -237,6 +267,13 @@ export default {
   created() {
     this.validateStyle();
     this.contentData = this.content;
+  },
+  watch: {
+    scrolled(newValue) {
+      if (newValue) {
+        this.contentData = this.content;
+      }
+    },
   },
 };
 </script>

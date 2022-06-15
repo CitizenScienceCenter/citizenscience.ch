@@ -3,11 +3,15 @@ import { cmsClient } from "@/assets/support.js";
 import { cover_list, coverListInterface } from "@/schemas/coverList.js";
 import { newsInterface } from "@/schemas/news.js";
 import { eventsInterface } from "@/schemas/events.js";
+import { partnerProjectsInterface } from "@/schemas/partnerProjects.js";
 
 // Form the parameters for CMS query
 const getCMSParameters = (document, lang = "en") => {
   if (document)
-    return [document, lang !== "en" ? { lang: `${lang}-${lang}` } : null].filter((x) => x);
+    return [
+      document,
+      lang !== "en" ? { lang: `${lang}-${lang}` } : null,
+    ].filter((x) => x);
 };
 
 // Get slice content from CMS data retrieved
@@ -180,31 +184,28 @@ const actions = {
       commit("setPartnerships", res);
     }
   },
-  
+
   async getAllPartnerProjectsRemote({ commit, rootState }) {
-    let res = null;
     let content = [];
     const lang = rootState.settings.language;
     try {
       /* Client for CMS interactions. */
-      // const client = cmsClient.getClient();
-      // const args = getCMSParameters("partner_projects", lang);
-      // let response = await client.getSingle(...args);
-      // console.log(response.data.body);
-      // response = await client.getByID('YqmtQBEAACAAXAlZ')
-      // console.log(response.data);
-      res = await getRemoteFile("data/partner_projects.json");
+      const client = cmsClient.getClient();
+      const args = getCMSParameters("partner_projects", lang);
+      let res = await client.getSingle(...args);
       if (res === undefined) {
         throw new Error("Remote undefined");
-      } else {
-        return res;
       }
+      res = getCMSSlice(res);
+      if (res.length) {
+        content = res.map((x) => partnerProjectsInterface(x));
+      }
+      return content;
     } catch (error) {
-      // This content is local if the remote content is not retrieved
-      res = require("@/assets/partner_projects.json");
-      return res;
+      console.error(error);
+      return content;
     } finally {
-      commit("setPartnerProjects", res);
+      commit("setPartnerProjects", content);
     }
   },
 };

@@ -17,13 +17,25 @@ const _getCMSLanguage = (_) => {
   return lang !== "en" ? { lang: `${lang}-${lang}` } : null;
 };
 
-// Get slice content from CMS data retrieved
-const getCMSSlice = (res, docName = "_") => {
-  return "data" in res && docName in res.data
-    ? res.data[docName].length
-      ? res.data[docName]
-      : []
-    : [];
+// Get data content from CMS retrieved
+const getCMSData = async (docName = "_", schema) => {
+  /* Client for CMS interactions. */
+  const client = cmsClient.getClient();
+  const args = getCMSParameters(docName);
+  let res = await client.getSingle(...args);
+  if (res === undefined) {
+    return null;
+  }
+  res =
+    "data" in res && docName in res.data
+      ? res.data[docName].length
+        ? res.data[docName]
+        : []
+      : [];
+  if (res.length) {
+    return res.map((x) => schema(x));
+  }
+  return null;
 };
 
 const state = {
@@ -71,17 +83,7 @@ const actions = {
     let content = [...cover_list[i18n.locale]];
     try {
       /* Client for CMS interactions. */
-      const docName = "cover_list";
-      const client = cmsClient.getClient();
-      const args = getCMSParameters(docName);
-      let res = await client.getSingle(...args);
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      }
-      res = getCMSSlice(res, docName);
-      if (res.length) {
-        content = res.map((x) => coverListInterface(x));
-      }
+      content = await getCMSData("cover_list", coverListInterface);
       return content;
     } catch (error) {
       console.log(error);
@@ -94,17 +96,7 @@ const actions = {
   async getNewsRemote({ commit }) {
     let content = null;
     try {
-      /* Client for CMS interactions. */
-      const client = cmsClient.getClient();
-      const args = getCMSParameters("news");
-      let res = await client.getSingle(...args);
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      }
-      res = getCMSSlice(res);
-      if (res.length) {
-        content = res.map((x) => newsInterface(x));
-      }
+      content = await getCMSData("news", newsInterface);
     } catch (error) {
       console.log(error);
     } finally {
@@ -133,21 +125,7 @@ const actions = {
   async getEventsRemote({ commit }) {
     let content = null;
     try {
-      /* Client for CMS interactions. */
-      const client = cmsClient.getClient();
-      const args = getCMSParameters("events");
-      // let res = await client.getSingle(...args);
-      let res = await client.query([
-        this.$prismic.Predicates.month("events.", 5),
-      ]);
-
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      }
-      res = getCMSSlice(res);
-      if (res.length) {
-        content = res.map((x) => eventsInterface(x));
-      }
+      content = await getCMSData("events", eventsInterface);
       return content;
     } catch (error) {
       console.error(error);
@@ -195,17 +173,7 @@ const actions = {
   async getAllPartnerProjectsRemote({ commit }) {
     let content = null;
     try {
-      /* Client for CMS interactions. */
-      const client = cmsClient.getClient();
-      const args = getCMSParameters("partner_projects");
-      let res = await client.getSingle(...args);
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      }
-      res = getCMSSlice(res);
-      if (res.length) {
-        content = res.map((x) => partnerProjectsInterface(x));
-      }
+      content = await getCMSData("partner_projects", partnerProjectsInterface);
       return content;
     } catch (error) {
       console.error(error);
@@ -225,9 +193,7 @@ const actions = {
         uid,
         _getCMSLanguage()
       );
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      }
+      if (res === undefined) return null;
       content = partnerProjectsDetailsInterface(res.data);
       return content;
     } catch (error) {

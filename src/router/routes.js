@@ -204,7 +204,9 @@ export const routes = [
               nav: true,
             },
             beforeEnter: async (to, from, next) => {
-              const content = await store.dispatch("content/getAllPartnerProjectsRemote");
+              const content = await store.dispatch(
+                "content/getAllPartnerProjectsRemote"
+              );
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "partners",
               });
@@ -217,6 +219,15 @@ export const routes = [
             path: "partner_project/:id",
             component: PartnerProjectDetail,
             meta: { nav: false },
+            beforeEnter: async (to, from, next) => {
+              const content = await store.dispatch(
+                "content/getPartnerProjectByUIDRemote",
+                to.params.id
+              );
+              if (content) {
+                next();
+              }
+            },
           },
           {
             path: "collaborations",
@@ -583,7 +594,10 @@ export const routes = [
           nav: false,
         },
         beforeEnter(to, from) {
-          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`, true);
+          openUrl(
+            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
+            true
+          );
         },
       },
       {
@@ -591,7 +605,10 @@ export const routes = [
         component: RequestReset,
         meta: { i18n: "navigation-reset", nav: false },
         beforeEnter(to, from) {
-          openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/reset-password`, false);
+          openUrl(
+            `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/reset-password`,
+            false
+          );
         },
       },
       {

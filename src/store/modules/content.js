@@ -4,21 +4,24 @@ import { cover_list, coverListInterface } from "@/schemas/coverList.js";
 import { newsInterface } from "@/schemas/news.js";
 import { eventsInterface } from "@/schemas/events.js";
 import { partnerProjectsInterface } from "@/schemas/partnerProjects.js";
+import { partnerProjectsDetailsInterface } from "@/schemas/partnerProjectDetails.js";
+import { i18n } from "@/i18n.js";
 
 // Form the parameters for CMS query
-const getCMSParameters = (document, lang = "en") => {
-  if (document)
-    return [
-      document,
-      lang !== "en" ? { lang: `${lang}-${lang}` } : null,
-    ].filter((x) => x);
+const getCMSParameters = (document) => {
+  if (document) return [document, _getCMSLanguage()].filter((x) => x);
+};
+
+const _getCMSLanguage = (_) => {
+  const lang = i18n.locale;
+  return lang !== "en" ? { lang: `${lang}-${lang}` } : null;
 };
 
 // Get slice content from CMS data retrieved
-const getCMSSlice = (res) => {
-  return "data" in res && "body" in res.data
-    ? res.data.body.length
-      ? res.data.body[0].items
+const getCMSSlice = (res, docName = "_") => {
+  return "data" in res && docName in res.data
+    ? res.data[docName].length
+      ? res.data[docName]
       : []
     : [];
 };
@@ -31,6 +34,7 @@ const state = {
   people: undefined,
   partnerships: undefined,
   partnerProjects: undefined,
+  partnerProjectDetails: undefined,
   isNewsLoaded: false,
   isGCLoaded: false,
   isEventsLoaded: false,
@@ -53,9 +57,9 @@ const getters = {
     return state.partnerships;
   },
   getPartnerProjects: (state) => (id) => {
-    if (state.partnerProjects && id) {
+    if (id) {
       // Only find the first ocurrence of element with id equal to id pass as parameter
-      return state.partnerProjects.find((x) => x.id == id);
+      return state.partnerProjectDetails;
     }
     return state.partnerProjects;
   },
@@ -63,18 +67,18 @@ const getters = {
 
 const actions = {
   // Get cover list from CMS
-  async getCoverRemote({ commit, rootState }) {
-    const lang = rootState.settings.language;
-    let content = [...cover_list[lang]];
+  async getCoverRemote({ commit }) {
+    let content = [...cover_list[i18n.locale]];
     try {
       /* Client for CMS interactions. */
+      const docName = "cover_list";
       const client = cmsClient.getClient();
-      const args = getCMSParameters("cover_list", lang);
+      const args = getCMSParameters(docName);
       let res = await client.getSingle(...args);
       if (res === undefined) {
         throw new Error("Remote undefined");
       }
-      res = getCMSSlice(res);
+      res = getCMSSlice(res, docName);
       if (res.length) {
         content = res.map((x) => coverListInterface(x));
       }
@@ -87,13 +91,12 @@ const actions = {
     }
   },
   // Get news from CMS
-  async getNewsRemote({ commit, rootState }) {
-    let content = [];
-    const lang = rootState.settings.language;
+  async getNewsRemote({ commit }) {
+    let content = null;
     try {
       /* Client for CMS interactions. */
       const client = cmsClient.getClient();
-      const args = getCMSParameters("news", lang);
+      const args = getCMSParameters("news");
       let res = await client.getSingle(...args);
       if (res === undefined) {
         throw new Error("Remote undefined");
@@ -127,14 +130,17 @@ const actions = {
     }
   },
   // Get events from CMS
-  async getEventsRemote({ commit, rootState }) {
-    let content = [];
-    const lang = rootState.settings.language;
+  async getEventsRemote({ commit }) {
+    let content = null;
     try {
       /* Client for CMS interactions. */
       const client = cmsClient.getClient();
-      const args = getCMSParameters("events", lang);
-      let res = await client.getSingle(...args);
+      const args = getCMSParameters("events");
+      // let res = await client.getSingle(...args);
+      let res = await client.query([
+        this.$prismic.Predicates.month("events.", 5),
+      ]);
+
       if (res === undefined) {
         throw new Error("Remote undefined");
       }
@@ -185,13 +191,13 @@ const actions = {
     }
   },
 
-  async getAllPartnerProjectsRemote({ commit, rootState }) {
-    let content = [];
-    const lang = rootState.settings.language;
+  // Get all partner projects from CMS
+  async getAllPartnerProjectsRemote({ commit }) {
+    let content = null;
     try {
       /* Client for CMS interactions. */
       const client = cmsClient.getClient();
-      const args = getCMSParameters("partner_projects", lang);
+      const args = getCMSParameters("partner_projects");
       let res = await client.getSingle(...args);
       if (res === undefined) {
         throw new Error("Remote undefined");
@@ -206,6 +212,29 @@ const actions = {
       return content;
     } finally {
       commit("setPartnerProjects", content);
+    }
+  },
+  // Get partner project by UID from CMS
+  async getPartnerProjectByUIDRemote({ commit }, uid) {
+    let content = null;
+    try {
+      /* Client for CMS interactions. */
+      const client = cmsClient.getClient();
+      let res = await client.getByUID(
+        "partner_project_page",
+        uid,
+        _getCMSLanguage()
+      );
+      if (res === undefined) {
+        throw new Error("Remote undefined");
+      }
+      content = partnerProjectsDetailsInterface(res.data);
+      return content;
+    } catch (error) {
+      console.error(error);
+      return content;
+    } finally {
+      commit("setPartnerProjectDetails", content);
     }
   },
 };
@@ -234,6 +263,9 @@ const mutations = {
   },
   setPartnerProjects(state, payload) {
     state.partnerProjects = payload;
+  },
+  setPartnerProjectDetails(state, payload) {
+    state.partnerProjectDetails = payload;
   },
   removeIsLoaded(state, value) {
     switch (value) {

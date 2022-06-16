@@ -135,7 +135,7 @@
               :disabled="br.second_button.disabled"
             >
               <i :class="contentData.second_button.icon"></i>
-              {{ localTranslation(contentData.second_button) }}
+              {{ localTranslation(contentData.second_button.text || contentData.second_button) }}
             </button>
           </div>
         </div>

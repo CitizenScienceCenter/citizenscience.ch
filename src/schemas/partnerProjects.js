@@ -1,5 +1,3 @@
-import { router } from "../router/router";
-
 export const partnerProjectsInterface = (payload) => {
   return {
     id: payload.id,
@@ -7,7 +5,6 @@ export const partnerProjectsInterface = (payload) => {
       payload.image && payload.image.hasOwnProperty("url")
         ? payload.image.url
         : "/img/no_image.png",
-    name: payload.name,
     description: payload.description,
     button: {
       link: payload.link && !payload.route.uid ? payload.link.url : null,

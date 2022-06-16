@@ -22,6 +22,7 @@
             :hReverse="item.reverse"
             :content="item"
             :viewConfig="viewConfig.content"
+            :scrolled="scrolled"
           ></generic-content-block>
         </div>
       </div>
@@ -41,7 +42,7 @@ import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { mapGetters } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   name: "Home",
@@ -73,6 +74,7 @@ export default {
           second_button: { disabled: false, visible: true },
         },
       },
+      scrolled: false,
     };
   },
   components: {
@@ -101,28 +103,47 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      language: (state) => state.settings.language,
+    }),
     ...mapGetters({
       getPartnerProject: "content/getPartnerProjects",
     }),
   },
   methods: {
+    ...mapActions({
+      getPartnerProjectByUIDRemote: "content/getPartnerProjectByUIDRemote",
+    }),
     setGenericContent() {
       // The partner project by id is retrieved
       const project = this.getPartnerProject(this.$route.params.id);
-      this.cover = project.details;
-      this.content =
-        "content" in project.details ? project.details.content : {};
-      this.pageTitle = project.name;
+      if (project) {
+        this.cover = project;
+        this.content = "content" in project ? project.content : {};
+        this.pageTitle = project.name;
+      } else {
+        this.$router.push("/contribute/partners_projects");
+      }
+    },
+    triggerScroll(scrollValue = false) {
+      const _this = this;
+      setTimeout(function() {
+        _this.scrolled = scrollValue;
+      }, 1);
     },
   },
   created() {
-    // If content for this project is not available the user is redirect to partners' projects
-    if (!this.getPartnerProject(this.$route.params.id)) {
-      this.$router.push("/contribute/partners_projects");
-    }
-  },
-  beforeMount() {
+    // load data from remote cms
     this.setGenericContent();
+  },
+  watch: {
+    // validate when language change, to change the format date
+    language: async function() {
+      this.triggerScroll(false);
+      await this.getPartnerProjectByUIDRemote(this.$route.params.id);
+      this.setGenericContent();
+      this.triggerScroll(true);
+    },
   },
 };
 </script>

@@ -296,7 +296,12 @@ export default {
   },
   watch: {
     async language() {
-      await this.getCoverRemote();
+      if (!this.customCover) {
+        await this.getCoverRemote();
+        this.setCoverInfo();
+      }
+    },
+    customCover() {
       this.setCoverInfo();
     },
   },

@@ -16,7 +16,7 @@ export const genericBlockInterface = (payload) => {
       text: payload.button_1,
     },
     second_button: {
-      link: payload.link_2 && !payload.route_2 ? payload.link_2.url_2 : null,
+      link: payload.link_2 && !payload.route_2 ? payload.link_2.url : null,
       route: payload.route_2,
       icon: payload.icon_2,
       selfwindow: payload.selfwindow_2,

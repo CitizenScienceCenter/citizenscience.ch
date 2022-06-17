@@ -4,7 +4,7 @@ import { genericBlockInterface } from "./genericBlock";
 
 export const partnerProjectsDetailsInterface = (payload) => {
   try {
-    if (payload.hasOwnProperty("body")) {
+    if (payload) {
       const covers = payload["cover"];
       const content = payload["content"];
       return {

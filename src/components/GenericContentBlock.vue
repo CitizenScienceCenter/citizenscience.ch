@@ -283,6 +283,7 @@ export default {
 .generic-content {
   padding-top: 0;
   padding-bottom: $spacing-5;
+  width: 100%;
   .heading-section {
     padding-left: $spacing-4;
   }

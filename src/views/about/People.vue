@@ -32,6 +32,7 @@
               <people-list
                 :content="people"
                 :viewConfig="viewConfig"
+                :scrolled="scrolled"
               ></people-list>
             </div>
           </div>
@@ -51,7 +52,7 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 import PeopleList from "@/components/PeopleList";
 
-import { mapGetters, mapState } from "vuex";
+import { mapGetters, mapState, mapActions } from "vuex";
 
 export default {
   components: {
@@ -64,6 +65,7 @@ export default {
     return {
       contentData: [],
       viewConfig: { visible: false },
+      scrolled: false,
     };
   },
   props: {
@@ -85,17 +87,35 @@ export default {
     };
   },
   computed: {
-    ...mapState({ style: (state) => state.viewconfig.people_view }),
+    ...mapState({
+      style: (state) => state.viewconfig.people_view,
+      language: (state) => state.settings.language,
+    }),
     ...mapGetters({ getPeople: "content/getPeople" }),
   },
   methods: {
+    ...mapActions({ getPeopleRemote: "content/getPeopleRemote" }),
     setViewConfig() {
       this.viewConfig = this.style;
+    },
+    triggerScroll(scrollValue = false) {
+      const _this = this;
+      setTimeout(function() {
+        _this.scrolled = scrollValue;
+      }, 1);
     },
   },
   created() {
     this.setViewConfig();
     this.contentData = this.getPeople;
+  },
+  watch: {
+    language: async function() {
+      this.triggerScroll(false);
+      await this.getPeopleRemote();
+      this.contentData = this.getPeople;
+      this.triggerScroll(true);
+    },
   },
 };
 </script>

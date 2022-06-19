@@ -2,12 +2,16 @@
   <div class="people-list" v-if="br.visible && people_list.length > 0">
     <h3
       class="subheading centered scroll-effect"
+      :class="scrolled ? 'scrolled' : ''"
       v-if="br.category.visible && content.category"
     >
       {{ localTranslation(content.category) }}
     </h3>
 
-    <div class="people-section scroll-effect scroll-effect-delayed-1">
+    <div
+      class="people-section scroll-effect scroll-effect-delayed-1"
+      :class="scrolled ? 'scrolled' : ''"
+    >
       <div class="row row-centered row-wrapping">
         <div
           class="col col-tablet-portrait-6 col-large-3 col-wrapping"
@@ -19,12 +23,10 @@
               :src="person.photo"
               :alt="person.name"
               class="photo shadow-bottom"
-              onerror="this.src='/img/people/default.png';"
+              onerror="this.src='/img/people_default.png';"
             />
             <span class="name">{{ person.name }}</span>
-            <span class="position">{{
-              localTranslation(person.position)
-            }}</span>
+            <span class="position">{{ localTranslation(person.position) }}</span>
             <a :href="['mailto:' + person.email]">{{ person.email }}</a>
           </div>
         </div>
@@ -51,29 +53,14 @@ export default {
   props: {
     content: Object,
     viewConfig: Object,
+    scrolled: Boolean,
   },
   methods: {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
     loadData() {
-      this.people_list = this.content.people_list.map((x) =>
-        this.validateData(x)
-      );
-    },
-    validateData(item) {
-      const person_schema = {
-        name: "",
-        position: "",
-        email: "",
-        photo: "/img/people/default.png",
-      };
-      for (const key in person_schema) {
-        if (Object.keys(item).includes(key)) {
-          person_schema[key] = item[key];
-        }
-      }
-      return person_schema;
+      this.people_list = this.content.people_list;
     },
     validateStyle() {
       for (const key in this.viewConfig) {
@@ -86,6 +73,11 @@ export default {
   created() {
     this.validateStyle();
     this.loadData();
+  },
+  watch: {
+    scrolled(newVal) {
+      this.loadData();
+    }
   },
 };
 </script>

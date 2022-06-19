@@ -5,7 +5,11 @@ import { newsInterface } from "@/schemas/news.js";
 import { eventsInterface } from "@/schemas/events.js";
 import { partnerProjectsInterface } from "@/schemas/partnerProjects.js";
 import { partnerProjectsDetailsInterface } from "@/schemas/partnerProjectDetails.js";
+import { peopleInterface } from "@/schemas/people.js";
 import { i18n } from "@/i18n.js";
+
+// Documents in CMS with slice of data
+const slicedCMS = ["people"];
 
 // Form the parameters for CMS query
 const getCMSParameters = (document) => {
@@ -26,12 +30,16 @@ const getCMSData = async (docName = "_", schema) => {
   if (res === undefined) {
     return null;
   }
-  res =
-    "data" in res && docName in res.data
-      ? res.data[docName].length
+  if ("data" in res) {
+    res =
+      docName in res.data && res.data[docName].length
         ? res.data[docName]
-        : []
-      : [];
+        : slicedCMS.includes(docName) && "body" in res.data
+        ? res.data.body
+        : [];
+  } else {
+    res = [];
+  }
   if (res.length) {
     return res.map((x) => schema(x));
   }
@@ -135,20 +143,15 @@ const actions = {
     }
   },
   async getPeopleRemote({ commit }) {
-    let res = null;
+    let content = null;
     try {
-      res = await getRemoteFile("data/people.json");
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      } else {
-        return res;
-      }
+      content = await getCMSData("people", peopleInterface);
+      return content;
     } catch (error) {
-      // This content is local if the remote content is not retrieved
-      res = require("@/assets/data_config/people.json");
-      return res;
+      console.error(error);
+      return content;
     } finally {
-      commit("setPeople", res);
+      commit("setPeople", content);
     }
   },
   async getPartnershipsRemote({ commit }) {
@@ -188,11 +191,7 @@ const actions = {
     try {
       /* Client for CMS interactions. */
       const client = cmsClient.getClient();
-      let res = await client.getByUID(
-        "partner_project_page",
-        uid,
-        _getCMSLanguage()
-      );
+      let res = await client.getByUID("partner_project_page", uid, _getCMSLanguage());
       if (res === undefined) return null;
       content = partnerProjectsDetailsInterface(res.data);
       return content;

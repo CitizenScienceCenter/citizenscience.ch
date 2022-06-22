@@ -91,7 +91,7 @@ export default {
   }
 }
 .logo {
-  padding-right: $spacing-2;
+  padding-right: $spacing-3;
   margin-bottom: $spacing-3;
   max-height: 75px;
   max-width: 200px;

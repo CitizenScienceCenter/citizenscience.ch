@@ -28,9 +28,10 @@
           </div>
           <!-- People component section -->
           <div class="col scroll-effect">
-            <div v-for="people in contentData" :key="people.id">
+            <div v-for="p in contentData" :key="p.id">
               <people-list
-                :content="people"
+                :content="p.people_list"
+                :category="p.category"
                 :viewConfig="viewConfig"
                 :scrolled="scrolled"
               ></people-list>
@@ -52,7 +53,7 @@ import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 import PeopleList from "@/components/PeopleList";
 
-import { mapGetters, mapState, mapActions } from "vuex";
+import { mapGetters, mapState, mapActions, mapMutations } from "vuex";
 
 export default {
   components: {
@@ -95,6 +96,7 @@ export default {
   },
   methods: {
     ...mapActions({ getPeopleRemote: "content/getPeopleRemote" }),
+    ...mapMutations({ setPeople: "content/setPeople" }),
     setViewConfig() {
       this.viewConfig = this.style;
     },
@@ -108,6 +110,9 @@ export default {
   created() {
     this.setViewConfig();
     this.contentData = this.getPeople;
+  },
+  beforeDestroy() {
+    this.setPeople(null)
   },
   watch: {
     language: async function() {

@@ -1,11 +1,11 @@
 <template>
-  <div class="people-list" v-if="br.visible && people_list.length > 0">
+  <div class="people-list" v-if="br.visible && content.length > 0">
     <h3
       class="subheading centered scroll-effect"
       :class="scrolled ? 'scrolled' : ''"
-      v-if="br.category.visible && content.category"
+      v-if="br.category.visible && category"
     >
-      {{ localTranslation(content.category) }}
+      {{ localTranslation(category) }}
     </h3>
 
     <div
@@ -15,7 +15,7 @@
       <div class="row row-centered row-wrapping">
         <div
           class="col col-tablet-portrait-6 col-large-3 col-wrapping"
-          v-for="person in people_list"
+          v-for="person in content"
           :key="person.item"
         >
           <div class="person centered">
@@ -47,20 +47,17 @@ export default {
         category: { visible: false },
       },
       showMembers: false,
-      people_list: [],
     };
   },
   props: {
-    content: Object,
+    content: Array,
+    category: String,
     viewConfig: Object,
     scrolled: Boolean,
   },
   methods: {
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
-    },
-    loadData() {
-      this.people_list = this.content.people_list;
     },
     validateStyle() {
       for (const key in this.viewConfig) {
@@ -72,13 +69,7 @@ export default {
   },
   created() {
     this.validateStyle();
-    this.loadData();
-  },
-  watch: {
-    scrolled(newVal) {
-      this.loadData();
-    }
-  },
+  }
 };
 </script>
 

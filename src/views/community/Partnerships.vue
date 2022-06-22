@@ -32,14 +32,10 @@
           <div class="col col-large-10">
             <div class="row row-wrapping scroll-effect">
               <!-- Partnerships section -->
-              <div
-                v-for="item in content"
-                :key="item.id"
-                class="col col-large-6 col-wrapping"
-              >
+              <div v-for="item in content" :key="item.id" class="col col-large-6 col-wrapping">
                 <partnership-list
                   :content="item"
-                  class="scroll-effect"
+                  :scrolled="scrolled"
                   :visible="viewConfig.visible"
                   :viewConfig="viewConfig"
                 ></partnership-list>
@@ -61,7 +57,7 @@ import ContentSection from "@/components/shared/ContentSection.vue";
 import PartnershipList from "@/components/PartnershipList.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
-import { mapGetters, mapState } from "vuex";
+import { mapGetters, mapState, mapActions, mapMutations } from "vuex";
 
 export default {
   components: {
@@ -74,6 +70,7 @@ export default {
     return {
       content: {},
       viewConfig: {},
+      scrolled: false,
     };
   },
   props: {
@@ -97,20 +94,40 @@ export default {
   computed: {
     ...mapState({
       style: (state) => state.viewconfig.partnerships_view,
+      language: (state) => state.settings.language,
     }),
     ...mapGetters({ getPartnershipsContent: "content/getPartnerships" }),
   },
   methods: {
+    ...mapActions({ getPartnershipsRemote: "content/getPartnershipsRemote" }),
+    ...mapMutations({ setPartnerships: "content/setPartnerships" }),
     setViewConfig() {
       this.viewConfig = this.style;
     },
     loadContent() {
       this.content = this.getPartnershipsContent;
     },
+    triggerScroll(scrollValue = false) {
+      const _this = this;
+      setTimeout(function() {
+        _this.scrolled = scrollValue;
+      }, 1);
+    },
   },
   created() {
     this.setViewConfig();
     this.loadContent();
+  },
+  beforeDestroy() {
+    this.setPartnerships(null);
+  },
+  watch: {
+    async language() {
+      this.triggerScroll(false);
+      await this.getPartnershipsRemote();
+      this.loadContent();
+      this.triggerScroll(true);
+    },
   },
 };
 </script>

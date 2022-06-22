@@ -59,7 +59,7 @@ import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { mapGetters, mapState, mapActions } from "vuex";
+import { mapGetters, mapState, mapActions, mapMutations } from "vuex";
 
 export default {
   data() {
@@ -105,6 +105,7 @@ export default {
     ...mapActions({
       getAllPartnerProjectsRemote: "content/getAllPartnerProjectsRemote",
     }),
+    ...mapMutations({ setPartnerProjects: "content/setPartnerProjects" }),
     setViewConfig() {
       this.viewConfig = this.style;
     },
@@ -121,6 +122,9 @@ export default {
   created() {
     this.setViewConfig();
     this.loadContent();
+  },
+  beforeDestroy() {
+    this.setPartnerProjects(null);
   },
   watch: {
     async language() {

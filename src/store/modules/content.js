@@ -159,11 +159,11 @@ const actions = {
       commit("setPeople", content);
     }
   },
+  // Get partnerships' list from CMS
   async getPartnershipsRemote({ commit }) {
     let content = null;
     try {
       content = await getCMSData("partnerships", partnershipInterface);
-      console.log(content);
       return content;
     } catch (error) {
       console.error(error);

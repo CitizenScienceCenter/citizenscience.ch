@@ -1,11 +1,11 @@
 <template>
-  <div v-if="visible">
-    <h3 class="subheading reduced-bottom-margin" v-if="br.title.visible && contentData.name">
-      {{ contentData.name }}
+  <div v-if="visible" :class="scrolled ? 'scrolled' : ''">
+    <h3 class="subheading reduced-bottom-margin" v-if="br.title.visible && content.name">
+      {{ content.name }}
     </h3>
     <!-- Description and Logos section -->
     <prismic-rich-text
-      :field="contentData.description"
+      :field="content.description"
       :htmlSerializer="htmlSerializer"
       class="reduced-bottom-margin"
     />
@@ -13,22 +13,22 @@
     <!-- Button section -->
     <div
       class="button-section margin-bottom"
-      v-if="br.button.visible && contentData.button && contentData.button.link"
+      v-if="br.button.visible && content.button && content.button.link"
     >
       <button
         class="button button-secondary button-icon"
-        @click="openInNewTab(contentData.button.link)"
+        @click="openInNewTab(content.button.link)"
         :disabled="br.button.disabled"
       >
-        <i :class="contentData.button.icon"></i>
-        {{ contentData.button.text || contentData.button }}
+        <i :class="content.button.icon"></i>
+        {{ content.button.text || content.button }}
       </button>
     </div>
   </div>
 </template>
 
 <script>
-import { getTranslation, openUrl } from "@/assets/support.js";
+import { openUrl } from "@/assets/support.js";
 
 export default {
   name: "PeopleList",
@@ -49,15 +49,13 @@ export default {
     content: Object,
     viewConfig: Object,
     visible: Boolean,
+    scrolled: Boolean,
   },
   computed: {},
   methods: {
     openInNewTab(url, selfwindow = false) {
       // open external links
       openUrl(url, selfwindow);
-    },
-    loadData() {
-      this.contentData = this.content;
     },
     validateStyle() {
       for (const key in this.viewConfig) {
@@ -78,7 +76,6 @@ export default {
   },
   created() {
     this.validateStyle();
-    this.loadData();
   },
 };
 </script>

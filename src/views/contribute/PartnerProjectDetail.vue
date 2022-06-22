@@ -42,7 +42,7 @@ import GenericContentBlock from "@/components/GenericContentBlock.vue";
 import Footer from "@/components/shared/Footer.vue";
 import SectionNewsletterSignup from "@/components/shared/SectionNewsletterSignup";
 
-import { mapState, mapGetters, mapActions } from "vuex";
+import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 
 export default {
   name: "Home",
@@ -114,6 +114,7 @@ export default {
     ...mapActions({
       getPartnerProjectByUIDRemote: "content/getPartnerProjectByUIDRemote",
     }),
+    ...mapMutations({ setPartnerProjectDetails: "content/setPartnerProjectDetails" }),
     setGenericContent() {
       // The partner project by id is retrieved
       const project = this.getPartnerProject(this.$route.params.id);
@@ -135,6 +136,9 @@ export default {
   created() {
     // load data from remote cms
     this.setGenericContent();
+  },
+  beforeDestroy() {
+    this.setPartnerProjectDetails(null);
   },
   watch: {
     // validate when language change, to change the format date

@@ -6,6 +6,7 @@ import { eventsInterface } from "@/schemas/events.js";
 import { partnerProjectsInterface } from "@/schemas/partnerProjects.js";
 import { partnerProjectsDetailsInterface } from "@/schemas/partnerProjectDetails.js";
 import { peopleInterface } from "@/schemas/people.js";
+import { partnershipInterface } from "@/schemas/partnership.js";
 import { i18n } from "@/i18n.js";
 
 // Documents in CMS with slice of data
@@ -23,6 +24,9 @@ const _getCMSLanguage = (_) => {
 
 // Get data content from CMS retrieved
 const getCMSData = async (docName = "_", schema) => {
+  if(!schema){
+    // return null
+  }
   /* Client for CMS interactions. */
   const client = cmsClient.getClient();
   const args = getCMSParameters(docName);
@@ -142,6 +146,7 @@ const actions = {
       commit("setEvents", content);
     }
   },
+  // Get List of people from CMS
   async getPeopleRemote({ commit }) {
     let content = null;
     try {
@@ -155,20 +160,16 @@ const actions = {
     }
   },
   async getPartnershipsRemote({ commit }) {
-    let res = null;
+    let content = null;
     try {
-      res = await getRemoteFile("data/partnerships.json");
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      } else {
-        return res;
-      }
+      content = await getCMSData("partnerships", partnershipInterface);
+      console.log(content);
+      return content;
     } catch (error) {
-      // This content is local if the remote content is not retrieved
-      res = require("@/assets/data_config/partnerships.json");
-      return res;
+      console.error(error);
+      return content;
     } finally {
-      commit("setPartnerships", res);
+      commit("setPartnerships", content);
     }
   },
 

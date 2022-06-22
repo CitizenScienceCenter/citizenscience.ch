@@ -1,24 +1,14 @@
 <template>
   <div v-if="visible">
-    <h3
-      class="subheading reduced-bottom-margin"
-      v-if="br.title.visible && contentData.name"
-    >
-      {{ localTranslation(contentData.name) }}
+    <h3 class="subheading reduced-bottom-margin" v-if="br.title.visible && contentData.name">
+      {{ contentData.name }}
     </h3>
-    <!-- Description section -->
-    <component
-      :is="getDynamicData"
+    <!-- Description and Logos section -->
+    <prismic-rich-text
+      :field="contentData.description"
+      :htmlSerializer="htmlSerializer"
       class="reduced-bottom-margin"
-      v-if="br.description.visible"
-    ></component>
-
-    <!-- Logos section -->
-    <div v-if="br.logos.visible">
-      <span v-for="logo in contentData.logos" :key="logo.id">
-        <img :src="logo" class="logo" :alt="logo" />
-      </span>
-    </div>
+    />
 
     <!-- Button section -->
     <div
@@ -31,7 +21,7 @@
         :disabled="br.button.disabled"
       >
         <i :class="contentData.button.icon"></i>
-        {{ localTranslation(contentData.button) }}
+        {{ contentData.button.text || contentData.button }}
       </button>
     </div>
   </div>
@@ -60,22 +50,11 @@ export default {
     viewConfig: Object,
     visible: Boolean,
   },
-  computed: {
-    getDynamicData: function() {
-      return {
-        template: `<div>${this.localTranslation(
-          this.contentData.description
-        )}</div>`,
-      };
-    },
-  },
+  computed: {},
   methods: {
     openInNewTab(url, selfwindow = false) {
       // open external links
       openUrl(url, selfwindow);
-    },
-    localTranslation(textContent) {
-      return getTranslation(textContent, this.$i18n.locale);
     },
     loadData() {
       this.contentData = this.content;
@@ -86,6 +65,15 @@ export default {
           this.br[key] = this.viewConfig[key];
         }
       }
+    },
+    htmlSerializer(type, element, _content, _children) {
+      // If element is a list item,
+      if (type === "image") {
+        // return some customized HTML.
+        return `<img src="${element.url}" class="logo" alt="${element.url}" v-if="${this.br.logos.visible}" />`;
+      }
+      /// Otherwise, return null.
+      return null;
     },
   },
   created() {

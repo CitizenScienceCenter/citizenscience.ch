@@ -181,7 +181,7 @@ export const i18n = new VueI18n({
         link: "Projekte",
       },
       "navigation-contribute-partners": {
-        link: "Projekte",
+        link: "Partnerprojekte",
       },
       "navigation-contribute-collaborations": {
         link: "Warum mitmachen?",

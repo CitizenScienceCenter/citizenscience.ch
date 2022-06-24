@@ -1,5 +1,5 @@
 import { getRemoteFile } from "@/minio.js";
-import { cmsClient } from "@/assets/support.js";
+import { getCMSData, getCMSDataUID } from "@/assets/support.js";
 import { cover_list, coverListInterface } from "@/schemas/coverList.js";
 import { newsInterface } from "@/schemas/news.js";
 import { eventsInterface } from "@/schemas/events.js";
@@ -8,47 +8,6 @@ import { partnerProjectsDetailsInterface } from "@/schemas/partnerProjectDetails
 import { peopleInterface } from "@/schemas/people.js";
 import { partnershipInterface } from "@/schemas/partnership.js";
 import { i18n } from "@/i18n.js";
-
-// Documents in CMS with slice of data
-const slicedCMS = ["people"];
-
-// Form the parameters for CMS query
-const getCMSParameters = (document) => {
-  if (document) return [document, _getCMSLanguage()].filter((x) => x);
-};
-
-const _getCMSLanguage = (_) => {
-  const lang = i18n.locale;
-  return lang !== "en" ? { lang: `${lang}-${lang}` } : null;
-};
-
-// Get data content from CMS retrieved
-const getCMSData = async (docName = "_", schema) => {
-  if(!schema){
-    // return null
-  }
-  /* Client for CMS interactions. */
-  const client = cmsClient.getClient();
-  const args = getCMSParameters(docName);
-  let res = await client.getSingle(...args);
-  if (res === undefined) {
-    return null;
-  }
-  if ("data" in res) {
-    res =
-      docName in res.data && res.data[docName].length
-        ? res.data[docName]
-        : slicedCMS.includes(docName) && "body" in res.data
-        ? res.data.body
-        : [];
-  } else {
-    res = [];
-  }
-  if (res.length) {
-    return res.map((x) => schema(x));
-  }
-  return null;
-};
 
 const state = {
   coverList: [],
@@ -191,8 +150,7 @@ const actions = {
     let content = null;
     try {
       /* Client for CMS interactions. */
-      const client = cmsClient.getClient();
-      let res = await client.getByUID("partner_project_page", uid, _getCMSLanguage());
+      let res = await getCMSDataUID("partner_project_page", uid);
       if (res === undefined) return null;
       content = partnerProjectsDetailsInterface(res.data);
       return content;

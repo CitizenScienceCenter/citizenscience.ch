@@ -1,6 +1,5 @@
-// TODO: this would be replaced for flagship projects
-import static_projects from "@/assets/static_projects.json";
-import { info } from "sass";
+import { getCMSData } from "@/assets/support.js";
+import { staticProjectInterface } from "@/schemas/staticProject.js";
 
 /**
  * Get projects by category and page
@@ -54,7 +53,6 @@ const actions = {
         await commit("setCategories", info_feat.categories);
       }
       await commit("setFeaturedProjects", info_feat.projects);
-      return static_projects;
     } catch (error) {
       console.error(error);
       return;
@@ -64,34 +62,33 @@ const actions = {
     commit("setIsDataFetched", false);
     commit("clearAllProjectList");
     const multiPagesCategories = {};
-    // add the static projects to the list
-    commit("setAllProjectList", static_projects);
     try {
+      // get static projects
+      const static_projects = await getCMSData("static_projects", staticProjectInterface);
+      commit("setAllProjectList", static_projects);
       // get first page of project categories
       await Promise.all(
         state.categories.map(async (category) => {
           const info_projects = await _getProjectsByCategory(category);
           /* checking if the category has projects. */
-          await commit("setAllProjectList", info_projects.projects);
+          commit("setAllProjectList", info_projects.projects);
           /* checking if the category has more than one page. */
           if (
             info_projects.pagination &&
-            Math.ceil(
-              info_projects.pagination.total / info_projects.pagination.per_page
-            ) > 1
+            Math.ceil(info_projects.pagination.total / info_projects.pagination.per_page) > 1
           ) {
             multiPagesCategories[category] = await Math.ceil(
               info_projects.pagination.total / info_projects.pagination.per_page
             );
           }
         })
-      );      
+      );
 
       // get projects from multi pages categories
       for (const category in multiPagesCategories) {
         for (let i = 2; i <= multiPagesCategories[category]; i++) {
           const info_projects = await _getProjectsByCategory(category, i);
-          await commit("setAllProjectList", info_projects.projects);
+          commit("setAllProjectList", info_projects.projects);
         }
       }
       await commit("setIsDataFetched", true);

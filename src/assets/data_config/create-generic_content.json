@@ -13,14 +13,14 @@
       "link": "mailto:info@citizenscience.ch",
       "route": null,
       "icon": "fas fa-envelope",
-      "selfWindow": true,
+      "selfwindow": true,
       "en": "info@citizenscience.ch"
     },
     "second_button": {
       "link": "tel:+41446342197",
       "route": null,
       "icon": "fas fa-phone",
-      "selfWindow": true,
+      "selfwindow": true,
       "en": "+41 44 634 21 97"
     }
   },
@@ -35,7 +35,7 @@
       "link": "/files/CS Center Zurich - CriteriaProjects.pdf",
       "route": null,
       "icon": "fas fa-file-pdf",
-      "selfWindow": false,
+      "selfwindow": false,
       "en": "See document",
       "de": "Dokument anzeigen (EN)"
     },
@@ -52,7 +52,7 @@
       "link": null,
       "route": null,
       "icon": "fas fa-file-pdf",
-      "selfWindow": false,
+      "selfwindow": false,
       "en": "See document",
       "de": "Dokument anzeigen (EN)"
     },
@@ -75,7 +75,7 @@
           "link": null,
           "route": "/start/criteria",
           "icon": null,
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "Criteria for Project Proposals",
           "de": "Kriterien für Projektvorschläge"
         },
@@ -96,7 +96,7 @@
           "link": null,
           "route": null,
           "icon": null,
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "",
           "de": ""
         },
@@ -117,7 +117,7 @@
           "link": null,
           "route": null,
           "icon": null,
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "",
           "de": ""
         },
@@ -138,7 +138,7 @@
           "link": null,
           "route": null,
           "icon": null,
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "",
           "de": ""
         },
@@ -159,7 +159,7 @@
           "link": null,
           "route": null,
           "icon": null,
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "",
           "de": ""
         },
@@ -180,7 +180,7 @@
           "link": "/files/CS Center Zurich - Roadmap for Project Implementation.pdf",
           "route": null,
           "icon": "fas fa-file-pdf",
-          "selfWindow": false,
+          "selfwindow": false,
           "en": "See document",
           "de": "Dokument anzeigen (EN)"
         },
@@ -205,7 +205,7 @@
         "link": "/files/CS Center Zurich - Roadmap for Project Implementation.pdf",
         "route": null,
         "icon": "fas fa-file-pdf",
-        "selfWindow": false,
+        "selfwindow": false,
         "en": "See document",
         "de": "Dokument ansehen (EN)"
       }

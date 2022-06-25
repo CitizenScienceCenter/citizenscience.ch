@@ -35,7 +35,7 @@
       "link": null,
       "route": null,
       "icon": null,
-      "selfWindow": false,
+      "selfwindow": false,
       "en": "",
       "de": ""
     },
@@ -62,7 +62,7 @@
       "link": null,
       "route": "/about/mission",
       "icon": null,
-      "selfWindow": true,
+      "selfwindow": true,
       "en": "Learn More",
       "de": "Mehr erfahren"
     },
@@ -70,7 +70,7 @@
       "link": null,
       "route": "/about/zurichstyle",
       "icon": null,
-      "selfWindow": true,
+      "selfwindow": true,
       "en": "About CS",
       "de": "Über CS"
     }
@@ -96,7 +96,7 @@
       "link": null,
       "route": "/about/offer",
       "icon": null,
-      "selfWindow": true,
+      "selfwindow": true,
       "en": "Learn More",
       "de": "Mehr erfahren"
     },
@@ -104,7 +104,7 @@
       "link": null,
       "route": null,
       "icon": null,
-      "selfWindow": true,
+      "selfwindow": true,
       "en": "",
       "de": ""
     }

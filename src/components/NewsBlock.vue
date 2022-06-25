@@ -10,10 +10,13 @@
 }
 </i18n>
 <template>
-  <div class="news" v-if="visible && newslist && newslist.length !== 0">
+  <div class="news" v-if="visible && newslist && newslist.length">
     <!-- Section Title  -->
     <div class="row row-centered extra-margin-top-2">
-      <div class="col col-12 scroll-effect heading-section ">
+      <div
+        class="col col-12 scroll-effect heading-section "
+        :class="scrolled ? 'scrolled' : ''"
+      >
         <h2 class="heading small">
           {{ $t("section-heading") }}
         </h2>
@@ -22,32 +25,34 @@
     <!-- Section Content  -->
 
     <div class="row row-centered text-section">
-      <div class="col col-12 scroll-effect">
+      <div class="col col-12 scroll-effect" :class="scrolled ? 'scrolled' : ''">
         <transition name="slide-fade" mode="out-in">
           <span :key="index" class="date">
             {{ formatDate(newslist[index].date) }}
           </span>
         </transition>
       </div>
-      <div class="col col-12 scroll-effect">
+      <div class="col col-12 scroll-effect" :class="scrolled ? 'scrolled' : ''">
         <transition name="slide-fade" mode="out-in">
           <h3 :key="index">
-            {{ localTranslation(newslist[index].title) }}
+            {{ newslist[index].title }}
           </h3>
         </transition>
       </div>
       <!-- Text sub-section Content  -->
-      <div class="col col-12 scroll-effect ">
+      <div
+        class="col col-12 scroll-effect "
+        :class="scrolled ? 'scrolled' : ''"
+      >
         <transition name="slide-fade" mode="out-in">
-          <component :is="getDynamicData" :key="index"></component>
+          <prismic-rich-text :field="newslist[index].description" />
         </transition>
       </div>
     </div>
   </div>
 </template>
 <script>
-import { getTranslation, openUrl } from "@/assets/support.js";
-import { mapState, mapGetters } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 import moment from "moment";
 
 export default {
@@ -58,12 +63,13 @@ export default {
       newslist: [],
       index: -1,
       toggle: false,
+      scrolled: false,
     };
   },
   props: {
     visible: Boolean,
     timeToRefresh: { type: Number, default: 20 },
-    limit: { type: Number, default: 3 },
+    limit: { type: Number, default: 5 },
     max_chars: { type: Number, default: 350 },
   },
   computed: {
@@ -71,72 +77,33 @@ export default {
       language: (state) => state.settings.language,
     }),
     ...mapGetters({ getNewsList: "content/getNewsList" }),
-    getdata() {
-      try {
-        if (this.getNewsList) {
-          return this.getNewsList
-            .map((x, i) => this.validateNewsContent(x, i))
-            .sort((b, a) => moment(a.date).diff(b.date))
-            .filter((nw) => typeof nw != "undefined")
-            .slice(0, this.limit);
-        }
-        return null;
-      } catch (error) {
-        return null;
-      }
-    },
-    getDynamicData: function() {
-      return {
-        template: `<p>${this.localTranslation(
-          this.newslist[this.index].description
-        )}
-        </p>`,
-      };
-    },
   },
   methods: {
-    localTranslation(textContent) {
-      return getTranslation(textContent, this.$i18n.locale);
-    },
-    validateNewsContent(n, i) {
-      // This variable avoid undefined or null errors
-      const keys = ["title", "date", "description"];
-      const item = {};
-      const element = { ...n };
-      // Due to is a dyamic component is required filter the complete information
-      if (keys.some((x) => typeof n[x] == "undefined" || n[x] == null)) {
-        return;
+    ...mapActions({ getNewsRemote: "content/getNewsRemote" }),
+    // retrieve data from store
+    getData() {
+      this.triggerScroll(false);
+      this.newslist = null;
+      try {
+        if (this.getNewsList) {
+          this.newslist = this.getNewsList
+            .slice(0) // soft copy the array
+            .sort((b, a) => moment(a.date).diff(b.date))
+            .slice(0, this.limit); // limit the array after sorting
+        }
+        if (this.newslist && this.newslist.length && this.timeToRefresh) {
+          this.countDownTimer();
+        }
+      } catch (error) {
+        this.newslist = null;
+      } finally {
+        this.triggerScroll(true);
       }
-      // This section looking the required keys
-      keys.forEach((key) => {
-        item[key] = element[key];
-      });
-      item["index"] = i;
-      item["path"] = element.path || null;
-      item["description"] = this.validateDescriptionLength(element.description);
-      return item;
-    },
-    validateDescriptionLength(description) {
-      // Here is fixed the maximun number of words and characters for news description
-      const MAX = this.max_chars;
-      // any character that is not a word character or whitespace
-      const endChars = [".", ",", " ", "!", "?", ";", ")", "]", "}"];
-      let newDescription = {};
-      Object.keys(description).map(function(key) {
-        let RealMax = MAX;
-        let lastChar;
-        do {
-          RealMax++;
-          lastChar = description[key].slice(0, RealMax).slice(-1);
-        } while (description[key].length > MAX && !endChars.includes(lastChar) && RealMax <= MAX + 15);
-        RealMax--;
-        newDescription[key] = description[key].slice(0, RealMax);
-      });
-      return newDescription;
     },
     formatDate(date) {
       return moment(date).format("MMMM Do YYYY");
     },
+    // // Control the timer of slides
     countDownTimer() {
       if (this.countDown > 0) {
         setTimeout(() => {
@@ -154,20 +121,24 @@ export default {
         this.countDownTimer();
       }
     },
+    triggerScroll(scrollValue = false) {
+      const _this = this;
+      setTimeout(function() {
+        _this.scrolled = scrollValue;
+      }, 1);
+    },
   },
   created() {
     // Define the locale for moment datetime
     moment.locale(this.$i18n.locale);
-
     // get news from remote storage
-    this.newslist = this.getdata;
-    if (this.newslist && this.newslist.length > 0 && this.timeToRefresh > 0) {
-      this.countDownTimer();
-    }
+    this.getData();
   },
   watch: {
-    // validate when laguage change, to change the format date
-    language: function(lan) {
+    // validate when language change, to change the format date
+    language: async function(lan) {
+      await this.getNewsRemote();
+      this.getData();
       moment.locale(lan);
     },
   },

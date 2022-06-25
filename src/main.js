@@ -20,6 +20,10 @@ import "sweetalert2/dist/sweetalert2.min.css";
 // normalize and reset css between browsers
 import "normalize.css";
 
+// prismic.io cms resources
+import PrismicVue from '@prismicio/vue'
+import linkResolver from './link-resolver' 
+
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(Meta);
@@ -39,6 +43,13 @@ Vue.use(
   },
   router
 );
+
+// Prismic registration in Vue
+Vue.use(PrismicVue,{
+  // endpoint: process.env.VUE_APP_PRISMIC_ENDPOINT,
+  endpoint: process.env.VUE_APP_CMS_REPOSITORY,
+  linkResolver,
+})
 
 Vue.use(VueSweetalert2);
 

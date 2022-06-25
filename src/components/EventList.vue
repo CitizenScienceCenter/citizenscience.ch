@@ -20,11 +20,8 @@
   <div v-if="visible">
     <div class="event-list" v-if="events && events.length != 0">
       <!-- Heading Section -->
-      <div
-        class="row row-centered extra-margin-top-2"
-        v-if="br.heading.visible"
-      >
-        <div class="col col-12 scroll-effect heading-section">
+      <div class="row row-centered extra-margin-top-2" v-if="br.heading.visible">
+        <div class="col col-12 scroll-effect heading-section" :class="scrolled ? 'scrolled' : ''">
           <h2 class="heading small">
             {{ $t(localTranslation(pl.heading)) }}
           </h2>
@@ -34,6 +31,7 @@
       <router-link
         tag="div"
         class="row row-centered event scroll-effect"
+        :class="scrolled ? 'scrolled' : ''"
         v-for="event in events"
         :key="event.path"
         :to="'/events/' + event.path"
@@ -44,7 +42,7 @@
           :class="validateImage('img-content', event)"
           v-if="event.image && !br.hideImage"
         >
-          <img :src="'/img/events/' + event.image" :alt="event.image" />
+          <img :src="event.image" :alt="event.image + event.path" />
         </div>
 
         <!-- Details Subsection -->
@@ -54,21 +52,19 @@
             {{ eventDisplayDate(event.start, event.end) }}
           </p>
           <!-- Title Subsection -->
-          <h3
-            class="subheading event-title"
-            :class="getStateStyle(event.state)"
-            v-html="event.title"
-          ></h3>
-          <h4 class="event-state">{{ localTranslation(event.state) }}</h4>
+          <h3 class="subheading event-title" :class="event.state" v-html="event.title"></h3>
+          <h4 class="event-state" v-if="event.state !== 'normal'">
+            {{ localTranslation(event.state) }}
+          </h4>
           <!-- Abstract Subsection -->
           <div class="event-abstract" v-if="event.abstract">
             <i class="fas fa-info-circle icon"></i>
             <p v-if="event.abstract !== ''" v-html="event.abstract"></p>
           </div>
           <!-- Speakers Subsection -->
-          <div class="event-speakers" v-if="event.speakers !== ''">
+          <div class="event-speakers" v-if="event.speakers && event.speakers.length">
             <i class="fas fa-user icon"></i>
-            <p v-html="event.speakers"></p>
+            <small><prismic-rich-text :field="event.speakers"/></small>
           </div>
           <!-- Location Subsection -->
           <div class="event-location">
@@ -81,8 +77,9 @@
               tag="button"
               class="button button-secondary button-secondary-naked"
               :to="'/events/' + event.path"
-              >Details</router-link
             >
+              Details
+            </router-link>
           </div>
         </div>
       </router-link>
@@ -93,6 +90,7 @@
           tag="button"
           to="/events"
           class="button button-secondary scroll-effect"
+          :class="scrolled ? 'scrolled' : ''"
           :disabled="br.button.disabled"
         >
           <i class="far fa-calendar-alt"></i>
@@ -100,7 +98,11 @@
         >
       </div>
     </div>
-    <h3 v-else class="centered scroll-effect scroll-effect-delayed-2 ">
+    <h3
+      v-else
+      class="centered scroll-effect scroll-effect-delayed-2 "
+      :class="scrolled ? 'scrolled' : ''"
+    >
       {{ $t("upcoming-events-not-found") }}
     </h3>
   </div>
@@ -108,7 +110,7 @@
 
 <script>
 import { getTranslation } from "@/assets/support.js";
-import { mapGetters, mapState } from "vuex";
+import { mapGetters, mapState, mapActions } from "vuex";
 import moment from "moment";
 
 export default {
@@ -124,6 +126,7 @@ export default {
       },
       pl: {},
       events: [],
+      scrolled: false,
     };
   },
   props: {
@@ -144,18 +147,11 @@ export default {
       language: (state) => state.settings.language,
     }),
     ...mapGetters({ getEvents: "content/getEvents" }),
-    getdata() {
-      try {
-        if (this.getEvents) {
-          return this.getEvents;
-        }
-        return null;
-      } catch (error) {
-        return null;
-      }
-    },
   },
   methods: {
+    ...mapActions({
+      getEventsRemote: "content/getEventsRemote",
+    }),
     localTranslation(textContent) {
       return getTranslation(textContent, this.$i18n.locale);
     },
@@ -176,19 +172,6 @@ export default {
       }
       return selectedView[item];
     },
-    getStateStyle(eventState) {
-      const state = this.localTranslation(eventState);
-      try {
-        if (state.toLowerCase() == this.$i18n.t("event-cancel")) {
-          return "canceled";
-        }
-        if (state.toLowerCase() == this.$i18n.t("event-postpone")) {
-          return "postponed";
-        }
-      } catch (error) {
-        return null;
-      }
-    },
     setStyle() {
       for (const key in this.viewConfig) {
         if (Object.keys(this.br).includes(key)) {
@@ -206,13 +189,46 @@ export default {
         startDate.getMonth() == endDate.getMonth() &&
         startDate.getFullYear() == endDate.getFullYear()
       ) {
-        return `${moment(startDate).format("llll")} - ${moment(endDate).format(
-          "LT"
-        )}`;
+        return `${moment(startDate).format("llll")} - ${moment(endDate).format("LT")}`;
       }
-      return `${moment(startDate).format("llll")} - ${moment(endDate).format(
-        "llll"
-      )}`;
+      return `${moment(startDate).format("llll")} - ${moment(endDate).format("llll")}`;
+    },
+    getdata() {
+      try {
+        this.triggerScroll(false);
+        this.events = null;
+        if (this.getEvents) {
+          this.events = this.getEvents;
+        }
+        if (!this.past) {
+          // filter for future events
+          this.events = this.events.filter((event) => Date.parse(event.end) >= Date.now());
+          // sort by date
+          this.events.sort(function(a, b) {
+            return Date.parse(a.start) - Date.parse(b.start);
+          });
+        } else {
+          // filter for past events
+          this.events = this.events.filter((event) => Date.parse(event.end) < Date.now());
+          // sort by date
+          this.events.sort(function(a, b) {
+            return Date.parse(b.start) - Date.parse(a.start);
+          });
+        }
+        if (this.limit) {
+          this.events = this.events.slice(0, this.limit);
+        }
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.triggerScroll(true);
+      }
+    },
+    triggerScroll(scrollValue = false) {
+      const _this = this;
+      setTimeout(function() {
+        _this.scrolled = scrollValue;
+      }, 1);
     },
   },
   created() {
@@ -220,34 +236,13 @@ export default {
     moment.locale(this.$i18n.locale);
 
     this.setStyle();
-    this.events = this.getdata;
-    if (!this.past) {
-      // filter for future events
-      this.events = this.events.filter(
-        (event) => Date.parse(event.end) >= Date.now()
-      );
-      // sort by date
-      this.events.sort(function(a, b) {
-        return Date.parse(a.start) - Date.parse(b.start);
-      });
-    } else {
-      // filter for past events
-      this.events = this.events.filter(
-        (event) => Date.parse(event.end) < Date.now()
-      );
-      // sort by date
-      this.events.sort(function(a, b) {
-        return Date.parse(b.start) - Date.parse(a.start);
-      });
-    }
-
-    if (this.limit) {
-      this.events = this.events.slice(0, this.limit);
-    }
+    this.getdata();
   },
   watch: {
     // validate when laguage change, to change the format date
-    language: function(lan) {
+    language: async function(lan) {
+      await this.getEventsRemote();
+      this.getdata();
       moment.locale(lan);
     },
   },
@@ -326,6 +321,7 @@ export default {
       p {
         padding-left: $spacing-1;
         font-size: $font-size-mini;
+        margin-bottom: $spacing-1;
       }
     }
     button {

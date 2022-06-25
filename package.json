@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@prismicio/client": "^5.1.1",
+    "@prismicio/vue": "^2.1.2",
     "axios": "^0.21.1",
     "jw-vue-pagination": "^1.0.3",
     "minio": "^7.0.18",
     "normalize.css": "^8.0.1",
+    "prismic-dom": "^2.2.7",
     "sass": "^1.49.0",
     "sass-loader": "^7.3.1",
     "secure-ls": "^1.2.6",

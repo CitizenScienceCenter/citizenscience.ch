@@ -15,6 +15,7 @@ import Header from "./components/shared/Header.vue";
 import GDPR from "./components/shared/GDPR";
 // modules for managing gtag
 import { bootstrap } from "vue-gtag";
+import { cmsClient } from "@/assets/support.js";
 
 export default {
   name: "app",
@@ -86,6 +87,9 @@ export default {
         app.classList.add("show");
       }
     };
+    // initialize cms client in store
+    cmsClient.setClient(this.$prismic.client);
+    Object.freeze(cmsClient);
   },
   watch: {
     getGtag() {

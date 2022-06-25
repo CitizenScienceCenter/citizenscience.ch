@@ -34,7 +34,7 @@
                 triggerButton(
                   contentData.button.route,
                   contentData.button.link,
-                  contentData.button.selfWindow
+                  contentData.button.selfwindow
                 )
               "
               :disabled="br.button.disabled"
@@ -129,14 +129,14 @@ export default {
         this.members_right = this.contentData.member_list.slice(half);
       }
     },
-    triggerButton: function(route, url, selfWindow) {
+    triggerButton: function(route, url, selfwindow) {
       // open internal routes
       if (route) {
         this.$router.push(route);
         return;
       }
       // open external links
-      openUrl(url, selfWindow);
+      openUrl(url, selfwindow);
     },
   },
   created() {

@@ -154,11 +154,17 @@ export const routes = [
           });
           // The cover component is required even data is not retrieved
           const cover = await store.dispatch("content/getCoverRemote");
-          // generic conten data retrieving
+          //Reset loading for content retrieving
+          ["news", "events"].forEach((x) => {
+            store.commit("content/removeIsLoaded", x);
+          });
+
+          // generic content data retrieving
           await store.dispatch("content/getGenericContentRemote", {
             view: "home",
           });
-          if (res && cover) next();
+          // if (res && cover) next();
+          if (cover && res) next();
         },
       },
       {
@@ -199,7 +205,7 @@ export const routes = [
             },
             beforeEnter: async (to, from, next) => {
               const content = await store.dispatch(
-                "content/getPartnerProjectsRemote"
+                "content/getAllPartnerProjectsRemote"
               );
               const res = await store.dispatch("viewconfig/getRemoteView", {
                 view: "partners",
@@ -213,6 +219,15 @@ export const routes = [
             path: "partner_project/:id",
             component: PartnerProjectDetail,
             meta: { nav: false },
+            beforeEnter: async (to, from, next) => {
+              const content = await store.dispatch(
+                "content/getPartnerProjectByUIDRemote",
+                to.params.id
+              );
+              if (content) {
+                next();
+              }
+            },
           },
           {
             path: "collaborations",
@@ -295,9 +310,7 @@ export const routes = [
               next(from);
               // this redirect to a sub site in project builder
               const site = to.query.site || "";
-              openUrl(
-                `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`
-              );
+              openUrl(`${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}`);
             },
           },
           {
@@ -581,7 +594,6 @@ export const routes = [
           nav: false,
         },
         beforeEnter(to, from) {
-          // FIXME: Replace profile for the citizenscience one
           openUrl(
             `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/profile`,
             true
@@ -592,7 +604,6 @@ export const routes = [
         path: "reset",
         component: RequestReset,
         meta: { i18n: "navigation-reset", nav: false },
-        // TODO: pending to remove after implemented
         beforeEnter(to, from) {
           openUrl(
             `${process.env.VUE_APP_LAB_BASE_URL}${i18n.locale}/reset-password`,

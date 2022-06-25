@@ -183,6 +183,7 @@ export default {
       isNewsLoaded: (state) => state.content.isNewsLoaded,
       isGCLoaded: (state) => state.content.isGCLoaded,
       isEventsLoaded: (state) => state.content.isEventsLoaded,
+      coverList: (state) => state.content.coverList,      
     }),
   },
   methods: {
@@ -224,7 +225,6 @@ export default {
   },
   created() {
     // Load the view configuration in vuex state
-
     this.setProjectList();
     this.setEventsConfig();
     this.setNews();

@@ -1,14 +1,23 @@
-import coverListDefault from "@/assets/data_config/cover_list.json";
 import { getRemoteFile } from "@/minio.js";
+import { getCMSData, getCMSDataUID } from "@/assets/support.js";
+import { cover_list, coverListInterface } from "@/schemas/coverList.js";
+import { newsInterface } from "@/schemas/news.js";
+import { eventsInterface } from "@/schemas/events.js";
+import { partnerProjectsInterface } from "@/schemas/partnerProjects.js";
+import { partnerProjectsDetailsInterface } from "@/schemas/partnerProjectDetails.js";
+import { peopleInterface } from "@/schemas/people.js";
+import { partnershipInterface } from "@/schemas/partnership.js";
+import { i18n } from "@/i18n.js";
 
 const state = {
-  coverList: undefined,
+  coverList: [],
   news: undefined,
   genericContent: undefined,
   events: undefined,
   people: undefined,
   partnerships: undefined,
   partnerProjects: undefined,
+  partnerProjectDetails: undefined,
   isNewsLoaded: false,
   isGCLoaded: false,
   isEventsLoaded: false,
@@ -31,44 +40,38 @@ const getters = {
     return state.partnerships;
   },
   getPartnerProjects: (state) => (id) => {
-    if (state.partnerProjects && id) {
+    if (id) {
       // Only find the first ocurrence of element with id equal to id pass as parameter
-      return state.partnerProjects.find((x) => x.id == id);
+      return state.partnerProjectDetails;
     }
     return state.partnerProjects;
   },
 };
 
 const actions = {
+  // Get cover list from CMS
   async getCoverRemote({ commit }) {
-    let res = null;
+    let content = [...cover_list[i18n.locale]];
     try {
-      res = await getRemoteFile("data/cover_list.json");
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      } else {
-        return res;
-      }
+      /* Client for CMS interactions. */
+      content = await getCMSData("cover_list", coverListInterface);
+      return content;
     } catch (error) {
-      console.error(error);
-      res = coverListDefault;
-      return res;
+      console.log(error);
+      return content;
     } finally {
-      commit("setCoverList", res);
+      commit("setCoverList", content);
     }
   },
+  // Get news from CMS
   async getNewsRemote({ commit }) {
-    commit("removeIsLoaded", "news");
-    let res = null;
+    let content = null;
     try {
-      res = await getRemoteFile("data/news.json");
-      return res;
+      content = await getCMSData("news", newsInterface);
     } catch (error) {
-      console.error(error);
-      res = require(`@/assets/news.json`);
-      return res;
+      console.log(error);
     } finally {
-      commit("setNewsList", res);
+      commit("setNewsList", content);
     }
   },
   async getGenericContentRemote({ commit }, { view }) {
@@ -89,69 +92,73 @@ const actions = {
       commit("setGenericContent", res);
     }
   },
+  // Get events from CMS
   async getEventsRemote({ commit }) {
-    commit("removeIsLoaded", "events");
-    let res = null;
+    let content = null;
     try {
-      res = await getRemoteFile("data/events.json");
-      return res;
+      content = await getCMSData("events", eventsInterface);
+      return content;
     } catch (error) {
       console.error(error);
-      res = require(`@/assets/events.json`);
-      return res;
+      return content;
     } finally {
-      commit("setEvents", res);
+      commit("setEvents", content);
     }
   },
+  // Get List of people from CMS
   async getPeopleRemote({ commit }) {
-    let res = null;
+    let content = null;
     try {
-      res = await getRemoteFile("data/people.json");
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      } else {
-        return res;
-      }
+      content = await getCMSData("people", peopleInterface);
+      return content;
     } catch (error) {
-      // This content is local if the remote content is not retrieved
-      res = require("@/assets/data_config/people.json");
-      return res;
+      console.error(error);
+      return content;
     } finally {
-      commit("setPeople", res);
+      commit("setPeople", content);
     }
   },
+  // Get partnerships' list from CMS
   async getPartnershipsRemote({ commit }) {
-    let res = null;
+    let content = null;
     try {
-      res = await getRemoteFile("data/partnerships.json");
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      } else {
-        return res;
-      }
+      content = await getCMSData("partnerships", partnershipInterface);
+      return content;
     } catch (error) {
-      // This content is local if the remote content is not retrieved
-      res = require("@/assets/data_config/partnerships.json");
-      return res;
+      console.error(error);
+      return content;
     } finally {
-      commit("setPartnerships", res);
+      commit("setPartnerships", content);
     }
   },
-  async getPartnerProjectsRemote({ commit }) {
-    let res = null;
+
+  // Get all partner projects from CMS
+  async getAllPartnerProjectsRemote({ commit }) {
+    let content = null;
     try {
-      res = await getRemoteFile("data/partner_projects.json");
-      if (res === undefined) {
-        throw new Error("Remote undefined");
-      } else {
-        return res;
-      }
+      content = await getCMSData("partner_projects", partnerProjectsInterface);
+      return content;
     } catch (error) {
-      // This content is local if the remote content is not retrieved
-      res = require("@/assets/partner_projects.json");
-      return res;
+      console.error(error);
+      return content;
     } finally {
-      commit("setPartnerProjects", res);
+      commit("setPartnerProjects", content);
+    }
+  },
+  // Get partner project by UID from CMS
+  async getPartnerProjectByUIDRemote({ commit }, uid) {
+    let content = null;
+    try {
+      /* Client for CMS interactions. */
+      let res = await getCMSDataUID("partner_project_page", uid);
+      if (res === undefined) return null;
+      content = partnerProjectsDetailsInterface(res.data);
+      return content;
+    } catch (error) {
+      console.error(error);
+      return content;
+    } finally {
+      commit("setPartnerProjectDetails", content);
     }
   },
 };
@@ -180,6 +187,9 @@ const mutations = {
   },
   setPartnerProjects(state, payload) {
     state.partnerProjects = payload;
+  },
+  setPartnerProjectDetails(state, payload) {
+    state.partnerProjectDetails = payload;
   },
   removeIsLoaded(state, value) {
     switch (value) {

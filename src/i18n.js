@@ -5,7 +5,7 @@ import store from "./store/store.js";
 Vue.use(VueI18n);
 
 var language;
-if (!store.state.settings.language) {
+if (store && !store.state.settings.language) {
   // no language in store
 
   // check browser
@@ -29,7 +29,7 @@ if (!store.state.settings.language) {
 
 export const i18n = new VueI18n({
   silentTranslationWarn: true,
-  locale: store.state.settings.language,
+  locale: store ? store.state.settings.language : "en",
   messages: {
     en: {
       "site-title": "Citizen Science Center Zurich",
@@ -77,7 +77,7 @@ export const i18n = new VueI18n({
       },
       "navigation-startproject-seed_grants": {
         link: "Seed Grants",
-      },      
+      },
       "navigation-startproject-checklist": {
         link: "Checklist",
       },
@@ -181,7 +181,7 @@ export const i18n = new VueI18n({
         link: "Projekte",
       },
       "navigation-contribute-partners": {
-        link: "Projekte",
+        link: "Partnerprojekte",
       },
       "navigation-contribute-collaborations": {
         link: "Warum mitmachen?",

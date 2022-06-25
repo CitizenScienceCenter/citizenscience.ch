@@ -1,44 +1,34 @@
 <template>
-  <div v-if="visible">
-    <h3
-      class="subheading reduced-bottom-margin"
-      v-if="br.title.visible && contentData.name"
-    >
-      {{ localTranslation(contentData.name) }}
+  <div v-if="visible" :class="scrolled ? 'scrolled' : ''">
+    <h3 class="subheading reduced-bottom-margin" v-if="br.title.visible && content.name">
+      {{ content.name }}
     </h3>
-    <!-- Description section -->
-    <component
-      :is="getDynamicData"
+    <!-- Description and Logos section -->
+    <prismic-rich-text
+      :field="content.description"
+      :htmlSerializer="htmlSerializer"
       class="reduced-bottom-margin"
-      v-if="br.description.visible"
-    ></component>
-
-    <!-- Logos section -->
-    <div v-if="br.logos.visible">
-      <span v-for="logo in contentData.logos" :key="logo.id">
-        <img :src="logo" class="logo" :alt="logo" />
-      </span>
-    </div>
+    />
 
     <!-- Button section -->
     <div
       class="button-section margin-bottom"
-      v-if="br.button.visible && contentData.button && contentData.button.link"
+      v-if="br.button.visible && content.button && content.button.link"
     >
       <button
         class="button button-secondary button-icon"
-        @click="openInNewTab(contentData.button.link)"
+        @click="openInNewTab(content.button.link)"
         :disabled="br.button.disabled"
       >
-        <i :class="contentData.button.icon"></i>
-        {{ localTranslation(contentData.button) }}
+        <i :class="content.button.icon"></i>
+        {{ content.button.text || content.button }}
       </button>
     </div>
   </div>
 </template>
 
 <script>
-import { getTranslation, openUrl } from "@/assets/support.js";
+import { openUrl } from "@/assets/support.js";
 
 export default {
   name: "PeopleList",
@@ -59,26 +49,13 @@ export default {
     content: Object,
     viewConfig: Object,
     visible: Boolean,
+    scrolled: Boolean,
   },
-  computed: {
-    getDynamicData: function() {
-      return {
-        template: `<div>${this.localTranslation(
-          this.contentData.description
-        )}</div>`,
-      };
-    },
-  },
+  computed: {},
   methods: {
-    openInNewTab(url, selfWindow = false) {
+    openInNewTab(url, selfwindow = false) {
       // open external links
-      openUrl(url, selfWindow);
-    },
-    localTranslation(textContent) {
-      return getTranslation(textContent, this.$i18n.locale);
-    },
-    loadData() {
-      this.contentData = this.content;
+      openUrl(url, selfwindow);
     },
     validateStyle() {
       for (const key in this.viewConfig) {
@@ -87,10 +64,18 @@ export default {
         }
       }
     },
+    htmlSerializer(type, element, _content, _children) {
+      // If element is a list item,
+      if (type === "image") {
+        // return some customized HTML.
+        return `<img src="${element.url}" class="logo" alt="${element.url}" v-if="${this.br.logos.visible}" />`;
+      }
+      /// Otherwise, return null.
+      return null;
+    },
   },
   created() {
     this.validateStyle();
-    this.loadData();
   },
 };
 </script>
@@ -106,7 +91,7 @@ export default {
   }
 }
 .logo {
-  padding-right: $spacing-2;
+  padding-right: $spacing-3;
   margin-bottom: $spacing-3;
   max-height: 75px;
   max-width: 200px;
